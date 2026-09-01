@@ -1,0 +1,74 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+df = pd.read_excel("Todos_Juntos.xlsx")
+
+
+df["Fecha"] = pd.to_datetime(df["Fecha"])
+
+df["Datetime"] = df["Fecha"] + pd.to_timedelta(df["Hora"], unit="h")
+
+
+
+columnas = {
+    "Crucero": "CRUCERO_______220",
+    "Pan de Azúcar": "P.AZUCAR______220",
+    "Pichirropulli": "PICHIRROPULLI_066"
+}
+
+promedios_hora = df.groupby("Hora")[list(columnas.values())].mean()
+
+
+for nombre, col in columnas.items():
+    serie_horaria = promedios_hora[col]
+
+    # Máximo y mínimo promedio por hora
+    hora_max_prom = serie_horaria.idxmax()
+    valor_max_prom = serie_horaria.max()
+
+    hora_min_prom = serie_horaria.idxmin()
+    valor_min_prom = serie_horaria.min()
+
+    # Máximo y mínimo absoluto
+    idx_max_abs = df[col].idxmax()
+    idx_min_abs = df[col].idxmin()
+
+    valor_max_abs = df.loc[idx_max_abs, col]
+    fecha_hora_max_abs = df.loc[idx_max_abs, "Datetime"]
+
+    valor_min_abs = df.loc[idx_min_abs, col]
+    fecha_hora_min_abs = df.loc[idx_min_abs, "Datetime"]
+
+    print(nombre)
+    print(f"Hora de promedio máximo: {hora_max_prom}:00 -> {valor_max_prom:.2f} USD/MWh")
+    print(f"Hora de promedio mínimo: {hora_min_prom}:00 -> {valor_min_prom:.2f} USD/MWh")
+    print(f"Máximo absoluto: {valor_max_abs:.2f} USD/MWh")
+    print(f"Ocurrió en: {fecha_hora_max_abs}")
+    print(f"Mínimo absoluto: {valor_min_abs:.2f} USD/MWh")
+    print(f"Ocurrió en: {fecha_hora_min_abs}")
+
+
+for nombre, col in columnas.items():
+    plt.figure(figsize=(14, 5))
+    plt.plot(df["Datetime"], df[col], linewidth=0.6)
+    plt.title(f"Costo marginal en el tiempo - {nombre}")
+    plt.xlabel("Tiempo")
+    plt.ylabel("Costo marginal [USD/MWh]")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+for nombre, col in columnas.items():
+    plt.figure(figsize=(8, 5))
+    plt.plot(promedios_hora.index, promedios_hora[col], marker="o")
+    plt.title(f"Costo marginal promedio por hora - {nombre}")
+    plt.xlabel("Hora del día")
+    plt.ylabel("Costo marginal [USD/MWh]")
+    plt.xticks(range(24))
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+

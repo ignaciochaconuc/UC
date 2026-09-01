@@ -1,0 +1,38 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+df = pd.read_excel("Todos_Juntos.xlsx")
+
+columnas = {
+    "Crucero": "CRUCERO_______220",
+    "Pan de Azúcar": "P.AZUCAR______220",
+    "Pichirropulli": "PICHIRROPULLI_066"
+}
+
+intervalos = [0, 50, 100, 150, 200, np.inf]
+etiquetas = ["0-50", "50-100", "100-150", "150-200", ">200"]
+
+tabla_porcentajes = pd.DataFrame()
+
+for nombre, col in columnas.items():
+    datos = df[col].dropna()
+    categorias = pd.cut(datos, bins=intervalos, labels=etiquetas, right=False)
+    porcentajes = categorias.value_counts(normalize=True).sort_index() * 100
+    tabla_porcentajes[nombre] = porcentajes
+
+print(tabla_porcentajes.round(2))
+
+
+for nombre, col in columnas.items():
+    datos = df[col].dropna()
+
+    plt.figure(figsize=(8, 5))
+    plt.hist(datos, bins=np.arange(0, 700, 25), edgecolor="black")
+    plt.title(f"Histograma de costos marginales - {nombre}")
+    plt.xlabel("Costo marginal [USD/MWh]")
+    plt.ylabel("Frecuencia")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()

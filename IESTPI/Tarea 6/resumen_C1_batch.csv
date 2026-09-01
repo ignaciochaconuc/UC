@@ -1,0 +1,13 @@
+﻿Indicador,Valor,Unidad
+Horas operativas,4176.0,h/año
+Factor de carga,0.4767123287671233,-
+Demanda térmica anual,11972.717280000003,MWh_th/año
+Aporte solar útil anual,6792.7099876,MWh_th/año
+Aporte auxiliar anual,5180.0712724,MWh_th/año
+Fracción solar anual,0.5673460359869633,-
+Energía térmica que sale del campo,7335.6717931,MWh_th/año
+Pérdidas térmicas anuales del TES,444.1373274,MWh_th/año
+Pérdidas TES fuera del horario,233.4547369,MWh_th/año
+Horas con campo activo y planta apagada,197.0,h/año
+Energía de campo fuera del horario,594.1219100000001,MWh_th/año
+Horas con indicador de desenfoque,863.0,h/año
