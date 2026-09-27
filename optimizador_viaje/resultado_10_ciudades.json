@@ -1,0 +1,414 @@
+{
+  "estado": "óptimo",
+  "objetivo": "costo",
+  "origen": "Santiago",
+  "noches": [
+    {
+      "fecha": "2027-03-01",
+      "ciudad": "Madrid",
+      "hotel": "Hotel medio Madrid (2 habitaciones)",
+      "precio": 368.0
+    },
+    {
+      "fecha": "2027-03-02",
+      "ciudad": "Madrid",
+      "hotel": "Hotel medio Madrid (2 habitaciones)",
+      "precio": 368.0
+    },
+    {
+      "fecha": "2027-03-03",
+      "ciudad": "Madrid",
+      "hotel": "Hotel medio Madrid (2 habitaciones)",
+      "precio": 368.0
+    },
+    {
+      "fecha": "2027-03-04",
+      "ciudad": "Sevilla",
+      "hotel": "Hotel medio Sevilla (2 habitaciones)",
+      "precio": 220.0
+    },
+    {
+      "fecha": "2027-03-05",
+      "ciudad": "Sevilla",
+      "hotel": "Hotel medio Sevilla (2 habitaciones)",
+      "precio": 220.0
+    },
+    {
+      "fecha": "2027-03-06",
+      "ciudad": "Sevilla",
+      "hotel": "Hotel medio Sevilla (2 habitaciones)",
+      "precio": 220.0
+    },
+    {
+      "fecha": "2027-03-07",
+      "ciudad": "Barcelona",
+      "hotel": "Hotel medio Barcelona (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-08",
+      "ciudad": "Barcelona",
+      "hotel": "Hotel medio Barcelona (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-09",
+      "ciudad": "Barcelona",
+      "hotel": "Hotel medio Barcelona (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-10",
+      "ciudad": "Londres",
+      "hotel": "Hotel medio Londres (2 habitaciones)",
+      "precio": 420.0
+    },
+    {
+      "fecha": "2027-03-11",
+      "ciudad": "Londres",
+      "hotel": "Hotel medio Londres (2 habitaciones)",
+      "precio": 420.0
+    },
+    {
+      "fecha": "2027-03-12",
+      "ciudad": "Londres",
+      "hotel": "Hotel medio Londres (2 habitaciones)",
+      "precio": 420.0
+    },
+    {
+      "fecha": "2027-03-13",
+      "ciudad": "París",
+      "hotel": "Hotel medio París (2 habitaciones)",
+      "precio": 250.0
+    },
+    {
+      "fecha": "2027-03-14",
+      "ciudad": "París",
+      "hotel": "Hotel medio París (2 habitaciones)",
+      "precio": 250.0
+    },
+    {
+      "fecha": "2027-03-15",
+      "ciudad": "Berlín",
+      "hotel": "Hotel medio Berlín (2 habitaciones)",
+      "precio": 220.0
+    },
+    {
+      "fecha": "2027-03-16",
+      "ciudad": "Berlín",
+      "hotel": "Hotel medio Berlín (2 habitaciones)",
+      "precio": 220.0
+    },
+    {
+      "fecha": "2027-03-17",
+      "ciudad": "Praga",
+      "hotel": "Hotel medio Praga (2 habitaciones)",
+      "precio": 180.0
+    },
+    {
+      "fecha": "2027-03-18",
+      "ciudad": "Praga",
+      "hotel": "Hotel medio Praga (2 habitaciones)",
+      "precio": 180.0
+    },
+    {
+      "fecha": "2027-03-19",
+      "ciudad": "Praga",
+      "hotel": "Hotel medio Praga (2 habitaciones)",
+      "precio": 180.0
+    },
+    {
+      "fecha": "2027-03-20",
+      "ciudad": "Praga",
+      "hotel": "Hotel medio Praga (2 habitaciones)",
+      "precio": 180.0
+    },
+    {
+      "fecha": "2027-03-21",
+      "ciudad": "Zagreb",
+      "hotel": "Hotel medio Zagreb (2 habitaciones)",
+      "precio": 180.0
+    },
+    {
+      "fecha": "2027-03-22",
+      "ciudad": "Zagreb",
+      "hotel": "Hotel medio Zagreb (2 habitaciones)",
+      "precio": 180.0
+    },
+    {
+      "fecha": "2027-03-23",
+      "ciudad": "Milán",
+      "hotel": "Hotel medio Milán (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-24",
+      "ciudad": "Milán",
+      "hotel": "Hotel medio Milán (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-25",
+      "ciudad": "Milán",
+      "hotel": "Hotel medio Milán (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-26",
+      "ciudad": "Milán",
+      "hotel": "Hotel medio Milán (2 habitaciones)",
+      "precio": 280.0
+    },
+    {
+      "fecha": "2027-03-27",
+      "ciudad": "Roma",
+      "hotel": "Hotel medio Roma (2 habitaciones)",
+      "precio": 290.0
+    },
+    {
+      "fecha": "2027-03-28",
+      "ciudad": "Roma",
+      "hotel": "Hotel medio Roma (2 habitaciones)",
+      "precio": 290.0
+    },
+    {
+      "fecha": "2027-03-29",
+      "ciudad": "Roma",
+      "hotel": "Hotel medio Roma (2 habitaciones)",
+      "precio": 290.0
+    },
+    {
+      "fecha": "2027-03-30",
+      "ciudad": "Roma",
+      "hotel": "Hotel medio Roma (2 habitaciones)",
+      "precio": 290.0
+    }
+  ],
+  "ruta_ciudades": [
+    "Madrid",
+    "Sevilla",
+    "Barcelona",
+    "Londres",
+    "París",
+    "Berlín",
+    "Praga",
+    "Zagreb",
+    "Milán",
+    "Roma"
+  ],
+  "estancias": [
+    {
+      "ciudad": "Madrid",
+      "hotel": "Hotel medio Madrid (2 habitaciones)",
+      "fecha_llegada": "2027-03-01",
+      "fecha_ultima_noche": "2027-03-03",
+      "noches": 3,
+      "costo_alojamiento": 1104.0,
+      "fecha_salida": "2027-03-04"
+    },
+    {
+      "ciudad": "Sevilla",
+      "hotel": "Hotel medio Sevilla (2 habitaciones)",
+      "fecha_llegada": "2027-03-04",
+      "fecha_ultima_noche": "2027-03-06",
+      "noches": 3,
+      "costo_alojamiento": 660.0,
+      "fecha_salida": "2027-03-07"
+    },
+    {
+      "ciudad": "Barcelona",
+      "hotel": "Hotel medio Barcelona (2 habitaciones)",
+      "fecha_llegada": "2027-03-07",
+      "fecha_ultima_noche": "2027-03-09",
+      "noches": 3,
+      "costo_alojamiento": 840.0,
+      "fecha_salida": "2027-03-10"
+    },
+    {
+      "ciudad": "Londres",
+      "hotel": "Hotel medio Londres (2 habitaciones)",
+      "fecha_llegada": "2027-03-10",
+      "fecha_ultima_noche": "2027-03-12",
+      "noches": 3,
+      "costo_alojamiento": 1260.0,
+      "fecha_salida": "2027-03-13"
+    },
+    {
+      "ciudad": "París",
+      "hotel": "Hotel medio París (2 habitaciones)",
+      "fecha_llegada": "2027-03-13",
+      "fecha_ultima_noche": "2027-03-14",
+      "noches": 2,
+      "costo_alojamiento": 500.0,
+      "fecha_salida": "2027-03-15"
+    },
+    {
+      "ciudad": "Berlín",
+      "hotel": "Hotel medio Berlín (2 habitaciones)",
+      "fecha_llegada": "2027-03-15",
+      "fecha_ultima_noche": "2027-03-16",
+      "noches": 2,
+      "costo_alojamiento": 440.0,
+      "fecha_salida": "2027-03-17"
+    },
+    {
+      "ciudad": "Praga",
+      "hotel": "Hotel medio Praga (2 habitaciones)",
+      "fecha_llegada": "2027-03-17",
+      "fecha_ultima_noche": "2027-03-20",
+      "noches": 4,
+      "costo_alojamiento": 720.0,
+      "fecha_salida": "2027-03-21"
+    },
+    {
+      "ciudad": "Zagreb",
+      "hotel": "Hotel medio Zagreb (2 habitaciones)",
+      "fecha_llegada": "2027-03-21",
+      "fecha_ultima_noche": "2027-03-22",
+      "noches": 2,
+      "costo_alojamiento": 360.0,
+      "fecha_salida": "2027-03-23"
+    },
+    {
+      "ciudad": "Milán",
+      "hotel": "Hotel medio Milán (2 habitaciones)",
+      "fecha_llegada": "2027-03-23",
+      "fecha_ultima_noche": "2027-03-26",
+      "noches": 4,
+      "costo_alojamiento": 1120.0,
+      "fecha_salida": "2027-03-27"
+    },
+    {
+      "ciudad": "Roma",
+      "hotel": "Hotel medio Roma (2 habitaciones)",
+      "fecha_llegada": "2027-03-27",
+      "fecha_ultima_noche": "2027-03-30",
+      "noches": 4,
+      "costo_alojamiento": 1160.0,
+      "fecha_salida": "2027-03-31"
+    }
+  ],
+  "vuelos": [
+    {
+      "tipo": "ida",
+      "costo": 2440.0,
+      "horas": 15.0,
+      "ciudad": "Madrid",
+      "opcion": "SCL-MAD-grupo-estimado",
+      "fecha": "2027-03-01"
+    },
+    {
+      "tipo": "vuelta",
+      "costo": 1995.0,
+      "horas": 17.0,
+      "ciudad": "Roma",
+      "opcion": "ROM-SCL-grupo-estimado",
+      "fecha": "2027-03-31"
+    }
+  ],
+  "traslados": [
+    {
+      "fecha": "2027-03-04",
+      "tipo": "traslado",
+      "costo": 200.0,
+      "horas": 3.0,
+      "dia": 3,
+      "desde": "Madrid",
+      "hasta": "Sevilla",
+      "medio": "tren",
+      "opcion": "MAD-SEV-tren"
+    },
+    {
+      "fecha": "2027-03-07",
+      "tipo": "traslado",
+      "costo": 280.0,
+      "horas": 6.0,
+      "dia": 6,
+      "desde": "Sevilla",
+      "hasta": "Barcelona",
+      "medio": "tren",
+      "opcion": "SEV-BCN-tren"
+    },
+    {
+      "fecha": "2027-03-10",
+      "tipo": "traslado",
+      "costo": 360.0,
+      "horas": 5.0,
+      "dia": 9,
+      "desde": "Barcelona",
+      "hasta": "Londres",
+      "medio": "avión",
+      "opcion": "BCN-LON-avion"
+    },
+    {
+      "fecha": "2027-03-13",
+      "tipo": "traslado",
+      "costo": 180.0,
+      "horas": 3.5,
+      "dia": 12,
+      "desde": "Londres",
+      "hasta": "París",
+      "medio": "tren",
+      "opcion": "LON-PAR-eurostar"
+    },
+    {
+      "fecha": "2027-03-15",
+      "tipo": "traslado",
+      "costo": 280.0,
+      "horas": 8.5,
+      "dia": 14,
+      "desde": "París",
+      "hasta": "Berlín",
+      "medio": "tren",
+      "opcion": "PAR-BER-tren"
+    },
+    {
+      "fecha": "2027-03-17",
+      "tipo": "traslado",
+      "costo": 120.0,
+      "horas": 4.0,
+      "dia": 16,
+      "desde": "Berlín",
+      "hasta": "Praga",
+      "medio": "tren",
+      "opcion": "BER-PRG-tren"
+    },
+    {
+      "fecha": "2027-03-21",
+      "tipo": "traslado",
+      "costo": 228.0,
+      "horas": 11.5,
+      "dia": 20,
+      "desde": "Praga",
+      "hasta": "Zagreb",
+      "medio": "tren",
+      "opcion": "PRG-ZAG-tren"
+    },
+    {
+      "fecha": "2027-03-23",
+      "tipo": "traslado",
+      "costo": 140.0,
+      "horas": 9.0,
+      "dia": 22,
+      "desde": "Zagreb",
+      "hasta": "Milán",
+      "medio": "bus",
+      "opcion": "ZAG-MIL-bus"
+    },
+    {
+      "fecha": "2027-03-27",
+      "tipo": "traslado",
+      "costo": 200.0,
+      "horas": 3.0,
+      "dia": 26,
+      "desde": "Milán",
+      "hasta": "Roma",
+      "medio": "tren",
+      "opcion": "MIL-ROM-tren"
+    }
+  ],
+  "costo_alojamiento": 8164.0,
+  "costo_transporte": 6423.0,
+  "costo_total": 14587.0,
+  "horas_traslado": 85.5
+}

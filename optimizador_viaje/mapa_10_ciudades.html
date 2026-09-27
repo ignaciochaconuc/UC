@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Mapa de la ruta</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha256-p4NxAoJBhIINfQ3ynhFwqKjMZjspuJbMZMzp+4uMqVY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1000px;margin:2rem auto;padding:0 1rem;color:#172033}
+#mapa{height:580px;border:1px solid #bdd0d7;border-radius:14px}
+.leaflet-container{overflow:hidden;position:relative;outline:0;background:#ddd}
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,
+.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas{position:absolute;left:0;top:0}
+.leaflet-map-pane canvas{z-index:100}.leaflet-tile-pane{z-index:200}
+.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}
+.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}
+.leaflet-tile{visibility:hidden}.leaflet-tile-loaded{visibility:inherit}
+.leaflet-marker-icon,.leaflet-marker-shadow{display:block}
+.leaflet-tooltip{position:absolute;padding:6px;background:white;border:1px solid #aaa;border-radius:4px;
+white-space:nowrap;box-shadow:0 1px 3px #999}
+.leaflet-control{position:relative;z-index:800;pointer-events:auto}
+.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}
+.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}
+.leaflet-control-attribution{background:rgba(255,255,255,.8);padding:2px 5px;font-size:11px}
+.numero-ruta{background:#173f5f;color:white;border:3px solid white;border-radius:50%;
+box-shadow:0 1px 5px #333;width:30px;height:30px;line-height:30px;text-align:center;font-weight:700}
+.nota{color:#52616b;font-size:.9rem}
+</style></head><body>
+<h1>Ruta optimizada</h1><p><strong>Santiago → Madrid → Sevilla → Barcelona → Londres → París → Berlín → Praga → Zagreb → Milán → Roma → Santiago</strong></p>
+<div id="mapa" role="img" aria-label="Mapa interactivo de la ruta europea"></div>
+<ol><li><strong>Madrid</strong>: 3 noches en Hotel medio Madrid (2 habitaciones)</li><li><strong>Sevilla</strong>: 3 noches en Hotel medio Sevilla (2 habitaciones)</li><li><strong>Barcelona</strong>: 3 noches en Hotel medio Barcelona (2 habitaciones)</li><li><strong>Londres</strong>: 3 noches en Hotel medio Londres (2 habitaciones)</li><li><strong>París</strong>: 2 noches en Hotel medio París (2 habitaciones)</li><li><strong>Berlín</strong>: 2 noches en Hotel medio Berlín (2 habitaciones)</li><li><strong>Praga</strong>: 4 noches en Hotel medio Praga (2 habitaciones)</li><li><strong>Zagreb</strong>: 2 noches en Hotel medio Zagreb (2 habitaciones)</li><li><strong>Milán</strong>: 4 noches en Hotel medio Milán (2 habitaciones)</li><li><strong>Roma</strong>: 4 noches en Hotel medio Roma (2 habitaciones)</li></ol>
+<p>Costo total: <strong>14587.00</strong> · Horas de traslado: <strong>85.5</strong></p>
+<p class="nota">Las líneas conectan ciudades y no representan el trazado exacto del transporte. El fondo necesita conexión a internet.</p>
+<script>
+const puntos = [{"numero": 1, "ciudad": "Madrid", "lat": 40.4168, "lon": -3.7038, "noches": 3, "hotel": "Hotel medio Madrid (2 habitaciones)"}, {"numero": 2, "ciudad": "Sevilla", "lat": 37.3891, "lon": -5.9845, "noches": 3, "hotel": "Hotel medio Sevilla (2 habitaciones)"}, {"numero": 3, "ciudad": "Barcelona", "lat": 41.3874, "lon": 2.1686, "noches": 3, "hotel": "Hotel medio Barcelona (2 habitaciones)"}, {"numero": 4, "ciudad": "Londres", "lat": 51.5072, "lon": -0.1276, "noches": 3, "hotel": "Hotel medio Londres (2 habitaciones)"}, {"numero": 5, "ciudad": "París", "lat": 48.8566, "lon": 2.3522, "noches": 2, "hotel": "Hotel medio París (2 habitaciones)"}, {"numero": 6, "ciudad": "Berlín", "lat": 52.52, "lon": 13.405, "noches": 2, "hotel": "Hotel medio Berlín (2 habitaciones)"}, {"numero": 7, "ciudad": "Praga", "lat": 50.0755, "lon": 14.4378, "noches": 4, "hotel": "Hotel medio Praga (2 habitaciones)"}, {"numero": 8, "ciudad": "Zagreb", "lat": 45.815, "lon": 15.9819, "noches": 2, "hotel": "Hotel medio Zagreb (2 habitaciones)"}, {"numero": 9, "ciudad": "Milán", "lat": 45.4642, "lon": 9.19, "noches": 4, "hotel": "Hotel medio Milán (2 habitaciones)"}, {"numero": 10, "ciudad": "Roma", "lat": 41.9028, "lon": 12.4964, "noches": 4, "hotel": "Hotel medio Roma (2 habitaciones)"}];
+const mapa = L.map('mapa');
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mapa);
+const coordenadas = puntos.map(p => [p.lat, p.lon]);
+L.polyline(coordenadas, {color:'#e4572e', weight:5, opacity:.9}).addTo(mapa);
+puntos.forEach(p => {
+  const icono = L.divIcon({className:'', html:`<div class="numero-ruta">${p.numero}</div>`, iconSize:[36,36], iconAnchor:[18,18]});
+  L.marker([p.lat,p.lon], {icon:icono}).addTo(mapa)
+    .bindPopup(`<strong>${p.numero}. ${p.ciudad}</strong><br>${p.noches} noches<br>${p.hotel}`)
+    .bindTooltip(p.ciudad, {permanent:true, direction:'right', offset:[14,0]});
+});
+mapa.fitBounds(coordenadas, {padding:[55,55]});
+</script>
+</body></html>
