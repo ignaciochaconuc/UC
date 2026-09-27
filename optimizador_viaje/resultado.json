@@ -1,0 +1,129 @@
+{
+  "estado": "óptimo",
+  "objetivo": "costo",
+  "origen": "Santiago",
+  "noches": [
+    {
+      "fecha": "2027-05-10",
+      "ciudad": "Madrid",
+      "hotel": "Hostal M",
+      "precio": 75.0
+    },
+    {
+      "fecha": "2027-05-11",
+      "ciudad": "Madrid",
+      "hotel": "Hostal M",
+      "precio": 75.0
+    },
+    {
+      "fecha": "2027-05-12",
+      "ciudad": "Madrid",
+      "hotel": "Hostal M",
+      "precio": 75.0
+    },
+    {
+      "fecha": "2027-05-13",
+      "ciudad": "París",
+      "hotel": "Hostal P",
+      "precio": 105.0
+    },
+    {
+      "fecha": "2027-05-14",
+      "ciudad": "París",
+      "hotel": "Hostal P",
+      "precio": 105.0
+    },
+    {
+      "fecha": "2027-05-15",
+      "ciudad": "Roma",
+      "hotel": "Hostal R",
+      "precio": 90.0
+    },
+    {
+      "fecha": "2027-05-16",
+      "ciudad": "Roma",
+      "hotel": "Hostal R",
+      "precio": 90.0
+    }
+  ],
+  "ruta_ciudades": [
+    "Madrid",
+    "París",
+    "Roma"
+  ],
+  "estancias": [
+    {
+      "ciudad": "Madrid",
+      "hotel": "Hostal M",
+      "fecha_llegada": "2027-05-10",
+      "fecha_ultima_noche": "2027-05-12",
+      "noches": 3,
+      "costo_alojamiento": 225.0,
+      "fecha_salida": "2027-05-13"
+    },
+    {
+      "ciudad": "París",
+      "hotel": "Hostal P",
+      "fecha_llegada": "2027-05-13",
+      "fecha_ultima_noche": "2027-05-14",
+      "noches": 2,
+      "costo_alojamiento": 210.0,
+      "fecha_salida": "2027-05-15"
+    },
+    {
+      "ciudad": "Roma",
+      "hotel": "Hostal R",
+      "fecha_llegada": "2027-05-15",
+      "fecha_ultima_noche": "2027-05-16",
+      "noches": 2,
+      "costo_alojamiento": 180.0,
+      "fecha_salida": "2027-05-17"
+    }
+  ],
+  "vuelos": [
+    {
+      "tipo": "ida",
+      "costo": 540.0,
+      "horas": 15.0,
+      "ciudad": "Madrid",
+      "opcion": "SCL-MAD",
+      "fecha": "2027-05-10"
+    },
+    {
+      "tipo": "vuelta",
+      "costo": 600.0,
+      "horas": 16.0,
+      "ciudad": "Roma",
+      "opcion": "ROM-SCL",
+      "fecha": "2027-05-17"
+    }
+  ],
+  "traslados": [
+    {
+      "fecha": "2027-05-13",
+      "tipo": "traslado",
+      "costo": 100.0,
+      "horas": 5.0,
+      "dia": 3,
+      "desde": "Madrid",
+      "hasta": "París",
+      "medio": "avión",
+      "opcion": "MAD-PAR-avion"
+    },
+    {
+      "fecha": "2027-05-15",
+      "tipo": "traslado",
+      "costo": 125.0,
+      "horas": 5.0,
+      "dia": 5,
+      "desde": "París",
+      "hasta": "Roma",
+      "medio": "avión",
+      "opcion": "PAR-ROM-avion"
+    }
+  ],
+  "costo_alojamiento": 615.0,
+  "costo_transporte": 1365.0,
+  "costo_total": 1980.0,
+  "horas_traslado": 41.0
+}

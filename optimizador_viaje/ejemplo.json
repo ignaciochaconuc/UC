@@ -1,0 +1,39 @@
+{
+  "fecha_primera_noche": "2027-05-10",
+  "noches": 7,
+  "origen": "Santiago",
+  "objetivo": "costo",
+  "presupuesto_maximo": null,
+  "horas_traslado_maximas": 45,
+  "min_ciudades": 2,
+  "max_ciudades": 3,
+  "ciudades": [
+    {"id": "Madrid", "latitud": 40.4168, "longitud": -3.7038,
+     "obligatoria": false, "min_noches": 1, "max_noches": 3,
+     "hoteles": [{"id": "Hostal M", "precio": {"base": 75}}, {"id": "Hotel M", "precio": {"base": 110}}]},
+    {"id": "París", "latitud": 48.8566, "longitud": 2.3522,
+     "obligatoria": true, "min_noches": 2, "max_noches": 4,
+     "hoteles": [{"id": "Hostal P", "precio": {"base": 105}}, {"id": "Hotel P", "precio": {"base": 160}}]},
+    {"id": "Roma", "latitud": 41.9028, "longitud": 12.4964,
+     "obligatoria": true, "min_noches": 2, "max_noches": 4,
+     "hoteles": [{"id": "Hostal R", "precio": {"base": 90}}, {"id": "Hotel R", "precio": {"base": 125}}]}
+  ],
+  "vuelos_internacionales": [
+    {"id": "SCL-MAD", "tipo": "ida", "ciudad": "Madrid", "precio": {"base": 540}, "horas": 15},
+    {"id": "SCL-PAR", "tipo": "ida", "ciudad": "París", "precio": {"base": 650}, "horas": 16},
+    {"id": "SCL-ROM", "tipo": "ida", "ciudad": "Roma", "precio": {"base": 720}, "horas": 17},
+    {"id": "MAD-SCL", "tipo": "vuelta", "ciudad": "Madrid", "precio": {"base": 580}, "horas": 15},
+    {"id": "PAR-SCL", "tipo": "vuelta", "ciudad": "París", "precio": {"base": 640}, "horas": 16},
+    {"id": "ROM-SCL", "tipo": "vuelta", "ciudad": "Roma", "precio": {"base": 600}, "horas": 16}
+  ],
+  "traslados": [
+    {"id": "MAD-PAR-tren", "desde": "Madrid", "hasta": "París", "medio": "tren", "precio": {"base": 130}, "horas": 10},
+    {"id": "PAR-MAD-tren", "desde": "París", "hasta": "Madrid", "medio": "tren", "precio": {"base": 130}, "horas": 10},
+    {"id": "MAD-PAR-avion", "desde": "Madrid", "hasta": "París", "medio": "avión", "precio": {"base": 100}, "horas": 5},
+    {"id": "PAR-MAD-avion", "desde": "París", "hasta": "Madrid", "medio": "avión", "precio": {"base": 110}, "horas": 5},
+    {"id": "PAR-ROM-avion", "desde": "París", "hasta": "Roma", "medio": "avión", "precio": {"base": 125}, "horas": 5},
+    {"id": "ROM-PAR-avion", "desde": "Roma", "hasta": "París", "medio": "avión", "precio": {"base": 115}, "horas": 5},
+    {"id": "MAD-ROM-avion", "desde": "Madrid", "hasta": "Roma", "medio": "avión", "precio": {"base": 90}, "horas": 6},
+    {"id": "ROM-MAD-avion", "desde": "Roma", "hasta": "Madrid", "medio": "avión", "precio": {"base": 95}, "horas": 6}
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "estado": "óptimo",
+  "objetivo": "costo",
+  "origen": "Santiago",
+  "noches": [
+    {
+      "fecha": "2027-09-06",
+      "ciudad": "Madrid",
+      "hotel": "Hostal Centro M",
+      "precio": 70.0
+    },
+    {
+      "fecha": "2027-09-07",
+      "ciudad": "Madrid",
+      "hotel": "Hostal Centro M",
+      "precio": 70.0
+    },
+    {
+      "fecha": "2027-09-08",
+      "ciudad": "Madrid",
+      "hotel": "Hostal Centro M",
+      "precio": 70.0
+    },
+    {
+      "fecha": "2027-09-09",
+      "ciudad": "Madrid",
+      "hotel": "Hostal Centro M",
+      "precio": 70.0
+    },
+    {
+      "fecha": "2027-09-10",
+      "ciudad": "París",
+      "hotel": "Hostal Seine P",
+      "precio": 105.0
+    },
+    {
+      "fecha": "2027-09-11",
+      "ciudad": "París",
+      "hotel": "Hostal Seine P",
+      "precio": 105.0
+    },
+    {
+      "fecha": "2027-09-12",
+      "ciudad": "Berlín",
+      "hotel": "Pensión Mitte B",
+      "precio": 75.0
+    },
+    {
+      "fecha": "2027-09-13",
+      "ciudad": "Berlín",
+      "hotel": "Pensión Mitte B",
+      "precio": 75.0
+    },
+    {
+      "fecha": "2027-09-14",
+      "ciudad": "Berlín",
+      "hotel": "Pensión Mitte B",
+      "precio": 75.0
+    },
+    {
+      "fecha": "2027-09-15",
+      "ciudad": "Viena",
+      "hotel": "Pensión Ring V",
+      "precio": 85.0
+    },
+    {
+      "fecha": "2027-09-16",
+      "ciudad": "Viena",
+      "hotel": "Pensión Ring V",
+      "precio": 85.0
+    },
+    {
+      "fecha": "2027-09-17",
+      "ciudad": "Estambul",
+      "hotel": "Pensión Bósforo E",
+      "precio": 80.0
+    },
+    {
+      "fecha": "2027-09-18",
+      "ciudad": "Estambul",
+      "hotel": "Pensión Bósforo E",
+      "precio": 80.0
+    },
+    {
+      "fecha": "2027-09-19",
+      "ciudad": "Estambul",
+      "hotel": "Pensión Bósforo E",
+      "precio": 80.0
+    },
+    {
+      "fecha": "2027-09-20",
+      "ciudad": "Roma",
+      "hotel": "Hostal Foro R",
+      "precio": 90.0
+    },
+    {
+      "fecha": "2027-09-21",
+      "ciudad": "Roma",
+      "hotel": "Hostal Foro R",
+      "precio": 90.0
+    }
+  ],
+  "ruta_ciudades": [
+    "Madrid",
+    "París",
+    "Berlín",
+    "Viena",
+    "Estambul",
+    "Roma"
+  ],
+  "estancias": [
+    {
+      "ciudad": "Madrid",
+      "hotel": "Hostal Centro M",
+      "fecha_llegada": "2027-09-06",
+      "fecha_ultima_noche": "2027-09-09",
+      "noches": 4,
+      "costo_alojamiento": 280.0,
+      "fecha_salida": "2027-09-10"
+    },
+    {
+      "ciudad": "París",
+      "hotel": "Hostal Seine P",
+      "fecha_llegada": "2027-09-10",
+      "fecha_ultima_noche": "2027-09-11",
+      "noches": 2,
+      "costo_alojamiento": 210.0,
+      "fecha_salida": "2027-09-12"
+    },
+    {
+      "ciudad": "Berlín",
+      "hotel": "Pensión Mitte B",
+      "fecha_llegada": "2027-09-12",
+      "fecha_ultima_noche": "2027-09-14",
+      "noches": 3,
+      "costo_alojamiento": 225.0,
+      "fecha_salida": "2027-09-15"
+    },
+    {
+      "ciudad": "Viena",
+      "hotel": "Pensión Ring V",
+      "fecha_llegada": "2027-09-15",
+      "fecha_ultima_noche": "2027-09-16",
+      "noches": 2,
+      "costo_alojamiento": 170.0,
+      "fecha_salida": "2027-09-17"
+    },
+    {
+      "ciudad": "Estambul",
+      "hotel": "Pensión Bósforo E",
+      "fecha_llegada": "2027-09-17",
+      "fecha_ultima_noche": "2027-09-19",
+      "noches": 3,
+      "costo_alojamiento": 240.0,
+      "fecha_salida": "2027-09-20"
+    },
+    {
+      "ciudad": "Roma",
+      "hotel": "Hostal Foro R",
+      "fecha_llegada": "2027-09-20",
+      "fecha_ultima_noche": "2027-09-21",
+      "noches": 2,
+      "costo_alojamiento": 180.0,
+      "fecha_salida": "2027-09-22"
+    }
+  ],
+  "vuelos": [
+    {
+      "tipo": "ida",
+      "costo": 520.0,
+      "horas": 15.0,
+      "ciudad": "Madrid",
+      "opcion": "SCL-MAD",
+      "fecha": "2027-09-06"
+    },
+    {
+      "tipo": "vuelta",
+      "costo": 580.0,
+      "horas": 16.0,
+      "ciudad": "Roma",
+      "opcion": "ROM-SCL",
+      "fecha": "2027-09-22"
+    }
+  ],
+  "traslados": [
+    {
+      "fecha": "2027-09-10",
+      "tipo": "traslado",
+      "costo": 110.0,
+      "horas": 5.0,
+      "dia": 4,
+      "desde": "Madrid",
+      "hasta": "París",
+      "medio": "avión",
+      "opcion": "MAD-PAR-avion"
+    },
+    {
+      "fecha": "2027-09-12",
+      "tipo": "traslado",
+      "costo": 90.0,
+      "horas": 9.0,
+      "dia": 6,
+      "desde": "París",
+      "hasta": "Berlín",
+      "medio": "tren",
+      "opcion": "PAR-BER-tren"
+    },
+    {
+      "fecha": "2027-09-15",
+      "tipo": "traslado",
+      "costo": 65.0,
+      "horas": 8.0,
+      "dia": 9,
+      "desde": "Berlín",
+      "hasta": "Viena",
+      "medio": "tren",
+      "opcion": "BER-VIE-tren"
+    },
+    {
+      "fecha": "2027-09-17",
+      "tipo": "traslado",
+      "costo": 130.0,
+      "horas": 6.0,
+      "dia": 11,
+      "desde": "Viena",
+      "hasta": "Estambul",
+      "medio": "avión",
+      "opcion": "VIE-IST-avion"
+    },
+    {
+      "fecha": "2027-09-20",
+      "tipo": "traslado",
+      "costo": 120.0,
+      "horas": 5.0,
+      "dia": 14,
+      "desde": "Estambul",
+      "hasta": "Roma",
+      "medio": "avión",
+      "opcion": "IST-ROM-avion"
+    }
+  ],
+  "costo_alojamiento": 1305.0,
+  "costo_transporte": 1615.0,
+  "costo_total": 2920.0,
+  "horas_traslado": 64.0
+}

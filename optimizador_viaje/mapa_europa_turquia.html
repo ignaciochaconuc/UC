@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Mapa de la ruta</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha256-p4NxAoJBhIINfQ3ynhFwqKjMZjspuJbMZMzp+4uMqVY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1000px;margin:2rem auto;padding:0 1rem;color:#172033}
+#mapa{height:580px;border:1px solid #bdd0d7;border-radius:14px}
+.leaflet-container{overflow:hidden;position:relative;outline:0;background:#ddd}
+.leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,
+.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas{position:absolute;left:0;top:0}
+.leaflet-map-pane canvas{z-index:100}.leaflet-tile-pane{z-index:200}
+.leaflet-overlay-pane{z-index:400}.leaflet-shadow-pane{z-index:500}
+.leaflet-marker-pane{z-index:600}.leaflet-tooltip-pane{z-index:650}.leaflet-popup-pane{z-index:700}
+.leaflet-tile{visibility:hidden}.leaflet-tile-loaded{visibility:inherit}
+.leaflet-marker-icon,.leaflet-marker-shadow{display:block}
+.leaflet-tooltip{position:absolute;padding:6px;background:white;border:1px solid #aaa;border-radius:4px;
+white-space:nowrap;box-shadow:0 1px 3px #999}
+.leaflet-control{position:relative;z-index:800;pointer-events:auto}
+.leaflet-top,.leaflet-bottom{position:absolute;z-index:1000;pointer-events:none}
+.leaflet-top{top:0}.leaflet-right{right:0}.leaflet-bottom{bottom:0}.leaflet-left{left:0}
+.leaflet-control-attribution{background:rgba(255,255,255,.8);padding:2px 5px;font-size:11px}
+.numero-ruta{background:#173f5f;color:white;border:3px solid white;border-radius:50%;
+box-shadow:0 1px 5px #333;width:30px;height:30px;line-height:30px;text-align:center;font-weight:700}
+.nota{color:#52616b;font-size:.9rem}
+</style></head><body>
+<h1>Ruta optimizada</h1><p><strong>Santiago → Madrid → París → Berlín → Viena → Estambul → Roma → Santiago</strong></p>
+<div id="mapa" role="img" aria-label="Mapa interactivo de la ruta europea"></div>
+<ol><li><strong>Madrid</strong>: 4 noches en Hostal Centro M</li><li><strong>París</strong>: 2 noches en Hostal Seine P</li><li><strong>Berlín</strong>: 3 noches en Pensión Mitte B</li><li><strong>Viena</strong>: 2 noches en Pensión Ring V</li><li><strong>Estambul</strong>: 3 noches en Pensión Bósforo E</li><li><strong>Roma</strong>: 2 noches en Hostal Foro R</li></ol>
+<p>Costo total: <strong>2920.00</strong> · Horas de traslado: <strong>64.0</strong></p>
+<p class="nota">Las líneas conectan ciudades y no representan el trazado exacto del transporte. El fondo necesita conexión a internet.</p>
+<script>
+const puntos = [{"numero": 1, "ciudad": "Madrid", "lat": 40.4168, "lon": -3.7038, "noches": 4, "hotel": "Hostal Centro M"}, {"numero": 2, "ciudad": "París", "lat": 48.8566, "lon": 2.3522, "noches": 2, "hotel": "Hostal Seine P"}, {"numero": 3, "ciudad": "Berlín", "lat": 52.52, "lon": 13.405, "noches": 3, "hotel": "Pensión Mitte B"}, {"numero": 4, "ciudad": "Viena", "lat": 48.2082, "lon": 16.3738, "noches": 2, "hotel": "Pensión Ring V"}, {"numero": 5, "ciudad": "Estambul", "lat": 41.0082, "lon": 28.9784, "noches": 3, "hotel": "Pensión Bósforo E"}, {"numero": 6, "ciudad": "Roma", "lat": 41.9028, "lon": 12.4964, "noches": 2, "hotel": "Hostal Foro R"}];
+const mapa = L.map('mapa');
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mapa);
+const coordenadas = puntos.map(p => [p.lat, p.lon]);
+L.polyline(coordenadas, {color:'#e4572e', weight:5, opacity:.9}).addTo(mapa);
+puntos.forEach(p => {
+  const icono = L.divIcon({className:'', html:`<div class="numero-ruta">${p.numero}</div>`, iconSize:[36,36], iconAnchor:[18,18]});
+  L.marker([p.lat,p.lon], {icon:icono}).addTo(mapa)
+    .bindPopup(`<strong>${p.numero}. ${p.ciudad}</strong><br>${p.noches} noches<br>${p.hotel}`)
+    .bindTooltip(p.ciudad, {permanent:true, direction:'right', offset:[14,0]});
+});
+mapa.fitBounds(coordenadas, {padding:[55,55]});
+</script>
+</body></html>
