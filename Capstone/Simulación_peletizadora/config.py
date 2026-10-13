@@ -29,10 +29,10 @@ class Parametros:
     espesor_biomasa_m: float = 0.004
 
     # Hipótesis geométrica revisable: rodillo centrado en el anillo útil
-    centro_radial_rodillo_m: float = 0.0625
+    centro_radial_rodillo_m: float = 0.0635
 
     # Resolución temporal y velocidad de reproducción (no velocidad física)
-    pasos_por_revolucion: int = 180
+    pasos_por_revolucion: int = 1440
     fps_animacion: int = 30
 
     @property
