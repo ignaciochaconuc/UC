@@ -1,8 +1,9 @@
 # Simulación mecánica de peletizadora de matriz plana
 
-El proyecto contiene la geometría y cinemática de la Etapa 1 y el modelo
-cuasiestático de presiones, fuerzas y torque de la Etapa 2B. No es una simulación
-DEM ni FEA y sus perfiles de presión no son leyes constitutivas experimentales.
+El proyecto contiene la geometría y cinemática de la Etapa 1, el modelo
+cuasiestático de presiones de la Etapa 2B y el modelo geométrico de superposición
+de áreas de la Etapa 2C. No es una simulación DEM ni FEA y sus distribuciones de
+carga no son leyes constitutivas experimentales.
 
 ## Ejecución
 
@@ -12,6 +13,7 @@ Desde este directorio:
 python -m pip install -r requirements.txt
 python simulacion.py
 python simulacion_cargas.py --modelo todos --animacion cuadratico
+python simulacion_superposicion.py --modelo todos
 pytest -q
 ```
 
@@ -166,3 +168,87 @@ relaciones de la Etapa 2B; `simulacion_cargas.py` coordina la ejecución y
 - La huella sigue siendo rectangular y su posición radial debe confirmarse.
 - No se modelan flujo en perforaciones, contacto 3D, corte, deformación, fatiga ni
   capacidad de producción. Los resultados son escenarios preliminares de carga.
+
+## Etapa 2C: superposición geométrica
+
+El cuarto modelo sustituye la activación binaria por la fracción cubierta del
+disco efectivo de cada canal:
+
+```text
+A_h = π r_h²,  r_h = 3 mm
+f_i = A_c,i / A_h
+F_i = P_max A_c,i = P_max A_h f_i
+```
+
+`A_c,i` es la intersección entre el disco y la huella rectangular radial
+53,5–73,5 mm y tangencial `-Lc/2 ... +Lc/2`. La intersección se obtiene mediante
+integración determinista 1D de Gauss–Legendre: en cada coordenada radial se recorta
+analíticamente el segmento vertical del círculo contra el rectángulo. No se usa
+Monte Carlo ni se aproxima solamente por distancia al borde.
+
+La cuadratura de orden 64 calcula área y momentos de primer orden. En los tres
+casos parciales del estudio de convergencia, su error relativo frente a orden 512
+es menor que `3,5e-6`. Los casos geométricos de control entregan cobertura 0 para
+un disco exterior, 1 para uno contenido, aproximadamente 0,5 sobre un borde recto
+y aproximadamente 0,25 con el centro en una esquina.
+
+Para el torque se conserva el radio real del **centro del agujero**, según la
+definición de la Entrega 1. Para la ubicación espacial de la resultante se exportan
+dos alternativas claramente separadas:
+
+- promedio ponderado de los centros de agujeros;
+- promedio ponderado de los centroides de las áreas superpuestas, preferido para
+  el análisis geométrico posterior del eje de rodillos.
+
+### Resultados de una revolución
+
+| Modelo | Fuerza total máx./media [kN] | Torque máx./medio [N m] | Potencia máx./media [kW] |
+|---|---:|---:|---:|
+| A: cuadrático | 3,880 / 2,428 | 25,197 / 15,592 | 1,362 / 0,843 |
+| B: senoidal | 5,195 / 4,626 | 34,216 / 29,707 | 1,849 / 1,605 |
+| C: constante binario | 9,953 / 7,278 | 64,689 / 46,741 | 3,496 / 2,526 |
+| D: superposición | 7,976 / 7,286 | 50,673 / 46,781 | 2,738 / 2,528 |
+
+En el modelo D, cada rodillo alcanza 4,443 kN y promedia 3,643 kN. Se detectan
+entre 4 y 7 perforaciones con superposición positiva por rodillo; en total son
+8–11, con promedio 9,744. La cobertura media de los contactos positivos es 0,601.
+El valor mínimo positivo puede aproximarse arbitrariamente a cero cuando aparece
+un solapamiento tangencial muy pequeño; en la discretización actual es
+`3,88e-10`.
+
+La fuerza total máxima ocurre a `t=0,058140 s`, `θ=180°`. En ese instante, las
+resultantes basadas en centroides se ubican a 63,190 mm radialmente y a +0,611 mm
+para el rodillo 1 / -0,611 mm para el rodillo 2 en dirección tangencial local.
+
+El promedio de fuerza del modelo D es 0,12 % superior al constante binario. No es
+una inconsistencia: las contribuciones parciales de centros exteriores elevan el
+número medio de contactos efectivos. Su máximo es menor porque las transiciones
+de entrada y salida ya no asignan instantáneamente el área completa. El límite
+`N_superpuestas P_max A_h` se comprueba en cada instante.
+
+### Ejecución y salidas 2C
+
+```powershell
+# Comparación completa y GIF reducido de cobertura
+python simulacion_superposicion.py --modelo todos
+
+# Solo el modelo nuevo, sin animación
+python simulacion_superposicion.py --modelo area_superposicion --sin-animacion
+```
+
+`resultados/etapa_2c/` contiene las cargas agregadas, las contribuciones por
+perforación en CSV comprimido, resumen estadístico con instantes de máximos,
+comparación de cuatro modelos, resultantes, ejemplos geométricos, convergencia y
+animación. Los CSV individuales incluyen centros globales y locales, áreas,
+cobertura, centroides, fuerza y torque.
+
+### Interpretación y limitaciones 2C
+
+El modelo de superposición es el más adecuado de los cuatro para **describir
+geométricamente** la entrada y salida de carga, porque elimina el salto binario y
+considera bordes y esquinas. No es necesariamente el modelo físico más exacto: la
+presión uniforme de 44 MPa sobre el área cubierta sigue siendo una hipótesis.
+Persisten las incertidumbres sobre la ley constitutiva y flujo de biomasa, presión
+real de contacto, historia de compactación, `μ_eff`, geometría 3D, deformación,
+atascamientos y capacidad másica. El modelo proporciona escenarios equivalentes de
+carga para ingeniería estructural preliminar, no consumos reales ni resultados FEA.

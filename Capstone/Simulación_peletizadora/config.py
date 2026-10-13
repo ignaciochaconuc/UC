@@ -21,6 +21,7 @@ class Parametros:
     radio_util_interior_m: float = 0.045
     radio_util_exterior_m: float = 0.080
     diametro_agujero_m: float = 0.006
+    diametro_entrada_agujero_m: float = 0.009
     numero_agujeros: int = 102
     espesor_matriz_m: float = 0.036
     diametro_rodillo_m: float = 0.100
@@ -40,6 +41,8 @@ class Parametros:
     # Resolución temporal y velocidad de reproducción (no velocidad física)
     pasos_por_revolucion: int = 1440
     fps_animacion: int = 30
+    orden_cuadratura_superposicion: int = 64
+    cuadros_animacion_superposicion: int = 181
 
     @property
     def omega_rad_s(self) -> float:
@@ -70,3 +73,4 @@ DXF_MATRIZ = RAIZ_PROYECTO / "cara_matriz.dxf"
 CSV_AGUJEROS = RAIZ_PROYECTO / "datos" / "agujeros_matriz.csv"
 DIRECTORIO_RESULTADOS = RAIZ_PROYECTO / "resultados"
 DIRECTORIO_RESULTADOS_CARGAS = DIRECTORIO_RESULTADOS / "etapa_2b"
+DIRECTORIO_RESULTADOS_SUPERPOSICION = DIRECTORIO_RESULTADOS / "etapa_2c"
