@@ -1,0 +1,25 @@
+modelo,metrica,minimo,maximo,promedio,unidad
+cuadratico,activos_rodillo_1,1.0,4.0,2.925,agujeros
+cuadratico,activos_rodillo_2,1.0,4.0,2.925,agujeros
+cuadratico,activos_total,4.0,8.0,5.85,agujeros
+cuadratico,fuerza_rodillo_1_n,305.025124129241,2498.941278190195,1213.8832383768545,N
+cuadratico,fuerza_rodillo_2_n,305.0251241292425,2498.94127819019,1213.8832383768563,N
+cuadratico,fuerza_total_n,1071.229981421634,3879.5989924530113,2427.7664767537103,N
+cuadratico,torque_resistente_nm,6.642618897276492,25.196534289412845,15.592362429936303,N m
+cuadratico,potencia_resistente_w,358.93652692642564,1361.5046487361346,842.5394417063551,W
+senoidal,activos_rodillo_1,1.0,4.0,2.925,agujeros
+senoidal,activos_rodillo_2,1.0,4.0,2.925,agujeros
+senoidal,activos_total,4.0,8.0,5.85,agujeros
+senoidal,fuerza_rodillo_1_n,1243.926859357239,2605.673116610131,2312.8102654095533,N
+senoidal,fuerza_rodillo_2_n,1243.926859357239,2605.673116610131,2312.8102654095533,N
+senoidal,fuerza_total_n,3837.86644828745,5194.65386478115,4625.620530819107,N
+senoidal,torque_resistente_nm,23.90245405270253,34.21593103733113,29.707468880887973,N m
+senoidal,potencia_resistente_w,1291.578513741491,1848.871302420969,1605.2547750786548,W
+constante,activos_rodillo_1,1.0,4.0,2.925,agujeros
+constante,activos_rodillo_2,1.0,4.0,2.925,agujeros
+constante,activos_total,4.0,8.0,5.85,agujeros
+constante,fuerza_rodillo_1_n,1244.070690821558,4976.282763286232,3638.9067706530573,N
+constante,fuerza_rodillo_2_n,1244.070690821558,4976.282763286232,3638.9067706530573,N
+constante,fuerza_total_n,4976.282763286232,9952.565526572464,7277.8135413061145,N
+constante,torque_resistente_nm,31.189132510487237,64.68934354701804,46.74148677244274,N m
+constante,potencia_resistente_w,1685.317052548707,3495.5141429891605,2525.6946371493345,W

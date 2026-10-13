@@ -27,6 +27,12 @@ class Parametros:
     ancho_rodillo_m: float = 0.020
     numero_rodillos: int = 2
     espesor_biomasa_m: float = 0.004
+    separacion_minima_rodillo_matriz_m: float = 0.0001
+    presion_maxima_pa: float = 44.0e6
+    coeficiente_resistencia_tangencial: float = 0.1
+
+    # No se dispone todavía de una eficiencia de transmisión validada.
+    eficiencia_transmision: float | None = None
 
     # Hipótesis geométrica revisable: rodillo centrado en el anillo útil
     centro_radial_rodillo_m: float = 0.0635
@@ -63,3 +69,4 @@ PARAMETROS = Parametros()
 DXF_MATRIZ = RAIZ_PROYECTO / "cara_matriz.dxf"
 CSV_AGUJEROS = RAIZ_PROYECTO / "datos" / "agujeros_matriz.csv"
 DIRECTORIO_RESULTADOS = RAIZ_PROYECTO / "resultados"
+DIRECTORIO_RESULTADOS_CARGAS = DIRECTORIO_RESULTADOS / "etapa_2b"

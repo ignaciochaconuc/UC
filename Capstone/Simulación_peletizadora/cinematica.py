@@ -32,6 +32,32 @@ def mascara_contacto(
     )
 
 
+def estado_contacto(
+    coordenadas_m: np.ndarray, angulo_rodillo_rad: float, parametros: Parametros
+) -> tuple[np.ndarray, np.ndarray]:
+    """Retorna pertenencia y coordenada ``u`` en el sentido real de avance.
+
+    Para rotación antihoraria, la coordenada tangencial local aumenta durante el
+    paso bajo cualquiera de los dos rodillos: ``u=0`` es entrada y ``u=1`` salida.
+    Fuera del contacto se conserva el valor geométrico, que puede quedar fuera de
+    [0, 1]; los modelos de presión deben usarlo solamente donde la máscara es cierta.
+    """
+    radial = np.array([math.cos(angulo_rodillo_rad), math.sin(angulo_rodillo_rad)])
+    tangencial = np.array([-radial[1], radial[0]])
+    coordenada_radial = coordenadas_m @ radial
+    coordenada_tangencial = coordenadas_m @ tangencial
+    r_min, r_max = parametros.limite_radial_rodillo_m
+    longitud = parametros.longitud_contacto_m
+    semi_contacto = longitud / 2.0
+    activa = (
+        (coordenada_radial >= r_min)
+        & (coordenada_radial <= r_max)
+        & (np.abs(coordenada_tangencial) <= semi_contacto)
+    )
+    u = (coordenada_tangencial + semi_contacto) / longitud
+    return activa, u
+
+
 def mascaras_rodillos(
     coordenadas_m: np.ndarray, parametros: Parametros
 ) -> tuple[np.ndarray, np.ndarray]:
