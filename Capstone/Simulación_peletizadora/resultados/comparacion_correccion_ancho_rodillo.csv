@@ -1,0 +1,66 @@
+etapa,modelo,metrica,unidad,ancho_20mm,ancho_40mm,cambio_absoluto,cambio_porcentual
+1,geometrico,agujeros_por_rodillo_minimo,agujeros,1.0,2.0,1.0,100.0
+1,geometrico,agujeros_por_rodillo_maximo,agujeros,4.0,8.0,4.0,100.0
+1,geometrico,agujeros_por_rodillo_promedio,agujeros,2.925,5.1125,2.1875,74.78632478632478
+1,geometrico,agujeros_total_minimo,agujeros,4.0,7.0,3.0,75.0
+1,geometrico,agujeros_total_maximo,agujeros,8.0,14.0,6.0,75.0
+1,geometrico,agujeros_total_promedio,agujeros,5.85,10.225,4.375,74.78632478632478
+2B,cuadratico,activos_por_rodillo_minimo,agujeros,1.0,2.0,1.0,100.0
+2B,cuadratico,activos_por_rodillo_maximo,agujeros,4.0,8.0,4.0,100.0
+2B,cuadratico,activos_por_rodillo_promedio,agujeros,2.925,5.1125,2.1875,74.78632478632478
+2B,cuadratico,activos_total_minimo,agujeros,4.0,7.0,3.0,75.0
+2B,cuadratico,activos_total_maximo,agujeros,8.0,14.0,6.0,75.0
+2B,cuadratico,activos_total_promedio,agujeros,5.85,10.225,4.375,74.78632478632478
+2B,cuadratico,fuerza_por_rodillo_maximo,N,2498.941278190195,4014.892499414554,1515.951221224359,60.66373925850128
+2B,cuadratico,fuerza_por_rodillo_promedio,N,1213.8832383768545,2123.675361857582,909.7921234807277,74.9488990965274
+2B,cuadratico,fuerza_total_maximo,N,3879.5989924530113,6769.055200358521,2889.4562079055095,74.47821832942971
+2B,cuadratico,fuerza_total_promedio,N,2427.7664767537103,4247.350723715166,1819.5842469614558,74.94889909652736
+2B,cuadratico,torque_resistente_maximo,N m,25.196534289412845,42.788717096781845,17.592182807369,69.81985143393683
+2B,cuadratico,torque_resistente_promedio,N m,15.592362429936305,26.58340024551177,10.991037815575464,70.48988160045202
+2B,cuadratico,potencia_resistente_maximo,W,1361.5046487361346,2312.105171749847,950.6005230137125,69.8198514339368
+2B,cuadratico,potencia_resistente_promedio,W,842.5394417063551,1436.4444966022745,593.9050548959194,70.48988160045204
+2B,senoidal,activos_por_rodillo_minimo,agujeros,1.0,2.0,1.0,100.0
+2B,senoidal,activos_por_rodillo_maximo,agujeros,4.0,8.0,4.0,100.0
+2B,senoidal,activos_por_rodillo_promedio,agujeros,2.925,5.1125,2.1875,74.78632478632478
+2B,senoidal,activos_total_minimo,agujeros,4.0,7.0,3.0,75.0
+2B,senoidal,activos_total_maximo,agujeros,8.0,14.0,6.0,75.0
+2B,senoidal,activos_total_promedio,agujeros,5.85,10.225,4.375,74.78632478632478
+2B,senoidal,fuerza_por_rodillo_maximo,N,2605.673116610131,5194.65386478115,2588.9807481710195,99.35938363362986
+2B,senoidal,fuerza_por_rodillo_promedio,N,2312.8102654095533,4034.8929321118994,1722.0826667023462,74.45844963842718
+2B,senoidal,fuerza_total_maximo,N,5194.65386478115,9050.520077173069,3855.8662123919185,74.2275869145781
+2B,senoidal,fuerza_total_promedio,N,4625.620530819107,8069.785864223799,3444.1653334046914,74.45844963842714
+2B,senoidal,torque_resistente_maximo,N m,34.21593103733113,56.70829464567784,22.492363608346707,65.73652367900355
+2B,senoidal,torque_resistente_promedio,N m,29.707468880887973,50.51018061824588,20.80271173735791,70.02519070462156
+2B,senoidal,potencia_resistente_maximo,W,1848.871302420969,3064.2550239312304,1215.3837215102615,65.73652367900354
+2B,senoidal,potencia_resistente_promedio,W,1605.2547750786548,2729.3374926225265,1124.0827175438717,70.02519070462154
+2B,constante,activos_por_rodillo_minimo,agujeros,1.0,2.0,1.0,100.0
+2B,constante,activos_por_rodillo_maximo,agujeros,4.0,8.0,4.0,100.0
+2B,constante,activos_por_rodillo_promedio,agujeros,2.925,5.1125,2.1875,74.78632478632478
+2B,constante,activos_total_minimo,agujeros,4.0,7.0,3.0,75.0
+2B,constante,activos_total_maximo,agujeros,8.0,14.0,6.0,75.0
+2B,constante,activos_total_promedio,agujeros,5.85,10.225,4.375,74.78632478632478
+2B,constante,fuerza_por_rodillo_maximo,N,4976.282763286232,9952.565526572464,4976.282763286232,100.0
+2B,constante,fuerza_por_rodillo_promedio,N,3638.906770653057,6360.311406825215,2721.4046361721585,74.78632478632481
+2B,constante,fuerza_total_maximo,N,9952.565526572464,17416.98967150181,7464.424144929348,75.0
+2B,constante,fuerza_total_promedio,N,7277.813541306114,12720.622813650429,5442.809272344315,74.78632478632478
+2B,constante,torque_resistente_maximo,N m,64.68934354701804,108.82148034657013,44.132136799552086,68.22164885237333
+2B,constante,torque_resistente_promedio,N m,46.74148677244274,79.61737007550478,32.87588330306204,70.33555321660113
+2B,constante,potencia_resistente_maximo,W,3495.5141429891605,5880.211527204273,2384.6973842151124,68.22164885237333
+2B,constante,potencia_resistente_promedio,W,2525.6946371493345,4302.155932750345,1776.46129560101,70.3355532166011
+2C,area_superposicion,superpuestas_por_rodillo_minimo,perforaciones,4.0,5.0,1.0,25.0
+2C,area_superposicion,superpuestas_por_rodillo_maximo,perforaciones,7.0,10.0,3.0,42.85714285714286
+2C,area_superposicion,superpuestas_por_rodillo_promedio,perforaciones,4.872222222222222,6.691666666666666,1.8194444444444446,37.34321550741164
+2C,area_superposicion,superpuestas_total_minimo,perforaciones,8.0,10.0,2.0,25.0
+2C,area_superposicion,superpuestas_total_maximo,perforaciones,11.0,18.0,7.0,63.63636363636365
+2C,area_superposicion,superpuestas_total_promedio,perforaciones,9.744444444444444,13.383333333333333,3.6388888888888893,37.34321550741164
+2C,area_superposicion,fuerza_por_rodillo_maximo,N,4442.550587985175,8249.37179422581,3806.8212062406346,85.68999116264735
+2C,area_superposicion,fuerza_por_rodillo_promedio,N,3643.115632290517,6349.60251760716,2706.4868853166427,74.29044692756588
+2C,area_superposicion,fuerza_total_maximo,N,7976.200342076891,14432.817684259224,6456.617342182333,80.94853520819565
+2C,area_superposicion,fuerza_total_promedio,N,7286.231264581034,12699.205035214318,5412.9737706332835,74.29044692756585
+2C,area_superposicion,torque_resistente_maximo,N m,50.67308048141284,91.02866339541244,40.3555829139996,79.63909541438328
+2C,area_superposicion,torque_resistente_promedio,N m,46.781306684519365,79.48600695480404,32.704700270284675,69.90976222796948
+2C,area_superposicion,potencia_resistente_maximo,W,2738.13985085294,4918.769659252965,2180.6298084000246,79.63909541438325
+2C,area_superposicion,potencia_resistente_promedio,W,2527.846321773174,4295.0576748132735,1767.2113530400993,69.90976222796952
+2C,area_superposicion,cobertura_contactos_minimo,1,3.8802782964876386e-10,0.00023609105595,0.00023609066792217034,60843746.216830775
+2C,area_superposicion,cobertura_contactos_maximo,1,1.0,1.0,0.0,0.0
+2C,area_superposicion,cobertura_contactos_promedio,1,0.6010364477395994,0.7627235951137198,0.16168714737412038,26.901388090888577

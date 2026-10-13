@@ -47,6 +47,12 @@ def test_casos_fuera_contenido_parcial_y_esquina():
     assert np.all(areas <= AREA)
 
 
+def test_huella_radial_corregida_a_40_mm():
+    assert PARAMETROS.ancho_rodillo_m == pytest.approx(0.040)
+    assert PARAMETROS.centro_radial_rodillo_m == pytest.approx(0.0635)
+    assert PARAMETROS.limite_radial_rodillo_m == pytest.approx((0.0435, 0.0835))
+
+
 def test_cobertura_es_continua_al_cruzar_un_borde():
     posiciones = np.linspace(Y_MAX + 1.05 * RADIO, Y_MAX - 1.05 * RADIO, 401)
     centros = np.column_stack((np.full_like(posiciones, X_MEDIO), posiciones))
@@ -118,9 +124,9 @@ def test_cobertura_parcial_activa_centros_exteriores(simulacion_area):
 def test_modelos_2b_mantienen_resultados_de_regresion():
     coordenadas = cargar_agujeros_dxf(DXF_MATRIZ, PARAMETROS.numero_agujeros)
     esperados = {
-        "cuadratico": (3879.598992, 2427.766477, 25.196534, 15.592362),
-        "senoidal": (5194.653865, 4625.620531, 34.215931, 29.707469),
-        "constante": (9952.565527, 7277.813541, 64.689344, 46.741487),
+        "cuadratico": (6769.055200, 4247.350724, 42.788717, 26.583400),
+        "senoidal": (9050.520077, 8069.785864, 56.708295, 50.510181),
+        "constante": (17416.989672, 12720.622814, 108.821480, 79.617370),
     }
     for modelo, esperado in esperados.items():
         agregados, _ = simular_modelo(coordenadas, modelo)

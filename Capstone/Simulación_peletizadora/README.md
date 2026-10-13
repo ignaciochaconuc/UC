@@ -61,23 +61,23 @@ borde de algunas bocas de Ø9 mm cruza nominalmente los radios de 45 u 80 mm.
 
 ## Resultados de una revolución
 
-Con 1440 intervalos por vuelta y la huella radial provisional de 20 mm:
+Con 1440 intervalos por vuelta y la huella radial corregida de 40 mm:
 
 | Componente | Mínimo | Máximo | Promedio |
 |---|---:|---:|---:|
-| Rodillo 1 | 1 | 4 | 2,925 |
-| Rodillo 2 | 1 | 4 | 2,925 |
-| Total | 4 | 8 | 5,850 |
+| Rodillo 1 | 2 | 8 | 5,1125 |
+| Rodillo 2 | 2 | 8 | 5,1125 |
+| Total | 7 | 14 | 10,225 |
 
-El promedio de **2,925 agujeros por rodillo** es 41,5 % menor que la estimación
-preliminar de cinco. La diferencia no invalida por sí sola la Entrega 1: el
-conteo actual usa los centros reales, pero depende de la posición radial supuesta
-y de una huella rectangular aproximada que aún debe confirmarse en el conjunto.
+El promedio de **5,1125 agujeros por rodillo** es 2,25 % mayor que la estimación
+preliminar de cinco. El conteo actual usa los centros reales, pero sigue dependiendo
+de la huella rectangular aproximada.
 
 ## Hipótesis y limitaciones revisables
 
-- El plano no fija inequívocamente la posición radial del rodillo. Su ancho de 20
-  mm se ubica provisionalmente con centro en 63,5 mm: contacto radial 53,5–73,5 mm.
+- El ancho axial/radial correcto del rodillo es 40 mm. Los 20 mm del plano son la
+  distancia desde un extremo hasta el plano medio. Con centro radial en 63,5 mm,
+  la huella corregida abarca 43,5–83,5 mm.
 - La proyección completa de cada rodillo se dibuja como una franja de 20 x 100 mm;
   la huella activa se aproxima mediante un rectángulo de 20 x 19,596 mm.
 - No se considera deformación de biomasa, deslizamiento, holgura ni forma hertziana
@@ -131,17 +131,15 @@ Los promedios excluyen el estado duplicado de 360°:
 
 | Modelo | F máx. por rodillo [kN] | F total máx./media [kN] | Torque máx./medio [N m] | Potencia máx./media [kW] |
 |---|---:|---:|---:|---:|
-| A: cuadrático | 2,499 | 3,880 / 2,428 | 25,197 / 15,592 | 1,362 / 0,843 |
-| B: senoidal | 2,606 | 5,195 / 4,626 | 34,216 / 29,707 | 1,849 / 1,605 |
-| C: constante | 4,976 | 9,953 / 7,278 | 64,689 / 46,741 | 3,496 / 2,526 |
+| A: cuadrático | 4,015 | 6,769 / 4,247 | 42,789 / 26,583 | 2,312 / 1,436 |
+| B: senoidal | 5,195 | 9,051 / 8,070 | 56,708 / 50,510 | 3,064 / 2,729 |
+| C: constante | 9,953 | 17,417 / 12,721 | 108,821 / 79,617 | 5,880 / 4,302 |
 
-Frente a la Entrega 1, el máximo constante por rodillo baja de 6,180 a 4,976 kN
-porque la geometría real presenta como máximo cuatro agujeros activos, no cinco.
-El torque máximo constante es 64,689 N m frente a 78 N m; además del conteo, el
+Frente a la Entrega 1, el máximo constante por rodillo aumenta de 6,180 a 9,953
+kN porque la geometría corregida presenta hasta ocho agujeros activos, no cinco.
+El torque máximo constante es 108,821 N m frente a 78 N m. Además del conteo, el
 nuevo cálculo utiliza el radio real de cada perforación. Los modelos variables
 reducen las cargas porque no asignan 44 MPa simultáneamente a todos los centros.
-Esto no justifica descartar el caso constante ni concluir que el motor está
-sobredimensionado.
 
 No se proporcionó una eficiencia de transmisión. Por ello, los 5,5 kW nominales
 del motor aparecen en la gráfica solo como referencia y no como potencia disponible
@@ -158,6 +156,38 @@ presión, fuerza y torque nulos. Incluyen identificador, tiempo, rodillo, radio,
 `modelos/presion.py`, `modelos/fuerzas.py` y `modelos/torque.py` contienen las
 relaciones de la Etapa 2B; `simulacion_cargas.py` coordina la ejecución y
 `visualizacion_cargas.py` genera sus figuras.
+
+## Corrección del ancho del rodillo: 20 a 40 mm
+
+La interpretación inicial del plano era incorrecta: 20 mm corresponde a la
+distancia entre un extremo y el plano medio, no al ancho total. Desde esta
+corrección, `ancho_rodillo_m=0.040`; con el centro conservado en 63,5 mm, todos los
+módulos obtienen desde `config.py` los límites radiales 43,5–83,5 mm. Se mantienen
+`Lc=19,596 mm`, `P_max=44 MPa` y todas las ecuaciones de 2B y 2C.
+
+Comparación 2B, expresada como **20 mm → 40 mm**:
+
+| Modelo | Activos por rodillo media/máx. | F rodillo máx./media [kN] | F total máx./media [kN] | Torque máx./medio [N m] | Potencia máx./media [kW] |
+|---|---:|---:|---:|---:|---:|
+| Cuadrático | 2,925/4 → 5,1125/8 | 2,499/1,214 → 4,015/2,124 | 3,880/2,428 → 6,769/4,247 | 25,197/15,592 → 42,789/26,583 | 1,362/0,843 → 2,312/1,436 |
+| Senoidal | 2,925/4 → 5,1125/8 | 2,606/2,313 → 5,195/4,035 | 5,195/4,626 → 9,051/8,070 | 34,216/29,707 → 56,708/50,510 | 1,849/1,605 → 3,064/2,729 |
+| Constante | 2,925/4 → 5,1125/8 | 4,976/3,639 → 9,953/6,360 | 9,953/7,278 → 17,417/12,721 | 64,689/46,741 → 108,821/79,617 | 3,496/2,526 → 5,880/4,302 |
+
+En la Etapa 1, el total activo medio/máximo cambia de `5,850/8` a
+`10,225/14`. En 2C, las superposiciones positivas medias/máximas por rodillo
+cambian de `4,872/7` a `6,692/10`; la fuerza por rodillo máxima/media pasa de
+`4,443/3,643 kN` a `8,249/6,350 kN`; la fuerza total de `7,976/7,286 kN` a
+`14,433/12,699 kN`; el torque de `50,673/46,781 N m` a `91,029/79,486 N m`; y la
+potencia de `2,738/2,528 kW` a `4,919/4,295 kW`.
+
+La tabla completa, incluidos mínimos y cambios porcentuales, se exporta en
+`resultados/comparacion_correccion_ancho_rodillo.csv`. Los resúmenes originales se
+conservan en `resultados/referencia_ancho_20mm/`.
+
+La huella corregida 43,5–83,5 mm rebasa el anillo útil nominal 45–80 mm en 1,5
+mm hacia el interior y 3,5 mm hacia el exterior. No queda fuera de la matriz de
+radio 100 mm, pero significa que parte del rodillo trabaja sobre zonas sin centros
+de perforación. El modelo conserva esta geometría sin recortarla al anillo útil.
 
 ## Limitaciones físicas
 
@@ -181,7 +211,7 @@ F_i = P_max A_c,i = P_max A_h f_i
 ```
 
 `A_c,i` es la intersección entre el disco y la huella rectangular radial
-53,5–73,5 mm y tangencial `-Lc/2 ... +Lc/2`. La intersección se obtiene mediante
+43,5–83,5 mm y tangencial `-Lc/2 ... +Lc/2`. La intersección se obtiene mediante
 integración determinista 1D de Gauss–Legendre: en cada coordenada radial se recorta
 analíticamente el segmento vertical del círculo contra el rectángulo. No se usa
 Monte Carlo ni se aproxima solamente por distancia al borde.
@@ -204,27 +234,28 @@ dos alternativas claramente separadas:
 
 | Modelo | Fuerza total máx./media [kN] | Torque máx./medio [N m] | Potencia máx./media [kW] |
 |---|---:|---:|---:|
-| A: cuadrático | 3,880 / 2,428 | 25,197 / 15,592 | 1,362 / 0,843 |
-| B: senoidal | 5,195 / 4,626 | 34,216 / 29,707 | 1,849 / 1,605 |
-| C: constante binario | 9,953 / 7,278 | 64,689 / 46,741 | 3,496 / 2,526 |
-| D: superposición | 7,976 / 7,286 | 50,673 / 46,781 | 2,738 / 2,528 |
+| A: cuadrático | 6,769 / 4,247 | 42,789 / 26,583 | 2,312 / 1,436 |
+| B: senoidal | 9,051 / 8,070 | 56,708 / 50,510 | 3,064 / 2,729 |
+| C: constante binario | 17,417 / 12,721 | 108,821 / 79,617 | 5,880 / 4,302 |
+| D: superposición | 14,433 / 12,699 | 91,029 / 79,486 | 4,919 / 4,295 |
 
-En el modelo D, cada rodillo alcanza 4,443 kN y promedia 3,643 kN. Se detectan
-entre 4 y 7 perforaciones con superposición positiva por rodillo; en total son
-8–11, con promedio 9,744. La cobertura media de los contactos positivos es 0,601.
+En el modelo D, cada rodillo alcanza 8,249 kN y promedia 6,350 kN. Se detectan
+entre 5 y 10 perforaciones con superposición positiva por rodillo; en total son
+10–18, con promedio 13,383. La cobertura media de los contactos positivos es
+0,7627.
 El valor mínimo positivo puede aproximarse arbitrariamente a cero cuando aparece
 un solapamiento tangencial muy pequeño; en la discretización actual es
-`3,88e-10`.
+`2,36e-4`.
 
-La fuerza total máxima ocurre a `t=0,058140 s`, `θ=180°`. En ese instante, las
-resultantes basadas en centroides se ubican a 63,190 mm radialmente y a +0,611 mm
-para el rodillo 1 / -0,611 mm para el rodillo 2 en dirección tangencial local.
+La fuerza total máxima ocurre a `t=0,027778 s`, `θ=86°`. En ese instante, la
+resultante basada en centroides del rodillo 1 se ubica en 61,709 mm radial y
++0,541 mm tangencial; la del rodillo 2, en 63,579 mm radial y +0,150 mm tangencial.
 
-El promedio de fuerza del modelo D es 0,12 % superior al constante binario. No es
-una inconsistencia: las contribuciones parciales de centros exteriores elevan el
-número medio de contactos efectivos. Su máximo es menor porque las transiciones
-de entrada y salida ya no asignan instantáneamente el área completa. El límite
-`N_superpuestas P_max A_h` se comprueba en cada instante.
+El promedio de fuerza del modelo D es 0,17 % inferior al constante binario. Sus
+contactos parciales incrementan el número de perforaciones consideradas, mientras
+que la ponderación por área reduce la carga de las que cruzan los bordes. Su máximo
+es 17,1 % menor porque las transiciones ya no asignan instantáneamente el área
+completa. El límite `N_superpuestas P_max A_h` se comprueba en cada instante.
 
 ### Ejecución y salidas 2C
 

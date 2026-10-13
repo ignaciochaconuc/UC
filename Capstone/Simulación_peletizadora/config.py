@@ -25,7 +25,7 @@ class Parametros:
     numero_agujeros: int = 102
     espesor_matriz_m: float = 0.036
     diametro_rodillo_m: float = 0.100
-    ancho_rodillo_m: float = 0.020
+    ancho_rodillo_m: float = 0.040
     numero_rodillos: int = 2
     espesor_biomasa_m: float = 0.004
     separacion_minima_rodillo_matriz_m: float = 0.0001
