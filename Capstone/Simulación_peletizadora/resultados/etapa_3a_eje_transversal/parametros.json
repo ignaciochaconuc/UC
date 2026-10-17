@@ -1,0 +1,41 @@
+{
+  "longitud_m": 0.27,
+  "modulo_young_pa": 205000000000.0,
+  "coeficiente_poisson": 0.29,
+  "densidad_eje_kg_m3": 7850.0,
+  "gravedad_m_s2": 9.80665,
+  "limite_fluencia_pa": null,
+  "resistencia_ultima_pa": null,
+  "diametro_equivalente_rosca_m": 0.0215463,
+  "centro_matriz_m": 0.135,
+  "rodamientos_izquierdos_m": [
+    0.0595,
+    0.0835
+  ],
+  "rodamientos_derechos_m": [
+    0.1865,
+    0.2105
+  ],
+  "centro_rodillo_izquierdo_m": 0.0715,
+  "centro_rodillo_derecho_m": 0.1985,
+  "densidad_rodillo_kg_m3": 7850.0,
+  "diametro_exterior_rodillo_m": 0.09999,
+  "ancho_rodillo_m": 0.04,
+  "diametro_agujero_pasante_rodillo_m": 0.056,
+  "diametro_alojamiento_rodamiento_m": 0.062,
+  "profundidad_alojamiento_por_lado_m": 0.016,
+  "masa_rodillo_ingresada_kg": null,
+  "longitud_maxima_elemento_m": 0.002,
+  "tolerancia_equilibrio_relativa": 1e-08,
+  "masa_rodillo_utilizada_kg": 1.5525895653917847,
+  "masa_eje_kg": 1.5538383038547323,
+  "fuente_masa_rodillo": "estimada_sin_ranuras_exteriores",
+  "modelo": "viga Euler-Bernoulli biempotrada, dos planos independientes",
+  "numero_elementos": 142,
+  "numero_intervalos_carga": 1440,
+  "diametro_rosca_modelado_como_raiz_basica_m24x2_m": 0.0215463,
+  "esfuerzo_reportado": "flexion nominal; no incluye concentraciones ni von Mises",
+  "masa_rodillo_advertencia": "estimación desde cavidades axisimétricas del plano; omite ranuras exteriores",
+  "convencion_rodillos": "R1 izquierdo, R2 derecho, según Etapa 3A",
+  "tangencial_advertencia": "mu_eff=0.1 equivalente no validado experimentalmente"
+}

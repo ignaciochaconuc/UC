@@ -283,3 +283,65 @@ Persisten las incertidumbres sobre la ley constitutiva y flujo de biomasa, presi
 real de contacto, historia de compactación, `μ_eff`, geometría 3D, deformación,
 atascamientos y capacidad másica. El modelo proporciona escenarios equivalentes de
 carga para ingeniería estructural preliminar, no consumos reales ni resultados FEA.
+
+## Etapa 3A: eje transversal biempotrado
+
+`simulacion_eje_transversal.py` implementa un modelo FEM de viga
+Euler--Bernoulli en dos planos independientes. La malla representa los nueve
+tramos nominales del plano (270 mm), incluye todos los cambios de diámetro y los
+centros de los cuatro rodamientos, y aplica empotramientos ideales en ambos
+extremos. Las roscas M24x2 se representan provisionalmente mediante el diámetro
+menor básico conservador de 21,5463 mm. Esta equivalencia no sustituye un análisis
+local de la raíz de rosca.
+
+La convención solicitada para esta etapa asigna R1 al rodillo izquierdo y R2 al
+derecho. Las resultantes de 2C se transforman con `x_F1=135 mm-r1` y
+`x_F2=135 mm+r2`; durante la revolución quedan respectivamente entre
+70,203--74,991 mm y 195,009--199,797 mm, dentro de sus pares de rodamientos. El
+reparto conserva fuerza y momento sin reacciones de signo opuesto.
+
+La masa calculada del eje es 1,55384 kg. La masa provisional de cada rodillo es
+1,55259 kg y descuenta el agujero pasante y los alojamientos de Ø62 mm del plano.
+Como las ranuras exteriores no se descontaron, esta masa es una ligera
+sobreestimación que debe reemplazarse por el volumen CAD cuando esté disponible.
+
+### Resultados estructurales
+
+| Caso | Momento máx. [N m] | Esfuerzo nominal máx. [MPa] | Desplazamiento máx. [mm] | Reacción resultante máx. [N] |
+|---|---:|---:|---:|---:|
+| A: pesos | 0,922 | 0,783 | 0,000454 | 22,845 |
+| B: compactación 2C + pesos | 294,134 | 266,575 | 0,144489 | 7822,049 |
+| C: B + tangenciales | 294,806 | 266,916 | 0,144503 | 7838,712 |
+| D: máximos constantes simultáneos | 373,552 | 346,445 | 0,197951 | 9945,922 |
+
+En C, el momento máximo ocurre en `x=186,5 mm`; el esfuerzo nominal máximo
+ocurre en la sección equivalente de la rosca del empotramiento izquierdo
+(`x=0 mm`), y el desplazamiento máximo en `x=131,045 mm`. El caso D es una
+envolvente artificial: combina simultáneamente máximos individuales del modelo
+constante que no necesariamente coinciden en el tiempo. Frente a C incrementa el
+momento máximo en 26,7 %, el esfuerzo nominal en 29,8 % y el desplazamiento en
+37,0 %.
+
+No se publica factor de seguridad porque no se definió el estado de tratamiento
+térmico ni el límite de fluencia del AISI 4140. Los esfuerzos son nominales de
+flexión; no incluyen concentración en roscas/escalones, contacto de rodamientos,
+torsión ni una combinación de von Mises.
+
+El equilibrio relativo máximo de los casos calculados es menor que `1,0e-9`.
+Con refinamiento de 8 a 0,5 mm, el resultado de 2 mm difiere de la referencia más
+fina aproximadamente 0,00351 % en desplazamiento, `2,4e-6 %` en momento y menos
+de 0,0001 % en esfuerzo nominal. Las pruebas incluyen las soluciones analíticas
+de una viga uniforme biempotrada con carga puntual central y carga distribuida.
+
+### Ejecución y salidas 3A
+
+```powershell
+python simulacion_eje_transversal.py
+python -m pytest -q
+```
+
+Los CSV, parámetros, validaciones y gráficos se guardan en
+`resultados/etapa_3a_eje_transversal/`. El modelo mantiene pendientes la rigidez
+real de paredes y tuercas, pretensión, concentraciones locales, contacto 3D,
+fatiga, plasticidad, flexibilidad de rodillos y validación experimental de
+`mu_eff=0,1`.
