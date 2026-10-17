@@ -525,3 +525,71 @@ python -m pytest -q
 Las tablas, historiales, ciclos rainflow, sensibilidades y figuras están en
 `resultados/etapa_3d_resistencia_fatiga/`. La búsqueda usa 144 puntos materiales;
 el refinamiento 72--144 cambia el máximo reconstruido alrededor de 0,066 %.
+
+### Actualización: SAE 4140 +QT documentado por Ovako
+
+El escenario principal estático utiliza la ficha `42CrMo4`, variante 6115
+`42CrMnMo4-4 / SAE 4140`, templada y revenida. Para barras redondas de suministro
+en el intervalo indicado de 25--60 mm se adoptan los mínimos de diseño
+`Sy=940 MPa` y `Sut=1040 MPa`; este último representa conservadoramente el límite
+inferior del valor `>1040 MPa`. La ficha también informa 316--375 HB, A5=9 % y
+reducción de área de 48 %. Fuente: [Ovako Steel Navigator, 42CrMo4](https://steelnavigator.ovako.com/steel-grades/42crmo4/),
+variante comercial específica, revisión 3 de febrero de 2026.
+
+Estos valores no certifican el material comprado. Deben verificarse la colada, el
+tratamiento, el certificado 3.1 y el diámetro de la **barra de suministro**; el
+diámetro final mecanizado de 21,546--36 mm no demuestra por sí solo que el producto
+quede dentro del intervalo de la ficha.
+
+La ficha no proporciona un `Se` corregido para este eje. Se usa la estimación de
+Marin descrita en *Shigley's Mechanical Engineering Design*:
+
+```text
+Se' = 0,5 Sut                         (Sut <= 1400 MPa)
+Se  = ka kb kc kd ke k_misc Se'
+ka  = a Sut^b                         (Sut en MPa, según acabado)
+kb  = 1,24 d^-0,107                   (2,79 <= d <= 51 mm, flexión)
+kb  = 1,51 d^-0,157                   (51 < d <= 254 mm, flexión)
+```
+
+Para la sección roscada crítica, `d=21,5463 mm` y `kb=0,89279`. Se estudian
+acabados rectificado, mecanizado y laminado en caliente, y confiabilidades de 90,
+95 y 99 % (`ke=0,897/0,868/0,814`). Se adoptan `kc=kd=k_misc=1` únicamente como
+hipótesis de cálculo a temperatura ambiente; no son datos de fabricación.
+
+| Acabado | Se a R90 [MPa] | Se a R95 [MPa] | Se a R99 [MPa] |
+|---|---:|---:|---:|
+| Rectificado | 364,55 | 352,76 | 330,82 |
+| Mecanizado | 298,00 | 288,36 | 270,42 |
+| Laminado en caliente | 163,87 | 158,57 | 148,70 |
+
+#### Resultados actualizados
+
+| Caso | n estático Kt=1 | n estático Kt=1,5 | n estático Kt=2,5 |
+|---|---:|---:|---:|
+| 3C nominal | 3,619 | 2,413 | 1,448 |
+| 3A-C referencia | 3,522 | 2,348 | 1,409 |
+| 3A-D conservador | 2,713 | 1,809 | 1,085 |
+
+Para 3C y `Kt=1,5, Kf=1,35`, los factores Goodman son:
+
+| Acabado | R90 | R95 | R99 |
+|---|---:|---:|---:|
+| Rectificado | 2,116 | 2,092 | 2,045 |
+| Mecanizado | 1,966 | 1,941 | 1,892 |
+| Laminado en caliente | 1,493 | 1,467 | 1,416 |
+
+En todo el barrido Marin, el factor Goodman varía entre 2,000 y 3,058 para
+`Kt=1`, entre 1,416 y 2,116 para `Kt=1,5`, y entre 0,829 y 1,250 para `Kt=2,5`.
+Por tanto, el acabado, la confiabilidad y especialmente la entalla continúan
+impidiendo una conclusión definitiva.
+
+La selección de fatiga ahora se realiza independientemente para cada combinación:
+se recorren todas las secciones, 144 puntos materiales y todos los ciclos
+rainflow. La sección gobernante no cambió (`x=0`, rosca del empotramiento
+izquierdo), pero el punto/ciclo sí cambia en los escenarios laminados en caliente:
+el ángulo material pasa de aproximadamente 2,5° a 5°. Esto confirma que reutilizar
+un ciclo único no era general.
+
+La referencia BibTeX está en `referencias.bib` y la trazabilidad numérica se
+exporta en `resultados/etapa_3d_resistencia_fatiga/fuentes_materiales.csv`.

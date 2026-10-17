@@ -4,5 +4,26 @@
   "criterio_fatiga": "rainflow periódico y Goodman modificado preliminar",
   "tratamiento_media_compresiva": "se ignora su beneficio en Goodman",
   "torque_matriz_aplicado_al_eje": false,
-  "advertencia": "Sy, Sut, Se, Kt y q son escenarios paramétricos, no propiedades verificadas"
+  "advertencia": "Sy y Sut del escenario Ovako están documentados para el producto indicado; Se, acabado, confiabilidad, Kt y q siguen siendo estimaciones/sensibilidades",
+  "material_principal": {
+    "nombre": "ovako_4140_qt_documentado",
+    "sy_pa": 940000000.0,
+    "sut_pa": 1040000000.0,
+    "se_corregido_pa": null,
+    "descripcion": "Referencia documentada de diseño; Se y certificado del material real pendientes.",
+    "factor_superficie": null,
+    "factor_tamano": null,
+    "factor_carga": null,
+    "factor_temperatura": null,
+    "factor_confiabilidad": null,
+    "factor_miscelaneo": null,
+    "material": "SAE 4140 +QT",
+    "fabricante": "Ovako",
+    "variante": "6115",
+    "fuente": "ovako_4140_qt_2026",
+    "metodo_se": "sin_definir",
+    "acabado_superficial": null,
+    "confiabilidad_porcentaje": null
+  },
+  "referencia_marin": "Budynas y Nisbett, Shigley's Mechanical Engineering Design; Se'=0.5 Sut y factores de Marin"
 }

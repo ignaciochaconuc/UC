@@ -17,11 +17,12 @@ from estructural.cargas_eje import cargar_serie_2c, tabla_fuerzas_rodamientos
 from estructural.config_eje import CONFIG_EJE
 from estructural.geometria_eje import crear_malla
 from estructural.resistencia_fatiga import (
-    ENTALLAS, MATERIALES, analizar_resistencia, secciones_criticas,
+    ENTALLAS, MATERIALES, MATERIALES_ANALISIS, MATERIAL_OVAKO, analizar_resistencia, secciones_criticas,
 )
 from estructural.viga_eb import SistemaViga
 from estructural.visualizacion_resistencia import (
     comparar_factores, esfuerzo_longitudinal, historial_tension, mapa_secciones, sensibilidad_kt,
+    sensibilidad_marin,
 )
 
 
@@ -49,7 +50,10 @@ def _resumen_factores(sens: pd.DataFrame, nominal: pd.DataFrame) -> pd.DataFrame
 def _sensibilidad_angular(caso, sistema) -> pd.DataFrame:
     filas = []
     for n in (36, 72, 144):
-        nominal, _, _, sens = analizar_resistencia({"3C_inclinacion": caso}, sistema, n)
+        nominal, _, _, sens = analizar_resistencia(
+            {"3C_inclinacion": caso}, sistema, n,
+            materiales=(MATERIALES[2],), entallas=(ENTALLAS[1],)
+        )
         d = sens[(sens.material == "parametrico_medio") & (sens.entalla == "sensibilidad_moderada")]
         filas.append({"numero_puntos_materiales": n,
                       "esfuerzo_nominal_max_pa": nominal.esfuerzo_nominal_max_pa.max(),
@@ -87,27 +91,43 @@ def ejecutar(graficos: bool = True) -> pd.DataFrame:
     verificaciones.append({"validacion": "refinamiento_angular_72_144", "error_relativo":
                            abs(angular.esfuerzo_nominal_max_pa.iloc[1]-angular.esfuerzo_nominal_max_pa.iloc[2])/
                            angular.esfuerzo_nominal_max_pa.iloc[2], "cumple": True})
+    verificaciones.append({"validacion": "Sy_Ovako_940_MPa", "error_relativo": abs(MATERIAL_OVAKO.sy_pa-940e6)/940e6,
+                           "cumple": MATERIAL_OVAKO.sy_pa == 940e6})
+    verificaciones.append({"validacion": "Sut_Ovako_1040_MPa", "error_relativo": abs(MATERIAL_OVAKO.sut_pa-1040e6)/1040e6,
+                           "cumple": MATERIAL_OVAKO.sut_pa == 1040e6})
+    verificaciones.append({"validacion": "trazabilidad_Ovako", "error_relativo": 0.0,
+                           "cumple": MATERIAL_OVAKO.fuente == "ovako_4140_qt_2026"})
     validaciones = pd.DataFrame(verificaciones)
     if not validaciones.cumple.all():
         raise RuntimeError("Falló la reconstrucción de esfuerzos 3D")
 
     pd.DataFrame([asdict(s) for s in secciones_criticas(CONFIG_EJE)]).to_csv(SALIDA/"secciones_criticas.csv", index=False)
-    pd.DataFrame([asdict(m) for m in MATERIALES]).to_csv(SALIDA/"escenarios_material.csv", index=False)
+    pd.DataFrame([asdict(m) for m in MATERIALES_ANALISIS]).to_csv(SALIDA/"escenarios_material.csv", index=False)
     pd.DataFrame([{**asdict(e), "kf": e.kf} for e in ENTALLAS]).to_csv(SALIDA/"escenarios_entallas.csv", index=False)
     nominal.to_csv(SALIDA/"esfuerzos_nominales_secciones.csv", index=False)
     historiales.to_csv(SALIDA/"historiales_tension_puntos_materiales.csv", index=False)
     ciclos.to_csv(SALIDA/"conteo_rainflow.csv", index=False)
     sensibilidad.to_csv(SALIDA/"sensibilidad_material_entallas.csv", index=False)
+    sensibilidad[sensibilidad.material.str.startswith("ovako_qt_")].to_csv(SALIDA/"sensibilidad_marin_ovako.csv", index=False)
     factores.to_csv(SALIDA/"resumen_factores_seguridad.csv", index=False)
     angular.to_csv(SALIDA/"sensibilidad_refinamiento_angular.csv", index=False)
     validaciones.to_csv(SALIDA/"validaciones.csv", index=False)
+    pd.DataFrame([{
+        "clave": "ovako_4140_qt_2026", "material": "SAE 4140 +QT", "fabricante": "Ovako",
+        "variante": "6115", "revision": "2026-02-03", "rango_producto": "barra redonda 25--60 mm +QT",
+        "sy_pa": 940e6, "sut_adoptado_pa": 1040e6,
+        "url": "https://steelnavigator.ovako.com/steel-grades/42crmo4/",
+        "nota": "Referencia de diseño; verificar certificado y diámetro de barra de suministro."
+    }]).to_csv(SALIDA/"fuentes_materiales.csv", index=False)
     parametros = {
         "numero_puntos_materiales": 144,
         "criterio_estatico": "flexión uniaxial local; von Mises=abs(sigma) sin torsión",
         "criterio_fatiga": "rainflow periódico y Goodman modificado preliminar",
         "tratamiento_media_compresiva": "se ignora su beneficio en Goodman",
         "torque_matriz_aplicado_al_eje": False,
-        "advertencia": "Sy, Sut, Se, Kt y q son escenarios paramétricos, no propiedades verificadas",
+        "advertencia": "Sy y Sut del escenario Ovako están documentados para el producto indicado; Se, acabado, confiabilidad, Kt y q siguen siendo estimaciones/sensibilidades",
+        "material_principal": asdict(MATERIAL_OVAKO),
+        "referencia_marin": "Budynas y Nisbett, Shigley's Mechanical Engineering Design; Se'=0.5 Sut y factores de Marin",
     }
     (SALIDA/"parametros.json").write_text(json.dumps(parametros, indent=2, ensure_ascii=False), encoding="utf-8")
 
@@ -117,6 +137,7 @@ def ejecutar(graficos: bool = True) -> pd.DataFrame:
         historial_tension(historiales, nominal, SALIDA/"historial_tension_critica.png")
         comparar_factores(sensibilidad, SALIDA/"comparacion_resistencia_estatica.png", SALIDA/"comparacion_fatiga.png")
         sensibilidad_kt(sensibilidad, SALIDA/"sensibilidad_concentracion.png")
+        sensibilidad_marin(sensibilidad, SALIDA/"sensibilidad_marin.png")
     return factores
 
 

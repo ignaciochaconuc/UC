@@ -46,7 +46,9 @@ def historial_tension(historiales: pd.DataFrame, resumen: pd.DataFrame, ruta: Pa
 
 
 def comparar_factores(sens: pd.DataFrame, ruta_estatica: Path, ruta_fatiga: Path) -> None:
-    d = sens[(sens.caso == "3C_inclinacion") & (sens.material != "no_especificado")]
+    materiales = ["parametrico_bajo", "parametrico_medio", "parametrico_alto",
+                  "ovako_qt_mecanizado_R95"]
+    d = sens[(sens.caso == "3C_inclinacion") & sens.material.isin(materiales)]
     # Mínimo entre secciones para cada combinación.
     g = d.groupby(["material", "entalla"], as_index=False)[["factor_seguridad_fluencia", "factor_seguridad_goodman"]].min()
     for col, titulo, ruta in (("factor_seguridad_fluencia", "Sensibilidad de resistencia estática", ruta_estatica),
@@ -65,4 +67,18 @@ def sensibilidad_kt(sens: pd.DataFrame, ruta: Path) -> None:
     ax.plot(d.kt, d.factor_seguridad_goodman, "s-", label="Goodman")
     ax.axhline(1, color="tab:red", ls="--")
     ax.set(xlabel="Kt paramétrico", ylabel="Factor de seguridad mínimo", title="Sensibilidad a concentración de esfuerzo")
+    ax.grid(alpha=.25); ax.legend(); _guardar(fig, ruta)
+
+
+def sensibilidad_marin(sens: pd.DataFrame, ruta: Path) -> None:
+    d = sens[(sens.caso == "3C_inclinacion") & sens.material.str.startswith("ovako_qt_")
+             & (sens.entalla == "sensibilidad_moderada")]
+    i = d.groupby("material").factor_seguridad_goodman.idxmin(); d = d.loc[i]
+    fig, ax = plt.subplots(figsize=(10, 4.8))
+    for acabado, g in d.groupby("acabado_superficial"):
+        g = g.sort_values("confiabilidad_porcentaje")
+        ax.plot(g.confiabilidad_porcentaje, g.factor_seguridad_goodman, "o-", label=acabado)
+    ax.axhline(1, color="tab:red", ls="--")
+    ax.set(xlabel="Confiabilidad asumida [%]", ylabel="Factor Goodman mínimo",
+           title="Sensibilidad Marin — SAE 4140 +QT Ovako, Kt=1,5")
     ax.grid(alpha=.25); ax.legend(); _guardar(fig, ruta)

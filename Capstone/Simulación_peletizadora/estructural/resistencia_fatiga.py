@@ -35,6 +35,13 @@ class EscenarioMaterial:
     factor_temperatura: float | None = None
     factor_confiabilidad: float | None = None
     factor_miscelaneo: float | None = None
+    material: str = "AISI 4140"
+    fabricante: str | None = None
+    variante: str | None = None
+    fuente: str | None = None
+    metodo_se: str = "directo"
+    acabado_superficial: str | None = None
+    confiabilidad_porcentaje: float | None = None
 
 
 @dataclass(frozen=True)
@@ -59,6 +66,69 @@ MATERIALES = (
     EscenarioMaterial("parametrico_alto", 950e6, 1050e6, 330e6,
                       "Escenario ilustrativo alto; no debe asumirse sin tratamiento certificado."),
 )
+
+MATERIAL_OVAKO = EscenarioMaterial(
+    "ovako_4140_qt_documentado", 940e6, 1040e6, None,
+    "Referencia documentada de diseño; Se y certificado del material real pendientes.",
+    material="SAE 4140 +QT", fabricante="Ovako", variante="6115",
+    fuente="ovako_4140_qt_2026", metodo_se="sin_definir",
+)
+
+_FACTORES_CONFIABILIDAD = {90.0: .897, 95.0: .868, 99.0: .814}
+_ACABADOS_MARIN = {
+    "rectificado": (1.58, -.085),
+    "mecanizado": (4.51, -.265),
+    "laminado_caliente": (57.7, -.718),
+}
+
+
+def escenarios_ovako_marin() -> tuple[EscenarioMaterial, ...]:
+    """Escenarios de acabado/confiabilidad; ninguno representa el dato real."""
+    salida = []
+    for acabado in _ACABADOS_MARIN:
+        for confiabilidad in _FACTORES_CONFIABILIDAD:
+            salida.append(EscenarioMaterial(
+                f"ovako_qt_{acabado}_R{int(confiabilidad)}", 940e6, 1040e6, None,
+                "Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.",
+                factor_carga=1.0, factor_temperatura=1.0, factor_miscelaneo=1.0,
+                material="SAE 4140 +QT", fabricante="Ovako", variante="6115",
+                fuente="ovako_4140_qt_2026", metodo_se="marin",
+                acabado_superficial=acabado, confiabilidad_porcentaje=confiabilidad,
+            ))
+    return tuple(salida)
+
+
+MATERIALES_ANALISIS = (*MATERIALES, MATERIAL_OVAKO, *escenarios_ovako_marin())
+
+
+def factores_marin(material: EscenarioMaterial, diametro_m: float) -> dict[str, float]:
+    """Factores de Marin según Shigley; Sut en MPa y diámetro efectivo en mm."""
+    if material.metodo_se != "marin" or material.sut_pa is None:
+        raise ValueError("El escenario no define una estimación Marin")
+    sut_mpa = material.sut_pa/1e6; d_mm = diametro_m*1e3
+    if sut_mpa > 1400:
+        raise ValueError("Sut queda fuera del dominio adoptado para Se'=0,5 Sut")
+    a, b = _ACABADOS_MARIN[material.acabado_superficial]
+    ka = a*sut_mpa**b
+    if 2.79 <= d_mm <= 51:
+        kb = 1.24*d_mm**-.107
+    elif 51 < d_mm <= 254:
+        kb = 1.51*d_mm**-.157
+    else:
+        raise ValueError("Diámetro fuera del dominio del factor de tamaño adoptado")
+    return {"se_prima_pa": .5*material.sut_pa, "ka": ka, "kb": kb,
+            "kc": material.factor_carga or 1.0, "kd": material.factor_temperatura or 1.0,
+            "ke": _FACTORES_CONFIABILIDAD[material.confiabilidad_porcentaje],
+            "k_misc": material.factor_miscelaneo or 1.0}
+
+
+def limite_fatiga_efectivo(material: EscenarioMaterial, diametro_m: float | None = None) -> float | None:
+    if material.metodo_se == "marin":
+        if diametro_m is None:
+            raise ValueError("Marin requiere el diámetro de la sección")
+        f = factores_marin(material, diametro_m)
+        return float(np.prod(list(f.values())))
+    return material.se_corregido_pa
 
 ENTALLAS = (
     EscenarioEntalla("nominal_sin_concentracion", 1.0, 0.0,
@@ -170,42 +240,93 @@ def contar_rainflow(historia: np.ndarray) -> pd.DataFrame:
 def factor_goodman(
     amplitud_nominal_pa: float, media_nominal_pa: float,
     material: EscenarioMaterial, entalla: EscenarioEntalla,
+    diametro_m: float | None = None,
 ) -> float:
-    if material.se_corregido_pa is None or material.sut_pa is None:
+    se = limite_fatiga_efectivo(material, diametro_m)
+    if se is None or material.sut_pa is None:
         return math.nan
     # Se omite el beneficio de una media compresiva: aproximación conservadora.
-    inverso = entalla.kf*abs(amplitud_nominal_pa)/material.se_corregido_pa
+    inverso = entalla.kf*abs(amplitud_nominal_pa)/se
     inverso += entalla.kt*max(media_nominal_pa, 0.0)/material.sut_pa
     return math.inf if inverso == 0 else 1/inverso
+
+
+def seleccionar_ciclo_goodman(
+    ciclos_por_angulo: list[pd.DataFrame], material: EscenarioMaterial,
+    entalla: EscenarioEntalla, diametro_m: float,
+) -> tuple[float, int | None, pd.Series | None]:
+    """Selecciona el ciclo gobernante para una combinación, sin reutilizar otra."""
+    se = limite_fatiga_efectivo(material, diametro_m)
+    if se is None or material.sut_pa is None:
+        return math.nan, None, None
+    validos = [(j, c) for j, c in enumerate(ciclos_por_angulo) if len(c)]
+    if not validos:
+        return math.nan, None, None
+    amplitudes = np.concatenate([c.amplitud_pa.to_numpy() for _, c in validos])
+    medias = np.concatenate([c.media_pa.to_numpy() for _, c in validos])
+    indices_angulo = np.concatenate([np.full(len(c), j, dtype=int) for j, c in validos])
+    indices_fila = np.concatenate([np.arange(len(c), dtype=int) for _, c in validos])
+    inversos = entalla.kf*np.abs(amplitudes)/se
+    inversos += entalla.kt*np.maximum(medias, 0.0)/material.sut_pa
+    i = int(np.argmax(inversos)); j = int(indices_angulo[i])
+    ciclo = ciclos_por_angulo[j].iloc[int(indices_fila[i])]
+    return (math.inf if inversos[i] == 0 else float(1/inversos[i])), j, ciclo
 
 
 def analizar_resistencia(
     casos: dict[str, ResultadoCaso], sistema: SistemaViga,
     numero_angulos: int = 72,
+    materiales: tuple[EscenarioMaterial, ...] = MATERIALES_ANALISIS,
+    entallas: tuple[EscenarioEntalla, ...] = ENTALLAS,
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    """Retorna secciones, historiales gobernantes, ciclos y sensibilidad."""
+    """Retorna secciones, historiales y selección independiente por escenario."""
     angulos = np.linspace(0, 2*math.pi, numero_angulos, endpoint=False)
     resumen_nominal = []; historiales = []; ciclos_salida = []; sensibilidad = []
+    nombre_representativo = "ovako_qt_mecanizado_R95"
     for nombre_caso, caso in casos.items():
         for seccion in secciones_criticas(sistema.config):
             mv, mh = momentos_seccion(caso, sistema, seccion)
             tensiones = np.vstack([tension_flexion_punto(mv, mh, seccion.diametro_m, phi) for phi in angulos])
+            ciclos_por_angulo = [contar_rainflow(tensiones[j]) for j in range(len(angulos))]
             ind_abs = np.unravel_index(np.argmax(np.abs(tensiones)), tensiones.shape)
-            sigma_nom_max = float(np.abs(tensiones[ind_abs]))
-            phi_estatico = float(angulos[ind_abs[0]])
-            # Busca el punto material con el menor Goodman del escenario medio/moderado.
-            candidatos = []
-            for j, phi in enumerate(angulos):
-                ciclos = contar_rainflow(tensiones[j])
-                if len(ciclos):
-                    factores = [factor_goodman(r.amplitud_pa, r.media_pa, MATERIALES[2], ENTALLAS[1]) for _, r in ciclos.iterrows()]
-                    candidatos.append((min(factores), j, int(np.argmin(factores)), ciclos))
-            if candidatos:
-                _, jcrit, iciclo, ciclos_crit = min(candidatos, key=lambda z: z[0])
-                phi_fatiga = float(angulos[jcrit]); ciclo_gob = ciclos_crit.iloc[iciclo]
-            else:
-                jcrit = ind_abs[0]; phi_fatiga = float(angulos[jcrit]); ciclos_crit = contar_rainflow(tensiones[jcrit])
-                ciclo_gob = pd.Series({"amplitud_pa": 0., "media_pa": float(tensiones[jcrit, 0]), "conteo": 0.})
+            sigma_nom_max = float(np.abs(tensiones[ind_abs])); phi_estatico = float(angulos[ind_abs[0]])
+            representante: tuple[int, pd.Series] | None = None
+            for material in materiales:
+                se_efectivo = limite_fatiga_efectivo(material, seccion.diametro_m)
+                fmarin = factores_marin(material, seccion.diametro_m) if material.metodo_se == "marin" else {}
+                for entalla in entallas:
+                    if len(caso.tiempos_s) > 1:
+                        n_fat, mejor_j, mejor_ciclo = seleccionar_ciclo_goodman(
+                            ciclos_por_angulo, material, entalla, seccion.diametro_m)
+                    else:
+                        n_fat, mejor_j, mejor_ciclo = math.nan, None, None
+                    n_est = (material.sy_pa/(entalla.kt*sigma_nom_max)
+                             if material.sy_pa is not None and sigma_nom_max > 0 else math.nan)
+                    sensibilidad.append({"caso": nombre_caso, "seccion": seccion.nombre,
+                                         "material": material.nombre, "entalla": entalla.nombre,
+                                         "fuente_material": material.fuente, "acabado_superficial": material.acabado_superficial,
+                                         "confiabilidad_porcentaje": material.confiabilidad_porcentaje,
+                                         "sy_pa": material.sy_pa, "sut_pa": material.sut_pa,
+                                         "se_corregido_pa": se_efectivo, **fmarin,
+                                         "kt": entalla.kt, "q": entalla.q, "kf": entalla.kf,
+                                         "esfuerzo_nominal_max_pa": sigma_nom_max,
+                                         "esfuerzo_local_estatico_pa": entalla.kt*sigma_nom_max,
+                                         "von_mises_local_estimado_pa": entalla.kt*sigma_nom_max,
+                                         "angulo_material_gobernante_rad": (float(angulos[mejor_j]) if mejor_j is not None else math.nan),
+                                         "amplitud_nominal_gobernante_pa": (float(mejor_ciclo.amplitud_pa) if mejor_ciclo is not None else math.nan),
+                                         "media_nominal_gobernante_pa": (float(mejor_ciclo.media_pa) if mejor_ciclo is not None else math.nan),
+                                         "conteo_ciclo_gobernante": (float(mejor_ciclo.conteo) if mejor_ciclo is not None else math.nan),
+                                         "factor_seguridad_fluencia": n_est,
+                                         "factor_seguridad_goodman": n_fat})
+                    if mejor_ciclo is not None:
+                        ciclos_salida.append({"caso": nombre_caso, "seccion": seccion.nombre,
+                                              "material": material.nombre, "entalla": entalla.nombre,
+                                              "angulo_material_rad": float(angulos[mejor_j]),
+                                              **mejor_ciclo.to_dict(), "factor_seguridad_goodman": n_fat})
+                    if material.nombre == nombre_representativo and entalla == ENTALLAS[1] and mejor_ciclo is not None:
+                        representante = (mejor_j, mejor_ciclo)
+            jcrit = representante[0] if representante else ind_abs[0]
+            phi_fatiga = float(angulos[jcrit])
             resumen_nominal.append({"caso": nombre_caso, "seccion": seccion.nombre, "x_m": seccion.x_m,
                                     "lado": seccion.lado, "tipo": seccion.tipo, "diametro_m": seccion.diametro_m,
                                     "momento_resultante_max_nm": float(np.max(np.hypot(mv, mh))),
@@ -213,7 +334,7 @@ def analizar_resistencia(
                                     "tiempo_esfuerzo_max_s": float(caso.tiempos_s[ind_abs[1]]),
                                     "angulo_carga_esfuerzo_max_grados": float(caso.angulos_grados[ind_abs[1]]),
                                     "angulo_material_estatico_rad": phi_estatico,
-                                    "angulo_material_fatiga_rad": phi_fatiga,
+                                    "angulo_material_fatiga_representativo_rad": phi_fatiga,
                                     "sigma_min_pa": float(tensiones[jcrit].min()), "sigma_max_pa": float(tensiones[jcrit].max()),
                                     "sigma_media_extremos_pa": float((tensiones[jcrit].max()+tensiones[jcrit].min())/2),
                                     "sigma_alternante_extremos_pa": float((tensiones[jcrit].max()-tensiones[jcrit].min())/2),
@@ -222,26 +343,5 @@ def analizar_resistencia(
                 historiales.append({"caso": nombre_caso, "seccion": seccion.nombre,
                                     "tiempo_s": caso.tiempos_s[k], "angulo_carga_grados": caso.angulos_grados[k],
                                     "angulo_material_rad": phi_fatiga, "tension_nominal_pa": tensiones[jcrit, k]})
-            for _, ciclo in ciclos_crit.iterrows():
-                ciclos_salida.append({"caso": nombre_caso, "seccion": seccion.nombre,
-                                      "angulo_material_rad": phi_fatiga, **ciclo.to_dict()})
-            for material in MATERIALES:
-                for entalla in ENTALLAS:
-                    n_est = (material.sy_pa/(entalla.kt*sigma_nom_max)
-                             if material.sy_pa is not None and sigma_nom_max > 0 else math.nan)
-                    n_fat = (factor_goodman(float(ciclo_gob.amplitud_pa), float(ciclo_gob.media_pa), material, entalla)
-                             if len(caso.tiempos_s) > 1 else math.nan)
-                    sensibilidad.append({"caso": nombre_caso, "seccion": seccion.nombre,
-                                         "material": material.nombre, "entalla": entalla.nombre,
-                                         "sy_pa": material.sy_pa, "sut_pa": material.sut_pa,
-                                         "se_corregido_pa": material.se_corregido_pa,
-                                         "kt": entalla.kt, "q": entalla.q, "kf": entalla.kf,
-                                         "esfuerzo_nominal_max_pa": sigma_nom_max,
-                                         "esfuerzo_local_estatico_pa": entalla.kt*sigma_nom_max,
-                                         "von_mises_local_estimado_pa": entalla.kt*sigma_nom_max,
-                                         "amplitud_nominal_gobernante_pa": float(ciclo_gob.amplitud_pa),
-                                         "media_nominal_gobernante_pa": float(ciclo_gob.media_pa),
-                                         "factor_seguridad_fluencia": n_est,
-                                         "factor_seguridad_goodman": n_fat})
     return (pd.DataFrame(resumen_nominal), pd.DataFrame(historiales),
             pd.DataFrame(ciclos_salida), pd.DataFrame(sensibilidad))

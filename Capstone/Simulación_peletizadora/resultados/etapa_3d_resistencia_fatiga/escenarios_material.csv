@@ -1,5 +1,15 @@
-nombre,sy_pa,sut_pa,se_corregido_pa,descripcion,factor_superficie,factor_tamano,factor_carga,factor_temperatura,factor_confiabilidad,factor_miscelaneo
-no_especificado,,,,Condición real pendiente; no se calculan factores de seguridad.,,,,,,
-parametrico_bajo,415000000.0,655000000.0,180000000.0,Escenario ilustrativo bajo; no identifica el tratamiento real.,,,,,,
-parametrico_medio,655000000.0,850000000.0,260000000.0,Escenario ilustrativo intermedio; requiere certificación.,,,,,,
-parametrico_alto,950000000.0,1050000000.0,330000000.0,Escenario ilustrativo alto; no debe asumirse sin tratamiento certificado.,,,,,,
+nombre,sy_pa,sut_pa,se_corregido_pa,descripcion,factor_superficie,factor_tamano,factor_carga,factor_temperatura,factor_confiabilidad,factor_miscelaneo,material,fabricante,variante,fuente,metodo_se,acabado_superficial,confiabilidad_porcentaje
+no_especificado,,,,Condición real pendiente; no se calculan factores de seguridad.,,,,,,,AISI 4140,,,,directo,,
+parametrico_bajo,415000000.0,655000000.0,180000000.0,Escenario ilustrativo bajo; no identifica el tratamiento real.,,,,,,,AISI 4140,,,,directo,,
+parametrico_medio,655000000.0,850000000.0,260000000.0,Escenario ilustrativo intermedio; requiere certificación.,,,,,,,AISI 4140,,,,directo,,
+parametrico_alto,950000000.0,1050000000.0,330000000.0,Escenario ilustrativo alto; no debe asumirse sin tratamiento certificado.,,,,,,,AISI 4140,,,,directo,,
+ovako_4140_qt_documentado,940000000.0,1040000000.0,,Referencia documentada de diseño; Se y certificado del material real pendientes.,,,,,,,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,sin_definir,,
+ovako_qt_rectificado_R90,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,rectificado,90.0
+ovako_qt_rectificado_R95,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,rectificado,95.0
+ovako_qt_rectificado_R99,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,rectificado,99.0
+ovako_qt_mecanizado_R90,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,mecanizado,90.0
+ovako_qt_mecanizado_R95,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,mecanizado,95.0
+ovako_qt_mecanizado_R99,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,mecanizado,99.0
+ovako_qt_laminado_caliente_R90,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,laminado_caliente,90.0
+ovako_qt_laminado_caliente_R95,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,laminado_caliente,95.0
+ovako_qt_laminado_caliente_R99,940000000.0,1040000000.0,,Estimación Marin; acabado y confiabilidad son hipótesis de sensibilidad.,,,1.0,1.0,,1.0,SAE 4140 +QT,Ovako,6115,ovako_4140_qt_2026,marin,laminado_caliente,99.0

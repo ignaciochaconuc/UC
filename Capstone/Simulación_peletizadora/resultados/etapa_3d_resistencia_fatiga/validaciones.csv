@@ -3,3 +3,6 @@ reproduce_maximo_3C_inclinacion,2.232120645921565e-05,True
 reproduce_maximo_3A_C_referencia,2.4280222662767992e-05,True
 reproduce_maximo_3A_D_conservador,5.836994765831574e-06,True
 refinamiento_angular_72_144,0.0006603306980833237,True
+Sy_Ovako_940_MPa,0.0,True
+Sut_Ovako_1040_MPa,0.0,True
+trazabilidad_Ovako,0.0,True
