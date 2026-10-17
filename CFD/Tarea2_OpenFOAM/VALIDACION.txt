@@ -1,0 +1,22 @@
+Validación local — OpenFOAM 14
+
+cells:            40796
+Mesh has 2 geometric (non-empty/wedge) directions (1 1 0)
+Max aspect ratio = 4.485428263 OK.
+Mesh non-orthogonality Max: 24.44564386 average: 3.60739769
+Max skewness = 0.3504543926 OK.
+Mesh OK.
+
+Pruebas de arranque aisladas en /tmp (no son simulaciones finales):
+Re=100: terminó correctamente, tiempo final 0.02s, 6 pasos.
+Re=1000: terminó correctamente, tiempo final 0.02s, 6 pasos.
+Re=10000: terminó correctamente, tiempo final 0.02s, 6 pasos.
+Re=100000: terminó correctamente, tiempo final 0.02s, 6 pasos.
+
+Pendiente: simulaciones hasta régimen desarrollado, y+, independencia espacial y temporal.
+
+Optimización de presión (comparación desde t=84 hasta 84.2 s):
+PCG: CPU 8.360011 s; GAMG: CPU 2.680548 s; aceleración 3.12x.
+Misma malla, tolerancias y controles temporales.
+Diferencia máxima absoluta Cd=5.7022e-6, Cl=1.6391e-5.
+Aplicado GAMG a los cuatro casos; no sustituye validación a largo plazo.

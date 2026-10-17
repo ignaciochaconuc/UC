@@ -1,0 +1,18 @@
+# Mallas y resultados reproducibles: no subir cientos de MB a GitHub.
+**/constant/polyMesh
+**/constant/extendedFeatureEdgeMesh/
+**/constant/geometry/
+**/log.*
+**/postProcessing/
+**/processor*/
+**/[1-9]*/
+**/0.*/
+**/VTK/
+**/dynamicCode/
+__pycache__/
+/mesh3d/0/
+/mesh2d/0/
+
+/respaldos/
+
+/.simulaciones.lock

@@ -1,0 +1,16 @@
+#!/bin/bash
+# Retoma los casos desde el último tiempo escrito, sin borrar resultados previos.
+cd "$(dirname "$0")" || exit 1
+if [ -z "${WM_PROJECT_DIR:-}" ]; then source /opt/openfoam14/etc/bashrc; fi
+set -e
+exec 9>.simulaciones.lock
+flock -n 9 || { echo 'Ya hay una cola de simulaciones activa.'; exit 1; }
+if [ "$#" -eq 0 ]; then set -- 100 1000 10000 100000; fi
+for re in "$@"; do
+    case "$re" in 100|1000|10000|100000) ;; *) echo "Re no válido: $re"; exit 1;; esac
+    foamDictionary "Re$re/system/controlDict" -entry startFrom -set latestTime
+    logfile="Re$re/log.continuacion.$(date +%Y%m%d_%H%M%S)"
+    echo "$(date -Is) INICIO Re=$re; log=$logfile"
+    foamRun -case "Re$re" > "$logfile" 2>&1
+    echo "$(date -Is) FIN Re=$re"
+done

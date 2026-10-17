@@ -1,0 +1,146 @@
+{
+  "100": {
+    "global_200_400": {
+      "Cd_medio": 1.693050031889066,
+      "Cl_medio": -0.0015503327693182722,
+      "Cl_rms": 0.2902492183239463,
+      "frecuencia_Hz": 0.09920086504446314,
+      "St": 0.19840173008892628,
+      "ciclos_completos": 19,
+      "periodo_s": 10.080557256751609,
+      "frecuencia_FFT_Hz": 0.1,
+      "Re": 100,
+      "modelo": "Laminar 2D",
+      "cambio_Cd_pct": 0.004498577443174274,
+      "cambio_Clrms_pct": 0.37963145092749434
+    },
+    "ventana_200_300": {
+      "Cd_medio": 1.6930119511621933,
+      "Cl_medio": -0.0021954526041545954,
+      "Cl_rms": 0.2896980879588027,
+      "frecuencia_Hz": 0.09920077084877407,
+      "St": 0.19840154169754814,
+      "ciclos_completos": 9,
+      "periodo_s": 10.080566828703812,
+      "frecuencia_FFT_Hz": 0.1
+    },
+    "ventana_300_400": {
+      "Cd_medio": 1.6930881126159385,
+      "Cl_medio": -0.0009052129344819493,
+      "Cl_rms": 0.2907978730134299,
+      "frecuencia_Hz": 0.0992009407961336,
+      "St": 0.1984018815922672,
+      "ciclos_completos": 9,
+      "periodo_s": 10.080549559051917,
+      "frecuencia_FFT_Hz": 0.1
+    }
+  },
+  "1000": {
+    "global_200_400": {
+      "Cd_medio": 1.713651755813237,
+      "Cl_medio": -0.001670388984547526,
+      "Cl_rms": 1.1633750955310362,
+      "frecuencia_Hz": 0.12625242752941918,
+      "St": 0.25250485505883835,
+      "ciclos_completos": 25,
+      "periodo_s": 7.92063978149633,
+      "frecuencia_FFT_Hz": 0.125,
+      "Re": 1000,
+      "modelo": "Laminar 2D",
+      "cambio_Cd_pct": 0.09339684995004935,
+      "cambio_Clrms_pct": 0.4069625466708611
+    },
+    "ventana_200_300": {
+      "Cd_medio": 1.7128518809626723,
+      "Cl_medio": 0.03241696217625565,
+      "Cl_rms": 1.1605117800623141,
+      "frecuencia_Hz": 0.1262526183217067,
+      "St": 0.2525052366434134,
+      "ciclos_completos": 12,
+      "periodo_s": 7.920627811867481,
+      "frecuencia_FFT_Hz": 0.13
+    },
+    "ventana_300_400": {
+      "Cd_medio": 1.7144516306638016,
+      "Cl_medio": -0.03575774014535069,
+      "Cl_rms": 1.165234628356871,
+      "frecuencia_Hz": 0.12625282030686646,
+      "St": 0.25250564061373293,
+      "ciclos_completos": 12,
+      "periodo_s": 7.9206151400771,
+      "frecuencia_FFT_Hz": 0.13
+    }
+  },
+  "10000": {
+    "global_200_400": {
+      "Cd_medio": 1.5023781236775435,
+      "Cl_medio": -0.008662195967769208,
+      "Cl_rms": 1.1047472675115493,
+      "frecuencia_Hz": 0.11637417438113201,
+      "St": 0.23274834876226402,
+      "ciclos_completos": 22,
+      "periodo_s": 8.592971811124892,
+      "frecuencia_FFT_Hz": 0.115,
+      "Re": 10000,
+      "modelo": "URANS SST 2D",
+      "cambio_Cd_pct": 0.14047307425041658,
+      "cambio_Clrms_pct": 0.8417471751668258
+    },
+    "ventana_200_300": {
+      "Cd_medio": 1.501323645937595,
+      "Cl_medio": -0.03774840447768477,
+      "Cl_rms": 1.0997261487158905,
+      "frecuencia_Hz": 0.11637424898797451,
+      "St": 0.23274849797594901,
+      "ciclos_completos": 11,
+      "periodo_s": 8.592966302221505,
+      "frecuencia_FFT_Hz": 0.12
+    },
+    "ventana_300_400": {
+      "Cd_medio": 1.503432601417492,
+      "Cl_medio": 0.02042401254214639,
+      "Cl_rms": 1.1089830625072774,
+      "frecuencia_Hz": 0.11637439182744322,
+      "St": 0.23274878365488644,
+      "ciclos_completos": 10,
+      "periodo_s": 8.59295575510094,
+      "frecuencia_FFT_Hz": 0.12
+    }
+  },
+  "100000": {
+    "global_200_400": {
+      "Cd_medio": 0.9367588118071575,
+      "Cl_medio": 0.00016183791143447646,
+      "Cl_rms": 0.3572872362767446,
+      "frecuencia_Hz": 0.12705621408693973,
+      "St": 0.25411242817387947,
+      "ciclos_completos": 25,
+      "periodo_s": 7.870532009679889,
+      "frecuencia_FFT_Hz": 0.125,
+      "Re": 100000,
+      "modelo": "URANS SST 2D",
+      "cambio_Cd_pct": 0.024981191196097895,
+      "cambio_Clrms_pct": 0.17330649252299357
+    },
+    "ventana_200_300": {
+      "Cd_medio": 0.9368758331787358,
+      "Cl_medio": 0.008196239257072817,
+      "Cl_rms": 0.35750654581517133,
+      "frecuencia_Hz": 0.12706194557594616,
+      "St": 0.2541238911518923,
+      "ciclos_completos": 12,
+      "periodo_s": 7.870176987037321,
+      "frecuencia_FFT_Hz": 0.13
+    },
+    "ventana_300_400": {
+      "Cd_medio": 0.9366417904355794,
+      "Cl_medio": -0.00787256343420387,
+      "Cl_rms": 0.35688696376007895,
+      "frecuencia_Hz": 0.127050971709543,
+      "St": 0.254101943419086,
+      "ciclos_completos": 12,
+      "periodo_s": 7.8708567635841895,
+      "frecuencia_FFT_Hz": 0.13
+    }
+  }
+}

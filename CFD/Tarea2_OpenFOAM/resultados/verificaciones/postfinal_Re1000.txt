@@ -1,0 +1,54 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-7b05503f98a8
+Exec   : foamPostProcess -case Re1000 -solver incompressibleFluid -funcs (vorticity patchFlowRate(patch=inlet) patchFlowRate(patch=outlet)) -time 400
+Date   : Oct 17 2026
+Time   : 02:15:15
+Host   : "PCEscritorio"
+PID    : 146210
+I/O    : uncollated
+Case   : ./Re1000
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 400
+
+
+Constructing functionObjects from system/functions
+    Selecting vorticity with name vorticity
+    Selecting surfaceFieldValue with name patchFlowRate(patch=inlet)
+        number of faces = 42
+        area = 2
+        operation = sum
+    Selecting surfaceFieldValue with name patchFlowRate(patch=outlet)
+        number of faces = 42
+        area = 2
+        operation = sum
+Time = 400s
+
+Selecting solver incompressibleFluid
+
+Selecting viscosity model constant
+
+Selecting momentum transport model type laminar
+    Selecting laminar stress model Stokes
+Courant Number mean: 0.02909983469 max: 0.4978601497
+    functionObjects::vorticity vorticity writing field: vorticity
+surfaceFieldValue patchFlowRate(patch=inlet) write:
+    sum(inlet) of phi = -2
+
+surfaceFieldValue patchFlowRate(patch=outlet) write:
+    sum(outlet) of phi = 2
+
+
+End

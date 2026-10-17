@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+cd "$(dirname "$0")"
+if [ -z "${WM_PROJECT_DIR:-}" ]; then source /opt/openfoam14/etc/bashrc; fi
+python3 preparar.py "$@"
+blockMesh -case mesh3d > mesh3d/log.blockMesh 2>&1
+snappyHexMesh -case mesh3d -overwrite > mesh3d/log.snappyHexMesh 2>&1
+extrudeMesh -case mesh2d > mesh2d/log.extrudeMesh 2>&1
+createPatch -case mesh2d -overwrite > mesh2d/log.createPatch 2>&1
+checkMesh -case mesh2d > mesh2d/log.checkMesh 2>&1
+if ! grep -q 'Mesh OK' mesh2d/log.checkMesh; then
+    cat mesh2d/log.checkMesh
+    exit 1
+fi
+for re in 100 1000 10000 100000; do
+    mkdir -p "Re$re/constant"
+    if [ -e "Re$re/constant/polyMesh" ] && [ ! -L "Re$re/constant/polyMesh" ]; then
+        echo "Re$re/constant/polyMesh ya existe y no es enlace; revisar manualmente."
+        exit 1
+    fi
+    ln -sfn ../../mesh2d/constant/polyMesh "Re$re/constant/polyMesh"
+done
+touch mesh2d/mesh2d.foam
+echo 'Malla lista. Revisar mesh2d/log.checkMesh y abrir mesh2d/mesh2d.foam en ParaView.'

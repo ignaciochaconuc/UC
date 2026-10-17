@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+cd "$(dirname "$0")"
+if [ -z "${WM_PROJECT_DIR:-}" ]; then source /opt/openfoam14/etc/bashrc; fi
+if [ "$#" -eq 0 ]; then set -- 100 1000 10000 100000; fi
+for value in "$@"; do
+        case "$value" in 100|1000|10000|100000) ;; *) echo 'Re válido: 100, 1000, 10000, 100000'; exit 1;; esac
+        test -e "Re$value/constant/polyMesh/points" || { echo 'Ejecutar ./Allmesh primero'; exit 1; }
+        if [ -e "Re$value/log.foamRun" ]; then
+            echo "Re$value/log.foamRun ya existe; revisar resultados antes de volver a ejecutar."
+            exit 1
+        fi
+        echo "Simulando Re=$value; salida en Re$value/log.foamRun"
+        foamRun -case "Re$value" > "Re$value/log.foamRun" 2>&1
+done

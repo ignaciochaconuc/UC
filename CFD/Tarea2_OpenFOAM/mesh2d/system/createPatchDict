@@ -1,0 +1,13 @@
+FoamFile
+{
+    format ascii;
+    class dictionary;
+    object createPatchDict;
+}
+
+pointSync false;
+patches
+(
+ { name front; patchInfo { type empty; } constructFrom patches; patches (front); }
+ { name back; patchInfo { type empty; } constructFrom patches; patches (back); }
+);
