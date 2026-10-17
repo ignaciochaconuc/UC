@@ -1,0 +1,13 @@
+{
+  "relajacion": 0.5,
+  "tolerancia_holgura_m": 1e-09,
+  "tolerancia_fuerza_relativa": 1e-05,
+  "max_iteraciones": 100,
+  "orden_cuadratura": 64,
+  "presion_maxima_pa": 44000000.0,
+  "holgura_referencia_m": 0.0001,
+  "espesor_biomasa_m": 0.004,
+  "huella_tangencial": "simétrica",
+  "fuente_geometria": "CSV extraído del DXF",
+  "advertencia": "presión impuesta; no es una ley constitutiva presión-holgura"
+}

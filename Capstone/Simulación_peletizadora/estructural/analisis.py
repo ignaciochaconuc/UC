@@ -230,6 +230,20 @@ def resolver_instante_combinado(
     )
 
 
+def resolver_caso_cargas_rodamientos(
+    sistema: SistemaViga, tabla: pd.DataFrame, nombre: str
+) -> ResultadoCaso:
+    """Resuelve en bloque una serie con columnas de fuerzas en rodamientos."""
+    cargas_v, distribuidas = _cargas_base_verticales(sistema, len(tabla))
+    _agregar_columnas_rodamientos(sistema, cargas_v, tabla, "compactacion")
+    cargas_h = sistema.cargas_vacias(len(tabla))
+    _agregar_columnas_rodamientos(sistema, cargas_h, tabla, "tangencial")
+    return _resultado_caso(
+        nombre, sistema, tabla["tiempo_s"].to_numpy(dtype=float),
+        tabla["angulo_grados"].to_numpy(dtype=float), cargas_v, distribuidas, cargas_h
+    )
+
+
 def equilibrio_global(
     sistema: SistemaViga, solucion: SolucionViga
 ) -> tuple[np.ndarray, np.ndarray]:

@@ -1,0 +1,16 @@
+validacion,valor,cumple
+equilibrio_uniforme_vertical,1.1716638901042955e-09,True
+equilibrio_uniforme_horizontal,2.798370496167549e-10,True
+residuo_compatibilidad_uniforme,9.693813045026992e-10,True
+cambio_fuerza_uniforme,3.3358846926856997e-07,True
+1440_instantes_uniforme,1440.0,True
+areas_geometricas_uniforme,2.8274333882308137e-05,True
+equilibrio_inclinacion_vertical,1.097859114074176e-09,True
+equilibrio_inclinacion_horizontal,2.929771532054137e-10,True
+residuo_compatibilidad_inclinacion,9.973851660750096e-10,True
+cambio_fuerza_inclinacion,2.5186244533338725e-07,True
+1440_instantes_inclinacion,1440.0,True
+areas_geometricas_inclinacion,2.8274333882308137e-05,True
+reproduccion_3C0_3A,9.976015239582248e-17,True
+reproduccion_3C0_3B,9.985502008591496e-17,True
+periodicidad_0_360_fuerza_n,0.0,True

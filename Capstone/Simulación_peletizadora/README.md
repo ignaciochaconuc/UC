@@ -388,3 +388,63 @@ Las series, resúmenes y figuras se guardan en
 `resultados/etapa_3b_holgura_rodillos/`. Se mantienen como limitaciones los
 rodillos y matriz rígidos, rodamientos sin deformación ni holgura interna,
 empotramientos ideales y ausencia de contacto acoplado.
+
+## Etapa 3C: acoplamiento contacto--deformación
+
+`simulacion_acoplada_eje.py` resuelve iterativamente los 1440 estados de una
+revolución. En cada iteración recalcula la superposición de los discos de Ø6 mm
+contra una huella cuya frontera tangencial depende de la holgura local:
+
+```text
+Lc(g) = sqrt(Dr (h0-g) - (h0-g)^2)
+```
+
+La presión permanece **impuesta y constante en 44 MPa**. No se añadió una ley
+presión--holgura. La fuerza cambia solamente por el área geométrica cubierta. La
+huella se mantiene simétrica respecto del centro tangencial del rodillo, una
+simplificación que debe validarse frente al proceso real de alimentación.
+
+El modelo principal transforma correctamente la pendiente axial al radio: el
+signo se invierte en el rodillo izquierdo (`x=135 mm-r`) y se conserva en el
+derecho (`x=135 mm+r`). La integración utiliza Gauss--Legendre de orden 64 y no
+evalúa la holgura solamente en el centro de cada perforación.
+
+### Resultados acoplados
+
+| Modelo | Fuerza total máx./media [kN] | Torque máx./medio [N m] | Potencia máx./media [kW] | Esfuerzo nominal máx. [MPa] | Desplazamiento del eje máx. [mm] |
+|---|---:|---:|---:|---:|---:|
+| Desacoplado 2C+3A+3B | 14,433 / 12,699 | 91,029 / 79,486 | 4,919 / 4,295 | 266,916 | 0,14450 |
+| 3C uniforme | 14,082 / 12,402 | 88,974 / 77,624 | 4,808 / 4,194 | 259,871 | 0,14071 |
+| 3C con inclinación | 14,071 / 12,399 | 88,924 / 77,624 | 4,805 / 4,194 | 259,712 | 0,14058 |
+
+Frente al modelo desacoplado, 3C con inclinación reduce la fuerza máxima 2,51 % y
+la media 2,36 %. El torque máximo y la potencia máxima disminuyen 2,31 %, mientras
+que sus promedios disminuyen 2,34 %. El momento flector máximo baja 3,11 %, el
+esfuerzo nominal máximo 2,70 % y el desplazamiento máximo del eje 2,71 %.
+
+Cada rodillo alcanza individualmente 8,015 kN y promedia 6,199 kN. En el modelo
+con inclinación, la holgura de funcionamiento abarca 0,15573--0,233 mm, con media
+aproximada de 0,192 mm. La traslación central está entre 0,07492 y 0,10685 mm; la
+inclinación máxima es 0,001294 rad (0,07417°) y genera hasta 0,0518 mm de
+diferencia entre extremos.
+
+La holgura uniforme predice 0,175--0,207 mm. Incluir inclinación cambia poco la
+fuerza media respecto de ese caso (−0,024 %), pero sí es importante para la
+holgura local: reduce la mínima aproximadamente 0,019 mm y amplía el intervalo
+entre extremos.
+
+Los dos modelos convergieron en los 1440 instantes, con un máximo de 18
+iteraciones usando `lambda=0,5`. El residuo de compatibilidad máximo final es
+menor que `1e-9 m` y el cambio relativo de fuerza menor que `3,4e-7`. Las
+relajaciones 0,35, 0,5 y 0,7 convergen a la misma fuerza en el caso ensayado. La
+diferencia de fuerza entre cuadratura 64 y 128 es aproximadamente 0,000053 %.
+
+```powershell
+python simulacion_acoplada_eje.py
+python -m pytest -q
+```
+
+Los resultados se guardan en `resultados/etapa_3c_acoplamiento/`. La convergencia
+numérica no valida la física: todavía faltan una ley constitutiva de biomasa,
+contacto tridimensional, rigidez de paredes/uniones, deformación de rodamientos y
+validación experimental de presión, alimentación y densificación.
