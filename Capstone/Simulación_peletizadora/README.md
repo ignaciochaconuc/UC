@@ -345,3 +345,46 @@ Los CSV, parámetros, validaciones y gráficos se guardan en
 real de paredes y tuercas, pretensión, concentraciones locales, contacto 3D,
 fatiga, plasticidad, flexibilidad de rodillos y validación experimental de
 `mu_eff=0,1`.
+
+## Etapa 3B: desplazamiento, inclinación y holgura de rodillos
+
+`simulacion_holgura_rodillos.py` reutiliza directamente las soluciones FEM de 3A
+y realiza un posproceso cinemático; no modifica el solucionador ni las cargas. Los
+desplazamientos y giros se recuperan en los nodos o mediante funciones de forma
+Hermite. Cada rodillo se considera rígido y su traslación e inclinación se obtienen
+de los desplazamientos de los dos centros de rodamientos.
+
+La convención explícita es: desplazamiento vertical positivo aleja el rodillo de
+la matriz rígida. Por ello `g=g0+v`, con `g0=0,1 mm`. No se recortan valores
+negativos ni se realimentan las cargas en función de la holgura.
+
+| Caso | Rodillo | Centro vertical mín./máx. [mm] | Inclinación abs. máx. [°] | Diferencia máx. entre extremos [mm] | Holgura mín./máx. [mm] |
+|---|---|---:|---:|---:|---:|
+| A | izquierdo/derecho | -0,000331 / -0,000331 | 0,000240 | 0,000168 | 0,099585 / 0,099752 |
+| B | izquierdo/derecho | 0,077934 / 0,109883 | 0,076260 | 0,053239 | 0,158152 / 0,236303 |
+| C | izquierdo/derecho | 0,077934 / 0,109883 | 0,076260 | 0,053239 | 0,158152 / 0,236303 |
+| D | izquierdo/derecho | 0,146166 / 0,146166 | 0,103972 | 0,072586 | 0,209873 / 0,282459 |
+
+Los resultados verticales B y C coinciden porque las fuerzas tangenciales de C
+actúan exclusivamente en el segundo plano de flexión. La menor holgura B/C se
+presenta en el extremo exterior de cada rodillo: izquierdo a 115,75° y derecho a
+295,75°. No aparecen holguras negativas. Bajo compactación, la flexión calculada
+aumenta la separación; el modelo desacoplado no reduce las fuerzas por este
+cambio de holgura.
+
+El desplazamiento central de hasta 0,1099 mm en C es ligeramente mayor que los
+0,1 mm nominales, y la inclinación añade hasta 0,0532 mm de diferencia entre
+extremos. Por tanto, la rigidez del eje y de sus empotramientos puede ser crítica
+para controlar la holgura, pero este resultado no demuestra por sí solo contacto,
+funcionalidad o fallo. Se requiere como siguiente paso un modelo con rigidez real
+de paredes/uniones y contacto rodillo--matriz con realimentación de cargas.
+
+```powershell
+python simulacion_holgura_rodillos.py
+python -m pytest -q
+```
+
+Las series, resúmenes y figuras se guardan en
+`resultados/etapa_3b_holgura_rodillos/`. Se mantienen como limitaciones los
+rodillos y matriz rígidos, rodamientos sin deformación ni holgura interna,
+empotramientos ideales y ausencia de contacto acoplado.

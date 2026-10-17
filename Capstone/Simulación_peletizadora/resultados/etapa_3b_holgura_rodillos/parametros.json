@@ -1,0 +1,9 @@
+{
+  "holgura_nominal_m": 0.0001,
+  "convencion_vertical": "positivo aleja el rodillo de la matriz; g=g0+v",
+  "modelo_rodillo": "cuerpo rígido, cinemática lineal entre centros de rodamientos",
+  "ancho_axial_rodillo_m": 0.04,
+  "matriz": "rígida e inmóvil",
+  "contacto_acoplado": false,
+  "advertencia_holgura_negativa": "incompatibilidad geométrica del modelo lineal desacoplado, no penetración física"
+}
