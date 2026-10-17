@@ -448,3 +448,80 @@ Los resultados se guardan en `resultados/etapa_3c_acoplamiento/`. La convergenci
 numérica no valida la física: todavía faltan una ley constitutiva de biomasa,
 contacto tridimensional, rigidez de paredes/uniones, deformación de rodamientos y
 validación experimental de presión, alimentación y densificación.
+
+## Etapa 3D: resistencia estática y fatiga preliminar
+
+`simulacion_resistencia_fatiga.py` reconstruye las tensiones longitudinales con
+signo en puntos materiales fijos de diez secciones críticas. Combina los momentos
+firmados de los dos planos del FEM; no usa la envolvente escalar como tensión
+alternante y no supone rotación del eje. El torque resistente de la matriz no se
+aplica como torsión al eje transversal.
+
+La condición térmica real del AISI 4140 sigue sin especificarse. Por ello se
+incluyen tres escenarios **paramétricos, no certificados**:
+
+| Escenario | Sy [MPa] | Sut [MPa] | Se corregido [MPa] |
+|---|---:|---:|---:|
+| Bajo | 415 | 655 | 180 |
+| Medio | 655 | 850 | 260 |
+| Alto | 950 | 1050 | 330 |
+
+`Se` se ingresa directamente como valor corregido. Los factores de superficie,
+tamaño, carga, temperatura, confiabilidad y misceláneos quedan configurables pero
+sin valor hasta conocer fabricación y régimen; no deben volver a aplicarse sobre
+un `Se` ya corregido.
+
+Los radios de alivio, acabado y raíz real de rosca tampoco están suficientemente
+definidos para obtener un concentrador único. Se comparan `Kt=1`, un escenario
+moderado `Kt=1,5, q=0,70, Kf=1,35`, y uno alto
+`Kt=2,5, q=0,90, Kf=2,35`. Son barridos de sensibilidad, no factores geométricos
+validados. En las roscas actúan sobre el diámetro menor equivalente ya modelado;
+no se vuelve a reducir el diámetro.
+
+### Secciones gobernantes y tensiones
+
+En 3C, la sección crítica está en el empotramiento roscado izquierdo (`x=0`):
+
+- esfuerzo nominal máximo: 259,71 MPa;
+- tensión media del ciclo gobernante: 216,31 MPa;
+- amplitud gobernante: 43,40 MPa;
+- estimación local moderada: 389,56 MPa;
+- estimación local alta: 649,26 MPa.
+
+El caso conservador 3A-D gobierna la comprobación estática global en la rosca del
+empotramiento derecho (`x=270 mm`): 346,44 MPa nominales y hasta 866,11 MPa en el
+barrido `Kt=2,5`. Esta tensión local es solamente una extrapolación elástica; no
+demuestra que la distribución real del empotramiento o la raíz de rosca tenga ese
+valor.
+
+### Factores de seguridad condicionados
+
+Para el caso nominal 3C y la entalla moderada:
+
+| Material paramétrico | n fluencia | n Goodman |
+|---|---:|---:|
+| Bajo | 1,065 | 1,218 |
+| Medio | 1,681 | 1,647 |
+| Alto | 2,439 | 2,055 |
+
+Con la sensibilidad alta, los factores nominales 3C pasan respectivamente a
+`0,639/0,718`, `1,009/0,972` y `1,463/1,213` para fluencia/Goodman. En 3A-D, los
+factores estáticos con entalla moderada son 0,799, 1,260 y 1,828; con entalla alta
+son 0,479, 0,756 y 1,097. El caso D es constante y artificial, por lo que no se le
+asigna un factor de fatiga cíclica.
+
+La fatiga usa rainflow sobre una revolución periódica y Goodman modificado,
+ignorando conservadoramente el beneficio de tensiones medias compresivas. No se
+calcula vida: falta una curva S--N trazable, espectro de servicio, número de horas,
+tratamiento térmico y estado superficial. El criterio sigue siendo uniaxial de
+flexión; un estado multiaxial local no proporcional requeriría un modelo más
+avanzado.
+
+```powershell
+python simulacion_resistencia_fatiga.py
+python -m pytest -q
+```
+
+Las tablas, historiales, ciclos rainflow, sensibilidades y figuras están en
+`resultados/etapa_3d_resistencia_fatiga/`. La búsqueda usa 144 puntos materiales;
+el refinamiento 72--144 cambia el máximo reconstruido alrededor de 0,066 %.

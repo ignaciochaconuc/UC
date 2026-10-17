@@ -1,0 +1,8 @@
+{
+  "numero_puntos_materiales": 144,
+  "criterio_estatico": "flexión uniaxial local; von Mises=abs(sigma) sin torsión",
+  "criterio_fatiga": "rainflow periódico y Goodman modificado preliminar",
+  "tratamiento_media_compresiva": "se ignora su beneficio en Goodman",
+  "torque_matriz_aplicado_al_eje": false,
+  "advertencia": "Sy, Sut, Se, Kt y q son escenarios paramétricos, no propiedades verificadas"
+}

@@ -1,0 +1,11 @@
+nombre,x_m,lado,diametro_m,tipo,incertidumbre
+empotramiento_rosca_izquierda,0.0,derecha,0.0215463,rosca,Distribución local del empotramiento y raíz de rosca no validada.
+fin_rosca_izquierda,0.029,izquierda,0.0215463,rosca_transicion,Radio/acuerdo y geometría real de rosca pendientes.
+alivio_izquierdo_inicio,0.0515,derecha,0.0292,alivio,Radio del alivio no acotado inequívocamente.
+alivio_izquierdo_fin,0.0531,izquierda,0.0292,alivio,Radio del alivio no acotado inequívocamente.
+escalon_central_izquierdo,0.0915,izquierda,0.03,escalon,Se muestra R1; falta confirmar acabado y radio efectivo.
+escalon_central_derecho,0.1785,derecha,0.03,escalon,Se muestra R1; falta confirmar acabado y radio efectivo.
+alivio_derecho_inicio,0.2169,derecha,0.0292,alivio,Radio del alivio no acotado inequívocamente.
+alivio_derecho_fin,0.2185,izquierda,0.0292,alivio,Radio del alivio no acotado inequívocamente.
+inicio_rosca_derecha,0.241,derecha,0.0215463,rosca_transicion,Radio/acuerdo y geometría real de rosca pendientes.
+empotramiento_rosca_derecha,0.27,izquierda,0.0215463,rosca,Distribución local del empotramiento y raíz de rosca no validada.

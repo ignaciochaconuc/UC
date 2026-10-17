@@ -1,0 +1,5 @@
+nombre,sy_pa,sut_pa,se_corregido_pa,descripcion,factor_superficie,factor_tamano,factor_carga,factor_temperatura,factor_confiabilidad,factor_miscelaneo
+no_especificado,,,,Condición real pendiente; no se calculan factores de seguridad.,,,,,,
+parametrico_bajo,415000000.0,655000000.0,180000000.0,Escenario ilustrativo bajo; no identifica el tratamiento real.,,,,,,
+parametrico_medio,655000000.0,850000000.0,260000000.0,Escenario ilustrativo intermedio; requiere certificación.,,,,,,
+parametrico_alto,950000000.0,1050000000.0,330000000.0,Escenario ilustrativo alto; no debe asumirse sin tratamiento certificado.,,,,,,

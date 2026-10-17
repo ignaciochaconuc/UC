@@ -1,0 +1,4 @@
+nombre,kt,q,descripcion,kf
+nominal_sin_concentracion,1.0,0.0,Solo tensión nominal del diámetro FEM.,1.0
+sensibilidad_moderada,1.5,0.7,"Barrido paramétrico: Kt=1,5 y q=0,70; no calibrado a la geometría final.",1.35
+sensibilidad_alta,2.5,0.9,"Barrido paramétrico: Kt=2,5 y q=0,90; envolvente local no validada.",2.35
