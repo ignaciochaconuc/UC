@@ -4,7 +4,7 @@
   "criterio_fatiga": "rainflow periódico y Goodman modificado preliminar",
   "tratamiento_media_compresiva": "se ignora su beneficio en Goodman",
   "torque_matriz_aplicado_al_eje": false,
-  "advertencia": "Sy y Sut del escenario Ovako están documentados para el producto indicado; Se, acabado, confiabilidad, Kt y q siguen siendo estimaciones/sensibilidades",
+  "advertencia": "Sy, Sut, Se, Kt y q son escenarios paramétricos, no propiedades verificadas",
   "material_principal": {
     "nombre": "ovako_4140_qt_documentado",
     "sy_pa": 940000000.0,
