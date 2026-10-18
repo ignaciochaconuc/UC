@@ -593,3 +593,105 @@ un ciclo único no era general.
 
 La referencia BibTeX está en `referencias.bib` y la trazabilidad numérica se
 exporta en `resultados/etapa_3d_resistencia_fatiga/fuentes_materiales.csv`.
+
+## Etapa 4A: verificación preliminar de rodamientos de los rodillos
+
+`simulacion_rodamientos.py` verifica exclusivamente los cuatro rodamientos
+internos que permiten girar los dos rodillos sobre el eje transversal fijo. No
+son los apoyos del eje vertical principal. La referencia de cálculo es el
+FAG/Schaeffler `6206-2RSR`, equivalente a la designación de diseño `6206-2RS`:
+`30 x 62 x 16 mm`, `C=20,7 kN`, `C0=11,3 kN` y velocidad límite `6700 rpm`.
+Estos valores pertenecen a esa variante y deben confirmarse si cambia el
+fabricante o el sufijo comercial.
+
+Se leen directamente los 1440 estados convergidos del modelo 3C con inclinación.
+En cada instante, la fuerza y su posición resultante se reparten entre los dos
+rodamientos de cada rodillo por equilibrio de fuerza y momento. Luego se agregan
+el peso estimado del rodillo y la componente tangencial ya definida en etapas
+anteriores. No se divide la fuerza total entre cuatro. Las cuatro historias
+reproducen las resultantes 3C con errores relativos menores que `2e-16`.
+
+La velocidad de rodadura sin deslizamiento se calculó independientemente de la
+velocidad de la matriz:
+
+```text
+n_rodillo = 516 rpm (63,5 / 50) = 655,32 rpm
+```
+
+Como no hay una acción axial documentada, se usa provisionalmente `Fa=0` y
+`P(t)=Fr(t)`. La carga dinámica equivalente es la media cúbica de los intervalos
+de igual duración. La vida básica se calcula según ISO 281 para rodamientos de
+bolas, `L10=(C/Peq)^3`, y representa confiabilidad estadística del 90 %, no una
+garantía individual ni una vida ajustada por lubricación o contaminación.
+
+### Resultados nominales 3C
+
+| Rodamiento | Fr mín./media/máx. [kN] | Peq [kN] | S0=C0/P0,máx. | L10 [10⁶ rev] | L10h [h] |
+|---|---:|---:|---:|---:|---:|
+| R1_A, exterior izquierdo | 1,971 / 2,805 / 4,093 | 2,904 | 2,761 | 362,159 | 9.211 |
+| R1_B, interior izquierdo | 2,447 / 3,410 / 4,564 | 3,497 | 2,476 | 207,335 | 5.273 |
+| R2_A, interior derecho | 2,447 / 3,410 / 4,564 | 3,497 | 2,476 | 207,335 | 5.273 |
+| R2_B, exterior derecho | 1,971 / 2,805 / 4,093 | 2,904 | 2,761 | 362,159 | 9.211 |
+
+Los rodamientos críticos son `R1_B` y `R2_A`, simétricos y más cercanos al
+centro de la matriz. La carga máxima ocurre a 149,50° en R1_B y a 329,50° en
+R2_A. La velocidad calculada es aproximadamente 10,2 % de la velocidad límite
+de la ficha; esto no sustituye la comprobación térmica y de lubricación.
+
+### Envolvente artificial 3A-D
+
+El caso constante conservador de 3A-D se mantiene separado del nominal. Predice
+`Fr=4,875/5,112/5,112/4,875 kN` para R1_A/R1_B/R2_A/R2_B. Al ser constante,
+`Peq=Fr`; los factores estáticos son `2,318/2,211/2,211/2,318` y las vidas
+`1947/1689/1689/1946 h`. No representa un ciclo real de servicio y no se mezcla
+con la historia nominal.
+
+Para objetivos ilustrativos de 10.000, 20.000 y 40.000 h, el par crítico requiere
+respectivamente `C=25,62`, `32,28` y `40,67 kN`, antes de correcciones por
+contaminación, lubricación o confiabilidad distinta del 90 %. Por tanto, el
+6206-2RSR resulta preliminarmente adecuado frente a la capacidad estática bajo
+las cargas modeladas, pero **no alcanza siquiera 10.000 h de vida L10 nominal**.
+Sin un objetivo de vida y espectro de operación aprobados, no corresponde declarar
+la selección definitivamente adecuada.
+
+La sensibilidad conserva separados los factores hipotéticos de carga, velocidad,
+deslizamiento cinemático y capacidad dinámica. Ninguno modifica los resultados
+nominales. Los escenarios permiten explorar factores de carga `0,8--1,5`,
+velocidad y deslizamiento `0,9--1,1`, y variantes de `C` de `0,9--1,1`.
+
+### Montaje y datos pendientes
+
+El anillo interior está sobre el eje estacionario y el exterior gira con el
+rodillo; por ello la carga es circunferencial respecto de la pista exterior. Los
+ajustes deben seleccionarse con tablas del fabricante, sin inventar tolerancias.
+Se deben verificar asientos de 30 mm, alojamientos de 62 mm, acabado, coaxialidad,
+hombros, retención y expansión térmica. Dos rodamientos rígidos separados 24 mm
+pueden desarrollar cargas de borde si sus centros se desalinean: la inclinación
+3C de hasta `0,001294 rad (0,07417°)` debe compararse con la admisible por el
+fabricante y con las tolerancias reales.
+
+Se detectó una inconsistencia geométrica que no altera este cálculo de cargas,
+pero sí requiere corregir o confirmar el montaje. Con `B=16 mm`, los rodamientos
+exteriores centrados en 59,5 y 210,5 mm ocupan `51,5--67,5` y `202,5--218,5 mm`.
+Los asientos de Ø30 mm del modelo se extienden solamente por `53,1--91,5` y
+`178,5--216,9 mm`; por tanto, 1,6 mm de cada anillo interior exterior coincide
+con un alivio de Ø29,2 mm. Debe confirmarse si ese voladizo es intencional y
+admisible o ajustar las posiciones/asientos en el plano antes de fabricar.
+
+También faltan confirmar holgura interna o precarga, empujes axiales, grasa e
+intervalo de relubricación, temperatura, compatibilidad de sellos y exposición a
+polvo, humedad y biomasa. Si aparece `Fa`, deben incorporarse los factores `X`,
+`Y` y `e` correspondientes a la variante real. No se fijó un umbral universal de
+aceptación para `S0`.
+
+```powershell
+python simulacion_rodamientos.py
+python -m pytest -q
+```
+
+Las historias, resúmenes, sensibilidad, objetivos de vida, fuentes, validaciones
+y cinco gráficos se guardan en
+`resultados/etapa_4a_rodamientos_rodillos/`. Las referencias de la ficha
+[FAG/Schaeffler distribuida por RS](https://es.rs-online.com/web/p/rodamientos-de-bolas/0311952)
+y de [ISO 281:2007](https://www.iso.org/standard/38102.html) están registradas sin
+duplicados en `referencias.bib`.
