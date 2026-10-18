@@ -32,7 +32,18 @@ class ConfiguracionRodamiento:
         return asdict(self)
 
 
-CONFIG_RODAMIENTO = ConfiguracionRodamiento()
+RODAMIENTO_FAG = ConfiguracionRodamiento()
+RODAMIENTO_KOYO = ConfiguracionRodamiento(
+    modelo_referencia="KOYO/JTEKT 6206 2RS",
+    fabricante="KOYO / JTEKT",
+    capacidad_dinamica_n=24_300.0,
+    velocidad_limite_rpm=7_000.0,
+    fuente="koyo_jtekt_6206_2rs_2026",
+    url="https://koyo.jtekt.co.jp/en/products/detail/print.php?pno=6206+2RS",
+)
+CONFIG_RODAMIENTO = RODAMIENTO_KOYO
+ALTERNATIVAS_RODAMIENTO = (RODAMIENTO_FAG, RODAMIENTO_KOYO)
+OBJETIVOS_VIDA_H = (5_000.0, 8_000.0, 10_000.0, 20_000.0)
 
 
 def velocidad_rodillo_rpm(
@@ -140,6 +151,8 @@ def resumen_rodamientos(
         radial = g.carga_radial_resultante_n.to_numpy(); peq = carga_dinamica_equivalente(radial)
         imax = int(np.argmax(radial)); l10 = vida_l10_millones(config_rodamiento.capacidad_dinamica_n, peq)
         filas.append({"rodamiento": nombre, "caso": g.caso.iloc[0],
+                      "modelo": config_rodamiento.modelo_referencia,
+                      "seleccionado": config_rodamiento == CONFIG_RODAMIENTO,
                       "carga_radial_min_n": float(radial.min()), "carga_radial_media_n": float(radial.mean()),
                       "carga_radial_max_n": float(radial.max()), "carga_dinamica_equivalente_n": peq,
                       "tiempo_carga_max_s": (float(g.iloc[imax].tiempo_s) if "tiempo_s" in g else math.nan),

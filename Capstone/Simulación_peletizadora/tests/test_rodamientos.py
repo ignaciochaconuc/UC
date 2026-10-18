@@ -8,6 +8,7 @@ from estructural.rodamientos import (
     CONFIG_RODAMIENTO, carga_dinamica_equivalente, carga_radial_resultante,
     cargas_rodamientos_3c, factor_estatico, vida_l10_horas, vida_l10_millones,
     velocidad_rodillo_rpm,
+    RODAMIENTO_FAG, RODAMIENTO_KOYO, resumen_rodamientos, capacidad_requerida_para_vida,
 )
 
 
@@ -77,4 +78,24 @@ def test_ficha_referencia_unidades():
     assert CONFIG_RODAMIENTO.diametro_interior_m == pytest.approx(.030)
     assert CONFIG_RODAMIENTO.diametro_exterior_m == pytest.approx(.062)
     assert CONFIG_RODAMIENTO.ancho_m == pytest.approx(.016)
-    assert CONFIG_RODAMIENTO.capacidad_dinamica_n == pytest.approx(20_700)
+    assert CONFIG_RODAMIENTO == RODAMIENTO_KOYO
+    assert CONFIG_RODAMIENTO.capacidad_dinamica_n == pytest.approx(24_300)
+
+
+def test_comparacion_koyo_fag_mismas_cargas(serie_3c):
+    cargas = cargas_rodamientos_3c(serie_3c, CONFIG_EJE)
+    fag = resumen_rodamientos(cargas, RODAMIENTO_FAG, 655.32)
+    koyo = resumen_rodamientos(cargas, RODAMIENTO_KOYO, 655.32)
+    assert koyo.carga_dinamica_equivalente_n.to_numpy() == pytest.approx(fag.carga_dinamica_equivalente_n)
+    assert koyo.factor_estatico_s0.to_numpy() == pytest.approx(fag.factor_estatico_s0)
+    assert (koyo.l10_horas/fag.l10_horas).to_numpy() == pytest.approx(np.full(4, (24.3/20.7)**3))
+    assert koyo.l10_horas.min() >= 8000
+    assert koyo.l10_horas.min() < 10000
+    assert fag.l10_horas.min() >= 5000
+    assert fag.l10_horas.min() < 8000
+
+
+def test_capacidad_requerida_reproduce_objetivo():
+    for objetivo in (5000, 8000, 10000, 20000):
+        requerida = capacidad_requerida_para_vida(3497.408003, 655.32, objetivo)
+        assert vida_l10_horas(vida_l10_millones(requerida, 3497.408003), 655.32) == pytest.approx(objetivo)

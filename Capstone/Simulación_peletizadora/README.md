@@ -598,11 +598,13 @@ exporta en `resultados/etapa_3d_resistencia_fatiga/fuentes_materiales.csv`.
 
 `simulacion_rodamientos.py` verifica exclusivamente los cuatro rodamientos
 internos que permiten girar los dos rodillos sobre el eje transversal fijo. No
-son los apoyos del eje vertical principal. La referencia de cálculo es el
-FAG/Schaeffler `6206-2RSR`, equivalente a la designación de diseño `6206-2RS`:
-`30 x 62 x 16 mm`, `C=20,7 kN`, `C0=11,3 kN` y velocidad límite `6700 rpm`.
-Estos valores pertenecen a esa variante y deben confirmarse si cambia el
-fabricante o el sufijo comercial.
+son los apoyos del eje vertical principal. El rodamiento seleccionado para los
+cuatro apoyos es **KOYO/JTEKT `6206 2RS`**, de `30 x 62 x 16 mm`, con
+`C=24,3 kN`, `C0=11,3 kN` y velocidad límite con grasa `7000 rpm`, según su
+[ficha oficial](https://koyo.jtekt.co.jp/en/products/detail/print.php?pno=6206+2RS).
+El FAG/Schaeffler `6206-2RSR` anterior (`C=20,7 kN`, `C0=11,3 kN`, `6700 rpm`)
+se conserva únicamente como referencia histórica. La geometría, posiciones y
+cargas estructurales permanecen iguales.
 
 Se leen directamente los 1440 estados convergidos del modelo 3C con inclinación.
 En cada instante, la fuerza y su posición resultante se reparten entre los dos
@@ -624,18 +626,18 @@ de igual duración. La vida básica se calcula según ISO 281 para rodamientos d
 bolas, `L10=(C/Peq)^3`, y representa confiabilidad estadística del 90 %, no una
 garantía individual ni una vida ajustada por lubricación o contaminación.
 
-### Resultados nominales 3C
+### Resultados nominales 3C con KOYO seleccionado
 
 | Rodamiento | Fr mín./media/máx. [kN] | Peq [kN] | S0=C0/P0,máx. | L10 [10⁶ rev] | L10h [h] |
 |---|---:|---:|---:|---:|---:|
-| R1_A, exterior izquierdo | 1,971 / 2,805 / 4,093 | 2,904 | 2,761 | 362,159 | 9.211 |
-| R1_B, interior izquierdo | 2,447 / 3,410 / 4,564 | 3,497 | 2,476 | 207,335 | 5.273 |
-| R2_A, interior derecho | 2,447 / 3,410 / 4,564 | 3,497 | 2,476 | 207,335 | 5.273 |
-| R2_B, exterior derecho | 1,971 / 2,805 / 4,093 | 2,904 | 2,761 | 362,159 | 9.211 |
+| R1_A, exterior izquierdo | 1,971 / 2,805 / 4,093 | 2,904 | 2,761 | 585,877 | 14.901 |
+| R1_B, interior izquierdo | 2,447 / 3,410 / 4,564 | 3,497 | 2,476 | 335,413 | 8.531 |
+| R2_A, interior derecho | 2,447 / 3,410 / 4,564 | 3,497 | 2,476 | 335,413 | 8.531 |
+| R2_B, exterior derecho | 1,971 / 2,805 / 4,093 | 2,904 | 2,761 | 585,877 | 14.901 |
 
 Los rodamientos críticos son `R1_B` y `R2_A`, simétricos y más cercanos al
 centro de la matriz. La carga máxima ocurre a 149,50° en R1_B y a 329,50° en
-R2_A. La velocidad calculada es aproximadamente 10,2 % de la velocidad límite
+R2_A. La velocidad calculada es aproximadamente 9,36 % de la velocidad límite
 de la ficha; esto no sustituye la comprobación térmica y de lubricación.
 
 ### Envolvente artificial 3A-D
@@ -643,16 +645,36 @@ de la ficha; esto no sustituye la comprobación térmica y de lubricación.
 El caso constante conservador de 3A-D se mantiene separado del nominal. Predice
 `Fr=4,875/5,112/5,112/4,875 kN` para R1_A/R1_B/R2_A/R2_B. Al ser constante,
 `Peq=Fr`; los factores estáticos son `2,318/2,211/2,211/2,318` y las vidas
-`1947/1689/1689/1946 h`. No representa un ciclo real de servicio y no se mezcla
+aproximadamente `3149/2732/2732/3149 h` para KOYO. No representa un ciclo real de servicio y no se mezcla
 con la historia nominal.
 
-Para objetivos ilustrativos de 10.000, 20.000 y 40.000 h, el par crítico requiere
-respectivamente `C=25,62`, `32,28` y `40,67 kN`, antes de correcciones por
-contaminación, lubricación o confiabilidad distinta del 90 %. Por tanto, el
-6206-2RSR resulta preliminarmente adecuado frente a la capacidad estática bajo
-las cargas modeladas, pero **no alcanza siquiera 10.000 h de vida L10 nominal**.
-Sin un objetivo de vida y espectro de operación aprobados, no corresponde declarar
-la selección definitivamente adecuada.
+### Comparación de selección y objetivos exploratorios
+
+La vida mejora por el factor `(24,3/20,7)^3=1,61774`, es decir, **61,77 %**,
+manteniendo las cargas y la geometría. El factor estático permanece igual porque
+ambas alternativas tienen la misma capacidad C0.
+
+| Alternativa | Estado | L10 exterior/interior [10⁶ rev] | L10h exterior/interior [h] |
+|---|---|---:|---:|
+| FAG 6206-2RSR | Referencia histórica | 362,159 / 207,335 | 9.211 / 5.273 |
+| KOYO/JTEKT 6206 2RS | Seleccionado para los cuatro apoyos | 585,877 / 335,413 | 14.901 / 8.531 |
+
+Los siguientes objetivos son escenarios de comparación; **ninguno es todavía
+un requisito obligatorio**, incluido el de 10.000 h. Se evalúa el apoyo más
+exigido (`Peq=3,497408 kN`), a `655,32 rpm`.
+
+| Objetivo [h] | C mínima requerida [kN] | FAG: todos los apoyos | KOYO: todos los apoyos |
+|---:|---:|---|---|
+| 5.000 | 20,336 | Sí | Sí |
+| 8.000 | 23,785 | No | Sí |
+| 10.000 | 25,622 | No | No |
+| 20.000 | 32,282 | No | No |
+
+La selección KOYO es compatible dimensionalmente y ofrece mayor vida básica;
+las cargas estáticas máximas quedan por debajo de C0, con S0 mínimo de 2,476.
+La aceptación final depende del servicio y del montaje. No se impone un umbral
+universal de S0 ni una vida obligatoria. Lubricación, contaminación y confiabilidad
+ajustada siguen pendientes de caracterización.
 
 La sensibilidad conserva separados los factores hipotéticos de carga, velocidad,
 deslizamiento cinemático y capacidad dinámica. Ninguno modifica los resultados
@@ -691,7 +713,16 @@ python -m pytest -q
 
 Las historias, resúmenes, sensibilidad, objetivos de vida, fuentes, validaciones
 y cinco gráficos se guardan en
-`resultados/etapa_4a_rodamientos_rodillos/`. Las referencias de la ficha
+`resultados/etapa_4a_rodamientos_rodillos/`. Los archivos principales corresponden
+al KOYO seleccionado. `historico_fag/` conserva los archivos originales FAG;
+`comparacion_fag_koyo_nominal.csv` y `comparacion_fag_koyo_conservador.csv`
+incluyen L10, L10h y S0 individuales para ambas variantes.
+`tabla_seleccion_rodamientos.csv` identifica expresamente cuál está seleccionada
+y `objetivos_vida_rodamiento_critico.csv` registra la capacidad mínima por objetivo.
+La ficha KOYO también indica dimensiones de montaje de referencia
+`da=35--37,5 mm`, `Da máximo=57 mm` y `ra máximo=1 mm`: verificar los hombros
+reales contra estas dimensiones, sin inferir tolerancias de ajuste.
+Las referencias de la ficha
 [FAG/Schaeffler distribuida por RS](https://es.rs-online.com/web/p/rodamientos-de-bolas/0311952)
-y de [ISO 281:2007](https://www.iso.org/standard/38102.html) están registradas sin
+y de KOYO/JTEKT e [ISO 281:2007](https://www.iso.org/standard/38102.html) están registradas sin
 duplicados en `referencias.bib`.

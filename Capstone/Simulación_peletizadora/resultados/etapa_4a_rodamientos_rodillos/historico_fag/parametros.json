@@ -1,0 +1,47 @@
+{
+  "rodamiento_referencia": {
+    "designacion_diseno": "6206-2RS",
+    "modelo_referencia": "FAG 6206-2RSR",
+    "fabricante": "FAG / Schaeffler",
+    "tipo": "rígido de bolas, una hilera, doble sellado",
+    "diametro_interior_m": 0.03,
+    "diametro_exterior_m": 0.062,
+    "ancho_m": 0.016,
+    "capacidad_dinamica_n": 20700.0,
+    "capacidad_estatica_n": 11300.0,
+    "velocidad_limite_rpm": 6700.0,
+    "fuente": "fag_6206_2rsr_rs_2026",
+    "url": "https://es.rs-online.com/web/p/rodamientos-de-bolas/0311952"
+  },
+  "norma_vida_basica": "ISO 281:2007; L10=(C/P)^3 para rodamiento de bolas",
+  "rpm_matriz": 516.0,
+  "radio_contacto_m": 0.0635,
+  "radio_rodillo_m": 0.05,
+  "rpm_rodillo_sin_deslizamiento": 655.3199999999999,
+  "factores_velocidad_evaluados": [
+    0.9,
+    1.0,
+    1.1
+  ],
+  "factores_deslizamiento_cinematico_evaluados": [
+    0.9,
+    1.0,
+    1.1
+  ],
+  "factores_carga_evaluados": [
+    0.8,
+    1.0,
+    1.2,
+    1.5
+  ],
+  "factores_capacidad_dinamica_evaluados": [
+    0.9,
+    1.0,
+    1.1
+  ],
+  "carga_axial_externa_n": 0.0,
+  "exponente_vida_bolas": 3,
+  "intervalos_por_revolucion": 1440,
+  "masa_rodillo_kg": 1.5525895653917847,
+  "advertencia": "Vida básica L10 al 90 %; no es vida ajustada ni garantía individual."
+}

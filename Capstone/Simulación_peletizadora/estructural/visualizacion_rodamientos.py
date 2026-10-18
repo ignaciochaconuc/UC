@@ -32,7 +32,7 @@ def vida_l10(resumen: pd.DataFrame, ruta: Path) -> None:
     fig, ax = plt.subplots(figsize=(9, 4.8))
     barras=ax.bar(resumen.rodamiento, resumen.l10_horas)
     ax.bar_label(barras, fmt="%.0f h", padding=3, fontsize=8)
-    ax.set(ylabel="L10h [h]", title="Vida básica nominal ISO 281 (90 %)")
+    ax.set(ylabel="L10h [h]", title=f"Vida básica ISO 281 (90 %) — {resumen.modelo.iloc[0]}")
     ax.grid(axis="y", alpha=.25); _guardar(fig, ruta)
 
 

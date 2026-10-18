@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict
 import json
+import hashlib
 
 import matplotlib
 matplotlib.use("Agg")
@@ -15,6 +16,8 @@ from config import PARAMETROS, RAIZ_PROYECTO
 from estructural.config_eje import CONFIG_EJE
 from estructural.rodamientos import (
     CONFIG_RODAMIENTO,
+    ALTERNATIVAS_RODAMIENTO,
+    OBJETIVOS_VIDA_H,
     capacidad_requerida_para_vida,
     cargas_rodamientos_3c,
     cargas_rodamientos_conservadoras,
@@ -76,7 +79,7 @@ def _validar_reparto(serie: pd.DataFrame, cargas: pd.DataFrame) -> pd.DataFrame:
 def _tabla_objetivos(resumen: pd.DataFrame, rpm: float) -> pd.DataFrame:
     filas = []
     for _, row in resumen.iterrows():
-        for horas in (10_000.0, 20_000.0, 40_000.0):
+        for horas in OBJETIVOS_VIDA_H:
             requerida = capacidad_requerida_para_vida(row.carga_dinamica_equivalente_n, rpm, horas)
             filas.append({
                 "rodamiento": row.rodamiento,
@@ -88,20 +91,22 @@ def _tabla_objetivos(resumen: pd.DataFrame, rpm: float) -> pd.DataFrame:
 
 
 def _documentar_montaje() -> str:
-    return """# Condiciones de montaje y operación pendientes
+    return """# Condiciones de montaje y operación pendientes — KOYO/JTEKT 6206 2RS
 
 - El eje transversal permanece estacionario y el rodillo gira con los anillos exteriores. La pista exterior ve una carga circunferencial; el ajuste debe seleccionarse con las tablas del fabricante para la carga, material y temperatura reales. No se prescribe aquí una tolerancia.
 - Confirmar metrología y acabado de los asientos de 30 mm y alojamientos de 62 mm, además de hombros, radios, coaxialidad y método de retención axial.
 - Inconsistencia geométrica a resolver: con centros en 59,5 y 210,5 mm y ancho B=16 mm, los rodamientos exteriores ocupan axialmente 51,5--67,5 y 202,5--218,5 mm. El modelo actual deja los asientos de Ø30 mm en 53,1--91,5 y 178,5--216,9 mm, por lo que 1,6 mm de cada anillo interior exterior coincide con un alivio de Ø29,2 mm. Confirmar si es un voladizo/alivio intencional o corregir plano y modelo.
-- Dos rodamientos rígidos por rodillo separados 24 mm pueden sufrir carga de borde si sus centros se desalinean. Verificar la desalineación admisible del 6206-2RSR frente a la inclinación calculada en 3C, la rigidez real de alojamientos y las tolerancias acumuladas.
+- Dos rodamientos rígidos por rodillo separados 24 mm pueden sufrir carga de borde si sus centros se desalinean. Verificar la desalineación admisible del KOYO 6206 2RS frente a la inclinación calculada en 3C, la rigidez real de alojamientos y las tolerancias acumuladas.
 - No se ha impuesto precarga ni holgura interna. Definirlas después de conocer ajustes, gradientes térmicos y expansión diferencial; evitar que ambos rodamientos bloqueen indebidamente la dilatación axial.
 - Confirmar que no existan empujes axiales de proceso o montaje. Si aparecen, deben recalcularse P y P0 con factores X, Y y e documentados para la variante elegida.
-- Validar grasa, intervalo de relubricación, compatibilidad de sellos 2RSR, temperatura, velocidad, polvo, humedad y contaminación de biomasa. La vida ISO 281 exportada no incluye esos efectos.
+- Validar grasa, intervalo de relubricación, compatibilidad de sellos 2RS, temperatura, velocidad, polvo, humedad y contaminación de biomasa. La vida ISO 281 exportada no incluye esos efectos.
+- La ficha KOYO indica dimensiones de montaje de referencia da=35--37,5 mm, Da máximo 57 mm y radio ra máximo 1 mm. Comprobar los hombros reales contra estas dimensiones; no equivalen a tolerancias de ajuste.
 """
 
 
 def ejecutar(graficos: bool = True) -> pd.DataFrame:
     SALIDA.mkdir(parents=True, exist_ok=True)
+    hash_3c = hashlib.sha256(RUTA_3C.read_bytes()).hexdigest()
     historica = pd.read_csv(RUTA_3C)
     serie = historica[historica.modelo == "inclinacion"].reset_index(drop=True)
     rpm = velocidad_rodillo_rpm(
@@ -114,7 +119,33 @@ def ejecutar(graficos: bool = True) -> pd.DataFrame:
     resumen_conservador = resumen_rodamientos(conservadoras, CONFIG_RODAMIENTO, rpm)
     sensibilidad = sensibilidad_vida(resumen, CONFIG_RODAMIENTO, rpm)
     objetivos = _tabla_objetivos(resumen, rpm)
+    comparacion = pd.concat([
+        resumen_rodamientos(cargas, alternativa, rpm)
+        for alternativa in ALTERNATIVAS_RODAMIENTO
+    ], ignore_index=True)
+    comparacion_conservadora = pd.concat([
+        resumen_rodamientos(conservadoras, alternativa, rpm)
+        for alternativa in ALTERNATIVAS_RODAMIENTO
+    ], ignore_index=True)
+    seleccion = []
+    for alternativa in ALTERNATIVAS_RODAMIENTO:
+        tabla = comparacion[comparacion.modelo == alternativa.modelo_referencia]
+        fila = {**asdict(alternativa), "seleccionado": alternativa == CONFIG_RODAMIENTO,
+                "estado": "seleccionado" if alternativa == CONFIG_RODAMIENTO else "referencia_historica",
+                "vida_minima_l10h": float(tabla.l10_horas.min())}
+        for horas in OBJETIVOS_VIDA_H:
+            fila[f"satisface_{int(horas)}_h_todos_los_apoyos"] = bool((tabla.l10_horas >= horas).all())
+        seleccion.append(fila)
+    critico = resumen.loc[resumen.carga_dinamica_equivalente_n.idxmax()]
+    objetivos_critico = objetivos[objetivos.rodamiento == critico.rodamiento].copy()
+    objetivos_critico["objetivo_obligatorio"] = False
+    for alternativa in ALTERNATIVAS_RODAMIENTO:
+        objetivos_critico[f"satisface_{alternativa.fuente}"] = (
+            objetivos_critico.capacidad_dinamica_requerida_n <= alternativa.capacidad_dinamica_n)
     validaciones = _validar_reparto(serie, cargas)
+    validaciones.loc[len(validaciones)] = [
+        "SHA256_3C_conservado", 0.0,
+        hashlib.sha256(RUTA_3C.read_bytes()).hexdigest() == hash_3c]
     if not validaciones.cumple.all():
         raise RuntimeError("Falló una validación de la Etapa 4A")
 
@@ -126,10 +157,20 @@ def ejecutar(graficos: bool = True) -> pd.DataFrame:
         SALIDA/"comparacion_nominal_conservador.csv", index=False)
     sensibilidad.to_csv(SALIDA/"sensibilidad_vida.csv", index=False)
     objetivos.to_csv(SALIDA/"capacidad_requerida_objetivos_vida.csv", index=False)
+    comparacion.to_csv(SALIDA/"comparacion_fag_koyo_nominal.csv", index=False)
+    comparacion_conservadora.to_csv(SALIDA/"comparacion_fag_koyo_conservador.csv", index=False)
+    pd.DataFrame(seleccion).to_csv(SALIDA/"tabla_seleccion_rodamientos.csv", index=False)
+    objetivos_critico.to_csv(SALIDA/"objetivos_vida_rodamiento_critico.csv", index=False)
     validaciones.to_csv(SALIDA/"validaciones.csv", index=False)
     (SALIDA/"condiciones_montaje_operacion.md").write_text(_documentar_montaje(), encoding="utf-8")
     parametros = {
         "rodamiento_referencia": asdict(CONFIG_RODAMIENTO),
+        "rodamiento_seleccionado": asdict(CONFIG_RODAMIENTO),
+        "cantidad_seleccionada": 4,
+        "alternativas": seleccion,
+        "objetivos_vida_exploratorios_h": OBJETIVOS_VIDA_H,
+        "requisito_vida_obligatorio_h": None,
+        "sha256_serie_3c": hash_3c,
         "norma_vida_basica": "ISO 281:2007; L10=(C/P)^3 para rodamiento de bolas",
         "rpm_matriz": PARAMETROS.rpm_matriz,
         "radio_contacto_m": PARAMETROS.centro_radial_rodillo_m,
@@ -148,6 +189,7 @@ def ejecutar(graficos: bool = True) -> pd.DataFrame:
     (SALIDA/"parametros.json").write_text(
         json.dumps(parametros, indent=2, ensure_ascii=False), encoding="utf-8")
     pd.DataFrame([asdict(CONFIG_RODAMIENTO)]).to_csv(SALIDA/"fuente_tecnica_rodamiento.csv", index=False)
+    (SALIDA/"ejecucion_resumen.txt").write_text(resumen.to_string(index=False), encoding="utf-8")
 
     if graficos:
         cargas_revolucion(cargas, SALIDA/"carga_radial_revolucion.png")

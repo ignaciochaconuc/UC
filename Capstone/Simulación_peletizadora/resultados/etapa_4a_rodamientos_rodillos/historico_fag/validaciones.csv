@@ -1,0 +1,8 @@
+validacion,error_relativo,cumple
+conservacion_fuerza_rodillo_1,1.1347376224029576e-16,True
+conservacion_momento_rodillo_1,1.9765521728967244e-16,True
+conservacion_fuerza_rodillo_2,1.1347376224140194e-16,True
+conservacion_momento_rodillo_2,1.4287103720663693e-16,True
+intervalos_3C_inclinacion,0.0,True
+resultados_3C_no_modificados,0.0,True
+carga_axial_externa_nula,0.0,True

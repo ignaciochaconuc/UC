@@ -1,0 +1,5 @@
+rodamiento,objetivo_vida_h,capacidad_dinamica_requerida_n,margen_C_referencia,objetivo_obligatorio,satisface_fag_6206_2rsr_rs_2026,satisface_koyo_jtekt_6206_2rs_2026
+R2_A,5000.0,20336.264974836686,1.1949096862215303,False,True,True
+R2_A,8000.0,23785.4398061678,1.021633410944908,False,False,True
+R2_A,10000.0,25622.088318036574,0.9484004464575241,False,False,False
+R2_A,20000.0,32281.808414159805,0.752745933196892,False,False,False
