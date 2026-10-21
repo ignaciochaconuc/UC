@@ -1,0 +1,393 @@
+{
+  "etapa": "6A",
+  "tipo": "auditoria documental, sin nuevas simulaciones",
+  "componentes": [
+    {
+      "id": "C01",
+      "componente": "Rodillos y alojamiento de rodamientos",
+      "evidencia": "plano y modelo",
+      "funcion_mecanica": "Compactar biomasa y transmitir reacción a pistas y eje fijo",
+      "acciones": "Normales y tangenciales3C; peso estimado; no empuje axial documentado",
+      "geometria_disponible": "Ø99,99; ancho40; alojamientosØ62, profundidad16 por lado; agujeroØ56",
+      "verificaciones_realizadas": "Contacto2C/3C, masa estimada, giro; no resistencia local del rodillo",
+      "verificaciones_faltantes": "Comprobar hombros/pared de alojamientos y continuidad de reacción; confirmar retención de pistas",
+      "importancia": "Alta: asiento y giro de rodillos",
+      "clasificacion": "basica_condicionada_a_montaje",
+      "datos_necesarios": "Corte ensamblado, tolerancias, hombros, radios, ajuste, material/condición y volumen CAD",
+      "fuentes": [
+        "Simulación_peletizadora/Plano_rodillo.png",
+        "Simulación_peletizadora/README.md"
+      ]
+    },
+    {
+      "id": "C02",
+      "componente": "Cuatro KOYO/JTEKT6206 2RS de rodillos",
+      "evidencia": "selección documentada; montaje incompleto",
+      "funcion_mecanica": "Permitir giro del rodillo sobre eje transversal estacionario",
+      "acciones": "Historias individuales radiales4A; Fa=0 provisional, no evidencia de empuje",
+      "geometria_disponible": "30×62×16; centros59,5/83,5/186,5/210,5mm; no confundir con apoyos verticales",
+      "verificaciones_realizadas": "Equivalentes, S0 y L10/L10h; mínimo nominal aproximado8531h; no requisito obligatorio10000h",
+      "verificaciones_faltantes": "Montaje, desalineación admisible, holgura, ajustes, retención, servicio y vida objetivo",
+      "importancia": "Alta: montaje puede invalidar vida calculada",
+      "clasificacion": "revision_geometrica_previa",
+      "datos_necesarios": "Planos de conjunto, holgura interna, límites fabricante y tolerancias; régimen real",
+      "fuentes": [
+        "Simulación_peletizadora/README.md",
+        "Simulación_peletizadora/resultados/etapa_4a_rodamientos_rodillos/resumen_rodamientos_nominal.csv"
+      ]
+    },
+    {
+      "id": "C03",
+      "componente": "Asientos exterioresØ30 y aliviosØ29,2",
+      "evidencia": "plano y modelo, incompatibilidad documentada",
+      "funcion_mecanica": "Apoyar anillos interiores exteriores sin carga de borde no justificada",
+      "acciones": "Cargas radiales individuales4A, no carga axial de tuerca",
+      "geometria_disponible": "Rodamiento izq51,5–67,5, asiento53,1–91,5; der202,5–218,5, asiento178,5–216,9mm; exceso1,6mm por lado sobre alivio",
+      "verificaciones_realizadas": "Incompatibilidad identificada, no aprobación del voladizo",
+      "verificaciones_faltantes": "Confirmar ancho útil apoyado/hombro y admisibilidad o corregir posiciones/asientos",
+      "importancia": "Crítica: contacto y montaje",
+      "clasificacion": "revision_geometrica_previa",
+      "datos_necesarios": "Detalle axial y radios admisibles del rodamiento, tolerancias, intención del alivio; consulta fabricante si se conserva",
+      "fuentes": [
+        "Simulación_peletizadora/Plano_eje_transversal.png",
+        "Simulación_peletizadora/estructural/config_eje.py",
+        "Simulación_peletizadora/README.md"
+      ]
+    },
+    {
+      "id": "C04",
+      "componente": "Eje transversal escalonado",
+      "evidencia": "plano y modelos3A–3D",
+      "funcion_mecanica": "Recibir cargas de rodamientos y transferirlas a soportes extremos",
+      "acciones": "Flexión en dos planos, cortante y pesos; reacciones y momentos correlacionados3C",
+      "geometria_disponible": "L270; Ø30/36; extremosM24×2 equivalentesØ21,5463 en modelo",
+      "verificaciones_realizadas": "Rigidez3A/B, acoplamiento3C, estática/fatiga3D con entallas y material condicionales",
+      "verificaciones_faltantes": "Validar restricción real y entallas/raíz; certificado del material. No repetir viga antes de definir montaje",
+      "importancia": "Crítica: rigidez afecta holgura y cargas",
+      "clasificacion": "basica_prioritaria",
+      "datos_necesarios": "Montaje de extremos, material comprado/diámetro de suministro y radios reales; no trasladar factores condicionales como aprobación",
+      "fuentes": [
+        "Simulación_peletizadora/README.md",
+        "Simulación_peletizadora/resultados/etapa_3d_resistencia_fatiga/resumen_factores_seguridad.csv"
+      ]
+    },
+    {
+      "id": "C05",
+      "componente": "Roscas M24×2 y tuercas del eje transversal",
+      "evidencia": "roscas dibujadas; tuercas y función exacta no confirmadas",
+      "funcion_mecanica": "Posible fijación/retención del eje en soporte; no se acredita que compriman pistas o generen el empotramiento",
+      "acciones": "Solo acciones obtenidas del DCL real: precarga si existe y esfuerzos de fijación. Fr del rodillo es transversal al eje, NO axial sobre tuerca por defecto",
+      "geometria_disponible": "Plano:2×M24×2-6g, tramos extremos29mm; longitud engranada real y tuerca sin especificar",
+      "verificaciones_realizadas": "3A/3D usan sección equivalente en flexión; NO verifican filetes, arrancamiento, tuerca ni apriete",
+      "verificaciones_faltantes": "Definir función, precarga si requerida, tracción/arrancamiento de ambos roscados, contacto de apoyo y retención contra aflojamiento",
+      "importancia": "Crítica: puede invalidar empotramiento y resistencia existente",
+      "clasificacion": "basica_prioritaria_tras_definir_union",
+      "datos_necesarios": "Corte con soporte/hombros; norma y material tuerca, altura, engrane útil descontando chaflanes, arandela/contacto, fricción y método de bloqueo/apriete",
+      "fuentes": [
+        "Simulación_peletizadora/Plano_eje_transversal.png",
+        "Simulación_peletizadora/README.md",
+        "Simulación_peletizadora/resultados/etapa_3c_acoplamiento/resultados_estructurales.csv"
+      ]
+    },
+    {
+      "id": "C06",
+      "componente": "Soportes/paredes y unión del eje transversal",
+      "evidencia": "empotramientos modelados; unión física sin detalle verificable",
+      "funcion_mecanica": "Cerrar fuerzas y momentos de extremos hacia estructura",
+      "acciones": "Reacciones y pares3C sincronizados;3A-D es envolvente artificial separada",
+      "geometria_disponible": "Sin espesores, ancho de apoyo, luz de soporte ni patrón de fijación confirmados",
+      "verificaciones_realizadas": "Equilibrio de viga ideal; no rigidez/capacidad de unión",
+      "verificaciones_faltantes": "DCL de unión, capacidad de apoyo/cortante/momento y rigidez compatible con empotramiento",
+      "importancia": "Crítica: condición de borde gobierna3C/3D",
+      "clasificacion": "basica_prioritaria",
+      "datos_necesarios": "Corte, espesor/material pared, contacto eje-soporte, tornillos/soldaduras si existen, distancias y brazo resistente",
+      "fuentes": [
+        "Simulación_peletizadora/resultados/etapa_3c_acoplamiento/resultados_estructurales.csv",
+        "Simulación_peletizadora/README.md"
+      ]
+    },
+    {
+      "id": "C07",
+      "componente": "Matriz perforada",
+      "evidencia": "plano/DXF y FEM histórico simplificado",
+      "funcion_mecanica": "Recibir compactación y llevar normal, momento y torque a unión con árbol",
+      "acciones": "Fz,T,M de4A correlacionados; no combinar máximos de distintos instantes",
+      "geometria_disponible": "Ø200, espesor36, agujeroØ50;102 perforacionesØ6 y entradasØ9",
+      "verificaciones_realizadas": "4D existente: rigidez y sensibilidad de borde; máximos locales no convergidos ni geometría completa",
+      "verificaciones_faltantes": "Antes del cierre: justificar apoyo/material y no declarar resistencia aprobada; FEM local con avellanados es detalle si no se reivindica seguridad final",
+      "importancia": "Alta: apoyo puede modificar conclusión resistente",
+      "clasificacion": "basica_definir_apoyo_detalle_local_diferible",
+      "datos_necesarios": "Geometría de unión/retención, condición y sección de material; radios/chavetero/avellanados para futuro detalle",
+      "fuentes": [
+        "Simulación_peletizadora/Plano_matriz.png",
+        "Analisis_matriz_eje_vertical/Etapa_4D_FEM_preliminar/README.md"
+      ]
+    },
+    {
+      "id": "C08",
+      "componente": "Unión matriz–árbol y retención axial",
+      "evidencia": "resalte observado en documentación; mecanismo de unión pendiente",
+      "funcion_mecanica": "Transmitir Fz, momento y torque; centrar y retener matriz sin apertura no controlada",
+      "acciones": "4C contacto anular hipotético50/58; fricción sola no confirmada; reacciones negativas4D son diagnóstico, NO carga de una tuerca",
+      "geometria_disponible": "Bore matrizØ50, resalteØ58 y referencia axial12 en4B; contacto real no confirmado; chavetero visible en plano de matriz no define chaveta completa",
+      "verificaciones_realizadas": "4C presión/excentricidad condicional;4D apoyo bilateral, no retención real",
+      "verificaciones_faltantes": "Definir unión; equilibrio y contacto unilateral/retención, torque por elemento real, corte/aplastamiento si chaveta",
+      "importancia": "Crítica: camino de cargas incompleto",
+      "clasificacion": "basica_prioritaria",
+      "datos_necesarios": "Corte ensamblado, plano de tope y área real, chaveta/ajuste, retención superior y precarga si existe, materiales y longitudes activas",
+      "fuentes": [
+        "Analisis_matriz_eje_vertical/Etapa_4B_matriz_arbol_condicional/README.md",
+        "Analisis_matriz_eje_vertical/Etapa_4C_apoyos_union/README.md",
+        "Analisis_matriz_eje_vertical/Etapa_4D_FEM_preliminar/README.md",
+        "Simulación_peletizadora/Plano_matriz.png"
+      ]
+    },
+    {
+      "id": "C09",
+      "componente": "Árbol vertical y apoyos radiales/axiales",
+      "evidencia": "árbol modelado nominalmente; apoyos sin posición confirmada",
+      "funcion_mecanica": "Transmitir torque y conducir Fz/laterales a carcasa y estructura",
+      "acciones": "Matriz Fz/T/M y fuerza de polea5D.2 condicional; reparto axial depende de apoyo localizador",
+      "geometria_disponible": "Config4C zA,zB,zM,zP nulos;118mm documentados son caras del eje transversal, NO vano vertical",
+      "verificaciones_realizadas": "4A/B secciones lisas/sensibilidades; NO diagrama real del árbol con apoyos y correa",
+      "verificaciones_faltantes": "Resolver reacciones y empuje con geometría real; verificar selección de rodamientos, retención y sección gobernante",
+      "importancia": "Crítica: puede cambiar selección de apoyos/árbol",
+      "clasificacion": "basica_prioritaria_tras_geometria",
+      "datos_necesarios": "Centros axiales, diámetro y tipo real de rodamientos, apoyo localizador/flotante, orientación global y plano de polea; pesos",
+      "fuentes": [
+        "Analisis_matriz_eje_vertical/Etapa_4C_apoyos_union/config_apoyos.json",
+        "Analisis_matriz_eje_vertical/Etapa_4B_matriz_arbol_condicional/README.md",
+        "Transmision/resultados/etapa_5f/interfaz_eje_vertical.json"
+      ]
+    },
+    {
+      "id": "C10",
+      "componente": "6208-2RS mencionado para árbol vertical",
+      "evidencia": "mención documental de explosionado; no selección verificada",
+      "funcion_mecanica": "Posible apoyo del árbol, función axial por definir",
+      "acciones": "Cargas combinadas futuras, no aplicar Fz total como admisible axial",
+      "geometria_disponible": "4B cita ficha SKF6208-2RS1; no demuestra variante realmente montada",
+      "verificaciones_realizadas": "Ficha citada, sin carga equivalente/vida del montaje real",
+      "verificaciones_faltantes": "Confirmar tipo, orientación, Fa/Fr, retención, P/P0 y vida con servicio definido",
+      "importancia": "Crítica: no hay selección axial justificada",
+      "clasificacion": "basica_prioritaria_tras_geometria",
+      "datos_necesarios": "Plano y referencia comercial, admisibles/factores del fabricante, función localizador/flotante y vida requerida",
+      "fuentes": [
+        "Analisis_matriz_eje_vertical/Etapa_4B_matriz_arbol_condicional/README.md"
+      ]
+    },
+    {
+      "id": "C11",
+      "componente": "Poleas y uniones polea–eje",
+      "evidencia": "planos vigentes y propuesta diferenciados",
+      "funcion_mecanica": "Transmitir torque y carga de correas a ejes",
+      "acciones": "3C y nominal motor separados5D.2; fuerzas laterales condicionales",
+      "geometria_disponible": "Motriz CAD45/38, propuesta55/38; conducida75/35;M5 radial; candidata10×8",
+      "verificaciones_realizadas": "5E geometría/ligamentos/nominales;5F cierre no aprobación",
+      "verificaciones_faltantes": "Resolver cubo original incompatible, interferencias55, chaveta activa, ajuste y retención. No atribuir torque alM5",
+      "importancia": "Crítica: puede impedir montaje o transmisión",
+      "clasificacion": "basica_prioritaria_acotada",
+      "datos_necesarios": "Geometría real de aligeramientos, largos/contacto chaveta, radios y materiales; no otro barrido de cubos",
+      "fuentes": [
+        "Transmision/resultados/etapa_5f/resumen_integral.json",
+        "Transmision/parametros_poleas.json"
+      ]
+    },
+    {
+      "id": "C12",
+      "componente": "Motor y carga radial admisible",
+      "evidencia": "dos candidatos comerciales, ninguno seleccionado",
+      "funcion_mecanica": "Entregar potencia y soportar polea en eje de salida",
+      "acciones": "Fuerza de correas heredada1169,524N3C y1171,250N nominal externo; no cargas totales de motor",
+      "geometria_disponible": "Ejes nominales38×80; cubo envolvente62; BEVI ancho10 confirmado, Marathon pendiente",
+      "verificaciones_realizadas": "5E.2-B compatibilidad nominal; no admisible radial",
+      "verificaciones_faltantes": "Confirmar montaje/punto de aplicación y capacidad radial del fabricante",
+      "importancia": "Alta: puede cambiar motor/montaje",
+      "clasificacion": "basica_consulta_fabricante",
+      "datos_necesarios": "Plano específico, distancia de aplicación, peso polea, vida, orientación y tabla de capacidad",
+      "fuentes": [
+        "Transmision/resultados/etapa_5e2b/resumen.json"
+      ]
+    },
+    {
+      "id": "C13",
+      "componente": "Base móvil de motor y fijaciones",
+      "evidencia": "propuesta5C, no conjunto dimensionado",
+      "funcion_mecanica": "Guiar ajuste y bloquear motor contra acciones de correas",
+      "acciones": "Resultante correas en motor y peso real; no obtener carga de perno dividiendo sin DCL",
+      "geometria_disponible": "Recorrido25+35=60mm; patrón B3 o B14 por confirmar; sin pernos/ranuras/material definidos",
+      "verificaciones_realizadas": "Geometría de ajuste, no capacidad de bloqueo",
+      "verificaciones_faltantes": "Predimensionar bloqueo y apoyo si define viabilidad; roscas/ranuras finales en detalle",
+      "importancia": "Alta: pérdida de tensado o desplazamiento",
+      "clasificacion": "basica_envolvente_fijacion_detalle_final",
+      "datos_necesarios": "Motor confirmado, montaje, masa, puntos de anclaje, guías, bloqueo, espesor y material base",
+      "fuentes": [
+        "Transmision/resultados/etapa_5c/resumen.json",
+        "Transmision/resultados/etapa_5e2b/resumen.json"
+      ]
+    },
+    {
+      "id": "C14",
+      "componente": "Bastidor, carcasa y anclajes",
+      "evidencia": "necesarios por equilibrio, geometría no verificada en fuentes revisadas",
+      "funcion_mecanica": "Cerrar el lazo de carga matriz–rodillos y motor hacia estructura/fundación",
+      "acciones": "Fuerzas/pares de soportes y motor; cargas internas no deben sumarse dos veces como externas",
+      "geometria_disponible": "No plano completo de perfiles, uniones, soldaduras o anclajes confirmable en los archivos revisados",
+      "verificaciones_realizadas": "No cálculo de estructura documentado",
+      "verificaciones_faltantes": "Definir esquema y comprobar camino global/rigidez local antes de atribuir empotramientos; detalles de cordones/anclajes después",
+      "importancia": "Crítica: no existe cierre resistente del lazo",
+      "clasificacion": "basica_prioritaria_esquema",
+      "datos_necesarios": "Ensamble general, perfiles/espesores/materiales, apoyos al suelo, uniones reales y coordenadas",
+      "fuentes": [
+        "Simulación_peletizadora/README.md",
+        "Analisis_matriz_eje_vertical/Etapa_4C_apoyos_union/README.md",
+        "Transmision/resultados/etapa_5f/resumen_integral.json"
+      ]
+    },
+    {
+      "id": "C15",
+      "componente": "Arandelas, seguros, pasadores, tornillos y soldaduras no detallados",
+      "evidencia": "no confirmados como piezas instaladas",
+      "funcion_mecanica": "Posibles medios de reparto, retención o fijación; función a identificar en cada unión real",
+      "acciones": "Solo las que asigne el DCL del montaje, no cargas inventadas",
+      "geometria_disponible": "Sin cantidad/clase/diámetro/posición confirmados salvo roscasM24 yM5 ya inventariadas",
+      "verificaciones_realizadas": "No comprobación individual documentada",
+      "verificaciones_faltantes": "Identificar en BOM/cortes; calcular solo los que cierren caminos críticos, no inventar fijaciones",
+      "importancia": "Depende de función; alta si soporta reacción/retención",
+      "clasificacion": "revision_documental_y_detalle_condicionado",
+      "datos_necesarios": "Lista de materiales y cortes con función, geometría, material, cantidad y montaje",
+      "fuentes": [
+        "Simulación_peletizadora/Plano_eje_transversal.png",
+        "Transmision/parametros_poleas.json"
+      ]
+    },
+    {
+      "id": "C16",
+      "componente": "Resguardos y protección de puntos de atrapamiento",
+      "evidencia": "necesidad documentada, solución no definida",
+      "funcion_mecanica": "Impedir acceso a correas/poleas y partes giratorias",
+      "acciones": "Acceso, mantenimiento, posibles proyecciones; no energía de impacto inventada",
+      "geometria_disponible": "Sin envolvente/material/fijaciones confirmados",
+      "verificaciones_realizadas": "Pendiente en5F",
+      "verificaciones_faltantes": "Definir concepto de resguardo y mantenimiento antes del cierre; detalle constructivo después",
+      "importancia": "Crítica para seguridad de operación",
+      "clasificacion": "basica_conceptual_detalle_constructivo",
+      "datos_necesarios": "Envolvente del conjunto, acceso, anclajes, procedimiento de parada y evaluación de riesgos",
+      "fuentes": [
+        "Transmision/resultados/etapa_5f/pendientes_priorizados.csv"
+      ]
+    }
+  ],
+  "prioridades": [
+    {
+      "prioridad": "P0",
+      "trabajo": "Congelar configuración de montaje",
+      "componentes": "C03,C05,C06,C08,C09,C14",
+      "alcance": "Obtener cortes/datum/BOM antes de nuevos cálculos; revisar alivio1,6mm y confirmar contacto de tuercas",
+      "justificacion": "Bloquea montaje y definición de cargas",
+      "limite": "Revisión geométrica, no simulación"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Unión transversal yM24",
+      "componentes": "C04,C05,C06",
+      "alcance": "DCL de soporte con reacciones y pares correlacionados3C; precarga si función la exige, rosca/tuerca y presión de apoyo; rigidez suficiente",
+      "justificacion": "Empotramiento ideal gobierna holgura, cargas y fatiga existentes",
+      "limite": "Cálculo básico de unión; no convertir Fr en Fa"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Unión matriz–árbol y retención",
+      "componentes": "C07,C08",
+      "alcance": "Contacto/retención axial y transmisión de torque con mecanismo confirmado",
+      "justificacion": "Apoyo bilateral4D no es contacto real ni tuerca diseñada",
+      "limite": "Equilibrio/contacto simplificado justificado; FEM local diferible"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Apoyos del árbol vertical",
+      "componentes": "C09,C10",
+      "alcance": "Tras definir zA/zB/zM/zP, DCL3D, reparto axial y selección/verificación de apoyo crítico",
+      "justificacion": "Puede cambiar tipo de rodamiento y eje;C/C0 no son admisibles axiales",
+      "limite": "Usar interfaz5F y estados simultáneos, sin rehacer contacto"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Cierre básico del soporte estructural",
+      "componentes": "C06,C14",
+      "alcance": "Camino global y rigidez/capacidad local de soportes y uniones principales",
+      "justificacion": "No se justifica empotramiento ni soporte de empuje sin estructura",
+      "limite": "Modelo estático básico y envolvente, no FEM completo"
+    },
+    {
+      "prioridad": "P2",
+      "trabajo": "Bloqueos de transmisión ya detectados",
+      "componentes": "C11,C12,C13",
+      "alcance": "Confirmar admisible radial motor, interferencia cubo55, chaveta/retención y bloqueo de base",
+      "justificacion": "Pueden cambiar selección o impedir montaje",
+      "limite": "No repetir5E; completar solo datos y comprobación gobernante"
+    },
+    {
+      "prioridad": "P2",
+      "trabajo": "Seguridad conceptual",
+      "componentes": "C16",
+      "alcance": "Definir resguardos, acceso y procedimiento seguro",
+      "justificacion": "Necesario antes de afirmar operación segura",
+      "limite": "Evaluación conceptual, sin cálculo de impacto sin datos"
+    }
+  ],
+  "nuevos_factores_seguridad": null,
+  "fem_ejecutado": false,
+  "cad_modificado": false,
+  "hallazgo_consistencia": {
+    "estados_serie_actual": 1440,
+    "maximo_serie_3c_n": 14070.987476941267,
+    "maximo_copia4c_n": 14070.987476941267,
+    "nota": "Coinciden archivos actuales; advertencia14071,128N del README del subsistema vertical no se reproduce en esta lectura. No editar históricos ni asumir que toda copia restante queda validada."
+  },
+  "alcance_6b": [
+    {
+      "prioridad": "P0",
+      "trabajo": "Congelar configuración de montaje",
+      "componentes": "C03,C05,C06,C08,C09,C14",
+      "alcance": "Obtener cortes/datum/BOM antes de nuevos cálculos; revisar alivio1,6mm y confirmar contacto de tuercas",
+      "justificacion": "Bloquea montaje y definición de cargas",
+      "limite": "Revisión geométrica, no simulación"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Unión transversal yM24",
+      "componentes": "C04,C05,C06",
+      "alcance": "DCL de soporte con reacciones y pares correlacionados3C; precarga si función la exige, rosca/tuerca y presión de apoyo; rigidez suficiente",
+      "justificacion": "Empotramiento ideal gobierna holgura, cargas y fatiga existentes",
+      "limite": "Cálculo básico de unión; no convertir Fr en Fa"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Unión matriz–árbol y retención",
+      "componentes": "C07,C08",
+      "alcance": "Contacto/retención axial y transmisión de torque con mecanismo confirmado",
+      "justificacion": "Apoyo bilateral4D no es contacto real ni tuerca diseñada",
+      "limite": "Equilibrio/contacto simplificado justificado; FEM local diferible"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Apoyos del árbol vertical",
+      "componentes": "C09,C10",
+      "alcance": "Tras definir zA/zB/zM/zP, DCL3D, reparto axial y selección/verificación de apoyo crítico",
+      "justificacion": "Puede cambiar tipo de rodamiento y eje;C/C0 no son admisibles axiales",
+      "limite": "Usar interfaz5F y estados simultáneos, sin rehacer contacto"
+    },
+    {
+      "prioridad": "P1",
+      "trabajo": "Cierre básico del soporte estructural",
+      "componentes": "C06,C14",
+      "alcance": "Camino global y rigidez/capacidad local de soportes y uniones principales",
+      "justificacion": "No se justifica empotramiento ni soporte de empuje sin estructura",
+      "limite": "Modelo estático básico y envolvente, no FEM completo"
+    }
+  ],
+  "condicion_inicio_6b": "Primero cortes de montaje y resolución geométrica; si no hay datos, entregar requisitos pendientes y no fabricar precargas o fijaciones.",
+  "diferible": "Convergencia FEM local completa, optimización, detalles finales de ranuras/cordones, vida ajustada y desgaste experimental; no usarlos para declarar aprobación existente.",
+  "estado": "Auditoría completa; cierre resistente y de montaje no aprobado por omisiones esenciales."
+}
