@@ -1,4 +1,4 @@
-# Transmisión mecánica — Etapas 5A a 5E.2-B
+# Transmisión mecánica — Etapas 5A a 5F
 
 Modelo preliminar de una transmisión abierta por tres correas SPA 1600 entre el
 motor de 5,5 kW a 1450 rpm y el eje vertical. Las etapas existentes se consultan
@@ -1069,3 +1069,94 @@ interferencias CAD con los ocho aligeramientos, geometría local, materiales
 y resistencia de cubo/chaveta/montaje. Ø45 sigue vigente en CAD y mantiene
 la incompatibilidad geométrica detectada. No se cambia la polea conducida,
 no se ejecuta FEM y no se asignan factores de seguridad ni motor definitivo.
+
+## Etapa 5F — Cierre integral del predimensionamiento
+
+El cierre es una síntesis reproducible de archivos existentes, **no una
+regeneración de modelos ni aprobación completa para fabricación/compra**.
+Se puede comenzar la redacción de ingeniería básica dejando explícitos sus
+supuestos, propuesta de rediseño y verificaciones esenciales pendientes.
+No se redacta todavía LaTeX.
+
+Desde `Capstone/Transmision`, ejecutar únicamente:
+
+```powershell
+python cierre_transmision.py
+python -m pytest -q
+```
+
+`cierre_transmision.py` y `transmision/cierre.py` leen 5A–5E.2-B, verifican
+identidad de escenarios, unidades, utilización y correlación de los1440
+estados. No importan ni ejecutan las rutinas de simulación de etapas previas.
+Los resultados se guardan exclusivamente en `resultados/etapa_5f/`:
+
+- `resumen_integral.json`: síntesis y estado de cierre.
+- `parametros_definitivos_predimensionamiento.csv`: valores adoptados,
+  unidades, fuente, escenario y estado. «Definitivos» solo para esta línea
+  base de predimensionamiento; no son dimensiones aprobadas para fabricar.
+- `matriz_verificaciones.csv`: verificado, condicionado por modelo,
+  propuesta, pendiente o incompatible; distingue bloqueos esenciales.
+- `resultados_informe_principal.csv`: misma línea base numérica, sin
+  redondeos internos distintos ni mezcla de escenarios.
+- `calculos_y_sensibilidades_anexos.csv`: índice a archivos originales,
+  sin duplicar ni regenerar cálculos.
+- `referencias_tecnicas.csv`: inventario de claves BibTeX existentes; sus
+  límites de acceso y vigencia se conservan en `referencias.bib`.
+- `interfaz_eje_vertical.json`: archivos de cargas, unidades, marco,
+  signos, hipótesis, casos correlacionados y datos de montaje faltantes.
+- `pendientes_priorizados.csv`: ingeniería de detalle, proveedor,
+  integración y validación experimental.
+- `balance_potencia_heredado.csv`, `trazabilidad_sha256.json` y
+  `validaciones.csv`: balance separado y controles de conservación.
+
+### Línea base para el informe principal
+
+| Magnitud | Resultado de predimensionamiento | Alcance |
+|---|---:|---|
+| Diámetros de referencia / relación |100 /280 mm;2,8| Confirmados como referencia, no exteriores |
+| Salida ideal / velocidad de3C |517,857 /516 rpm| Diferencia1,857 rpm; no reescalar contacto |
+| Correas / potencia de diseño |3 SPA1600;7,15 kW| FS1,3 preliminar; Gates Super HC convencional |
+| Capacidad / utilización |9,80796 kW;72,900 %| Otra marca requiere verificar equivalencia |
+| Centros / recorrido total mínimo |493,316 /60 mm| Extremos468,316 y528,316 no son puntos normales de operación |
+| Tensado estático por correa |197,272 N| Procedimiento Gates de referencia; no tensión dinámica exacta |
+| Deflexión / fuerzas de comprobación |4,850 mm;8,133–12,079 N| Medición de5D.1 y construcción de referencia |
+| Torque conducida / diferencia total máxima |88,924 N·m;635,171 N| Equilibrio, máximo3C correlacionado |
+| Fuerza lateral máxima de3C |1169,524 N| Condicional a reparto uniforme/promedioTs constante |
+| Motor nominal ideal externo: fuerza lateral |1171,250 N| Escenario separado, no máximo del historial3C |
+| Cubo conducida CAD |Ø75/Ø35 mm| Geometría, no resistencia aprobada |
+| Cubo motriz CAD vigente |Ø45/Ø38 mm| Incompatible con envolvente ideal de chavetero alto candidato |
+| Cubo motriz propuesto para predimensionamiento |Ø55/Ø38 mm| Propuesta adoptada en5F, NO modificación ejecutada del plano |
+| Chaveta candidata alta |DIN6885-1,10×8 mm| Longitud activa y resistencia pendientes |
+
+El balance de motor es independiente de la capacidad de correas. Con los
+datos redondeados históricos4,805/4,194 kW, la eficiencia **mecánica** mínima
+para cubrir máximo/media es87,364/76,255 %. Aη=0,90 hay4,950 kW disponibles
+y margen máximo0,145 kW; a0,85/0,87 no se cubre el máximo. Estas eficiencias
+son escenarios, no pérdidas medidas. La eficiencia eléctrica del motor no
+se utiliza como eficiencia de transmisión ni para reducir otra vez5,5 kW.
+Los candidatos BEVI1470rpm y Marathon1475rpm permanecen sin seleccionar;
+no sustituyen1450rpm ni los torques históricos.
+
+### Integración y límites del cierre
+
+La interfaz entrega `conducida_fx_n`, `conducida_fy_n`, `conducida_fr_n` y
+`torque_correas_conducida_firmado_nm`, sincronizados por paso/tiempo/ángulo.
+Usa x de conducida hacia motor, y en plano y z=x×y, conforme5D.2. No sumar
+máximos de tiempos distintos, no superponer escenario nominal y3C, ni
+aplicar simultáneamente ramales y su resultante. La transformación espacial,
+posición de polea y apoyos, peso y demás cargas siguen pendientes. No se
+calculan reacciones en los rodamientos del eje vertical.
+
+Persisten la garganta conducida34° CAD frente38° Gates y la desviación
+diametral0,1 mm frente tabla con aceptación pendiente. Tres gargantas no
+equivalen a conformidad completa. Las advertencias antiguas de5A/5B se
+conservan como historia:5C confirmó diámetros y5D incorporó tensado/cargas
+condicionales, sin acreditar funcionamiento real.
+
+Antes de aprobar fabricación deben resolverse correa/motor comerciales,
+admisible radial y montaje, interferencias deØ55, materiales y condición de
+suministro, resistencia local de poleas/cubos, chavetas, ajustes, retención,
+base y resguardos. Los esfuerzos nominales de anillos lisos no se presentan
+como máximos reales; no hay FEM ni factores de seguridad ficticios. El
+predimensionamiento está documentado para iniciar el informe básico, pero
+la transmisión completa **no está aprobada**.

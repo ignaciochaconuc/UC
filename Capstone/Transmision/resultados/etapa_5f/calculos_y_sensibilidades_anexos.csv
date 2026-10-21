@@ -1,0 +1,10 @@
+tema,archivo,alcance
+Geometría exacta y aproximada,resultados/resumen.json,"Incluye contraste G0,947 no adoptado"
+Sensibilidad factor servicio,resultados/sensibilidad_factor_servicio.csv,"No sustituye FS1,3 preliminar"
+Balance de potencia,resultados/balance_motor_eficiencias.csv,"Eficiencias mecánicas supuestas, no eléctricas"
+Historial correlacionado,resultados/etapa_5d2/tensiones_y_fuerzas_condicionales_3c.csv,1440 estados intactos
+Sensibilidad pretensión,resultados/etapa_5d2/sensibilidad_Ts.csv,No instrucciones de fabricante
+Poleas y especificación FEM,especificacion_fem_ambas_poleas_inventor.md,"Preparación, no FEM ejecutado"
+Sensibilidad largo chavetas,resultados/etapa_5e2/sensibilidad_longitud_activa.csv,"Largos hipotéticos, no selección"
+Alternativas cubo,resultados/etapa_5e2a/ligamentos_geometricos.csv,"Ligamentos, no resistencia"
+Motores comerciales,resultados/etapa_5e2b/resumen.json,"BEVI directo; Marathon indexado/403, plano pendiente"

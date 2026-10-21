@@ -1,0 +1,916 @@
+{
+  "etapa": "5F",
+  "predimensionamiento_documentado": true,
+  "listo_redaccion_ingenieria_basica": true,
+  "transmision_aprobada": false,
+  "bloqueos_aprobacion": [
+    "correa_comercial_y_equivalencia",
+    "cargas_vectoriales",
+    "compatibilidad_gargantas_CAD",
+    "cubo_original_motriz_chavetero_alto",
+    "redisenio_cubo55",
+    "resistencia_poleas_chavetas_uniones",
+    "balance_potencia",
+    "motor_y_carga_radial",
+    "montaje_base_y_protecciones",
+    "integracion_eje_vertical"
+  ],
+  "autorizado_fabricacion": false,
+  "motor_seleccionado": null,
+  "parametros_predimensionamiento": [
+    {
+      "parametro": "relacion",
+      "valor": 2.8,
+      "unidad": "1",
+      "estado": "verificado",
+      "fuente": "resultados/resumen.json#etapa_5a",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "salida_ideal",
+      "valor": 517.8571428571429,
+      "unidad": "rpm",
+      "estado": "verificado",
+      "fuente": "resultados/resumen.json#etapa_5a",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "diferencia_salida_vs_3c",
+      "valor": 1.8571428571428896,
+      "unidad": "rpm",
+      "estado": "verificado",
+      "fuente": "resultados/resumen.json#etapa_5a",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "velocidad_correa",
+      "valor": 7.592182246175334,
+      "unidad": "m/s",
+      "estado": "verificado",
+      "fuente": "resultados/resumen.json#etapa_5a",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "abrazamiento_motriz",
+      "valor": 158.97630436100656,
+      "unidad": "grado",
+      "estado": "verificado",
+      "fuente": "resultados/resumen.json#etapa_5a",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "abrazamiento_conducida",
+      "valor": 201.02369563899344,
+      "unidad": "grado",
+      "estado": "verificado",
+      "fuente": "resultados/resumen.json#etapa_5a",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "potencia_motor_kw",
+      "valor": 5.5,
+      "unidad": "kW",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "rpm_motor",
+      "valor": 1450.0,
+      "unidad": "rpm",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "horas_diarias",
+      "valor": 8.0,
+      "unidad": "h/dia",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "factor_servicio",
+      "valor": 1.3,
+      "unidad": "1",
+      "estado": "propuesta",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "diametro_motriz_mm",
+      "valor": 100.0,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "diametro_conducida_mm",
+      "valor": 280.0,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "centros_mm",
+      "valor": 493.316,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "longitud_correa_mm",
+      "valor": 1600.0,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "numero_correas",
+      "valor": 3,
+      "unidad": "1",
+      "estado": "verificado",
+      "fuente": "parametros.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Valor adoptado para predimensionamiento; no selección comercial definitiva"
+    },
+    {
+      "parametro": "potencia_diseno_kw",
+      "valor": 7.15,
+      "unidad": "kW",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/resumen.json#etapa_5b",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Solo Gates SPA Super HC convencional; G conservador 0,94"
+    },
+    {
+      "parametro": "capacidad_total_kw",
+      "valor": 9.807959999999998,
+      "unidad": "kW",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/resumen.json#etapa_5b",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Solo Gates SPA Super HC convencional; G conservador 0,94"
+    },
+    {
+      "parametro": "utilizacion_capacidad",
+      "valor": 0.728999710439276,
+      "unidad": "1",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/resumen.json#etapa_5b",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Solo Gates SPA Super HC convencional; G conservador 0,94"
+    },
+    {
+      "parametro": "margen_capacidad_kw",
+      "valor": 2.6579599999999974,
+      "unidad": "kW",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/resumen.json#etapa_5b",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Solo Gates SPA Super HC convencional; G conservador 0,94"
+    },
+    {
+      "parametro": "centros_minimos_mm",
+      "valor": 468.316,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+    },
+    {
+      "parametro": "centros_nominales_mm",
+      "valor": 493.316,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+    },
+    {
+      "parametro": "centros_maximos_mm",
+      "valor": 528.316,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+    },
+    {
+      "parametro": "recorrido_total_minimo_mm",
+      "valor": 60.0,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+    },
+    {
+      "parametro": "tension_estatica_base_n",
+      "valor": 197.27233163107317,
+      "unidad": "N",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/etapa_5d1/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+    },
+    {
+      "parametro": "deflexion_mm",
+      "valor": 4.85036777838547,
+      "unidad": "mm",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/etapa_5d1/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+    },
+    {
+      "parametro": "fuerza_minima_n",
+      "valor": 8.1334116541622,
+      "unidad": "N",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/etapa_5d1/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+    },
+    {
+      "parametro": "fuerza_maxima_n",
+      "valor": 12.078858286783664,
+      "unidad": "N",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/etapa_5d1/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+    },
+    {
+      "parametro": "torque_maximo_conducida",
+      "valor": 88.92396579145439,
+      "unidad": "N m",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5d2/resumen.json",
+      "escenario": "historial_3c_inclinacion",
+      "nota": "T y delta por equilibrio; Fr depende de hipótesis de tensión media constante"
+    },
+    {
+      "parametro": "diferencia_tensiones_total_maxima",
+      "valor": 635.1711842246742,
+      "unidad": "N",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5d2/resumen.json",
+      "escenario": "historial_3c_inclinacion",
+      "nota": "T y delta por equilibrio; Fr depende de hipótesis de tensión media constante"
+    },
+    {
+      "parametro": "fuerza_lateral_maxima_3c",
+      "valor": 1169.524320572512,
+      "unidad": "N",
+      "estado": "condicionado_modelo",
+      "fuente": "resultados/etapa_5d2/resumen.json",
+      "escenario": "historial_3c_inclinacion",
+      "nota": "T y delta por equilibrio; Fr depende de hipótesis de tensión media constante"
+    },
+    {
+      "parametro": "cubo_motriz_CAD_exterior",
+      "valor": 45.0,
+      "unidad": "mm",
+      "estado": "incompatible",
+      "fuente": "parametros_poleas.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Ø55 adoptado como propuesta de predimensionamiento 5F, NO plano CAD ejecutado; CAD no equivale a resistencia aprobada"
+    },
+    {
+      "parametro": "cubo_motriz_CAD_agujero",
+      "valor": 38.0,
+      "unidad": "mm",
+      "estado": "incompatible",
+      "fuente": "parametros_poleas.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "cubo_conducida_CAD_exterior",
+      "valor": 75.0,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "parametros_poleas.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Ø55 adoptado como propuesta de predimensionamiento 5F, NO plano CAD ejecutado; CAD no equivale a resistencia aprobada"
+    },
+    {
+      "parametro": "cubo_conducida_CAD_agujero",
+      "valor": 35.0,
+      "unidad": "mm",
+      "estado": "verificado",
+      "fuente": "parametros_poleas.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "cubo_motriz_propuesto_exterior",
+      "valor": 55,
+      "unidad": "mm",
+      "estado": "propuesta",
+      "fuente": "resultados/etapa_5e2a/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Ø55 adoptado como propuesta de predimensionamiento 5F, NO plano CAD ejecutado; CAD no equivale a resistencia aprobada"
+    },
+    {
+      "parametro": "cubo_motriz_propuesto_agujero",
+      "valor": 38.0,
+      "unidad": "mm",
+      "estado": "propuesta",
+      "fuente": "resultados/etapa_5e2a/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "chaveta_ancho",
+      "valor": 10.0,
+      "unidad": "mm",
+      "estado": "propuesta",
+      "fuente": "resultados/etapa_5e2/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Candidata DIN6885-1; largo activo y contacto real pendientes"
+    },
+    {
+      "parametro": "chaveta_altura",
+      "valor": 8.0,
+      "unidad": "mm",
+      "estado": "propuesta",
+      "fuente": "resultados/etapa_5e2/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Candidata DIN6885-1; largo activo y contacto real pendientes"
+    },
+    {
+      "parametro": "gargantas_motriz",
+      "valor": 3,
+      "unidad": "1",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "angulo_CAD_motriz",
+      "valor": 34.0,
+      "unidad": "grado",
+      "estado": "verificado",
+      "fuente": "parametros_poleas.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Dato geométrico, no aceptación normativa"
+    },
+    {
+      "parametro": "angulo_Gates_motriz",
+      "valor": 34.0,
+      "unidad": "grado",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "gargantas_conducida",
+      "valor": 3,
+      "unidad": "1",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "angulo_CAD_conducida",
+      "valor": 34.0,
+      "unidad": "grado",
+      "estado": "verificado",
+      "fuente": "parametros_poleas.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": "Dato geométrico, no aceptación normativa"
+    },
+    {
+      "parametro": "angulo_Gates_conducida",
+      "valor": 38.0,
+      "unidad": "grado",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "escenario": "predimensionamiento_historico",
+      "nota": ""
+    },
+    {
+      "parametro": "rpm_comercial_BEVI_121165",
+      "valor": 1470,
+      "unidad": "rpm",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5e2b/resumen.json",
+      "escenario": "BEVI_121165",
+      "nota": "Candidato no seleccionado; no sustituye1450rpm"
+    },
+    {
+      "parametro": "rpm_comercial_Marathon_6RN132S04E30U24B3641_A",
+      "valor": 1475,
+      "unidad": "rpm",
+      "estado": "verificado",
+      "fuente": "resultados/etapa_5e2b/resumen.json",
+      "escenario": "Marathon_6RN132S04E30U24B3641_A",
+      "nota": "Candidato no seleccionado; no sustituye1450rpm"
+    }
+  ],
+  "matriz_verificaciones": [
+    {
+      "verificacion": "cinematica_ideal",
+      "estado": "verificado",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/resumen.json",
+      "limite": "No corrige 516 rpm ni garantiza velocidad real"
+    },
+    {
+      "verificacion": "capacidad_tres_correas_referencia",
+      "estado": "verificado",
+      "esencial_aprobacion": false,
+      "fuente": "resultados/resumen.json",
+      "limite": "Utilización 0,729 para construcción Gates; no motor más potente disponible"
+    },
+    {
+      "verificacion": "correa_comercial_y_equivalencia",
+      "estado": "pendiente",
+      "esencial_aprobacion": true,
+      "fuente": "parametros.json",
+      "limite": "DIN7753 por sí sola no prueba equivalencia Gates"
+    },
+    {
+      "verificacion": "tensado_procedimiento_referencia",
+      "estado": "condicionado_modelo",
+      "esencial_aprobacion": false,
+      "fuente": "resultados/etapa_5d1/resumen.json",
+      "limite": "No tensiones dinámicas exactas ni adherencia garantizada"
+    },
+    {
+      "verificacion": "cargas_vectoriales",
+      "estado": "condicionado_modelo",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5d2/resumen.json",
+      "limite": "Promedio Ts constante y reparto uniforme; validar montaje/pretensión"
+    },
+    {
+      "verificacion": "tres_gargantas",
+      "estado": "verificado",
+      "esencial_aprobacion": false,
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "limite": "Configuración, no conformidad completa CAD"
+    },
+    {
+      "verificacion": "compatibilidad_gargantas_CAD",
+      "estado": "pendiente",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5c/resumen.json; parametros_poleas.json",
+      "limite": "Conducida34° CAD frente38° Gates; exteriores +0,1 mm frente tabla, aceptación pendiente"
+    },
+    {
+      "verificacion": "cubo_original_motriz_chavetero_alto",
+      "estado": "incompatible",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5e2/resumen.json",
+      "limite": "Ø45/38 no contiene esquina ideal; no fabricar como aprobado"
+    },
+    {
+      "verificacion": "redisenio_cubo55",
+      "estado": "propuesta",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5e2a/resumen.json",
+      "limite": "Adoptado solo en predimensionamiento; validar interferencias y actualizar CAD posteriormente"
+    },
+    {
+      "verificacion": "resistencia_poleas_chavetas_uniones",
+      "estado": "pendiente",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5e2/resumen.json",
+      "limite": "Largo activo, materiales/condición, tolerancias, entallas y retención pendientes; sin FS"
+    },
+    {
+      "verificacion": "balance_potencia",
+      "estado": "condicionado_modelo",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/balance_motor_eficiencias.csv",
+      "limite": "Suficiencia depende de eficiencia mecánica y servicio; no usar eficiencia eléctrica"
+    },
+    {
+      "verificacion": "motor_y_carga_radial",
+      "estado": "pendiente",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5e2b/resumen.json",
+      "limite": "Candidatos, no selección; punto de aplicación y capacidad radial no confirmados"
+    },
+    {
+      "verificacion": "montaje_base_y_protecciones",
+      "estado": "pendiente",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5c/resumen.json",
+      "limite": "Base guiada/bloqueada, alineación, retención, tensado y resguardo por detallar"
+    },
+    {
+      "verificacion": "integracion_eje_vertical",
+      "estado": "pendiente",
+      "esencial_aprobacion": true,
+      "fuente": "resultados/etapa_5d2/resumen.json",
+      "limite": "Faltan apoyos y ubicación espacial polea; no reacciones calculadas"
+    }
+  ],
+  "motor_comercial": [
+    {
+      "motor": "BEVI_121165",
+      "potencia_kw": 5.5,
+      "polos": 4,
+      "fases": 3,
+      "frecuencia_hz": 50,
+      "coincide_configuracion_5_5kw_4p_50hz": true,
+      "diametro_eje_mm": 38,
+      "coincide_agujero_nominal": true,
+      "ajuste_eje_cubo": "pendiente_tolerancias_y_montaje",
+      "ancho_chavetero_motor_mm": 10,
+      "coincide_ancho_nominal": true,
+      "chaveta_resistencia_aprobada": false,
+      "rpm_nominal_comercial": 1470,
+      "rpm_historica_no_modificada": 1450.0,
+      "diferencia_rpm": 20.0,
+      "diferencia_rpm_porcentaje": 1.379310344827589,
+      "montaje": "B3/B14",
+      "eficiencia_electrica": 0.898,
+      "eficiencia_mecanica_correas": null,
+      "motor_seleccionado": false,
+      "extension_eje_mm": 80,
+      "envolvente_cubo_mm": 62.0,
+      "diferencia_extension_envolvente_mm": 18.0,
+      "cabe_envolvente_en_longitud_nominal": true,
+      "posicion_inicio_desde_hombro_mm": null,
+      "cabe_en_posicion_propuesta": null,
+      "longitud_contacto_efectiva_mm": null,
+      "estado": "condicion_necesaria_no_montaje_aprobado"
+    },
+    {
+      "motor": "Marathon_6RN132S04E30U24B3641_A",
+      "potencia_kw": 5.5,
+      "polos": 4,
+      "fases": 3,
+      "frecuencia_hz": 50,
+      "coincide_configuracion_5_5kw_4p_50hz": true,
+      "diametro_eje_mm": 38,
+      "coincide_agujero_nominal": true,
+      "ajuste_eje_cubo": "pendiente_tolerancias_y_montaje",
+      "ancho_chavetero_motor_mm": null,
+      "coincide_ancho_nominal": null,
+      "chaveta_resistencia_aprobada": false,
+      "rpm_nominal_comercial": 1475,
+      "rpm_historica_no_modificada": 1450.0,
+      "diferencia_rpm": 25.0,
+      "diferencia_rpm_porcentaje": 1.724137931034475,
+      "montaje": "B14",
+      "eficiencia_electrica": 0.896,
+      "eficiencia_mecanica_correas": null,
+      "motor_seleccionado": false,
+      "extension_eje_mm": 80,
+      "envolvente_cubo_mm": 62.0,
+      "diferencia_extension_envolvente_mm": 18.0,
+      "cabe_envolvente_en_longitud_nominal": true,
+      "posicion_inicio_desde_hombro_mm": null,
+      "cabe_en_posicion_propuesta": null,
+      "longitud_contacto_efectiva_mm": null,
+      "estado": "condicion_necesaria_no_montaje_aprobado"
+    }
+  ],
+  "balance_potencia_heredado": [
+    {
+      "eficiencia_supuesta": "0.85",
+      "potencia_disponible_kw": "4.675",
+      "margen_maximo_kw": "-0.1299999999999999",
+      "margen_medio_kw": "0.48099999999999987",
+      "cubre_maximo_3c": "False",
+      "cubre_media_3c": "True",
+      "eficiencia_minima_maximo": "0.8736363636363635",
+      "eficiencia_minima_media": "0.7625454545454545"
+    },
+    {
+      "eficiencia_supuesta": "0.87",
+      "potencia_disponible_kw": "4.785",
+      "margen_maximo_kw": "-0.019999999999999574",
+      "margen_medio_kw": "0.5910000000000002",
+      "cubre_maximo_3c": "False",
+      "cubre_media_3c": "True",
+      "eficiencia_minima_maximo": "0.8736363636363635",
+      "eficiencia_minima_media": "0.7625454545454545"
+    },
+    {
+      "eficiencia_supuesta": "0.9",
+      "potencia_disponible_kw": "4.95",
+      "margen_maximo_kw": "0.14500000000000046",
+      "margen_medio_kw": "0.7560000000000002",
+      "cubre_maximo_3c": "True",
+      "cubre_media_3c": "True",
+      "eficiencia_minima_maximo": "0.8736363636363635",
+      "eficiencia_minima_media": "0.7625454545454545"
+    },
+    {
+      "eficiencia_supuesta": "0.95",
+      "potencia_disponible_kw": "5.225",
+      "margen_maximo_kw": "0.41999999999999993",
+      "margen_medio_kw": "1.0309999999999997",
+      "cubre_maximo_3c": "True",
+      "cubre_media_3c": "True",
+      "eficiencia_minima_maximo": "0.8736363636363635",
+      "eficiencia_minima_media": "0.7625454545454545"
+    },
+    {
+      "eficiencia_supuesta": "1.0",
+      "potencia_disponible_kw": "5.5",
+      "margen_maximo_kw": "0.6950000000000003",
+      "margen_medio_kw": "1.306",
+      "cubre_maximo_3c": "True",
+      "cubre_media_3c": "True",
+      "eficiencia_minima_maximo": "0.8736363636363635",
+      "eficiencia_minima_media": "0.7625454545454545"
+    }
+  ],
+  "eficiencia_mecanica_minima_maximo": 0.8736363636363635,
+  "eficiencia_mecanica_minima_media": 0.7625454545454545,
+  "separacion_eficiencias": "5,5 kW se interpreta como potencia mecánica nominal de salida. La eficiencia eléctrica relaciona salida con entrada eléctrica, no es eficiencia de correas; no se usa para reducir de nuevo los 5,5 kW ni para recalcular etapas previas.",
+  "interfaz_eje_vertical": {
+    "destino": "Analisis_matriz_eje_vertical; sin modificar sus cálculos",
+    "archivo_serie_completa": "resultados/etapa_5d2/tensiones_y_fuerzas_condicionales_3c.csv",
+    "archivo_equilibrio": "resultados/etapa_5d2/diferencias_tensiones_3c.csv",
+    "archivo_criticos": "resultados/etapa_5d2/casos_criticos_correlacionados.csv",
+    "archivo_motor_externo": "resultados/etapa_5d2/motor_nominal_externo.csv",
+    "archivo_sensibilidades_separadas": "resultados/etapa_5d2/sensibilidad_Ts.csv",
+    "columnas_eje_vertical": {
+      "conducida_fx_n": "N",
+      "conducida_fy_n": "N",
+      "conducida_fr_n": "N",
+      "torque_correas_conducida_firmado_nm": "N m",
+      "tiempo_s": "s",
+      "angulo_grados": "grado",
+      "paso": "índice"
+    },
+    "marco": {
+      "x": "desde conducida hacia motor",
+      "y": "perpendicular en el plano; z=x cruz y",
+      "giro": 1,
+      "positivo": "antihorario visto desde +z; inferior tenso; Fy conducida positivo",
+      "negativo": "horario visto desde +z; superior tenso; Fy conducida negativo",
+      "motriz": "fuerza opuesta en el MISMO marco x,y; torque de correas opuesto al del motor",
+      "torque_3c": "magnitud resistente; torque aplicado por correa tiene el signo de giro"
+    },
+    "hipotesis": [
+      "Reparto uniforme entre tres correas; no deducido de equilibrio",
+      "F_tenso+F_flojo=2Ts constante por hipótesis propia, no procedimiento Gates",
+      "Modelo cuasiestático de fuerzas de tramos sin inercia distribuida y sin pérdidas",
+      "Ts completo de 5D.1 tomado como referencia; no se identifica con tensión centrífuga ni se suma otro término",
+      "No se comprueba adherencia: R Gates no se usa como razón dinámica límite",
+      "Fuerzas solo interpretables cuando ambos ramales son no negativos; esto no garantiza ausencia de deslizamiento"
+    ],
+    "numero_estados": 1440,
+    "caso_3c_correlacionado": {
+      "criterio": "fuerza_resultante_maxima",
+      "escenario": "historial_3c_inclinacion",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_grados": 94.25,
+      "potencia_3c_original_w": 4805.041495726255,
+      "torque_conducida_magnitud_nm": 88.92396579145439,
+      "signo_giro": 1,
+      "torque_correas_conducida_firmado_nm": 88.92396579145439,
+      "torque_correas_motriz_firmado_nm": -31.75855921123371,
+      "delta_total_n": 635.1711842246742,
+      "delta_individual_n": 211.7237280748914,
+      "Ts_individual_n": 197.27233163107317,
+      "tenso_individual_n": 303.1341956685189,
+      "flojo_individual_n": 91.41046759362747,
+      "admisible_no_negatividad": true,
+      "estado_modelo": "condicional_no_negativo",
+      "conducida_superior_fx_n": 269.62903288558243,
+      "conducida_superior_fy_n": -50.03045968563641,
+      "conducida_inferior_fx_n": 894.1402682240472,
+      "conducida_inferior_fy_n": 165.91035529052385,
+      "conducida_fx_n": 1163.7693011096296,
+      "conducida_fy_n": 115.87989560488745,
+      "conducida_fr_n": 1169.524320572512,
+      "motriz_fx_n": -1163.7693011096296,
+      "motriz_fy_n": -115.87989560488745,
+      "motriz_fr_n": 1169.524320572512
+    },
+    "caso_nominal_ideal_externo": {
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "potencia_motor_kw": 5.5,
+      "eficiencia_supuesta": 1.0,
+      "torque_conducida_magnitud_nm": 101.42011545993883,
+      "signo_giro": 1,
+      "torque_correas_conducida_firmado_nm": 101.42011545993883,
+      "torque_correas_motriz_firmado_nm": -36.22146980712101,
+      "delta_total_n": 724.4293961424202,
+      "delta_individual_n": 241.47646538080673,
+      "Ts_individual_n": 197.27233163107317,
+      "tenso_individual_n": 318.0105643214765,
+      "flojo_individual_n": 76.53409894066981,
+      "admisible_no_negatividad": true,
+      "estado_modelo": "condicional_no_negativo",
+      "conducida_superior_fx_n": 225.74892814114506,
+      "conducida_superior_fy_n": -41.88837725510796,
+      "conducida_inferior_fx_n": 938.0203729684846,
+      "conducida_inferior_fy_n": 174.05243772105229,
+      "conducida_fx_n": 1163.7693011096296,
+      "conducida_fy_n": 132.16406046594432,
+      "conducida_fr_n": 1171.249898648466,
+      "motriz_fx_n": -1163.7693011096296,
+      "motriz_fy_n": -132.16406046594432,
+      "motriz_fr_n": 1171.249898648466
+    },
+    "aplicacion": "Resultante en plano de polea; no aplicar simultáneamente tensiones de ramales y resultante (duplicaría cargas). Preservar correlación T,Fx,Fy,paso,tiempo.",
+    "transformacion_espacial": "Pendiente: orientación del plano de correas, posición axial/radial de polea y ejes globales. No se supone coincidencia con marco estructural.",
+    "reacciones_rodamientos_calculadas": false,
+    "faltantes": [
+      "Posición axial exacta de apoyos y polea",
+      "Orientación espacial y transformación de ejes",
+      "Peso/centro de gravedad y otras acciones",
+      "Estado simultáneo de cargas del otro subsistema"
+    ],
+    "sin_reescalado": "Cargas3C corresponden a516rpm; no escalar ni sumar máximos de distintos estados o escenarios."
+  },
+  "pendientes_priorizados": [
+    {
+      "prioridad": 1,
+      "pendiente": "Resolver garganta conducida34/38°, equivalencia y referencia comercial de correas",
+      "tipo": "detalle"
+    },
+    {
+      "prioridad": 2,
+      "pendiente": "Estudiar Ø55/38 con coordenadas reales de aligeramientos; corregir CAD solo tras validar",
+      "tipo": "detalle"
+    },
+    {
+      "prioridad": 3,
+      "pendiente": "Confirmar motor, plano de eje, admisible radial y posición real del plano de correas",
+      "tipo": "proveedor"
+    },
+    {
+      "prioridad": 4,
+      "pendiente": "Completar chavetas, largos activos, materiales/condición, ajustes y retención axial",
+      "tipo": "detalle"
+    },
+    {
+      "prioridad": 5,
+      "pendiente": "Verificar poleas debilitadas y transiciones; análisis local/FEM solo con datos suficientes",
+      "tipo": "detalle"
+    },
+    {
+      "prioridad": 6,
+      "pendiente": "Entregar interfaz a eje vertical y ubicar apoyos antes de calcular reacciones",
+      "tipo": "integracion"
+    },
+    {
+      "prioridad": 7,
+      "pendiente": "Dimensionar base, bloqueo, pernos, alineación y resguardo",
+      "tipo": "detalle"
+    },
+    {
+      "prioridad": 8,
+      "pendiente": "Validar servicio/arranques, tensión de instalación, velocidad/deslizamiento y pérdidas reales",
+      "tipo": "experimental"
+    }
+  ],
+  "bibliografia": [
+    {
+      "clave_bibtex": "bevi_4al3_132s4_2026",
+      "url": "https://www.bevi.com/electric-motors/three-phase-standard-motors/electric-motor-4al3-132s-4-121165",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "marathon_6rn132s_3641a_2026",
+      "url": "https://www.marathonelectric.com/product/6RN132S04E30U24B3641-A/6RN132S04E30U24B%403641-A/5.50-kw-general-purpose-low-voltage-iec-motor-ie3-3-phase-1500-rpm-d230-y400v-50hz-132s-frame-b14-ic411",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "ganter_din6885_2_low_2026",
+      "url": "https://live-katalog.ganternorm.com/pdf/ganter/en/6885-2.pdf?dispositiontype=attachment",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "ringfeder_rfn7012_2026",
+      "url": "https://www.ringfeder.com/products/locking-assemblies/rfn-7012/",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "gates_vbelt_2004",
+      "url": "https://www.gates.com/content/dam/documents-library/catalogs/industrial-v-belt-design-manual-kr.pdf",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "equipo_polea_conducida_2026",
+      "url": "",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "equipo_polea_motriz_2026",
+      "url": "",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "ganter_din6885_keyways_2026",
+      "url": "https://www.ganternorm.com/fileadmin/user_upload/downloads/technischer%20anhang/technical_information/6885-1.pdf",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "ganter_parallel_keys_2026",
+      "url": "https://www.ganternorm.com/en/products/product-family/Stainless-Steel-Quality-Class-4/DIN-6885-Parallel-Keys-Stainless-Steel",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "din6885_1_2021_catalogo",
+      "url": "https://www.dinmedia.de/en/standard/din-6885-1/346315269",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    },
+    {
+      "clave_bibtex": "iso_r773_1969_estado",
+      "url": "https://www.iso.org/standard/5056.html",
+      "uso": "Referencia existente consultada en etapas previas; alcance y acceso según nota BibTeX",
+      "archivo": "referencias.bib"
+    }
+  ],
+  "anexos": [
+    {
+      "tema": "Geometría exacta y aproximada",
+      "archivo": "resultados/resumen.json",
+      "alcance": "Incluye contraste G0,947 no adoptado"
+    },
+    {
+      "tema": "Sensibilidad factor servicio",
+      "archivo": "resultados/sensibilidad_factor_servicio.csv",
+      "alcance": "No sustituye FS1,3 preliminar"
+    },
+    {
+      "tema": "Balance de potencia",
+      "archivo": "resultados/balance_motor_eficiencias.csv",
+      "alcance": "Eficiencias mecánicas supuestas, no eléctricas"
+    },
+    {
+      "tema": "Historial correlacionado",
+      "archivo": "resultados/etapa_5d2/tensiones_y_fuerzas_condicionales_3c.csv",
+      "alcance": "1440 estados intactos"
+    },
+    {
+      "tema": "Sensibilidad pretensión",
+      "archivo": "resultados/etapa_5d2/sensibilidad_Ts.csv",
+      "alcance": "No instrucciones de fabricante"
+    },
+    {
+      "tema": "Poleas y especificación FEM",
+      "archivo": "especificacion_fem_ambas_poleas_inventor.md",
+      "alcance": "Preparación, no FEM ejecutado"
+    },
+    {
+      "tema": "Sensibilidad largo chavetas",
+      "archivo": "resultados/etapa_5e2/sensibilidad_longitud_activa.csv",
+      "alcance": "Largos hipotéticos, no selección"
+    },
+    {
+      "tema": "Alternativas cubo",
+      "archivo": "resultados/etapa_5e2a/ligamentos_geometricos.csv",
+      "alcance": "Ligamentos, no resistencia"
+    },
+    {
+      "tema": "Motores comerciales",
+      "archivo": "resultados/etapa_5e2b/resumen.json",
+      "alcance": "BEVI directo; Marathon indexado/403, plano pendiente"
+    }
+  ],
+  "criterio_cierre": "Cierre documental de ingeniería básica, no aprobación para fabricación/compra; Ø55/38 propuesta adoptada en5F, CAD vigente Ø45/38.",
+  "advertencias_historicas_superadas": "5A/5B aún dicen confirmar diámetros y pendientes ramales/tensado; se conservan literalmente. 5C confirma diámetros de referencia;5D aporta tensado y modelo dinámico condicional, no aprobación física.",
+  "tensiones_cubos": "Valores de secciones lisas son nominales simplificados, no máximos locales reales; sin factores de seguridad asignados.",
+  "factores_seguridad_componentes_no_verificados": null,
+  "fem_ejecutado": false,
+  "historial_3c_modificado": false
+}

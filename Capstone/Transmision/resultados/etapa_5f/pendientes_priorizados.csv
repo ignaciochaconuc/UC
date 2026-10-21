@@ -1,0 +1,9 @@
+prioridad,pendiente,tipo
+1,"Resolver garganta conducida34/38°, equivalencia y referencia comercial de correas",detalle
+2,Estudiar Ø55/38 con coordenadas reales de aligeramientos; corregir CAD solo tras validar,detalle
+3,"Confirmar motor, plano de eje, admisible radial y posición real del plano de correas",proveedor
+4,"Completar chavetas, largos activos, materiales/condición, ajustes y retención axial",detalle
+5,Verificar poleas debilitadas y transiciones; análisis local/FEM solo con datos suficientes,detalle
+6,Entregar interfaz a eje vertical y ubicar apoyos antes de calcular reacciones,integracion
+7,"Dimensionar base, bloqueo, pernos, alineación y resguardo",detalle
+8,"Validar servicio/arranques, tensión de instalación, velocidad/deslizamiento y pérdidas reales",experimental

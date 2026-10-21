@@ -1,0 +1,47 @@
+parametro,valor,unidad,estado,fuente,escenario,nota
+relacion,2.8,1,verificado,resultados/resumen.json#etapa_5a,predimensionamiento_historico,
+salida_ideal,517.8571428571429,rpm,verificado,resultados/resumen.json#etapa_5a,predimensionamiento_historico,
+diferencia_salida_vs_3c,1.8571428571428896,rpm,verificado,resultados/resumen.json#etapa_5a,predimensionamiento_historico,
+velocidad_correa,7.592182246175334,m/s,verificado,resultados/resumen.json#etapa_5a,predimensionamiento_historico,
+abrazamiento_motriz,158.97630436100656,grado,verificado,resultados/resumen.json#etapa_5a,predimensionamiento_historico,
+abrazamiento_conducida,201.02369563899344,grado,verificado,resultados/resumen.json#etapa_5a,predimensionamiento_historico,
+potencia_motor_kw,5.5,kW,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+rpm_motor,1450.0,rpm,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+horas_diarias,8.0,h/dia,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+factor_servicio,1.3,1,propuesta,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+diametro_motriz_mm,100.0,mm,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+diametro_conducida_mm,280.0,mm,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+centros_mm,493.316,mm,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+longitud_correa_mm,1600.0,mm,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+numero_correas,3,1,verificado,parametros.json,predimensionamiento_historico,Valor adoptado para predimensionamiento; no selección comercial definitiva
+potencia_diseno_kw,7.15,kW,condicionado_modelo,resultados/resumen.json#etapa_5b,predimensionamiento_historico,"Solo Gates SPA Super HC convencional; G conservador 0,94"
+capacidad_total_kw,9.807959999999998,kW,condicionado_modelo,resultados/resumen.json#etapa_5b,predimensionamiento_historico,"Solo Gates SPA Super HC convencional; G conservador 0,94"
+utilizacion_capacidad,0.728999710439276,1,condicionado_modelo,resultados/resumen.json#etapa_5b,predimensionamiento_historico,"Solo Gates SPA Super HC convencional; G conservador 0,94"
+margen_capacidad_kw,2.6579599999999974,kW,condicionado_modelo,resultados/resumen.json#etapa_5b,predimensionamiento_historico,"Solo Gates SPA Super HC convencional; G conservador 0,94"
+centros_minimos_mm,468.316,mm,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,"Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+centros_nominales_mm,493.316,mm,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,"Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+centros_maximos_mm,528.316,mm,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,"Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+recorrido_total_minimo_mm,60.0,mm,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,"Extremos de instalación/ajuste, no funcionamiento normal de correa inextensible"
+tension_estatica_base_n,197.27233163107317,N,condicionado_modelo,resultados/etapa_5d1/resumen.json,predimensionamiento_historico,"Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+deflexion_mm,4.85036777838547,mm,condicionado_modelo,resultados/etapa_5d1/resumen.json,predimensionamiento_historico,"Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+fuerza_minima_n,8.1334116541622,N,condicionado_modelo,resultados/etapa_5d1/resumen.json,predimensionamiento_historico,"Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+fuerza_maxima_n,12.078858286783664,N,condicionado_modelo,resultados/etapa_5d1/resumen.json,predimensionamiento_historico,"Procedimiento Gates, construcción y condiciones de medición de 5D.1"
+torque_maximo_conducida,88.92396579145439,N m,verificado,resultados/etapa_5d2/resumen.json,historial_3c_inclinacion,T y delta por equilibrio; Fr depende de hipótesis de tensión media constante
+diferencia_tensiones_total_maxima,635.1711842246742,N,verificado,resultados/etapa_5d2/resumen.json,historial_3c_inclinacion,T y delta por equilibrio; Fr depende de hipótesis de tensión media constante
+fuerza_lateral_maxima_3c,1169.524320572512,N,condicionado_modelo,resultados/etapa_5d2/resumen.json,historial_3c_inclinacion,T y delta por equilibrio; Fr depende de hipótesis de tensión media constante
+cubo_motriz_CAD_exterior,45.0,mm,incompatible,parametros_poleas.json,predimensionamiento_historico,"Ø55 adoptado como propuesta de predimensionamiento 5F, NO plano CAD ejecutado; CAD no equivale a resistencia aprobada"
+cubo_motriz_CAD_agujero,38.0,mm,incompatible,parametros_poleas.json,predimensionamiento_historico,
+cubo_conducida_CAD_exterior,75.0,mm,verificado,parametros_poleas.json,predimensionamiento_historico,"Ø55 adoptado como propuesta de predimensionamiento 5F, NO plano CAD ejecutado; CAD no equivale a resistencia aprobada"
+cubo_conducida_CAD_agujero,35.0,mm,verificado,parametros_poleas.json,predimensionamiento_historico,
+cubo_motriz_propuesto_exterior,55,mm,propuesta,resultados/etapa_5e2a/resumen.json,predimensionamiento_historico,"Ø55 adoptado como propuesta de predimensionamiento 5F, NO plano CAD ejecutado; CAD no equivale a resistencia aprobada"
+cubo_motriz_propuesto_agujero,38.0,mm,propuesta,resultados/etapa_5e2a/resumen.json,predimensionamiento_historico,
+chaveta_ancho,10.0,mm,propuesta,resultados/etapa_5e2/resumen.json,predimensionamiento_historico,Candidata DIN6885-1; largo activo y contacto real pendientes
+chaveta_altura,8.0,mm,propuesta,resultados/etapa_5e2/resumen.json,predimensionamiento_historico,Candidata DIN6885-1; largo activo y contacto real pendientes
+gargantas_motriz,3,1,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,
+angulo_CAD_motriz,34.0,grado,verificado,parametros_poleas.json,predimensionamiento_historico,"Dato geométrico, no aceptación normativa"
+angulo_Gates_motriz,34.0,grado,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,
+gargantas_conducida,3,1,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,
+angulo_CAD_conducida,34.0,grado,verificado,parametros_poleas.json,predimensionamiento_historico,"Dato geométrico, no aceptación normativa"
+angulo_Gates_conducida,38.0,grado,verificado,resultados/etapa_5c/resumen.json,predimensionamiento_historico,
+rpm_comercial_BEVI_121165,1470,rpm,verificado,resultados/etapa_5e2b/resumen.json,BEVI_121165,Candidato no seleccionado; no sustituye1450rpm
+rpm_comercial_Marathon_6RN132S04E30U24B3641_A,1475,rpm,verificado,resultados/etapa_5e2b/resumen.json,Marathon_6RN132S04E30U24B3641_A,Candidato no seleccionado; no sustituye1450rpm

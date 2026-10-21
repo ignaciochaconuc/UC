@@ -1,0 +1,15 @@
+verificacion,estado,esencial_aprobacion,fuente,limite
+cinematica_ideal,verificado,True,resultados/resumen.json,No corrige 516 rpm ni garantiza velocidad real
+capacidad_tres_correas_referencia,verificado,False,resultados/resumen.json,"Utilización 0,729 para construcción Gates; no motor más potente disponible"
+correa_comercial_y_equivalencia,pendiente,True,parametros.json,DIN7753 por sí sola no prueba equivalencia Gates
+tensado_procedimiento_referencia,condicionado_modelo,False,resultados/etapa_5d1/resumen.json,No tensiones dinámicas exactas ni adherencia garantizada
+cargas_vectoriales,condicionado_modelo,True,resultados/etapa_5d2/resumen.json,Promedio Ts constante y reparto uniforme; validar montaje/pretensión
+tres_gargantas,verificado,False,resultados/etapa_5c/resumen.json,"Configuración, no conformidad completa CAD"
+compatibilidad_gargantas_CAD,pendiente,True,resultados/etapa_5c/resumen.json; parametros_poleas.json,"Conducida34° CAD frente38° Gates; exteriores +0,1 mm frente tabla, aceptación pendiente"
+cubo_original_motriz_chavetero_alto,incompatible,True,resultados/etapa_5e2/resumen.json,Ø45/38 no contiene esquina ideal; no fabricar como aprobado
+redisenio_cubo55,propuesta,True,resultados/etapa_5e2a/resumen.json,Adoptado solo en predimensionamiento; validar interferencias y actualizar CAD posteriormente
+resistencia_poleas_chavetas_uniones,pendiente,True,resultados/etapa_5e2/resumen.json,"Largo activo, materiales/condición, tolerancias, entallas y retención pendientes; sin FS"
+balance_potencia,condicionado_modelo,True,resultados/balance_motor_eficiencias.csv,Suficiencia depende de eficiencia mecánica y servicio; no usar eficiencia eléctrica
+motor_y_carga_radial,pendiente,True,resultados/etapa_5e2b/resumen.json,"Candidatos, no selección; punto de aplicación y capacidad radial no confirmados"
+montaje_base_y_protecciones,pendiente,True,resultados/etapa_5c/resumen.json,"Base guiada/bloqueada, alineación, retención, tensado y resguardo por detallar"
+integracion_eje_vertical,pendiente,True,resultados/etapa_5d2/resumen.json,Faltan apoyos y ubicación espacial polea; no reacciones calculadas
