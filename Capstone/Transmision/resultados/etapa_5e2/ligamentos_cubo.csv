@@ -1,0 +1,5 @@
+polea,escenario_geometrico,profundidad_cubo_hipotetica_mm,pared_radial_lisa_mm,ligamento_central_fondo_mm,ligamento_radial_esquina_ideal_mm,diametro_exterior_minimo_envolvente_sin_reserva_mm,fondo_plano_contenido_en_exterior_ideal,estado
+motriz,nominal_candidata,3.3,3.5,0.1999999999999993,-0.35366491396948874,45.70732982793898,False,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+motriz,maximo_tolerancia_candidata,3.5,3.5,0.0,-0.5488611432322195,46.09772228646444,False,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+conducida,nominal_candidata,3.3,20.0,16.7,16.107477942047133,42.785044115905734,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+conducida,maximo_tolerancia_candidata,3.5,20.0,16.5,15.912966855077098,43.174066289845804,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado

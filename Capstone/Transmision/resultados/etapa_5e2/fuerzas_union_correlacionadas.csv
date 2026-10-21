@@ -1,0 +1,9 @@
+polea,escenario,criterio,paso,tiempo_s,angulo_3c_grados,torque_union_magnitud_nm,diametro_contacto_nominal_mm,fuerza_tangencial_union_n,estado
+motriz,historial_3c_inclinacion,torque_maximo,377,0.03044250645994832,94.25,31.75855921123371,38.0,1671.5031163807216,equilibrio con diámetro nominal de agujero; eje real por confirmar
+motriz,historial_3c_inclinacion,fuerza_resultante_maxima,377,0.03044250645994832,94.25,31.75855921123371,38.0,1671.5031163807216,equilibrio con diámetro nominal de agujero; eje real por confirmar
+motriz,historial_3c_inclinacion,tension_floja_minima,377,0.03044250645994832,94.25,31.75855921123371,38.0,1671.5031163807216,equilibrio con diámetro nominal de agujero; eje real por confirmar
+motriz,motor_nominal_ideal_externo_a_3c,motor_nominal_externo,,,,36.22146980712101,38.0,1906.3931477432109,equilibrio con diámetro nominal de agujero; eje real por confirmar
+conducida,historial_3c_inclinacion,torque_maximo,377,0.03044250645994832,94.25,88.92396579145439,35.0,5081.369473797394,equilibrio con diámetro nominal de agujero; eje real por confirmar
+conducida,historial_3c_inclinacion,fuerza_resultante_maxima,377,0.03044250645994832,94.25,88.92396579145439,35.0,5081.369473797394,equilibrio con diámetro nominal de agujero; eje real por confirmar
+conducida,historial_3c_inclinacion,tension_floja_minima,377,0.03044250645994832,94.25,88.92396579145439,35.0,5081.369473797394,equilibrio con diámetro nominal de agujero; eje real por confirmar
+conducida,motor_nominal_ideal_externo_a_3c,motor_nominal_externo,,,,101.42011545993883,35.0,5795.435169139361,equilibrio con diámetro nominal de agujero; eje real por confirmar

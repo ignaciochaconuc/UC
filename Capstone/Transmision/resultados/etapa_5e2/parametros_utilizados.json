@@ -1,0 +1,48 @@
+{
+  "revision": "5e2_predimensionamiento_chavetas",
+  "longitudes_activas_sensibilidad_mm": [
+    20,
+    30,
+    40,
+    50
+  ],
+  "material_chaveta": {
+    "designacion": null,
+    "condicion_suministro": null,
+    "fuente": null,
+    "limite_fluencia_mpa": null,
+    "presion_admisible_mpa": null
+  },
+  "uniones": {
+    "motriz": {
+      "diametro_eje_real_mm": null,
+      "fuente_eje_real": null,
+      "tolerancia_eje": null,
+      "tolerancia_agujero": null,
+      "largo_activo_real_mm": null,
+      "altura_contacto_real_cubo_mm": null,
+      "altura_contacto_real_eje_mm": null,
+      "profundidad_real_chavetero_cubo_mm": null,
+      "profundidad_real_chavetero_eje_mm": null,
+      "radio_fondo_chavetero_mm": null,
+      "tipo_extremos_chaveta": null,
+      "funcion_tornillo_m5": null,
+      "retencion_axial": null
+    },
+    "conducida": {
+      "diametro_eje_real_mm": null,
+      "fuente_eje_real": null,
+      "tolerancia_eje": null,
+      "tolerancia_agujero": null,
+      "largo_activo_real_mm": null,
+      "altura_contacto_real_cubo_mm": null,
+      "altura_contacto_real_eje_mm": null,
+      "profundidad_real_chavetero_cubo_mm": null,
+      "profundidad_real_chavetero_eje_mm": null,
+      "radio_fondo_chavetero_mm": null,
+      "tipo_extremos_chaveta": null,
+      "funcion_tornillo_m5": null,
+      "retencion_axial": null
+    }
+  }
+}

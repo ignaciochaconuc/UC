@@ -1,0 +1,6 @@
+validacion,cumple
+SHA256_historicos_conservados,True
+candidatas_filas_diametros_verificados,True
+largo_hipotetico_no_supera_envolvente,True
+escenarios_3c_y_motor_separados,True
+sin_aprobacion_ni_FS_ficticio,True

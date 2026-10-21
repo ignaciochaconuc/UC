@@ -1,0 +1,3 @@
+polea,diametro_mm,b_mm,h_mm,profundidad_cubo_nominal_mm,profundidad_cubo_max_mm,profundidad_eje_nominal_mm,profundidad_eje_max_mm,ajuste_ancho_chaveta,ajuste_ancho_cubo_candidato,estado,fuente,ancho_chavetero_cad_mm,ancho_cad_coincide_nominal,ajuste_cubo_cad,eje_real_estado
+motriz,38.0,10.0,8.0,3.3,3.5,5.0,5.2,h9,JS9,candidata DIN 6885-1 forma alta; no selección comercial ni CAD conforme,ganter_din6885_keyways_2026; ganter_parallel_keys_2026,10.0,True,JS9,pendiente_plano_eje_real
+conducida,35.0,10.0,8.0,3.3,3.5,5.0,5.2,h9,JS9,candidata DIN 6885-1 forma alta; no selección comercial ni CAD conforme,ganter_din6885_keyways_2026; ganter_parallel_keys_2026,,,,pendiente_plano_eje_real

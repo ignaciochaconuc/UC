@@ -1,0 +1,25 @@
+{
+  "ganter_dimensiones": {
+    "clave": "ganter_din6885_keyways_2026",
+    "url": "https://www.ganternorm.com/fileadmin/user_upload/downloads/technischer%20anhang/technical_information/6885-1.pdf",
+    "titulo": "Ganter DIN 6885-1 Keyways, High Hub Keyway, extracto página 2078",
+    "lectura": "Filas d=35 y d=38; cubo P9/JS9/D10; profundidad de cubo 3,3 +0,2 y eje 5 +0,2",
+    "notacion": "El proveedor llama t2 a profundidad de cubo y t4 a profundidad de eje; t1=d+t2 es medida de control",
+    "fecha_consulta": "2026-10-21"
+  },
+  "ganter_candidata": {
+    "clave": "ganter_parallel_keys_2026",
+    "url": "https://www.ganternorm.com/en/products/product-family/Stainless-Steel-Quality-Class-4/DIN-6885-Parallel-Keys-Stainless-Steel",
+    "lectura": "Candidata 10x8, rango 30...38 y ancho de chaveta h9; solo dimensiones, sin adoptar acero inoxidable del producto"
+  },
+  "din_estado": {
+    "clave": "din6885_1_2021_catalogo",
+    "url": "https://www.dinmedia.de/en/standard/din-6885-1/346315269",
+    "lectura": "Ficha editorial DIN 6885-1:2021-11, forma alta, dimensiones y tolerancias; no se adquirió texto completo"
+  },
+  "iso_estado": {
+    "clave": "iso_r773_1969_estado",
+    "url": "https://www.iso.org/standard/5056.html",
+    "lectura": "ISO/R 773:1969 retirada el 1998-11-03; referencia histórica, no certificación vigente"
+  }
+}

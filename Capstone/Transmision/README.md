@@ -836,3 +836,128 @@ aplastamiento, ligamentos y unión; las tensiones lisas actuales no bastan.
 modelar ambos cuerpos aligerados, raíces, ligamentos, chaveteros y M5, cargas
 sobre cada garganta sin duplicar torque, contacto y restricciones reales,
 fase angular y convergencia local. **FEM no ejecutado; resistencia no aprobada.**
+
+## 5E.2 — Chavetas y uniones polea–eje
+
+```powershell
+python simulacion_chavetas.py
+python -m pytest -q
+```
+
+El ejecutable importa los parámetros y casos correlacionados de la última
+revisión conjunta 5E.1; no vuelve a ejecutar las etapas anteriores ni cambia
+los planos. La nueva configuración de escenarios y datos pendientes está en
+`parametros_chavetas.json`; `parametros_poleas.json` permanece intacto.
+
+Las salidas en `resultados/etapa_5e2/` incluyen candidatas, ligamentos, fuerzas
+correlacionadas, sensibilidad de largo activo, estados, parámetros, fuentes,
+ecuaciones y manifiesto SHA256 de históricos. [metodologia_chavetas.md](metodologia_chavetas.md)
+documenta notaciones, ecuaciones y límites. No hay FEM ni uniones aprobadas.
+
+### Normalización verificada
+
+Se consultaron el [extracto técnico Ganter DIN 6885-1](https://www.ganternorm.com/fileadmin/user_upload/downloads/technischer%20anhang/technical_information/6885-1.pdf)
+y su [ficha de chavetas paralelas](https://www.ganternorm.com/en/products/product-family/Stainless-Steel-Quality-Class-4/DIN-6885-Parallel-Keys-Stainless-Steel).
+Para ambos diámetros (35 y 38 mm) resulta candidata **b×h=10×8 mm, forma alta**.
+Las profundidades nominales son 5 mm en eje y 3,3 mm en cubo, ambas con
+tolerancia +0,2/0 mm en las filas verificadas. No se consideran cotas reales
+del CAD. El proveedor usa t2 para profundidad de cubo y t4 para eje; se conserva
+esa definición para evitar intercambiar símbolos con otras tablas.
+
+El plano motriz **10 JS9** es coherente en ancho nominal y clase de chavetero
+de cubo contemplada por el proveedor. La chaveta candidata tiene ancho h9:
+JS9 del chavetero no es tolerancia de chaveta ni ajuste diametral eje–agujero.
+No se transcriben desviaciones numéricas JS9 sin una fuente específica.
+El ancho del chavetero de la conducida continúa pendiente.
+
+DIN Media identifica [DIN 6885-1:2021-11](https://www.dinmedia.de/en/standard/din-6885-1/346315269)
+como forma alta vigente. Se leyó su registro editorial, no el texto completo
+de pago; las dimensiones utilizadas provienen del extracto de fabricante.
+[ISO/R 773:1969](https://www.iso.org/standard/5056.html) figura **retirada**;
+no se presenta como norma actual ni se afirma equivalencia completa vigente.
+Todas estas fuentes están registradas sin duplicados en `referencias.bib`.
+No se adopta el material inoxidable de la ficha comercial dimensional.
+
+### Fuerzas transmitidas por las uniones
+
+Con el diámetro nominal de contacto del agujero, `F=2|T|×1000/d`:
+
+| Polea | d [mm] | F máximo 3C [N] | F motor nominal ideal [N] |
+|---|---:|---:|---:|
+| Motriz | 38 | 1671,503 | 1906,393 |
+| Conducida | 35 | 5081,369 | 5795,435 |
+
+Son fuerzas de contacto para transmitir torque en la unión, no fuerzas laterales
+de correas. Se conservan tiempo/ángulo de 3C y el motor nominal queda como
+escenario externo sin instante asignado. Falta demostrar con plano o medición
+que los ejes reales tienen Ø38 y Ø35 y tolerancias compatibles. La potencia de
+5,5 kW no permite inferir el diámetro del eje del motor.
+
+### Cubo motriz: incompatibilidad prioritaria
+
+Para Ø45/Ø38, la pared lisa nominal es 3,5 mm. La ranura candidata alta de
+3,3 mm deja **0,2 mm en el centro**; con su profundidad superior de 3,5 mm
+el ligamento central se anula. Al considerar un fondo rectangular de ancho
+10 mm, la esquina ideal invade el exterior cilíndrico: ligamento radial
+**−0,354 mm nominal** y **−0,549 mm** al límite superior de profundidad.
+
+El diámetro de envolvente sin reserva sería 45,707/46,098 mm para esos dos
+casos; **no son diámetros resistentes recomendados**. Solo demuestran que el
+ancho de ranura también importa, además de restar profundidad a la pared.
+Los radios reales pueden recortar esquinas, pero no justifican ignorar el
+ligamento central casi nulo. El M5 debilita adicionalmente una zona aún no definida.
+
+**El cubo motriz actual no puede aprobarse para alojar esa candidata alta**.
+Se debe revisar su geometría o una unión alternativa justificada antes de
+fabricar. No se asegura que el CAD actual ya tenga q=3,3: la profundidad
+real no está confirmada. No se escoge automáticamente otra chaveta, un cubo
+mayor ni interferencia. La torsión del anillo liso de 5E.1 no resuelve esta
+incompatibilidad ni representa la resistencia del cubo debilitado.
+
+Para Ø75/Ø35 de la conducida, el centro del fondo deja 16,7 mm nominales y
+16,5 mm a profundidad máxima; la esquina ideal queda contenida. Esto solo
+evita la incompatibilidad geométrica inmediata: no valida contacto, entallas,
+fatiga ni factores de seguridad.
+
+### Cortante/aplastamiento y sensibilidad
+
+Las funciones usan `tau=F/(b L_activa)` y `p=F/(h_contacto L_activa)`.
+Se exportan escenarios L_activa=20/30/40/50 mm, **no una selección comercial**.
+Para la candidata se usa únicamente como hipótesis de contacto nominal
+`h_cubo=8−5=3 mm` y `h_eje=5 mm`; la holgura de fondo no es área portante.
+Las alturas reales siguen null, igual que los largos activos confirmados.
+Las envolventes 62/78,6 mm solo son límites geométricos necesarios, no largos
+efectivos disponibles ni justificación de un producto concreto.
+
+Ejemplo de sensibilidad, con L_activa hipotética de 40 mm:
+
+| Escenario | Polea | tau media [MPa] | p media cubo [MPa] |
+|---|---|---:|---:|
+| Máximo 3C | Motriz | 4,179 | 13,929 |
+| Motor nominal ideal | Motriz | 4,766 | 15,887 |
+| Máximo 3C | Conducida | 12,703 | 42,345 |
+| Motor nominal ideal | Conducida | 14,489 | 48,295 |
+
+Estos esfuerzos medios **no aprueban las uniones**, no solucionan el ligamento
+de motriz y no incluyen redistribución, chaflanes, extremos, filetes o fatiga.
+Los esfuerzos admisibles de chaveta, eje y cubo requieren material/condición
+y fuente propios. No se calculan factores de seguridad ficticios.
+
+### Funciones separadas y datos pendientes
+
+- **Torque:** confirmar si lo transmite una chaveta paralela única y sus
+  dimensiones, profundidades de ambos chaveteros, largo activo, radios y contacto.
+- **Centrado:** plano/ficha o medición del eje real y tolerancias de eje/agujero.
+  Coincidencia nominal por sí sola no define el ajuste.
+- **Retención axial:** definir solución y cargas; la rosca M5×0,8 no acredita
+  resistencia axial ni torque transmisible sin detalle del tornillo y montaje.
+
+Para seguir hacen falta revisión del cubo motriz, ejes disponibles reales,
+materiales y tratamientos, forma/extremos de chavetas, alturas portantes,
+detalle M5 (grado, punta, engrane, precarga si aplica), retención y condiciones
+de servicio. AISI 1045 permanece candidato, sin propiedades definitivas.
+La discrepancia SPA de conducida 34°/38° sigue registrada sin modificación.
+
+Las pruebas cubren frontera Ø38 de la candidata, conversión N·m/N·mm,
+fuerzas, ligamentos central/esquina, casos inválidos, sensibilidad a largo,
+comprobación de ejes pendientes y conservación SHA256 de etapas anteriores.

@@ -1,0 +1,348 @@
+{
+  "etapa": "5E.2",
+  "uniones_aprobadas": false,
+  "fem_ejecutado": false,
+  "factores_seguridad": null,
+  "candidatas": [
+    {
+      "polea": "motriz",
+      "diametro_mm": 38.0,
+      "b_mm": 10.0,
+      "h_mm": 8.0,
+      "profundidad_cubo_nominal_mm": 3.3,
+      "profundidad_cubo_max_mm": 3.5,
+      "profundidad_eje_nominal_mm": 5.0,
+      "profundidad_eje_max_mm": 5.2,
+      "ajuste_ancho_chaveta": "h9",
+      "ajuste_ancho_cubo_candidato": "JS9",
+      "estado": "candidata DIN 6885-1 forma alta; no selección comercial ni CAD conforme",
+      "fuente": "ganter_din6885_keyways_2026; ganter_parallel_keys_2026",
+      "ancho_chavetero_cad_mm": 10.0,
+      "ancho_cad_coincide_nominal": true,
+      "ajuste_cubo_cad": "JS9",
+      "eje_real_estado": "pendiente_plano_eje_real"
+    },
+    {
+      "polea": "conducida",
+      "diametro_mm": 35.0,
+      "b_mm": 10.0,
+      "h_mm": 8.0,
+      "profundidad_cubo_nominal_mm": 3.3,
+      "profundidad_cubo_max_mm": 3.5,
+      "profundidad_eje_nominal_mm": 5.0,
+      "profundidad_eje_max_mm": 5.2,
+      "ajuste_ancho_chaveta": "h9",
+      "ajuste_ancho_cubo_candidato": "JS9",
+      "estado": "candidata DIN 6885-1 forma alta; no selección comercial ni CAD conforme",
+      "fuente": "ganter_din6885_keyways_2026; ganter_parallel_keys_2026",
+      "ancho_chavetero_cad_mm": null,
+      "ancho_cad_coincide_nominal": null,
+      "ajuste_cubo_cad": null,
+      "eje_real_estado": "pendiente_plano_eje_real"
+    }
+  ],
+  "ligamentos_geometricos": [
+    {
+      "polea": "motriz",
+      "escenario_geometrico": "nominal_candidata",
+      "profundidad_cubo_hipotetica_mm": 3.3,
+      "pared_radial_lisa_mm": 3.5,
+      "ligamento_central_fondo_mm": 0.1999999999999993,
+      "ligamento_radial_esquina_ideal_mm": -0.35366491396948874,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 45.70732982793898,
+      "fondo_plano_contenido_en_exterior_ideal": false,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "polea": "motriz",
+      "escenario_geometrico": "maximo_tolerancia_candidata",
+      "profundidad_cubo_hipotetica_mm": 3.5,
+      "pared_radial_lisa_mm": 3.5,
+      "ligamento_central_fondo_mm": 0.0,
+      "ligamento_radial_esquina_ideal_mm": -0.5488611432322195,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 46.09772228646444,
+      "fondo_plano_contenido_en_exterior_ideal": false,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "polea": "conducida",
+      "escenario_geometrico": "nominal_candidata",
+      "profundidad_cubo_hipotetica_mm": 3.3,
+      "pared_radial_lisa_mm": 20.0,
+      "ligamento_central_fondo_mm": 16.7,
+      "ligamento_radial_esquina_ideal_mm": 16.107477942047133,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 42.785044115905734,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "polea": "conducida",
+      "escenario_geometrico": "maximo_tolerancia_candidata",
+      "profundidad_cubo_hipotetica_mm": 3.5,
+      "pared_radial_lisa_mm": 20.0,
+      "ligamento_central_fondo_mm": 16.5,
+      "ligamento_radial_esquina_ideal_mm": 15.912966855077098,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 43.174066289845804,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    }
+  ],
+  "fuerzas_correlacionadas": [
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 31.75855921123371,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1671.5031163807216,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 31.75855921123371,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1671.5031163807216,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 31.75855921123371,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1671.5031163807216,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": "",
+      "tiempo_s": "",
+      "angulo_3c_grados": "",
+      "torque_union_magnitud_nm": 36.22146980712101,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1906.3931477432109,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 88.92396579145439,
+      "diametro_contacto_nominal_mm": 35.0,
+      "fuerza_tangencial_union_n": 5081.369473797394,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 88.92396579145439,
+      "diametro_contacto_nominal_mm": 35.0,
+      "fuerza_tangencial_union_n": 5081.369473797394,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 88.92396579145439,
+      "diametro_contacto_nominal_mm": 35.0,
+      "fuerza_tangencial_union_n": 5081.369473797394,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": "",
+      "tiempo_s": "",
+      "angulo_3c_grados": "",
+      "torque_union_magnitud_nm": 101.42011545993883,
+      "diametro_contacto_nominal_mm": 35.0,
+      "fuerza_tangencial_union_n": 5795.435169139361,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    }
+  ],
+  "estados_verificacion": [
+    {
+      "polea": "motriz",
+      "comprobacion": "transmision_torque_chaveta",
+      "estado": "pendiente",
+      "detalle": "Confirmar chaveta única, asiento y geometría activa; candidata no implica unión conforme",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "motriz",
+      "comprobacion": "cortante_chaveta_real",
+      "estado": "pendiente",
+      "detalle": "Faltan largo activo y material; solo sensibilidad nominal calculada",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "motriz",
+      "comprobacion": "aplastamiento_cubo_y_eje_real",
+      "estado": "pendiente",
+      "detalle": "Alturas efectivas y propiedades de cubo/eje/chaveta pendientes",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "motriz",
+      "comprobacion": "cubo_debilitado",
+      "estado": "incompatibilidad_geometrica_candidata",
+      "detalle": "Forma alta 10x8 no deja reserva geométrica confiable en Ø45/Ø38",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "motriz",
+      "comprobacion": "centrado_y_ajuste_eje_cubo",
+      "estado": "pendiente_plano_eje_real",
+      "detalle": "Diámetros reales y tolerancias de ajuste pendientes; no se confirma eje de motor por su potencia",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "motriz",
+      "comprobacion": "tornillo_m5_y_retencion_axial",
+      "estado": "pendiente",
+      "detalle": "No se atribuye al M5 transmisión de torque ni carga axial sin montaje, grado, punta y engrane",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "motriz",
+      "comprobacion": "factor_seguridad",
+      "estado": "pendiente",
+      "detalle": "Materiales y geometría local sin confirmar; no se calcula FS",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "transmision_torque_chaveta",
+      "estado": "pendiente",
+      "detalle": "Confirmar chaveta única, asiento y geometría activa; candidata no implica unión conforme",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "cortante_chaveta_real",
+      "estado": "pendiente",
+      "detalle": "Faltan largo activo y material; solo sensibilidad nominal calculada",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "aplastamiento_cubo_y_eje_real",
+      "estado": "pendiente",
+      "detalle": "Alturas efectivas y propiedades de cubo/eje/chaveta pendientes",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "cubo_debilitado",
+      "estado": "pendiente_resistencia",
+      "detalle": "Ligamento positivo no certifica resistencia, entallas ni contacto",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "centrado_y_ajuste_eje_cubo",
+      "estado": "pendiente_plano_eje_real",
+      "detalle": "Diámetros reales y tolerancias de ajuste pendientes; no se confirma eje de motor por su potencia",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "tornillo_m5_y_retencion_axial",
+      "estado": "pendiente",
+      "detalle": "No se atribuye al M5 transmisión de torque ni carga axial sin montaje, grado, punta y engrane",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    },
+    {
+      "polea": "conducida",
+      "comprobacion": "factor_seguridad",
+      "estado": "pendiente",
+      "detalle": "Materiales y geometría local sin confirmar; no se calcula FS",
+      "datos_union_ausentes": "diametro_eje_real_mm; fuente_eje_real; tolerancia_eje; tolerancia_agujero; largo_activo_real_mm; altura_contacto_real_cubo_mm; altura_contacto_real_eje_mm; profundidad_real_chavetero_cubo_mm; profundidad_real_chavetero_eje_mm; radio_fondo_chavetero_mm; tipo_extremos_chaveta; funcion_tornillo_m5; retencion_axial"
+    }
+  ],
+  "fuentes": {
+    "ganter_dimensiones": {
+      "clave": "ganter_din6885_keyways_2026",
+      "url": "https://www.ganternorm.com/fileadmin/user_upload/downloads/technischer%20anhang/technical_information/6885-1.pdf",
+      "titulo": "Ganter DIN 6885-1 Keyways, High Hub Keyway, extracto página 2078",
+      "lectura": "Filas d=35 y d=38; cubo P9/JS9/D10; profundidad de cubo 3,3 +0,2 y eje 5 +0,2",
+      "notacion": "El proveedor llama t2 a profundidad de cubo y t4 a profundidad de eje; t1=d+t2 es medida de control",
+      "fecha_consulta": "2026-10-21"
+    },
+    "ganter_candidata": {
+      "clave": "ganter_parallel_keys_2026",
+      "url": "https://www.ganternorm.com/en/products/product-family/Stainless-Steel-Quality-Class-4/DIN-6885-Parallel-Keys-Stainless-Steel",
+      "lectura": "Candidata 10x8, rango 30...38 y ancho de chaveta h9; solo dimensiones, sin adoptar acero inoxidable del producto"
+    },
+    "din_estado": {
+      "clave": "din6885_1_2021_catalogo",
+      "url": "https://www.dinmedia.de/en/standard/din-6885-1/346315269",
+      "lectura": "Ficha editorial DIN 6885-1:2021-11, forma alta, dimensiones y tolerancias; no se adquirió texto completo"
+    },
+    "iso_estado": {
+      "clave": "iso_r773_1969_estado",
+      "url": "https://www.iso.org/standard/5056.html",
+      "lectura": "ISO/R 773:1969 retirada el 1998-11-03; referencia histórica, no certificación vigente"
+    }
+  },
+  "material_cubo_candidato": {
+    "candidato": "AISI 1045",
+    "condicion_suministro": null,
+    "forma_y_seccion_producto": null,
+    "fuente_propiedades": null,
+    "modulo_young_mpa": null,
+    "poisson": null,
+    "densidad_kg_m3": null,
+    "limite_fluencia_mpa": null,
+    "resistencia_ultima_mpa": null,
+    "datos_fatiga": null
+  },
+  "material_chaveta": {
+    "designacion": null,
+    "condicion_suministro": null,
+    "fuente": null,
+    "limite_fluencia_mpa": null,
+    "presion_admisible_mpa": null
+  },
+  "interpretacion_motriz": "Cubo Ø45/Ø38 no aprobable para chavetero alto candidato: centro 0,2 a 0 mm; envolvente de esquina ideal invade exterior. Revisar cubo/unión antes de fabricar; el CAD real no tiene profundidad confirmada.",
+  "supuestos_sensibilidad": [
+    "Una chaveta transmite todo el torque, carga uniforme sobre longitud activa hipotética",
+    "Longitudes 20/30/40/50 mm son escenarios de largo activo, no referencias comerciales ni largo total de extremos redondeados",
+    "Contacto nominal hipotético en cubo h-t_eje=3 mm; contacto en eje 5 mm, no dimensiones reales confirmadas",
+    "Presiones calculadas son medias; no tensiones de esquina ni cálculo integral del cubo",
+    "La sensibilidad aritmética no elimina la incompatibilidad geométrica de motriz"
+  ],
+  "normas": "DIN 6885-1:2021-11 identificada en ficha editorial; dimensiones de extracto técnico Ganter. ISO/R 773:1969 retirada; no se declara cumplimiento integral de norma de pago.",
+  "spa_conducida": "34° CAD frente a 38° Gates: discrepancia pendiente, sin modificar",
+  "pendientes_clave": [
+    "Ejes reales y planos de motor/árbol con diámetros y tolerancias",
+    "Cubo motriz y chavetero rediseñados o unión alternativa justificada; no seleccionar automáticamente",
+    "Geometría local, profundidad, radios, chaveta activa y material trazable",
+    "Funciones separadas: torque por chaveta, centrado por ajuste, retención axial diseñada"
+  ]
+}
