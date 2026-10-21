@@ -1,0 +1,791 @@
+{
+  "etapa": "5E.1",
+  "estado": "preparación estructural; sin aceptación de resistencia",
+  "geometria_conocida": [
+    {
+      "polea": "motriz",
+      "diametro_referencia_mm": 100.0,
+      "diametro_exterior_cad_reportado_mm": 105.6,
+      "gargantas": 3,
+      "ancho_llanta_normativo_no_medido_mm": 50.0,
+      "fuente": "resultados/etapa_5c/poleas_y_gargantas.csv; CAD de polea no disponible",
+      "estado": "diámetros reportados y dimensiones normativas; estructura interna pendiente"
+    },
+    {
+      "polea": "conducida",
+      "diametro_referencia_mm": 280.0,
+      "diametro_exterior_cad_reportado_mm": 285.6,
+      "gargantas": 3,
+      "ancho_llanta_normativo_no_medido_mm": 50.0,
+      "fuente": "resultados/etapa_5c/poleas_y_gargantas.csv; CAD de polea no disponible",
+      "estado": "diámetros reportados y dimensiones normativas; estructura interna pendiente"
+    }
+  ],
+  "material": {
+    "candidato": "AISI 1045",
+    "condicion_suministro": null,
+    "forma_y_seccion_producto": null,
+    "fuente_propiedades": null,
+    "modulo_young_mpa": null,
+    "poisson": null,
+    "densidad_kg_m3": null,
+    "limite_fluencia_mpa": null,
+    "resistencia_ultima_mpa": null,
+    "datos_fatiga": null
+  },
+  "cargas": [
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 50.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": -31.75855921123371,
+      "fx_n": -1163.7693011096296,
+      "fy_n": -115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 50.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": -31.75855921123371,
+      "fx_n": -1163.7693011096296,
+      "fy_n": -115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 50.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": -31.75855921123371,
+      "fx_n": -1163.7693011096296,
+      "fy_n": -115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": null,
+      "tiempo_s": null,
+      "angulo_3c_grados": null,
+      "radio_referencia_mm": 50.0,
+      "delta_total_n": 724.4293961424202,
+      "torque_correas_firmado_nm": -36.22146980712101,
+      "fx_n": -1163.7693011096296,
+      "fy_n": -132.16406046594432,
+      "fr_n": 1171.249898648466,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": null,
+      "tiempo_s": null,
+      "angulo_3c_grados": null,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 724.4293961424202,
+      "torque_correas_firmado_nm": 101.42011545993883,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 132.16406046594432,
+      "fr_n": 1171.249898648466,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    }
+  ],
+  "verificaciones": [
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "diametro_exterior_cubo_mm",
+        "diametro_interior_cubo_mm",
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "cuerpo_disco_o_radios",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_cuerpo",
+        "geometria_radios",
+        "seccion_radios_mm",
+        "espesor_cuerpo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Confirmar topología; reparto entre radios requiere rigidez, orientación y geometría, no repartir arbitrariamente"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    }
+  ],
+  "inventario": {
+    "archivos_cad_y_planos_detectados": [
+      "Simulación_peletizadora\\cara_matriz.dxf"
+    ],
+    "hallazgo": "Solo DXF de matriz; no CAD o plano acotado de poleas en los formatos buscados",
+    "exclusiones": [
+      "Ø50 de matriz no define agujero de polea",
+      "Ø58 y 12 mm de resalte de árbol no definen cubo de polea",
+      "36 mm de espesor matriz no define cuerpo de polea",
+      "Vanos supuestos 50/100 mm no definen voladizo real",
+      "Sy 1045 +QT del análisis de matriz/árbol no se transfiere al AISI 1045 de suministro desconocido"
+    ],
+    "evidencias": [
+      "../Analisis_matriz_eje_vertical/Etapa_4B_matriz_arbol_condicional/README.md",
+      "../Analisis_matriz_eje_vertical/Etapa_4D_FEM_preliminar/README.md",
+      "resultados/etapa_5c/poleas_y_gargantas.csv"
+    ]
+  },
+  "fem_ejecutado": false,
+  "factores_seguridad": null,
+  "propiedades_material_pendientes": [
+    "condicion_suministro",
+    "forma_y_seccion_producto",
+    "fuente_propiedades",
+    "modulo_young_mpa",
+    "poisson",
+    "densidad_kg_m3",
+    "limite_fluencia_mpa",
+    "resistencia_ultima_mpa",
+    "datos_fatiga"
+  ],
+  "limitaciones": [
+    "Cargas condicionales heredadas, no cargas experimentales",
+    "No se conoce topología del cuerpo ni cubo",
+    "No asignar tensiones ni FS sin geometría y material",
+    "No se incluyen peso ni fuerzas de rotación propias de la polea sin densidad y volumen",
+    "Torques propios motriz y conducida; no se usa Fr*radio como torque de transmisión",
+    "Gates respalda gargantas y Ts, no propiedades de 1045 ni fórmulas de resistencia"
+  ]
+}

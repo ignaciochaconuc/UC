@@ -1,4 +1,4 @@
-# Transmisión mecánica — Etapas 5A a 5D.2
+# Transmisión mecánica — Etapas 5A a 5E.1
 
 Modelo preliminar de una transmisión abierta por tres correas SPA 1600 entre el
 motor de 5,5 kW a 1450 rpm y el eje vertical. Las etapas existentes se consultan
@@ -518,3 +518,134 @@ conjunto, voladizos y disposición/fijación radial y axial de rodamientos.
 Para validar las tensiones dinámicas reales también faltan pretensión medida,
 rigidez/elasticidad y masa de la correa comercial, adherencia, pérdidas y régimen
 de arranque/atascos. Todavía no se calculan las reacciones del eje vertical.
+
+## 5E.1: preparación de la verificación estructural de poleas
+
+```powershell
+python simulacion_poleas.py
+python -m pytest -q
+```
+
+Se utiliza `parametros_poleas.json`, separado de los parámetros históricos.
+Los campos estructurales y propiedades no confirmados están en **null**.
+El ejecutable importa los casos críticos correlacionados y el motor nominal
+de 5D.2 sin ejecutar contacto, transmisión ni el análisis de matriz/eje vertical.
+Sus resultados se guardan exclusivamente en `resultados/etapa_5e1/`.
+
+### Inventario: qué se conoce y qué no se transfiere
+
+En los archivos del repositorio se localizaron diámetros de referencia
+100/280 mm, exteriores CAD reportados 105,6/285,6 mm y tres gargantas SPA.
+5C aporta las dimensiones normativas de garganta y 50 mm de ancho nominal
+de llanta: **ese ancho no es una cota medida del CAD**. Se mantiene la diferencia
+de 0,10 mm entre exterior reportado y el derivado del perfil tabulado.
+No se encontró CAD STEP/Inventor o plano acotado de poleas; el único DXF
+detectado pertenece a la matriz. Los planos PNG existentes son de matriz,
+rodillo y eje transversal, no planos de poleas.
+
+El análisis de matriz/eje vertical contiene Ø50, Ø58 y espesores de la matriz,
+resaltes y sensibilidades de vano. No documenta el agujero, cubo, radios o cuerpo
+de estas poleas. **Ninguna de esas cotas se ha reutilizado como cota de polea.**
+Los Sy 1045 +QT de escenarios anteriores tampoco se transfieren al candidato
+AISI 1045 de condición desconocida. E, nu, densidad, Sy, Sut y fatiga permanecen
+sin asignar; no hay factores de seguridad aprobados.
+
+### Cargas verificadas y escenarios separados
+
+El marco y las hipótesis son los de 5D.2. Los torques corresponden a fuerzas
+de correas sobre cada polea; el torque de reacción transmitido al eje es opuesto.
+
+| Escenario | Polea | Torque firmado [N·m] | Fx [N] | Fy [N] | Fr [N] |
+|---|---|---:|---:|---:|---:|
+| 3C crítico, paso 377 | Motriz | −31,75856 | −1163,769 | −115,880 | 1169,524 |
+| 3C crítico, paso 377 | Conducida | +88,92397 | +1163,769 | +115,880 | 1169,524 |
+| Motor nominal ideal externo | Motriz | −36,22147 | −1163,769 | −132,164 | 1171,250 |
+| Motor nominal ideal externo | Conducida | +101,42012 | +1163,769 | +132,164 | 1171,250 |
+
+Se auditan `abs(T)=delta_total*r_referencia` y `Fr=hypot(Fx,Fy)` para cada
+fila. No se aplica el torque de la conducida a la motriz, ni se confunde
+`Fr*r` con el torque transmitido. Los tres criterios críticos heredados
+coinciden en el mismo estado en este modelo; se conservan sus etiquetas.
+Las resultantes son **cargas condicionales**, dependientes del cierre de
+tensiones de 5D.2. El torque requerido procede del equilibrio.
+
+`sensibilidad_pretension_separada.csv` conserva las envolventes 0,8/1/1,2/1,5
+Ts del archivo original en filas aparte, para ambas poleas. Las magnitudes
+de fuerza en ambas son iguales en 5D.2. Ese archivo no contiene componentes,
+torque ni tiempo correlacionados de la sensibilidad: se dejan null y no se
+combinan con un máximo nominal para fabricar un caso estructural simultáneo.
+
+### Verificaciones analíticas preparadas
+
+Se implementan funciones independientes con N, mm y MPa, conversión explícita
+de N·m a N·mm y rechazo de dimensiones inválidas. Son teoría elemental y
+equilibrio propios; **no se atribuyen a Gates**:
+
+- Cubo liso anular: `J=pi(De^4−Di^4)/32`, `I=J/2`,
+  `tau=T(De/2)/J`, `sigma_b=Fr e(De/2)/I`. La combinación
+  `sqrt(sigma_b²+3tau²)` es solo von Mises parcial: omite cortante transversal,
+  chavetero, contacto, concentraciones y redistribución de una polea real.
+  e es el desfase local entre plano de carga y sección analizada del cubo;
+  no es una distancia a los rodamientos ni una reacción del eje.
+- Cuerpo disco continuo: `tau_media=T/(2 pi r² t)`, obtenido al integrar
+  torque de cortante uniforme en una sección circular. Solo componente
+  torsional media; no resuelve flexión, carga radial ni radios discretos.
+- Una chaveta paralela confirmada: `F=2T/d`, `tau=F/(b L)` y
+  `p_media=F/(h_contacto L)`. h_contacto debe indicarse explícitamente;
+  no se supone la mitad de una altura típica. Se requieren propiedades
+  propias de la chaveta para comprobarla.
+
+Actualmente **todas las verificaciones de resistencia están pendientes**:
+faltan las dimensiones que esas fórmulas necesitan. Las funciones se prueban
+con geometrías sintéticas de prueba, que no son propuestas de dimensiones de
+las poleas. No se calcula tensión máxima ni FS de una polea a partir de su
+diámetro exterior solamente. El reparto entre radios tampoco se supone sin
+rigidez, geometría y orientación de cada radio.
+
+### Dimensiones necesarias para cerrar los cálculos
+
+Para **cada polea**, completar y respaldar con plano/CAD:
+
+- Topología: disco continuo, radios o construcción mixta. Si hay radios:
+  número, forma, orientación, longitud libre, conicidad y secciones a lo largo.
+- Llanta: diámetro interior, espesor residual mínimo bajo raíces de garganta,
+  ancho axial real y espesor de paredes entre gargantas.
+- Cuerpo: espesor y perfil radial/axial, vaciados y posición respecto de llanta/cubo.
+- Cubo: diámetros interior/exterior, longitud axial y desfase del plano de
+  correas respecto de las secciones y superficies que transfieren la carga.
+- Filetes de radios–cubo y radios–llanta/cuerpo, raíces de garganta, escalones
+  y radios/chaflanes del agujero. No reemplazarlos por esquinas de radio cero.
+- Unión real: chaveta/casquillo/interferencia/pernos, tolerancias, longitudes
+  activas, chaveteros, detalles de retención axial y contacto con el eje.
+- Condición de suministro y sección del producto 1045, tratamiento/certificado,
+  propiedades y criterios de resistencia/fatiga aplicables.
+
+La lista de null por polea se exporta en `dimensiones_pendientes.csv`; los campos
+no aplicables deben resolverse después de confirmar la topología y unión.
+
+### FEM requerido y salidas
+
+[especificacion_fem_poleas.md](especificacion_fem_poleas.md) prepara el futuro
+FEM: CAD real, material trazable, transferencia distribuida de cargas sin
+duplicar torque, restricciones en la unión real, fases de radios y al menos
+tres mallas. Incluye métricas de equilibrio, deformación, esfuerzos y contacto,
+tratamiento de singularidades y contraste con las aproximaciones analíticas.
+Los criterios de convergencia propuestos son de trabajo y deben aprobarse;
+no son instrucciones Gates ni resultados de un FEM ejecutado.
+
+Las zonas de interés son raíces y paredes de gargantas, uniones de radios con
+llanta/cubo, filetes, chavetero y asiento. El máximo esfuerzo puede depender
+de la fase angular de los radios, no solo del instante de máximo torque 3C.
+Los efectos de rotación y peso propios de la polea requieren densidad y volumen.
+No se han ejecutado elementos finitos de poleas ni reutilizado el FEM de matriz.
+
+`resultados/etapa_5e1/` contiene cargas, geometría conocida, verificaciones,
+dimensiones pendientes, sensibilidades separadas, parámetros, inventario,
+especificación FEM, resumen, validaciones y trazabilidad SHA256 de archivos
+anteriores de transmisión y del análisis de matriz/eje vertical. Las pruebas
+cubren unidades, geometrías inválidas, torques por radio propio, correlación,
+pendientes por datos ausentes y conservación de entradas.
+
+La referencia existente `gates_vbelt_2004` sigue limitada a datos de correas,
+tensado y gargantas. No se añadió una ficha de 1045 sin condición confirmada
+ni se inventó una fuente para avalar propiedades o un análisis no ejecutado.

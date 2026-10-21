@@ -1,0 +1,18 @@
+{
+  "archivos_cad_y_planos_detectados": [
+    "Simulación_peletizadora\\cara_matriz.dxf"
+  ],
+  "hallazgo": "Solo DXF de matriz; no CAD o plano acotado de poleas en los formatos buscados",
+  "exclusiones": [
+    "Ø50 de matriz no define agujero de polea",
+    "Ø58 y 12 mm de resalte de árbol no definen cubo de polea",
+    "36 mm de espesor matriz no define cuerpo de polea",
+    "Vanos supuestos 50/100 mm no definen voladizo real",
+    "Sy 1045 +QT del análisis de matriz/árbol no se transfiere al AISI 1045 de suministro desconocido"
+  ],
+  "evidencias": [
+    "../Analisis_matriz_eje_vertical/Etapa_4B_matriz_arbol_condicional/README.md",
+    "../Analisis_matriz_eje_vertical/Etapa_4D_FEM_preliminar/README.md",
+    "resultados/etapa_5c/poleas_y_gargantas.csv"
+  ]
+}

@@ -1,0 +1,3 @@
+polea,diametro_referencia_mm,diametro_exterior_cad_reportado_mm,gargantas,ancho_llanta_normativo_no_medido_mm,fuente,estado
+motriz,100.0,105.6,3,50.0,resultados/etapa_5c/poleas_y_gargantas.csv; CAD de polea no disponible,diámetros reportados y dimensiones normativas; estructura interna pendiente
+conducida,280.0,285.6,3,50.0,resultados/etapa_5c/poleas_y_gargantas.csv; CAD de polea no disponible,diámetros reportados y dimensiones normativas; estructura interna pendiente

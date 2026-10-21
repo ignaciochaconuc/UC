@@ -1,0 +1,62 @@
+{
+  "material": {
+    "candidato": "AISI 1045",
+    "condicion_suministro": null,
+    "forma_y_seccion_producto": null,
+    "fuente_propiedades": null,
+    "modulo_young_mpa": null,
+    "poisson": null,
+    "densidad_kg_m3": null,
+    "limite_fluencia_mpa": null,
+    "resistencia_ultima_mpa": null,
+    "datos_fatiga": null
+  },
+  "poleas": {
+    "motriz": {
+      "tipo_cuerpo": null,
+      "espesor_residual_llanta_mm": null,
+      "diametro_interior_llanta_mm": null,
+      "ancho_llanta_cad_mm": null,
+      "espesor_cuerpo_mm": null,
+      "numero_radios": null,
+      "geometria_radios": null,
+      "seccion_radios_mm": null,
+      "diametro_interior_cubo_mm": null,
+      "diametro_exterior_cubo_mm": null,
+      "longitud_cubo_mm": null,
+      "desfase_plano_correas_seccion_cubo_mm": null,
+      "filetes_cubo_cuerpo_mm": null,
+      "filetes_cuerpo_llanta_mm": null,
+      "filetes_gargantas_mm": null,
+      "tipo_union_eje": null,
+      "ancho_chaveta_mm": null,
+      "altura_contacto_chaveta_mm": null,
+      "longitud_activa_chaveta_mm": null,
+      "ajustes_tolerancias_retencion": null,
+      "documento_cad": null
+    },
+    "conducida": {
+      "tipo_cuerpo": null,
+      "espesor_residual_llanta_mm": null,
+      "diametro_interior_llanta_mm": null,
+      "ancho_llanta_cad_mm": null,
+      "espesor_cuerpo_mm": null,
+      "numero_radios": null,
+      "geometria_radios": null,
+      "seccion_radios_mm": null,
+      "diametro_interior_cubo_mm": null,
+      "diametro_exterior_cubo_mm": null,
+      "longitud_cubo_mm": null,
+      "desfase_plano_correas_seccion_cubo_mm": null,
+      "filetes_cubo_cuerpo_mm": null,
+      "filetes_cuerpo_llanta_mm": null,
+      "filetes_gargantas_mm": null,
+      "tipo_union_eje": null,
+      "ancho_chaveta_mm": null,
+      "altura_contacto_chaveta_mm": null,
+      "longitud_activa_chaveta_mm": null,
+      "ajustes_tolerancias_retencion": null,
+      "documento_cad": null
+    }
+  }
+}
