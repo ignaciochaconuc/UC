@@ -1,0 +1,4 @@
+validacion,cumple,error_maximo
+equilibrio_torque,True,2.842170943040401e-14
+sha256_entradas_conservados,True,0.0
+equilibrio_vectorial_y_reparto_si_condicional,True,1.1368683772161603e-13

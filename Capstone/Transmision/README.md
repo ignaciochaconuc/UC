@@ -1,4 +1,4 @@
-# Transmisión mecánica — Etapas 5A, 5B, 5C y 5D.1
+# Transmisión mecánica — Etapas 5A a 5D.2
 
 Modelo preliminar de una transmisión abierta por tres correas SPA 1600 entre el
 motor de 5,5 kW a 1450 rpm y el eje vertical. Las etapas existentes se consultan
@@ -368,4 +368,153 @@ Para 5D.2 quedan pendientes:
 - Plano espacial de ramales, poleas y apoyos con posiciones axiales/voladizos
   para obtener fuerzas laterales vectoriales y, posteriormente, reacciones.
 
-Las tensiones dinámicas, cargas laterales y reacciones permanecen sin calcular.
+Las tensiones y cargas quedaron pendientes al cerrar 5D.1; la sección siguiente
+incorpora un modelo condicional. Las reacciones de apoyos siguen pendientes.
+
+## 5D.2: equilibrio de torque, tensiones condicionales y cargas en poleas
+
+```powershell
+python simulacion_dinamica.py
+python -m pytest -q
+# Giro opuesto, en una salida separada:
+python simulacion_dinamica.py --signo-giro -1 --salida resultados/etapa_5d2_giro_inverso
+# Omitir el modelo de tensiones y exportar solo equilibrio:
+python simulacion_dinamica.py --solo-equilibrio --salida resultados/etapa_5d2_equilibrio
+```
+
+Se lee el historial completo `series_temporales_acopladas.csv` de 3C, filtrado
+por `modelo=inclinacion`: **1440 estados correlacionados y convergidos**.
+Se conservan paso, tiempo y ángulo originales. Se leen Ts=197,2723316 N de
+5D.1 y la velocidad histórica de 5A. Ningún modelo previo se ejecuta ni sus
+resultados se regeneran. Se registran y verifican los SHA256 de las entradas
+3C y de todos los resultados 5A–5D.1, además de los parámetros.
+
+### Resultados obtenidos por equilibrio
+
+Para la polea conducida de radio de referencia 0,14 m:
+
+```text
+delta_total(t) = T_3C(t)/0,14
+delta_individual(t) = delta_total(t)/3  [hipótesis de reparto uniforme]
+```
+
+La diferencia total procede directamente del equilibrio de torque. El reparto
+individual requiere que las tres correas compartan la carga por igual; no se
+deduce del equilibrio global. Los valores del historial son:
+
+| Magnitud | Máximo | Media |
+|---|---:|---:|
+| Torque resistente 3C [N·m] | 88,923966 | 77,623586 |
+| Diferencia total de tensiones [N] | 635,171184 | 554,454186 |
+| Diferencia por correa uniforme [N] | 211,723728 | 184,818062 |
+
+El máximo se presenta en el paso 377, ángulo 94,25°, tiempo 0,030442506 s.
+La tabla de críticos copia la fila completa correspondiente a cada extremo;
+no combina máximos independientes de distintos instantes.
+
+### Hipótesis de cierre de tensiones
+
+El modelo opcional impone por correa `F_tenso=Ts+delta_individual/2` y
+`F_flojo=Ts−delta_individual/2`. Mantener la media igual a Ts es una
+**hipótesis propia simplificada**, no un procedimiento de Gates ni una
+predicción exacta de la transmisión en movimiento. Se usa el Ts completo
+heredado de 5D.1 como referencia estática; no se identifica Ts con tensión
+centrífuga ni se añade otro término centrífugo. El modelo omite inercia
+distribuida y pérdidas en los tramos, sin asignar masa, rigidez o fricción.
+
+En el instante de torque máximo, `F_tenso=303,134196 N` y
+`F_flojo=91,410468 N` por correa. Los 1440 estados dan tensiones no negativas.
+Si un escenario produce F_flojo negativa se marca como no admisible bajo
+este cierre y no se exporta una fuerza vectorial interpretable para él.
+La no negatividad no prueba adherencia: no se comprueba deslizamiento ni
+se usa R=2,5 de Gates como límite de razón dinámica de tensiones.
+
+### Sistema local y suma vectorial
+
+Se sitúa la conducida en (0,0) y la motriz en (a,0). +x apunta al motor,
++y es perpendicular en el plano y +z=x×y. Superior/inferior se refieren a
+los lados +y/−y. El ángulo de las tangentes es **alpha=10,511848°**,
+recuperado de la geometría existente de referencia.
+
+Para giro positivo antihorario visto desde +z, el ramal inferior es tenso.
+Las direcciones de fuerza sobre la conducida son `(cos alpha,−sin alpha)`
+en el superior y `(cos alpha,+sin alpha)` en el inferior. Esto produce torque
+positivo de las correas sobre la conducida. Al invertir giro se intercambia
+el ramal tenso: cambia el signo de Fy, se conservan Fx y Fr.
+
+```text
+Fx_conducida = N (F_tenso+F_flojo) cos alpha
+Fy_conducida = signo_giro N (F_tenso−F_flojo) sin alpha
+Fr = hypot(Fx,Fy)
+F_motriz = −F_conducida  [ambas expresadas en el mismo marco x,y]
+```
+
+La fuerza motriz es opuesta por la idealización de tramos sin inercia distribuida.
+El torque aplicado por correas en la motriz es de signo opuesto al del motor,
+con magnitud `delta_total × 0,05 m`. Los torques firmados en ambas poleas
+se registran para auditar esa convención. La suma vectorial es mecánica
+elemental propia; Gates se cita exclusivamente para Ts y su construcción.
+
+En el paso crítico, para el giro positivo adoptado:
+
+| Polea | Fx [N] | Fy [N] | Fr [N] |
+|---|---:|---:|---:|
+| Conducida | +1163,769 | +115,880 | 1169,524 |
+| Motriz, mismo marco | −1163,769 | −115,880 | 1169,524 |
+
+Estas fuerzas **dependen del cierre de tensiones**. Fx es constante en este
+modelo porque la suma de tensiones se impuso constante; no es un hallazgo
+experimental. Fy puede obtenerse de delta y la geometría bajo la convención
+de tramos idealizados. No son reacciones de rodamientos ni incluyen pesos,
+otros esfuerzos de la matriz, excentricidades o momentos de voladizo.
+
+### Escenario externo: potencia nominal del motor
+
+Se evalúa separadamente `delta_total=5500/v=724,429396 N` con
+`v=7,592182 m/s` y eficiencia ideal 1. El torque conducido equivalente es
+101,420115 N·m. No se usa la potencia de diseño de correas de 7,15 kW.
+Este escenario no pertenece a 3C y no se le asigna un instante de compactación.
+Da 318,010564/76,534099 N en ramales tenso/flojo por correa, y
+`Fx=1163,769 N`, `Fy=132,164 N`, `Fr=1171,250 N` en la conducida.
+
+3C mantiene sus 516 rpm y potencias originales. La transmisión ideal produce
+517,857 rpm: conservar torque y usar esta cinemática implica una potencia
+ideal ligeramente diferente. No se reescala el historial 3C para forzar
+coincidencia ni se introduce una eficiencia ficticia.
+
+### Sensibilidad hipotética de Ts
+
+| Factor Ts | Ts/correa [N] | Fr máxima 3C [N] | Fr motor nominal [N] |
+|---:|---:|---:|---:|
+| 0,8 | 157,818 | 938,199 | 940,349 |
+| 1,0 | 197,272 | 1169,524 | 1171,250 |
+| 1,2 | 236,727 | 1401,323 | 1402,763 |
+| 1,5 | 295,908 | 1749,496 | 1750,650 |
+
+Todos estos escenarios dan tensiones no negativas. Son hipótesis para medir
+la dependencia de la carga lateral con Ts, **no instrucciones de tensado**
+del fabricante. Cada escenario 3C se evalúa sobre sus 1440 instantes; el motor
+nominal se conserva como caso externo. No se deduce una recomendación de
+reducir o aumentar la pretensión a partir de esta tabla.
+
+### Salidas, pruebas e integración pendiente
+
+En `resultados/etapa_5d2/` se generan:
+
+- `diferencias_tensiones_3c.csv`: historial completo de equilibrio.
+- `tensiones_y_fuerzas_condicionales_3c.csv`: tensiones individuales y sumas
+  vectoriales de ambas poleas en cada instante, incluidas contribuciones de ramales.
+- `casos_criticos_correlacionados.csv`: extremos con su fila sincronizada.
+- `motor_nominal_externo.csv` y `sensibilidad_Ts.csv`.
+- `resumen.json`, `trazabilidad_sha256.json` y `validaciones.csv`.
+
+Las pruebas verifican torque, fuerzas, momentos de las tangentes, inversión
+de giro, caso sin torque, no negatividad, reparto uniforme, separación del
+motor nominal, conservación de entradas y ejecución opcional de solo equilibrio.
+
+Para integrar la fuerza en el eje vertical faltan las **posiciones axiales
+exactas de la polea y de cada apoyo**, orientación del plano local respecto del
+conjunto, voladizos y disposición/fijación radial y axial de rodamientos.
+Para validar las tensiones dinámicas reales también faltan pretensión medida,
+rigidez/elasticidad y masa de la correa comercial, adherencia, pérdidas y régimen
+de arranque/atascos. Todavía no se calculan las reacciones del eje vertical.
