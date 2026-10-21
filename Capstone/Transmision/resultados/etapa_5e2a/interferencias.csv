@@ -1,0 +1,5 @@
+diametro_exterior_mm,radio_centro_abertura_para_tangencia_mm,reserva_minima_exigida_mm,solapamiento_axial_confirmado,abertura,separacion_proyectada_mm,interseccion_proyectada,interferencia_3d,estado
+45.0,29.0,,,,,,,pendiente_coordenadas_CAD_y_extension_axial
+50,31.5,,,,,,,pendiente_coordenadas_CAD_y_extension_axial
+55,34.0,,,,,,,pendiente_coordenadas_CAD_y_extension_axial
+60,36.5,,,,,,,pendiente_coordenadas_CAD_y_extension_axial

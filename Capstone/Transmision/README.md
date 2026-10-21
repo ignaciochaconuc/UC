@@ -958,6 +958,55 @@ detalle M5 (grado, punta, engrane, precarga si aplica), retención y condiciones
 de servicio. AISI 1045 permanece candidato, sin propiedades definitivas.
 La discrepancia SPA de conducida 34°/38° sigue registrada sin modificación.
 
+## Etapa 5E.2-A — Alternativas del cubo motriz
+
+Evaluación separada, **sin modificar el CAD definitivo**, los parámetros
+estructurales vigentes, la conducida ni resultados anteriores. Ejecutar desde
+`Capstone/Transmision`:
+
+```powershell
+python simulacion_redisenio_cubo.py
+python -m pytest -q
+```
+
+Parámetros de alternativas en `parametros_redisenio_cubo.json`; metodología,
+fuentes, fórmulas y límites en `metodologia_redisenio_cubo.md`. Resultados CSV,
+JSON, requisitos y SHA256 en `resultados/etapa_5e2a/`.
+
+Con agujero Ø38 y chavetero alto candidato b10, los ligamentos son:
+
+| Cubo exterior [mm] | Centro q3,3 / q3,5 [mm] | Esquina ideal q3,3 / q3,5 [mm] |
+|---|---:|---:|
+| 45 actual | 0,2 / 0,0 | −0,354 / −0,549 |
+| 50 escenario | 2,7 / 2,5 | 2,146 / 1,951 |
+| 55 escenario | 5,2 / 5,0 | 4,646 / 4,451 |
+| 60 escenario | 7,7 / 7,5 | 7,146 / 6,951 |
+
+El actual no contiene la esquina ideal. Los candidatos sí la contienen,
+pero **ligamento positivo no acredita resistencia**. Faltan coordenadas CAD
+de los ocho aligeramientos Ø13 y extensión axial; no se infieren de píxeles.
+La función acepta ocho centros trazables y distingue proyección de interferencia
+3D. Los radios de centros de mera tangencia son 29/31,5/34/36,5 mm para
+Ø45/50/55/60, no holguras recomendadas ni posiciones existentes.
+
+Se propone **estudiar primero Ø55 en Inventor**, por su posición intermedia
+entre reserva y ocupación, no por un factor resistente ni optimización.
+Ø50 reduce intervención y Ø60 aumenta reserva pero ocupa más cuerpo.
+La elección definitiva requiere interferencias, eje real y verificación local.
+
+Las fuerzas de unión heredadas son 1671,503 N (máximo 3C) y 1906,393 N
+(motor nominal ideal), separadas y sin recalcular: ampliar el cubo no cambia
+la solicitación de chaveta a igual agujero/torque. Faltan largo activo real,
+alturas portantes, tolerancias, radios y materiales para verificar cortante y
+aplastamiento. El cubo debilitado se verifica aparte, incluyendo M5 y unión
+al cuerpo. AISI 1045 sigue candidato sin propiedades ni factores de seguridad.
+
+Se documentan como alternativas el chavetero bajo del extracto Ganter DIN
+6885-2 (requiere modificar y comprobar también el eje) y una familia comercial
+de anillos de fricción RINGFEDER RfN 7012 (no autocentrante). Ninguna se declara
+equivalente, seleccionada ni aprobada. La compatibilidad Ø38 con el motor
+real sigue pendiente de plano/ficha; también el ajuste y retención axial.
+
 Las pruebas cubren frontera Ø38 de la candidata, conversión N·m/N·mm,
 fuerzas, ligamentos central/esquina, casos inválidos, sensibilidad a largo,
 comprobación de ejes pendientes y conservación SHA256 de etapas anteriores.

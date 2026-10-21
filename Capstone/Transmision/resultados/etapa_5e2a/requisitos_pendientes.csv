@@ -1,0 +1,9 @@
+requisito,estado
+"Coordenadas x,y reales de los ocho centros Ø13 respecto al eje, tolerancias y extensión axial de cada abertura",pendiente
+"Espesores de cuerpo/llanta, transiciones cubo-cuerpo y radios de filete; ubicación y profundidad del M5",pendiente
+"Plano/ficha del eje real del motor: diámetro, longitud útil, hombros, chavetero, radios y tolerancias",pendiente
+"Longitud activa de chaveta (no envolvente axial 62 mm), forma de extremos, chaflanes y contacto real",pendiente
+Profundidades y tolerancias de ambos chaveteros; alturas portantes efectivas y radios de fondo,pendiente
+"Condición y propiedades trazables de AISI 1045, material de chaveta y eje; cargas de servicio/fatiga",pendiente
+Definir ajuste de centrado y retención axial; no atribuir torque ni retención al M5 sin cálculo,pendiente
+"Verificar cubo debilitado por ranura/M5 y unión con cuerpo, separado del cortante/aplastamiento de chaveta",pendiente

@@ -1,0 +1,289 @@
+{
+  "etapa": "5E.2-A",
+  "cad_modificado": false,
+  "resistencia_aprobada": false,
+  "factores_seguridad": null,
+  "fem_ejecutado": false,
+  "material": {
+    "candidato": "AISI 1045",
+    "condicion_suministro": null,
+    "forma_y_seccion_producto": null,
+    "fuente_propiedades": null,
+    "modulo_young_mpa": null,
+    "poisson": null,
+    "densidad_kg_m3": null,
+    "limite_fluencia_mpa": null,
+    "resistencia_ultima_mpa": null,
+    "datos_fatiga": null
+  },
+  "ligamentos": [
+    {
+      "diametro_exterior_mm": 45.0,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.3,
+      "pared_radial_lisa_mm": 3.5,
+      "ligamento_central_fondo_mm": 0.1999999999999993,
+      "ligamento_radial_esquina_ideal_mm": -0.35366491396948874,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 45.70732982793898,
+      "fondo_plano_contenido_en_exterior_ideal": false,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 45.0,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.5,
+      "pared_radial_lisa_mm": 3.5,
+      "ligamento_central_fondo_mm": 0.0,
+      "ligamento_radial_esquina_ideal_mm": -0.5488611432322195,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 46.09772228646444,
+      "fondo_plano_contenido_en_exterior_ideal": false,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 50,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.3,
+      "pared_radial_lisa_mm": 6.0,
+      "ligamento_central_fondo_mm": 2.6999999999999993,
+      "ligamento_radial_esquina_ideal_mm": 2.1463350860305113,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 45.70732982793898,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 50,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.5,
+      "pared_radial_lisa_mm": 6.0,
+      "ligamento_central_fondo_mm": 2.5,
+      "ligamento_radial_esquina_ideal_mm": 1.9511388567677805,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 46.09772228646444,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 55,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.3,
+      "pared_radial_lisa_mm": 8.5,
+      "ligamento_central_fondo_mm": 5.199999999999999,
+      "ligamento_radial_esquina_ideal_mm": 4.646335086030511,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 45.70732982793898,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 55,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.5,
+      "pared_radial_lisa_mm": 8.5,
+      "ligamento_central_fondo_mm": 5.0,
+      "ligamento_radial_esquina_ideal_mm": 4.4511388567677805,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 46.09772228646444,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 60,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.3,
+      "pared_radial_lisa_mm": 11.0,
+      "ligamento_central_fondo_mm": 7.699999999999999,
+      "ligamento_radial_esquina_ideal_mm": 7.146335086030511,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 45.70732982793898,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    },
+    {
+      "diametro_exterior_mm": 60,
+      "agujero_mm": 38.0,
+      "ancho_chavetero_mm": 10.0,
+      "profundidad_cubo_mm": 3.5,
+      "pared_radial_lisa_mm": 11.0,
+      "ligamento_central_fondo_mm": 7.5,
+      "ligamento_radial_esquina_ideal_mm": 6.9511388567677805,
+      "diametro_exterior_minimo_envolvente_sin_reserva_mm": 46.09772228646444,
+      "fondo_plano_contenido_en_exterior_ideal": true,
+      "estado": "sin validación resistente; la envolvente sin reserva no es diámetro recomendado"
+    }
+  ],
+  "interferencias": [
+    {
+      "diametro_exterior_mm": 45.0,
+      "radio_centro_abertura_para_tangencia_mm": 29.0,
+      "reserva_minima_exigida_mm": null,
+      "solapamiento_axial_confirmado": null,
+      "abertura": null,
+      "separacion_proyectada_mm": null,
+      "interseccion_proyectada": null,
+      "interferencia_3d": null,
+      "estado": "pendiente_coordenadas_CAD_y_extension_axial"
+    },
+    {
+      "diametro_exterior_mm": 50,
+      "radio_centro_abertura_para_tangencia_mm": 31.5,
+      "reserva_minima_exigida_mm": null,
+      "solapamiento_axial_confirmado": null,
+      "abertura": null,
+      "separacion_proyectada_mm": null,
+      "interseccion_proyectada": null,
+      "interferencia_3d": null,
+      "estado": "pendiente_coordenadas_CAD_y_extension_axial"
+    },
+    {
+      "diametro_exterior_mm": 55,
+      "radio_centro_abertura_para_tangencia_mm": 34.0,
+      "reserva_minima_exigida_mm": null,
+      "solapamiento_axial_confirmado": null,
+      "abertura": null,
+      "separacion_proyectada_mm": null,
+      "interseccion_proyectada": null,
+      "interferencia_3d": null,
+      "estado": "pendiente_coordenadas_CAD_y_extension_axial"
+    },
+    {
+      "diametro_exterior_mm": 60,
+      "radio_centro_abertura_para_tangencia_mm": 36.5,
+      "reserva_minima_exigida_mm": null,
+      "solapamiento_axial_confirmado": null,
+      "abertura": null,
+      "separacion_proyectada_mm": null,
+      "interseccion_proyectada": null,
+      "interferencia_3d": null,
+      "estado": "pendiente_coordenadas_CAD_y_extension_axial"
+    }
+  ],
+  "cargas_motriz_importadas": [
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 31.75855921123371,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1671.5031163807216,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 31.75855921123371,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1671.5031163807216,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": "377",
+      "tiempo_s": "0.03044250645994832",
+      "angulo_3c_grados": "94.25",
+      "torque_union_magnitud_nm": 31.75855921123371,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1671.5031163807216,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    },
+    {
+      "polea": "motriz",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": "",
+      "tiempo_s": "",
+      "angulo_3c_grados": "",
+      "torque_union_magnitud_nm": 36.22146980712101,
+      "diametro_contacto_nominal_mm": 38.0,
+      "fuerza_tangencial_union_n": 1906.3931477432109,
+      "estado": "equilibrio con diámetro nominal de agujero; eje real por confirmar"
+    }
+  ],
+  "eje_real": {
+    "estado": "pendiente_plano_eje_real",
+    "coincidencia_nominal": null
+  },
+  "alternativas_union": [
+    {
+      "alternativa": "Cubo mayor con candidata alta DIN 6885-1",
+      "ventaja": "Conserva provisionalmente agujero y candidata; aumenta ligamentos",
+      "limitacion": "Interferencia de aberturas, unión al cuerpo y resistencia pendientes; ningún diámetro aprobado"
+    },
+    {
+      "alternativa": "Chavetero bajo, extracto Ganter DIN 6885-2",
+      "ventaja": "Menor profundidad en cubo: 2,1 a 2,3 mm para d38, b10 h8",
+      "limitacion": "Profundiza asiento del eje a 6 a 6,2 mm; exige modificar y comprobar eje, contacto y ambos mecanizados; no intercambiable ni aprobado"
+    },
+    {
+      "alternativa": "Anillo de fijación por fricción, ejemplo RINGFEDER RfN 7012",
+      "ventaja": "Alternativa comercial sin transmisión por chaveta",
+      "limitacion": "No es una norma DIN de chaveta ni equivalencia; requiere tamaño disponible, envolvente, presiones, material, cargas combinadas y centrado propio; no se confirma tamaño para Ø38"
+    }
+  ],
+  "pendientes": [
+    "Coordenadas x,y reales de los ocho centros Ø13 respecto al eje, tolerancias y extensión axial de cada abertura",
+    "Espesores de cuerpo/llanta, transiciones cubo-cuerpo y radios de filete; ubicación y profundidad del M5",
+    "Plano/ficha del eje real del motor: diámetro, longitud útil, hombros, chavetero, radios y tolerancias",
+    "Longitud activa de chaveta (no envolvente axial 62 mm), forma de extremos, chaflanes y contacto real",
+    "Profundidades y tolerancias de ambos chaveteros; alturas portantes efectivas y radios de fondo",
+    "Condición y propiedades trazables de AISI 1045, material de chaveta y eje; cargas de servicio/fatiga",
+    "Definir ajuste de centrado y retención axial; no atribuir torque ni retención al M5 sin cálculo",
+    "Verificar cubo debilitado por ranura/M5 y unión con cuerpo, separado del cortante/aplastamiento de chaveta"
+  ],
+  "chaveta_vs_cubo": "Ampliar diámetro exterior no cambia fuerza tangencial ni cortante/aplastamiento de chaveta si T,d,b,L y contacto se mantienen. Sus verificaciones reales siguen pendientes; no confundir con resistencia del cubo.",
+  "primera_alternativa_a_estudiar_inventor_mm": 55,
+  "justificacion": "Punto de comparación intermedio: más reserva geométrica que Ø50 y menor ocupación radial que Ø60. No optimización resistente ni recomendación definitiva; validar primero aberturas y eje real. Ø50 reduce intervención y Ø60 ofrece mayor reserva pero invade más la zona del cuerpo.",
+  "limitaciones": [
+    "Esquinas ideales sin filetes, cotas nominales salvo profundidad extrema; tolerancias reales pendientes",
+    "No existe espesor mínimo resistente validado; ligamento positivo solo demuestra contención local ideal",
+    "No hay coordenadas CAD de aberturas; no se infieren de píxeles, simetría ni círculo aparente",
+    "Umbral radial de tangencia no es holgura resistente recomendada; falta evaluación tridimensional",
+    "Conducida e históricos intactos; discrepancia SPA conducida 34/38 grados sigue pendiente"
+  ],
+  "fuentes": {
+    "ganter_dimensiones": {
+      "clave": "ganter_din6885_keyways_2026",
+      "url": "https://www.ganternorm.com/fileadmin/user_upload/downloads/technischer%20anhang/technical_information/6885-1.pdf",
+      "titulo": "Ganter DIN 6885-1 Keyways, High Hub Keyway, extracto página 2078",
+      "lectura": "Filas d=35 y d=38; cubo P9/JS9/D10; profundidad de cubo 3,3 +0,2 y eje 5 +0,2",
+      "notacion": "El proveedor llama t2 a profundidad de cubo y t4 a profundidad de eje; t1=d+t2 es medida de control",
+      "fecha_consulta": "2026-10-21"
+    },
+    "ganter_candidata": {
+      "clave": "ganter_parallel_keys_2026",
+      "url": "https://www.ganternorm.com/en/products/product-family/Stainless-Steel-Quality-Class-4/DIN-6885-Parallel-Keys-Stainless-Steel",
+      "lectura": "Candidata 10x8, rango 30...38 y ancho de chaveta h9; solo dimensiones, sin adoptar acero inoxidable del producto"
+    },
+    "din_estado": {
+      "clave": "din6885_1_2021_catalogo",
+      "url": "https://www.dinmedia.de/en/standard/din-6885-1/346315269",
+      "lectura": "Ficha editorial DIN 6885-1:2021-11, forma alta, dimensiones y tolerancias; no se adquirió texto completo"
+    },
+    "iso_estado": {
+      "clave": "iso_r773_1969_estado",
+      "url": "https://www.iso.org/standard/5056.html",
+      "lectura": "ISO/R 773:1969 retirada el 1998-11-03; referencia histórica, no certificación vigente"
+    },
+    "ganter_din6885_2_low_2026": {
+      "url": "https://live-katalog.ganternorm.com/pdf/ganter/en/6885-2.pdf?dispositiontype=attachment",
+      "lectura": "Fila d=38: b=10, h=8; cubo q=2,1 +0,2; eje 6 +0,2 mm. Extracto, no norma completa.",
+      "consulta": "2026-10-21"
+    },
+    "ringfeder_rfn7012_2026": {
+      "url": "https://www.ringfeder.com/products/locking-assemblies/rfn-7012/",
+      "lectura": "Unión por fricción comercial; no autocentrante, requiere centrado previo. No se selecciona tamaño ni capacidad para este proyecto.",
+      "consulta": "2026-10-21"
+    }
+  }
+}

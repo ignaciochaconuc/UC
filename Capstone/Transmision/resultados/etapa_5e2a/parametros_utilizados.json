@@ -1,0 +1,11 @@
+{
+  "revision": "5e2a_alternativas_no_cad_definitivo",
+  "diametros_exteriores_candidatos_mm": [
+    50,
+    55,
+    60
+  ],
+  "fuente_coordenadas_aberturas": null,
+  "solapamiento_axial_cubo_aberturas_confirmado": null,
+  "nota": "Se heredan agujero, ancho y aberturas del CAD vigente y profundidades candidatas de Ganter; no se modifica Inventor."
+}
