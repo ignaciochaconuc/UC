@@ -1,0 +1,82 @@
+{
+  "recorridos": {
+    "acercamiento_instalacion_mm": 25.0,
+    "alejamiento_tensado_mm": 35.0
+  },
+  "ajuste_centros": {
+    "centros_minimos_mm": 468.316,
+    "centros_nominales_mm": 493.316,
+    "centros_maximos_mm": 528.316,
+    "recorrido_total_minimo_mm": 60.0
+  },
+  "poleas": [
+    {
+      "polea": "motriz",
+      "diametro_referencia_mm": 100.0,
+      "diametro_exterior_cad_mm": 105.6,
+      "diferencia_diametral_mm": 5.599999999999994,
+      "altura_radial_cad_mm": 2.799999999999997,
+      "altura_radial_tabla_spa_mm": 2.75,
+      "exterior_derivado_tabla_mm": 105.5,
+      "desviacion_diametral_cad_vs_tabla_mm": 0.09999999999999432,
+      "compatibilidad_exacta_tabla": false,
+      "aceptacion_tolerancia": "pendiente; no se asignó tolerancia para b",
+      "numero_gargantas": 3,
+      "paso_e_mm": 15.0,
+      "tolerancia_paso_mm": 0.3,
+      "margen_lateral_f_mm": 10.0,
+      "tolerancia_margen_mm": 0.6,
+      "ancho_llanta_nominal_mm": 50,
+      "ancho_referencia_lp_mm": 11.0,
+      "profundidad_d_mm": 13.75,
+      "tolerancia_profundidad_mas_mm": 0.25,
+      "tolerancia_profundidad_menos_mm": 0.0,
+      "altura_b_mm": 2.75,
+      "angulo_garganta_grados": 34.0,
+      "tolerancia_angulo_grados": 1.0,
+      "ancho_boca_go_mm": 12.68,
+      "estado": "dimensiones de referencia para cotejo CAD; polea comercial pendiente"
+    },
+    {
+      "polea": "conducida",
+      "diametro_referencia_mm": 280.0,
+      "diametro_exterior_cad_mm": 285.6,
+      "diferencia_diametral_mm": 5.600000000000023,
+      "altura_radial_cad_mm": 2.8000000000000114,
+      "altura_radial_tabla_spa_mm": 2.75,
+      "exterior_derivado_tabla_mm": 285.5,
+      "desviacion_diametral_cad_vs_tabla_mm": 0.10000000000002274,
+      "compatibilidad_exacta_tabla": false,
+      "aceptacion_tolerancia": "pendiente; no se asignó tolerancia para b",
+      "numero_gargantas": 3,
+      "paso_e_mm": 15.0,
+      "tolerancia_paso_mm": 0.3,
+      "margen_lateral_f_mm": 10.0,
+      "tolerancia_margen_mm": 0.6,
+      "ancho_llanta_nominal_mm": 50,
+      "ancho_referencia_lp_mm": 11.0,
+      "profundidad_d_mm": 13.75,
+      "tolerancia_profundidad_mas_mm": 0.25,
+      "tolerancia_profundidad_menos_mm": 0.0,
+      "altura_b_mm": 2.75,
+      "angulo_garganta_grados": 38.0,
+      "tolerancia_angulo_grados": 1.0,
+      "ancho_boca_go_mm": 12.89,
+      "estado": "dimensiones de referencia para cotejo CAD; polea comercial pendiente"
+    }
+  ],
+  "geometria_nominal": {
+    "relacion": 2.8,
+    "rpm_salida": 517.8571428571429,
+    "velocidad_correa_m_s": 7.592182246175334,
+    "longitud_aproximada_mm": 1599.954100002184,
+    "longitud_exacta_mm": 1600.0001037445395,
+    "abrazamiento_motriz_grados": 158.97630436100656,
+    "abrazamiento_conducida_grados": 201.02369563899344,
+    "cociente_D_menos_d_sobre_a": 0.36487768489163136
+  },
+  "criterio_operacion": "El nominal es referencia geométrica; la operación depende del tensado. Extremos no operativos para una correa inextensible de 1600 mm.",
+  "propuesta_base": "Base móvil del motor guiada longitudinalmente en la línea de centros, reguladores de desplazamiento y bloqueo posterior independiente.",
+  "tension_inicial_n": null,
+  "reacciones_ejes": "pendientes de 5D"
+}

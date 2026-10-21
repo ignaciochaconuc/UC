@@ -1,0 +1,23 @@
+{
+  "url": "https://www.gates.com/content/dam/documents-library/catalogs/industrial-v-belt-design-manual-kr.pdf",
+  "clave_bibtex": "gates_vbelt_2004",
+  "tabla_recorridos": 11,
+  "pagina_impresa_recorridos": 32,
+  "pagina_pdf_recorridos_desde_uno": 34,
+  "tabla_gargantas": 18,
+  "pagina_impresa_gargantas": 40,
+  "pagina_pdf_gargantas_desde_uno": 42,
+  "normas_indicadas_tabla_spa": "DIN 2211 e ISO 4183",
+  "verificacion": "Lectura visual del manual original; sin interpolación",
+  "fecha_consulta": "2026-10-21",
+  "sha256_historicos": {
+    "balance_motor_eficiencias.csv": "2496c55785df7985a0b5e6c8312a547d0e1e783781debc9f575b8a8452069c1c",
+    "capacidad_5b.csv": "eb6fb4569d67110c0c5b58bcd7c66aa3b88136c884d83eabcb6796bae01a7af6",
+    "contraste_3c.csv": "871db3023e4f643339bc76fe91e43541475bbf1666eb58bf0e1a23776183f791",
+    "fuentes_y_validacion.json": "33149249263b62ae408a2a748cefb94d17382085cb2dfa11308be371788a6118",
+    "geometria_5a.csv": "a0ca159c4262bd96a9b1e6fb5ea59e782d8948d34540657ab2821e235435e1fd",
+    "parametros_utilizados.json": "7c3fc6acd27bd063e7212aebc6e1e7ae1e1b109c70cd17afed46435a397b46ce",
+    "resumen.json": "1bc303a989f2a3374b02efd8aceb2e63abe5b603e6077776a398803b4d5d186a",
+    "sensibilidad_factor_servicio.csv": "18abb83b571734276096d94d5855756bc8de9cf2ba9e8cbb30495ccdabf43405"
+  }
+}
