@@ -1,0 +1,78 @@
+polea,parametro,valor,estado,fuente,interpretacion
+motriz,tipo_cuerpo,aligerado_aberturas_circulares,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,espesor_residual_llanta_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,diametro_interior_llanta_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,ancho_llanta_cad_mm,54.0,confirmado_plano,POLEA 2.pdf,54 en lateral entre caras exteriores de pestañas; distinto de 50 entre sus caras interiores
+motriz,espesor_cuerpo_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,numero_radios,,no_aplicable_cuerpo_aligerado,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,geometria_radios,,no_aplicable_cuerpo_aligerado,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,seccion_radios_mm,,no_aplicable_cuerpo_aligerado,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,diametro_interior_cubo_mm,38.0,derivado_radio_acotado,POLEA 2.pdf,Ø38 derivado de R19 del arco del agujero en vista frontal; no de diámetro supuesto de eje de motor
+motriz,diametro_exterior_cubo_mm,45.0,confirmado_plano,POLEA 2.pdf,"Ø45 del contorno oculto del cubo frontal, corroborado en lateral"
+motriz,longitud_cubo_mm,62.0,confirmado_plano,POLEA 2.pdf,62 en corte A-A entre extremo saliente del cubo y cara posterior común; no longitud activa de unión
+motriz,desfase_plano_correas_seccion_cubo_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,filetes_cubo_cuerpo_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,filetes_cuerpo_llanta_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,filetes_gargantas_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,tipo_union_eje,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,ancho_chaveta_mm,10.0,confirmado_plano,POLEA 2.pdf,"10 JS9 acota ancho del chavetero en frontal; no demuestra ancho real, longitud ni altura activa de la chaveta"
+motriz,altura_contacto_chaveta_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,longitud_activa_chaveta_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,ajustes_tolerancias_retencion,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,documento_cad,POLEA 2.pdf,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,revision_geometrica,inventor_motriz_pdf_vigente_2026_10_21,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,numero_aberturas,8,confirmado_plano,POLEA 2.pdf,"8 círculos contados; Ø13 acotado en uno, confirmar repetición y coordenadas en CAD"
+motriz,diametro_aberturas_mm,13.0,cota_en_una_abertura_patron_por_cotejar,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,coordenadas_centros_aberturas_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,diametro_pestanas_mm,120.0,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,diametro_crestas_gargantas_mm,105.6,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,diametro_fondo_gargantas_mm,78.0,confirmado_plano,POLEA 2.pdf,"Ø78 oculto frontal consistente con 105,60-2x13,80; no diámetro interior de llanta"
+motriz,profundidad_radial_garganta_mm,13.8,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,angulo_garganta_cad_grados,34.0,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,tolerancia_angulo_cad_grados,0.5,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,rosca_radial,M5x0.8 - 6H,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,longitud_engranada_rosca_mm,,pendiente,POLEA 2.pdf,Pendiente de cota y función resistente
+motriz,diametro_referencia_nominal_mm,100.0,nominal_diseno_5a,POLEA 2.pdf,"100 nominal heredado 5A, no cota explícita nueva del PDF"
+motriz,espesor_axial_pestana_cota_mm,2.0,confirmado_plano,POLEA 2.pdf,2 axial en lateral; 54=50+2x2 para las dos pestañas representadas
+motriz,distancia_caras_interiores_pestanas_mm,50.0,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,saliente_cubo_hasta_cara_interior_pestana_mm,10.0,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,tolerancia_ancho_chavetero,JS9,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+motriz,cota_axial_corte_12_mm,12.0,confirmado_plano,POLEA 2.pdf,12 desde cara exterior de pestaña frontal hasta plano de referencia de garganta mostrado en A-A; no espesor de cuerpo
+motriz,cota_axial_corte_10_mm,10.0,confirmado_plano,POLEA 2.pdf,10 desde cara interior de pestaña hasta el mismo plano mostrado; no longitud activa de chaveta
+motriz,paso_axial_gargantas_mm,15.0,confirmado_plano,POLEA 2.pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,tipo_cuerpo,aligerado_aberturas_circulares,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,espesor_residual_llanta_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,diametro_interior_llanta_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,ancho_llanta_cad_mm,60.0,confirmado_plano,POLEA 1 (1).pdf,Corte A-A: 60 entre caras exteriores del conjunto de llanta/pestañas; no espesor de cuerpo
+conducida,espesor_cuerpo_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,numero_radios,,no_aplicable_cuerpo_aligerado,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,geometria_radios,,no_aplicable_cuerpo_aligerado,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,seccion_radios_mm,,no_aplicable_cuerpo_aligerado,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,diametro_interior_cubo_mm,35.0,derivado_radio_acotado,POLEA 1 (1).pdf,"Derivado de R17,50 del arco del agujero central en vista frontal; sección lisa ignora chavetero visible"
+conducida,diametro_exterior_cubo_mm,75.0,confirmado_plano,POLEA 1 (1).pdf,Ø75 en vista lateral y círculo oculto de vista frontal
+conducida,longitud_cubo_mm,78.6,confirmado_plano,POLEA 1 (1).pdf,"Corte A-A: envolvente axial 78,60 desde cara saliente del cubo a cara posterior común; no longitud efectiva de unión"
+conducida,desfase_plano_correas_seccion_cubo_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,filetes_cubo_cuerpo_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,filetes_cuerpo_llanta_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,filetes_gargantas_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,tipo_union_eje,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,ancho_chaveta_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,altura_contacto_chaveta_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,longitud_activa_chaveta_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,ajustes_tolerancias_retencion,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,documento_cad,POLEA 1 (1).pdf,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,revision_geometrica,inventor_pdf_vigente_2026_10_21,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,numero_aberturas,6,confirmado_plano,POLEA 1 (1).pdf,Seis círculos visibles en frontal; Ø70 acotado en uno. Igualdad del patrón debe cotejarse con CAD
+conducida,diametro_aberturas_mm,70.0,cota_en_una_abertura_patron_por_cotejar,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,coordenadas_centros_aberturas_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,diametro_pestanas_mm,300.0,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,diametro_crestas_gargantas_mm,285.6,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,diametro_fondo_gargantas_mm,258.0,confirmado_plano,POLEA 1 (1).pdf,Ø258 oculto en frontal coherente con raíz de garganta; no demuestra diámetro interior de llanta
+conducida,profundidad_radial_garganta_mm,13.8,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,angulo_garganta_cad_grados,34.0,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,tolerancia_angulo_cad_grados,0.5,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,rosca_radial,M5x0.8 - 6H,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,longitud_engranada_rosca_mm,,pendiente,POLEA 1 (1).pdf,Pendiente de cota y función resistente
+conducida,diametro_referencia_nominal_mm,280.0,nominal_diseno_5a,POLEA 1 (1).pdf,Dato de diseño heredado 5A; no es una nueva cota explícita del PDF
+conducida,espesor_axial_pestana_cota_mm,5.0,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente
+conducida,saliente_cubo_hasta_cara_interior_pestana_mm,23.6,confirmado_plano,POLEA 1 (1).pdf,Vista frontal/lateral/corte A-A del plano vigente

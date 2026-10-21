@@ -44,7 +44,8 @@ def test_dimensiones_invalidas(fn, args):
 
 
 def test_geometria_incompleta_es_pendiente_sin_inventar():
-    p = config()
+    # Esta prueba cubre la línea base histórica sin planos, ahora archivada.
+    p = json.loads((RAIZ/"resultados/etapa_5e1/parametros_utilizados.json").read_text(encoding="utf-8"))
     r = verificar_resistencia({"torque_correas_firmado_nm": 10, "fr_n": 100}, p["poleas"]["motriz"], p["material"])
     assert all(c["estado"] == "pendiente" and c["resultado"] is None for c in r)
     assert p["material"]["limite_fluencia_mpa"] is None

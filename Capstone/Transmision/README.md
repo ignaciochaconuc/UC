@@ -735,3 +735,104 @@ El máximo 3C y el motor nominal ideal siguen en filas distintas.
 aberturas/ligamentos reales, contacto sobre perfil CAD, raíces de garganta,
 chavetero/M5 y uniones de cuerpo–cubo/llanta; se requiere estudiar fase angular,
 restricciones físicas y convergencia local. **FEM no ejecutado.**
+
+## 5E.1 — Revisión conjunta vigente de ambas poleas
+
+La incorporación de [POLEA 2.pdf](<POLEA 2.pdf>) completa las fuentes geométricas
+actualmente disponibles. Plano de equipo, título `Grooved Pulley21`, escala 2:1,
+ag_go 21-10-2026, una hoja y REV vacío; su SHA256 queda registrado, al igual
+que el del plano vigente de la conducida. Es una fuente interna, no normativa.
+La configuración de la **conducida y del material se conserva idéntica** a la
+revisión anterior. Solo se actualizó el bloque motriz de `parametros_poleas.json`.
+
+```powershell
+python actualizacion_ambas_poleas.py
+python -m pytest -q
+```
+
+Se escribe únicamente en
+`resultados/etapa_5e1/revision_ambas_poleas_2026_10_21/`. No regenerar la línea
+base ni la revisión anterior con la configuración nueva. Sus instantáneas y
+resultados permanecen archivados. El nuevo ejecutable importa las cargas 5D.2,
+sin ejecutar etapas anteriores, y comprueba SHA256 de sus archivos.
+
+### Motriz: superficies y cotas confirmadas
+
+| Cota | Interpretación |
+|---|---|
+| Ø100 | Referencia nominal heredada de 5A, no cota nueva del PDF |
+| Ø105,60 / Ø120 / Ø78 | Crestas, pestañas y fondos de garganta, respectivamente |
+| 13,80 radial | Profundidad de garganta; `105,60−2×13,80=78,00` |
+| Tres gargantas, 34° ±0,5° | Perfil CAD; coincide en ángulo nominal con Gates para Ø100 |
+| Ocho círculos Ø13 | Cuerpo aligerado; el diámetro se acota en una abertura, confirmar repetición CAD |
+| Ø45 / R19 | Cubo exterior y agujero circular: Ø38 derivado del radio acotado |
+| 10 JS9 | Ancho del chavetero frontal; no longitud ni altura efectiva de chaveta |
+| M5x0.8 - 6H | Rosca radial de cubo; longitud engranada y papel resistente pendientes |
+| 54 axial | Distancia entre caras exteriores de pestañas |
+| 50 axial | Distancia entre caras interiores de pestañas |
+| 2 axial | Espesor de pestaña representada; coherencia `54=50+2×2` |
+| 62 axial | Extremo saliente del cubo a cara posterior común, en A-A |
+| 10 axial lateral | Extremo de cubo hasta cara interior de pestaña: saliente exterior 8+2 |
+| 10 / 12 en A-A | Desde caras interior/exterior de pestaña al plano indicado del perfil; no espesor uniforme del cuerpo |
+| 15 en A-A | Paso axial de gargantas mostrado, sin reconstruir por píxeles el perfil completo |
+
+El agujero Ø38 pertenece al plano de polea; **no confirma que el eje del motor
+real tenga ese diámetro**. La coincidencia debe revisarse con plano/ficha del
+motor. Los Ø78/Ø258 siguen siendo fondos de garganta: no se asignan como
+interiores de llanta. Los espesores residuales de ambas piezas continúan null.
+
+Los cuerpos se mantienen aligerados con aberturas circulares: ocho Ø13 en
+motriz y seis Ø70 en conducida. No se reemplazan por discos macizos ni por
+radios rectangulares uniformes. Centros de patrones, espesores, filetes y
+geometría local todavía requieren el CAD acotado.
+
+### Verificaciones disponibles y pendientes
+
+Para ambas se pueden verificar las coherencias geométricas indicadas y calcular
+A, I, J y la **torsión nominal parcial de cubo liso**: Ø45/Ø38 motriz y Ø75/Ø35
+conducida, con los torques propios de las filas correlacionadas. El cálculo
+ignora chavetero, taladro M5, entallas, flexión y distribución real de carga;
+no es esfuerzo máximo de la pieza ni aprobación de resistencia.
+
+| Componente torsional nominal lisa [MPa] | Motriz Ø45/Ø38 | Conducida Ø75/Ø35 |
+|---|---:|---:|
+| Máximo 3C | 3,611 | 1,127 |
+| Motor nominal ideal | 4,119 | 1,285 |
+
+La pared radial nominal lisa de la motriz es solo **3,5 mm**. Debe comprobarse
+el ligamento restante tras mecanizar chavetero y M5; no se deduce a partir del
+ancho 10 JS9 ni se supone una profundidad típica. La flexión del cubo permanece
+pendiente del desfase local de cargas. Las cotas 62/78,60 no son longitudes
+activas de chaveta. La resistencia integral de cuerpo, llanta, contacto y unión
+permanece pendiente; AISI 1045 sigue sin E, Sy o factores de seguridad asignados.
+
+La coincidencia angular de la motriz con 34° Gates es una comprobación parcial
+del perfil, **no aprobación normativa completa**. La conducida conserva la
+discrepancia 34° CAD frente a 38° de la tabla. No se altera ningún plano para
+forzar compatibilidad ni se cambian los resultados históricos de capacidad.
+
+Las tablas de esta revisión incluyen fuentes geométricas, dimensiones
+confirmadas/derivadas/pendientes, cargas, torsión parcial, estado de todas las
+verificaciones, sensibilidad de pretensión separada y manifiesto SHA256.
+El máximo 3C y el motor nominal ideal permanecen en filas distintas. No se
+combina un máximo de fuerza de sensibilidad con un torque nominal para crear
+un caso estructural simultáneo inexistente.
+
+### Requisitos de 5E.2: chavetas y uniones
+
+Para cada polea confirmar el tipo real de unión transmisora, diámetro y
+tolerancia de eje/agujero y ajuste; b, h y largo activo de la chaveta;
+profundidades de chaveteros en eje y cubo, altura efectiva de contacto,
+radios/terminaciones y longitudes de contacto. La motriz aporta únicamente
+ancho nominal de chavetero 10 JS9; la conducida aún no aporta todas esas cotas.
+No se han transcrito límites numéricos de JS9 sin una fuente aplicable.
+
+Solicitar material/condición de chaveta, cubo y eje, detalle de tornillo M5
+(clase, punta, longitud engranada, precarga si corresponde), función del tornillo,
+retención axial y condiciones de servicio. Así podrán comprobarse corte,
+aplastamiento, ligamentos y unión; las tensiones lisas actuales no bastan.
+
+[Especificación FEM conjunta](especificacion_fem_ambas_poleas_inventor.md):
+modelar ambos cuerpos aligerados, raíces, ligamentos, chaveteros y M5, cargas
+sobre cada garganta sin duplicar torque, contacto y restricciones reales,
+fase angular y convergencia local. **FEM no ejecutado; resistencia no aprobada.**

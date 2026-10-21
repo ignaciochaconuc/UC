@@ -1,0 +1,5 @@
+validacion,cumple
+sha256_historicos_y_revision_conducida_conservados,True
+coherencia_diametros_y_axiales_motriz,True
+torque_propio_y_fuerzas_correlacionadas,True
+material_sin_aprobacion_resistencia,True

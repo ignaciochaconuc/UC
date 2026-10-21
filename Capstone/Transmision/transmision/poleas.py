@@ -113,7 +113,7 @@ def verificar_resistencia(carga, p, material):
     elif p["tipo_cuerpo"] == "aligerado_aberturas_circulares":
         comprobaciones.append({"comprobacion": "cuerpo_aligerado", "estado": "pendiente",
             "faltantes": [k for k in ("espesor_cuerpo_mm", "coordenadas_centros_aberturas_mm", "filetes_cubo_cuerpo_mm", "filetes_cuerpo_llanta_mm") if p.get(k) is None],
-            "resultado": None, "alcance": "Seis aberturas circulares; no aplicar disco macizo ni radios rectangulares uniformes"})
+            "resultado": None, "alcance": "Cuerpo con aberturas circulares según plano; no aplicar disco macizo ni radios rectangulares uniformes"})
     else:
         comprobaciones.append({"comprobacion": "cuerpo_disco_o_radios", "estado": "pendiente",
             "faltantes": ["tipo_cuerpo", "geometria_radios", "seccion_radios_mm", "espesor_cuerpo_mm"],
