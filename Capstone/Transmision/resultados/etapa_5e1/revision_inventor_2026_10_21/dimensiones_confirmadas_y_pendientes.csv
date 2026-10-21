@@ -1,0 +1,33 @@
+parametro,valor,estado,superficies_y_uso
+diametro_referencia_nominal_mm,280.0,nominal_diseno_5a,Referencia de cinemática heredada; no acotada en este PDF
+diametro_crestas_gargantas_mm,285.6,cota_cad,"Ø285,60 de crestas de garganta, no envolvente de pestañas"
+diametro_pestanas_mm,300.0,cota_cad,Ø300 de contorno exterior máximo en vista frontal
+diametro_fondo_gargantas_mm,258.0,cota_cad_interpretada,"Ø258 oculto coincide con raíz derivada de profundidad 13,80; no interior de llanta"
+diametro_exterior_cubo_mm,75.0,cota_cad,Ø75 acotado en lateral y círculo oculto frontal
+diametro_interior_cubo_mm,35.0,derivada_cota_cad,"Ø35=2 R17,50 del agujero circular; chavetero excluido"
+longitud_cubo_mm,78.6,cota_cad_envolvente,"78,60 total de cara saliente de cubo a cara posterior común"
+ancho_llanta_cad_mm,60.0,cota_cad_envolvente,60 entre caras exteriores axiales de llanta con pestañas; no espesor de cuerpo
+numero_aberturas,6,conteo_vista_frontal,Seis aberturas circulares; no seis radios rectangulares
+diametro_aberturas_mm,70.0,cota_patron_por_confirmar,"Ø70 en una abertura; semejanza del patrón visible, cotejar repetición CAD"
+angulo_garganta_cad_grados,34.0,cota_cad,"34 ±0,5° en corte A-A; discrepante con Gates"
+profundidad_radial_garganta_mm,13.8,cota_cad,"13,80 entre cresta y fondo radial de garganta"
+espesor_axial_pestana_cota_mm,5.0,cota_cad,5 entre cara exterior pestaña y comienzo de crestas en vista lateral
+saliente_cubo_hasta_cara_interior_pestana_mm,23.6,cota_cad,"23,60 desde extremo cubo hasta cara interior de pestaña; no saliente sobre cara exterior"
+rosca_radial,M5x0.8 - 6H,cota_cad,M5x0.8 - 6H radial en cubo; no demuestra capacidad ni retención completa
+espesor_residual_llanta_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+diametro_interior_llanta_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+espesor_cuerpo_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+numero_radios,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+geometria_radios,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+seccion_radios_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+desfase_plano_correas_seccion_cubo_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+filetes_cubo_cuerpo_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+filetes_cuerpo_llanta_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+filetes_gargantas_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+tipo_union_eje,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+ancho_chaveta_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+altura_contacto_chaveta_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+longitud_activa_chaveta_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+ajustes_tolerancias_retencion,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+coordenadas_centros_aberturas_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD
+longitud_engranada_rosca_mm,,pendiente,No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD

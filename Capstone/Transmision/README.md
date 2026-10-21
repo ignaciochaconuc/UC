@@ -649,3 +649,89 @@ pendientes por datos ausentes y conservación de entradas.
 La referencia existente `gates_vbelt_2004` sigue limitada a datos de correas,
 tensado y gargantas. No se añadió una ficha de 1045 sin condición confirmada
 ni se inventó una fuente para avalar propiedades o un análisis no ejecutado.
+
+## 5E.1 — Revisión geométrica vigente de la conducida (Inventor)
+
+Se incorporó [POLEA 1 (1).pdf](<POLEA 1 (1).pdf>), una hoja con vistas frontal,
+lateral y corte A-A, cajetín ag_go de 21-10-2026. Es fuente interna del equipo,
+registrada como `equipo_polea_conducida_2026`, no norma. No se combinan cotas con
+otras revisiones. Al estar REV vacío se identifica el archivo por SHA256.
+
+```powershell
+python actualizacion_polea_inventor.py
+python -m pytest -q
+```
+
+La configuración vigente está en `parametros_poleas.json`. La línea base anterior
+con sus parámetros permanece en `resultados/etapa_5e1/`; **no se debe regenerarla
+con la nueva configuración**. La actualización se exporta exclusivamente a
+`resultados/etapa_5e1/revision_inventor_2026_10_21/`, con parámetros propios,
+tabla de cotas/pendientes, cargas correlacionadas, torsión parcial, verificaciones,
+sensibilidad heredada separada, especificación FEM y hashes de los históricos.
+Las secciones anteriores describen el estado de la línea base original.
+
+### Cotas leídas y su interpretación
+
+| Dato vigente | Superficie o uso |
+|---|---|
+| Ø280 de referencia | Nominal de diseño heredado de 5A; no nueva cota explícita en PDF |
+| Ø285,60 | Crestas del perfil de gargantas |
+| Ø300 | Envolvente exterior de las pestañas; no diámetro de referencia |
+| Tres gargantas, 34° ±0,5° | Perfil real que se usará en el análisis estructural |
+| 13,80 radial y Ø258 oculto | Profundidad y fondo de las gargantas; `285,60−2×13,80=258,00` |
+| Seis círculos, Ø70 acotado en uno | Cuerpo aligerado; confirmar patrón repetido en CAD |
+| Ø75 | Exterior del cubo, corroborado en frontal/lateral |
+| R17,50 | Radio del agujero central: Ø35 circular derivado, sin chavetero |
+| 78,60 axial | Envolvente total desde extremo saliente del cubo a cara posterior común |
+| 60 axial | Ancho axial total de llanta con pestañas, no espesor de cuerpo |
+| 5 y 23,60 axial | Pestaña y saliente hasta su cara interior; coherentes con saliente exterior 18,60 |
+| M5x0.8 - 6H | Rosca radial en cubo; no acredita por sí sola transmisión ni retención |
+
+**Corrección de interpretación:** Ø258 no se incorpora como diámetro interior
+de llanta. La coherencia exacta con profundidad radial 13,80 lo identifica con
+el fondo de gargantas. El corte muestra otra superficie interior de llanta sin
+cota diametral suficiente. Por eso sigue pendiente el espesor residual real;
+no se informa falsamente un espesor cero bajo garganta. Tampoco se mide el
+PDF por píxeles para completar coordenadas ni cotas resistentes.
+
+Se mantiene el cuerpo como **aligerado con seis aberturas circulares**. No se
+supone un disco macizo ni seis radios rectangulares iguales. Faltan centros y
+diámetro de reparto, espesores/perfil axial de cuerpo y ligamentos, y filetes.
+La vista muestra chavetero, pero no todas sus dimensiones ni la unión efectiva.
+
+### Discrepancia CAD–Gates
+
+Inventor indica **34° ±0,5°**, frente a **38° ±1°** tabulados para SPA con
+diámetro de referencia 280 mm en 5C. El análisis estructural usará 34° del plano.
+La compatibilidad normativa **no queda aprobada** y la discrepancia no se
+elimina cambiando el CAD silenciosamente. También se documenta la envolvente
+de pestañas Ø300, que no altera la cinemática histórica basada en Ø280.
+La carga sobre gargantas cambia de distribución local con el perfil real;
+5D.2 aporta solo resultantes condicionales, no presión validada en flancos.
+
+### Verificaciones que ahora pueden realizarse
+
+Se verifica coherencia de cresta/fondo/profundidad, diferencia de ángulos y
+envolventes axiales. Se calculan A, I y J de la sección **idealizada lisa**
+Ø75/Ø35 del cubo, y la componente nominal `tau=|T|×1000×37,5/J` para cada
+caso correlacionado importado. El resultado se etiqueta parcial: ignora el
+chavetero, el taladro roscado, concentraciones, cortante transversal y flexión.
+No es una tensión máxima ni permite aprobar la resistencia del cubo o la polea.
+La suma de áreas de seis círculos Ø70 solo es área geométrica proyectada;
+no se interpreta como volumen, masa o área resistente neta.
+
+La flexión del cubo sigue pendiente del desfase real entre plano de correas y
+sección analizada. La llanta requiere su diámetro interior/espesor residual,
+paredes, filetes y contacto; el cuerpo requiere espesores y centros de aberturas;
+la unión requiere cotas de chavetero, longitud activa, ajustes, tornillo/rosca
+y retención. 78,60 no se usa automáticamente como longitud activa de unión.
+Las fórmulas de disco continuo se excluyen para este cuerpo aligerado.
+
+AISI 1045 continúa como candidato: condición/producto, E, nu, Sy, Sut, densidad
+y fatiga permanecen pendientes. No se calculan factores de seguridad.
+El máximo 3C y el motor nominal ideal siguen en filas distintas.
+
+[Especificación FEM actualizada](especificacion_fem_conducida_inventor.md):
+aberturas/ligamentos reales, contacto sobre perfil CAD, raíces de garganta,
+chavetero/M5 y uniones de cuerpo–cubo/llanta; se requiere estudiar fase angular,
+restricciones físicas y convergencia local. **FEM no ejecutado.**

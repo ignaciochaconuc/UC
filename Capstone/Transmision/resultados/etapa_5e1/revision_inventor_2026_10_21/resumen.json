@@ -1,0 +1,649 @@
+{
+  "revision": "inventor_pdf_vigente_2026_10_21",
+  "fuente": "POLEA 1 (1).pdf",
+  "sha256_pdf": "9033c0a839ace2443557498f7a869ea501304081bdd3c31528127a6f6a80539c",
+  "fuente_equipo_no_normativa": true,
+  "geometria": {
+    "diametro_fondo_verificado_mm": 258.0,
+    "saliente_cubo_sobre_cara_exterior_pestana_mm": 18.599999999999994,
+    "seccion_anular_lisa_cubo": {
+      "area_mm2": 3455.7519189487725,
+      "I_mm4": 1479493.7902999432,
+      "J_mm4": 2958987.5805998864
+    },
+    "area_total_aberturas_proyeccion_mm2": 23090.706003884978,
+    "nota_area": "Solo suma de círculos; no es área resistente neta, masa ni volumen",
+    "angulo_cad_grados": 34.0,
+    "angulo_gates_280_grados": 38.0,
+    "diferencia_angulo_grados": -4.0,
+    "compatibilidad_normativa_aprobada": false
+  },
+  "cargas_conducida": [
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": null,
+      "tiempo_s": null,
+      "angulo_3c_grados": null,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 724.4293961424202,
+      "torque_correas_firmado_nm": 101.42011545993883,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 132.16406046594432,
+      "fr_n": 1171.249898648466,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2"
+    }
+  ],
+  "torsion_parcial_cubo": [
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2",
+      "tau_torsion_nominal_lisa_mpa": 1.126955969346615,
+      "estado": "componente nominal parcial; no resistencia aprobada",
+      "limitaciones": "Sección Ø75/Ø35 lisa, ignora chavetero, taladro M5, entallas y flexión; no calcula FS"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2",
+      "tau_torsion_nominal_lisa_mpa": 1.126955969346615,
+      "estado": "componente nominal parcial; no resistencia aprobada",
+      "limitaciones": "Sección Ø75/Ø35 lisa, ignora chavetero, taladro M5, entallas y flexión; no calcula FS"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "paso": 377,
+      "tiempo_s": 0.03044250645994832,
+      "angulo_3c_grados": 94.25,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 635.1711842246742,
+      "torque_correas_firmado_nm": 88.92396579145439,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 115.87989560488745,
+      "fr_n": 1169.524320572512,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2",
+      "tau_torsion_nominal_lisa_mpa": 1.126955969346615,
+      "estado": "componente nominal parcial; no resistencia aprobada",
+      "limitaciones": "Sección Ø75/Ø35 lisa, ignora chavetero, taladro M5, entallas y flexión; no calcula FS"
+    },
+    {
+      "polea": "conducida",
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "paso": null,
+      "tiempo_s": null,
+      "angulo_3c_grados": null,
+      "radio_referencia_mm": 140.0,
+      "delta_total_n": 724.4293961424202,
+      "torque_correas_firmado_nm": 101.42011545993883,
+      "fx_n": 1163.7693011096296,
+      "fy_n": 132.16406046594432,
+      "fr_n": 1171.249898648466,
+      "origen_torque": "equilibrio de torque 5D.2",
+      "origen_fuerzas": "cierre simétrico condicional 5D.2",
+      "tau_torsion_nominal_lisa_mpa": 1.285322843084275,
+      "estado": "componente nominal parcial; no resistencia aprobada",
+      "limitaciones": "Sección Ø75/Ø35 lisa, ignora chavetero, taladro M5, entallas y flexión; no calcula FS"
+    }
+  ],
+  "otras_verificaciones": [
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "cuerpo_aligerado",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_cuerpo_mm",
+        "coordenadas_centros_aberturas_mm",
+        "filetes_cubo_cuerpo_mm",
+        "filetes_cuerpo_llanta_mm"
+      ],
+      "resultado": null,
+      "alcance": "Seis aberturas circulares; no aplicar disco macizo ni radios rectangulares uniformes"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "torque_maximo",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "cuerpo_aligerado",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_cuerpo_mm",
+        "coordenadas_centros_aberturas_mm",
+        "filetes_cubo_cuerpo_mm",
+        "filetes_cuerpo_llanta_mm"
+      ],
+      "resultado": null,
+      "alcance": "Seis aberturas circulares; no aplicar disco macizo ni radios rectangulares uniformes"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "fuerza_resultante_maxima",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "cuerpo_aligerado",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_cuerpo_mm",
+        "coordenadas_centros_aberturas_mm",
+        "filetes_cubo_cuerpo_mm",
+        "filetes_cuerpo_llanta_mm"
+      ],
+      "resultado": null,
+      "alcance": "Seis aberturas circulares; no aplicar disco macizo ni radios rectangulares uniformes"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "escenario": "historial_3c_inclinacion",
+      "criterio": "tension_floja_minima",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    },
+    {
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "cubo_flexion_torsion",
+      "estado": "pendiente",
+      "faltantes": [
+        "desfase_plano_correas_seccion_cubo_mm"
+      ],
+      "resultado": null,
+      "alcance": "Sección anular lisa, sin chavetero, contacto ni cortante transversal; no es esfuerzo máximo real"
+    },
+    {
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "cuerpo_aligerado",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_cuerpo_mm",
+        "coordenadas_centros_aberturas_mm",
+        "filetes_cubo_cuerpo_mm",
+        "filetes_cuerpo_llanta_mm"
+      ],
+      "resultado": null,
+      "alcance": "Seis aberturas circulares; no aplicar disco macizo ni radios rectangulares uniformes"
+    },
+    {
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "union_eje_cubo",
+      "estado": "pendiente",
+      "faltantes": [
+        "tipo_union_eje",
+        "ajustes_tolerancias_retencion"
+      ],
+      "resultado": null,
+      "alcance": "No suponer chaveta, interferencia, tornillos ni geometría de asiento"
+    },
+    {
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "llanta_gargantas_filetes",
+      "estado": "pendiente",
+      "faltantes": [
+        "espesor_residual_llanta_mm",
+        "diametro_interior_llanta_mm",
+        "filetes_gargantas_mm",
+        "distribucion_contacto"
+      ],
+      "resultado": null,
+      "alcance": "FEM real para flexión local, contacto y concentración"
+    },
+    {
+      "escenario": "motor_nominal_ideal_externo_a_3c",
+      "criterio": "motor_nominal_externo",
+      "comprobacion": "factor_seguridad_polea",
+      "estado": "pendiente",
+      "faltantes": [
+        "geometria_completa",
+        "condicion_suministro",
+        "fuente_propiedades",
+        "limite_fluencia_mpa",
+        "criterio_aceptacion"
+      ],
+      "resultado": null,
+      "alcance": "No usar un von Mises parcial como máximo de la polea; no se calcula FS integral ni fatiga"
+    }
+  ],
+  "material": {
+    "candidato": "AISI 1045",
+    "condicion_suministro": null,
+    "forma_y_seccion_producto": null,
+    "fuente_propiedades": null,
+    "modulo_young_mpa": null,
+    "poisson": null,
+    "densidad_kg_m3": null,
+    "limite_fluencia_mpa": null,
+    "resistencia_ultima_mpa": null,
+    "datos_fatiga": null
+  },
+  "resistencia_aprobada": false,
+  "fem_ejecutado": false,
+  "factores_seguridad": null,
+  "dimensiones": [
+    {
+      "parametro": "diametro_referencia_nominal_mm",
+      "valor": 280.0,
+      "estado": "nominal_diseno_5a",
+      "superficies_y_uso": "Referencia de cinemática heredada; no acotada en este PDF"
+    },
+    {
+      "parametro": "diametro_crestas_gargantas_mm",
+      "valor": 285.6,
+      "estado": "cota_cad",
+      "superficies_y_uso": "Ø285,60 de crestas de garganta, no envolvente de pestañas"
+    },
+    {
+      "parametro": "diametro_pestanas_mm",
+      "valor": 300.0,
+      "estado": "cota_cad",
+      "superficies_y_uso": "Ø300 de contorno exterior máximo en vista frontal"
+    },
+    {
+      "parametro": "diametro_fondo_gargantas_mm",
+      "valor": 258.0,
+      "estado": "cota_cad_interpretada",
+      "superficies_y_uso": "Ø258 oculto coincide con raíz derivada de profundidad 13,80; no interior de llanta"
+    },
+    {
+      "parametro": "diametro_exterior_cubo_mm",
+      "valor": 75.0,
+      "estado": "cota_cad",
+      "superficies_y_uso": "Ø75 acotado en lateral y círculo oculto frontal"
+    },
+    {
+      "parametro": "diametro_interior_cubo_mm",
+      "valor": 35.0,
+      "estado": "derivada_cota_cad",
+      "superficies_y_uso": "Ø35=2 R17,50 del agujero circular; chavetero excluido"
+    },
+    {
+      "parametro": "longitud_cubo_mm",
+      "valor": 78.6,
+      "estado": "cota_cad_envolvente",
+      "superficies_y_uso": "78,60 total de cara saliente de cubo a cara posterior común"
+    },
+    {
+      "parametro": "ancho_llanta_cad_mm",
+      "valor": 60.0,
+      "estado": "cota_cad_envolvente",
+      "superficies_y_uso": "60 entre caras exteriores axiales de llanta con pestañas; no espesor de cuerpo"
+    },
+    {
+      "parametro": "numero_aberturas",
+      "valor": 6,
+      "estado": "conteo_vista_frontal",
+      "superficies_y_uso": "Seis aberturas circulares; no seis radios rectangulares"
+    },
+    {
+      "parametro": "diametro_aberturas_mm",
+      "valor": 70.0,
+      "estado": "cota_patron_por_confirmar",
+      "superficies_y_uso": "Ø70 en una abertura; semejanza del patrón visible, cotejar repetición CAD"
+    },
+    {
+      "parametro": "angulo_garganta_cad_grados",
+      "valor": 34.0,
+      "estado": "cota_cad",
+      "superficies_y_uso": "34 ±0,5° en corte A-A; discrepante con Gates"
+    },
+    {
+      "parametro": "profundidad_radial_garganta_mm",
+      "valor": 13.8,
+      "estado": "cota_cad",
+      "superficies_y_uso": "13,80 entre cresta y fondo radial de garganta"
+    },
+    {
+      "parametro": "espesor_axial_pestana_cota_mm",
+      "valor": 5.0,
+      "estado": "cota_cad",
+      "superficies_y_uso": "5 entre cara exterior pestaña y comienzo de crestas en vista lateral"
+    },
+    {
+      "parametro": "saliente_cubo_hasta_cara_interior_pestana_mm",
+      "valor": 23.6,
+      "estado": "cota_cad",
+      "superficies_y_uso": "23,60 desde extremo cubo hasta cara interior de pestaña; no saliente sobre cara exterior"
+    },
+    {
+      "parametro": "rosca_radial",
+      "valor": "M5x0.8 - 6H",
+      "estado": "cota_cad",
+      "superficies_y_uso": "M5x0.8 - 6H radial en cubo; no demuestra capacidad ni retención completa"
+    },
+    {
+      "parametro": "espesor_residual_llanta_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "diametro_interior_llanta_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "espesor_cuerpo_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "numero_radios",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "geometria_radios",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "seccion_radios_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "desfase_plano_correas_seccion_cubo_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "filetes_cubo_cuerpo_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "filetes_cuerpo_llanta_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "filetes_gargantas_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "tipo_union_eje",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "ancho_chaveta_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "altura_contacto_chaveta_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "longitud_activa_chaveta_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "ajustes_tolerancias_retencion",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "coordenadas_centros_aberturas_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    },
+    {
+      "parametro": "longitud_engranada_rosca_mm",
+      "valor": null,
+      "estado": "pendiente",
+      "superficies_y_uso": "No aplicable numero_radios/geometria_radios/seccion_radios: cuerpo perforado; resto requiere confirmación CAD"
+    }
+  ],
+  "advertencias": [
+    "Usar geometría del PDF actual exclusivamente, sin completar cotas con revisión anterior",
+    "Ø258 es fondo de garganta compatible con 13,80; diámetro interior real de llanta pendiente",
+    "No confundir envolvente axial 78,60 con longitud activa de unión ni 60 con espesor de cuerpo",
+    "Gates 38° para Ø280 vs Inventor 34±0,5°; compatibilidad normativa no aprobada",
+    "Ø300 es envolvente de pestañas; no cambia Ø280 de referencia ni resultados históricos",
+    "Torsión lisa parcial no es resistencia real: chavetero y rosca M5 restan sección y concentran tensión",
+    "Diámetro/posición de centros de aligeramientos y espesores no se deducen midiendo píxeles"
+  ]
+}
