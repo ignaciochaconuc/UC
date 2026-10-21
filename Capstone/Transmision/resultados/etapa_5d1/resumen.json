@@ -1,0 +1,80 @@
+{
+  "principal": {
+    "potencia_accionamiento_kw": 5.5,
+    "potencia_diseno_historica_no_usada_kw": 7.15,
+    "numero_correas": 3,
+    "G": 0.94,
+    "velocidad_m_s": 7.592182246175334,
+    "tension_estatica_base_n": 197.27233163107317,
+    "tramo_libre_exacto_mm": 485.036777838547,
+    "deflexion_mm": 4.85036777838547,
+    "fuerza_minima_n": 8.1334116541622,
+    "fuerza_maxima_n": 12.078858286783664,
+    "formulas": "11–12",
+    "polea_libre": true
+  },
+  "constantes": {
+    "R": 2.5,
+    "M": 0.12,
+    "Y_n": 20.0
+  },
+  "contraste_formula_7": {
+    "tramo_aproximado_mm": 485.10625208993827,
+    "diferencia_vs_exacto_mm": 0.06947425139128427
+  },
+  "alternativa_poleas_inmovilizadas": {
+    "fuerza_minima_n": 8.690893265242927,
+    "fuerza_maxima_n": 12.63633989786439,
+    "formulas": "9–10",
+    "polea_libre": false
+  },
+  "correas_individuales": [
+    {
+      "correa": 1,
+      "potencia_accionamiento_kw": 5.5,
+      "potencia_diseno_historica_no_usada_kw": 7.15,
+      "numero_correas": 3,
+      "G": 0.94,
+      "velocidad_m_s": 7.592182246175334,
+      "tension_estatica_base_n": 197.27233163107317,
+      "tramo_libre_exacto_mm": 485.036777838547,
+      "deflexion_mm": 4.85036777838547,
+      "fuerza_minima_n": 8.1334116541622,
+      "fuerza_maxima_n": 12.078858286783664,
+      "formulas": "11–12",
+      "polea_libre": true
+    },
+    {
+      "correa": 2,
+      "potencia_accionamiento_kw": 5.5,
+      "potencia_diseno_historica_no_usada_kw": 7.15,
+      "numero_correas": 3,
+      "G": 0.94,
+      "velocidad_m_s": 7.592182246175334,
+      "tension_estatica_base_n": 197.27233163107317,
+      "tramo_libre_exacto_mm": 485.036777838547,
+      "deflexion_mm": 4.85036777838547,
+      "fuerza_minima_n": 8.1334116541622,
+      "fuerza_maxima_n": 12.078858286783664,
+      "formulas": "11–12",
+      "polea_libre": true
+    },
+    {
+      "correa": 3,
+      "potencia_accionamiento_kw": 5.5,
+      "potencia_diseno_historica_no_usada_kw": 7.15,
+      "numero_correas": 3,
+      "G": 0.94,
+      "velocidad_m_s": 7.592182246175334,
+      "tension_estatica_base_n": 197.27233163107317,
+      "tramo_libre_exacto_mm": 485.036777838547,
+      "deflexion_mm": 4.85036777838547,
+      "fuerza_minima_n": 8.1334116541622,
+      "fuerza_maxima_n": 12.078858286783664,
+      "formulas": "11–12",
+      "polea_libre": true
+    }
+  ],
+  "tensiones_dinamicas_ramales": null,
+  "cargas_laterales_ejes": null
+}

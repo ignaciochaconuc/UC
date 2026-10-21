@@ -1,0 +1,19 @@
+numero_correas,potencia_accionamiento_kw,G,tension_estatica_base_n,fuerza_minima_n,fuerza_maxima_n,formulas,polea_libre,estado,cambio_numero_requiere_poleas
+2,4.194,0.94,224.64889683999343,9.228474262519011,13.721452199318879,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+2,4.194,0.96,217.3795342235105,8.937699757859694,13.285290442329902,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+2,4.805,0.94,256.36902580835675,10.497279421253543,15.624659937420677,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+2,4.805,0.96,248.04063110826124,10.164143633249724,15.124956255414947,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+2,5.5,0.94,292.4500235710614,11.94051933176173,17.78951980318296,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+2,5.5,0.96,282.91700154181575,11.559198450591902,17.217538481428218,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+3,4.194,0.94,152.07158047702788,6.325381608000389,9.366813217540948,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,False
+3,4.194,0.96,147.22533873270592,6.131531938227511,9.076038712881628,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,False
+3,4.805,0.94,173.2183331226034,7.17125171382341,10.635618376275477,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,False
+3,4.805,0.96,167.66606998920642,6.949161188487531,10.302482588271657,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,False
+3,5.5,0.94,197.27233163107317,8.1334116541622,12.078858286783664,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,False
+3,5.5,0.96,190.9169836115761,7.879197733382317,11.697537405613836,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,False
+4,4.194,0.94,115.78292229554512,4.873835280741079,7.189493726651981,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+4,4.194,0.96,112.14824098730364,4.728448028411419,6.971412848157492,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+4,4.805,0.94,131.64298677972675,5.508237860108344,8.14109759570288,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+4,4.805,0.96,127.47878942967901,5.341669966106434,7.891245754700014,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+4,5.5,0.94,149.6834856610791,6.229857815362437,9.22352752858402,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True
+4,5.5,0.96,144.91697464645625,6.039197374777524,8.93753686770665,11–12,True,sensibilidad de fórmula; sin aprobación comercial ni cambio de montaje,True

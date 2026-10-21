@@ -1,0 +1,57 @@
+{
+  "clave_bibtex": "gates_vbelt_2004",
+  "url": "https://www.gates.com/content/dam/documents-library/catalogs/industrial-v-belt-design-manual-kr.pdf",
+  "paginas_impresas": [
+    33,
+    34
+  ],
+  "paginas_pdf_desde_uno": [
+    35,
+    36
+  ],
+  "tabla": 13,
+  "fila": "SPA individual convencional; no SPA* moulded notch",
+  "formulas": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "constantes": {
+    "R": 2.5,
+    "M": 0.12,
+    "Y_n": 20.0
+  },
+  "unidades": {
+    "P": "kW de accionamiento",
+    "v": "m/s",
+    "M": "N s²/m²",
+    "Y": "N",
+    "t_Ld_delta": "mm",
+    "Ts_F": "N",
+    "R_G_N": "adimensionales"
+  },
+  "metodo_tramo": "Tangente exacta; fórmula 7 del manual es aproximada",
+  "condicion_formulas_11_12": "Al menos una polea libre para girar durante la medición",
+  "fecha_consulta": "2026-10-21",
+  "sha256_historicos": {
+    "resultados\\balance_motor_eficiencias.csv": "2496c55785df7985a0b5e6c8312a547d0e1e783781debc9f575b8a8452069c1c",
+    "resultados\\capacidad_5b.csv": "eb6fb4569d67110c0c5b58bcd7c66aa3b88136c884d83eabcb6796bae01a7af6",
+    "resultados\\contraste_3c.csv": "871db3023e4f643339bc76fe91e43541475bbf1666eb58bf0e1a23776183f791",
+    "resultados\\etapa_5c\\ajuste_centros.csv": "19c389f5311e9b0280b0a9a15ac20c317e01b1d45ec6180e49b49957cff11f68",
+    "resultados\\etapa_5c\\fuentes_y_trazabilidad.json": "d392884856365877e1852b38caefd97eb6cd41740de9d8db4cce30a126f49ca3",
+    "resultados\\etapa_5c\\geometria_nominal.csv": "7c901c2bbb1cdd4d063aa3813c5fdd06d5559cdac50b4acca42f74e20dbe851f",
+    "resultados\\etapa_5c\\parametros_utilizados.json": "3768e0298a27ae8afdfdce425fb32ae94ff85ad6c89d7680cc2609d10148e0f1",
+    "resultados\\etapa_5c\\poleas_y_gargantas.csv": "8d874fb80e576d3da46deaff602f37d727016affee9739e226cc4fca135e807a",
+    "resultados\\etapa_5c\\resumen.json": "d552d2b0f569d9d2b10aab8701b1708a6122c9a427617960a63de5530a2de793",
+    "resultados\\etapa_5c\\validaciones.csv": "a0a6a4da5809b3da48d4625e99e5aa6ebd15afe207034d0a0f7a0f2d76083511",
+    "resultados\\fuentes_y_validacion.json": "33149249263b62ae408a2a748cefb94d17382085cb2dfa11308be371788a6118",
+    "resultados\\geometria_5a.csv": "a0ca159c4262bd96a9b1e6fb5ea59e782d8948d34540657ab2821e235435e1fd",
+    "resultados\\parametros_utilizados.json": "7c3fc6acd27bd063e7212aebc6e1e7ae1e1b109c70cd17afed46435a397b46ce",
+    "resultados\\resumen.json": "1bc303a989f2a3374b02efd8aceb2e63abe5b603e6077776a398803b4d5d186a",
+    "resultados\\sensibilidad_factor_servicio.csv": "18abb83b571734276096d94d5855756bc8de9cf2ba9e8cbb30495ccdabf43405"
+  }
+}

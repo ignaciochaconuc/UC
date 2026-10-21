@@ -1,4 +1,4 @@
-# Transmisión mecánica — Etapas 5A, 5B y 5C
+# Transmisión mecánica — Etapas 5A, 5B, 5C y 5D.1
 
 Modelo preliminar de una transmisión abierta por tres correas SPA 1600 entre el
 motor de 5,5 kW a 1450 rpm y el eje vertical. Las etapas existentes se consultan
@@ -271,3 +271,101 @@ Las pruebas 5C incluyen diferencias diametrales/radiales, frontera de tabla,
 recorridos, centros, garganta por correa, dimensiones tabuladas y ángulos por
 diámetro, rechazo de valores inválidos y conservación numérica y por SHA256
 de 5A/5B. No se calculan reacciones del eje vertical ni se modifica su modelo.
+
+## 5D.1: tensión estática y comprobación por deflexión
+
+```powershell
+python simulacion_tension_estatica.py
+python -m pytest -q
+```
+
+El ejecutable lee `parametros.json` y los históricos de transmisión, reutiliza
+`geometria()` y escribe exclusivamente en `resultados/etapa_5d1/`. Exporta
+`tensado_individual.csv`, `sensibilidad.csv`, `resumen.json`,
+`parametros_utilizados.json`, `validaciones.csv` y `fuentes_y_trazabilidad.json`.
+La trazabilidad incluye SHA256 de todos los resultados 5A/5B y 5C, verificados
+sin ejecutar esos subsistemas. Sus avisos históricos se conservan tal como fueron
+emitidos; esta sección completa el tensado que antes figuraba pendiente.
+
+Se verificaron visualmente las páginas impresas 33–34 del manual Gates
+(PDF 35–36), fórmulas 6–12 y tabla 13. Se adopta la fila **SPA individual
+convencional**, con R=2,5, M=0,12 y Y=20 N. La fila SPA* corresponde a otra
+construcción. Estas constantes no se transfieren a correas genéricas DIN 7753.
+
+```text
+Ts = 475 ((R-G)/G) P/(N v) + M v²
+t_exacto = sqrt(a²-((D-d)/2)²)
+delta = t/100
+Fmin = (Ts + (t/Ld)Y)/25
+Fmax = (1,5 Ts + (t/Ld)Y)/25
+```
+
+P es potencia de accionamiento en **kW**; aquí se usan **5,5 kW**, no los
+7,15 kW históricos de diseño de correas. v se expresa en m/s y Ts y F en N;
+t, Ld y delta usan mm, por lo que t/Ld es adimensional. R, G y N son
+adimensionales; M tiene unidades N·s²/m². El coeficiente 475 ya corresponde
+a las unidades indicadas y no se debe multiplicar nuevamente P por 1000.
+
+| Correa | Ts base [N] | Tramo libre [mm] | Deflexión [mm] | Fmin [N] | Fmax [N] |
+|---|---:|---:|---:|---:|---:|
+| 1 | 197,27 | 485,04 | 4,85 | 8,13 | 12,08 |
+| 2 | 197,27 | 485,04 | 4,85 | 8,13 | 12,08 |
+| 3 | 197,27 | 485,04 | 4,85 | 8,13 | 12,08 |
+
+Se usa el tramo tangente exacto solicitado. La fórmula 7 del manual utiliza
+la aproximación `t=a[1−0,125((D−d)/a)²]`, no la raíz exacta; el contraste
+se exporta en JSON. No se duplica la cinemática ni se usan diámetros exteriores.
+
+### Condición de medición y procedimiento
+
+Los valores principales anteriores corresponden a las **fórmulas 11–12**,
+con al menos una polea libre para girar durante la medición y permitir la
+redistribución estática. Esta condición debe confirmarse en el conjunto real.
+Para ambas poleas inmovilizadas se exportan separadamente las fórmulas 9–10,
+que usan Y completo: aproximadamente **8,69–12,64 N** por correa. No mezclar
+los dos intervalos de comprobación.
+
+1. Con el accionamiento detenido y aislado, verificar alineación y la condición
+   de libertad de giro prevista; medir el tramo libre real entre tangencias.
+2. Aplicar una fuerza **perpendicular**, en el punto medio del tramo y sobre
+   una correa individual, hasta alcanzar la deflexión de 4,85 mm. Usar un
+   instrumento de fuerza/deflexión y una referencia recta del tramo sin deflectar.
+3. Comparar la fuerza medida con el intervalo correspondiente. Ajustar la base
+   móvil para corregir el tensado y repetir en las tres correas.
+4. Gates indica aproximarse al extremo superior en correas nuevas y al inferior
+   para usadas. Bloquear la base y volver a comprobar las tres mediciones y
+   la alineación. Confirmar la pauta de retensado de la referencia finalmente comprada.
+
+**Ts** es tensión estática base longitudinal de instalación por correa;
+**F** es fuerza transversal aplicada para medir deflexión. Ninguna de estas
+magnitudes es por sí sola una tensión dinámica de ramal ni la carga lateral
+resultante sobre un eje. El factor 1,5 del límite de comprobación no es el
+factor de servicio 1,3 de 5B, ni R=2,5 una razón dinámica T1/T2 medida.
+
+### Sensibilidad y alcance
+
+Se exportan 18 escenarios de fórmula: N=2/3/4, P=4,194/4,805/5,5 kW y
+G=0,94/0,96, conservando velocidad y constantes SPA verificadas. Los G son
+los extremos tabulados ya verificados en 5B; 0,96 es solo sensibilidad y no
+reemplaza el G conservador de la geometría actual. Las potencias reducidas
+representan hipótesis de accionamiento, no una nueva selección de motor.
+Cambiar N exige revisar gargantas y capacidad; dos o cuatro correas no son
+configuraciones aprobadas para las poleas actuales de tres canales. No se
+extrapolan capacidades ni se asignan propiedades a otras construcciones.
+
+Las pruebas cubren resultados de contraste, unidades, constantes, condiciones
+de medición, entradas inválidas y conservación SHA256 de los históricos.
+Para 5D.2 quedan pendientes:
+
+- Confirmación de correa comercial y tensado real alcanzado, posibilidad de
+  giro libre y reparto de pretensión entre las tres correas.
+- Formulación dinámica con balance de potencia/torque, elasticidad y
+  compatibilidad de ramales, masa lineal y tratamiento de efectos centrífugos.
+  M es el coeficiente tabulado de esta fórmula, no una ficha completa de masa
+  o rigidez para cualquier SPA comercial.
+- Condición gobernante de potencia, pérdidas, aceleración y posibles atascos;
+  no asumir una razón dinámica T1/T2 a partir del factor R.
+- Plano espacial de ramales, poleas y apoyos con posiciones axiales/voladizos
+  para obtener fuerzas laterales vectoriales y, posteriormente, reacciones.
+
+Las tensiones dinámicas, cargas laterales y reacciones permanecen sin calcular.
