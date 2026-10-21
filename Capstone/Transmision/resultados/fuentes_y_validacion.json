@@ -1,0 +1,18 @@
+{
+  "titulo": "Gates Industrial V-Belt Drive Design Manual, 2004",
+  "url": "https://www.gates.com/content/dam/documents-library/catalogs/industrial-v-belt-design-manual-kr.pdf",
+  "paginas_impresas": [
+    56,
+    57
+  ],
+  "paginas_pdf_desde_uno": [
+    58,
+    59
+  ],
+  "fecha_consulta": "2026-10-21",
+  "construccion": "SPA Super HC wrapped; no Super HC MN",
+  "metodo": "A y CL: punto exacto; B: intervalo rotulado; G: menor factor del intervalo, sin interpolación",
+  "resumen_3c": "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\resumen_comparativo.csv",
+  "sha256_3c": "99327ed9f15264e8ba4c955b48ac7e5d93182e042393e49ecd7ae7d09182a7c0",
+  "sha256_3c_conservado": true
+}

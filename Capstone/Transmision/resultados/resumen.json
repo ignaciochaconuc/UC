@@ -1,0 +1,50 @@
+{
+  "etapa_5a": {
+    "relacion": 2.8,
+    "rpm_salida": 517.8571428571429,
+    "velocidad_correa_m_s": 7.592182246175334,
+    "longitud_aproximada_mm": 1599.954100002184,
+    "longitud_exacta_mm": 1600.0001037445395,
+    "abrazamiento_motriz_grados": 158.97630436100656,
+    "abrazamiento_conducida_grados": 201.02369563899344,
+    "cociente_D_menos_d_sobre_a": 0.36487768489163136,
+    "centros_exactos_para_longitud_comercial_mm": 493.3159472423084,
+    "diferencia_longitud_exacta_comercial_mm": 0.00010374453950134921,
+    "diferencia_rpm_vs_3c": 1.8571428571428896
+  },
+  "etapa_5b": {
+    "basica_kw": 3.16,
+    "adicional_relacion_kw": 0.54,
+    "adicional_vida_kw": 0.0,
+    "factor_longitud": 0.94,
+    "factor_abrazamiento": 0.94,
+    "potencia_diseno_kw": 7.15,
+    "capacidad_correa_kw": 3.2693199999999996,
+    "capacidad_total_kw": 9.807959999999998,
+    "numero_minimo_correas": 3,
+    "margen_capacidad_kw": 2.6579599999999974,
+    "margen_sobre_diseno_porcentaje": 37.1742657342657,
+    "utilizacion_capacidad": 0.728999710439276,
+    "cumple_capacidad": true,
+    "factor_servicio_maximo_capacidad": 1.783265454545454
+  },
+  "contraste_factor_0947_no_adoptado": {
+    "potencia_diseno_kw": 7.15,
+    "capacidad_correa_kw": 3.2936659999999995,
+    "capacidad_total_kw": 9.880997999999998,
+    "numero_minimo_correas": 3,
+    "margen_capacidad_kw": 2.730997999999998,
+    "margen_sobre_diseno_porcentaje": 38.19577622377619,
+    "utilizacion_capacidad": 0.7236111170146985,
+    "cumple_capacidad": true,
+    "factor_servicio_maximo_capacidad": 1.7965450909090905
+  },
+  "advertencias": [
+    "Diámetros 100/280 mm supuestos de referencia; confirmar si son exteriores.",
+    "8 h/día y FS=1,3 preliminares; clasificación de máquina y arranques por validar.",
+    "Base de catálogo 12000 h con adicional de vida cero; no es vida garantizada ni requisito de proyecto.",
+    "Se usa G conservador sin interpolar; G=0,947 es solo contraste aportado, excluido de la decisión.",
+    "Salida 517,86 rpm; las cargas heredadas siguen correspondiendo a 516 rpm.",
+    "Pendientes: correa comercial exacta DIN 7753, equivalencia con Gates, ramales, fuerzas en ejes y tensado."
+  ]
+}

@@ -1,0 +1,2 @@
+basica_kw,adicional_relacion_kw,adicional_vida_kw,factor_longitud,factor_abrazamiento,potencia_diseno_kw,capacidad_correa_kw,capacidad_total_kw,numero_minimo_correas,margen_capacidad_kw,margen_sobre_diseno_porcentaje,utilizacion_capacidad,cumple_capacidad,factor_servicio_maximo_capacidad
+3.16,0.54,0.0,0.94,0.94,7.15,3.2693199999999996,9.807959999999998,3,2.6579599999999974,37.1742657342657,0.728999710439276,True,1.783265454545454

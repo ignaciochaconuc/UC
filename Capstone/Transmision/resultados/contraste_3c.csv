@@ -1,0 +1,4 @@
+magnitud,declarado,original_3c,error_absoluto,coincide_redondeo
+potencia_max_kw,4.805,4.805041495726255,4.149572625511411e-05,True
+potencia_media_kw,4.194,4.194421027478125,0.0004210274781248913,True
+torque_max_nm,88.924,88.92396579145439,3.420854561397846e-05,True
