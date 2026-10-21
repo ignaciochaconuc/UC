@@ -1,0 +1,68 @@
+% Etapa 4D: añadir las figuras a la carpeta figuras/ de Overleaf.
+% La evaluación no constituye una verificación estructural final de la matriz.
+\subsection{Simulación estructural preliminar de la matriz perforada}
+
+Se desarrolló un modelo tridimensional de elasticidad lineal por elementos finitos
+para estudiar la respuesta inicial de la matriz frente a las cargas de compactación.
+La geometría representada corresponde a un disco de $200\,\mathrm{mm}$ de diámetro y
+$36\,\mathrm{mm}$ de espesor, con alojamiento central de $50\,\mathrm{mm}$ y
+$102$ perforaciones pasantes de $6\,\mathrm{mm}$ posicionadas según los centros del CAD.
+Se consideraron $E=210\,\mathrm{GPa}$ y $\nu=0{,}30$ como propiedades elásticas de
+referencia para acero, sujetas a la selección definitiva del material.
+
+Las fuerzas normales de cada perforación y las componentes tangenciales se obtuvieron
+de los estados correlacionados de la Etapa~3C/4A. Se analizaron, separadamente,
+el instante de máxima fuerza ($F_z=14{,}071\,\mathrm{kN}$,
+$T=88{,}924\,\mathrm{N\,m}$) y el instante de máximo momento por fuerzas normales
+($M_f=153{,}802\,\mathrm{N\,m}$, con $F_z=12{,}864\,\mathrm{kN}$ y
+$T=79{,}063\,\mathrm{N\,m}$). No se combinaron máximos correspondientes a instantes distintos.
+Cada fuerza se distribuyó sobre una corona de material adyacente a su perforación
+activa, con radios entre $3$ y $5{,}5\,\mathrm{mm}$. Esta distribución superficial
+es una hipótesis aproximada de la transferencia de carga de la biomasa.
+
+Se estudiaron dos condiciones de borde idealizadas: (i) la fijación completa de
+la cara anular inferior entre diámetros $50$ y $58\,\mathrm{mm}$ y (ii) un apoyo
+axial del mismo anillo combinado con restricción tangencial en un sector del
+alojamiento central que representa provisionalmente la chaveta. Las condiciones
+no reemplazan el contacto y la retención axial del montaje real.
+
+\begin{table}[htbp]
+\centering
+\caption{Resultados preliminares FEM con malla de $90\,600$ tetraedros; unidades de tensión y desplazamiento.}
+\label{tab:fem_matriz_4D}
+\small
+\begin{tabular}{llrr}
+\hline
+Caso & Restricción idealizada & $\sigma_{\mathrm{VM,max}}$ [MPa] & $|u_z|_{\max}$ [mm] \\
+\hline
+Máxima fuerza & Anillo fijo & 51{,}05 & 0{,}01182 \\
+Máxima fuerza & Anillo axial + sector chaveta & 77{,}55 & 0{,}01355 \\
+Máximo momento & Anillo fijo & 49{,}74 & 0{,}01094 \\
+Máximo momento & Anillo axial + sector chaveta & 67{,}86 & 0{,}01265 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.76\linewidth]{figuras/convergencia_desplazamiento.png}
+\caption{Sensibilidad del desplazamiento vertical al refinamiento de malla, caso de máxima fuerza.}
+\label{fig:conv_u_matriz}
+\end{figure}
+
+El desplazamiento máximo difiere menos de $1\%$ entre las dos mallas más finas,
+mientras que las tensiones locales son sensibles al refinamiento y a las
+restricciones en la región central. Además, en ambas hipótesis aparecen reacciones
+negativas sobre sectores del apoyo inferior; este resultado cuestiona la
+hipótesis de contacto bilateral sin retención axial y respalda incorporar una
+fijación positiva para mantener el ensamble en servicio. No se interpretaron
+estas reacciones como fuerzas de dimensionamiento directo de la tuerca.
+
+El modelo no incorpora todavía los avellanados de $9\,\mathrm{mm}$, la ranura de
+chaveta, sus concentraciones geométricas, el contacto unilateral con el hombro
+ni la precarga de la retención. Por ello, los valores de la
+Tabla~\ref{tab:fem_matriz_4D} permiten evaluar tendencias de rigidez y
+sensibilidad, pero no establecen aún factores de seguridad definitivos.
+Para finalizar la selección del material será necesario refinar estas regiones,
+verificar convergencia de tensiones, documentar las propiedades mecánicas del
+producto efectivamente suministrado y considerar desgaste, higiene y costo.

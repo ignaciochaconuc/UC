@@ -1,0 +1,49 @@
+% Archivo para incluir desde el cuerpo de su informe, requiere amsmath, graphicx, booktabs, hyperref.
+\subsection{Modelo estructural preliminar de la matriz y el árbol principal}
+\paragraph{Geometría y condiciones de diseño.}
+La matriz es un disco de diámetro $200\,\mathrm{mm}$, espesor $36\,\mathrm{mm}$, con alojamiento central de diámetro $50\,\mathrm{mm}$ y chavetero. La banda perforada contiene $102$ agujeros pasantes de diámetro $6\,\mathrm{mm}$, avellanados a $9\,\mathrm{mm}$ en la cara de entrada. Los centros se toman del modelo CAD de la etapa precedente. El árbol principal es escalonado (largo nominal $383\,\mathrm{mm}$) y su selección provisional es acero AISI 4140. La posición, tipo y capacidad axial de los apoyos no están verificados en los planos disponibles.
+
+\paragraph{Cargas acopladas.}
+Se reusan sin modificación los $1440$ estados del modelo 3C con inclinación. Las máximas de fuerza normal, torque resistente y sus medias son respectivamente $14.071\,\mathrm{kN}$, $88.924\,\mathrm{N\,m}$, $12.399\,\mathrm{kN}$ y $77.624\,\mathrm{N\,m}$. La velocidad de matriz es $516\,\mathrm{rpm}$. Las cargas nominales se evalúan en cada instante, conservando correlaciones y sin sumar máximos independientes.
+
+\paragraph{Resultantes y momentos de las fuerzas normales.}
+Las resultantes $F_1(\theta)$ y $F_2(\theta)$ y sus centroides $(x_i,y_i)$ de 3C permiten escribir:
+\begin{equation}
+ F_z(\theta)=F_1(\theta)+F_2(\theta),\qquad
+ M_x(\theta)=-\sum_i y_i(\theta)F_i(\theta),\qquad
+ M_y(\theta)=\sum_i x_i(\theta)F_i(\theta).
+\end{equation}
+\begin{equation}
+ M_n(\theta)=\sqrt{M_x^2(\theta)+M_y^2(\theta)}.
+\end{equation}
+El máximo calculado de $M_n$ es $153.802\,\mathrm{N\,m}$ a $269.25^\circ$, con $F_z=12.864\,\mathrm{kN}$ y $T=79.063\,\mathrm{N\,m}$ en ese MISMO instante. En el estado de máxima fuerza, $M_n\simeq131.566\,\mathrm{N\,m}$. Estos momentos representan las cargas externas sobre la matriz, pero no el momento interno máximo del árbol sin conocer la disposición de sus apoyos.
+
+\paragraph{Concentraciones geométricas.}
+De las posiciones CAD, el paso mínimo centro-centro entre perforaciones es $12.422\,\mathrm{mm}$. El ligamento mínimo nominal entre perforaciones pasantes de $6\,\mathrm{mm}$ es $6.422\,\mathrm{mm}$, y entre bocas avellanadas de $9\,\mathrm{mm}$ es $3.422\,\mathrm{mm}$. Deben estudiarse las uniones de esos ligamentos, el borde de los avellanados y el chavetero del alojamiento central mediante análisis local de tensiones; la existencia del ligamento no determina por sí sola su factor de seguridad.
+
+\paragraph{Árbol vertical: estimación de tensiones nominales.}
+Para una sección hipotética circular y maciza de diámetro $d$, si transmite la fuerza axial y el torque de un mismo instante:
+\begin{equation}
+ \sigma_z(\theta)=\frac{4F_z(\theta)}{\pi d^2},\quad
+ \tau_t(\theta)=\frac{16T(\theta)}{\pi d^3},\quad
+ \sigma_{\mathrm{VM}}(\theta)=\sqrt{\sigma_z^2(\theta)+3\tau_t^2(\theta)}.
+\end{equation}
+Para $d=35\,\mathrm{mm}$ el máximo correlacionado entrega $\sigma_z=14.625\,\mathrm{MPa}$, $\tau_t=10.563\,\mathrm{MPa}$ y $\sigma_{\mathrm{VM}}=23.423\,\mathrm{MPa}$, sin flexión ni concentración de esfuerzos. Como sensibilidad no definitiva, si TODO el momento externo normal se transmitiera a la misma sección se agregaría $\sigma_b=32M_n/(\pi d^3)$, obteniéndose máximo combinado $\sigma_{\mathrm{VM}}=52.732\,\mathrm{MPa}$. Esta hipótesis NO equivale a haber resuelto las reacciones del árbol.
+
+\paragraph{Materiales y alcance.}
+Como alternativas preliminares para el árbol se pueden estudiar acero SAE 1045 templado y revenido (ficha Atlas: límite inferior $S_y=370\,\mathrm{MPa}$ para barra de diámetro mayor que $40$ y hasta $100\,\mathrm{mm}$) y SAE 4140 variante Ovako 6115 en +QT ($S_y\geq940\,\mathrm{MPa}$ para barras de diámetro entre $25$ y $60\,\mathrm{mm}$). Tales valores son exclusivos de las condiciones comerciales documentadas; deben corroborarse con el diámetro del material de suministro, tratamiento y certificado. Para la matriz, aún no corresponde presentar factores de seguridad ni flechas hasta justificar el apoyo axial y la unión matriz--árbol. En un futuro FEM 3D se incorporarán perforaciones, avellanados y chavetero, cargas por perforación según 3C, refinamiento local y convergencia de malla.
+
+\paragraph{Pendientes de verificación.}
+Se debe confirmar: (i) asiento, tope o brida de retención axial de la matriz; (ii) si el chavetero transmite únicamente torsión; (iii) posiciones y capacidades radial/axial de los rodamientos; (iv) tensiones y dirección de correas; (v) geometría de radios de entalla; y (vi) propiedades certificadas y precios de los materiales. El análisis definitivo de deformación y fatiga requiere estos antecedentes y una carga transitoria de arranque si corresponde.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.94\linewidth]{historial_cargas_y_momentos.png}
+\caption{Resultados acoplados 3C y momentos de cargas normales sobre la matriz. No representa tensiones por elementos finitos.}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.86\linewidth]{mapa_max_momento_normales.png}
+\caption{Distribución geométrica de cargas por perforación en el instante de mayor momento normal. Los tonos indican fuerzas, no tensiones.}
+\end{figure}

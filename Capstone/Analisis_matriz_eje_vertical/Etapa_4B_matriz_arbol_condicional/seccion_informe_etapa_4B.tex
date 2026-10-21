@@ -1,0 +1,41 @@
+% Etapa 4B — texto para integrar en el capítulo Ingeniería de solución.
+% Requiere amsmath, graphicx y booktabs. No reemplaza 4A/3C.
+\subsection{Verificación preliminar de la matriz y árbol principal}
+Se utilizaron los $1440$ estados correlacionados de carga provenientes de la etapa 3C y postprocesados en la etapa 4A. La matriz presenta $102$ perforaciones de diámetro nominal $6\,\mathrm{mm}$, entradas avellanadas de $9\,\mathrm{mm}$, un diámetro exterior de $200\,\mathrm{mm}$ y un alojamiento central de $50\,\mathrm{mm}$. El conjunto CAD muestra un resalte del árbol de diámetro $58\,\mathrm{mm}$, pero se mantiene pendiente la confirmación de la fijación axial y de la transmisión de torque a través de esta unión.
+
+El historial de compactación entrega una fuerza axial máxima $F_{z,\max}=14{,}071\,\mathrm{kN}$ y un torque máximo $T_{\max}=88{,}924\,\mathrm{N\,m}$. El momento máximo generado por las fuerzas normales de compactación es $M_{\max}=153{,}802\,\mathrm{N\,m}$, a un ángulo de $269{,}25^\circ$. En ese instante la fuerza y el torque son $12{,}864\,\mathrm{kN}$ y $79{,}063\,\mathrm{N\,m}$, respectivamente. Los máximos individuales no se sustituyeron por una combinación simultánea ficticia.
+
+\paragraph{Árbol vertical.} Para cada sección circular maciza lisa de diámetro $d$ se calcularon las tensiones nominales
+\begin{equation}
+\sigma_z=\frac{4F_z}{\pi d^2},\qquad
+\tau_t=\frac{16T}{\pi d^3},\qquad
+\sigma_{\rm VM}=\sqrt{\sigma_z^2+3\tau_t^2}.
+\end{equation}
+A fin de mostrar la sensibilidad al diámetro, también se evaluó un escenario condicional suponiendo que toda la resultante externa de momento de las fuerzas normales se transmite por la sección:
+\begin{equation}
+\sigma_b^{\mathrm{cond}}=\frac{32M}{\pi d^3},\qquad
+\sigma_{\rm VM}^{\mathrm{cond}}=\sqrt{\bigl(|\sigma_z|+|\sigma_b^{\mathrm{cond}}|\bigr)^2+3\tau_t^2}.
+\end{equation}
+Esta hipótesis NO representa el momento interno real del árbol, que depende de las reacciones de los rodamientos y las fuerzas de la transmisión. En cada instante se calcularon las tensiones combinadas antes de extraer el máximo.
+\begin{table}[ht]
+\centering
+\caption{Tensiones máximas nominales y sensibilidad al momento externo de compactación.}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$d$ (mm) & $\sigma_{z,\max}$ (MPa) & $\sigma_{\rm VM,\max}$ (MPa) & $\sigma_{\rm VM,cond,\max}$ (MPa)\\
+\midrule
+35 & 14,63 & 23,42 & 52,73\\
+40 & 11,20 & 16,60 & 36,57\\
+45 & 8,85 & 12,34 & 26,57\\
+50 & 7,17 & 9,53 & 20,02\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Apoyo axial de la matriz.} Bajo la \emph{hipótesis no confirmada} de que el resalte de $58\,\mathrm{mm}$ soporta la matriz mediante una superficie anular de diámetro interior $50\,\mathrm{mm}$, el área nominal de contacto sería $678{,}58\,\mathrm{mm^2}$. El esfuerzo medio de apoyo para la fuerza máxima sería $p_{\rm prom,max}=20{,}74\,\mathrm{MPa}$. El valor no representa un campo local de contacto ni permite validar el resalte sin comprobar la retención axial, la planitud y el área efectiva de contacto.
+
+\paragraph{Transmisión.} Para una polea conducida de diámetro nominal $280\,\mathrm{mm}$, la diferencia total de tensiones de ramales que transmite el torque máximo es $T_1-T_2=635{,}17\,\mathrm{N}$. Como los ramales tiran aproximadamente en la misma dirección, la carga lateral depende de $T_1+T_2$, y no puede determinarse sin conocer la pretensión y la transmisión instalada. Tampoco es posible distribuir las reacciones entre los rodamientos sin especificar su ubicación y función axial/radial.
+
+\paragraph{Materiales y limitaciones.} Las secciones lisas del árbol muestran tensiones nominales bajas frente a los límites de fluencia documentados de acero 1045 templado y revenido (mínimo $370\,\mathrm{MPa}$ para barras de más de $40$ a $100\,\mathrm{mm}$) y de acero 42CrMo4, variante Ovako 6082 templado y revenido (mínimo $650\,\mathrm{MPa}$ para dimensiones de más de $40$ a $100\,\mathrm{mm}$). Se requiere confirmar el suministro específico. La selección definitiva debe incorporar flexión real por correas, concentraciones de esfuerzos, fatiga y condiciones de apoyo.
+
+Para la matriz, los ligamentos geométricos mínimos se estimaron en $6{,}422\,\mathrm{mm}$ entre orificios de $6\,\mathrm{mm}$ y $3{,}422\,\mathrm{mm}$ entre bocas de $9\,\mathrm{mm}$. Sin una malla tridimensional y las superficies reales de unión/apoyo no es posible calcular responsablemente las tensiones máximas ni las deformaciones locales. La simulación de elementos finitos se considera pendiente de la definición constructiva de la unión matriz--árbol y del apoyo axial.

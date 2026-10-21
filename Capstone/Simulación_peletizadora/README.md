@@ -594,6 +594,15 @@ un ciclo único no era general.
 La referencia BibTeX está en `referencias.bib` y la trazabilidad numérica se
 exporta en `resultados/etapa_3d_resistencia_fatiga/fuentes_materiales.csv`.
 
+## Organización dentro de Capstone
+
+Este proyecto contiene las etapas 1–4A de contacto, eje transversal y rodillos.
+El aporte de matriz/eje vertical está en
+[Analisis_matriz_eje_vertical](../Analisis_matriz_eje_vertical/README.md), y el
+trabajo futuro de transmisión en [Transmision](../Transmision/README.md).
+`datos/agujeros_matriz.csv` permanece como entrada de esta simulación. El índice
+general se encuentra en [Capstone/README.md](../README.md).
+
 ## Etapa 4A: verificación preliminar de rodamientos de los rodillos
 
 `simulacion_rodamientos.py` verifica exclusivamente los cuatro rodamientos

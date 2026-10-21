@@ -1,0 +1,11 @@
+{
+  "D_ext_mm": 58,
+  "D_int_mm": 50,
+  "area_teorica_contacto_mm2": 678.5840131753953,
+  "p_media_axial_MPa": 18.271692973750323,
+  "p_max_axial_MPa": 20.735807510549623,
+  "fuerza_tangencial_en_union_d50_torque_max_N": 3556.9586316581754,
+  "fuerza_tangencial_en_union_d50_torque_media_N": 3104.943441542931,
+  "peso_aprox_matriz_sin_avellanados_N": 73.6731,
+  "nota": "Presión promedio condicionada a contacto anular COMPLETO; no válida si no hay contacto/retención o carga localizada."
+}

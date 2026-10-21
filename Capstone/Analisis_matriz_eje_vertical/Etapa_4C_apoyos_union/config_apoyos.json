@@ -1,0 +1,10 @@
+{
+  "zA_mm": null,
+  "zB_mm": null,
+  "zM_mm": null,
+  "zP_mm": null,
+  "F_correa_N": null,
+  "angulo_correa_grados": null,
+  "apoyo_axial": null,
+  "nota": "Rellenar solo con CENTROS de apoyos del árbol vertical y la fuerza radial total de la polea; los 118 mm del eje transversal no son el vano vertical. Momento de cargas normales usa los valores originales de 4A."
+}

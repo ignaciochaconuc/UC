@@ -1,0 +1,18 @@
+{
+  "perforaciones": 102,
+  "espesor_m": 0.036,
+  "radio_exterior_m": 0.1,
+  "radio_central_m": 0.025,
+  "radio_centros_min_m": 0.04702993137354125,
+  "radio_centros_max_m": 0.07986495810429003,
+  "paso_min_entre_centros_m": 0.012421999999999989,
+  "ligamento_min_entre_agujeros_6mm_m": 0.0064219999999999885,
+  "ligamento_min_bocas_9mm_m": 0.0034219999999999893,
+  "margen_exterior_boca_9mm_m": 0.01563504189570997,
+  "margen_centro_boca_9mm_m": 0.01752993137354125,
+  "area_bruta_m2": 0.031415926535897934,
+  "area_neta_simplificada_m2": 0.026568449071408883,
+  "porcentaje_huecos_pasantes_area": 15.429999999999998,
+  "masa_cilindrica_simplificada_kg": 7.50824370758015,
+  "advertencia": "Masa y área sin chavetero ni avellanados; no son resistencia neta bajo flexión"
+}

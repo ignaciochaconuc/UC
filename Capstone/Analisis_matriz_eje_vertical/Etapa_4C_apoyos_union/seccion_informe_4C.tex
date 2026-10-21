@@ -1,0 +1,25 @@
+% Para incluir tras la Etapa 4B: requiere amsmath y booktabs.
+\subsection{Actualizaci\'on geom\'etrica y verificaci\'on de uni\'on matriz--\'arbol}
+Se conservaron sin alteraciones los $1440$ estados correlacionados provenientes de 3C y 4A. Las cotas adicionales del conjunto indican una separaci\'on m\'inima de $118\,\mathrm{mm}$ entre dos caras coaxiales de $\varnothing40\,\mathrm{mm}$ en el eje transversal de rodillos, un brazo radial anotado de $62{,}5\,\mathrm{mm}$ y una distancia vertical de referencia de $343{,}3\,\mathrm{mm}$ hasta la zona de polea. Ninguno de estos valores confirma la distancia entre los centros de rodamientos del \emph{\'arbol vertical}. La holgura anotada de $0{,}3\,\mathrm{mm}$ difiere de la referencia de $0{,}1\,\mathrm{mm}$ utilizada en 3C; esta actualizaci\'on no se aplic\'o retroactivamente a las cargas.
+
+\paragraph{Cargas globales.}
+La fuerza axial m\'axima es $14{,}071\,\mathrm{kN}$, el torque m\'aximo $88{,}924\,\mathrm{N\,m}$ y el momento m\'aximo de cargas normales $153{,}802\,\mathrm{N\,m}$. Estos m\'aximos no son simult\'aneos; las verificaciones se realizaron para cada estado angular.
+
+\paragraph{Contactos anulares: verificaci\'on condicional.}
+Si la matriz descargara el empuje axial y el momento normal exclusivamente mediante una cara anular plana y completamente en contacto de di\'ametros $50$ y $58\,\mathrm{mm}$, su \`area y momento de inercia superficial ser\'ian
+\begin{equation}
+A=\frac{\pi}{4}(58^2-50^2)=678{,}58\,\mathrm{mm^2},\qquad
+I=\frac{\pi}{64}(58^4-50^4)=248\,701\,\mathrm{mm^4}.
+\end{equation}
+Para una distribuci\'on lineal el\'astica en contacto completo:
+\begin{equation}
+p_{\rm max,min}(t)=\frac{F_z(t)}{A}\pm\frac{M_f(t)\,r_o}{I},\qquad
+r_o=29\,\mathrm{mm},\quad M_f\,[\mathrm{N\,mm}].
+\end{equation}
+La envolvente del historial entrega $p_{\max}=37{,}38\,\mathrm{MPa}$ y $p_{\min}=0{,}71\,\mathrm{MPa}$. La m\'axima excentricidad equivalente de carga es $e_{\max}=12{,}15\,\mathrm{mm}$, pr\'oxima a la excentricidad umbral $e_{\rm crit}=I/(A\,r_o)=12{,}64\,\mathrm{mm}$. Este modelo es \emph{condicional}, no constituye una simulaci\'on de contacto FEM ni verifica el mecanismo de retenci\'on axial.
+
+\paragraph{Transmisi\'on de torque.}
+Bajo una hip\'otesis adicional de transmisi\'on de torque \emph{exclusivamente por fricci\'on} en toda la cara anular, la m\'axima relaci\'on entre torque requerido y fuerza normal por radio efectivo da $\mu_{\rm requerido}\simeq0{,}234$. No se presume disponibilidad de ese coeficiente; se debe dimensionar la chaveta o el acople de torque, y la retenci\'on axial por separado.
+
+\paragraph{Datos pendientes.}
+Para el \`arbol vertical faltan las coordenadas de los centros reales de los rodamientos, el apoyo que recibe el empuje axial, la pretensi\'on total de las correas y el detalle de la fijaci\'on matriz--\'arbol. Por ello se mantienen pendientes las reacciones radiales num\'ericas, diagramas reales de corte y momento, comprobaci\'on de fatiga y desplazamientos del \`arbol, as\'i como la simulaci\'on FEM de tensiones locales en la matriz perforada.

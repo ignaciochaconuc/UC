@@ -1,0 +1,28 @@
+{
+  "muestras": 1440,
+  "Fz_max_N": 14070.987476941267,
+  "T_max_Nm": 88.92396579145439,
+  "M_normales_max_Nm": 153.80151620221972,
+  "diametros_anillo_mm": [
+    50.0,
+    58.0
+  ],
+  "area_anillo_mm2": 678.5840131753953,
+  "inercia_diametral_mm4": 248701.0408287824,
+  "modulo_contacto_mm3": 8575.897959613187,
+  "excentricidad_limite_mm": 12.637931034482762,
+  "excentricidad_max_mm": 12.14892862500586,
+  "angulo_excentricidad_max_deg": 89.99999999999999,
+  "presion_min_global_MPa": 0.7130373465808368,
+  "presion_max_global_MPa": 37.38224122381908,
+  "angulo_presion_max_deg": 87.75,
+  "angulo_presion_min_deg": 89.99999999999999,
+  "radio_contacto_efectivo_mm": 27.04938271604938,
+  "mu_requerida_friccion_solo_max": 0.2342772294712615,
+  "Lc_gap_01_mm": 19.359493795035036,
+  "Lc_gap_03_mm": 18.876175460087246,
+  "cambio_Lc_porcentaje": -2.496544279849622,
+  "distancia_118mm": "mínima separación entre DOS CARAS de eje transversal, NO centros de rodamientos del árbol vertical",
+  "reacciones_estado": "PENDIENTE: centros de rodamientos verticales y pretensión/dirección de correa no confirmados.",
+  "advertencia": "Resultados del anillo IDEAL y CONDICIONALES a que transmite Fz+M y mantiene contacto plano completo. No son contacto FEM ni seguridad de retención; torque solo por fricción es un escenario hipotético."
+}
