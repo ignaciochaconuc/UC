@@ -1,0 +1,11 @@
+requisito,estado
+"Plano de eje específico de ambos motores: tolerancia Ø38, hombro, radio, chaflán y coordenadas axiales",pendiente
+"Chavetero Marathon: ancho, altura de chaveta, profundidades, radios, tolerancias y largo activo; en BEVI F10 nominal sí publicado, resto por confirmar",pendiente
+No interpretar GA41 de BEVI como profundidad confirmada sin esquema; solicitar plano dimensional,pendiente
+"Longitud efectiva de contacto, posición del cubo, hombros, arandela/separadores y retención axial diseñados; 62 mm no es largo activo",pendiente
+"Carga radial admisible de cada fabricante para su eje, configuración de rodamientos, rpm, vida y sentido de carga",pendiente
+Distancia axial del plano resultante de las tres correas y referencia exacta de la tabla de carga radial,pendiente
+"Peso y centro de masa de polea, orientación de eje y otras cargas para combinar con las correas; no asumir resultante completa del motor",pendiente
+"Montaje BEVI B3/B14 o Marathon B14: definir base/brida, fijaciones, alineación y tensado; B14 no equivale a base móvil de patas B3",pendiente
+"Compatibilidad de alimentación, conexión, arranque y régimen real; 8 h/día no define vida de rodamientos",pendiente
+"Interferencias de cubo Ø50/55/60 con aligeramientos CAD; condición AISI1045, sección debilitada, M5 y resistencia pendientes",pendiente

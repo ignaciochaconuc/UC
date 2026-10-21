@@ -1,0 +1,5 @@
+motor,escenario,carga_condicional_correas_n,distancia_aplicacion_mm,referencia_axial,admisible_catalogo_n,utilizacion_radial,cumple_comparacion_carga_correas,montaje_aprobado,estado
+BEVI_121165,maximo_3c_condicional,1169.524320572512,,,,,,False,pendiente_capacidad_fabricante_y_montaje
+BEVI_121165,motor_nominal_ideal_historico,1171.249898648466,,,,,,False,pendiente_capacidad_fabricante_y_montaje
+Marathon_6RN132S04E30U24B3641_A,maximo_3c_condicional,1169.524320572512,,,,,,False,pendiente_capacidad_fabricante_y_montaje
+Marathon_6RN132S04E30U24B3641_A,motor_nominal_ideal_historico,1171.249898648466,,,,,,False,pendiente_capacidad_fabricante_y_montaje

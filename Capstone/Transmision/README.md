@@ -1,4 +1,4 @@
-# Transmisión mecánica — Etapas 5A a 5E.1
+# Transmisión mecánica — Etapas 5A a 5E.2-B
 
 Modelo preliminar de una transmisión abierta por tres correas SPA 1600 entre el
 motor de 5,5 kW a 1450 rpm y el eje vertical. Las etapas existentes se consultan
@@ -1010,3 +1010,62 @@ real sigue pendiente de plano/ficha; también el ajuste y retención axial.
 Las pruebas cubren frontera Ø38 de la candidata, conversión N·m/N·mm,
 fuerzas, ligamentos central/esquina, casos inválidos, sensibilidad a largo,
 comprobación de ejes pendientes y conservación SHA256 de etapas anteriores.
+
+## Etapa 5E.2-B — Compatibilidad de motores comerciales
+
+Comparación sin selección ni cambio del motor histórico de 1450 rpm.
+Desde `Capstone/Transmision`, ejecutar solo la subetapa nueva:
+
+```powershell
+python simulacion_compatibilidad_motor.py
+python -m pytest -q
+```
+
+Datos transcritos y nulos en `parametros_motores.json`; procedimiento y límites
+en `metodologia_compatibilidad_motor.md`. CSV/JSON, requisitos y SHA256 en
+`resultados/etapa_5e2b/`. No se regeneran las etapas anteriores.
+
+| Referencia comercial | Eje / extensión | Ancho publicado | rpm nominales | Montaje |
+|---|---|---|---:|---|
+| BEVI 4AL3 132S-4, 121165 | Ø38 / 80 mm | F10 mm | 1470 | B3/B14 |
+| Marathon 6RN132S04E30U24B3641-A | Ø38 / 80 mm | Pendiente | 1475 | B14 |
+
+Fuentes oficiales en `referencias.bib`: BEVI consultada directamente;
+Marathon consultada en contenido indexado oficial porque el acceso directo
+devuelve HTTP403. Su outline anunciado no fue inspeccionado: solicitarlo al
+proveedor antes de confirmar chavetero, hombros o tolerancias. Ambos son
+referencias de 5,5 kW, cuatro polos, trifásicos, 50 Hz; ninguno se selecciona.
+
+Ø38 coincide **nominalmente** con ambos. Los 10 mm CAD coinciden con F10
+de BEVI; en Marathon no se confirma el ancho por analogía de carcasa.
+No hay aprobación de ajuste ni chaveta: faltan tolerancias, altura,
+profundidades, radios, longitud activa y materiales. BEVI publica GA41 y
+DH M12x28; se conservan como cotas de ficha, sin inferir profundidad o
+dimensionar retención automáticamente. La fijación axial Marathon queda pendiente.
+
+La envolvente de cubo de 62 mm es menor que los 80 mm de extensión por
+18 mm, condición necesaria, **no holgura instalada ni contacto efectivo**.
+Faltan posición del cubo, hombros, radios, chaflanes y retención axial.
+El B14 del Marathon no equivale a patas B3: confirmar brida/base y tensado.
+
+Se importan 1169,524 N del máximo 3C condicional y 1171,250 N del motor
+nominal ideal histórico como escenarios separados de 5D.2. La capacidad
+radial de ambos motores queda **pendiente**: pedir valor/curva y condiciones
+de aplicación al fabricante, distancia y referencia axial, rpm, vida,
+orientación y rodamientos. Faltan plano resultante de correas, peso y centro
+de masa de polea y otras cargas. No se inventan admisibles ni reacciones.
+Las sensibilidades de pretensión siguen separadas en su archivo original.
+
+1470/1475 difieren de 1450 por +20/+25 rpm (1,379/1,724 %); no se escalan
+ni sobrescriben velocidades, torques, capacidad o tensado previos. Los 1500
+rpm del título Marathon no sustituyen sus 1475 rpm nominales publicados.
+Las eficiencias eléctricas 89,8/89,6 % no son eficiencias de correas ni
+reducen nuevamente los 5,5 kW nominales de salida mecánica. Confirmar además
+alimentación/conexión: las fichas publican tensiones distintas.
+
+Se conservan por importación las alternativas Ø50/55/60 y sus ligamentos.
+**Puede continuar el predimensionamiento de Ø55, no su aprobación**: faltan
+interferencias CAD con los ocho aligeramientos, geometría local, materiales
+y resistencia de cubo/chaveta/montaje. Ø45 sigue vigente en CAD y mantiene
+la incompatibilidad geométrica detectada. No se cambia la polea conducida,
+no se ejecuta FEM y no se asignan factores de seguridad ni motor definitivo.

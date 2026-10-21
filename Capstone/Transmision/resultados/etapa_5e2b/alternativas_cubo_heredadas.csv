@@ -1,0 +1,9 @@
+diametro_exterior_mm,agujero_mm,ancho_chavetero_mm,profundidad_cubo_mm,pared_radial_lisa_mm,ligamento_central_fondo_mm,ligamento_radial_esquina_ideal_mm,diametro_exterior_minimo_envolvente_sin_reserva_mm,fondo_plano_contenido_en_exterior_ideal,estado
+45.0,38.0,10.0,3.3,3.5,0.1999999999999993,-0.35366491396948874,45.70732982793898,False,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+45.0,38.0,10.0,3.5,3.5,0.0,-0.5488611432322195,46.09772228646444,False,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+50,38.0,10.0,3.3,6.0,2.6999999999999993,2.1463350860305113,45.70732982793898,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+50,38.0,10.0,3.5,6.0,2.5,1.9511388567677805,46.09772228646444,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+55,38.0,10.0,3.3,8.5,5.199999999999999,4.646335086030511,45.70732982793898,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+55,38.0,10.0,3.5,8.5,5.0,4.4511388567677805,46.09772228646444,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+60,38.0,10.0,3.3,11.0,7.699999999999999,7.146335086030511,45.70732982793898,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
+60,38.0,10.0,3.5,11.0,7.5,6.9511388567677805,46.09772228646444,True,sin validación resistente; la envolvente sin reserva no es diámetro recomendado
