@@ -1,0 +1,9 @@
+﻿prioridad;componente;resultado_aprovechable;decision_preliminar;pendiente_bloqueante
+P0;Asiento exterior 6206;"Alivio axial 1.6 mm sobre Ø29.2; soporte nominal 14.4/16 mm";Revisar extension de asiento Ø30 conservando centros;Plano detalle hombros radios y ajuste
+P1;Rosca M24x2 y soporte;"Reacción ideal max 7.632 kN; momento ideal max 255.04 Nm; As=384.4 mm2";Proponer union con camino de cortante/momento verificable;Espesor soporte geometria tuerca arandela bloqueo y precarga
+P1;Matriz a arbol;"Torque max 88.924 Nm; chaveta 14x9 propuesta; presion apoyo condicional";Chaveta mas hombro y retencion axial independiente;Chavetero largo efectivo contacto materiales retencion
+P1;Rodamientos eje vertical;"Fz max 14.071 kN; Fr correa condicional 1.170 kN";Concepto localizador axial y flotante;Centros y tipo real de rodamientos y orientacion
+P1;Soportes y bastidor;Reacciones 3C y cargas de transmision disponibles;Cerrar camino de carga local sin FEM global;Secciones materiales uniones anclajes
+P2;Cubo motor;"CAD Ø45/38 incompatible con chaveta 10x8; propuesta Ø55/38";Resolver aligeramientos e interferencias;Plano CAD definitivo y material
+P2;Base motor;"Carrera nominal propuesta 60 mm; fuerza de correa condicional";Predimensionar bloqueo con geometria definida;Modelo motor peso base guia pernos coeficiente contacto
+P2;Resguardos; Riesgos de atrapamiento en correa y rodillos;Definir proteccion conceptual antes de operacion;Plano envolvente y acceso
