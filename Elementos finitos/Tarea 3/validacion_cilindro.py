@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 import numpy as np
+from scipy.sparse import coo_matrix, csr_matrix
+from scipy.sparse.linalg import spsolve
 
 # Leer solo las funciones generales del notebook para validar el codigo actual.
 ruta = Path(__file__).with_name("Tarea_3.ipynb")
@@ -53,7 +55,7 @@ sigma_analitica = np.array([0, sigma_0, 0, 0])
 error_U = np.max(np.abs(U-U_analitico))
 error_sigma = np.max(np.abs(tensiones-sigma_analitica))
 error_vm = np.max(np.abs(sigma_vm-sigma_0))
-error_simetria = np.max(np.abs(K-K.T))/np.max(np.abs(K))
+error_simetria = abs(K-K.T).max()/abs(K).max()
 reaccion_axial = R[1]+R[3]
 error_equilibrio = abs(reaccion_axial+P)/P
 Kt = np.max(sigma_vm)/sigma_0
