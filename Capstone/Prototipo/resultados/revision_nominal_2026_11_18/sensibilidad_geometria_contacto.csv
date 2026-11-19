@@ -1,0 +1,4 @@
+espesor_biomasa_hipotetico_m,longitud_contacto_hipotetica_m,fuerza_total_max_n,torque_max_nm,estado
+0.001,0.00714142842854285,524.1454456547498,1.6344953137292326,"geometría de contacto hipotética, no cargas medidas"
+0.002,0.01,734.703363583227,2.306424780926247,"geometría de contacto hipotética, no cargas medidas"
+0.004,0.013856406460551017,1007.4291401172409,3.1564368935383786,"geometría de contacto hipotética, no cargas medidas"

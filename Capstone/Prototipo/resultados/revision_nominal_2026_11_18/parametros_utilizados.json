@@ -1,0 +1,172 @@
+{
+  "version": "prototipo_independiente_2026_11_18",
+  "origen_nominales": "Solicitud del equipo y aclaración: patrón igual al comercial, coordenadas proporcionales al radio. Sin registro de compras ni CAD del prototipo incorporados.",
+  "matriz": {
+    "diametro_m": 0.1,
+    "espesor_m": 0.01,
+    "numero_agujeros": 102,
+    "diametro_agujero_m": 0.006,
+    "diametro_central_m": 0.013,
+    "material_previsto": "AISI 304",
+    "certificado_material": null
+  },
+  "patron": {
+    "archivo_origen": "../Simulación_peletizadora/datos/agujeros_matriz.csv",
+    "factor_coordenadas": 0.5,
+    "fuente": "Aclaración del equipo: escalar coordenadas con el radio; no escalar diámetros de agujero dados explícitamente",
+    "medido_prototipo": false
+  },
+  "rodillos": {
+    "numero": 2,
+    "diametro_m": 0.052,
+    "ancho_m": 0.03,
+    "centro_radial_m": 0.03175,
+    "fuente_posicion": "Hipótesis de semejanza: 63,5 mm comerciales × 0,5, no medición de montaje",
+    "espesor_biomasa_escenario_m": 0.002,
+    "fuente_biomasa": "Escenario geométrico: 4 mm comercial × 0,5; pendiente medir",
+    "holgura_real_m": null,
+    "material_previsto": "AISI 304",
+    "bore_real_m": null,
+    "alojamiento_real_m": null
+  },
+  "presion": {
+    "referencia_equipo_pa": 2260000,
+    "formula_ep2": null,
+    "parametros_biomasa": null,
+    "validada_experimentalmente": false,
+    "factores_sensibilidad": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "nota": "2,26 MPa se usa solo como escenario aportado, no se deriva de L/D ni de 44 MPa; falta memoria de extrusión"
+  },
+  "resistencia_tangencial": {
+    "mu_escenarios": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "mu_referencia_escenario": 0.1,
+    "fuente": "Sensibilidad propia alrededor de hipótesis comercial mu_eff=0,1; no coeficiente medido del prototipo"
+  },
+  "eje_transversal": {
+    "diametro_nominal_m": 0.006,
+    "longitud_m": 0.1,
+    "tipo": "varilla roscada M6 zincada",
+    "paso_real_m": null,
+    "rosca_escenario": "M6x1",
+    "diametro_nucleo_escenario_m": 0.004773,
+    "fuente_rosca": "tr_rosca_m6_2026",
+    "apoyos_reales": null,
+    "apoyos_escenarios": [
+      "biempotrado",
+      "biapoyado"
+    ],
+    "montaje_rodamientos_escenario": "Dos rodamientos por rodillo, caras externas a ras de rodillo; no montaje confirmado",
+    "E_escenarios_pa": [
+      180000000000,
+      205000000000,
+      220000000000
+    ],
+    "E_referencia_escenario_pa": 205000000000,
+    "Sy_escenarios_pa": [
+      200000000,
+      400000000,
+      600000000
+    ],
+    "clase_resistencia_real": null,
+    "fuente_propiedades_real": null
+  },
+  "arbol_principal": {
+    "diametro_nominal_m": 0.0127,
+    "tipo": "varilla roscada de acero zincado",
+    "fijacion": "tuercas en matriz y transmisión, según equipo",
+    "familia_rosca": null,
+    "paso_real_m": null,
+    "diametro_nucleo_real_m": null,
+    "factores_diametro_nucleo_sensibilidad": [
+      0.75,
+      0.85,
+      1.0
+    ],
+    "apoyos": null,
+    "material_grado": null,
+    "longitud_engrane_tuercas_m": null
+  },
+  "rodamientos": {
+    "designacion_aportada": "608ZZ",
+    "cantidad": 4,
+    "diametro_interior_m": 0.008,
+    "diametro_exterior_m": 0.022,
+    "ancho_m": 0.007,
+    "adquiridos_segun_equipo": true,
+    "fabricante_adquirido": null,
+    "comprobante_local": null,
+    "referencia_comparacion": "EZO/Kitanihon Seiki 608ZZ",
+    "capacidad_dinamica_referencia_n": 3300,
+    "capacidad_estatica_referencia_n": 1370,
+    "fuente": "ezo_608zz_2026",
+    "adaptador_real": null,
+    "Fa_real_n": null
+  },
+  "motor": {
+    "modelo_aportado": "Siemens 1LA7063-4AB10",
+    "potencia_mecanica_nominal_w": 180,
+    "rpm_nominal": 1350,
+    "fases": 3,
+    "tension_aportada_v": "230/400",
+    "documento_compra_local": null,
+    "relacion_reduccion_real": null,
+    "reducciones_sensibilidad": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "eficiencias_mecanicas_sensibilidad": [
+      0.6,
+      0.8,
+      1.0
+    ],
+    "eficiencia_electrica_real": null,
+    "nota": "Las reducciones son escenarios numéricos, no poleas, engranajes o accionamiento seleccionados"
+  },
+  "carcasa": {
+    "diametros_referencia_m": [
+      0.1,
+      0.148
+    ],
+    "material": "PLA FFF",
+    "funcion_soportante_confirmada": null,
+    "espesor_pared_m": null,
+    "relleno": null,
+    "orientacion": null,
+    "filamento": null
+  },
+  "tolva": {
+    "diametro_maximo_m": 0.2,
+    "material": "PLA FFF",
+    "espesor_pared_m": null,
+    "relleno": null,
+    "orientacion": null,
+    "masa_biomasa_kg": null
+  },
+  "sensibilidad_contacto": {
+    "factores_espesor_biomasa": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "nota": "Variaciones hipotéticas del espesor2mm, no medidas ni espesor final de pellet"
+  },
+  "numerico": {
+    "posiciones_angulares": 1440,
+    "cuadratura": 64,
+    "cuadratura_contraste": 128,
+    "paso_viga_m": 0.002,
+    "paso_viga_contraste_m": 0.001
+  },
+  "estado": "configuración nominal y escenarios; no prototipo validado"
+}

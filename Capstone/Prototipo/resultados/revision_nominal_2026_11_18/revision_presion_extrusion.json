@@ -1,0 +1,12 @@
+{
+  "fuente": "stelte_presion_2011",
+  "formula_referencia": "Px=PN0/nuLR * expm1(4*mu_pared*nuLR*L_activa/D)",
+  "formula_ep2_encontrada": false,
+  "PN0_pa": null,
+  "mu_pared": null,
+  "nu_biomasa_LR": null,
+  "presion_calibrada_pa": null,
+  "presion_escenario_equipo_pa": 2260000,
+  "aplicabilidad": "Régimen estacionario de canal con material calibrado; no garantiza densificación, calidad o arranque del prototipo",
+  "conclusion": "L/D1,667 no basta para verificar2,26MPa; longitud activa puede diferir del espesor si hay entrada/alivio. No copiar propiedades de biomasa de otra especie."
+}

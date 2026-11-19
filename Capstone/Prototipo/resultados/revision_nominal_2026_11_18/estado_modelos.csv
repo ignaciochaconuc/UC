@@ -1,0 +1,11 @@
+modelo,estado,detalle
+geometria,reconstruida_por_indicacion_equipo,"Centros escala0,5; diámetros de perforación6mm no escalados; no CAD medido"
+presion_extrusion,pendiente_validacion,"LD calculado;2,26MPa es dato preliminar aportado; fórmula y biomasa no disponibles"
+cargas_globales,escenarios_ejecutados,Superposición parcial1440estados; presión constante de escenario; rodillos y biomasa por semejanza explícita
+eje_transversal,cribado_lineal_condicionado,"NúcleoM6x1, apoyos y posiciones de rodamientos hipotéticos; si u/L>2% se marca alerta, no predicción física de flecha"
+rodamientos,referencia_no_producto_adquirido,EZO608ZZ identificado; marca comprada y montajeM6/8 sin confirmar;vidas condicionadasFa0
+matriz_FEM,pendiente_no_ejecutado,"Faltan apoyo/retención reales, condición304 y nu respaldado; FEM comercial con36mm/collar58 no es reutilizable directamente"
+arbol_principal,demanda_nominal_sensibilidad,"Familia/paso/núcleo/apoyos y precarga desconocidos; sección lisa variable es cribado, no rosca aprobada"
+carcasa_PLA,pendiente,"Si transmite reacciones de eje/apoyos es crítica; faltan camino de cargas, espesor e impresión. No modelo isotrópico garantizado"
+tolva_PLA,pendiente,"Carga de biomasa, uniones, espesor e impresión pendientes; no asignar compactación completa a tolva"
+accionamiento,sensibilidad_no_configuracion_real,"1350rpm motor;reducciones1/2/4/8/16 hipotéticas, no mantener516rpm;sin aprobación del motor"

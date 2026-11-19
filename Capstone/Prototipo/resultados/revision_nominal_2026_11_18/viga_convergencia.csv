@@ -1,0 +1,3 @@
+apoyo,desplazamiento_referencia_m,diferencia_relativa_u,diferencia_relativa_sigma,nota
+biempotrado,0.00026368130933108726,0.00010164030131598611,6.335176827576561e-11,"Solo convergencia de viga lineal, no validación del montaje ni de grandes flechas"
+biapoyado,0.0014885605405128997,0.00015754260380040908,8.488920677507394e-11,"Solo convergencia de viga lineal, no validación del montaje ni de grandes flechas"

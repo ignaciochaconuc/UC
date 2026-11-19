@@ -1,0 +1,4 @@
+factor_diametro_hipotetico,diametro_equivalente_hipotetico_m,sigma_axial_max_pa,tau_torsion_max_pa,vm_axial_torsion_max_pa,paso_vm_max,fuerza_correlacionada_n,torque_correlacionado_nm,estado
+0.75,0.009524999999999999,10310795.61219998,13592972.945657404,25702514.403471984,99,734.7033635832269,2.306424780926247,"demanda_si_transmite_total;sección circular hipotética,excluye flexión,entallas,tuercas y apoyos;sinFS"
+0.85,0.010794999999999999,8027436.030259499,9337733.297698703,18056010.59583101,621,734.703363583227,2.306424780926247,"demanda_si_transmite_total;sección circular hipotética,excluye flexión,entallas,tuercas y apoyos;sinFS"
+1.0,0.0127,5799822.531862488,5734535.461449216,11501853.427902631,99,734.7033635832269,2.306424780926247,"demanda_si_transmite_total;sección circular hipotética,excluye flexión,entallas,tuercas y apoyos;sinFS"

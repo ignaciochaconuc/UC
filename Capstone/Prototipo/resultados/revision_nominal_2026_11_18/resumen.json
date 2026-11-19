@@ -1,0 +1,248 @@
+{
+  "configuracion": "prototipo_independiente_2026_11_18",
+  "validado_experimentalmente": false,
+  "seguridad_estructural_aprobada": false,
+  "geometria": {
+    "ligamento_min_agujeros_mm": 0.2109999999999942,
+    "ligamento_min_borde_exterior_mm": 7.067520947854986,
+    "ligamento_min_bore_mm": 14.014965686770628,
+    "L_sobre_D": 1.6666666666666667,
+    "holgura_diametral_bore_arbol_mm": 0.29999999999999993,
+    "sin_aprobacion_resistente": true
+  },
+  "longitud_contacto_escenario_mm": 10.0,
+  "centros_rodamientos_escenario_mm": [
+    6.750000000000003,
+    29.750000000000004,
+    70.25,
+    93.25
+  ],
+  "incompatibilidad_M6_608_diametral_mm": 2.0,
+  "escenario_referencia": {
+    "presion_pa": 2260000,
+    "mu": 0.1,
+    "estados": 1440,
+    "fuerza_total_max_n": 734.703363583227,
+    "fuerza_total_media_n": 666.7953975867719,
+    "torque_max_nm": 2.306424780926247,
+    "torque_medio_nm": 2.0864221395943825,
+    "estado_fuerza_max_correlacionado": {
+      "paso": 621,
+      "angulo_grados": 155.25,
+      "escenario": "p_y_mu_no_validados_geometria_escalada",
+      "area_r1_m2": 0.00018444511543308468,
+      "centroide_radial_r1_m": 0.03164735039214419,
+      "torque_por_presion_y_mu_r1_m3": 5.869821968805895e-06,
+      "perforaciones_activas_r1": 10,
+      "perforaciones_parciales_r1": 8,
+      "area_r2_m2": 0.0001406448684532989,
+      "centroide_radial_r2_m": 0.03065300497500752,
+      "torque_por_presion_y_mu_r2_m3": 4.335597415823517e-06,
+      "perforaciones_activas_r2": 7,
+      "perforaciones_parciales_r2": 6,
+      "area_total_m2": 0.0003250899838863836,
+      "presion_escenario_pa": 2260000,
+      "mu_escenario": 0.1,
+      "fuerza_r1_n": 416.8459608787714,
+      "torque_r1_nm": 1.3265797649501323,
+      "fuerza_r2_n": 317.8574027044555,
+      "torque_r2_nm": 0.9798450159761148,
+      "fuerza_total_n": 734.703363583227,
+      "torque_total_nm": 2.306424780926247
+    },
+    "perforaciones_activas_r1_min_max": [
+      7,
+      11
+    ]
+  },
+  "convergencia_area_error_relativo_max": 1.9915033257436676e-05,
+  "eje_transversal_lineal": [
+    {
+      "apoyo": "biempotrado",
+      "sigma_nominal_max_pa": 512413821.42904323,
+      "desplazamiento_max_m": 0.00026365450868335547,
+      "u_sobre_L": 0.0026365450868335544,
+      "equilibrio_vertical_error_n": 4.658265879697865e-07,
+      "u_sobre_espesor_biomasa_escenario": 0.13182725434167772,
+      "contacto_rigido_desacoplado_por_revisar": true,
+      "fuera_regimen_pequena_deformacion": false,
+      "modelo": "Viga lineal equivalente; sin entalla real, peso, precarga, flexibilidad de carcasa o adaptador; no seguridad aprobada"
+    },
+    {
+      "apoyo": "biapoyado",
+      "sigma_nominal_max_pa": 680049553.2625544,
+      "desplazamiento_max_m": 0.0014883260288094328,
+      "u_sobre_L": 0.014883260288094327,
+      "equilibrio_vertical_error_n": 4.130089791942737e-06,
+      "u_sobre_espesor_biomasa_escenario": 0.7441630144047164,
+      "contacto_rigido_desacoplado_por_revisar": true,
+      "fuera_regimen_pequena_deformacion": false,
+      "modelo": "Viga lineal equivalente; sin entalla real, peso, precarga, flexibilidad de carcasa o adaptador; no seguridad aprobada"
+    }
+  ],
+  "matriz_fem_ejecutado": false,
+  "propiedades_materiales": {
+    "fecha_consulta": "2026-11-18",
+    "materiales": [
+      {
+        "material": "AISI 304 / Core 304 EN1.4301, referencia",
+        "condicion": "Productos planos de ficha Outokumpu a 20°C; forma P/H, condición de suministro del prototipo no documentada",
+        "E_pa": 200000000000,
+        "nu": null,
+        "densidad_kg_m3": 7900,
+        "Rp02_referencia_pa": 210000000,
+        "Rm_referencia_min_pa": 520000000,
+        "Rm_referencia_max_pa": 720000000,
+        "fatiga": null,
+        "fuente": "outokumpu_core_2026",
+        "confianza": "Referencia de fabricante, NO certificación de material adquirido",
+        "aplicacion": "Matriz/rodillos previstos; no transferir propiedades de chapa a cualquier rodillo o inoxidable comprado"
+      },
+      {
+        "material": "Varillas roscadas zincadas, grado desconocido",
+        "condicion": "Zincado es recubrimiento; proveedor, clase y certificado pendientes",
+        "E_pa": null,
+        "nu": null,
+        "densidad_kg_m3": null,
+        "Rp02_referencia_pa": null,
+        "Rm_referencia_min_pa": null,
+        "fatiga": null,
+        "fuente": null,
+        "confianza": "Sin grado mecánico identificado",
+        "aplicacion": "Usar exclusivamente E/Sy de sensibilidad explícitos de parametros.json; no son valores verificados ni clases4.8/8.8"
+      },
+      {
+        "material": "PLA impreso del prototipo",
+        "condicion": "Filamento, orientación, paredes, relleno, temperatura y adhesión desconocidos",
+        "E_pa": null,
+        "nu": null,
+        "densidad_kg_m3": null,
+        "Rp02_referencia_pa": null,
+        "Rm_referencia_min_pa": null,
+        "fatiga": null,
+        "fuente": "prusament_pla_2022",
+        "confianza": "Ficha ilustrativa de dependencia del proceso, NO propiedades del prototipo",
+        "aplicacion": "No cálculo estructural isótropo ni FS; caracterizar piezas impresas y función soportante"
+      }
+    ],
+    "fuentes": [
+      {
+        "clave": "stelte_presion_2011",
+        "autor": "Stelte, Holm, Sanadi, Barsberg, Ahrenfeldt y Henriksen",
+        "titulo": "Fuel pellets from biomass: The importance of the pelletizing pressure and its dependency on the processing conditions",
+        "url": "https://backend.orbit.dtu.dk/ws/files/6337845/Fuel%20pellets%20from%20biomass_postprint.pdf",
+        "lectura": "Postprint del autor, DOI10.1016/j.fuel.2011.05.011, ecuaciones1–2, PDFp3–4: Px=PN0/nuLR*(exp(4*mu*nuLR*c)-1), c=L_activa/D. Requiere parámetros de biomasa/condiciones; no acredita2,26MPa del equipo ni equivalencia de escala."
+      },
+      {
+        "clave": "outokumpu_core_2026",
+        "autor": "Outokumpu",
+        "titulo": "Core range datasheet, tablas5 y7",
+        "url": "https://www.outokumpu.com/de-de/products/product-ranges/-/media/files/products/core/outokumpu-core-range-datasheet.pdf?modified=20251117111909&revision=025e9931-a1d5-4c8f-8ff5-f881d38916da",
+        "lectura": "PDF p8: Core304 formaH/P Rp0,2=210MPa, Rm520–720MPa; p10: E200GPa y densidad7,9kg/dm3. Nu no publicado en esas tablas; no completar por analogía."
+      },
+      {
+        "clave": "tr_rosca_m6_2026",
+        "autor": "TR Fastenings",
+        "titulo": "Thread geometry - metric coarse",
+        "url": "https://www.trfastenings.com/knowledge-base/thread-geometries/metric-coarse-standard",
+        "lectura": "FilaM6: paso1mm, diámetro menor macho4,773mm. Perfil de referencia, no medición ni tolerancia mínima garantizada de la varilla."
+      },
+      {
+        "clave": "ezo_608zz_2026",
+        "autor": "Kitanihon Seiki / EZO",
+        "titulo": "Product Spec 608ZZ, eid00913",
+        "url": "https://www.ezo-brg.co.jp/english/product/spec.php?eid=00913",
+        "lectura": "8x22x7mm, Cr3300N, Cor1370N; capacidades de esta referencia identificada, no de cualquier608ZZ comprado."
+      },
+      {
+        "clave": "prusament_pla_2022",
+        "autor": "Prusa Polymers",
+        "titulo": "Prusament PLA Technical datasheet, v1.1, 16-02-2022",
+        "url": "https://prusament.com/wp-content/uploads/2022/10/PLA_Prusament_TDS_2021_10_EN.pdf",
+        "lectura": "Probetas y condiciones de impresión específicas; no adoptar sus propiedades como garantizadas para PLA desconocido."
+      },
+      {
+        "clave": "siemens_acceso_2026",
+        "autor": "Siemens",
+        "titulo": "Entrada de catálogo 1LA7063-4AB10, acceso pendiente",
+        "url": "https://mall.industry.siemens.com/mall/en/WW/Catalog/Product/1LA7063-4AB10",
+        "lectura": "Acceso directo403; no se extraen propiedades. Potencia180W y1350rpm son datos aportados por equipo, no ficha oficial descargada. No adoptar datos de variante4AB11 o sufijoZ."
+      }
+    ]
+  },
+  "estado_modelos": [
+    {
+      "modelo": "geometria",
+      "estado": "reconstruida_por_indicacion_equipo",
+      "detalle": "Centros escala0,5; diámetros de perforación6mm no escalados; no CAD medido"
+    },
+    {
+      "modelo": "presion_extrusion",
+      "estado": "pendiente_validacion",
+      "detalle": "LD calculado;2,26MPa es dato preliminar aportado; fórmula y biomasa no disponibles"
+    },
+    {
+      "modelo": "cargas_globales",
+      "estado": "escenarios_ejecutados",
+      "detalle": "Superposición parcial1440estados; presión constante de escenario; rodillos y biomasa por semejanza explícita"
+    },
+    {
+      "modelo": "eje_transversal",
+      "estado": "cribado_lineal_condicionado",
+      "detalle": "NúcleoM6x1, apoyos y posiciones de rodamientos hipotéticos; si u/L>2% se marca alerta, no predicción física de flecha"
+    },
+    {
+      "modelo": "rodamientos",
+      "estado": "referencia_no_producto_adquirido",
+      "detalle": "EZO608ZZ identificado; marca comprada y montajeM6/8 sin confirmar;vidas condicionadasFa0"
+    },
+    {
+      "modelo": "matriz_FEM",
+      "estado": "pendiente_no_ejecutado",
+      "detalle": "Faltan apoyo/retención reales, condición304 y nu respaldado; FEM comercial con36mm/collar58 no es reutilizable directamente"
+    },
+    {
+      "modelo": "arbol_principal",
+      "estado": "demanda_nominal_sensibilidad",
+      "detalle": "Familia/paso/núcleo/apoyos y precarga desconocidos; sección lisa variable es cribado, no rosca aprobada"
+    },
+    {
+      "modelo": "carcasa_PLA",
+      "estado": "pendiente",
+      "detalle": "Si transmite reacciones de eje/apoyos es crítica; faltan camino de cargas, espesor e impresión. No modelo isotrópico garantizado"
+    },
+    {
+      "modelo": "tolva_PLA",
+      "estado": "pendiente",
+      "detalle": "Carga de biomasa, uniones, espesor e impresión pendientes; no asignar compactación completa a tolva"
+    },
+    {
+      "modelo": "accionamiento",
+      "estado": "sensibilidad_no_configuracion_real",
+      "detalle": "1350rpm motor;reducciones1/2/4/8/16 hipotéticas, no mantener516rpm;sin aprobación del motor"
+    }
+  ],
+  "advertencias": [
+    "No equivalencia de operación entre histórico comercial acoplado y escenario prototipo desacoplado",
+    "2,26MPa no verificado por fórmula ni ensayo; no extrapolar44MPa por semejanza geométrica",
+    "mu0,1 y espesor de biomasa2mm son hipótesis, no propiedades medidas",
+    "M6 requiere asiento/adaptador para608 de8mm; no inferir centrado por tuercas",
+    "E y Sy de varillas solo sensibilidad; zincado no identifica grado",
+    "Rodillos/matriz304 previstos, no certificados; marca del rodamiento comprado no acreditada",
+    "Modelo de viga lineal desacoplado sin pesos por geometría/material incompletos ni precarga, entallas o flexibilidadPLA",
+    "Gran flecha o esfuerzo nominal elevado exigen revisar montaje/carga, no publicar seguridad mediante extrapolación elástica",
+    "No aprobación de torque por fricción de tuercas, arrancamiento, apoyo axial ni arranque del motor",
+    "Paso/familia de varilla1/2pulgada desconocidos; no asumirUNC niM12",
+    "No se midió transmisión real; potencia se calcula por escenarios, no por516rpm"
+  ],
+  "datos_fisicos_prioritarios": [
+    "Separación real de rodillos, holgura, espesor de capa y marcas de huella",
+    "Confirmar coordenadas reconstruidas, ligamentos y acabado de102perforaciones",
+    "Accionamiento real: relación, tipo y pérdidas; placa del motor",
+    "Asientos/adaptadores608–M6, posiciones de rodamientos y apoyos de eje",
+    "Familia/paso de varilla1/2, grado y comprobantes de varillas, inox y608",
+    "Corte matriz-tuercas-árbol con retención, contactos, precarga y apoyos",
+    "Paredes, orientación, relleno y material de impresión; función soportante de carcasa",
+    "Memoria de presión2,26MPa y datos de biomasa/humedad/fricción/temperatura; ensayos de carga y consumo"
+  ]
+}

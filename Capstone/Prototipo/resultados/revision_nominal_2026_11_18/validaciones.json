@@ -1,0 +1,9 @@
+{
+  "historicos_intactos": true,
+  "archivos_historicos": 447,
+  "estados_angulares": 1440,
+  "patron_sin_intersecciones": true,
+  "cuadratura_contrastada": true,
+  "equilibrio_vertical_max_error_n": 4.130089791942737e-06,
+  "no_equivale_a_validacion_experimental": true
+}
