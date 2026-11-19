@@ -1,0 +1,14 @@
+{
+  "BRep_valido": true,
+  "pasantes_verificados": true,
+  "cuentas_topologicas_independientes_coinciden": true,
+  "SHA256_historicos_conservados": true,
+  "cargas_ejecutadas": true,
+  "detalle_cargas": {
+    "error_suma_fuerzas_n": 0.0,
+    "cuadratura_error_relativo_max": 2.090710441141241e-05,
+    "estados_sin_extremo_duplicado": 1440,
+    "no_acoplamiento_3C": "Cobertura2C con presión constante; no usar resultados como3C"
+  },
+  "seguridad_estructural_no_aprobada": true
+}

@@ -1,0 +1,1946 @@
+{
+  "README.md": {
+    "sha256": "b64f7987f23ef4e418564963b604c23857c2407e3e65d6cb1e2e9ac16c90dc77",
+    "bytes": 1536
+  },
+  "Analisis_matriz_eje_vertical\\README.md": {
+    "sha256": "f4272f5ffeee3f90e3a3585c3e4f8db7e3570c5d1aa57fb3713623adafca984a",
+    "bytes": 2269
+  },
+  "Etapa_6B_ingenieria_basica\\estado_componentes_Excel.csv": {
+    "sha256": "8e67a38c7e8332ee69f4071d7ef0500944e5844dda6853734f561050cf16aee3",
+    "bytes": 1479
+  },
+  "Etapa_6B_ingenieria_basica\\README.md": {
+    "sha256": "2ee75143b2502fd59fcd289a5ee219658979dc72564c9da32aeaf2124f006563",
+    "bytes": 2798
+  },
+  "Etapa_6B_ingenieria_basica\\seccion_resumen_para_informe.tex": {
+    "sha256": "2dac6dc6ac88b959b1818f2e31b64b1ce6f2de5ba05e1c096e525c027cbfb794",
+    "bytes": 2483
+  },
+  "integracion\\auditoria_6a.py": {
+    "sha256": "570c7fac1b319976a323977b44430b7930fcd551a50f6203328a425841fa6684",
+    "bytes": 20889
+  },
+  "integracion\\camino_cargas_6a.md": {
+    "sha256": "07e5daf74f7cba543f4874ace79db453b8e66fbb1b33c612d03aa1ea529f4b63",
+    "bytes": 10498
+  },
+  "integracion\\README.md": {
+    "sha256": "70f529b60d342a7d22210e92b1ff7fb42eb8c72f60e55b948dbaa9f5c934a3bc",
+    "bytes": 888
+  },
+  "integracion\\test_auditoria_6a.py": {
+    "sha256": "aef8f80f64b48311b86c9d5b886684f8623940b1e3838cc594a9da6c34f2bdb6",
+    "bytes": 1274
+  },
+  "Prototipo\\documentacion_parametros.md": {
+    "sha256": "c6e73e5ec3a327341ea0d6a143ba9e871f72359acb2fc36160add884630a779a",
+    "bytes": 5681
+  },
+  "Prototipo\\ejecutar_pruebas.py": {
+    "sha256": "8a6aa0906556e50233cacab62396df0355189766696b2ebd0d79695b7ac05b17",
+    "bytes": 1952
+  },
+  "Prototipo\\materiales.json": {
+    "sha256": "bed14a8ac45b11f0ba6a8d8cacb55dbbe615ff3de3c06aaedef43369ce2db2f5",
+    "bytes": 4097
+  },
+  "Prototipo\\modelo_prototipo.py": {
+    "sha256": "d3d9a486f11957a370fdbe12aff7187d9d327a5a0815b9dfc57a0af1979544a8",
+    "bytes": 14528
+  },
+  "Prototipo\\parametros.json": {
+    "sha256": "a8435200082b90ca0136147f7c2806b843a5a5c1668385bd05e02e562a96f5af",
+    "bytes": 4312
+  },
+  "Prototipo\\README.md": {
+    "sha256": "1f6ef7a25197ac02ce3ab18a5c6259a40f390414cdaaba55c425477be5fe25e5",
+    "bytes": 11030
+  },
+  "Prototipo\\referencias.bib": {
+    "sha256": "a637d02c0e69c394fc63fa4398cb8264f71b08239b3d1d27cc235086099b37c2",
+    "bytes": 2737
+  },
+  "Prototipo\\requirements.txt": {
+    "sha256": "fa9e6a5df18096f5861337030c9332deb8973c453ea203533b201c1ebd05a95f",
+    "bytes": 63
+  },
+  "Prototipo\\reutilizacion.py": {
+    "sha256": "730ac0b1551b45eb4d4ac380619ad60e54d24d1dd00f705c564cb79c5273ce36",
+    "bytes": 770
+  },
+  "Prototipo\\simular_prototipo.py": {
+    "sha256": "5c097d4e43237fb6155a883a979617642d27ed72c0e29959ffbd3d1c378a006f",
+    "bytes": 17311
+  },
+  "Prototipo\\sintesis_para_informe.md": {
+    "sha256": "761bb2af8d2985eb9789ac5531584e619d01034c410aa920bdfb9ec9974ecf74",
+    "bytes": 3173
+  },
+  "Prototipo\\test_prototipo.py": {
+    "sha256": "5cfb31718642f1998462688952355d7381e6056a015b0b1ff439e4b0c8dd3775",
+    "bytes": 4859
+  },
+  "Simulación_peletizadora\\cara_matriz.dxf": {
+    "sha256": "e8c2ed4719947c4ac782c8beaddf6cf408e700c53ada1e9f96c808135fcfe96a",
+    "bytes": 280698
+  },
+  "Simulación_peletizadora\\cinematica.py": {
+    "sha256": "66004bb4659ec7087544d888de87ea8e6034efe26cb15adeda6c63a3a7344c8c",
+    "bytes": 2664
+  },
+  "Simulación_peletizadora\\config.py": {
+    "sha256": "c0124f449268666618e78c56b2f6d5fd95b8276181b3dcda9028b3595b13bc13",
+    "bytes": 2440
+  },
+  "Simulación_peletizadora\\geometria.py": {
+    "sha256": "e795162ff5476399c2bdde5a78d13d106b84b5bd4fe1705485aebf6098a269af",
+    "bytes": 5503
+  },
+  "Simulación_peletizadora\\Plano_eje_transversal.png": {
+    "sha256": "49045e745dfd575df3eb85b284bfb693ac76eb3a47d914fef11c0b2ef4b4a2be",
+    "bytes": 29251
+  },
+  "Simulación_peletizadora\\Plano_matriz.png": {
+    "sha256": "d386fc5db71a67b4b49f4789463ae9554665602af5662fbad5368a47ba253ed3",
+    "bytes": 350442
+  },
+  "Simulación_peletizadora\\Plano_rodillo.png": {
+    "sha256": "711a8d5be982eb5da5e7fda1f9d573bf0badef8d3944c5f9f921f31e6867fadc",
+    "bytes": 204132
+  },
+  "Simulación_peletizadora\\README.md": {
+    "sha256": "46beca578cb738fcd419ac940130a47dd1c4e9947696c089f4a901ee3c93a9c6",
+    "bytes": 36956
+  },
+  "Simulación_peletizadora\\referencias.bib": {
+    "sha256": "b7121fef391b25c14ca8ac2f7802ead59c018893e8e056e5f5c6cd899b3892ee",
+    "bytes": 1740
+  },
+  "Simulación_peletizadora\\requirements.txt": {
+    "sha256": "9a679889309aed805a55c5769da7209399a1665c5890af50d7ea332d3d7140f6",
+    "bytes": 64
+  },
+  "Simulación_peletizadora\\simulacion.py": {
+    "sha256": "7c2c4cefdf260b21552163f6b05bc73dbcc51ac3250e9a67ccbeb9e16c753281",
+    "bytes": 4785
+  },
+  "Simulación_peletizadora\\simulacion_acoplada_eje.py": {
+    "sha256": "b3afe455a4388504fc405d792a48664afadbb5ff9b1192f1a5d011ec84d54d9e",
+    "bytes": 14754
+  },
+  "Simulación_peletizadora\\simulacion_cargas.py": {
+    "sha256": "610f5a49f813e651b7a3adbe6a7939327c1a6144cc22a207ab4c01a279814522",
+    "bytes": 7377
+  },
+  "Simulación_peletizadora\\simulacion_eje_transversal.py": {
+    "sha256": "8fc67b342ba45a54fa7e7eec1dc0de943cb267516ddefe27cbc97e72f08bcd33",
+    "bytes": 9234
+  },
+  "Simulación_peletizadora\\simulacion_holgura_rodillos.py": {
+    "sha256": "fbea3727283b9b4910cc7a9b218aacf337ede17438b25c90fc6b606d67c236d4",
+    "bytes": 3392
+  },
+  "Simulación_peletizadora\\simulacion_resistencia_fatiga.py": {
+    "sha256": "9ce173ac80ce97d967b32bfbe70471f307c83ccece8a51aecac040689de7d167",
+    "bytes": 8299
+  },
+  "Simulación_peletizadora\\simulacion_rodamientos.py": {
+    "sha256": "38d42c5b0c442fb46f4d0a8cf2ca0998a78b765dea52249d959d9ff2387c0f6d",
+    "bytes": 11430
+  },
+  "Simulación_peletizadora\\simulacion_superposicion.py": {
+    "sha256": "c68c911e822243c1b4dec104e00252447055b9b9c06c37c7e67cf71e49f89168",
+    "bytes": 13348
+  },
+  "Simulación_peletizadora\\visualizacion.py": {
+    "sha256": "8e7538f28a046f94327e0f9ef74865e27b1cbbfe787ba33b27076b85ab3219b9",
+    "bytes": 6271
+  },
+  "Simulación_peletizadora\\visualizacion_cargas.py": {
+    "sha256": "e218c4c7f674248896477bc78edeb24f0874e3c92b5e932e2bce9e97411d9558",
+    "bytes": 6639
+  },
+  "Simulación_peletizadora\\visualizacion_superposicion.py": {
+    "sha256": "f1da2f3bac8c630ed26c490e3b03d585f4efcb01f8d82c36f49d420fbd368c83",
+    "bytes": 7630
+  },
+  "Transmision\\actualizacion_ambas_poleas.py": {
+    "sha256": "23cbc516a3258a38a077e53fbbd461836997906b20969baaba9d633b25a00846",
+    "bytes": 6949
+  },
+  "Transmision\\actualizacion_polea_inventor.py": {
+    "sha256": "1348d42435f4c875f511c267415d13edb0e32e3223b25dcdb88f927f5ce321a9",
+    "bytes": 7845
+  },
+  "Transmision\\cierre_transmision.py": {
+    "sha256": "f8b8b892e878aa23daa50dd12178f3f313cf150393993f5c896932b40e4e48ea",
+    "bytes": 17223
+  },
+  "Transmision\\especificacion_fem_ambas_poleas_inventor.md": {
+    "sha256": "d9016e440be1bf9026b14155557b442044b838583b2aa659a9acf037e53355a1",
+    "bytes": 4745
+  },
+  "Transmision\\especificacion_fem_conducida_inventor.md": {
+    "sha256": "1551a01b4ef24be61579da59ab1b1acb2364b9b4ea10f62e781f693a47965eee",
+    "bytes": 3493
+  },
+  "Transmision\\especificacion_fem_poleas.md": {
+    "sha256": "72321edf1c09a4b7d8d069e50bd4e5e3a682a74de5766116609634f402dc6890",
+    "bytes": 5590
+  },
+  "Transmision\\metodologia_chavetas.md": {
+    "sha256": "846a85e0dba2a23ab098925ade1b3f9fae93849c64e60bb744984e752c9aea14",
+    "bytes": 6047
+  },
+  "Transmision\\metodologia_compatibilidad_motor.md": {
+    "sha256": "fe1459c448194726a7b96a25ec62a75fc616f6a408378bb8d137c642b33048c7",
+    "bytes": 5646
+  },
+  "Transmision\\metodologia_redisenio_cubo.md": {
+    "sha256": "7b5d50d8a8e3c9f6475d32324951461748621f0061d0eeb72b8384722bfcc471",
+    "bytes": 4275
+  },
+  "Transmision\\parametros.json": {
+    "sha256": "b6dfe04878575e0b44fc87fc84fecfefc74a45de74ac9d9675dbc1a296076460",
+    "bytes": 871
+  },
+  "Transmision\\parametros_chavetas.json": {
+    "sha256": "f85e122cbd830380d22659d47603d4fd91322fab0fcf19a82815684b9f98fb9f",
+    "bytes": 1344
+  },
+  "Transmision\\parametros_motores.json": {
+    "sha256": "15cf294bd4e711f14a1f72e1dbc51b0708f86521f73d3a3862d82a9d47af6e08",
+    "bytes": 2795
+  },
+  "Transmision\\parametros_poleas.json": {
+    "sha256": "b0fdb9eb50213b60c373389badd41047f802689d2f9135c991a47ca833f7ae4a",
+    "bytes": 6135
+  },
+  "Transmision\\parametros_redisenio_cubo.json": {
+    "sha256": "644bf52d73c918225e011829cc46d6f45cdb0bd6a42f02e3dd267d262a725444",
+    "bytes": 336
+  },
+  "Transmision\\POLEA 1 (1).pdf": {
+    "sha256": "9033c0a839ace2443557498f7a869ea501304081bdd3c31528127a6f6a80539c",
+    "bytes": 91297
+  },
+  "Transmision\\POLEA 2.pdf": {
+    "sha256": "7d62600784d73d874f7a18ad97775947a1e815b1476bc45e90267ef5bc0d37a1",
+    "bytes": 96198
+  },
+  "Transmision\\README.md": {
+    "sha256": "e9f34359326e7688df729d5df0017f960c9fed72d41ba6dc7b37b956f00b7f88",
+    "bytes": 63685
+  },
+  "Transmision\\referencias.bib": {
+    "sha256": "2f46f08e706a608c856d05b407b395911e1851f0e6e1a731595b61f248929528",
+    "bytes": 5094
+  },
+  "Transmision\\requirements.txt": {
+    "sha256": "e5d9943702bb51c0b13a5891bf396d41a5b0d269f583ad57534e5021a32af50d",
+    "bytes": 10
+  },
+  "Transmision\\simulacion_chavetas.py": {
+    "sha256": "60f1d7691cc1f02a38a3c74b8c10d282e716707a763f320effea838c26862a2a",
+    "bytes": 8884
+  },
+  "Transmision\\simulacion_compatibilidad_motor.py": {
+    "sha256": "ff6c59b3a20bdf0c5e7a750ab22a3d98df18a54b4e199fd5b8dd787d6965686c",
+    "bytes": 6500
+  },
+  "Transmision\\simulacion_dinamica.py": {
+    "sha256": "e5f1247b7035afef3bed779165ae6f24c1791fc0d719da1d7d82f2c458b08926",
+    "bytes": 9717
+  },
+  "Transmision\\simulacion_poleas.py": {
+    "sha256": "0ad859a0be9f65260a6dbf9f2f7ff9984cbd70e676ee8aa5ca4cd28411ec98e5",
+    "bytes": 9613
+  },
+  "Transmision\\simulacion_redisenio_cubo.py": {
+    "sha256": "4bf6cd0a020012e08d15d2e59db9d0ba32f925026e81f30d562eb27f8147770b",
+    "bytes": 8063
+  },
+  "Transmision\\simulacion_tensado.py": {
+    "sha256": "68d1cb97d3fc6e5429a7035e18cf7d4a0acab03f6dbe528e8dc323fcbdbf864a",
+    "bytes": 2881
+  },
+  "Transmision\\simulacion_tension_estatica.py": {
+    "sha256": "a5f9b217da1159ce943496a8b54372fe6a5aea798517c3225b088ce4b846e0c5",
+    "bytes": 2865
+  },
+  "Transmision\\simulacion_transmision.py": {
+    "sha256": "9d4d182f57fe357142d0d6655ec9ffd771c571617f8bb9331dc2ab430a847ca5",
+    "bytes": 4384
+  },
+  "Transmision\\resultados\\balance_motor_eficiencias.csv": {
+    "sha256": "2496c55785df7985a0b5e6c8312a547d0e1e783781debc9f575b8a8452069c1c",
+    "bytes": 638
+  },
+  "Transmision\\resultados\\capacidad_5b.csv": {
+    "sha256": "eb6fb4569d67110c0c5b58bcd7c66aa3b88136c884d83eabcb6796bae01a7af6",
+    "bytes": 436
+  },
+  "Transmision\\resultados\\contraste_3c.csv": {
+    "sha256": "871db3023e4f643339bc76fe91e43541475bbf1666eb58bf0e1a23776183f791",
+    "bytes": 270
+  },
+  "Transmision\\resultados\\fuentes_y_validacion.json": {
+    "sha256": "33149249263b62ae408a2a748cefb94d17382085cb2dfa11308be371788a6118",
+    "bytes": 710
+  },
+  "Transmision\\resultados\\geometria_5a.csv": {
+    "sha256": "a0ca159c4262bd96a9b1e6fb5ea59e782d8948d34540657ab2821e235435e1fd",
+    "bytes": 468
+  },
+  "Transmision\\resultados\\parametros_utilizados.json": {
+    "sha256": "7c3fc6acd27bd063e7212aebc6e1e7ae1e1b109c70cd17afed46435a397b46ce",
+    "bytes": 762
+  },
+  "Transmision\\resultados\\resumen.json": {
+    "sha256": "1bc303a989f2a3374b02efd8aceb2e63abe5b603e6077776a398803b4d5d186a",
+    "bytes": 2242
+  },
+  "Transmision\\resultados\\sensibilidad_factor_servicio.csv": {
+    "sha256": "18abb83b571734276096d94d5855756bc8de9cf2ba9e8cbb30495ccdabf43405",
+    "bytes": 1397
+  },
+  "Transmision\\tests\\test_ambas_poleas.py": {
+    "sha256": "f3d04c8959a32e6d91e0579d070e1071c2f834ea91a61ded5359a5260ecf3e0c",
+    "bytes": 3546
+  },
+  "Transmision\\tests\\test_chavetas.py": {
+    "sha256": "62ecfcb554c7f95624af454d23d9bbf8464bd409eb451eb53b2cbff8163e989a",
+    "bytes": 3868
+  },
+  "Transmision\\tests\\test_cierre.py": {
+    "sha256": "62111e25775c2aee42895c266f04f3ff4a98a2e64bacff161d05568736724f56",
+    "bytes": 3287
+  },
+  "Transmision\\tests\\test_dinamica.py": {
+    "sha256": "33b7c70d32be67f8cc0f93b0a276da831b2f5995f31bd57ebd38adf50024dbbd",
+    "bytes": 4273
+  },
+  "Transmision\\tests\\test_motores.py": {
+    "sha256": "e540e7a4a6a390190a0323357434dc95bd7e710665a9716b100008a873ddf0cd",
+    "bytes": 4567
+  },
+  "Transmision\\tests\\test_poleas.py": {
+    "sha256": "4ad234f368f4f5792749560fcda4519d0d6c95f8add0c7d842f1d526a8edf644",
+    "bytes": 4412
+  },
+  "Transmision\\tests\\test_polea_inventor.py": {
+    "sha256": "a6b1b6a45863b8671dd203df5ca677b7ddcf773443a6dd71d18e62be466360e2",
+    "bytes": 2791
+  },
+  "Transmision\\tests\\test_redisenio_cubo.py": {
+    "sha256": "536cabc2cf5ec7701cf38ded01369e46db8133c275799712f9d694121ed1a5e3",
+    "bytes": 2907
+  },
+  "Transmision\\tests\\test_tensado.py": {
+    "sha256": "7c8b35def2113420f208115c234a54da685d3cb0c6a3f162d66a790f8013dc18",
+    "bytes": 3098
+  },
+  "Transmision\\tests\\test_tension_estatica.py": {
+    "sha256": "791ae61bef3ac6d34e41601d5a59f0fd8c1fba24c53b2e71b02ac4f4f3cc8fcb",
+    "bytes": 2182
+  },
+  "Transmision\\tests\\test_transmision.py": {
+    "sha256": "ba5158b5fcefdb996fc1675c30139abf49f8b2c2c23aeb13cdd9dcf7c93e01bf",
+    "bytes": 3288
+  },
+  "Transmision\\transmision\\calculos.py": {
+    "sha256": "eb844ef43d0ba6a300a64b4ad12f9f77040ab3a826662b4b6aa96503e9c0c02a",
+    "bytes": 5129
+  },
+  "Transmision\\transmision\\catalogo.py": {
+    "sha256": "96e458d702ac4aaebff74ff25a48a24d8c4e863aa39961ca71003e0b4d8abbee",
+    "bytes": 2037
+  },
+  "Transmision\\transmision\\chavetas.py": {
+    "sha256": "b86a5d6ab4f38b2ed00d8cbf9af566c715a1c0da1a9f2120f8c977bd795a082b",
+    "bytes": 5764
+  },
+  "Transmision\\transmision\\cierre.py": {
+    "sha256": "f7ac85e72084db693b09feae3d37754c0ab82d1041e3d1a7833d87442d09448d",
+    "bytes": 2394
+  },
+  "Transmision\\transmision\\dinamica.py": {
+    "sha256": "dcedf54ce2f5d04bbd9b9994302e6def4e9cb885719e2a581c77ed9413c34b8d",
+    "bytes": 3936
+  },
+  "Transmision\\transmision\\motores.py": {
+    "sha256": "f5f8f457588c6c49e94fae075006cd2ad1fe43acd0ff4a7a6dcfa1e0424fba62",
+    "bytes": 4827
+  },
+  "Transmision\\transmision\\poleas.py": {
+    "sha256": "91b6627c295e4403d1eb7fe556440c217d6df1bb950d489f42998e0103185fac",
+    "bytes": 8514
+  },
+  "Transmision\\transmision\\polea_inventor.py": {
+    "sha256": "86a5a61e59f5ef505e8861c46eb2ccae487745ec5e6076ca27461d114f4d837a",
+    "bytes": 5683
+  },
+  "Transmision\\transmision\\redisenio_cubo.py": {
+    "sha256": "619fe92b8332fba59a017cc18026a1713c17916751f97fa009d5961469272473",
+    "bytes": 2821
+  },
+  "Transmision\\transmision\\tensado.py": {
+    "sha256": "0485651299451b5650e3724675d3e10e92bfec3fe9af2fcf98d454b9a2055172",
+    "bytes": 5140
+  },
+  "Transmision\\transmision\\tension_estatica.py": {
+    "sha256": "0ea0393c3c4a2e61381db1e60fca0824baf9e35a809f23480dd9c2a2d5763737",
+    "bytes": 5182
+  },
+  "Transmision\\transmision\\__init__.py": {
+    "sha256": "f2786c46364daa9c05065623ab0ce6ff9b5f8f578a49c2b5202111870810b4f8",
+    "bytes": 61
+  },
+  "Transmision\\resultados\\etapa_5c\\ajuste_centros.csv": {
+    "sha256": "19c389f5311e9b0280b0a9a15ac20c317e01b1d45ec6180e49b49957cff11f68",
+    "bytes": 177
+  },
+  "Transmision\\resultados\\etapa_5c\\fuentes_y_trazabilidad.json": {
+    "sha256": "d392884856365877e1852b38caefd97eb6cd41740de9d8db4cce30a126f49ca3",
+    "bytes": 1349
+  },
+  "Transmision\\resultados\\etapa_5c\\geometria_nominal.csv": {
+    "sha256": "7c901c2bbb1cdd4d063aa3813c5fdd06d5559cdac50b4acca42f74e20dbe851f",
+    "bytes": 304
+  },
+  "Transmision\\resultados\\etapa_5c\\parametros_utilizados.json": {
+    "sha256": "3768e0298a27ae8afdfdce425fb32ae94ff85ad6c89d7680cc2609d10148e0f1",
+    "bytes": 979
+  },
+  "Transmision\\resultados\\etapa_5c\\poleas_y_gargantas.csv": {
+    "sha256": "8d874fb80e576d3da46deaff602f37d727016affee9739e226cc4fca135e807a",
+    "bytes": 1078
+  },
+  "Transmision\\resultados\\etapa_5c\\resumen.json": {
+    "sha256": "d552d2b0f569d9d2b10aab8701b1708a6122c9a427617960a63de5530a2de793",
+    "bytes": 3309
+  },
+  "Transmision\\resultados\\etapa_5c\\validaciones.csv": {
+    "sha256": "a0a6a4da5809b3da48d4625e99e5aa6ebd15afe207034d0a0f7a0f2d76083511",
+    "bytes": 151
+  },
+  "Transmision\\resultados\\etapa_5d1\\fuentes_y_trazabilidad.json": {
+    "sha256": "f9c2d328388400a91817ce39715f05eae5bd38370674af223c1454a4e7c636b6",
+    "bytes": 2627
+  },
+  "Transmision\\resultados\\etapa_5d1\\parametros_utilizados.json": {
+    "sha256": "3768e0298a27ae8afdfdce425fb32ae94ff85ad6c89d7680cc2609d10148e0f1",
+    "bytes": 979
+  },
+  "Transmision\\resultados\\etapa_5d1\\resumen.json": {
+    "sha256": "97457d1eb1284c8d6b034d36528d198b86a4f420ecfd70a2b7fdd326be9997b3",
+    "bytes": 2509
+  },
+  "Transmision\\resultados\\etapa_5d1\\sensibilidad.csv": {
+    "sha256": "4f3e977293ad87468c6645ed5497b0e1e77df572fcba7584ce0766a55b2b4b83",
+    "bytes": 3033
+  },
+  "Transmision\\resultados\\etapa_5d1\\tensado_individual.csv": {
+    "sha256": "2a3738bf51174d3ac593304d0a1e6cb1d1a834c286724a365d343e29eb6f310c",
+    "bytes": 629
+  },
+  "Transmision\\resultados\\etapa_5d1\\validaciones.csv": {
+    "sha256": "c14de4855d1f022c6551b4e714aa737c414c958b5336a263b57ffeff713015cb",
+    "bytes": 100
+  },
+  "Transmision\\resultados\\etapa_5d2\\casos_criticos_correlacionados.csv": {
+    "sha256": "d7ca492febc7f942def7a169d7472dec5f1c618beba727233d52c580dbfa838b",
+    "bytes": 1863
+  },
+  "Transmision\\resultados\\etapa_5d2\\diferencias_tensiones_3c.csv": {
+    "sha256": "80ad7d66ee16d2104915be4379032c009281a6b75232dacce469ffa74dfc3d8d",
+    "bytes": 166829
+  },
+  "Transmision\\resultados\\etapa_5d2\\motor_nominal_externo.csv": {
+    "sha256": "af40bf8a94c1014aeb6487e20edb6e50f2a0dd3d1c2078522f07c17b95aa732d",
+    "bytes": 872
+  },
+  "Transmision\\resultados\\etapa_5d2\\resumen.json": {
+    "sha256": "0206c3b64dd15d4472d3426dbee8f23d3337f0ffd97149b46989061907eef609",
+    "bytes": 7037
+  },
+  "Transmision\\resultados\\etapa_5d2\\sensibilidad_Ts.csv": {
+    "sha256": "e7e71d34a5b12f445e5775399926af68deafceea5ce068469751037fa090f591",
+    "bytes": 1342
+  },
+  "Transmision\\resultados\\etapa_5d2\\tensiones_y_fuerzas_condicionales_3c.csv": {
+    "sha256": "93cc6c8b1e4d0dd55fb3e4f23ee34ca0478022b4d11bb81f5011a5f1a5a67c7d",
+    "bytes": 643851
+  },
+  "Transmision\\resultados\\etapa_5d2\\trazabilidad_sha256.json": {
+    "sha256": "eb49dec2d8f2138c96ee4eeaf536fbf8ed633a7144a36d36f273188e47e054cd",
+    "bytes": 3494
+  },
+  "Transmision\\resultados\\etapa_5d2\\validaciones.csv": {
+    "sha256": "fba77927de37f48d51a19b82fa67df3fa016fadf7004b09eb2089f1cbe47b955",
+    "bytes": 191
+  },
+  "Transmision\\resultados\\etapa_5e1\\cargas_poleas.csv": {
+    "sha256": "583c7374113f1b1e74109dbbde3a5355bb0bdee3b7808f56420c4dfeeb5ba31f",
+    "bytes": 2084
+  },
+  "Transmision\\resultados\\etapa_5e1\\dimensiones_pendientes.csv": {
+    "sha256": "59d25513fd92024321a4e186a2eda7323d1819cc95c0641869f4af5b8558fad1",
+    "bytes": 4582
+  },
+  "Transmision\\resultados\\etapa_5e1\\especificacion_fem.md": {
+    "sha256": "0bf14adddbd489f6bc102b6fc12be58a6f234331a9ef41dd0992cd0f2380c4fa",
+    "bytes": 5680
+  },
+  "Transmision\\resultados\\etapa_5e1\\geometria_conocida.csv": {
+    "sha256": "365bec4922ffa13f8fb1d56339c54b95aa3f1d08c857800ea18841b1287cbcc5",
+    "bytes": 478
+  },
+  "Transmision\\resultados\\etapa_5e1\\inventario_fuentes.json": {
+    "sha256": "bf50ba9c73d448b333badcfbc5af3d99030e341f8b1f41b39fd4e5c507f4d992",
+    "bytes": 794
+  },
+  "Transmision\\resultados\\etapa_5e1\\parametros_utilizados.json": {
+    "sha256": "dfbf9d959c9a7b00bed625f2c5380a32799bc2cda7c8ffe1d585e1ed225d6ca7",
+    "bytes": 2006
+  },
+  "Transmision\\resultados\\etapa_5e1\\resumen.json": {
+    "sha256": "92be7314f4e4fcf43bce8965171268dc58332502b30b6ee81419c7e01ee5c63c",
+    "bytes": 27542
+  },
+  "Transmision\\resultados\\etapa_5e1\\sensibilidad_pretension_separada.csv": {
+    "sha256": "a555fc149295adfecd3524cae56e04a0d754284522f5b633161206ceb90ca244",
+    "bytes": 4238
+  },
+  "Transmision\\resultados\\etapa_5e1\\trazabilidad_sha256.json": {
+    "sha256": "0276d85126b171df3290d7a84536fc42c4ee9f54f67643818ce07b5d8424e7e1",
+    "bytes": 55544
+  },
+  "Transmision\\resultados\\etapa_5e1\\validaciones.csv": {
+    "sha256": "c25d21a6a3969d5e580166c3bc1c87d73228bd880ed3be59d19543233121965d",
+    "bytes": 162
+  },
+  "Transmision\\resultados\\etapa_5e1\\verificaciones.csv": {
+    "sha256": "0c48e1606dba74dcdb1fdf426c312ed8c2ec14d382031c448d74a8ab5f1cbd01",
+    "bytes": 10602
+  },
+  "Transmision\\resultados\\etapa_5e2\\candidatas_normalizadas.csv": {
+    "sha256": "8b1e57f9501b5d8002f41fd14d42cf19e28eeae05a62a466190b13320c4c2012",
+    "bytes": 692
+  },
+  "Transmision\\resultados\\etapa_5e2\\ecuaciones_y_limites.md": {
+    "sha256": "6cfcf144b391be0c5f61ab06a59f65afa0b8e7d2a33d9d3a4d3d4a5eaca43205",
+    "bytes": 6160
+  },
+  "Transmision\\resultados\\etapa_5e2\\estado_verificaciones.csv": {
+    "sha256": "f456dad59491aca978df26238e993bed7c8cc2ea01bc237e968984efa771697c",
+    "bytes": 6218
+  },
+  "Transmision\\resultados\\etapa_5e2\\fuentes.json": {
+    "sha256": "939c53fc5330b5bd2534353667ab3b9b1ab5c8845c9fe14452621619f5b9e0b9",
+    "bytes": 1376
+  },
+  "Transmision\\resultados\\etapa_5e2\\fuerzas_union_correlacionadas.csv": {
+    "sha256": "a642754b0f49e205709a83fee7433f2dd9ad230849f5c8c39dd8a844ff7c159d",
+    "bytes": 1663
+  },
+  "Transmision\\resultados\\etapa_5e2\\ligamentos_cubo.csv": {
+    "sha256": "5c415356b9e92670e30d499498fb891623850fe9e25e6dfa17159a4bcb0e775d",
+    "bytes": 939
+  },
+  "Transmision\\resultados\\etapa_5e2\\parametros_utilizados.json": {
+    "sha256": "c681c819b99acb86cf6a7bc806fe36c9b4650d1015b6c5aeeb477e40372e6042",
+    "bytes": 1410
+  },
+  "Transmision\\resultados\\etapa_5e2\\resumen.json": {
+    "sha256": "7ac0839399d4c798edc103e8f0ff3c9a68ea0bd52275349faf1e969f2e7efd6f",
+    "bytes": 18972
+  },
+  "Transmision\\resultados\\etapa_5e2\\sensibilidad_longitud_activa.csv": {
+    "sha256": "e12f52e2a6adb5af5cab1b28f5d43da3cc94666ccc81fa24375396212f61ec9a",
+    "bytes": 9391
+  },
+  "Transmision\\resultados\\etapa_5e2\\trazabilidad_sha256.json": {
+    "sha256": "cfe9527f8571ef8768eb85a8acaf521aa3756c2c85f2898b859f89fdf956d3a2",
+    "bytes": 61302
+  },
+  "Transmision\\resultados\\etapa_5e2\\validaciones.csv": {
+    "sha256": "e52d877f9a075072d32a335cc4b2747ff53383e4a3ded872aabec533b4ab72fc",
+    "bytes": 218
+  },
+  "Transmision\\resultados\\etapa_5e2a\\alternativas_union.csv": {
+    "sha256": "18795564cae560b7d31a1539263fba0899e4d5c7358dc0f0abf207455cdbd699",
+    "bytes": 779
+  },
+  "Transmision\\resultados\\etapa_5e2a\\cargas_motriz_heredadas.csv": {
+    "sha256": "e6773bb3f92e32192cd77b78d75defe9ab55c6295f8b633a324d51947bda8bd7",
+    "bytes": 899
+  },
+  "Transmision\\resultados\\etapa_5e2a\\interferencias.csv": {
+    "sha256": "2ccc1568e6db47665956bb52a933df97cdae7d00ea818f4355079f92da5a5a43",
+    "bytes": 438
+  },
+  "Transmision\\resultados\\etapa_5e2a\\ligamentos_geometricos.csv": {
+    "sha256": "6a8c0e1f55cc32fd8364b9bbad3982df3fba6ac9df105d2ab3d4e2d86245a534",
+    "bytes": 1519
+  },
+  "Transmision\\resultados\\etapa_5e2a\\metodologia.md": {
+    "sha256": "627192bc186e4e2b37a3dd62572bff5d9df55ce5bbc23886d5d0e645930a342a",
+    "bytes": 4352
+  },
+  "Transmision\\resultados\\etapa_5e2a\\parametros_utilizados.json": {
+    "sha256": "25a03874531b6dfd78d049ec40a385ccd75df4387ee51566a7972495d60e6c54",
+    "bytes": 361
+  },
+  "Transmision\\resultados\\etapa_5e2a\\requisitos_pendientes.csv": {
+    "sha256": "8636ea2bb032b0cad2dc1eed082ba26082b695859f1421113d98314cce8882ba",
+    "bytes": 945
+  },
+  "Transmision\\resultados\\etapa_5e2a\\resumen.json": {
+    "sha256": "ee66a5ba235d2c69d7d1b0c0e6c04bc3c7e651ebdeb235a50a76c98d1fd661cf",
+    "bytes": 13538
+  },
+  "Transmision\\resultados\\etapa_5e2a\\trazabilidad_sha256.json": {
+    "sha256": "66e03c8f7be51b4c4fded410f471f26129ce5c87824b125dcf8f6b0d0b5f7c46",
+    "bytes": 63864
+  },
+  "Transmision\\resultados\\etapa_5e2a\\validaciones.csv": {
+    "sha256": "0bb87128af317bc06dcc0854b8e016054285f66f6e1a7f11dd9bb931c08347af",
+    "bytes": 66
+  },
+  "Transmision\\resultados\\etapa_5e2b\\alternativas_cubo_heredadas.csv": {
+    "sha256": "6a8c0e1f55cc32fd8364b9bbad3982df3fba6ac9df105d2ab3d4e2d86245a534",
+    "bytes": 1519
+  },
+  "Transmision\\resultados\\etapa_5e2b\\comparacion_motores.csv": {
+    "sha256": "bf1d3b8e04a637a36de4d1b0606ec246a5ff1b8bf318ff93e0bea5724660b046",
+    "bytes": 995
+  },
+  "Transmision\\resultados\\etapa_5e2b\\metodologia.md": {
+    "sha256": "1a118785914c98bedd5d53ae6dd1b90c33110b6400dd097bb673aaf3cc0edd1f",
+    "bytes": 5742
+  },
+  "Transmision\\resultados\\etapa_5e2b\\parametros_utilizados.json": {
+    "sha256": "1387c455fba72dbd2448b79bc875b7cc2006a7321b3beafd8ba384b6c2e5ccfb",
+    "bytes": 2866
+  },
+  "Transmision\\resultados\\etapa_5e2b\\requisitos_pendientes.csv": {
+    "sha256": "2af0eed2eefbf26650e92da397d1499e69f043f15907652fd8695ab95ddc0352",
+    "bytes": 1364
+  },
+  "Transmision\\resultados\\etapa_5e2b\\resumen.json": {
+    "sha256": "921a8c12ff8c72657ff3602fa93408567b573c148f872b38f61c7b2317689f48",
+    "bytes": 14507
+  },
+  "Transmision\\resultados\\etapa_5e2b\\trazabilidad_sha256.json": {
+    "sha256": "91aca21d06ae76383c805d37c883ba358d954430669061f430bc68ba5519bea5",
+    "bytes": 70523
+  },
+  "Transmision\\resultados\\etapa_5e2b\\validaciones.csv": {
+    "sha256": "82c8a131276d1c51223af5f3581958fb43776b43db7609ac6b9a4b1ffc553d02",
+    "bytes": 66
+  },
+  "Transmision\\resultados\\etapa_5e2b\\verificacion_carga_radial.csv": {
+    "sha256": "f675f783dd237a54694790e98bcf828506f915a10d07febc3a28b6f670c5a69e",
+    "bytes": 659
+  },
+  "Transmision\\resultados\\etapa_5f\\balance_potencia_heredado.csv": {
+    "sha256": "2496c55785df7985a0b5e6c8312a547d0e1e783781debc9f575b8a8452069c1c",
+    "bytes": 638
+  },
+  "Transmision\\resultados\\etapa_5f\\calculos_y_sensibilidades_anexos.csv": {
+    "sha256": "c10311b132fcdc8fb4831318551409e721becff39f9e3afb9e6a6413d4015488",
+    "bytes": 979
+  },
+  "Transmision\\resultados\\etapa_5f\\interfaz_eje_vertical.json": {
+    "sha256": "24c93a3fd4d6fdf7a87149fc2457c73bcff37208688a2005e2f246ab29b17a29",
+    "bytes": 4956
+  },
+  "Transmision\\resultados\\etapa_5f\\matriz_verificaciones.csv": {
+    "sha256": "7d683de4a977f5f38dbfd1656ac9b07ff1ec722e04ffa51c897727166c06783c",
+    "bytes": 2157
+  },
+  "Transmision\\resultados\\etapa_5f\\parametros_definitivos_predimensionamiento.csv": {
+    "sha256": "928cda4d721a998875ec2ad21a2b5dbc16d3d68245bc1616b421e916a6636458",
+    "bytes": 7352
+  },
+  "Transmision\\resultados\\etapa_5f\\pendientes_priorizados.csv": {
+    "sha256": "db370e9fcc3d15a24bc8469aca80a90aea9c43c293e03a7072da2ae83a832916",
+    "bytes": 806
+  },
+  "Transmision\\resultados\\etapa_5f\\referencias_tecnicas.csv": {
+    "sha256": "58fc2244e87a25c4e50eae783341fb12bdb3a5b61385ec064db7672626739e11",
+    "bytes": 2322
+  },
+  "Transmision\\resultados\\etapa_5f\\resultados_informe_principal.csv": {
+    "sha256": "928cda4d721a998875ec2ad21a2b5dbc16d3d68245bc1616b421e916a6636458",
+    "bytes": 7352
+  },
+  "Transmision\\resultados\\etapa_5f\\resumen_integral.json": {
+    "sha256": "74a2b65be890f75a86e197fdc4e3024995e23196c6e6a1cca1716b4a23579cf9",
+    "bytes": 35743
+  },
+  "Transmision\\resultados\\etapa_5f\\trazabilidad_sha256.json": {
+    "sha256": "4e1b5fd72f4aca7505c9ce67097b4828f40f804dcaf3dca0e3d7a5d8b6bc9bf5",
+    "bytes": 72347
+  },
+  "Transmision\\resultados\\etapa_5f\\validaciones.csv": {
+    "sha256": "905aa1c984adf0bb62b6b3356d50ee973442193c0ac1dcb22b9f5096a82f12f3",
+    "bytes": 171
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\cargas_correlacionadas.csv": {
+    "sha256": "583c7374113f1b1e74109dbbde3a5355bb0bdee3b7808f56420c4dfeeb5ba31f",
+    "bytes": 2084
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\dimensiones_confirmadas_pendientes.csv": {
+    "sha256": "3a4481c028531ed6dd4ec6b6c7c1c699a961462dbea7f993f77b41c9c725083f",
+    "bytes": 9620
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\especificacion_fem.md": {
+    "sha256": "bd8c59a48f03718be5e464429756506c29a7a65ef7ba4d39683e98cf4eccf169",
+    "bytes": 4823
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\fuentes_geometricas.csv": {
+    "sha256": "fc0c51ab6223db88fabba8ebd1ca8a8f12fcf579626a85d8cb5196a15c8e651a",
+    "bytes": 304
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\parametros_utilizados.json": {
+    "sha256": "013a92e4c4ea01a26c6fc8d0c0a7e50c34113ff89187c75d9001e9395fcdcd02",
+    "bytes": 6254
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\resumen.json": {
+    "sha256": "ac5faa3a9312a6696581688809cd52c10ba39cc3d5fb219ed711aab8081ffccd",
+    "bytes": 39135
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\sensibilidad_pretension_separada.csv": {
+    "sha256": "a555fc149295adfecd3524cae56e04a0d754284522f5b633161206ceb90ca244",
+    "bytes": 4238
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\torsion_parcial_cubos.csv": {
+    "sha256": "f43c59a1d4505a09a5e7ad6de3b869c2f621ba7b8d0b9a2d80d9dc9175461e49",
+    "bytes": 3456
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\trazabilidad_sha256.json": {
+    "sha256": "e7c003d26a120b58b52a41745d3ab0305cc2b3c4d74fb874d62a14e2bb5744b8",
+    "bytes": 59169
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\validaciones.csv": {
+    "sha256": "41f33a472703cf383ff30bf2126000cdf30fee6969c0012b2f87926aec65c78f",
+    "bytes": 208
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_ambas_poleas_2026_10_21\\verificaciones.csv": {
+    "sha256": "16270d359d277f2cc53d7fd7f61e4f3eeb5c21f20abb2410966dabaa8d15f58c",
+    "bytes": 13901
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\cargas_conducida.csv": {
+    "sha256": "716b8bb7260315765912cdb80046c889fc87ae1855b6a557310d4cf9cb2cb77f",
+    "bytes": 1125
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\dimensiones_confirmadas_y_pendientes.csv": {
+    "sha256": "52f00895032ce13fa6b8368495f05429a82be743a174f748078190ade3e16d75",
+    "bytes": 4215
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\especificacion_fem_actualizada.md": {
+    "sha256": "608f69c87089a923819f6a0cdbb52e914bcb0e05e82540b62140730d48b45ce2",
+    "bytes": 3552
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\parametros_utilizados.json": {
+    "sha256": "400250eeab92ea5a3e71120c8c1e6e907ad25b83d1dde839d0f1809147b8b8bb",
+    "bytes": 3780
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\resumen.json": {
+    "sha256": "9d16f87463ceb393dda80b9a2453ae050d289681c758e1b9e7c7a6944fe158b8",
+    "bytes": 24387
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\sensibilidad_heredada_separada.csv": {
+    "sha256": "cc06d31bb912a8558190a1a1908dbd128bd212889f39e513eaca431c670c6c4b",
+    "bytes": 2250
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\torsion_nominal_parcial_cubo.csv": {
+    "sha256": "95781c74f488fe0fc1d218ac06eb965da65405a713156e910c8d0ca5031f2e33",
+    "bytes": 1822
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\trazabilidad_sha256.json": {
+    "sha256": "a663054c01b2616cc3064b80a51d591ee4add2164b0a91816d6a2423b78253ee",
+    "bytes": 57130
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\validaciones.csv": {
+    "sha256": "1642173a2fd6a249a48b846027ef5d525c22a0084829548e99ff7c341af5925d",
+    "bytes": 141
+  },
+  "Transmision\\resultados\\etapa_5e1\\revision_inventor_2026_10_21\\verificaciones_pendientes.csv": {
+    "sha256": "9e633ddea94f61fb33c677935e3a201e5cf14156ebde3c57c4141554c504d3b3",
+    "bytes": 4930
+  },
+  "Simulación_peletizadora\\datos\\agujeros_matriz.csv": {
+    "sha256": "520f9ee8ff330829ea73c92453e38a935c6a4c006061d15db28d4f8432e7c29a",
+    "bytes": 4176
+  },
+  "Simulación_peletizadora\\estructural\\acoplamiento.py": {
+    "sha256": "888b2c96f0543a750bcb681595b81b954e59fe35fa64ca5ecd4351b6c035ff41",
+    "bytes": 14477
+  },
+  "Simulación_peletizadora\\estructural\\analisis.py": {
+    "sha256": "21037eb37cb410d187426c0ba1e920cf02695063b882698b12da04769b3ab6f8",
+    "bytes": 12815
+  },
+  "Simulación_peletizadora\\estructural\\cargas_eje.py": {
+    "sha256": "be0802a1b1f0ff85d3436a1e53bd282c10ccf4b1abc07f4f23fadcc4a29ab767",
+    "bytes": 6084
+  },
+  "Simulación_peletizadora\\estructural\\config_eje.py": {
+    "sha256": "6a2f43b5c3631c2b1a88d8c96c976741e126c9ce9bf7b45fddd8061898909bd8",
+    "bytes": 4226
+  },
+  "Simulación_peletizadora\\estructural\\geometria_eje.py": {
+    "sha256": "acaf20fc29d6b9431f7e707c27dcd186bd2b830143b09e66a242d2b242a5f302",
+    "bytes": 3196
+  },
+  "Simulación_peletizadora\\estructural\\holgura_rodillos.py": {
+    "sha256": "c0114160154146049c1562d01a612046ac3f9ffbb17dfca40913db696a0c100f",
+    "bytes": 10007
+  },
+  "Simulación_peletizadora\\estructural\\resistencia_fatiga.py": {
+    "sha256": "4922539deaf2b6a47930cdf74b30f53b7db7413b491650711a9d2012293e7c10",
+    "bytes": 17951
+  },
+  "Simulación_peletizadora\\estructural\\rodamientos.py": {
+    "sha256": "0a68e016e09652b2727bc2a6b47b3d075146ea93105fe2a1b8bfea3b28961b61",
+    "bytes": 9238
+  },
+  "Simulación_peletizadora\\estructural\\viga_eb.py": {
+    "sha256": "fcd27481f22b8eaffaad05100a96177d13db5166580b46dc7b63c9e4ffe942a2",
+    "bytes": 4798
+  },
+  "Simulación_peletizadora\\estructural\\visualizacion_acoplamiento.py": {
+    "sha256": "4b0c0a6160f02a03ac4b7d75a5115d6690dc58e3a83d2f247fdad59ba74b9644",
+    "bytes": 6895
+  },
+  "Simulación_peletizadora\\estructural\\visualizacion_eje.py": {
+    "sha256": "63823b9cab20af06c86b2d1d92cadb78bf28df0403062fd340db0fcc3ccde523",
+    "bytes": 7420
+  },
+  "Simulación_peletizadora\\estructural\\visualizacion_holgura.py": {
+    "sha256": "9fe20ddac08e9f8ca9670ba015d5c317c2b10a3d3242e049f874fe6280ddafa5",
+    "bytes": 5114
+  },
+  "Simulación_peletizadora\\estructural\\visualizacion_resistencia.py": {
+    "sha256": "0cdc76beb97345ca6fc2edaf6f3fa85cb5b44e0bc455b965b91be9b8a496df5a",
+    "bytes": 4692
+  },
+  "Simulación_peletizadora\\estructural\\visualizacion_rodamientos.py": {
+    "sha256": "ea4421a77b090dbf28d4c6d9e9cb651be8a0265a55ef9c54b9de6ba41f80a0db",
+    "bytes": 2811
+  },
+  "Simulación_peletizadora\\estructural\\__init__.py": {
+    "sha256": "a6335f642ce984fbc522ad650adcd34ea0f377ef34a27b3977aa5e81782f7034",
+    "bytes": 65
+  },
+  "Simulación_peletizadora\\modelos\\fuerzas.py": {
+    "sha256": "98c16979720a5c3cd8355bdb54d705e086d40a2f0894d84ff24ce6679b54947e",
+    "bytes": 390
+  },
+  "Simulación_peletizadora\\modelos\\presion.py": {
+    "sha256": "725b91655c4cc15de75cc780fb50b62266cf802371ecc4a35f42c7dd7d9a1c35",
+    "bytes": 1047
+  },
+  "Simulación_peletizadora\\modelos\\README.md": {
+    "sha256": "94f9b1a16eb5d75f4046364f8575380807af17b1a5da845292c8f8e37d4ea19e",
+    "bytes": 178
+  },
+  "Simulación_peletizadora\\modelos\\superposicion.py": {
+    "sha256": "a2ec2eb59551d57238b48b6530b2877fe8453de5b93a281c4110554b8aac9562",
+    "bytes": 4292
+  },
+  "Simulación_peletizadora\\modelos\\superposicion_variable.py": {
+    "sha256": "5b5ecf9df8014375fb3ebe59d72a64e780ba43fa3a5a00e0d6a3495e96026c3b",
+    "bytes": 3228
+  },
+  "Simulación_peletizadora\\modelos\\torque.py": {
+    "sha256": "a47ea11b156fcd8e3495461eebfacce1753e240ce7c8e3cc644bf94b4328154d",
+    "bytes": 608
+  },
+  "Simulación_peletizadora\\modelos\\__init__.py": {
+    "sha256": "a849f083fd01e40c5067dc484394277fa306e667ed154fc8866d8785a805aceb",
+    "bytes": 126
+  },
+  "Simulación_peletizadora\\resultados\\actividad_una_revolucion.csv": {
+    "sha256": "2f3e929cc0b7d870200aeeae51450bf2acebfbd0102c6daeec6fcae8eafaa74c",
+    "bytes": 81476
+  },
+  "Simulación_peletizadora\\resultados\\actividad_vs_tiempo.png": {
+    "sha256": "33fa265bbfae5fe91dfecaf1c078ba07ed6cb45c1ae6da9dfdabc774a752dd9c",
+    "bytes": 69617
+  },
+  "Simulación_peletizadora\\resultados\\animacion_matriz.gif": {
+    "sha256": "93d852b43507260541c64effe96ca3d03e82d6871d8aa1381cb251beb97bb699",
+    "bytes": 47591872
+  },
+  "Simulación_peletizadora\\resultados\\comparacion_correccion_ancho_rodillo.csv": {
+    "sha256": "d80bd8640fceff7103eeb35ba35cb3029ae0dfd0be3afee4886591e9e9cc7415",
+    "bytes": 6516
+  },
+  "Simulación_peletizadora\\resultados\\instante_30_grados.png": {
+    "sha256": "84d30aa39c0a3a9b34c3ee12cf92890ca88346fb58dddc84ba289c5a16d43b20",
+    "bytes": 215916
+  },
+  "Simulación_peletizadora\\resultados\\resumen_actividad.csv": {
+    "sha256": "009bce60a02ad7f767da88e100e86bc050f8b41ba8e1710c5c037a84fb816a16",
+    "bytes": 98
+  },
+  "Simulación_peletizadora\\tests\\test_acoplamiento.py": {
+    "sha256": "6dccdf009ea04d9856f9b210e5869a084b76ea02dce47bcf29e79f8bdc519289",
+    "bytes": 3452
+  },
+  "Simulación_peletizadora\\tests\\test_cargas.py": {
+    "sha256": "cbdaee9aedc326d24f00f4881229388795f1513aad1cacfde13831b7e67a37e4",
+    "bytes": 3851
+  },
+  "Simulación_peletizadora\\tests\\test_eje_transversal.py": {
+    "sha256": "84c6ec291a69eb2af0273c7cd5896943885f77f53caf9fedc4bee55f272a791b",
+    "bytes": 4619
+  },
+  "Simulación_peletizadora\\tests\\test_geometria.py": {
+    "sha256": "28e510bd33c6c5b0266fb15a8bbbfaaff2fde3a02287018a68bca70170949db7",
+    "bytes": 1948
+  },
+  "Simulación_peletizadora\\tests\\test_holgura_rodillos.py": {
+    "sha256": "3e62c306c226b6bd66f3ba3300ce71c80fb8939e82fcb9fa55840784ede2a8b7",
+    "bytes": 3473
+  },
+  "Simulación_peletizadora\\tests\\test_resistencia_fatiga.py": {
+    "sha256": "daa2da2f93db8a2c752e7763a0d05c0d390274cc4cc4918f24ebb7d4e600e3b5",
+    "bytes": 4284
+  },
+  "Simulación_peletizadora\\tests\\test_rodamientos.py": {
+    "sha256": "a7738713218892a6da3be6e5b0bdf4d222849f04b52bfb2d23207d334589990b",
+    "bytes": 4578
+  },
+  "Simulación_peletizadora\\tests\\test_superposicion.py": {
+    "sha256": "69fd4618eaa61702cf9fc99dabbc990f2930c85e5933f56eb840b05b430eba87",
+    "bytes": 5209
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\agujeros_activos_constante.csv.gz": {
+    "sha256": "884021036d809f7c0ff3582653971a4d9726a33de13d474cd16dda46549e9cce",
+    "bytes": 311533
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\agujeros_activos_cuadratico.csv.gz": {
+    "sha256": "44c3f27c188c1eed0b107c3d4be32b4a57cf0b87997aaa253382bcf3819106d6",
+    "bytes": 719206
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\agujeros_activos_senoidal.csv.gz": {
+    "sha256": "1bbdb011eea8639a446a6a8b0c1a4097709deb0015ab33c9abc909f6e0df4a1d",
+    "bytes": 708119
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\animacion_presion_cuadratico.gif": {
+    "sha256": "0b67831158c42cdd27ca9bdb8a2c180692788deb2e1fd0bb3da250a8a0199264",
+    "bytes": 7220289
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\cargas_constante.csv": {
+    "sha256": "c3141ca20de5d49251af3f46b715e6d0f296a9ecfc77cb07077b1fb18675a68f",
+    "bytes": 210490
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\cargas_cuadratico.csv": {
+    "sha256": "9e7947f82e67ed6517d0829ed3e747367ca4984f536553aee78e7951916f8a26",
+    "bytes": 214972
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\cargas_senoidal.csv": {
+    "sha256": "4c0683a7d1aac6d29ff69209f909dd9f8277d67f8f2c8e6b8e67e8cab7b2ac0e",
+    "bytes": 213134
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\fuerzas_constante.png": {
+    "sha256": "22e0e7a2bcf1a4cd21a6981709e1fcba6aeb88fd606b3197af7c85857b67f163",
+    "bytes": 148567
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\fuerzas_cuadratico.png": {
+    "sha256": "97dbb3548e41d284d1cf41eb8cb8bbd2c1ff52e377139e8bbfeef5e9a5a45f22",
+    "bytes": 259913
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\fuerzas_senoidal.png": {
+    "sha256": "d2db5b93f87c5adb229cf066eedf42b71b53ca3b9cf1e041374548f6427f89e3",
+    "bytes": 168628
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\perfiles_presion.png": {
+    "sha256": "c06a2cc27e2c508053c7c1e02e928353476239df8c2ccfc3380f421325e65731",
+    "bytes": 84522
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\potencia_comparativa.png": {
+    "sha256": "fd944fc1276e9918244b77ded79e1d564d7050b68d6ec2a18ce110052837c541",
+    "bytes": 202806
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\resumen_comparativo.png": {
+    "sha256": "b98fd0b084a690eebfe7250c93e522fe3554ce2493e6c3a44ad75c2a17fb31a5",
+    "bytes": 47054
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\resumen_modelos.csv": {
+    "sha256": "d454d434703df004763bd18b669508f225ee8d3639b0c07480e69bdc602ac947",
+    "bytes": 1825
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2b\\torque_comparativo.png": {
+    "sha256": "ebc961b819e0393f984ad894593af0584aee3c3fad7972e35ba609cfe78bd8b9",
+    "bytes": 198228
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\animacion_cobertura.gif": {
+    "sha256": "7af344cdf162e747f8d6ab22abe0a5a89eb3c6593f3e11e92189f00778c9a243",
+    "bytes": 6656191
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\cargas_area_superposicion.csv": {
+    "sha256": "7a579866475d49b01295b4fbedd99d270285c37ba30e820dba37a65090b2fc2b",
+    "bytes": 553694
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\comparacion_modelos.csv": {
+    "sha256": "5add03c2e006d1941cdef3d5dca830d2aa87ad4e2bdffdf1a3cd8b69d78e5eab",
+    "bytes": 606
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\contribuciones_area_superposicion.csv.gz": {
+    "sha256": "3d76f87f9fd2c68805b7ac153684a95d32811bce956a778e83eedb17286376fe",
+    "bytes": 1154639
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\convergencia_integracion.csv": {
+    "sha256": "224d716ef43063141355727fb7f01b68925ce2eafcedd2dd07363d225475b339",
+    "bytes": 1526
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\convergencia_integracion.png": {
+    "sha256": "afa522c38287f8e5164aef0d25f4ca376e265a46989e6bf58fa381d252d6bb53",
+    "bytes": 115938
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\ejemplos_cobertura.png": {
+    "sha256": "35555f3d215f88ffc22c7c551b6e10f5fb579edce939de42eb4f55b81b463437",
+    "bytes": 95251
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\fuerzas_area_superposicion.png": {
+    "sha256": "cc8a4586f09ef694aca4b972674bac582178a63ddf03d891751897e010bf2997",
+    "bytes": 160545
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\fuerzas_comparacion_modelos.png": {
+    "sha256": "e2cfa7703974f4bb71306d7c23cbc0238b52719ecc882c53778bc8f6f0dc0c27",
+    "bytes": 28115
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\resultante_radial.png": {
+    "sha256": "5657d93a1b2c57379da4374c97ff2320864e7a8d273fb57548903996a2ec94c3",
+    "bytes": 207359
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\resumen_area_superposicion.csv": {
+    "sha256": "505dacd9df7e4718861a478b10fb9f33b0cb8a57aee2a757f149ef1de415dd37",
+    "bytes": 988
+  },
+  "Simulación_peletizadora\\resultados\\etapa_2c\\torque_cuatro_modelos.png": {
+    "sha256": "66ccd9e3aad4e4998079070b6cd54b6d85e571ccfa6df8b63b06b83f1646714b",
+    "bytes": 238269
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\caso_constante_conservador.json": {
+    "sha256": "cccbb9e4dee449c46ca387c1fb6bac31b71746d3b688fd4afd9a4f592aaa4749",
+    "bytes": 371
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\comparacion_casos.png": {
+    "sha256": "65a2fb7b3972865d8b17eee3595ba359db762bba3549655b932a383fc0c78e05",
+    "bytes": 56303
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\convergencia_malla.csv": {
+    "sha256": "7592fece534edd978d4e39b9720971bfe32915f663b45abb59c615b8a5c1f37e",
+    "bytes": 1298
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\convergencia_malla.png": {
+    "sha256": "252885b943ea96142e233c7c4ecf2658d7d19cecbc07ab8025ff49bfe4309464",
+    "bytes": 93261
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\deformada_critica.png": {
+    "sha256": "16070f9e4e0fb6ded8bc7e4b42cf6be19be16309e0841f1e9674371c1e485f5b",
+    "bytes": 75800
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\desplazamiento_revolucion.png": {
+    "sha256": "c31129bc89a381815d6c88be4016ab637353d5e800eda46de42a23156fbc72d1",
+    "bytes": 123019
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\diagramas_criticos.png": {
+    "sha256": "256411f831e91efa3b38298ab818d63912becea1d16db174bf65f3c452e2b024",
+    "bytes": 105930
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\diagramas_instante_critico.csv": {
+    "sha256": "adfcd37179a075697aee9e6d8b9aae367669541b86a698b8e90d2983f2f97e93",
+    "bytes": 43658
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\diagrama_cuerpo_libre.png": {
+    "sha256": "f302f96f00a1a29fabe85815e18fdb42599776b672c4df20890282398b1853f6",
+    "bytes": 28840
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\envolventes_caso_C.csv": {
+    "sha256": "0a8695250806e2c971b603c4e4e8389dfcfa04fd3f3baf14ae9d77f604ba4249",
+    "bytes": 23952
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\envolvente_esfuerzo.png": {
+    "sha256": "8c0fc77d18de76c2d6717cd5f5dce8e4e8d367d2598834af1a5ee73ddc6412a4",
+    "bytes": 61612
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\envolvente_momento.png": {
+    "sha256": "b318a18088204e514758a7f1db081e003864d5af033ce6a9f7e22de52ae7c432",
+    "bytes": 69357
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\fuerzas_rodamientos.csv": {
+    "sha256": "29c67fd1555af9bf4533457c14d75fe5b113c93dbb411af6e1e07c736c38cd27",
+    "bytes": 382341
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\geometria_eje.png": {
+    "sha256": "aa98df126e292c96193b4b7154ab0668b70b32a262623a66f5fc5fccfa641128",
+    "bytes": 42979
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\geometria_segmentada.csv": {
+    "sha256": "14e541798f4b590f608fedcf0dee1024b2c6a64cb36e1562ac90dd437108b75e",
+    "bytes": 1113
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\parametros.json": {
+    "sha256": "8d5aee5ad5dad13d02cd702eb7b5ac3704a23e72a72895744173f37f1ddd8aef",
+    "bytes": 1588
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\reacciones.csv": {
+    "sha256": "9c0522463bca77a03b029abbdec0e8f4799cf73413265ca2250a06845221cb9a",
+    "bytes": 542020
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\reacciones_revolucion.png": {
+    "sha256": "42ed9bd036462edabe606f22212429d4288c6b088c4b49ecefa3d8f4c3b0278b",
+    "bytes": 221429
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\resumen_masas.csv": {
+    "sha256": "d0723db75fb9ec26f9e42cceea75e1d93be4eb277734a4da459478ae1fd8456d",
+    "bytes": 155
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\resumen_maximos.csv": {
+    "sha256": "b22f26d453a2cfd34ac618f8b0bd4a10a0d617903fadd45ec510277dc0aabbc1",
+    "bytes": 948
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\series_temporales_estructurales.csv": {
+    "sha256": "631d23afc4274461674051bcd39669f63d3a7d1038e255116cf700a0a90cf8e6",
+    "bytes": 764433
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3a_eje_transversal\\validacion_equilibrio.csv": {
+    "sha256": "bc2042f6978d1a256c38771350f8936ec89b54031180517b3905ac9426e89d29",
+    "bytes": 783
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\cinematica_rodillos.csv": {
+    "sha256": "50f51fe27cf1eb842a5e2c5b53a41e9ef2aa9c16d36ae0a862f922572b4a329f",
+    "bytes": 2751545
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\comparacion_holguras.png": {
+    "sha256": "35fc07792b13aba09ba54690ed2412a094935dbe31d7f4244e1d0a0872fe51a2",
+    "bytes": 92100
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\desplazamientos_centros.png": {
+    "sha256": "81b307c3408e5c3cfb837bb9f2bfe2422e08ca1fa19f5100f308b7858f6e45b5",
+    "bytes": 193409
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\desplazamientos_rodamientos.csv": {
+    "sha256": "9683a519a85b6e1e9569bcca47e59b950e894df3bfde69ed4e1c012ca05c429d",
+    "bytes": 920235
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\desplazamientos_rodamientos.png": {
+    "sha256": "bf75b65e74681d9726a053e79fc4ed737bdd5a64b837017c93b5b3de972f2eae",
+    "bytes": 255881
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\esquema_deformado_critico.png": {
+    "sha256": "b2a92a2c807e8a46edecb793b6714e400d4353e1576736db502043e17214d3fa",
+    "bytes": 74668
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\holguras_estimadas.csv": {
+    "sha256": "e755520db5027b43682fe2d757a7a820b2d5aefa86896f1aa1331e50a50477bf",
+    "bytes": 1413783
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\holgura_minima_instantanea.png": {
+    "sha256": "64beac60cb04610988c1a7167f6837dd2c8ca8f25ae0ba47bda6ecfa21eaa495",
+    "bytes": 105728
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\inclinacion_rodillos.png": {
+    "sha256": "ab58446c6dc5ad8640c02af7b4593a2253dbe136c671589e2cbcf05b431c203c",
+    "bytes": 104147
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\parametros.json": {
+    "sha256": "5381187fe51517ebc6e005959c782850bd02befefc495a065624076830f513e2",
+    "bytes": 421
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3b_holgura_rodillos\\resumen_estadistico.csv": {
+    "sha256": "a73e93d4b042553a7b2792468c08d47abf2d92115d57661235ccf68cc67c6431",
+    "bytes": 5257
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\comparacion_fuerzas.png": {
+    "sha256": "029985bd61e5b3dfa6469ba16a6312b839931a6cd99416828a71faebee7189cd",
+    "bytes": 248615
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\comparacion_holguras.png": {
+    "sha256": "2db28470a3b1f10d51084c295243f75759277b7939eeada6ef4b94cadbdea73a",
+    "bytes": 187004
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\comparacion_torque_potencia.png": {
+    "sha256": "1d865a6cf298a8bea4cba9ef749c4668c2fb3f81096551b31afff003c15a6ba4",
+    "bytes": 390835
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\deformaciones_inclinaciones.png": {
+    "sha256": "0259e709162d396e3253ff23a8f9daeb4d5d9ef519be840c79027567e14fe13b",
+    "bytes": 325466
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\eventos_extremos.csv": {
+    "sha256": "9abd5cde3939a59ca5ae0a70e67aa4887624f7c7223c8a884bdd8016cf716539",
+    "bytes": 2548
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\evolucion_holguras.png": {
+    "sha256": "a25426d2d36a1165ff3721ad5304fdb27c8ee93739543bbc6843359dfb92a148",
+    "bytes": 260794
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\fuerzas_resultantes.csv": {
+    "sha256": "ea8959f17d9822b67a006e543706b8fd0037b6be7948c0ea9219c2ac0e66fc91",
+    "bytes": 538306
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\historial_convergencia.csv": {
+    "sha256": "aad5bbd2aaf635caa4c254f17b4d090d15f1d517b413ba3d6d90fccee95c0ac6",
+    "bytes": 4554402
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\historial_convergencia.png": {
+    "sha256": "65f9efd84b4451fe8c26c1fc6ce94a750e0f7bd0588e287b0ff6fea15256ddf6",
+    "bytes": 95062
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\holguras_inclinaciones.csv": {
+    "sha256": "5f64d0cb645e3df97f7f6a3cec50c8e5efde5fc2f63473b0f89e52a502e1cb6c",
+    "bytes": 1043734
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\parametros.json": {
+    "sha256": "6840195addeeab90ebffe13787c5c69d7ea427a8f4e4910e9d1c661854c62632",
+    "bytes": 425
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\perfil_radial_critico.png": {
+    "sha256": "9ba7def9406993f5811128540a093a7cafb50aa93522c8023ba9209180852274",
+    "bytes": 113045
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\resultados_estructurales.csv": {
+    "sha256": "2e53c6b08ccfd026e3644967caf14754fa83f875a535c888044550c2d627fa03",
+    "bytes": 846947
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\resumen_comparativo.csv": {
+    "sha256": "99327ed9f15264e8ba4c955b48ac7e5d93182e042393e49ecd7ae7d09182a7c0",
+    "bytes": 3177
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\sensibilidad_numerica.csv": {
+    "sha256": "be9ca0d69b921662a29a2abce406e0b22d6224a82890f17504d0235a6605e971",
+    "bytes": 986
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\series_temporales_acopladas.csv": {
+    "sha256": "a364ba3a6f1cda19dfd6f8c4c83cda109febc3d0f5674dac1944e0f6c21ca233",
+    "bytes": 1605289
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\superposicion_huella_deformada.png": {
+    "sha256": "5bd6c5a78b63542a69ba3e6be8d175234f5672c1bde30c263f459c6f2e2bc544",
+    "bytes": 116781
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\superposicion_instantes_criticos.csv": {
+    "sha256": "6a255dd66ee06490494ec627c76ae27775c72af1f6e19ad1f545dbf0128557b3",
+    "bytes": 30004
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\validaciones.csv": {
+    "sha256": "7c9ec0d85d3a44df0727e62a585d0ae5c4e9a4ce7a4964eba4d71c4da39f66dc",
+    "bytes": 820
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\comparacion_fatiga.png": {
+    "sha256": "b30dab7f3220f0bc655c2faac34c3ded5568cce9e49f405462567375f869b121",
+    "bytes": 56390
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\comparacion_resistencia_estatica.png": {
+    "sha256": "322dae917d65c635b75f650ee35ae736bab5b5a2ff99e1243472a82dd74edc57",
+    "bytes": 57878
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\conteo_rainflow.csv": {
+    "sha256": "9fb0d2985e5aba235dc40a6d2f097ccf69491287be410d46582fa8aaae6372df",
+    "bytes": 131490
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\escenarios_entallas.csv": {
+    "sha256": "2d5119d990315bf7ccbb13d475f4b5ad82b06ff8903f1b291f836bd2d2abdce6",
+    "bytes": 324
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\escenarios_material.csv": {
+    "sha256": "f6eb009c9342e61285fa8f5b7fbe52b92a5a13f0cd5e66cf1242e316c3ce39fa",
+    "bytes": 2904
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\esfuerzos_nominales_secciones.csv": {
+    "sha256": "9b1ceae39e7e00707394729e69fe42e3f09238fbcd7e94cd10567808a53a6fa0",
+    "bytes": 8979
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\esfuerzo_longitudinal.png": {
+    "sha256": "4e7adbbf32a0f35233be854245acd21ea47d5a00652dac11b7363ab33dc81069",
+    "bytes": 110608
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\fuentes_materiales.csv": {
+    "sha256": "59edd03a591fd1abf92395b290174eea7a29be59f3118b881493db0a8b8b0d40",
+    "bytes": 335
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\historiales_tension_puntos_materiales.csv": {
+    "sha256": "696e21bda611d802fec2ff4dd25f27b8db1f785acd1416f8aa5fbf5c3b3c61bc",
+    "bytes": 3033858
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\historial_tension_critica.png": {
+    "sha256": "dd0d0aefa7a259c304af810e39eaef04218e755d33e8edfd27804bab95107258",
+    "bytes": 120532
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\parametros.json": {
+    "sha256": "8d21e1e68f751d956392becba196af51728f5cf95975b44aed613676ace1cca5",
+    "bytes": 1216
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\resumen_factores_seguridad.csv": {
+    "sha256": "b9603f005c3c780259bc9dc9000c988b55e84887f7c61edbbd933dae460636be",
+    "bytes": 30162
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\secciones_criticas.csv": {
+    "sha256": "4c98be916c6427a3bb9e096b1e3d205cdff80f45cb9a5f23642ca047af1ffdb6",
+    "bytes": 1153
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\secciones_criticas.png": {
+    "sha256": "c40861e76943bd49c79ca5f81fe1f389e8fdb0ea58aa20f2a4c6c0b5f2bac48f",
+    "bytes": 89280
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\sensibilidad_concentracion.png": {
+    "sha256": "bb0d0be18bef5c9484c3e924d84c95ab82c2b82f98e7392eaf8cab9ffb2511ca",
+    "bytes": 81373
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\sensibilidad_marin.png": {
+    "sha256": "7d00d68eb51ec98227153fb5a129b947ed4dbb6315884dc403ec5184fb06197b",
+    "bytes": 61774
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\sensibilidad_marin_ovako.csv": {
+    "sha256": "cb2c951579c91ac4d6d1686a007685c509e5e96d62431b465d25e6743d1f59ad",
+    "bytes": 306800
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\sensibilidad_material_entallas.csv": {
+    "sha256": "7dd7cf356850039e706abecd7e9b15fae4aa7094d68f5119d64cbb7d01b632c6",
+    "bytes": 414445
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\sensibilidad_refinamiento_angular.csv": {
+    "sha256": "344b8cb319a7e70d4f779142532db7709700810f1241d86bcbdbace7b11959bd",
+    "bytes": 270
+  },
+  "Simulación_peletizadora\\resultados\\etapa_3d_resistencia_fatiga\\validaciones.csv": {
+    "sha256": "b78673e31d57252d9646f26feb32a2e637b3eb6bfd5a2f86c6fa77b8d5acc5c1",
+    "bytes": 359
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\capacidad_requerida_objetivos_vida.csv": {
+    "sha256": "8d7de35998ef3a10738b38501fef8ec702799c5a5f8314b3257b8dd8dfe7744b",
+    "bytes": 890
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\cargas_caso_conservador_3a_d.csv": {
+    "sha256": "65928fda2f2007be499070711fb19f5a9d1559bbf43d95f317bdbe834d10f0be",
+    "bytes": 831
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\cargas_temporales_rodamientos.csv": {
+    "sha256": "20142b20970bd7e94b0f6def52591b2a893d817c4ddc172ac3778656de78e9aa",
+    "bytes": 1002508
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\carga_maxima_vs_equivalente.png": {
+    "sha256": "453f43e1bf098d9228440e41b89dd1a5f7bd95ec86d9bbd729aa257756898215",
+    "bytes": 28698
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\carga_radial_revolucion.png": {
+    "sha256": "5c2ebad02b72e5fc18151e9eaedd3a65b564e82fa54e7f211146041374dd2080",
+    "bytes": 339117
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\comparacion_fag_koyo_conservador.csv": {
+    "sha256": "d431bf54e5e7dcb1928caa247852ea5b7f931e233e0b619bcd782d39def5b737",
+    "bytes": 1867
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\comparacion_fag_koyo_nominal.csv": {
+    "sha256": "2b794a2aaa5fb4aee903a5b5b7c311719215d5dcb5ba36993983eb9a2a41277c",
+    "bytes": 1960
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\comparacion_nominal_conservador.csv": {
+    "sha256": "674d5e119da7b23daaeb80fb960dab15f03e7538eb5d3edd8e34753f3bd70c24",
+    "bytes": 1936
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\condiciones_montaje_operacion.md": {
+    "sha256": "8725ed948cbc63ec35578f371d920e9f04f79cc2d60828b06242f840c575fc2d",
+    "bytes": 1980
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\ejecucion_resumen.txt": {
+    "sha256": "fba3a491db33eec06366e9d8e88b9a1c0b147f5683be9bfbec5f9b7657fd7dd9",
+    "bytes": 1353
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\factor_estatico.png": {
+    "sha256": "a5be28c20a980ed878579e1b526b075f638cde08d77fea438b2f71de576de5ba",
+    "bytes": 33879
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\fuente_tecnica_rodamiento.csv": {
+    "sha256": "fbf5ececaec49196eb7baf5ef49fdc3a224668a7a2bfd90e62e12739683b2f3e",
+    "bytes": 397
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\objetivos_vida_rodamiento_critico.csv": {
+    "sha256": "116dc0ffad08614a431f3cc962c4234f9ad905e6e049d29379dfa2b64027bc3f",
+    "bytes": 438
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\parametros.json": {
+    "sha256": "3d97500c514bce985d2bacab29adc5acfadb12c56f25fb1f594aa04ef92ee784",
+    "bytes": 3880
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\resumen_rodamientos_conservador.csv": {
+    "sha256": "3b9f11b6b8882e6dac8617a8a886ec0f3806296a0127e63fc0a56415478458b2",
+    "bytes": 1063
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\resumen_rodamientos_nominal.csv": {
+    "sha256": "2ac7815be47a1ebf7c79858dac16ebfc6eda64d9fe31dddf81dc086141fc08e8",
+    "bytes": 1108
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\sensibilidad_vida.csv": {
+    "sha256": "5240ad811a4e7c4720f5df9b242915c80519ce49924dda5278439825e5c7b7e4",
+    "bytes": 35540
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\sensibilidad_vida.png": {
+    "sha256": "b80e9d58977da8f15852b25a9a2b085ed27b9ce9c623ea5b9d789568d3a1d519",
+    "bytes": 104754
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\tabla_seleccion_rodamientos.csv": {
+    "sha256": "ce6b9cc0f4d3c045c385d25601c9f24a627bb23be6f291dc0c95b891c5fe4f35",
+    "bytes": 907
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\validaciones.csv": {
+    "sha256": "dd2f56c055bec31048b8230a881bef5f8e7a17f7fb44bfbfed29bc7d290bfa07",
+    "bytes": 413
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\vida_nominal_l10h.png": {
+    "sha256": "9335a3c8788df75caee7ed5ca2e2497ffdbc3e3f0aa2dfc125757b1c06cc2422",
+    "bytes": 42034
+  },
+  "Simulación_peletizadora\\resultados\\referencia_ancho_20mm\\comparacion_modelos_2c_20mm.csv": {
+    "sha256": "a049c95a5e31e940480fcc7801490fb57d6028a4c84f35bc27dd21db9856ff87",
+    "bytes": 606
+  },
+  "Simulación_peletizadora\\resultados\\referencia_ancho_20mm\\resumen_actividad_20mm.csv": {
+    "sha256": "abc374f3b885b3bcf2c20f754228598dcaf606bce8d5678e7aed7cee150260f5",
+    "bytes": 93
+  },
+  "Simulación_peletizadora\\resultados\\referencia_ancho_20mm\\resumen_area_2c_20mm.csv": {
+    "sha256": "5f5d564b0deedd508461a76b222a12955a316241563d3cf701bb875c107dc0da",
+    "bytes": 1001
+  },
+  "Simulación_peletizadora\\resultados\\referencia_ancho_20mm\\resumen_modelos_2b_20mm.csv": {
+    "sha256": "e5bd4c8fb0c2179d69e1c7c5df8352666160f198497fed1b5cf3d3c986b7f826",
+    "bytes": 1812
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\capacidad_requerida_objetivos_vida.csv": {
+    "sha256": "f5b497ed9b539d75ad8d74e83f4c382d5e2d45fb307f945f793efb36782fae79",
+    "bytes": 698
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\cargas_caso_conservador_3a_d.csv": {
+    "sha256": "65928fda2f2007be499070711fb19f5a9d1559bbf43d95f317bdbe834d10f0be",
+    "bytes": 831
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\cargas_temporales_rodamientos.csv": {
+    "sha256": "20142b20970bd7e94b0f6def52591b2a893d817c4ddc172ac3778656de78e9aa",
+    "bytes": 1002508
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\carga_maxima_vs_equivalente.png": {
+    "sha256": "453f43e1bf098d9228440e41b89dd1a5f7bd95ec86d9bbd729aa257756898215",
+    "bytes": 28698
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\carga_radial_revolucion.png": {
+    "sha256": "5c2ebad02b72e5fc18151e9eaedd3a65b564e82fa54e7f211146041374dd2080",
+    "bytes": 339117
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\comparacion_nominal_conservador.csv": {
+    "sha256": "e3f3a0cee370db4a4500057323d71a4b9848e66e5e651c5e9c8d1449ae0e5cba",
+    "bytes": 1711
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\condiciones_montaje_operacion.md": {
+    "sha256": "6c782ab2d54235c1cbe94c893ac3f98c8b8143871864c3085c941842afb6a3fb",
+    "bytes": 1741
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\ejecucion_resumen.txt": {
+    "sha256": "6aa88f47890fa6e8d1783b345cf13eb7bf9f8ec74a0b9a14e48a8c2bb4af7a88",
+    "bytes": 1183
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\factor_estatico.png": {
+    "sha256": "a5be28c20a980ed878579e1b526b075f638cde08d77fea438b2f71de576de5ba",
+    "bytes": 33879
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\fuente_tecnica_rodamiento.csv": {
+    "sha256": "0cbc1e0c75d2c9adb1fc3694fa2cb953ce5c77835e22dcf942814780f1519ea3",
+    "bytes": 385
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\parametros.json": {
+    "sha256": "f8c0d9ae1954ac0e39ce71bdf981a7e687f988d2ea91459057cc5849cee7a3d2",
+    "bytes": 1308
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\resumen_rodamientos_conservador.csv": {
+    "sha256": "0bfdccaf24cd32b0e2c9797d83b2cfb7754fa2c4c0135d7c5019cd0b2f0f1009",
+    "bytes": 939
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\resumen_rodamientos_nominal.csv": {
+    "sha256": "6a1a72a2fa18a7f3d422e51849c0df5ecce199366b37699d08a104721632906e",
+    "bytes": 987
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\sensibilidad_vida.csv": {
+    "sha256": "0579ed77e4b41a009606e90e6cd4c2045e58488d4239ae4a1ecd53fecd815e93",
+    "bytes": 35538
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\sensibilidad_vida.png": {
+    "sha256": "28e1d95294c8adb164fcef4d92fe0fc8eda7b92ec77c1edbb23b588130abc795",
+    "bytes": 107074
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\validaciones.csv": {
+    "sha256": "2581300a17cb987a90526c036df8e247a673340ddfa10b89e40dee72f21f9f34",
+    "bytes": 382
+  },
+  "Simulación_peletizadora\\resultados\\etapa_4a_rodamientos_rodillos\\historico_fag\\vida_nominal_l10h.png": {
+    "sha256": "359680d8c6725cbc81f9d707954f496075cce93bcde2a56da3659fa44b3a617c",
+    "bytes": 31683
+  },
+  "resultados_integracion\\etapa_6a\\calculos_adicionales_priorizados.csv": {
+    "sha256": "74e9f077b610007fa8b2740f30b8b63a5aa25a60fbbaf36584ef63a208a85051",
+    "bytes": 1825
+  },
+  "resultados_integracion\\etapa_6a\\camino_cargas_y_alcance_6b.md": {
+    "sha256": "d4e69f8b489b4868864865ad44ca1898d0835dccb55fd174e00b4bff96d36566",
+    "bytes": 10679
+  },
+  "resultados_integracion\\etapa_6a\\datos_necesarios.csv": {
+    "sha256": "cbf4b82824f4fc96b50f86a9ea266917a451fedb1db515f1ebee79446aaa1764",
+    "bytes": 4470
+  },
+  "resultados_integracion\\etapa_6a\\inventario_componentes.csv": {
+    "sha256": "d79311f4d314584bc91f7f3852b2b93c68eac9d416f8829f81139912582988fe",
+    "bytes": 13195
+  },
+  "resultados_integracion\\etapa_6a\\inventario_componentes.json": {
+    "sha256": "cb04ba4d3aae76e571985a706b83561e8ddbf9b6bc62b996b1e02783a51a73ff",
+    "bytes": 18343
+  },
+  "resultados_integracion\\etapa_6a\\matriz_verificaciones.csv": {
+    "sha256": "08bfb26cea5793b61dea54c2243b2c0c70c1589ef1369d2feaad3d4c8af20422",
+    "bytes": 6693
+  },
+  "resultados_integracion\\etapa_6a\\resumen_auditoria.json": {
+    "sha256": "d56fb4a7bd69ce24ff347916a35693786b096206464d244dc3c3d820bbadab54",
+    "bytes": 24802
+  },
+  "resultados_integracion\\etapa_6a\\trazabilidad_sha256.json": {
+    "sha256": "91ed67350925af0a20683d22351bcc7b89f8086f2f74651fd2f3d4cc9efccd97",
+    "bytes": 74384
+  },
+  "resultados_integracion\\etapa_6a\\validacion_conservacion.json": {
+    "sha256": "0dd48bc9ebe8049756b062235e224d49c35127ca05a74abe0cd2f9afbdc2c2e6",
+    "bytes": 91
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\arbol_demanda_nominal.csv": {
+    "sha256": "3a101e6e7a9181ac76d4a73e0e2ac01f06bb1fa9c0af75785cf4ad428a2b91e7",
+    "bytes": 864
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\balance_potencia.csv": {
+    "sha256": "698308812a3c897b7b12dd0f72cda9f7563f4a59a241f60c459150435d156d52",
+    "bytes": 29853
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\cargas_escenario_referencia.csv": {
+    "sha256": "0594f4d57414032e1df92463e30dc8c0622fdc8767a242b9b53b05f69f3e46c3",
+    "bytes": 482111
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\cargas_sensibilidad.csv": {
+    "sha256": "e048c34883f0d8d2ec3a95e4f9f9b425cf7b5277117ad8b36be2f016175578af",
+    "bytes": 2276
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\comparacion_no_equivalente.csv": {
+    "sha256": "fbee7587a281690d1732e0ca6679dfd62ca99f80e4310fabc66777b106f9fb34",
+    "bytes": 488
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\eje_transversal_cribado.png": {
+    "sha256": "cadafcb757f7b90e55c7101dba0737b49557c5142832a0b7d2b4ac2f723e55f8",
+    "bytes": 55731
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\eje_transversal_sensibilidad.csv": {
+    "sha256": "7a8c257cfbe7e6381bbf2b2416f58a2723ecf10b5046dc1fdf22c249725c4835",
+    "bytes": 10663
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\eje_transversal_series.csv": {
+    "sha256": "63cf509124e6fd41e2abc27fc33f0c3db25615634afb3a9143243024e857b41f",
+    "bytes": 304000
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\entradas_prototipo_sha256.json": {
+    "sha256": "16d94e1014a6b0be00be4d1419fd8a91ebf01e4e6830d04111551085a7ea171b",
+    "bytes": 1535
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\estado_modelos.csv": {
+    "sha256": "95e651b051dbe84d226cff75e909e2c768081d7fef8b130056cc4328caac7af6",
+    "bytes": 1474
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\fuentes_materiales.json": {
+    "sha256": "5ac8217bf15806c6a9b9af7d0ab01b7d921ca4df0d6d3fc875489586db766516",
+    "bytes": 4622
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\geometria_angular.csv": {
+    "sha256": "f7fccd517222cb61664f91d4e782fe7af5921e0cf747c42c6e517e34c6f63167",
+    "bytes": 293564
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\geometria_y_cargas.png": {
+    "sha256": "a87e179b12d0f7f558faca534d9749d7e59d163520fc3f7005d0c26e395379c4",
+    "bytes": 159731
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\historicos_sha256.json": {
+    "sha256": "2abdf764c3afdb0192934928e692dbc96781064f23701e7942ea7e276aebb81a",
+    "bytes": 76629
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\materiales_y_confianza.csv": {
+    "sha256": "d6b60f8ae71086998da7a48c104cf16cfe13b3d98b5e7c9a8260b79e5e2dd86e",
+    "bytes": 1128
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\parametros_documentados.csv": {
+    "sha256": "3eabf0570daf66c23c0f211e4b4c7edc9106a2b94c9a7d9ce6920f0cb3bd50c8",
+    "bytes": 15203
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\parametros_utilizados.json": {
+    "sha256": "b0461e55991c4082de9460c907a34d9bbaa1a20be8579c4ea5655e71c006bf84",
+    "bytes": 5168
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\patron_reconstruido.csv": {
+    "sha256": "84b5c395a129237b989e30669bff1e8b4f1ae6383ab67d602a99d0f8316571a6",
+    "bytes": 9217
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\pruebas_ejecutadas.json": {
+    "sha256": "fed8f79c08446d9e8a3ea38270455603b879a646e5dccaa020f1964b54ba349a",
+    "bytes": 3182
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\resumen.json": {
+    "sha256": "bbaf489d28504e7db5c0491cac1176df3dc98946acddf7b9ed0669acc3355600",
+    "bytes": 12165
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\revision_presion_extrusion.json": {
+    "sha256": "feac791780930bfcac740b8331544caccf3c2a101dc58a42162961043759ce5b",
+    "bytes": 609
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\sensibilidad_geometria_contacto.csv": {
+    "sha256": "f4478711fa3659dd3ab07de5125f84d0a7c07e74e9c3b2af82185eb3f56222a4",
+    "bytes": 446
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\sensibilidad_potencia.png": {
+    "sha256": "d6b3a79d19f6e2b706462a0029521ca8b702ba95f5514594e5df018b8f28621c",
+    "bytes": 68557
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\superposicion_por_agujero.csv.gz": {
+    "sha256": "3e3407cfd76cade49de220cc483ecbe5971d97607bdfa4b6ec50531626f691d3",
+    "bytes": 1276134
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\validaciones.json": {
+    "sha256": "b78226c47ca9cb211fbe252ca6cc99273918ae8e116899c554aaa868e33fcdcc",
+    "bytes": 280
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\vidas_referencia_EZO.csv": {
+    "sha256": "1f51ed3a4b0de2fa9a98a9f05cafbe56a74c06add9dba88086e8abafd947b4e4",
+    "bytes": 4520
+  },
+  "Prototipo\\resultados\\revision_nominal_2026_11_18\\viga_convergencia.csv": {
+    "sha256": "d7e7ae50c0a11dcca3eb6dabec9d06fbd69a41547f021d8f6a71d80237050237",
+    "bytes": 417
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\crear_dcl.py": {
+    "sha256": "1055d3e78de3619d3b483656ceffc6fa8a193223aa0f7a1c35f69f09c66f14a6",
+    "bytes": 2457
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\README.txt": {
+    "sha256": "d5cb450232613dcc922de66fced73476c530ca2392c847840667630d715bb5ac",
+    "bytes": 3453
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\seccion_informe_etapa_4A.tex": {
+    "sha256": "eba96a5e66a5baa363f693774b0ef8a1edf35abd7889f0345a711d5c49577a01",
+    "bytes": 5345
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\simulacion_matriz_eje_4A.py": {
+    "sha256": "1ba9638f4ae6ffe2ac807eadc2999d2b54912cf701850db3e2f6707fd6414e10",
+    "bytes": 15795
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\test_etapa4a.py": {
+    "sha256": "c81c71d62ec881b266a30cd6967bacd59a4903d4bb0326f69811507ea048ad3e",
+    "bytes": 980
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\crear_dcl_parametrico.py": {
+    "sha256": "249f2bce2051ac18bb93cf34fea452fcc7c781df7ffd2c9cab79bc3a9c6797f9",
+    "bytes": 2553
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\README.md": {
+    "sha256": "7503245c05f38365ff0ea1a99802e3dba0251c9b486806db1ceb26f3f4382ad2",
+    "bytes": 9048
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\referencias_4B.bib": {
+    "sha256": "687e4b0916f6c75438e9702a228bb25f865f2b2598d146ad663f49620ab08757",
+    "bytes": 756
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\requirements.txt": {
+    "sha256": "de670d2176ad6e71244cb4525c98d2c5fce62bb136de29efee5e9916b3dc9feb",
+    "bytes": 24
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\seccion_informe_etapa_4B.tex": {
+    "sha256": "7e0bbf5c05ce835b54965c0acc0a5a8ebd989b89fde010238f66124e307823ab",
+    "bytes": 4665
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\simulacion_etapa_4B.py": {
+    "sha256": "3fcd83d10665a60a2b074e9fc7f94c6bda59b76b1c06025001a663141e0a4c2f",
+    "bytes": 7075
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\test_etapa_4B.py": {
+    "sha256": "ff4e94805ed15fde0a9f57c214a1284890fcd665484249a2f5e80c23c2f8932f",
+    "bytes": 838
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\analisis_4C.py": {
+    "sha256": "4ed0fd1662d31c579db47670ff20f87d5f4d382d7b220ea31a80e1f798f8df9a",
+    "bytes": 6777
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\config_apoyos.json": {
+    "sha256": "a1b3abcaf4c4c8cc9a41e62bec77cb1b7b40d740e88c9c3525e6deadbd287269",
+    "bytes": 372
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\README.md": {
+    "sha256": "5621c94eaffc248463f02ee348558035de52db69377a0800f5e3aec61a145cf5",
+    "bytes": 5944
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\requirements.txt": {
+    "sha256": "de670d2176ad6e71244cb4525c98d2c5fce62bb136de29efee5e9916b3dc9feb",
+    "bytes": 24
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\seccion_informe_4C.tex": {
+    "sha256": "813213c406b6312e6126a3227239fcf465ffd537fb5be04d9cc18cec2b04ccc4",
+    "bytes": 3082
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\README.md": {
+    "sha256": "7e8d8b2e0ffacb81aa6c00eb22abfd5daca418351c8e89f541b3c4f2768cc9e6",
+    "bytes": 9024
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resumir_4D.py": {
+    "sha256": "966c98902e2e4e4498370959bde99a4f54eca70a74aa86c3accca92ddbbbadbe",
+    "bytes": 3967
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\seccion_informe_4D.tex": {
+    "sha256": "ddd9ce267df508e56047b2636b908e495ed6b4dce3ae5d5b65d863ed6fde7668",
+    "bytes": 3897
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\simulacion_4D.py": {
+    "sha256": "a0f3953d4146e54612cf63c921c36a5dd0193f962dff98128861100a23008513",
+    "bytes": 14516
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\validar_4D.py": {
+    "sha256": "059e4ed71b33724d2f7d86875b529f0a08f62a5d2181e9642169d90b317d52be",
+    "bytes": 2594
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\fuentes\\agujeros_matriz_CAD.csv": {
+    "sha256": "520f9ee8ff330829ea73c92453e38a935c6a4c006061d15db28d4f8432e7c29a",
+    "bytes": 4176
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\fuentes\\fuerzas_por_agujero_4A.csv": {
+    "sha256": "8f05097de15c58a91f7875205e49a34030c1e91c7bf4b5d5eeefe2b95882c2b4",
+    "bytes": 7650
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\fuentes\\historial_4A.csv": {
+    "sha256": "d85d4181855f342018c8235cca7a15cdc1ad16d6500f48d46dca91cfa9623329",
+    "bytes": 285900
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\convergencia_desplazamiento.png": {
+    "sha256": "70053a2bb9e630dbed14f5101115b804056a602f6833e7cc97540a7e77328dcf",
+    "bytes": 99399
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\convergencia_tensiones.png": {
+    "sha256": "e4a80f50e35e08d5c38f68b6dafcc1b4370c2b1817d1348fd50d4324904d5401",
+    "bytes": 102589
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\geometria_y_apoyos.png": {
+    "sha256": "8badc44272955f362cd431d1e5ea0c033bbbcef5801075559b0a42582e4790af",
+    "bytes": 266224
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\malla_p4_c4.npz": {
+    "sha256": "2d0852935dd4378e1d70393490e6146a4396d9b45158d758bea4cf156c33c922",
+    "bytes": 712509
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\malla_p5.5_c4.npz": {
+    "sha256": "668477a0c1cbb1bb6acb09a14e8aad66e382a02ebf6faff6d5a9822d5251812a",
+    "bytes": 579503
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\malla_p7.5_c2.npz": {
+    "sha256": "2d3c77612adfa091669e6948735951e1147169f14342746bc5cc65ccae1f7aac",
+    "bytes": 242557
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\metadata_FEM_p4.json": {
+    "sha256": "f587828559ae5262398d859a2f67a11ce5aa7191df65df90e5cf10a49ae46f1a",
+    "bytes": 3376
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\metadata_FEM_p5.5.json": {
+    "sha256": "0fe7dd1faf711e2e712afa0c62b6035f67b4cb2d43b04133b8ce7be2966cc309",
+    "bytes": 6195
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\metadata_FEM_p7.5.json": {
+    "sha256": "6b8cb1722e6012cd158e85fd529acce2834dfb1a51c97d0853c9c7e9ece80b0d",
+    "bytes": 6220
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\resultados_FEM_p4.csv": {
+    "sha256": "4d9153317be4e1bcf102b345cbfb1a7a5f09aee11775ff993402742d81726eef",
+    "bytes": 2804
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\resultados_FEM_p5.5.csv": {
+    "sha256": "570ea7c6fa2fe0b6079fca0666d7517c2e2bc464b349c993e0244bd6efc1c90c",
+    "bytes": 2725
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\resultados_FEM_p7.5.csv": {
+    "sha256": "0b9400456653731e79d15f3ebf52c3d709425f72dbd9f76676b0906b067a9945",
+    "bytes": 2753
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\resumen_verificado_4D.json": {
+    "sha256": "2b43536faf5c2cc1c2dbdcc16bac8d11d4138edd93f17ca946aa097781607dda",
+    "bytes": 6464
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\tabla_completa_convergencia.csv": {
+    "sha256": "f37857da1765ac264e82789572ed68c80bb8f92ee921788cb9282eaada8991b8",
+    "bytes": 7296
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_APOYO_Z_CHAVETA_max_fuerza_total_p4.png": {
+    "sha256": "5ad82c3c3772189a4b62f80cfd076dd73bba1d40419d41d71a81d984a11e04f4",
+    "bytes": 535691
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_APOYO_Z_CHAVETA_max_fuerza_total_p5.5.png": {
+    "sha256": "b5b20dbc2179c85948e1b68ec24d237cd8f93bcabf360d74eeee624c09050fd7",
+    "bytes": 508568
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_APOYO_Z_CHAVETA_max_fuerza_total_p7.5.png": {
+    "sha256": "958764517924bfe81c97f3331f7cf36701dde48e2864cc6cb82dc922ad5c4ca8",
+    "bytes": 478384
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_APOYO_Z_CHAVETA_max_momento_normales_p4.png": {
+    "sha256": "3e4bb07bb309617d853dfeac021cecab90e824ba6b958daf96a2c5bef7c531eb",
+    "bytes": 527351
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_APOYO_Z_CHAVETA_max_momento_normales_p5.5.png": {
+    "sha256": "8b69d7d9e12dc6dffb34aa4f485891523ebde56b5d211664a8b0f04bce1596df",
+    "bytes": 497915
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_APOYO_Z_CHAVETA_max_momento_normales_p7.5.png": {
+    "sha256": "07fc6b19b7d081136300264b5da083fb0c772d45b5fa2f0fe730db8a176d8848",
+    "bytes": 469637
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_EMPOTRADO_ANILLO_max_fuerza_total_p4.png": {
+    "sha256": "04f768e22843afe0fca8dd6939203a2985905bbce4d6146743d784d2ae349eb2",
+    "bytes": 541364
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_EMPOTRADO_ANILLO_max_fuerza_total_p5.5.png": {
+    "sha256": "c5e42cb66bff55b2d5cdcafa01e31b7ac87537653b89a4d542bb28deff59a005",
+    "bytes": 507104
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_EMPOTRADO_ANILLO_max_fuerza_total_p7.5.png": {
+    "sha256": "ba368bba7fc0d771f4d1e7d1367be911a2f31daefadac850d5ddc74971bd471b",
+    "bytes": 478357
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_EMPOTRADO_ANILLO_max_momento_normales_p4.png": {
+    "sha256": "902301948bf975f1f0ea410aff0d71a3be4380c2d694c315aa36012292769676",
+    "bytes": 527327
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_EMPOTRADO_ANILLO_max_momento_normales_p5.5.png": {
+    "sha256": "bf9adb54997a68f86ebb13ce306f4900b56a86b1aada11d14ab048148e0e7dd1",
+    "bytes": 494141
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar\\resultados\\vm_EMPOTRADO_ANILLO_max_momento_normales_p7.5.png": {
+    "sha256": "a6a92c6456e34579960f2f714e0cdb738520ac61e03fb777fba06b6774168435",
+    "bytes": 469657
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\datos\\series_4A_sin_modificar.csv": {
+    "sha256": "d85d4181855f342018c8235cca7a15cdc1ad16d6500f48d46dca91cfa9623329",
+    "bytes": 285900
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\resultados\\casos_criticos_union.csv": {
+    "sha256": "ed811ab955faf31e604b372d9527fd78de162580939381f3c2a8a2f93d799318",
+    "bytes": 1223
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\resultados\\envolvente_anillo_condicional.csv": {
+    "sha256": "809eefc60710907ef656b1974d237ba5fd5b7cde5d64e74fce6d1e3f5907bdd7",
+    "bytes": 473137
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\resultados\\excentricidad_vs_limite.png": {
+    "sha256": "053bee38cd47946e99cb11b80af9ef64b6afcded686b50d09edf90d136e6656f",
+    "bytes": 158838
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\resultados\\presiones_anillo_condicional.png": {
+    "sha256": "c258ad4976773a14ba1d6a867ebff2087e35f9b932045df5f8a02c9e6eab336b",
+    "bytes": 200272
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4C_apoyos_union\\resultados\\resumen_4C.json": {
+    "sha256": "4f4316c61381868fdc550ddc82527ffb38c1dfba4c0eea9cfb12b07e7ab023ed",
+    "bytes": 1338
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\fuentes\\series_resultantes_matriz_eje_4A.csv": {
+    "sha256": "d85d4181855f342018c8235cca7a15cdc1ad16d6500f48d46dca91cfa9623329",
+    "bytes": 285900
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\correlacion_cargas.png": {
+    "sha256": "84597aa351308b1e416bdde75224ee6aada45e8b3a3f80fe9f0fa89e8b339f0f",
+    "bytes": 336478
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\dcl_parametrico.png": {
+    "sha256": "9bb99e448fd55384a7d3cfc2ad7c3d824901a5f1ca6fb7e1d3c489d3b0f8d2e7",
+    "bytes": 91032
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\dcl_parametrico.svg": {
+    "sha256": "79ef6e6b88daf581e35ba78f62c69ae54e8f102947deb40d5a18ee3f36be3342",
+    "bytes": 61268
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\instantes_criticos_correlacionados.csv": {
+    "sha256": "c17f1b849193150e2dfe1aa8d934cae63d349ba782502ac64b9d62c6be7bb933",
+    "bytes": 615
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\presion_apoyo_condicional.json": {
+    "sha256": "f75e3b9e7679ce6a7b40441a0a0a3a85c077534a889a47785f1c4b1fe45c43d4",
+    "bytes": 494
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\resumen_4B.json": {
+    "sha256": "1bd2dd2b38ec7d58592c1c776fd2057a66475ca2f0329551e22b998f1f3b8787",
+    "bytes": 5976
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\sensibilidad_correas.png": {
+    "sha256": "1c2d1361896b24b80edc5e4de9e609888fca9f1046587f70b3922e4052cea0a4",
+    "bytes": 71598
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\sensibilidad_eje.png": {
+    "sha256": "00dd4a5facb748661ca682e52df0dd9bea4b041798dd2592f49a5717f9f090ed",
+    "bytes": 97557
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\transmision_condicional.csv": {
+    "sha256": "fac37af606bb99396819398d398ef7012df2261b5adb59f56b48dce808118248",
+    "bytes": 1023
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional\\resultados\\verificaciones_nominales_eje.csv": {
+    "sha256": "e12726cadc22df791af249046fa52a3e66261f8bc87bd04a6a2d28592bd4cab4",
+    "bytes": 1711
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\casos_criticos_correlacionados.csv": {
+    "sha256": "0de424752522540910445caf4f199b8309bb0d5c156a5d67eb7ba71b7bcc5741",
+    "bytes": 1027
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\dcl_provisionales_matriz_arbol.png": {
+    "sha256": "795c5faaec30be3ba604b8e2a19bc234f6162834ca64a76490e8aab0bfd7f26c",
+    "bytes": 135900
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\fuerzas_por_agujero_casos_criticos.csv": {
+    "sha256": "8f05097de15c58a91f7875205e49a34030c1e91c7bf4b5d5eeefe2b95882c2b4",
+    "bytes": 7650
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\geometria_perforada.json": {
+    "sha256": "977a752bd4ce893b861022b108a720f6b59ea0d13663804f2523df888ac16489",
+    "bytes": 775
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\historial_cargas_y_momentos.png": {
+    "sha256": "d56c6a7ea50a861cfd1c57b6acc3546314cb4e8ac330f2c860dd5fe6c5eb2327",
+    "bytes": 433215
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\informe_resultados.md": {
+    "sha256": "f0035274d05fa95af99d7cf84c2de8630e592115072090030c03813fdb2b93de",
+    "bytes": 4982
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\mapa_max_fuerza_total.png": {
+    "sha256": "080924a5a06a3fb6cdb2e8dde51b0b8f597ab08d060263f0fbd8cea8cbc7a154",
+    "bytes": 210131
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\mapa_max_momento_normales.png": {
+    "sha256": "9574bf8fb3d5825bd92d0083bf4d1887d556b62d98fce8e856bc4b36a668fd90",
+    "bytes": 206000
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\secciones_eje_nominales.csv": {
+    "sha256": "39a5a3980365574797e1a52957d995daa2afea6f3df6cabe089b9267623cd420",
+    "bytes": 1587
+  },
+  "Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal\\resultados\\series_resultantes_matriz_eje.csv": {
+    "sha256": "d85d4181855f342018c8235cca7a15cdc1ad16d6500f48d46dca91cfa9623329",
+    "bytes": 285900
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "BRep_valido": true,
+  "pasantes_verificados": true,
+  "cuentas_topologicas_independientes_coinciden": true,
+  "SHA256_historicos_conservados": true,
+  "cargas_ejecutadas": false,
+  "detalle_cargas": null,
+  "seguridad_estructural_no_aprobada": true
+}

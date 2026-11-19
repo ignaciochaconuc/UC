@@ -1,0 +1,28 @@
+[
+  {
+    "cara_id": 1,
+    "tipo": "GeomAbs_Cylinder",
+    "x_mm": 27.1046016719461,
+    "y_mm": 8.36095498164751,
+    "radio_mm": 0.25,
+    "z_min_mm": 0.0,
+    "z_max_mm": 36.0,
+    "angular_completa": false,
+    "axial": true,
+    "superficie_interna": true,
+    "clasificacion": "superficie_parcial_o_auxiliar_revisar_no_contada_como_agujero"
+  },
+  {
+    "cara_id": 3,
+    "tipo": "GeomAbs_Cylinder",
+    "x_mm": 27.8997411003244,
+    "y_mm": -5.11560812952583,
+    "radio_mm": 0.25,
+    "z_min_mm": 0.0,
+    "z_max_mm": 36.0,
+    "angular_completa": false,
+    "axial": true,
+    "superficie_interna": true,
+    "clasificacion": "superficie_parcial_o_auxiliar_revisar_no_contada_como_agujero"
+  }
+]

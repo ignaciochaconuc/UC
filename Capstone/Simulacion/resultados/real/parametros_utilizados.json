@@ -1,0 +1,64 @@
+{
+  "modelo": "real",
+  "step": "geometrias/Matriz_real.stp",
+  "fuente_geometrica_principal": "STEP proporcionado por el equipo; sin escalamiento",
+  "declarado_EP2": {
+    "diametro_exterior_mm": 200,
+    "espesor_zona_perforada_mm": 36,
+    "diametro_bore_mm": 50,
+    "numero_canales": 102,
+    "diametro_efectivo_mm": 6
+  },
+  "rodillos": {
+    "diametro_m": 0.1,
+    "ancho_m": 0.04,
+    "centros_radiales_m": [
+      0.0635,
+      0.0635
+    ],
+    "angulos_rad": [
+      0,
+      3.141592653589793
+    ],
+    "espesor_biomasa_m": 0.004,
+    "contacto_documentado": true,
+    "fuente_montaje": "../Simulación_peletizadora/config.py, configuración histórica EP2; no inferido de matriz STEP"
+  },
+  "operacion": {
+    "rpm_matriz": 516,
+    "potencia_motor_w": 5500,
+    "rpm_motor": 1450,
+    "eficiencia_mecanica": null,
+    "fuente": "EP2: config.py y resultados3C; no corregir rpm por poleas5A"
+  },
+  "presion": {
+    "valor_pa": 44000000,
+    "estado": "estimación histórica EP2, no validación experimental",
+    "formula_EP2_recuperada": null,
+    "mu_pared_extrusion": null,
+    "nu_biomasa_LR": null,
+    "PN0_pa": null
+  },
+  "torque": {
+    "mu_efectivo": 0.1,
+    "estado": "hipótesis EP2 independiente de mu de extrusión"
+  },
+  "numerico": {
+    "estados": 1440,
+    "cuadratura": 64,
+    "cuadratura_contraste": 128
+  },
+  "estructural": {
+    "estado": "No recalcular3C/3D automáticamente; consultar referencia histórica y sus apoyos ideales",
+    "referencia": "../Simulación_peletizadora/resultados/etapa_3c_acoplamiento/resumen_comparativo.csv",
+    "apoyos_fisicos_confirmados": false
+  },
+  "regresion": {
+    "cargas_2C": "../Simulación_peletizadora/resultados/etapa_2c/cargas_area_superposicion.csv",
+    "coordenadas_EP2": "../Simulación_peletizadora/datos/agujeros_matriz.csv"
+  },
+  "materiales": {
+    "fuente": "../Simulación_peletizadora/README.md y referencias.bib; respetar condición específica de cada componente",
+    "sin_transferencia_al_prototipo": true
+  }
+}

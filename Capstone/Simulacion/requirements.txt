@@ -1,0 +1,6 @@
+cadquery-ocp==7.9.3.1.1
+numpy>=2.0
+pandas>=2.2
+scipy>=1.12
+matplotlib>=3.9
+pytest>=8.0

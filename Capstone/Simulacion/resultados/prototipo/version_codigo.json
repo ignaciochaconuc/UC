@@ -1,0 +1,29 @@
+{
+  "python": "3.14.0",
+  "OCP": "7.9.3.1.1",
+  "version_fuentes_sha256": "d8c59d4a8813a3f4348412366835275063b8a14e44fae43a4e103d9c88970d19",
+  "archivos": {
+    "AUDITORIA.md": "0739d596bec104946714df425d4f00db54af441b492a1ae7b6b0706ef19ac989",
+    "INFORME_TECNICO.md": "64060825557efb59e46f0f9bee9e9e378000c5b0495ff53699c74b2ed4d1f7e7",
+    "README.md": "de4757e1736c7ef1b8faa9a0cc0cdf4f4fd45e57a111d3c3e52c9b659b3dccc7",
+    "referencias.bib": "e1904082198a5716c238cf6f343f4878ff3f147a8e545ba3f20a133a43ae04c1",
+    "requirements.txt": "22c9f995295d78d4f724f78f4aae8148e54dc84b247df498d0950c8f48343f51",
+    "simular.py": "36d9d6d8cb35702785ab7b38c831410c7fa536203cacc6244df876d168c6ddda",
+    "configuraciones\\prototipo.json": "821f3f594c7800311e071b6764f316eea9deeb804f673f9ea889c31b8b2b7d79",
+    "configuraciones\\real.json": "0ff4b23c01f0c53a42c5f7313d04caf3a58b2898e3b677e3c56275fa23fa3a37",
+    "fisica\\materiales.json": "6f9fb9b1dddd14f76f07e76ac59e7084ec9d330fec5dbda54e144b217f24bba7",
+    "herramientas\\control_cambios.py": "520dbfe08ee1b8dadaf025104fc62aca861037646b3b40a3eb419c20fcaf6a76",
+    "herramientas\\ejecutar_pruebas.py": "2d772f05438d5eef3982b62644609230c4dd9c299eb540022a7cfd3af267388f",
+    "herramientas\\explorar_step.py": "e9066f322d2095b5d179ceacdc71f25839fe47ee3743f67d1faab224bd7e6863",
+    "herramientas\\sondear_solido.py": "8714635db99d62af119f098d2f0a29e7150d666dbf7cfe251492d982ee3731ff",
+    "peletizadora\\cad.py": "5441489a6b2497288ad0a37c319233024dea572358667530836e6c627a7e9aca",
+    "peletizadora\\informes.py": "d51efc3b33df0fc82d05678c0f7ac9089496201fd03c7a0ab7551398d927c700",
+    "peletizadora\\legado.py": "8f4a7496b6565bb924a3b34f1b907baed58434ab58e73a6ebfc25e5493ca7e77",
+    "peletizadora\\nucleo.py": "acc0dc1c29c8aa5c158028bb6b0474ee8e67668f3ab9c6fac5745b73be4ab4c6",
+    "peletizadora\\verificaciones.py": "240c583c6a2a6ff0c8febe491b267132b08266abd36c17bbcaac9ca7be2caeb9",
+    "peletizadora\\__init__.py": "994b385a93049f8c63c2af11661e740d96129ebdf9abb79ada63848576fd7c41",
+    "tests\\conftest.py": "27aba8b4ab38561eadeeb3500e01f3cab9f12e48cc2cbbc0f89abdcb57bb4080",
+    "tests\\test_sistema.py": "d6e561eb24cdf680587b28b139215b46a5364189831282a2dd7e7029d6287b06"
+  },
+  "git": "Sin commit nuevo; git.exe no ejecutable en este entorno. Identificación reproducible por SHA256."
+}

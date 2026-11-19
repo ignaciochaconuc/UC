@@ -1,0 +1,287 @@
+{
+  "fecha": "2026-11-19",
+  "estado_git": "git status no disponible: git.exe no ejecutable válido en este entorno; no se infiere worktree limpio",
+  "crear": [
+    "Simulacion/ (arquitectura, configuraciones, STEP, pruebas, resultados y documentación)",
+    "archivo/Prototipo_escalado_2026_11_18/ (retiro reversible)",
+    "Prototipo/README.md (aviso de migración)"
+  ],
+  "mover_sin_alterar": [
+    {
+      "archivo": "Prototipo\\documentacion_parametros.md",
+      "sha256": "c6e73e5ec3a327341ea0d6a143ba9e871f72359acb2fc36160add884630a779a",
+      "bytes": 5681,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\documentacion_parametros.md",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\ejecutar_pruebas.py",
+      "sha256": "8a6aa0906556e50233cacab62396df0355189766696b2ebd0d79695b7ac05b17",
+      "bytes": 1952,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\ejecutar_pruebas.py",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\materiales.json",
+      "sha256": "bed14a8ac45b11f0ba6a8d8cacb55dbbe615ff3de3c06aaedef43369ce2db2f5",
+      "bytes": 4097,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\materiales.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\modelo_prototipo.py",
+      "sha256": "d3d9a486f11957a370fdbe12aff7187d9d327a5a0815b9dfc57a0af1979544a8",
+      "bytes": 14528,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\modelo_prototipo.py",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\parametros.json",
+      "sha256": "a8435200082b90ca0136147f7c2806b843a5a5c1668385bd05e02e562a96f5af",
+      "bytes": 4312,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\parametros.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\README.md",
+      "sha256": "1f6ef7a25197ac02ce3ab18a5c6259a40f390414cdaaba55c425477be5fe25e5",
+      "bytes": 11030,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\README.md",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\referencias.bib",
+      "sha256": "a637d02c0e69c394fc63fa4398cb8264f71b08239b3d1d27cc235086099b37c2",
+      "bytes": 2737,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\referencias.bib",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\requirements.txt",
+      "sha256": "fa9e6a5df18096f5861337030c9332deb8973c453ea203533b201c1ebd05a95f",
+      "bytes": 63,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\requirements.txt",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\reutilizacion.py",
+      "sha256": "730ac0b1551b45eb4d4ac380619ad60e54d24d1dd00f705c564cb79c5273ce36",
+      "bytes": 770,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\reutilizacion.py",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\simular_prototipo.py",
+      "sha256": "5c097d4e43237fb6155a883a979617642d27ed72c0e29959ffbd3d1c378a006f",
+      "bytes": 17311,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\simular_prototipo.py",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\sintesis_para_informe.md",
+      "sha256": "761bb2af8d2985eb9789ac5531584e619d01034c410aa920bdfb9ec9974ecf74",
+      "bytes": 3173,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\sintesis_para_informe.md",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\test_prototipo.py",
+      "sha256": "5cfb31718642f1998462688952355d7381e6056a015b0b1ff439e4b0c8dd3775",
+      "bytes": 4859,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\test_prototipo.py",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\arbol_demanda_nominal.csv",
+      "sha256": "3a101e6e7a9181ac76d4a73e0e2ac01f06bb1fa9c0af75785cf4ad428a2b91e7",
+      "bytes": 864,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\arbol_demanda_nominal.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\balance_potencia.csv",
+      "sha256": "698308812a3c897b7b12dd0f72cda9f7563f4a59a241f60c459150435d156d52",
+      "bytes": 29853,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\balance_potencia.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\cargas_escenario_referencia.csv",
+      "sha256": "0594f4d57414032e1df92463e30dc8c0622fdc8767a242b9b53b05f69f3e46c3",
+      "bytes": 482111,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\cargas_escenario_referencia.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\cargas_sensibilidad.csv",
+      "sha256": "e048c34883f0d8d2ec3a95e4f9f9b425cf7b5277117ad8b36be2f016175578af",
+      "bytes": 2276,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\cargas_sensibilidad.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\comparacion_no_equivalente.csv",
+      "sha256": "fbee7587a281690d1732e0ca6679dfd62ca99f80e4310fabc66777b106f9fb34",
+      "bytes": 488,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\comparacion_no_equivalente.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\eje_transversal_cribado.png",
+      "sha256": "cadafcb757f7b90e55c7101dba0737b49557c5142832a0b7d2b4ac2f723e55f8",
+      "bytes": 55731,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\eje_transversal_cribado.png",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\eje_transversal_sensibilidad.csv",
+      "sha256": "7a8c257cfbe7e6381bbf2b2416f58a2723ecf10b5046dc1fdf22c249725c4835",
+      "bytes": 10663,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\eje_transversal_sensibilidad.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\eje_transversal_series.csv",
+      "sha256": "63cf509124e6fd41e2abc27fc33f0c3db25615634afb3a9143243024e857b41f",
+      "bytes": 304000,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\eje_transversal_series.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\entradas_prototipo_sha256.json",
+      "sha256": "16d94e1014a6b0be00be4d1419fd8a91ebf01e4e6830d04111551085a7ea171b",
+      "bytes": 1535,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\entradas_prototipo_sha256.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\estado_modelos.csv",
+      "sha256": "95e651b051dbe84d226cff75e909e2c768081d7fef8b130056cc4328caac7af6",
+      "bytes": 1474,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\estado_modelos.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\fuentes_materiales.json",
+      "sha256": "5ac8217bf15806c6a9b9af7d0ab01b7d921ca4df0d6d3fc875489586db766516",
+      "bytes": 4622,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\fuentes_materiales.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\geometria_angular.csv",
+      "sha256": "f7fccd517222cb61664f91d4e782fe7af5921e0cf747c42c6e517e34c6f63167",
+      "bytes": 293564,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\geometria_angular.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\geometria_y_cargas.png",
+      "sha256": "a87e179b12d0f7f558faca534d9749d7e59d163520fc3f7005d0c26e395379c4",
+      "bytes": 159731,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\geometria_y_cargas.png",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\historicos_sha256.json",
+      "sha256": "2abdf764c3afdb0192934928e692dbc96781064f23701e7942ea7e276aebb81a",
+      "bytes": 76629,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\historicos_sha256.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\materiales_y_confianza.csv",
+      "sha256": "d6b60f8ae71086998da7a48c104cf16cfe13b3d98b5e7c9a8260b79e5e2dd86e",
+      "bytes": 1128,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\materiales_y_confianza.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\parametros_documentados.csv",
+      "sha256": "3eabf0570daf66c23c0f211e4b4c7edc9106a2b94c9a7d9ce6920f0cb3bd50c8",
+      "bytes": 15203,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\parametros_documentados.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\parametros_utilizados.json",
+      "sha256": "b0461e55991c4082de9460c907a34d9bbaa1a20be8579c4ea5655e71c006bf84",
+      "bytes": 5168,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\parametros_utilizados.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\patron_reconstruido.csv",
+      "sha256": "84b5c395a129237b989e30669bff1e8b4f1ae6383ab67d602a99d0f8316571a6",
+      "bytes": 9217,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\patron_reconstruido.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\pruebas_ejecutadas.json",
+      "sha256": "fed8f79c08446d9e8a3ea38270455603b879a646e5dccaa020f1964b54ba349a",
+      "bytes": 3182,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\pruebas_ejecutadas.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\resumen.json",
+      "sha256": "bbaf489d28504e7db5c0491cac1176df3dc98946acddf7b9ed0669acc3355600",
+      "bytes": 12165,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\resumen.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\revision_presion_extrusion.json",
+      "sha256": "feac791780930bfcac740b8331544caccf3c2a101dc58a42162961043759ce5b",
+      "bytes": 609,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\revision_presion_extrusion.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\sensibilidad_geometria_contacto.csv",
+      "sha256": "f4478711fa3659dd3ab07de5125f84d0a7c07e74e9c3b2af82185eb3f56222a4",
+      "bytes": 446,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\sensibilidad_geometria_contacto.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\sensibilidad_potencia.png",
+      "sha256": "d6b3a79d19f6e2b706462a0029521ca8b702ba95f5514594e5df018b8f28621c",
+      "bytes": 68557,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\sensibilidad_potencia.png",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\superposicion_por_agujero.csv.gz",
+      "sha256": "3e3407cfd76cade49de220cc483ecbe5971d97607bdfa4b6ec50531626f691d3",
+      "bytes": 1276134,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\superposicion_por_agujero.csv.gz",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\validaciones.json",
+      "sha256": "b78226c47ca9cb211fbe252ca6cc99273918ae8e116899c554aaa868e33fcdcc",
+      "bytes": 280,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\validaciones.json",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\vidas_referencia_EZO.csv",
+      "sha256": "1f51ed3a4b0de2fa9a98a9f05cafbe56a74c06add9dba88086e8abafd947b4e4",
+      "bytes": 4520,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\vidas_referencia_EZO.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    },
+    {
+      "archivo": "Prototipo\\resultados\\revision_nominal_2026_11_18\\viga_convergencia.csv",
+      "sha256": "d7e7ae50c0a11dcca3eb6dabec9d06fbd69a41547f021d8f6a71d80237050237",
+      "bytes": 417,
+      "destino_archivo": "archivo\\Prototipo_escalado_2026_11_18\\resultados\\revision_nominal_2026_11_18\\viga_convergencia.csv",
+      "proposito": "Implementación y resultados basados en patrón escalado; retirados del uso activo, conservados íntegros para reversión y trazabilidad"
+    }
+  ],
+  "modificar_EP2": [],
+  "eliminar_irrecuperablemente": [],
+  "protegidos": "Todos los archivos existentes salvo retirada reversible de Prototipo; se exige SHA256 idéntico en destino para cada archivo retirado"
+}

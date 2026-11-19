@@ -1,0 +1,321 @@
+{
+  "modelo": "prototipo",
+  "estado": "pendiente_datos_contacto",
+  "geometria": {
+    "unidades_declaradas_STEP": [
+      "millimetre"
+    ],
+    "unidad_kernel": "mm",
+    "numero_solidos": 1,
+    "sha256": "e97f56123386cfbfe82bd089b031d870f098b0000843c82a5c1366c55300edf2",
+    "archivo": "Matriz_prototipo.stp",
+    "observacion": "Se usa el sólido; curvas auxiliares de presentación no se cuentan como piezas o agujeros.",
+    "diametro_exterior_mm": 99.0,
+    "espesor_total_envolvente_mm": 26.0,
+    "espesor_zona_perforada_mm": 10.0,
+    "diametro_bore_mm": 13.0,
+    "numero_canales": 102,
+    "diametros_efectivos_mm": [
+      6.0
+    ],
+    "longitudes_cilindricas_restrictivas_mm": [
+      10.0
+    ],
+    "relaciones_Lcil_D": [
+      1.66666667
+    ],
+    "area_abierta_efectiva_mm2": 2883.9820559954287,
+    "distancia_min_centros_mm": 7.359999999999996,
+    "ligamento_min_cilindrico_mm": 1.3599999999999959,
+    "ligamento_min_bocas_mm": 1.3599999999999959,
+    "numero_transiciones_conicas": 0,
+    "cuenta_independiente_circulos_por_plano": {
+      "0.0": 102,
+      "10.0": 102
+    },
+    "sistema_local": {
+      "origen_CAD_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "base_filas_x_y_z_en_CAD": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "definicion": "local=R@(CAD-origen), dextrógiro; z es normal canónica a la matriz. No supone orientación del ensamble."
+    },
+    "bbox_CAD_mm": [
+      -49.5,
+      0.0,
+      -49.5,
+      49.5000001,
+      26.0,
+      49.5000001
+    ],
+    "caras_por_tipo": {
+      "GeomAbs_Torus": 4,
+      "GeomAbs_Cylinder": 105,
+      "GeomAbs_Plane": 3
+    },
+    "validacion_pasantes": true,
+    "geometria_valida": true,
+    "superficies_para_revision": [],
+    "familias_de_canales": [
+      {
+        "diametro_mm": 6.0,
+        "Lcil_mm": 10.0,
+        "recorrido_mm": 10.0,
+        "cantidad": 102
+      }
+    ],
+    "clasificacion_funcional_ambigua": false,
+    "bore_central_no_circular": false,
+    "bore_y_resaltes_coaxiales": [
+      {
+        "cara_id": 2,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 0.0,
+        "y_mm": 0.0,
+        "radio_mm": 49.5,
+        "z_min_mm": 1.0,
+        "z_max_mm": 9.0,
+        "angular_completa": true,
+        "axial": true,
+        "superficie_interna": false,
+        "clasificacion": "exterior_coaxial"
+      },
+      {
+        "cara_id": 7,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 0.0,
+        "y_mm": 0.0,
+        "radio_mm": 12.5,
+        "z_min_mm": 22.0,
+        "z_max_mm": 25.0,
+        "angular_completa": true,
+        "axial": true,
+        "superficie_interna": false,
+        "clasificacion": "exterior_coaxial"
+      },
+      {
+        "cara_id": 112,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 0.0,
+        "y_mm": 0.0,
+        "radio_mm": 6.5,
+        "z_min_mm": 0.0,
+        "z_max_mm": 26.0,
+        "angular_completa": true,
+        "axial": true,
+        "superficie_interna": true,
+        "clasificacion": "bore_central"
+      }
+    ],
+    "advertencias": [
+      "Longitud cilíndrica restrictiva no equivale por sí sola a longitud de fricción calibrada o presión de extrusión.",
+      "Caras parciales auxiliares se reportan, no se convierten en agujeros adicionales.",
+      "La geometría de matriz no determina posiciones de rodillos, material ni apoyos."
+    ]
+  },
+  "discrepancias_declaradas": [
+    {
+      "parametro": "diametro_exterior_mm",
+      "declarado_EP2": 100,
+      "extraido_STEP": 99.0,
+      "coincide": false,
+      "accion": "Conservar declaración histórica; geometría activa procede del STEP, sin editar EP2"
+    },
+    {
+      "parametro": "espesor_zona_perforada_mm",
+      "declarado_EP2": 10,
+      "extraido_STEP": 10.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "diametro_bore_mm",
+      "declarado_EP2": 13,
+      "extraido_STEP": 13.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "numero_canales",
+      "declarado_EP2": 102,
+      "extraido_STEP": 102,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "diametro_efectivo_mm",
+      "declarado_EP2": 6,
+      "extraido_STEP": 6.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "altura_total_vs_zona_perforada",
+      "declarado_EP2": 10,
+      "extraido_STEP": 26.0,
+      "coincide": false,
+      "accion": "Distinguir envolvente total con resalte y longitud del cuerpo perforado; no usar altura total como L de extrusión"
+    }
+  ],
+  "parametros_fisicos": {
+    "modelo": "prototipo",
+    "step": "geometrias/Matriz_prototipo.stp",
+    "fuente_geometrica_principal": "STEP proporcionado por el equipo; ninguna coordenada escalada se admite como entrada",
+    "declarado_EP2": {
+      "diametro_exterior_mm": 100,
+      "espesor_zona_perforada_mm": 10,
+      "diametro_bore_mm": 13,
+      "numero_canales": 102,
+      "diametro_efectivo_mm": 6
+    },
+    "rodillos": {
+      "diametro_m": 0.052,
+      "ancho_m": 0.03,
+      "centros_radiales_m": null,
+      "angulos_rad": null,
+      "espesor_biomasa_m": null,
+      "contacto_documentado": false,
+      "fuente_montaje": null,
+      "nota": "Solo dimensiones nominales aportadas; la matriz STEP no confirma posiciones, ángulos ni contacto"
+    },
+    "operacion": {
+      "motor": "Siemens1LA7063-4AB10",
+      "potencia_motor_w": 180,
+      "rpm_motor": 1350,
+      "rpm_matriz": null,
+      "relacion_reduccion": null,
+      "eficiencia_mecanica": null,
+      "fuente": "Equipo: motor trifásico230/400V; falta placa/documentación local y transmisión real"
+    },
+    "presion": {
+      "valor_pa": 2260000,
+      "estado": "solo escenario preliminar condicionado; no presión experimental validada",
+      "formula_EP2_recuperada": null,
+      "mu_pared_extrusion": null,
+      "nu_biomasa_LR": null,
+      "PN0_pa": null
+    },
+    "torque": {
+      "mu_efectivo": null,
+      "estado": "Pendiente confirmar hipótesis propia; no heredar automáticamente0,1 del comercial"
+    },
+    "numerico": {
+      "estados": 1440,
+      "cuadratura": 64,
+      "cuadratura_contraste": 128
+    },
+    "componentes": {
+      "eje_transversal": {
+        "tipo": "M6 zincado",
+        "longitud_m": 0.1,
+        "diametro_nominal_m": 0.006,
+        "paso_real_m": null,
+        "nucleo_real_m": null,
+        "grado": null,
+        "E_pa": null,
+        "apoyos": null
+      },
+      "arbol": {
+        "tipo": "varilla roscada zincada, fijación por tuercas",
+        "diametro_nominal_m": 0.0127,
+        "paso_real_m": null,
+        "grado": null,
+        "apoyos": null
+      },
+      "rodamientos": {
+        "cantidad": 4,
+        "designacion": "608ZZ",
+        "dimensiones_mm": [
+          8,
+          22,
+          7
+        ],
+        "fabricante_adquirido": null,
+        "asiento_adaptador_M6_8": null
+      },
+      "matriz_rodillos_material": {
+        "previsto": "AISI304",
+        "certificado": null
+      },
+      "PLA": {
+        "carcasa_diametros_referencia_mm": [
+          100,
+          148
+        ],
+        "tolva_diametro_max_mm": 200,
+        "paredes": null,
+        "relleno": null,
+        "orientacion": null
+      }
+    },
+    "estructural": {
+      "estado": "Pendiente de apoyos, asientos, propiedades y contacto; no trasladar acoplamiento comercial ni montajes hipotéticos retirados",
+      "apoyos_fisicos_confirmados": false
+    },
+    "materiales": {
+      "fuente": "fisica/materiales.json",
+      "propiedades_reales_varillas": null,
+      "nu_304_confirmado": null,
+      "propiedades_PLA_impreso": null
+    }
+  },
+  "fuente_geometrica": "STEP sin escalamiento",
+  "cargas": null,
+  "seguridad_estructural_aprobada": false,
+  "pendientes": [
+    {
+      "verificacion": "cargas_contacto",
+      "estado": "pendiente",
+      "datos_faltantes": "rodillos.centros_radiales_m; rodillos.angulos_rad; rodillos.espesor_biomasa_m; rodillos.fuente_montaje; rodillos.contacto_documentado; torque.mu_efectivo"
+    },
+    {
+      "verificacion": "presion_extrusion",
+      "estado": "condicionada_no_validada",
+      "datos_faltantes": "PN0,mu_pared,nuLR,biomasa/humedad/temperatura y memoriaEP2; no deducir presión de espesor solamente"
+    },
+    {
+      "verificacion": "estructural_y_acoplamiento",
+      "estado": "pendiente_o_referencia_historica",
+      "datos_faltantes": "Apoyos físicos, propiedades y montaje propios; no trasladar3C al prototipo"
+    },
+    {
+      "verificacion": "matriz_FEM",
+      "estado": "no_ejecutado",
+      "datos_faltantes": "Contacto/retención y materiales; triangulación de figura es solo visualización CAD"
+    },
+    {
+      "verificacion": "rodamientos",
+      "estado": "pendiente_de_montaje_propio",
+      "datos_faltantes": "Cargas individuales,marca/variante,asientos/holguras,Fa y velocidad; en prototipo M6/608Ø8sinadaptador"
+    },
+    {
+      "verificacion": "potencia_y_transmision",
+      "estado": "pendiente_rendimiento_real",
+      "datos_faltantes": "Velocidad matriz,reducción y pérdidas reales; no importar selección de correas de otra máquina"
+    }
+  ],
+  "historicos": {
+    "archivos_anteriores_verificados": 486,
+    "alterados": 0,
+    "retiro_reversible": true
+  },
+  "nota": "No comparar escenarios como equivalentes por escala; CAD de matriz no determina montaje ni material."
+}
