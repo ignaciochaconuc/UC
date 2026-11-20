@@ -1,0 +1,130 @@
+{
+  "unidades_declaradas_STEP": [
+    "millimetre"
+  ],
+  "unidad_kernel": "mm",
+  "numero_solidos": 1,
+  "sha256": "e97f56123386cfbfe82bd089b031d870f098b0000843c82a5c1366c55300edf2",
+  "archivo": "Matriz_prototipo.stp",
+  "observacion": "Se usa el sólido; curvas auxiliares de presentación no se cuentan como piezas o agujeros.",
+  "diametro_exterior_mm": 99.0,
+  "espesor_total_envolvente_mm": 26.0,
+  "espesor_zona_perforada_mm": 10.0,
+  "diametro_bore_mm": 13.0,
+  "numero_canales": 102,
+  "diametros_efectivos_mm": [
+    6.0
+  ],
+  "longitudes_cilindricas_restrictivas_mm": [
+    10.0
+  ],
+  "relaciones_Lcil_D": [
+    1.66666667
+  ],
+  "area_abierta_efectiva_mm2": 2883.9820559954287,
+  "distancia_min_centros_mm": 7.359999999999996,
+  "ligamento_min_cilindrico_mm": 1.3599999999999959,
+  "ligamento_min_bocas_mm": 1.3599999999999959,
+  "numero_transiciones_conicas": 0,
+  "cuenta_independiente_circulos_por_plano": {
+    "0.0": 102,
+    "10.0": 102
+  },
+  "sistema_local": {
+    "origen_CAD_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "base_filas_x_y_z_en_CAD": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "definicion": "local=R@(CAD-origen), dextrógiro; z es normal canónica a la matriz. No supone orientación del ensamble."
+  },
+  "bbox_CAD_mm": [
+    -49.5,
+    0.0,
+    -49.5,
+    49.5000001,
+    26.0,
+    49.5000001
+  ],
+  "caras_por_tipo": {
+    "GeomAbs_Torus": 4,
+    "GeomAbs_Cylinder": 105,
+    "GeomAbs_Plane": 3
+  },
+  "validacion_pasantes": true,
+  "geometria_valida": true,
+  "superficies_para_revision": [],
+  "familias_de_canales": [
+    {
+      "diametro_mm": 6.0,
+      "Lcil_mm": 10.0,
+      "recorrido_mm": 10.0,
+      "cantidad": 102
+    }
+  ],
+  "clasificacion_funcional_ambigua": false,
+  "bore_central_no_circular": false,
+  "bore_y_resaltes_coaxiales": [
+    {
+      "cara_id": 2,
+      "tipo": "GeomAbs_Cylinder",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "radio_mm": 49.5,
+      "z_min_mm": 1.0,
+      "z_max_mm": 9.0,
+      "angular_completa": true,
+      "axial": true,
+      "superficie_interna": false,
+      "clasificacion": "exterior_coaxial"
+    },
+    {
+      "cara_id": 7,
+      "tipo": "GeomAbs_Cylinder",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "radio_mm": 12.5,
+      "z_min_mm": 22.0,
+      "z_max_mm": 25.0,
+      "angular_completa": true,
+      "axial": true,
+      "superficie_interna": false,
+      "clasificacion": "exterior_coaxial"
+    },
+    {
+      "cara_id": 112,
+      "tipo": "GeomAbs_Cylinder",
+      "x_mm": 0.0,
+      "y_mm": 0.0,
+      "radio_mm": 6.5,
+      "z_min_mm": 0.0,
+      "z_max_mm": 26.0,
+      "angular_completa": true,
+      "axial": true,
+      "superficie_interna": true,
+      "clasificacion": "bore_central"
+    }
+  ],
+  "advertencias": [
+    "Longitud cilíndrica restrictiva no equivale por sí sola a longitud de fricción calibrada o presión de extrusión.",
+    "Caras parciales auxiliares se reportan, no se convierten en agujeros adicionales.",
+    "La geometría de matriz no determina posiciones de rodillos, material ni apoyos."
+  ]
+}

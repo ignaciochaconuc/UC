@@ -21,6 +21,7 @@ from peletizadora.nucleo import cargas_angulares,requisitos_carga,resumir
 from herramientas.control_cambios import verificar
 
 RAIZ=Path(__file__).resolve().parent
+REVISION='revision_ensamble_2026_11_19'
 
 
 def cargar_configuracion(modelo,path=None):
@@ -86,11 +87,13 @@ def pendientes(config,faltan):
 
 def ejecutar(modelo,salida=None,config_path=None):
     config=cargar_configuracion(modelo,config_path)
-    salida=Path(salida or RAIZ/f'resultados/{modelo}').resolve()
+    declarada=json.loads(json.dumps(config))
+    salida=Path(salida or RAIZ/f'resultados/{modelo}/{REVISION}').resolve()
     if salida.is_relative_to(RAIZ.parent.resolve()) and not salida.is_relative_to((RAIZ/'resultados').resolve()):
         raise ValueError('Dentro de Capstone solo se permite salida Simulacion/resultados')
     if salida in RAIZ.resolve().parents:raise ValueError('Salida demasiado amplia')
-    previo=salida/'parametros_utilizados.json'
+    previo=salida/'parametros_declarados.json'
+    if not previo.exists():previo=salida/'parametros_utilizados.json'
     if previo.exists() and json.loads(previo.read_text(encoding='utf-8'))!=config:
         raise ValueError('Ya hay otra configuración en salida: usar carpeta de revisión nueva')
     geo_previa=salida/'geometria_STEP.json'
@@ -99,6 +102,18 @@ def ejecutar(modelo,salida=None,config_path=None):
         if json.loads(geo_previa.read_text(encoding='utf-8'))['sha256']!=h:
             raise ValueError('El STEP cambió: usar carpeta de revisión nueva')
     conservacion=verificar()
+    from herramientas.control_ensamble import verificar as verificar_ensamble
+    incremental=verificar_ensamble()
+    analisis=None
+    if modelo=='prototipo' and config.get('ensamble'):
+        from peletizadora.ensamble import analizar
+        from peletizadora.escenarios_ensamble import incorporar_montaje,guardar_ensamble,ejecutar_escenarios
+        anterior=salida/'ensamble_auditado.json'
+        if anterior.exists() and json.loads(anterior.read_text(encoding='utf-8'))['meta']['sha256']!=hashlib.sha256((RAIZ/config['ensamble']['step']).read_bytes()).hexdigest():
+            raise ValueError('El ensamble cambió: usar carpeta de revisión nueva')
+        analisis,solidos_ensamble=analizar(RAIZ/config['ensamble']['step'],RAIZ/config['step'])
+        if not analisis['correspondencia_matriz']['coincide']:raise ValueError('Matriz de ensamble no coincide')
+        config=incorporar_montaje(config,analisis)
     solid,dim,agujeros,pares,caras=extraer(RAIZ/config['step'])
     discrepancias=diferencias_declaradas(config,dim)
     # Auditoría siempre antes de simular; se conserva el dato declarado como referencia.
@@ -132,15 +147,25 @@ def ejecutar(modelo,salida=None,config_path=None):
         ax[0].set(xlabel='Ángulo [°]',ylabel='F [kN]',title=f'{modelo}: cobertura STEP desacoplada');ax[0].legend(fontsize=8)
         ax[1].plot(df.angulo_grados,df.torque_total_nm);ax[1].set(xlabel='Ángulo [°]',ylabel='T [N·m]',title='Torque resistente de escenario EP2')
         fig.tight_layout();fig.savefig(salida/'cargas_angulares.png',dpi=160);plt.close(fig)
+    if analisis is not None:
+        guardar_ensamble(analisis,agujeros,config,salida,solidos_ensamble,dim)
+        resumen['escenarios_condicionados']=ejecutar_escenarios(config,agujeros,analisis,salida)
+        resumen['estado']='escenarios_condicionados_ejecutados'
+        resumen['ensamble_sha256']=analisis['meta']['sha256']
     pd.DataFrame(resumen['pendientes']).to_csv(salida/'verificaciones_pendientes.csv',index=False)
+    guardar_json(salida/'parametros_declarados.json',declarada)
     guardar_json(salida/'parametros_utilizados.json',config)
     guardar_json(salida/'version_codigo.json',version_codigo())
     resumen['historicos']=verificar()
+    resumen['conservacion_revision_anterior']=verificar_ensamble()
     guardar_json(salida/'resumen.json',resumen)
     guardar_json(salida/'conservacion_historica.json',resumen['historicos'])
     guardar_json(salida/'validaciones.json',{'BRep_valido':dim['geometria_valida'],'pasantes_verificados':dim['validacion_pasantes'],
         'cuentas_topologicas_independientes_coinciden':all(v==dim['numero_canales'] for v in dim['cuenta_independiente_circulos_por_plano'].values()),
         'SHA256_historicos_conservados':True,'cargas_ejecutadas':not faltan,
+        'ensamble_verificado':analisis is not None,
+        'escenarios_condicionados_ejecutados':'escenarios_condicionados' in resumen,
+        'cargas_operativas_prototipo_validadas':False if modelo=='prototipo' else None,
         'detalle_cargas':resumen.get('validaciones_cargas'),'seguridad_estructural_no_aprobada':True})
     comparar()
     return resumen
@@ -149,7 +174,7 @@ def ejecutar(modelo,salida=None,config_path=None):
 def comparar():
     filas=[]
     for modelo in ('real','prototipo'):
-        p=RAIZ/f'resultados/{modelo}/resumen.json'
+        p=RAIZ/f'resultados/{modelo}/{REVISION}/resumen.json'
         if not p.exists():continue
         r=json.loads(p.read_text(encoding='utf-8'));d=r['geometria'];c=r['cargas']
         filas.append(dict(modelo=modelo,estado=r['estado'],diametro_matriz_mm=d['diametro_exterior_mm'],
@@ -163,7 +188,7 @@ def comparar():
             esfuerzos_nuevos_pa=None,desplazamientos_nuevos_m=None,
             nota='Sin equivalencia de operación por escala; campos vacíos son pendientes, NO cero; estructura histórica no recalculada'))
     if filas:
-        destino=RAIZ/'resultados';destino.mkdir(exist_ok=True)
+        destino=RAIZ/'resultados'/REVISION;destino.mkdir(exist_ok=True)
         pd.DataFrame(filas).to_csv(destino/'comparacion_modelos.csv',index=False)
         pd.DataFrame(filas).to_csv(destino/'tabla_para_informe.csv',index=False)
 

@@ -1,0 +1,4 @@
+capa_hipotetica_m,longitud_contacto_m,cuadratura_error_relativo_max,origen_capa,holguras_CAD_m
+0.001,0.005074445782546645,5.49523508473361e-05,malla de sensibilidad explícita;NO espesor medido ni separaciónCAD,"[0.0004999999999998934, 0.0004999999999999929]"
+0.002,0.008703447592764904,3.4103460226165556e-05,malla de sensibilidad explícita;NO espesor medido ni separaciónCAD,"[0.0004999999999998934, 0.0004999999999999929]"
+0.004,0.013028814220795566,2.1498904457589305e-05,malla de sensibilidad explícita;NO espesor medido ni separaciónCAD,"[0.0004999999999998934, 0.0004999999999999929]"

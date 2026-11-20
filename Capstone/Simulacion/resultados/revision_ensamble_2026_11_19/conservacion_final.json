@@ -1,0 +1,11 @@
+{
+  "archivos_previos": 552,
+  "protegidos_intactos": true,
+  "fuentes_editadas_con_respaldo": [
+    "Simulacion/INFORME_TECNICO.md",
+    "Simulacion/README.md",
+    "Simulacion/simular.py",
+    "Simulacion/configuraciones/prototipo.json",
+    "Simulacion/peletizadora/nucleo.py"
+  ]
+}

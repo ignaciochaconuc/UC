@@ -1,0 +1,171 @@
+{
+  "modelo": "prototipo",
+  "ensamble": {
+    "step": "geometrias/Prototipo.stp",
+    "estado": "Montaje CAD incompleto; posiciones resueltas con SHA256 en ejecución"
+  },
+  "sensibilidades_ensamble": {
+    "capas_biomasa_m": [
+      0.001,
+      0.002,
+      0.004
+    ],
+    "factores_presion": [
+      0.5,
+      1,
+      2
+    ],
+    "mu_efectivo": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "mu_referencia_escenario": 0.1,
+    "rpm_matriz_parametricas": [
+      60,
+      120,
+      240,
+      360,
+      1350
+    ],
+    "eficiencia_mecanica": [
+      0.6,
+      0.8,
+      0.95
+    ],
+    "eje_M6": {
+      "E_referencia_escenario_pa": 205000000000,
+      "E_sensibilidad_pa": [
+        180000000000,
+        205000000000,
+        220000000000
+      ],
+      "nucleo_M6x1_escenario_m": 0.004773,
+      "nota": "Sensibilidad hipotética; ni paso, núcleo ni módulo de la varilla comprada están confirmados. Sin factores de seguridad."
+    }
+  },
+  "step": "geometrias/Matriz_prototipo.stp",
+  "fuente_geometrica_principal": "STEP proporcionado por el equipo; ninguna coordenada escalada se admite como entrada",
+  "declarado_EP2": {
+    "diametro_exterior_mm": 100,
+    "espesor_zona_perforada_mm": 10,
+    "diametro_bore_mm": 13,
+    "numero_canales": 102,
+    "diametro_efectivo_mm": 6
+  },
+  "rodillos": {
+    "diametro_m": 0.052,
+    "ancho_m": 0.03,
+    "centros_radiales_m": [
+      0.027838064033597804,
+      0.027661935966402592
+    ],
+    "angulos_rad": [
+      -2.3534223058658985,
+      0.7881703477238986
+    ],
+    "espesor_biomasa_m": null,
+    "contacto_documentado": false,
+    "fuente_montaje": {
+      "archivo": "Prototipo.stp",
+      "sha256": "673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83",
+      "solidos_rodillos": [
+        18,
+        19
+      ],
+      "marco": "local de Matriz_prototipo.stp; transformación verificada en correspondencia_matriz"
+    },
+    "nota": "Solo dimensiones nominales aportadas; la matriz STEP no confirma posiciones, ángulos ni contacto",
+    "holguras_CAD_m": [
+      0.0004999999999998934,
+      0.0004999999999999929
+    ],
+    "geometria_montaje_verificada": true
+  },
+  "operacion": {
+    "motor": "Siemens1LA7063-4AB10",
+    "potencia_motor_w": 180,
+    "rpm_motor": 1350,
+    "rpm_matriz": null,
+    "relacion_reduccion": null,
+    "eficiencia_mecanica": null,
+    "fuente": "Equipo: motor trifásico230/400V; falta placa/documentación local y transmisión real"
+  },
+  "presion": {
+    "valor_pa": 2260000,
+    "estado": "solo escenario preliminar condicionado; no presión experimental validada",
+    "formula_EP2_recuperada": null,
+    "mu_pared_extrusion": null,
+    "nu_biomasa_LR": null,
+    "PN0_pa": null
+  },
+  "torque": {
+    "mu_efectivo": null,
+    "estado": "Pendiente confirmar hipótesis propia; no heredar automáticamente0,1 del comercial"
+  },
+  "numerico": {
+    "estados": 1440,
+    "cuadratura": 64,
+    "cuadratura_contraste": 128
+  },
+  "componentes": {
+    "eje_transversal": {
+      "tipo": "M6 zincado",
+      "longitud_m": 0.1,
+      "diametro_nominal_m": 0.006,
+      "paso_real_m": null,
+      "nucleo_real_m": null,
+      "grado": null,
+      "E_pa": null,
+      "apoyos": null,
+      "longitud_CAD_m": 0.16
+    },
+    "arbol": {
+      "tipo": "varilla roscada zincada, fijación por tuercas",
+      "diametro_nominal_m": 0.0127,
+      "paso_real_m": null,
+      "grado": null,
+      "apoyos": null
+    },
+    "rodamientos": {
+      "cantidad": 4,
+      "designacion": "608ZZ",
+      "dimensiones_mm": [
+        8,
+        22,
+        7
+      ],
+      "fabricante_adquirido": null,
+      "asiento_adaptador_M6_8": null
+    },
+    "matriz_rodillos_material": {
+      "previsto": "AISI304",
+      "certificado": null
+    },
+    "PLA": {
+      "carcasa_diametros_referencia_mm": [
+        100,
+        148
+      ],
+      "tolva_diametro_max_mm": 200,
+      "paredes": null,
+      "relleno": null,
+      "orientacion": null
+    }
+  },
+  "estructural": {
+    "estado": "Pendiente de apoyos, asientos, propiedades y contacto; no trasladar acoplamiento comercial ni montajes hipotéticos retirados",
+    "apoyos_fisicos_confirmados": false
+  },
+  "materiales": {
+    "fuente": "fisica/materiales.json",
+    "propiedades_reales_varillas": null,
+    "nu_304_confirmado": null,
+    "propiedades_PLA_impreso": null
+  },
+  "ensamble_auditado": {
+    "sha256": "673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83",
+    "numero_solidos": 39,
+    "matriz_coincide": true
+  }
+}

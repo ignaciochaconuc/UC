@@ -221,3 +221,55 @@ log completo queda en `resultados/pruebas_ejecutadas.json`. Una prueba
 adicional con sólidos sintéticos de uno y dos conductos demuestra que el
 extractor no impone 102 y que marca familias diferentes para revisión; esos
 sólidos de prueba no sustituyen los STEP del equipo.
+
+## Revisión vigente: ensamble del prototipo, 19-11-2026
+
+Los apartados anteriores describen la línea base conservada. Ahora el mismo
+ejecutable importa `geometrias/Prototipo.stp` mediante XCAF, conserva las
+transformaciones de instancia y verifica la matriz contra su STEP individual.
+Las posiciones se incorporan a `parametros_utilizados.json`; los parámetros
+declarados, con las incógnitas físicas sin rellenar, se guardan por separado.
+
+```powershell
+python simular.py --modelo prototipo
+python simular.py --modelo real
+python herramientas/pruebas_ensamble.py
+python herramientas/control_ensamble.py
+```
+
+La salida vigente es `resultados/{modelo}/revision_ensamble_2026_11_19/`.
+Las salidas anteriores permanecen intactas. La comparación nueva se guarda
+en `resultados/revision_ensamble_2026_11_19/`. El modelo real conserva su
+configuración y su regresión contra 2C, que no es el modelo acoplado 3C.
+
+El ensamble contiene 39 sólidos. Los rodillos son Ø52×30 mm, con radios de
+posición 27,838064 y 27,661936 mm y separación geométrica de 0,500 mm respecto
+de la cara de trabajo. Esa separación **no es una capa de biomasa medida**.
+Se ejecutan 27 escenarios de 1440 estados con capas supuestas de 1/2/4 mm,
+presiones de 1,13/2,26/4,52 MPa y μ efectivo de 0,05/0,1/0,2. Se reutilizan
+las integrales parciales y el modelo de torque de EP2; no se calibra presión.
+La velocidad y potencia reales siguen pendientes. `potencia_parametrica.csv`
+explora velocidades explícitas y eficiencias mecánicas, sin atribuir 1350 rpm
+a la matriz. No se identifica transmisión motorizada en el ensamble.
+
+`ensamble_auditado.json`, `componentes_ensamble.csv`, `posiciones_rodillos.csv`
+y los gráficos de planta y aristas documentan las geometrías y piezas ambiguas.
+`historial_escenarios.csv.gz` conserva los estados correlacionados.
+El cribado lineal del eje M6 usa apoyos rígidos **hipotéticos** en los centros
+de taladros CAD, núcleo M6×1 de escenario y módulos elásticos de sensibilidad;
+no verifica la rigidez del PLA, el grado ni las entallas de la varilla.
+No se asignan factores de seguridad ni vidas a los rodamientos.
+
+El montaje no está resuelto: eje Ø6/608 Ø8 y 608 Ø22/alojamiento Ø24 presentan
+dos diferencias diametrales de 2 mm. No se reconoce adaptador. El eje CAD mide
+160 mm, frente a los 100 mm nominales anteriores. El apoyo inferior del árbol
+Ø12,7 y sus tornillos están ausentes: UCF201-8 y UCFL201-8 siguen como candidatos.
+Las tuercas CAD declaradas M12 requieren revisar compatibilidad con Ø12,7.
+Consúltese el informe para resultados, condiciones y datos pendientes.
+
+La suite vigente reúne 24 pruebas unificadas y 193 históricas (217), además
+de los validadores 4A/4B/4D. El registro nuevo queda en
+`resultados/revision_ensamble_2026_11_19/pruebas_ejecutadas.json`.
+Se verifican por SHA256 los 552 archivos de la línea base incremental;
+las cinco fuentes autorizadas tienen respaldo previo y los resultados y CAD
+históricos están protegidos. El control original de 486 archivos sigue activo.

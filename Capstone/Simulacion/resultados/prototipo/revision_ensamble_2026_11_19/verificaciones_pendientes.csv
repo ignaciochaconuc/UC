@@ -1,0 +1,7 @@
+verificacion,estado,datos_faltantes
+cargas_contacto,pendiente,rodillos.espesor_biomasa_m; rodillos.contacto_documentado; torque.mu_efectivo
+presion_extrusion,condicionada_no_validada,"PN0,mu_pared,nuLR,biomasa/humedad/temperatura y memoriaEP2; no deducir presión de espesor solamente"
+estructural_y_acoplamiento,pendiente_o_referencia_historica,"Apoyos físicos, propiedades y montaje propios; no trasladar3C al prototipo"
+matriz_FEM,no_ejecutado,Contacto/retención y materiales; triangulación de figura es solo visualización CAD
+rodamientos,pendiente_de_montaje_propio,"Cargas individuales,marca/variante,asientos/holguras,Fa y velocidad; en prototipo M6/608Ø8sinadaptador"
+potencia_y_transmision,pendiente_rendimiento_real,"Velocidad matriz,reducción y pérdidas reales; no importar selección de correas de otra máquina"

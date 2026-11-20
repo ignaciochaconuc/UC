@@ -119,3 +119,113 @@ El resultado del prototipo puede ser legítimamente «pendiente de datos»;
 eso no es un fallo de importación. La prueba histórica 4D revisa elementos,
 malla y resultados previos, no resuelve un FEM nuevo. No se redactó LaTeX,
 no se modificó CAD ni se hicieron commits o push.
+
+## Actualización vigente: ensamble físico del prototipo (19-11-2026)
+
+Esta revisión reemplaza el estado de montaje desconocido del prototipo; los
+resultados anteriores se conservan como línea base. No reemplaza la matriz
+individual ni el análisis comercial y tampoco valida experimentalmente cargas.
+
+### Evidencia geométrica
+
+`Prototipo.stp`, fuente interna del equipo, SHA256
+`673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83`,
+declara milímetros y contiene 39 sólidos. El lector XCAF recorre instancias y
+acumula transformaciones; sus centroides coinciden con la lectura global STEP.
+La identificación combina superficies, dimensiones, posición y nombres.
+Se reconocen matriz, dos rodillos, eje transversal, árbol principal, cuatro
+envolventes 608, cámara, tolva, placas, bastidor, manivela, tuercas y arandelas.
+Piezas menores de función incierta conservan su clasificación provisional.
+`componentes_ensamble.csv` y `ensamble_componentes.png` relacionan sus IDs.
+
+La matriz montada y `Matriz_prototipo.stp` coinciden: Ø99 mm, envolvente axial
+26 mm, longitud cilíndrica perforada 10 mm, bore Ø13 y 102 conductos Ø6.
+Se verifica transformación rígida, centros con error menor de 1,6×10⁻¹⁴ mm,
+volumen relativo del orden de 10⁻¹⁶ y frontera muestreada bidireccional
+(1853 puntos por sentido, tolerancia 10⁻⁵ mm). No se afirma una comparación
+booleana exacta de todas las superficies. Las matrices de transformación
+están en `ensamble_auditado.json`; no se presupone origen común.
+
+| Magnitud CAD | Rodillo 1 (ID18) | Rodillo 2 (ID19) |
+|---|---:|---:|
+| Centro global X [mm] | 124,207960 | 68,707960 |
+| Centro global Y [mm] | 69,700398 | 69,700398 |
+| Centro global Z [mm] | −53,810005 | −53,810005 |
+| Radio de posición [mm] | 27,838064 | 27,661936 |
+| Ángulo local [rad] | −2,353422306 | 0,788170348 |
+| Diámetro / ancho [mm] | 52 / 30 | 52 / 30 |
+| Separación de envolvente a matriz [mm] | 0,500 | 0,500 |
+
+Los ejes son paralelos a X global y compatibles con dirección radial. Los
+centros distan 55,5 mm; existe una pequeña asimetría respecto del eje principal.
+El plano de trabajo está en Y global=43,200398 mm; la normal de trabajo es
+−Z en el marco local de la matriz. La figura `planta_compactacion.png` muestra
+centros y huellas hipotéticas con las perforaciones reales, sin escala heredada.
+
+### Cargas y potencia condicionadas
+
+La separación CAD no define deformación ni espesor de biomasa. Para explorar
+esa incógnita se declaran capas 1/2/4 mm, presiones 1,13/2,26/4,52 MPa y μ
+0,05/0,1/0,2: 27 escenarios, cada uno con 1440 estados sin extremo duplicado.
+Las intersecciones parciales reutilizan EP2; se utiliza su función de contacto
+con la separación CAD y la capa supuesta. Contraste de cuadraturas 64/128:
+error relativo máximo de fuerza entre 2,15×10⁻⁵ y 5,50×10⁻⁵.
+
+Ejemplo de sensibilidad, **p=2,26 MPa y μ=0,1, ambos no validados**:
+
+| Capa supuesta [mm] | Longitud tangencial [mm] | F total máxima [N] | F total media [N] | T máximo [N·m] | T medio [N·m] |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 5,074 | 389,534 | 350,895 | 1,1573 | 1,0383 |
+| 2 | 8,703 | 641,813 | 604,045 | 1,9347 | 1,7872 |
+| 4 | 13,029 | 928,540 | 910,557 | 2,8084 | 2,6935 |
+
+Máximos de fuerza y torque pueden ocurrir en estados diferentes; se conservan
+sus índices y series completas. Estas cifras no recuperan los antiguos valores
+734,7 N/2,306 N·m del modelo escalado retirado. No hay potencia operativa
+determinada porque la velocidad de matriz y la reducción son desconocidas.
+La manivela no acredita una transmisión motorizada. La tabla paramétrica
+calcula P=Tω para velocidades supuestas y contrasta 180 W con eficiencias
+mecánicas 0,60/0,80/0,95; no prueba suficiencia del motor ni arranque.
+
+### Montaje, cribado estructural y apoyo pendiente
+
+El eje transversal es un cilindro CAD Ø6×160 mm, no una representación de
+filetes de rosca. Los taladros laterales de cámara distan 108,411756 mm.
+Los centros de los cuatro 608 están en X global 56,907960; 80,507960;
+112,407960 y 135,907960 mm. Se detectan dos incompatibilidades: bore608 Ø8
+frente a eje Ø6, y alojamiento de rodillo Ø24×7 frente a exterior608 Ø22×7.
+No hay adaptador identificado. Además, los centros axiales de asientos y
+rodamientos difieren 0,2–0,3 mm. El nombre SKF del CAD no acredita compra.
+
+`eje_M6_cribado_condicionado.csv` presenta sensibilidad de viga lineal con
+apoyos puntuales rígidos hipotéticos en los taladros, fuerzas distribuidas por
+equilibrio en los pares608, núcleo supuesto 4,773 mm y E=180/205/220 GPa.
+No constituye verificación del montaje PLA ni de la rosca real. Ya el escenario
+de capa1 mm, p=1,13 MPa, μ=0,05 y E=205 GPa produce aproximadamente
+228 MPa nominales y 0,603 mm de flecha; por tanto, es necesario revisar
+deformación/contacto y validez del régimen lineal antes de interpretar los
+escenarios superiores. No se asignan propiedades resistentes, FS o vida L10.
+
+El árbol principal CAD mide Ø12,7×200 mm. Las tuercas declaradas M12 requieren
+confirmar familia y paso: M12 no equivale automáticamente a media pulgada.
+El soporte inferior y sus tornillos no están modelados. UCF201-8/UCFL201-8
+son candidatos sin selección. La placa inferior es 95×95×5 mm con bore13,
+dos taladrosØ5 separados40 mm y separación de envolventes a manivela30,509 mm.
+Estas cotas no garantizan que encaje un soporte comercial. Faltan plano de
+variante, huella de fijación, altura axial, accesibilidad, material/resistencia
+de placa, retención y transmisión al bastidor. No se impone empotramiento.
+
+### Validación y próximos datos
+
+Las salidas nuevas están en `resultados/prototipo/revision_ensamble_2026_11_19/`;
+el modelo comercial se reproduce en su propia revisión y conserva la regresión
+2C sin modificar su configuración. La suite vigente reúne 217 pruebas y los
+validadores históricos4A/4B/4D. El control incremental verifica552 archivos
+previos y respalda las cinco fuentes editables; el control original486 continúa.
+
+Para una predicción física se necesitan capa/deformación y presión medidas,
+biomasa y humedad, velocidad de matriz/reducción/pérdidas, solución real de
+las dos interfaces608, disposición axial, grado/paso/núcleo de varillas y
+propiedades/apoyos PLA. Para cerrar árbol y rodamientos se requieren soporte
+inferior seleccionado, fijaciones, restricción axial y cargas correlacionadas.
+No se ejecutó FEM ni se cambió CAD o diseño, y no se aprobó seguridad mecánica.

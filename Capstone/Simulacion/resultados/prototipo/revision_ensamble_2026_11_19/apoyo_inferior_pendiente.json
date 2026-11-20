@@ -1,0 +1,48 @@
+{
+  "placa_candidata_id": 9,
+  "bbox_CAD_mm": [
+    48.869895788759266,
+    -92.79052325236222,
+    -101.31000491410022,
+    143.86989578875932,
+    -87.79052325236219,
+    -6.310004914100176
+  ],
+  "dimensiones_placa_mm": [
+    95.00000000000006,
+    5.000000000000028,
+    95.00000000000004
+  ],
+  "taladros_fijacion_CAD_mm": [
+    [
+      76.3698957887593,
+      -90.2905232523622,
+      -53.81000491410018
+    ],
+    [
+      116.3698957887593,
+      -90.2905232523622,
+      -53.810004914100205
+    ]
+  ],
+  "diametros_taladros_mm": [
+    5.0,
+    5.0
+  ],
+  "separacion_centros_taladros_mm": 40.0,
+  "diametro_arbol_mm": 12.7,
+  "posicion_axial_definitiva_soporte": null,
+  "rodamiento_presente": false,
+  "tornillos_apoyo_inferior_presentes": false,
+  "candidatos_no_seleccionados": [
+    "UCF201-8",
+    "UCFL201-8"
+  ],
+  "pendientes": [
+    "Ficha dimensional de variante real: bore, altura de centro, flange y patrón de pernos",
+    "Comprobar envolvente y distancia a manivela, montaje por arriba/abajo y acceso de apriete",
+    "Espesor/material/resistencia de placa y transmisión a bastidor; orientación y reparto de empuje",
+    "No inferir empotramiento ni fijación axial suficiente del soporte ausente"
+  ],
+  "separacion_placa_inferior_a_envolvente_manivela_mm": 30.509078701729777
+}

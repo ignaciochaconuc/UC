@@ -7,6 +7,7 @@ import math
 import numpy as np
 import pandas as pd
 from .legado import interseccion_disco_rectangulo, coordenadas_locales, contribuciones_torque_nm, potencia_resistente_w
+from modelos.superposicion_variable import longitud_contacto_desde_holgura
 
 
 def positivo(valor,nombre):
@@ -18,7 +19,7 @@ def requisitos_carga(config):
     r=config['rodillos'];faltan=[]
     for clave in ('centros_radiales_m','angulos_rad','espesor_biomasa_m','fuente_montaje'):
         if r.get(clave) is None:faltan.append('rodillos.'+clave)
-    if r.get('contacto_documentado') is not True:faltan.append('rodillos.contacto_documentado')
+    if r.get('contacto_documentado') is not True and r.get('contacto_escenario_explicito') is not True:faltan.append('rodillos.contacto_documentado')
     if config['torque'].get('mu_efectivo') is None:faltan.append('torque.mu_efectivo')
     if config['presion'].get('valor_pa') is None:faltan.append('presion.valor_pa')
     return faltan
@@ -40,7 +41,11 @@ def cargas_angulares(agujeros,config,orden=None):
     xy=np.array([[a['x_mm'],a['y_mm']] for a in agujeros])/1000
     radios=np.linalg.norm(xy,axis=1);diam=np.array([a['diametro_efectivo_mm'] for a in agujeros])/1000
     if not np.isfinite(xy).all() or np.any(diam<=0):raise ValueError('Geometría inválida')
-    largo=math.sqrt(r['diametro_m']*r['espesor_biomasa_m']-r['espesor_biomasa_m']**2)
+    if r.get('holguras_CAD_m') is not None:
+        if len(r['holguras_CAD_m'])!=len(r['centros_radiales_m']):raise ValueError('Falta holgura de algún rodillo')
+        largos=np.asarray(longitud_contacto_desde_holgura(np.array(r['holguras_CAD_m']),r['diametro_m'],r['espesor_biomasa_m']))
+    else:
+        largos=np.full(len(r['centros_radiales_m']),math.sqrt(r['diametro_m']*r['espesor_biomasa_m']-r['espesor_biomasa_m']**2))
     filas=[]
     for paso in range(n):
         theta=2*math.pi*paso/n;co=np.array([[math.cos(theta),-math.sin(theta)],[math.sin(theta),math.cos(theta)]])
@@ -48,6 +53,7 @@ def cargas_angulares(agujeros,config,orden=None):
         fila=dict(paso=paso,angulo_grados=360*paso/n,tiempo_s=None if rpm is None else paso/n*60/rpm,
             escenario='cobertura_EP2_desacoplada_con_STEP',fuerza_total_n=0.,torque_total_nm=0.)
         for j,(centro,angulo) in enumerate(zip(r['centros_radiales_m'],r['angulos_rad']),1):
+            largo=float(largos[j-1]);fila[f'longitud_contacto_r{j}_m']=largo
             positivo(centro,'centro_radial');
             if not math.isfinite(angulo):raise ValueError('Ángulo de montaje no finito')
             if centro-r['ancho_m']/2<=0:raise ValueError('Rodillos cruzan eje; comprobar solapamiento')
@@ -56,7 +62,8 @@ def cargas_angulares(agujeros,config,orden=None):
             areas=np.zeros(len(xy));cr=np.full(len(xy),np.nan)
             for valor in np.unique(diam):
                 ids=np.flatnonzero(diam==valor)
-                aa,cc,_=interseccion_disco_rectangulo(locales[ids],valor/2,limites,orden or num['cuadratura'])
+                if largo>0:aa,cc,_=interseccion_disco_rectangulo(locales[ids],valor/2,limites,orden or num['cuadratura'])
+                else:aa=np.zeros(len(ids));cc=np.full(len(ids),np.nan)
                 areas[ids]=aa;cr[ids]=cc
             F=p*areas;T=contribuciones_torque_nm(F,radios,mu);positiva=areas>1e-16
             suma=float(F.sum());torque=float(T.sum())
@@ -67,7 +74,7 @@ def cargas_angulares(agujeros,config,orden=None):
             fila['fuerza_total_n']+=suma;fila['torque_total_nm']+=torque
         fila['potencia_w']=None if rpm is None else float(potencia_resistente_w(fila['torque_total_nm'],2*math.pi*rpm/60))
         filas.append(fila)
-    return pd.DataFrame(filas),largo
+    return pd.DataFrame(filas),float(largos[0]) if np.allclose(largos,largos[0]) else largos.tolist()
 
 
 def resumir(df):

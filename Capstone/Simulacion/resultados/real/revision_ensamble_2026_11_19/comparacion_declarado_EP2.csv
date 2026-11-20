@@ -1,0 +1,7 @@
+parametro,declarado_EP2,extraido_STEP,coincide,accion
+diametro_exterior_mm,200,200.0,True,Coincide nominalmente
+espesor_zona_perforada_mm,36,36.0,True,Coincide nominalmente
+diametro_bore_mm,50,50.0,True,Coincide nominalmente
+numero_canales,102,102.0,True,Coincide nominalmente
+diametro_efectivo_mm,6,6.0,True,Coincide nominalmente
+altura_total_vs_zona_perforada,36,36.0,True,Distinguir envolvente total con resalte y longitud del cuerpo perforado; no usar altura total como L de extrusión

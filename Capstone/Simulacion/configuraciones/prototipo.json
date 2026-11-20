@@ -1,5 +1,15 @@
 {
   "modelo": "prototipo",
+  "ensamble": {"step": "geometrias/Prototipo.stp", "estado": "Montaje CAD incompleto; posiciones resueltas con SHA256 en ejecución"},
+  "sensibilidades_ensamble": {
+    "capas_biomasa_m": [0.001, 0.002, 0.004],
+    "factores_presion": [0.5, 1, 2],
+    "mu_efectivo": [0.05, 0.1, 0.2],
+    "mu_referencia_escenario": 0.1,
+    "rpm_matriz_parametricas": [60, 120, 240, 360, 1350],
+    "eficiencia_mecanica": [0.6, 0.8, 0.95],
+    "eje_M6": {"E_referencia_escenario_pa": 205000000000, "E_sensibilidad_pa": [180000000000, 205000000000, 220000000000], "nucleo_M6x1_escenario_m": 0.004773, "nota": "Sensibilidad hipotética; ni paso, núcleo ni módulo de la varilla comprada están confirmados. Sin factores de seguridad."}
+  },
   "step": "geometrias/Matriz_prototipo.stp",
   "fuente_geometrica_principal": "STEP proporcionado por el equipo; ninguna coordenada escalada se admite como entrada",
   "declarado_EP2": {"diametro_exterior_mm": 100, "espesor_zona_perforada_mm": 10, "diametro_bore_mm": 13, "numero_canales": 102, "diametro_efectivo_mm": 6},

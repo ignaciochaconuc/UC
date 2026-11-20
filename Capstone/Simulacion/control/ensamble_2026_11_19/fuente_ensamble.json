@@ -1,0 +1,10 @@
+{
+  "archivo_incorporado": "geometrias/Prototipo.stp",
+  "fuente_original": "C:/Users/chaco/Downloads/Prototipo.stp",
+  "autoridad": "Archivo CAD proporcionado por el equipo; no referencia normativa",
+  "sha256": "673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83",
+  "unidades_declaradas": "millimetre",
+  "revision": "ensamble_2026_11_19",
+  "alcance": "Copia binaria; no se modifica CAD. Matriz_prototipo.stp sigue siendo la referencia independiente de conductos.",
+  "montaje_incompleto": ["Apoyo inferior del árbol y sus tornillos", "Accionamiento motorizado y relación cinemática", "Solución verificable de asientos y adaptadores 608"]
+}

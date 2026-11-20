@@ -1,0 +1,11 @@
+{
+  "distancia_max_centros_STEP_vs_CSV_EP2_mm": 0.0,
+  "criterio": "Comparar con2C área-superposición, no forzar coincidencia con3C acoplado",
+  "origen_diferencias": "Si geometría/operación coinciden, solo redondeo/orden de suma; se mantienen44MPa y516rpm sin ajuste.",
+  "fuerza_total_n_error_abs_max": 4.3655745685100555e-11,
+  "fuerza_r1_n_error_abs_max": 3.8198777474462986e-11,
+  "fuerza_r2_n_error_abs_max": 3.637978807091713e-11,
+  "torque_total_nm_error_abs_max": 2.984279490192421e-13,
+  "potencia_w_error_abs_max": 1.546140993013978e-11,
+  "coincide_2C_numerico": true
+}

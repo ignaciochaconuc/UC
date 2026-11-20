@@ -1,0 +1,12 @@
+{
+  "editar": [
+    "Simulacion/INFORME_TECNICO.md",
+    "Simulacion/README.md",
+    "Simulacion/configuraciones/prototipo.json",
+    "Simulacion/peletizadora/nucleo.py",
+    "Simulacion/simular.py"
+  ],
+  "agregar": "Importación de ensamble, escenarios, pruebas y nueva revisión de resultados",
+  "no_sobrescribir": "Resultados anteriores, STEP previos, configuración real ni código EP2",
+  "git": "git.exe no ejecutable válido en revisión previa; evidencia por SHA256, sin commit/push"
+}

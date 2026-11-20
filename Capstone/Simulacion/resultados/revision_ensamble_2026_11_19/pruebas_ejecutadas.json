@@ -1,0 +1,50 @@
+{
+  "grupos": [
+    {
+      "grupo": "unificado",
+      "codigo": 0,
+      "salida": "........................                                                 [100%]\n24 passed in 20.42s\n"
+    },
+    {
+      "grupo": "EP2",
+      "codigo": 0,
+      "salida": "..................................................................       [100%]\n66 passed in 6.80s\n"
+    },
+    {
+      "grupo": "transmision",
+      "codigo": 0,
+      "salida": "........................................................................ [ 57%]\n.....................................................                    [100%]\n125 passed in 5.90s\n"
+    },
+    {
+      "grupo": "6a",
+      "codigo": 0,
+      "salida": "..                                                                       [100%]\n2 passed in 0.86s\n"
+    },
+    {
+      "grupo": "4a",
+      "codigo": 0,
+      "salida": "VALIDACIÓN 4A: historial, correlación y reconstrucción por perforación OK\n"
+    },
+    {
+      "grupo": "4b",
+      "codigo": 0,
+      "salida": "OK — 5 validaciones, sin alterar fuentes.\n"
+    },
+    {
+      "grupo": "4d",
+      "codigo": 0,
+      "salida": "Correcto: 102 perforaciones, malla conectada, volumen, campo afín 3D, F/T correlacionados, 12 soluciones y equilibrio.\n"
+    }
+  ],
+  "conservacion": {
+    "archivos_previos": 552,
+    "protegidos_intactos": true,
+    "fuentes_editadas_con_respaldo": [
+      "Simulacion/INFORME_TECNICO.md",
+      "Simulacion/README.md",
+      "Simulacion/simular.py",
+      "Simulacion/configuraciones/prototipo.json",
+      "Simulacion/peletizadora/nucleo.py"
+    ]
+  }
+}

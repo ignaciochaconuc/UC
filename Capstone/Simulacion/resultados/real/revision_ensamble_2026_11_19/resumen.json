@@ -1,0 +1,386 @@
+{
+  "modelo": "real",
+  "estado": "cargas_desacopladas_ejecutadas",
+  "geometria": {
+    "unidades_declaradas_STEP": [
+      "millimetre"
+    ],
+    "unidad_kernel": "mm",
+    "numero_solidos": 1,
+    "sha256": "db854ecf1e36390cccc9b590206770d181ad7997863c46fb4889cb97c76adaa4",
+    "archivo": "Matriz_real.stp",
+    "observacion": "Se usa el sólido; curvas auxiliares de presentación no se cuentan como piezas o agujeros.",
+    "diametro_exterior_mm": 200.0,
+    "espesor_total_envolvente_mm": 36.0,
+    "espesor_zona_perforada_mm": 36.0,
+    "diametro_bore_mm": 50.0,
+    "numero_canales": 102,
+    "diametros_efectivos_mm": [
+      6.0
+    ],
+    "longitudes_cilindricas_restrictivas_mm": [
+      31.5
+    ],
+    "relaciones_Lcil_D": [
+      5.25
+    ],
+    "area_abierta_efectiva_mm2": 2883.9820559954287,
+    "distancia_min_centros_mm": 12.42199999999999,
+    "ligamento_min_cilindrico_mm": 6.42199999999999,
+    "ligamento_min_bocas_mm": 3.42199999999999,
+    "numero_transiciones_conicas": 102,
+    "cuenta_independiente_circulos_por_plano": {
+      "0.0": 102,
+      "36.0": 102
+    },
+    "sistema_local": {
+      "origen_CAD_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "base_filas_x_y_z_en_CAD": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "definicion": "local=R@(CAD-origen), dextrógiro; z es normal canónica a la matriz. No supone orientación del ensamble."
+    },
+    "bbox_CAD_mm": [
+      -100.0,
+      0.0,
+      -100.0,
+      100.0,
+      36.0,
+      100.0
+    ],
+    "caras_por_tipo": {
+      "GeomAbs_Cylinder": 208,
+      "GeomAbs_Plane": 7,
+      "GeomAbs_Cone": 102
+    },
+    "validacion_pasantes": true,
+    "geometria_valida": true,
+    "superficies_para_revision": [
+      {
+        "cara_id": 1,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 27.1046016719461,
+        "y_mm": 8.36095498164751,
+        "radio_mm": 0.25,
+        "z_min_mm": 0.0,
+        "z_max_mm": 36.0,
+        "angular_completa": false,
+        "axial": true,
+        "superficie_interna": true,
+        "clasificacion": "superficie_parcial_o_auxiliar_revisar_no_contada_como_agujero"
+      },
+      {
+        "cara_id": 3,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 27.8997411003244,
+        "y_mm": -5.11560812952583,
+        "radio_mm": 0.25,
+        "z_min_mm": 0.0,
+        "z_max_mm": 36.0,
+        "angular_completa": false,
+        "axial": true,
+        "superficie_interna": true,
+        "clasificacion": "superficie_parcial_o_auxiliar_revisar_no_contada_como_agujero"
+      }
+    ],
+    "familias_de_canales": [
+      {
+        "diametro_mm": 6.0,
+        "Lcil_mm": 31.5,
+        "recorrido_mm": 36.0,
+        "cantidad": 102
+      }
+    ],
+    "clasificacion_funcional_ambigua": false,
+    "bore_central_no_circular": true,
+    "bore_y_resaltes_coaxiales": [
+      {
+        "cara_id": 7,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 0.0,
+        "y_mm": 0.0,
+        "radio_mm": 25.0,
+        "z_min_mm": 0.0,
+        "z_max_mm": 36.0,
+        "angular_completa": false,
+        "axial": true,
+        "superficie_interna": true,
+        "clasificacion": "bore_central"
+      },
+      {
+        "cara_id": 316,
+        "tipo": "GeomAbs_Cylinder",
+        "x_mm": 0.0,
+        "y_mm": 0.0,
+        "radio_mm": 100.0,
+        "z_min_mm": 0.0,
+        "z_max_mm": 36.0,
+        "angular_completa": true,
+        "axial": true,
+        "superficie_interna": false,
+        "clasificacion": "exterior_coaxial"
+      }
+    ],
+    "advertencias": [
+      "Longitud cilíndrica restrictiva no equivale por sí sola a longitud de fricción calibrada o presión de extrusión.",
+      "Caras parciales auxiliares se reportan, no se convierten en agujeros adicionales.",
+      "La geometría de matriz no determina posiciones de rodillos, material ni apoyos."
+    ]
+  },
+  "discrepancias_declaradas": [
+    {
+      "parametro": "diametro_exterior_mm",
+      "declarado_EP2": 200,
+      "extraido_STEP": 200.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "espesor_zona_perforada_mm",
+      "declarado_EP2": 36,
+      "extraido_STEP": 36.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "diametro_bore_mm",
+      "declarado_EP2": 50,
+      "extraido_STEP": 50.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "numero_canales",
+      "declarado_EP2": 102,
+      "extraido_STEP": 102,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "diametro_efectivo_mm",
+      "declarado_EP2": 6,
+      "extraido_STEP": 6.0,
+      "coincide": true,
+      "accion": "Coincide nominalmente"
+    },
+    {
+      "parametro": "altura_total_vs_zona_perforada",
+      "declarado_EP2": 36,
+      "extraido_STEP": 36.0,
+      "coincide": true,
+      "accion": "Distinguir envolvente total con resalte y longitud del cuerpo perforado; no usar altura total como L de extrusión"
+    }
+  ],
+  "parametros_fisicos": {
+    "modelo": "real",
+    "step": "geometrias/Matriz_real.stp",
+    "fuente_geometrica_principal": "STEP proporcionado por el equipo; sin escalamiento",
+    "declarado_EP2": {
+      "diametro_exterior_mm": 200,
+      "espesor_zona_perforada_mm": 36,
+      "diametro_bore_mm": 50,
+      "numero_canales": 102,
+      "diametro_efectivo_mm": 6
+    },
+    "rodillos": {
+      "diametro_m": 0.1,
+      "ancho_m": 0.04,
+      "centros_radiales_m": [
+        0.0635,
+        0.0635
+      ],
+      "angulos_rad": [
+        0,
+        3.141592653589793
+      ],
+      "espesor_biomasa_m": 0.004,
+      "contacto_documentado": true,
+      "fuente_montaje": "../Simulación_peletizadora/config.py, configuración histórica EP2; no inferido de matriz STEP"
+    },
+    "operacion": {
+      "rpm_matriz": 516,
+      "potencia_motor_w": 5500,
+      "rpm_motor": 1450,
+      "eficiencia_mecanica": null,
+      "fuente": "EP2: config.py y resultados3C; no corregir rpm por poleas5A"
+    },
+    "presion": {
+      "valor_pa": 44000000,
+      "estado": "estimación histórica EP2, no validación experimental",
+      "formula_EP2_recuperada": null,
+      "mu_pared_extrusion": null,
+      "nu_biomasa_LR": null,
+      "PN0_pa": null
+    },
+    "torque": {
+      "mu_efectivo": 0.1,
+      "estado": "hipótesis EP2 independiente de mu de extrusión"
+    },
+    "numerico": {
+      "estados": 1440,
+      "cuadratura": 64,
+      "cuadratura_contraste": 128
+    },
+    "estructural": {
+      "estado": "No recalcular3C/3D automáticamente; consultar referencia histórica y sus apoyos ideales",
+      "referencia": "../Simulación_peletizadora/resultados/etapa_3c_acoplamiento/resumen_comparativo.csv",
+      "apoyos_fisicos_confirmados": false
+    },
+    "regresion": {
+      "cargas_2C": "../Simulación_peletizadora/resultados/etapa_2c/cargas_area_superposicion.csv",
+      "coordenadas_EP2": "../Simulación_peletizadora/datos/agujeros_matriz.csv"
+    },
+    "materiales": {
+      "fuente": "../Simulación_peletizadora/README.md y referencias.bib; respetar condición específica de cada componente",
+      "sin_transferencia_al_prototipo": true
+    }
+  },
+  "fuente_geometrica": "STEP sin escalamiento",
+  "cargas": {
+    "estados": 1440,
+    "fuerza_total_max_n": 14432.817684259226,
+    "fuerza_total_media_n": 12699.20503521432,
+    "torque_max_nm": 91.02866339541245,
+    "torque_medio_nm": 79.48600695480405,
+    "potencia_max_w": 4918.769659252965,
+    "potencia_media_w": 4295.0576748132735,
+    "caso_fuerza_max": {
+      "paso": 1096,
+      "angulo_grados": 274.0,
+      "tiempo_s": 0.08850129198966408,
+      "escenario": "cobertura_EP2_desacoplada_con_STEP",
+      "fuerza_total_n": 14432.817684259226,
+      "torque_total_nm": 91.02866339541245,
+      "longitud_contacto_r1_m": 0.019595917942265426,
+      "fuerza_r1_n": 8210.082750832431,
+      "torque_r1_nm": 52.436756222810715,
+      "perforaciones_activas_r1": 8,
+      "perforaciones_parciales_r1": 4,
+      "centroide_radial_r1_m": 0.06357874466485676,
+      "longitud_contacto_r2_m": 0.019595917942265426,
+      "fuerza_r2_n": 6222.734933426795,
+      "torque_r2_nm": 38.59190717260173,
+      "perforaciones_activas_r2": 6,
+      "perforaciones_parciales_r2": 3,
+      "centroide_radial_r2_m": 0.061709436628370834,
+      "potencia_w": 4918.769659252965
+    },
+    "caso_torque_max": {
+      "paso": 344,
+      "angulo_grados": 86.0,
+      "tiempo_s": 0.02777777777777778,
+      "escenario": "cobertura_EP2_desacoplada_con_STEP",
+      "fuerza_total_n": 14432.817684259224,
+      "torque_total_nm": 91.02866339541245,
+      "longitud_contacto_r1_m": 0.019595917942265426,
+      "fuerza_r1_n": 6222.734933426795,
+      "torque_r1_nm": 38.591907172601736,
+      "perforaciones_activas_r1": 6,
+      "perforaciones_parciales_r1": 3,
+      "centroide_radial_r1_m": 0.06170943662837082,
+      "longitud_contacto_r2_m": 0.019595917942265426,
+      "fuerza_r2_n": 8210.08275083243,
+      "torque_r2_nm": 52.436756222810715,
+      "perforaciones_activas_r2": 8,
+      "perforaciones_parciales_r2": 4,
+      "centroide_radial_r2_m": 0.06357874466485677,
+      "potencia_w": 4918.769659252965
+    },
+    "fuerza_por_rodillo": {
+      "fuerza_r1_n": {
+        "max_n": 8249.37179422581,
+        "media_n": 6349.602517607159
+      },
+      "fuerza_r2_n": {
+        "max_n": 8249.37179422581,
+        "media_n": 6349.60251760716
+      }
+    }
+  },
+  "seguridad_estructural_aprobada": false,
+  "pendientes": [
+    {
+      "verificacion": "cargas_contacto",
+      "estado": "ejecutado_condicionado",
+      "datos_faltantes": ""
+    },
+    {
+      "verificacion": "presion_extrusion",
+      "estado": "condicionada_no_validada",
+      "datos_faltantes": "PN0,mu_pared,nuLR,biomasa/humedad/temperatura y memoriaEP2; no deducir presión de espesor solamente"
+    },
+    {
+      "verificacion": "estructural_y_acoplamiento",
+      "estado": "pendiente_o_referencia_historica",
+      "datos_faltantes": "Apoyos físicos, propiedades y montaje propios; no trasladar3C al prototipo"
+    },
+    {
+      "verificacion": "matriz_FEM",
+      "estado": "no_ejecutado",
+      "datos_faltantes": "Contacto/retención y materiales; triangulación de figura es solo visualización CAD"
+    },
+    {
+      "verificacion": "rodamientos",
+      "estado": "pendiente_de_montaje_propio",
+      "datos_faltantes": "Cargas individuales,marca/variante,asientos/holguras,Fa y velocidad; en prototipo M6/608Ø8sinadaptador"
+    },
+    {
+      "verificacion": "potencia_y_transmision",
+      "estado": "pendiente_rendimiento_real",
+      "datos_faltantes": "Velocidad matriz,reducción y pérdidas reales; no importar selección de correas de otra máquina"
+    }
+  ],
+  "historicos": {
+    "archivos_anteriores_verificados": 486,
+    "alterados": 0,
+    "retiro_reversible": true
+  },
+  "nota": "No comparar escenarios como equivalentes por escala; CAD de matriz no determina montaje ni material.",
+  "longitud_contacto_m": 0.019595917942265426,
+  "validaciones_cargas": {
+    "error_suma_fuerzas_n": 0.0,
+    "cuadratura_error_relativo_max": 2.090710441141241e-05,
+    "estados_sin_extremo_duplicado": 1440,
+    "no_acoplamiento_3C": "Cobertura2C con presión constante; no usar resultados como3C"
+  },
+  "regresion": {
+    "distancia_max_centros_STEP_vs_CSV_EP2_mm": 0.0,
+    "criterio": "Comparar con2C área-superposición, no forzar coincidencia con3C acoplado",
+    "origen_diferencias": "Si geometría/operación coinciden, solo redondeo/orden de suma; se mantienen44MPa y516rpm sin ajuste.",
+    "fuerza_total_n_error_abs_max": 4.3655745685100555e-11,
+    "fuerza_r1_n_error_abs_max": 3.8198777474462986e-11,
+    "fuerza_r2_n_error_abs_max": 3.637978807091713e-11,
+    "torque_total_nm_error_abs_max": 2.984279490192421e-13,
+    "potencia_w_error_abs_max": 1.546140993013978e-11,
+    "coincide_2C_numerico": true
+  },
+  "conservacion_revision_anterior": {
+    "archivos_previos": 552,
+    "protegidos_intactos": true,
+    "fuentes_editadas_con_respaldo": [
+      "Simulacion/INFORME_TECNICO.md",
+      "Simulacion/README.md",
+      "Simulacion/simular.py",
+      "Simulacion/configuraciones/prototipo.json",
+      "Simulacion/peletizadora/nucleo.py"
+    ]
+  }
+}
