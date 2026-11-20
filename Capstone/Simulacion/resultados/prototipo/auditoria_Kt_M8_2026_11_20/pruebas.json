@@ -1,0 +1,12 @@
+{
+  "comando": "python -W error::ResourceWarning -m unittest -v test_memoria_Kt",
+  "pruebas": 12,
+  "fallidas": 0,
+  "conservacion": {
+    "archivos_verificados": 812,
+    "alterados": 0
+  },
+  "latex_compilado": false,
+  "motivo_latex": "No hay pdflatex, xelatex, latexmk ni tectonic en PATH; verificaci?n estructural de fuentes y citas completada",
+  "simulaciones_anteriores_ejecutadas": false
+}

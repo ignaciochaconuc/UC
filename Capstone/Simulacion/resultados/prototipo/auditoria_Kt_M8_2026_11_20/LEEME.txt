@@ -1,0 +1,59 @@
+REVISIÓN DOCUMENTAL Kt M8 — 20-11-2026
+
+Alcance: solo M8×1,25, clase 8.8 candidata, biomasa 4 mm. No es una nueva
+simulación, selección de producto ni aprobación de resistencia. Conserva EP2,
+CAD, 3C y memorias anteriores. El Kt específico permanece sin determinar.
+
+RESULTADO
+n_y,flex = 2,029414 / Kt_raíz para Sy mínimo candidato 640 MPa y nominal
+de flexión 315,361913 MPa. Es cribado elástico de flexión, sin aprobación
+multiaxial del montaje real. Kt=2,029414 es umbral matemático n=1, no Kt
+seleccionado. Los valores EP2 1,5 y 2,5 no tienen calibración geométrica.
+No se encontró un intervalo numérico bibliográfico transferible a nuestra
+flexión y fijación; no se presenta una banda supuestamente validada.
+
+ARCHIVOS PARA EL INFORME
+- seccion_principal_M8_88_h4.tex: cuerpo principal, configuración elegida.
+- anexo_justificacion_Kt_M8.tex: auditoría, fuentes, bases y sensibilidades.
+- memoria_Kt_M8.tex: envoltura independiente de ambos fragmentos.
+- referencias_Kt.bib: referencias nuevas; la envoltura reutiliza también
+  ../../../fisica/referencias_resistencia_m8.bib, sin cambiar ese archivo.
+Para integrar: copiar los dos fragmentos o usar input, y agregar la bibliografía
+de esta revisión al gestor del informe sin duplicar claves ya existentes.
+El documento receptor decide la numeración de anexos.
+
+REPRODUCCIÓN
+Desde esta carpeta:
+  python reproducir_memoria.py
+  python -m unittest -v test_memoria_Kt
+  pdflatex memoria_Kt_M8.tex
+  bibtex memoria_Kt_M8
+  pdflatex memoria_Kt_M8.tex
+  pdflatex memoria_Kt_M8.tex
+Los últimos cuatro comandos requieren una distribución TeX; no está instalada
+en el entorno de ejecución de esta revisión. Se verificaron referencias,
+llaves y entornos del LaTeX; eso no sustituye la compilación tipográfica.
+El script recalcula solo las tablas documentales de esta carpeta. Los textos
+LaTeX se versionan como fuentes de memoria; sus tablas redondeadas se contrastan
+con los CSV. No se importa ni ejecuta ModeloAcoplado ni ningún runner histórico.
+No regenerar historicos_sha256.json: es la línea base de 812 archivos.
+
+TRAZABILIDAD
+- historicos_sha256.json: 812 archivos previos, antes de esta revisión.
+- conservacion_historica.json: verificación de existencia e identidad SHA256.
+- casos_correlacionados.csv: cuatro máximos y sus estados sin mezclarlos.
+- sensibilidad_Kt_sin_seleccion.csv: puntos matemáticos, NO intervalo físico.
+- umbrales_no_prescriptivos.csv: objetivos ilustrativos, no requisitos.
+- geometria_y_datos_faltantes.csv: nominal, real pendiente y antecedentes.
+- auditoria_EP2.csv: origen exacto del procedimiento y factores históricos.
+- fuentes_verificadas.csv: lectura y limitaciones de cada fuente externa.
+- requisitos_cierre_fatiga.csv: datos para pasar de sensibilidad a verificación.
+
+PENDIENTES PRIORITARIOS
+Perfil y radio real de raíz; tolerancias y certificado de producto; detalle
+del primer filete activo, engrane, salida, fijación y precarga; condiciones
+de fabricación/superficie; curva S-N o Se y q/Kf justificables; espectro/vida.
+La edición ISO 965-1:2013 fue reemplazada por 2026. El radio 0,125P se conserva
+solo como antecedente indexado de la edición anterior, no como lectura completa
+ni como conformidad demostrada del producto o comprobación de la edición actual.
+El doble empotramiento ABS sigue siendo una hipótesis.

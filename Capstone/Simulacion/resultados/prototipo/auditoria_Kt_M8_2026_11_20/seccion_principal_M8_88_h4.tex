@@ -1,0 +1,87 @@
+% Fragmento: requiere amsmath, booktabs y bibliografía de esta revisión.
+\section{Verificación resistente condicionada del eje transversal M8}
+\label{sec:M8_Kt_revision}
+Se estudia exclusivamente la varilla M8$\times$1,25, con clase resistente
+\textbf{8.8 candidata} y capa de biomasa de \textbf{4 mm}. Se conservan el
+historial acoplado 3C de 1440 estados, la presión de Holm de
+2,25867 MPa, el coeficiente efectivo de torque de 0,1 y
+$E=210$ GPa. El doble empotramiento continúa siendo una hipótesis del
+modelo, pendiente de demostrar mediante el diseño de las fijaciones en ABS.
+No se modificaron el CAD ni los resultados históricos.
+
+La sección circular equivalente del modelo emplea el diámetro de núcleo
+de referencia $d_r=6,466$ mm, con $I_r=\pi d_r^4/64$ y
+$\sigma_{b,\mathrm{nom},r}=32\sqrt{M_y^2+M_z^2}/(\pi d_r^3)$.
+Los resultados heredados son:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Magnitud máxima independiente & Valor & Estado del historial\\
+\midrule
+Fuerza total de compactación & 918,00 N & 476\\
+Torque resistente del accionamiento & 2,7804 N\,m & 476\\
+Flecha de la varilla & 0,1569 mm & 301\\
+Tensión nominal de flexión & 315,36 MPa & 541\\
+\bottomrule
+\end{tabular}
+\end{center}
+No se combinan estos máximos como si fueran simultáneos. La sección de
+máxima tensión está en el empotramiento derecho, a 128,1178 mm del extremo
+de referencia de la varilla, para una posición angular de 135,25 grados.
+El momento flector resultante correspondiente es 8,3698 N\,m.
+El torque de accionamiento alrededor del eje de la matriz no se añade
+como torsión alrededor del eje transversal.
+
+\subsection{Concentración de tensiones y alcance de la comprobación}
+La auditoría de EP2 identifica los valores $K_t=1,5$ y $2,5$ como
+sensibilidades paramétricas, sin selección mediante un radio de raíz,
+tabla o ecuación correspondiente a la rosca M8\cite{ep2_auditoria_Kt}.
+No existe información suficiente para seleccionar un $K_t$ único de esta
+varilla y de su fijación. La geometría local de raíz y el contacto de los
+filetes son relevantes\cite{pedersen_2013_roscas}; no están definidos
+en el STEP ni en las especificaciones del producto todavía no adquirido.
+
+Se define el factor que necesitaría esta memoria como
+\begin{equation}
+ K_{t,r}=\frac{\sigma_{b,\mathrm{local},\mathrm{el}}}
+ {\sigma_{b,\mathrm{nom},r}}.
+ \label{eq:Kt_raiz_M8}
+\end{equation}
+El subíndice $r$ identifica una \emph{tensión nominal calculada con el
+núcleo}; no representa un valor tabulado. Así se evita volver a incluir
+la reducción de diámetro ya incorporada en los 315,36 MPa.
+La clase 8.8 aporta condicionalmente $R_{p0,2,\min}=640$ MPa para el
+diámetro considerado, si se confirma la conformidad del producto
+\cite{boellhoff_manual_8100_2023}. Para una aproximación local de flexión
+uniaxial elástica, resulta
+\begin{equation}
+ n_{y,\mathrm{flex}}(K_{t,r})
+ =\frac{640}{315,361913\,K_{t,r}}
+ =\frac{2,029414}{K_{t,r}}.
+ \label{eq:ny_M8_condicionado}
+\end{equation}
+El valor 2,0294 es el cociente \emph{nominal sin concentración}, no un
+factor de seguridad aprobado de la varilla roscada. El umbral
+$K_{t,r}=2,0294$ corresponde a $n_{y,\mathrm{flex}}=1$ y al inicio
+teórico de fluencia según esta aproximación; tampoco constituye una
+selección de $K_t$ ni un criterio de seguridad de diseño acordado.
+Por encima del umbral, una extrapolación elástica no describe la
+redistribución plástica ni permite afirmar colapso.
+
+\subsection{Conclusión de diseño}
+La alternativa M8 se conserva como preferente, con clase 8.8 candidata,
+\textbf{sin aprobación resistente}. Se requieren el perfil y radio real
+de raíz, tolerancias del producto, ubicación de los filetes respecto de
+las fijaciones, geometría de engrane y precarga para justificar el
+concentrador en la sección crítica. La equivalencia de viga con núcleo
+sirve como referencia nominal global; no resuelve los esfuerzos de una
+rosca helicoidal ni demuestra el empotramiento real en ABS.
+
+El factor efectivo de fatiga $K_f$ permanece sin seleccionar. Para cerrar
+fatiga faltan además fabricación y acabado de la rosca, propiedades
+cíclicas representativas, sensibilidad a la entalla y espectro/vida de
+servicio. La comprobación deberá utilizar tensiones firmadas en una misma
+fibra, conservando la correlación temporal; el eje fijo no implica
+flexión rotativa completamente alternante. El anexo desarrolla las
+definiciones, la auditoría de fuentes y las sensibilidades sin asignar
+un intervalo físico no demostrado a $K_t$.

@@ -1,0 +1,6 @@
+﻿tema,datos_necesarios,consecuencia
+Geometría y fijaciones reales,"Radio/perfil/tolerancias; filete crítico, engrane, transición, precarga y contacto",Seleccionar Kt compatible con nominal de raíz
+Producto y fabricación,"Certificado 8.8; acero/tratamiento, roscado cortado o laminado y secuencia, zincado, tensiones residuales",Sut y q/Kf representativos; condición superficial
+Resistencia cíclica,"Curva S-N o Se justificable del producto, temperatura, ambiente, confiabilidad y acabado","No adoptar automáticamente 0,5Sut ni Kf comercial ya corregido"
+Servicio,"Espectro, ciclos, vida objetivo, arranque/atasco y carga manual; rigidez real ABS","Historial 3C es un ciclo de modelo, no espectro de vida validado"
+Tratamiento de tensiones,"Historial firmado en la misma fibra, media/amplitud correlacionadas; plasticidad si corresponde",No usar envolvente positiva ni flexión rotativa alternante por defecto

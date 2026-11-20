@@ -1,0 +1,49 @@
+{
+  "revision": "auditoria_Kt_M8_2026_11_20",
+  "tipo": "Memoria, sin nueva simulación",
+  "escenario": {
+    "varilla": "M8x1.25",
+    "clase_candidata": "8.8",
+    "capa_m": 0.004,
+    "E_pa": 210000000000,
+    "presion_pa": 2258670.6718785944,
+    "mu_efectivo": 0.1,
+    "doble_empotramiento": "Hipótesis no validada físicamente"
+  },
+  "estados": 1440,
+  "sigma_nominal_raiz_pa": 315361913.3361819,
+  "diamenor_referencia_m": 0.006466,
+  "diamayor_nominal_m": 0.008,
+  "Sy_min_condicionado_pa": 640000000,
+  "momento_resultante_correspondiente_nm": 8.369822290139599,
+  "I_raiz_m4": 8.580502058019678e-11,
+  "Z_raiz_m3": 2.6540371351746608e-08,
+  "sigma_nominal_base_mayor_pa": 166512323.7845556,
+  "conversion_Kt_mayor_sobre_Kt_raiz": 1.8939253634116444,
+  "Kt_raiz_seleccionado": null,
+  "Kf_seleccionado": null,
+  "factor_seguridad_estatico_definitivo": null,
+  "factor_seguridad_fatiga_definitivo": null,
+  "n_y_sin_concentracion": 2.029414374201071,
+  "Kt_raiz_umbral_inicio_fluencia_flexion": 2.029414374201071,
+  "Kt_mayor_umbral": 3.8435593561715784,
+  "alcance_umbral": "Cribado elástico de flexión uniaxial local; no verificación multiaxial de la unión",
+  "critico_sigma": {
+    "paso": 541.0,
+    "angulo_grados": 135.25,
+    "x_sigma_max_m": 0.128117780089,
+    "fuerza_total_n": 917.9576373476054,
+    "torque_total_nm": 2.6345946073650466,
+    "flecha_max_m": 0.00015687062184208461
+  },
+  "fuerza_max_n": 917.9962632879824,
+  "torque_vertical_max_nm": 2.780389530933798,
+  "flecha_max_m": 0.00015687135121320397,
+  "fuentes_configuracion": "Solo lectura de configuraciones y CSV históricos; no se llama ModeloAcoplado",
+  "aprobado": false,
+  "conclusion": "Kt único no identificable; clase8.8 candidata y M8 preferente no equivalen a seguridad aprobada",
+  "conservacion": {
+    "archivos_verificados": 812,
+    "alterados": 0
+  }
+}

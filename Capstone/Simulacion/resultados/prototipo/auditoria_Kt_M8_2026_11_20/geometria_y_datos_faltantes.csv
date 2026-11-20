@@ -1,0 +1,13 @@
+﻿parametro,valor,unidad,estado
+Diámetro mayor nominal,8,mm,Nominal M8; producto no medido
+Paso,1.25,mm,Nominal; confirmar ficha y tolerancia del producto
+Ángulo de flancos,60,grados,Perfil básico ISO; no medición de la pieza
+Diámetro de núcleo usado en 3C,6.466,mm,Referencia tabulada; no diámetro mínimo certificado
+"Radio mínimo 0,125P, antecedente ISO 965-1:2013",0.15625,mm,"Solo antecedente indexado, norma reemplazada; no radio real ni requisito 2026 verificado"
+"Radio de referencia H/6, raíz plenamente redondeada",0.18042195912175804,mm,Geometría ideal publicada; no radio confirmado ni Kt seleccionado
+Radio real y perfil completo de raíz,,mm,PENDIENTE ficha/perfilometría
+"Tolerancias d, d2, d3 y recubrimiento",,mm,PENDIENTE norma de producto y certificado
+Fase de la hélice en las secciones críticas,,grados,PENDIENTE geometría fabricada
+"Salida de rosca, transición y filetes",,mm,PENDIENTE montaje definitivo
+Primer filete engranado y longitud efectiva,,mm,PENDIENTE tuercas/inserto/apoyos
+Precarga y reparto de contacto en fijaciones,,N,PENDIENTE; empotramiento solo hipotético

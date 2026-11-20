@@ -1,0 +1,17 @@
+test_bases_iguales_y_sin_doble_conteo (test_memoria_Kt.MemoriaKt.test_bases_iguales_y_sin_doble_conteo) ... ok
+test_casos_no_mezclados (test_memoria_Kt.MemoriaKt.test_casos_no_mezclados) ... ok
+test_conservacion_812_archivos (test_memoria_Kt.MemoriaKt.test_conservacion_812_archivos) ... ok
+test_entradas_invalidas (test_memoria_Kt.MemoriaKt.test_entradas_invalidas) ... ok
+test_escenario_unico_y_estados (test_memoria_Kt.MemoriaKt.test_escenario_unico_y_estados) ... ok
+test_flexion_momento_correlacionado (test_memoria_Kt.MemoriaKt.test_flexion_momento_correlacionado) ... ok
+test_latex_llaves_citas_y_bibliografia (test_memoria_Kt.MemoriaKt.test_latex_llaves_citas_y_bibliografia) ... ok
+test_main_solo_configuracion_elegida (test_memoria_Kt.MemoriaKt.test_main_solo_configuracion_elegida) ... ok
+test_no_aprobacion_o_kt_seleccionado (test_memoria_Kt.MemoriaKt.test_no_aprobacion_o_kt_seleccionado) ... ok
+test_no_importa_simuladores (test_memoria_Kt.MemoriaKt.test_no_importa_simuladores) ... ok
+test_tabla_latex_coincide_con_calculo_sin_redondear (test_memoria_Kt.MemoriaKt.test_tabla_latex_coincide_con_calculo_sin_redondear) ... ok
+test_unidades_y_umbral (test_memoria_Kt.MemoriaKt.test_unidades_y_umbral) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.270s
+
+OK

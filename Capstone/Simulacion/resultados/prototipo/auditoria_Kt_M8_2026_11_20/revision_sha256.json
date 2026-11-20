@@ -1,0 +1,21 @@
+{
+  "anexo_justificacion_Kt_M8.tex": "73121b67e4664c43b6e87d55ad04f893c27cd60e60872490031710508da36390",
+  "auditoria_EP2.csv": "5f62da8de4d859a5f90ee65e5c752a4019f1eabe83c2bbe7a3b9d53902b84e43",
+  "casos_correlacionados.csv": "1c112467e8652dc8027448ba9492af4a504fd99c6299e83010d5d2bfa22a9637",
+  "conservacion_historica.json": "0e566faa1a57b46c57931fbf7f37d6c9c2e5e2dd193fa051e92d6ed4e4facd66",
+  "fuentes_verificadas.csv": "39fd27a777ab1635fdc0a259368afa85a8b621de370b4fc70853d69d28ead853",
+  "geometria_y_datos_faltantes.csv": "100c44c754ce13e59e089f55e253236f6a6c46d822947c61423b6e2f7dc9116c",
+  "historicos_sha256.json": "6b9a01cf06df240a9a76d25fc9d46f3e3e3d061addb536fa4b248d3035e1f132",
+  "LEEME.txt": "2c516699a7728192209400c3bd3e48703ec4062b3ec63f2e3e36d760efc819b4",
+  "memoria_Kt_M8.tex": "76c9263da5e86b5bdd558297e4ccf1daa95fbe439bba34f35c95b0bdb64de8e3",
+  "pruebas.json": "df2674d3052df3e7ded0297bd3ce0335ee2fb053b85b75966857ffb37dd1e590",
+  "pruebas.txt": "25ddaad5197e423c4a4984096680788d36b135f43f3fe442e5340d36a848db24",
+  "referencias_Kt.bib": "039a315133b266cd1e6bbba742119f5303771c797a857cce0b02658920db810b",
+  "reproducir_memoria.py": "db6ef32d32c494fb16969bd82994b51edd775f3fdfbee9536bf7fb79c5537589",
+  "requisitos_cierre_fatiga.csv": "168abaff6b1a4b3b4b06d784371a69e76834ecab80952f1266864956889e6cfd",
+  "resumen.json": "b844c28ea6f33d532b5d974d57978865067c6e534c1041123966498e20332130",
+  "seccion_principal_M8_88_h4.tex": "332533fee7055d22bceda1005cfb41574a85672a1d3d3d886254c7f4d7487248",
+  "sensibilidad_Kt_sin_seleccion.csv": "b29864f4567db332816517ae721d201dacbe756fccfe5cb6d12248c459423798",
+  "test_memoria_Kt.py": "bc07fd09a615c69df437a9912a8286dad8d8b1edc686819c0a0a1366c7d826e6",
+  "umbrales_no_prescriptivos.csv": "92dc8ff1b3c47752a951c4eb88aadab0ec048ad550f8a1005db60c1c3670d42d"
+}

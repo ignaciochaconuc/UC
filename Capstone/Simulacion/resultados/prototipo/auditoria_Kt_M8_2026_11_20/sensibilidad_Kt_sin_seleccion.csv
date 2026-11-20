@@ -1,0 +1,9 @@
+﻿Kt_base_raiz,Kt_equivalente_base_mayor,sigma_local_elastica_pa,n_y_condicional,origen,rango_fisico_validado,aprobacion,interpretacion
+1.0,1.8939253634116444,315361913.3361819,2.029414374201071,Antecedente EP2 no calibrado,False,False,Comprobación de flexión condicionada; no aprobación
+1.25,2.3674067042645555,394202391.67022735,1.623531499360857,Punto de diagnóstico matemático,False,False,Comprobación de flexión condicionada; no aprobación
+1.5,2.8408880451174667,473042870.0042728,1.3529429161340474,Antecedente EP2 no calibrado,False,False,Comprobación de flexión condicionada; no aprobación
+1.75,3.3143693859703776,551883348.3383183,1.1596653566863262,Punto de diagnóstico matemático,False,False,Comprobación de flexión condicionada; no aprobación
+2.0,3.787850726823289,630723826.6723638,1.0147071871005355,Punto de diagnóstico matemático,False,False,Comprobación de flexión condicionada; no aprobación
+2.029414374201071,3.8435593561715784,640000000.0,1.0,Umbral n_y=1 calculado,False,False,Comprobación de flexión condicionada; no aprobación
+2.5,4.734813408529111,788404783.3404547,0.8117657496804285,Antecedente EP2 no calibrado,False,False,Extrapolación elástica más allá de fluencia; no predice colapso
+3.0,5.6817760902349335,946085740.0085456,0.6764714580670237,Punto de diagnóstico matemático,False,False,Extrapolación elástica más allá de fluencia; no predice colapso

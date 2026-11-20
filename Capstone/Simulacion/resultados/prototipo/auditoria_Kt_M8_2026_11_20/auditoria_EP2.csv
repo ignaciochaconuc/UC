@@ -1,0 +1,5 @@
+﻿fuente,hallazgo,aplicacion
+"Entrega_2.pdf p.19-20, A.4.5/A.4.6","Kt 1/1,5/2,5 son barrido paramétrico; no radio ni tabla de rosca específica",No seleccionar Kt M8
+"Entrega_2.pdf p.20, ec.35-38","Marin, Se inicial, Kf=1+q(Kt-1), Goodman; no determinan Kt geométrico","Procedimiento de fatiga, no valores heredables"
+Entrega_2.pdf p.12 ref.[11],"Budynas y Nisbett, Shigley 9a edición española, 2012","Bibliografía general; no gráfico identificable para Kt 1,5/2,5"
+"Simulación_peletizadora/estructural/resistencia_fatiga.py, ENTALLAS","Kt1,5 q0,70 y Kt2,5 q0,90 declarados no calibrados/no validados",Solo sensibilidad; q tampoco transferible

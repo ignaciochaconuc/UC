@@ -1,0 +1,192 @@
+% Fragmento de anexo. El documento receptor decide dónde ejecutar \appendix.
+\section{Auditoría del concentrador y memoria de cálculo M8}
+\label{anexo:Kt_M8}
+\subsection{Recuperación del procedimiento de EP2}
+Se revisó el documento original \texttt{Entrega\_2.pdf}: página PDF 12,
+referencia [11], y páginas PDF 19--20, apartados A.4.5 y A.4.6.
+La referencia general es Budynas y Nisbett, \emph{Diseño en ingeniería
+mecánica de Shigley}, novena edición, 2012. El cuadro 18 usa
+$K_t=1$, $1,5$ y $2,5$ como barrido paramétrico. No se identifica
+una tabla de roscas, gráfico, interpolación, radio de raíz ni ecuación
+geométrica que produzca estos valores\cite{ep2_auditoria_Kt}.
+
+El código original \texttt{estructural/resistencia\_fatiga.py}, bloque
+\texttt{ENTALLAS}, confirma: escenario moderado $K_t=1,5$, $q=0,70$,
+declarado no calibrado; escenario alto $K_t=2,5$, $q=0,90$, declarado
+no validado. Las ecuaciones 35--38 de EP2 corresponden a Marin,
+resistencia inicial, sensibilidad a la entalla y Goodman:
+\begin{align}
+ S_e&=k_a k_b k_c k_d k_e k_{\mathrm{misc}} S'_e,\\
+ K_f&=1+q(K_t-1),\\
+ \frac{1}{n_f}&=\frac{K_f\sigma_a}{S_e}
+ +\frac{K_t\max(\sigma_m,0)}{S_{ut}}.
+\end{align}
+Estas expresiones no determinan $K_t$. Ni los valores de $q$ ni los
+factores de Marin de EP2 se transfieren automáticamente al producto M8.
+La memoria anterior se conserva como antecedente; esta revisión limita
+su interpretación, sin modificar sus tablas ni sus archivos.
+
+\subsection{Fuentes consultadas y límites de aplicación}
+\begin{description}
+\item[ISO 68-1:2023.]
+Se consultó la vista previa, páginas impresas 1--2: distingue el perfil
+básico del perfil de diseño y sus diámetros $d_1$ y $d_3$
+\cite{iso68_2023_vista_Kt}. La designación M8 no define por sí sola el
+perfil fabricado y su tolerancia. La vista previa no incluye toda la
+geometría de diseño; no se afirma lectura completa de la norma.
+\item[ISO 965-1.]
+La edición 2013 fue reemplazada por ISO 965-1:2026, según el catálogo ISO
+\cite{iso965_2026_estado_Kt}. La vista previa 2026 identifica el apartado
+12 de contornos de raíz y el anexo B de diámetros menores, pero no permite
+verificar aquí sus requisitos completos. Como antecedente, el contenido
+indexado del apartado 11 de la edición 2013 indica un radio mínimo
+$0,125P$ para clases 8.8 o superiores y una raíz de referencia
+$R\simeq0,14434P$\cite{iso965_2013_antecedente_Kt}.
+Para $P=1,25$ mm, serían 0,15625 mm y aproximadamente 0,18042 mm.
+El primero no se presenta como requisito 2026 comprobado y ninguno
+se asigna como radio real. Es indispensable confirmar la edición
+contractual y el perfil del producto.
+\item[Pedersen, 2013.]
+El resumen del repositorio del autor estudia roscas métricas ISO,
+geometría de raíz y contacto mediante un modelo axisimétrico de unión
+roscada\cite{pedersen_2013_roscas}. Sustenta la necesidad de definir
+raíz/contacto; no proporciona un $K_t$ directamente transferible a la
+flexión global de esta varilla.
+\item[Ohara, 1980.]
+La ficha NASA describe concentración mediante transferencia de carga
+entre filetes y contacto de flancos\cite{ohara_1980_roscas}.
+No se usa una ordenada de ese trabajo como concentrador de flexión libre.
+\item[Brutti y colaboradores, 2025.]
+El apéndice A.1 trata esfuerzos locales del primer filete engranado;
+su factor de ``flexión'' multiplica la flexión del diente, con su propio
+módulo resistente\cite{brutti_2025_roscas}. No equivale a multiplicar
+$32M/(\pi d_r^3)$ por ese factor. Se descarta esa sustitución.
+\item[Peterson/Pilkey.]
+El catálogo editorial de la cuarta edición identifica la sección 5.19
+sobre piezas roscadas\cite{peterson_2020_catalogo_Kt}. No se tuvo acceso
+verificable a sus gráficos completos; no se declara lectura ni selección
+de una curva o valor numérico de esa obra. Para emplearla será necesario
+disponer del gráfico, verificar carga, geometría y denominador nominal.
+\end{description}
+
+\subsection{Sección nominal y cambio de base del concentrador}
+Con $d_r=6,466$ mm y $D=8$ mm se define, para un mismo momento global:
+\begin{align}
+ I_r&=\frac{\pi d_r^4}{64}, & Z_r&=\frac{\pi d_r^3}{32},\\
+ \sigma_{\mathrm{nom},r}&=\frac{M}{Z_r}, &
+ \sigma_{\mathrm{nom},D}&=\sigma_{\mathrm{nom},r}\left(\frac{d_r}{D}\right)^3.
+\end{align}
+La igualdad de tensiones locales exige
+\begin{equation}
+ K_{t,D}=K_{t,r}\left(\frac{D}{d_r}\right)^3,
+ \qquad
+ K_{t,r}=K_{t,D}\left(\frac{d_r}{D}\right)^3.
+ \label{eq:conversion_Kt_bases}
+\end{equation}
+Esta conversión algebraica es válida para las dos referencias circulares
+indicadas y el mismo momento. No convierte un concentrador de carga axial
+o flexión de diente en uno de flexión global. Si una fuente ya define
+su nominal con el diámetro menor, \textbf{no se aplica otra corrección
+por diámetro}. Si usa otro módulo resistente, se utiliza ese módulo,
+no se fuerza la conversión anterior.
+
+El archivo \texttt{resumen.json} conserva los valores sin redondear de
+$I$, momento y cambio de base mediante las entradas y ecuaciones de esta
+memoria; \texttt{sensibilidad\_Kt\_sin\_seleccion.csv} registra ambos
+denominadores. La tensión nominal sobre el núcleo no es una solución
+local de la hélice: el STEP tiene una representación cilíndrica y no
+resuelve el radio de raíz. El cilindro equivalente de diámetro de núcleo
+es una idealización de rigidez; no se demuestra que sus tensiones sean
+una cota conservadora de todas las tensiones locales.
+El área resistente convencional de tracción de una rosca no sustituye
+al módulo resistente de flexión ni a la inercia de la sección; tampoco
+se adopta un diámetro equivalente derivado de esa área como una nueva
+sección flexional sin demostrar su correspondencia geométrica.
+
+En concreto, $(D/d_r)^3=1,893925$ y
+$\sigma_{\mathrm{nom},D}=166,5123$ MPa. Un valor publicado sobre diámetro
+mayor debe dividirse por 1,893925 antes de multiplicar la nominal de
+315,361913 MPa, siempre que describa la misma flexión y geometría.
+El umbral $K_{t,r}=2,029414$ equivale a $K_{t,D}=3,843559$; son dos
+definiciones del mismo umbral, no dos predicciones diferentes.
+
+La tensión máxima heredada es 315,361913 MPa en el estado 541, a
+$x=0,128117780089$ m desde el extremo de referencia. En ese mismo estado:
+$F=917,9576$ N, torque de accionamiento $2,63459$ N\,m y
+flecha máxima $0,1568706$ mm. El momento resultante de 8,369822 N\,m
+reproduce $\sigma=32M/(\pi d_r^3)$. El estado crítico está en una
+fijación ideal: la raíz libre, la primera espira de una tuerca/inserto y
+la salida de rosca pueden tener concentradores y cargas distintos.
+
+\subsection{Sensibilidad estática, sin selección de factor}
+Se conserva el límite mínimo candidato de 640 MPa de la clase 8.8,
+sujeto a certificado de producto\cite{boellhoff_manual_8100_2023}.
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$K_{t,r}$ hipotético & $K_{t,r}\sigma_{\mathrm{nom},r}$ [MPa]
+ & $n_{y,\mathrm{flex}}$ & Procedencia\\
+\midrule
+1,000 & 315,36 & 2,029 & Referencia nominal\\
+1,500 & 473,04 & 1,353 & Sensibilidad EP2\\
+2,000 & 630,72 & 1,015 & Diagnóstico matemático\\
+2,029414 & 640,00 & 1,000 & Umbral calculado\\
+2,500 & 788,40 & 0,812 & Sensibilidad EP2\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Estos puntos no constituyen un intervalo bibliográfico validado
+del $K_t$ de una M8.} Las fuentes sustentan la dependencia geométrica y
+la necesidad de distinguir los modelos; EP2 solo aporta antecedentes
+paramétricos. No se encontró una curva verificable aplicable, con el
+perfil y las condiciones de montaje disponibles, que permita justificar
+un intervalo numérico físico más estrecho. No se inventa ese intervalo.
+Los radios geométricos de referencia tampoco permiten interpolar $K_t$
+sin una curva o solución válida de flexión global.
+
+El criterio $n_y\geq1$ exige $K_{t,r}\leq2,029414$ solamente para la
+aproximación elástica de flexión considerada. Para objetivos hipotéticos
+$n_y=1,5$ o $2$, los límites serían $1,352943$ y $1,014707$,
+respectivamente; no son requisitos establecidos del proyecto.
+No se suman el cortante máximo global y la flexión máxima si pertenecen
+a puntos diferentes. Tampoco se transforma el torque vertical en torsión
+del eje transversal. Una comprobación final requiere el tensor local
+correlacionado, incluyendo las acciones reales de la fijación; puede
+requerir von Mises y un tratamiento elastoplástico si hay fluencia local.
+
+\subsection{Datos para identificar $K_t$ y cerrar fatiga}
+Se necesita definir y verificar: diámetro de raíz mínimo y real, perfil
+y radio de curvatura de raíz, paso, tolerancias y recubrimiento; fase
+helicoidal y salida de rosca respecto de ambos empotramientos; tuercas o
+insertos, longitud engranada, primer filete activo y precarga; transiciones,
+asientos y forma de transmitir momento a la carcasa. Con ello se podrá
+seleccionar una solución bibliográfica compatible o preparar un submodelo
+elástico de la geometría local con convergencia de malla en el radio,
+cargas correlacionadas y comparación contra la misma tensión nominal.
+No se ejecutó ese submodelo en esta revisión.
+
+$K_t$ es geométrico y elástico para una geometría, carga y nominal
+definidos. $K_f$ expresa la reducción efectiva de resistencia a fatiga;
+la relación $K_f=1+q(K_t-1)$ requiere una sensibilidad $q$ justificada.
+El radio solo no determina $q$: faltan condición metalúrgica, fabricación
+y superficie. La clase 8.8 no garantiza por sí sola $S_e$, $q$ ni una
+curva S--N del producto. Si una resistencia cíclica de catálogo ya incluye
+la rosca, no se multiplica nuevamente por un $K_f$ por el mismo efecto.
+
+Se conservan los historiales firmados y los ciclos rainflow anteriores;
+no se recalcularon. Para cerrar la vida faltan producto certificado,
+rosca laminada o cortada y secuencia de tratamientos, estado superficial,
+recubrimiento/tensiones residuales, $S_e$ o curva S--N aplicable,
+confiabilidad, ambiente y vida/espectro de carga. Goodman permanece
+condicional; no se asigna un factor de seguridad a fatiga ni se adopta
+automáticamente $S'_e=0,5S_{ut}$ como propiedad garantizada.
+
+\subsection{Trazabilidad y alcance de la revisión}
+Las entradas son los CSV y configuraciones originales enumerados en
+\texttt{historicos\_sha256.json}. El script local
+\texttt{reproducir\_memoria.py} solo lee el historial; no importa ni llama
+al modelo 3C. Se comprueban los SHA256 antes y después del postproceso.
+Las tablas completas de esta revisión se almacenan separadas de las
+memorias anteriores. Esta revisión no certifica la clase comprada,
+los apoyos ABS, el montaje 608, la holgura admisible ni la resistencia
+de la unión real. M8 continúa como alternativa de diseño preferente.
