@@ -1,0 +1,21 @@
+Revisión acoplada M6/M8 — 20-11-2026
+Ejecución desde Capstone/Simulacion: python acoplado_m8.py
+Pruebas: python -m pytest tests/test_acoplado_m8.py -q
+Conservación: python herramientas/control_acoplado_m8.py
+
+No se editan CAD, parámetros o resultados anteriores. La nueva sección M8 se
+aplica solo al modelo analítico. El empotramiento se impone en los taladros
+laterales de cámara, no en los extremos libres de la varilla160mm.
+ComparaciónM6/M8: mismoE210GPa, geometría, presión, capas y condiciones de borde.
+Los resultados articulados M6 anteriores no son la comparación equivalente.
+MarcoCAD: compactación sobre rodillos en+Y, pesos en-Y; tangenciales opuestas
+enZ. Los camposM_Y_A son pares conjugados al giro en el planoY (momento globalZ);
+M_Z_A son pares del planoZ (momento global-Y), no componentes sobre esos ejes homónimos.
+La memoriaLaTeX está preparada como inclusión, no compilada ni insertada en Overleaf.
+Consultar fuentes.json y los archivos por escenario. MáximosF/T/esfuerzo/flecha
+pueden ocurrir en estados diferentes; casos_criticos_correlacionados.csv los conserva.
+Validaciones: contraste32ángulos para cuadratura64/128, relajación0,35/0,5/0,7,
+malla80/160 y sensibilidadesE200/220GPa delM8. No sustituyen el barrido1440 nominal.
+Material: acero al carbono zincado de referencia. Confirmar clase y producto;
+no trasladar Sy/Sut del4140. Masa de varilla usa cilindro nominal como límite superior.
+Fuentes de ecuaciones: EP2acoplamiento.py3C y memoriaEntrega_2.pdf A.3.6/A.4.

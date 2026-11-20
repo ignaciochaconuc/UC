@@ -1,0 +1,14 @@
+{
+  "configuraciones/acoplado_m8.json": "a6effbb0afc9cf3bf9d88cf1aa98901c1b28ab218e83eadb622887fc2080b7e6",
+  "geometrias/Prototipo.stp": "673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83",
+  "resultados/prototipo/revision_ensamble_2026_11_19/ensamble_auditado.json": "7f74b0dd20de43310cb3133629c84f6d3b10e74c301e7344c9e1ddd58bea3182",
+  "resultados/prototipo/revision_ensamble_2026_11_19/perforaciones_STEP.csv": "f615b23ec4e792eb32b237c087f99a09e8736dc25f62c0c75c7d313824f1c204",
+  "peletizadora/acoplado_prototipo.py": "debd2e00f6d0acf9b5c0777c33a09f8a3a5788c7fd886b411cb94d6a3368af55",
+  "peletizadora/memoria_acoplado_m8.py": "2210fba5c244f87510f739dd02c81d03ddbadbf40cc0e4561d3306d28931ebb9",
+  "acoplado_m8.py": "2120d57599f993e34e98a454386d70f6e4f236f6e19c44b324aaa5943a44e972",
+  "../Simulación_peletizadora/estructural/acoplamiento.py": "888b2c96f0543a750bcb681595b81b954e59fe35fa64ca5ecd4351b6c035ff41",
+  "../Simulación_peletizadora/modelos/superposicion_variable.py": "5b5ecf9df8014375fb3ebe59d72a64e780ba43fa3a5a00e0d6a3495e96026c3b",
+  "../Simulación_peletizadora/estructural/viga_eb.py": "fcd27481f22b8eaffaad05100a96177d13db5166580b46dc7b63c9e4ffe942a2",
+  "fisica/materiales.json": "6f9fb9b1dddd14f76f07e76ac59e7084ec9d330fec5dbda54e144b217f24bba7",
+  "fisica/referencias_acoplado_m8.bib": "2b12c77823f2e03c8c3b0d1e3ab972159c4ece1ecadd31c4348fdd23d1d648a3"
+}

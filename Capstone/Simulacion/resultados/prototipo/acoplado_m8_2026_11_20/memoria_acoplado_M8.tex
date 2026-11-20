@@ -1,0 +1,76 @@
+% Memoria autónoma para incorporar después al informe. Requiere amsmath, booktabs y biblatex.
+\section{Actualización del eje transversal: M8 y acoplamiento de contacto}
+Se estudia una varilla de acero al carbono zincado M8 por1,25, comparada con M6 por1
+bajo condiciones equivalentes. No se modifica el STEP ni se certifica el grado comprado.
+Se emplean núcleos de referencia $6,466$ y $4,773\,\mathrm{mm}$, según la tabla de TR Fastenings\parencite{tr_rosca_m6_2026},
+con $I=\pi d^4/64$. No se utiliza el área resistente a tracción como sección de flexión.
+El módulo de referencia $E=210\,\mathrm{GPa}$ corresponde a acero al carbono, según SCI/BCSA\parencite{sci_acero_elastico_2026};
+el recubrimiento zincado no identifica grado ni límite elástico. Se contrasta $E=200/220\,\mathrm{GPa}$.
+Los pesos usan densidades de referencia y volúmenes CAD; no son masas medidas.
+
+\subsection{Geometría y restricciones}
+Se conserva la longitudCAD de $160\,\mathrm{mm}$. Ambos empotramientos se sitúan en los centros
+de los taladros laterales de cámara, separados $108,411756\,\mathrm{mm}$, imponiendo traslación y giro
+nulos en ambos planos. Los extremos físicos restantes están en voladizo. No se confunde esta luz
+con la longitud total ni se atribuye rigidez infinita comprobada al ABS.
+Los centros de rodillos y cuatro rodamientos se conservan del ensamble auditado.
+El diámetro de varilla M8 es una propuesta analítica: los taladros de cámara del CAD siguen siendo
+de $6\,\mathrm{mm}$. Su incompatibilidad de montaje debe resolverse sin editar aquí el diseño.
+La coincidencia nominal M8 con bore608 de $8\,\mathrm{mm}$ no verifica asiento roscado,
+ajuste, alineación ni apriete. El alojamiento de rodillo de $24\,\mathrm{mm}$ sigue sin ajustarse
+al exterior608 de $22\,\mathrm{mm}$.
+
+\subsection{Algoritmo recuperado de EP2, modelo3C}
+Se reutilizan la integral de superposición variable y la viga Euler--Bernoulli de EP2\parencite{equipo_entrega2_2026}.
+Se parametrizan su geometría, presión y condiciones de borde, sin modificar los parámetros globales comerciales.
+Para cada uno de los1440estados se actualiza
+\begin{align}
+g_j(r)&=g_{0j}+v_{cj}+\alpha_{rj}(r-r_{cj}),\\
+L_c(r)&=\sqrt{D_r\max(h-g_j(r),0)-\max(h-g_j(r),0)^2},\\
+F_j&=P\sum_i A_{ij}(g_j),\qquad T=\mu_{\mathrm{ef}}\sum_{j,i}r_iP A_{ij},\\
+\mathbf K\mathbf u&=\mathbf f(\mathbf g),\qquad
+\mathbf s^{k+1}=(1-\lambda)\mathbf s^k+\lambda\mathbf s_{\mathrm{calc}}^k.
+\end{align}
+Se usan $P=2,258670672\,\mathrm{MPa}$, $\mu_{\mathrm{ef}}=0,1$ y las capas supuestas1/2/4mm,
+sin seleccionar una condición nominal física. La presión es teórica y uniforme, no medida ni constitutiva.
+Las fuerzas se reparten en cada par608 por equilibrio de fuerza y momento usando el centroide de área.
+Los desplazamientos de sus centros determinan la traslación e inclinación del rodillo rígido.
+Se transforma la pendiente global al eje radial propio de cada rodillo; no se reutilizan signos de posición comerciales.
+El torque de la matriz no se aplica como torsión adicional al eje transversal.
+
+La relajación de referencia es $\lambda=0,5$, con máximo100iteraciones por estado.
+Se exige residuo de compatibilidad y cambio de perfil de holgura inferiores a $10^{-9}\,\mathrm{m}$,
+y cambio relativo de las fuerzas por rodillo inferior a $10^{-5}$, con denominador mínimo1N,
+como en EP2. El contacto se recalcula al final y se reverifica contra la deformación exportada.
+Un estado no convergido se registra como tal y no se usa para iniciar el siguiente;
+las holguras negativas se rechazan sin recortarlas para forzar solución.
+
+\subsection{Resultados y límites}
+\begin{table}[ht]\centering
+\begin{tabular}{lrrrrr}\toprule
+Varilla/capa&$F_{\max}$ [N]&$T_{\max}$ [N m]&$u_{\max}$ [mm]&$\sigma_{b,\max}$ [MPa]&Iter.\\\midrule
+M6x1/1mm & 350.98 & 1.0776 & 0.1868 & 285.86 & 16\\
+M6x1/2mm & 603.12 & 1.8315 & 0.3257 & 491.26 & 18\\
+M6x1/4mm & 894.97 & 2.7188 & 0.5134 & 762.70 & 19\\
+M8x1.25/1mm & 377.64 & 1.1317 & 0.0604 & 124.69 & 17\\
+M8x1.25/2mm & 629.86 & 1.9025 & 0.1025 & 208.50 & 18\\
+M8x1.25/4mm & 918.00 & 2.7804 & 0.1569 & 315.36 & 18\\
+\bottomrule\end{tabular}
+\caption{Casos acoplados con fijaciones hipotéticas idénticas. Tensiones nominales elásticas, sin concentraciones.}
+\end{table}
+\begin{table}[ht]\centering\begin{tabular}{lrrrr}\toprule
+Varilla/capa&$g_{1,\min}$&$g_{1,\max}$&$g_{2,\min}$&$g_{2,\max}$\\\midrule
+M6x1/1mm & 0.5220 & 0.6740 & 0.5226 & 0.6744\\
+M6x1/2mm & 0.5378 & 0.8033 & 0.5390 & 0.8041\\
+M6x1/4mm & 0.5716 & 0.9777 & 0.5736 & 0.9789\\
+M8x1.25/1mm & 0.5070 & 0.5563 & 0.5072 & 0.5564\\
+M8x1.25/2mm & 0.5117 & 0.5954 & 0.5121 & 0.5957\\
+M8x1.25/4mm & 0.5218 & 0.6460 & 0.5224 & 0.6463\\
+\bottomrule\end{tabular}\caption{Holguras convergidas en mm; envolventes angulares y radiales por rodillo.}\end{table}
+La condición geométrica de holgura positiva y menor que la capa se verifica separadamente
+de la aceptación funcional. No existe una banda de holgura operativa admisible documentada.
+Mantener holgura positiva no significa mantener exactamente los $0,5\,\mathrm{mm}$ iniciales.
+Tampoco la convergencia matemática acredita el régimen elástico real: faltan grado, límite elástico,
+raíz/tolerancia de rosca, concentradores, rigidez de montaje y adaptación608.
+No se presenta factor de seguridad, fatiga ni aprobación del montaje. La matriz y la carcasa
+se consideran rígidas para esta iteración, no como resultado FEM.

@@ -1,0 +1,4 @@
+capa_m,reduccion_flecha_porcentaje,reduccion_sigma_porcentaje,incremento_F_porcentaje,holgura_M8_positiva,holgura_M8_menor_capa,tolerancia_funcional_aprobada,nota
+0.001,67.65785980793692,56.380605383521434,7.595627685474549,True,True,False,No existe banda operativa admisible documentada; sin validación física del empotramiento o del material
+0.002,68.52680298334808,57.55842126737941,4.433400117904562,True,True,False,No existe banda operativa admisible documentada; sin validación física del empotramiento o del material
+0.004,69.4420096782749,58.65191699099515,2.5723512727675146,True,True,False,No existe banda operativa admisible documentada; sin validación física del empotramiento o del material

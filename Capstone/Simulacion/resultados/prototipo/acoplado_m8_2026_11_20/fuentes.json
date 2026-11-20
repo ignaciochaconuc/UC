@@ -1,0 +1,31 @@
+{
+  "seccion": {
+    "url": "https://www.trfastenings.com/knowledge-base/thread-geometries/metric-coarse-standard",
+    "filas": "M6x1 d1=4,773mm; M8x1,25 d1=6,466mm",
+    "consulta": "2026-11-20",
+    "limite": "Referencia de tabla, raíz y tolerancias de varilla real pendientes"
+  },
+  "elasticidad": {
+    "url": "https://steelconstruction.info/topics/design/steel-material-properties",
+    "apartado": "Other mechanical properties of steel: E210000N/mm²",
+    "consulta": "2026-11-20",
+    "limite": "Referencia para acero al carbono, no certificación de una clase de varilla"
+  },
+  "densidad_varilla": {
+    "fuente": "Referencia7850kg/m3 del modeloEP2 y tabla de parámetros de acero del Handbook3 JRC indexada",
+    "limite": "Sensibilidad de masa de cilindro nominal, no medición"
+  },
+  "densidad_rodillos": {
+    "fuente": "fisica/materiales.json, referenciaOutokumpu Core3047900kg/m3",
+    "limite": "Densidad de diseño, no certificado de piezas"
+  },
+  "algoritmo": "../Simulación_peletizadora/estructural/acoplamiento.py: tolerancias, relajación y contacto inclinado3C",
+  "cambios": "Se eliminan geometrías/globales comerciales codificadas; se recuperan las funciones puras de contacto y EB, con matriz de influencia equivalente para eficiencia.",
+  "restricciones": "Dos planos de taladrosCAD, traslación y giro nulos en cada plano; hipótesis de doble empotramiento",
+  "CAD_incompatibilidades": [
+    "M8no pasa por taladrosCADØ6: cambio físico pendiente, no ejecutado",
+    "Bore608Ø8no equivale a asiento verificado sobre roscaM8",
+    "AlojamientoØ24frente608Ø22 sigue pendiente"
+  ],
+  "limite_funcional": "Sin banda de holgura admisible documentada: se informa positividad y contacto geométrico, no aprobación operativa."
+}
