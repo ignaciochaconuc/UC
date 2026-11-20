@@ -1,0 +1,9 @@
+﻿autor,archivo_o_url,localizador,alcance
+Equipo Capstone,Capstone/Documentacion/Entrega_2.pdf,PDF10-11 materiales/compra; A.5pp21-23 rodamientos; A.6pp24-26 FEM; A.7/A.8pp26-29,"Original revisado, metodolog?a y producto hilo1/2; no c?lculos originales modificados"
+Equipo Capstone,Capstone/Documentacion/Ingenieria_de_Detalles.pdf,"PDF3=impresa1, PDF2=impresa2, PDF1=final: im?genes le?das","Manual165mm, matriz304, carcasaABS. Resultados antiguos no sustituyen3C actualizado"
+Equipo Capstone,Capstone/Simulacion/geometrias/Prototipo.stp,"Ensamble auditado, IDs8 matriz,12 ?rbol,20 manivela,33-36 rodamientos",SHA original verificado; no modificaci?nCAD
+Equipo Capstone,Capstone/Simulacion/geometrias/Matriz_prototipo.stp,"Importaci?n OCC, cara plana8,102cilindros, toros/filetes",Malla nueva directa del s?lido; no STEP derivado
+EZO,https://www.ezo-brg.co.jp/english/product/spec.php?eid=00913,Fila608ZZ le?da directamente20-11-2026,"8x22x7,C3300N,C01370N. No identifica marca de compra"
+NHBB,https://www.nhbb.com/knowledge-center/engineering-reference/ball-roller-bearings/load-ratings-bearing-life,"Calculating Equivalent Radial Load y Basic Equations, le?do20-11-2026","P=VFr enFa0,V1.2 para anillo exterior; vida b?sica por vueltas"
+Outokumpu,https://www.outokumpu.com/-/media/files/products/core/outokumpu-core-range-datasheet.pdf?modified=20251117111909&revision=025e9931-a1d5-4c8f-8ff5-f881d38916da,"Tabla5 indexada, Core304/4301 H/P; ficha previamente referenciada pp8/10","Rp0.2=210MPa,E200GPa de referencia; aperturaPDF403/502 en relecturas; no certificado de pieza"
+Legado geom?trico,Capstone/Simulaci?n_peletizadora/modelos/superposicion_variable.py,mx=factor*x*altura; my=factor*0.5*(superior^2-inferior^2),"Primer momento tangencial no anula intervalos vac?os. Inconsistencia documentada, sin correcci?n del modelo hist?rico"

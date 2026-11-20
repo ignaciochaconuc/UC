@@ -1,0 +1,5 @@
+componente,resultado,conclusion,pendiente
+Árbol principal,"14,00 MPa axial-torsión; envolvente flexión20,31 MPa, d nominal12,7mm",Falta dato indispensable,"Paso/diámetro de raíz, grado acero y apoyo axial de carga aproximada0,924kN"
+608 de rodillos,"Fr máximo272.47N, S0 mínimo5.028; capacidad referencia suficiente",Cumple capacidad condicionada; montaje CAD directo no cumple,Asiento/adaptador24/22 y apoyo interior M8; marca adquirida para capacidad garantizada
+Matriz304,"VM malla fina36.375MPa, u0.01358mm; cociente210/VM=5.773","Cumple bajo geometría, material de diseño y fijación idealizada",Realizar fijación central adherente y confirmar condición304; no FEM de contacto
+Manivela,"F ideal16,85N; tramo recto15mm: flexión nominal8,39MPa",Falta material y unión resistente,"Material del brazo y mecanismo que transmita2,7804Nm al árbol, sin deslizamiento"

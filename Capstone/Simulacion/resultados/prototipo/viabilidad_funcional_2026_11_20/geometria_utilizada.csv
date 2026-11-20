@@ -1,0 +1,13 @@
+parametro,valor,unidad,fuente_CAD
+Árbol diámetro,12.7,mm,"Sólido12, cilindro1"
+Árbol longitud,200.0,mm,Sólido12
+Guía superior centroY,-14.299602054092,mm,Placa1 taladro13
+Guía inferior centroY,-90.2905232523622,mm,Placa9 taladro13; rodamiento no presente
+Unión brazo centroY,-132.299602054092,mm,"Sólido20, cilindro de agujero12,7"
+Mano centro empuñaduraY,-194.299602054092,mm,"Sólido20, cilindro20x29"
+Manivela radio entre ejes,165.0,mm,"Sólido20 vs eje12, método auditoría previa"
+Manivela tramo recto diámetro,15.0,mm,"Sólido20, cilindro7; no neto de la unión"
+Matriz contacto plano radio interior,6.5,mm,"MatrizSTEP, bore13"
+Matriz contacto plano radio exterior,11.5,mm,Cara8 plana y fileteR1; no usar arandelaR12 completa
+Alojamiento rodamiento,24.0,mm,Rodillos18/19
+608 exterior,22.0,mm,Sólidos33-36

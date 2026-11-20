@@ -1,0 +1,76 @@
+\section{Ingeniería de Detalles: viabilidad mecánica del prototipo}
+Se utiliza exclusivamente el escenario acoplado M8 de 4 mm de biomasa:
+presión de Holm 2,25867 MPa, coeficiente efectivo de torque 0,1,
+fuerza máxima 918,00 N y torque máximo 2,7804 N\,m. El accionamiento es
+manual, con manivela de 165 mm; el ABS es material de diseño de carcasa.
+El modelo M8 de doble empotramiento y sus conclusiones se conservan, sin
+repetir la comparación de diámetros ni el estudio de concentradores.
+EP2 se emplea como respaldo de equilibrio, resistencia nominal, vida de
+rodamientos y elasticidad tridimensional\cite{equipo_entrega2_2026}.
+
+\paragraph{Árbol principal.}
+Para la sección nominal circular de 12,7 mm se obtienen
+$\sigma_{\rm axial}=7,25$ MPa, $\tau_T=6,91$ MPa y
+$\sigma_{\rm VM}=14,00$ MPa en el mismo estado de carga.
+Incluyendo la flexión manual y una envolvente correlacionada del pequeño
+desequilibrio de compactación, la demanda nominal es 20,31 MPa.
+Con $E=210$ GPa, la compresión sobre 200 mm es 0,00690 mm y el giro
+torsional 0,1545 grados. Con dos guías radiales ideales en las placas CAD,
+la flecha transversal estimada es 0,0183 mm. Estos valores corresponden
+al diámetro exterior liso de referencia: el producto descrito en EP2 es
+hilo corrido de media pulgada. Para cerrar su resistencia faltan el paso,
+diámetro de raíz y grado del acero; no se asigna un factor de seguridad
+al producto desconocido. El apoyo axial debe transmitir aproximadamente
+0,924 kN al bastidor, incluyendo pesos de referencia de matriz y árbol;
+no aparece un rodamiento axial instalado en el STEP.
+
+\paragraph{Rodamientos de los rodillos.}
+Con las reacciones correlacionadas y los pesos de los rodillos, la carga
+radial máxima es 272,47 N. Para la referencia EZO 608ZZ,
+$C=3300$ N y $C_0=1370$ N\cite{ezo_608zz_2026}, resulta
+$S_{0,\min}=5,03$: capacidad estática suficiente bajo $F_a=0$.
+Se calculó la vida básica por revoluciones con corrección por giro del
+anillo exterior\cite{nhbb_vida_exterior_2026}; la mínima es
+$1,253\times10^9$ revoluciones del rodillo, como referencia idealizada,
+sin atribuir esa vida a los rodamientos adquiridos de marca desconocida.
+No se calculan horas sin velocidad manual definida. El montaje directo
+del CAD no queda operativo: alojamiento 24 frente a exterior 22\,mm deja
+1\,mm radial sin apoyo y exige asiento/adaptador con retención definida.
+El apoyo interior debe corresponder al M8 adoptado, con asiento apropiado.
+
+\paragraph{Matriz perforada.}
+Se emplea la matriz STEP de 99 mm, 102 perforaciones 6\,mm, espesor perforado
+10\,mm y cuerpo central real. El apoyo plano efectivo central es el anillo
+de radios 6,5--11,5\,mm. La presión máxima calculada es 3,32\,MPa y el
+contacto permanece en compresión en el equilibrio global.
+Para evaluar la flexión local se ejecutó FEM tridimensional sobre el STEP,
+con cargas equivalentes por canal y fijación adherente de ese anillo,
+en tres estados críticos correlacionados.
+La malla más fina entrega 36,37\,MPa y 0,01358\,mm.
+La envolvente cambia 1,27\% en tensión y 4,05\% en desplazamiento
+en el último refinamiento; el anexo detalla los cambios por caso.
+La matriz cumple el cribado elástico bajo estas hipótesis, con $n_y=5,77$ respecto del límite de fluencia de referencia.
+El material de diseño es AISI 304 con $R_{p0,2}=210$ MPa de referencia para
+producto plano H/P a 20 grados Celsius\cite{outokumpu_core_2026}; no es un
+certificado de la pieza. La fijación debe transmitir también el torque;
+el FEM adherente no demuestra por sí solo que la unión real no patine.
+
+\paragraph{Manivela y funcionamiento.}
+La fuerza manual ideal máxima es $2,7804/0,165=16,85$ N.
+Con eficiencias supuestas de 0,8 y 0,6 sería 21,06 y 28,08\,N; no son pérdidas
+medidas. El tramo recto CAD de 15\,mm presenta flexión nominal 8,39\,MPa.
+Faltan el material del brazo y el mecanismo de unión al árbol para verificar
+su resistencia completa; un agujero cilíndrico coincidente no garantiza
+transmisión de torque. Un atasco no queda limitado al torque de operación:
+$T_{\rm mano}=0,165F_{\rm mano}$. No se declara resistencia a un atasco
+de magnitud desconocida.
+
+\paragraph{Conclusión de diseño.}
+La demanda manual calculada es moderada y los 608 de referencia tienen
+capacidad suficiente. Para disponer de un conjunto funcional deben
+resolverse tres interfaces concretas: asiento de los 608, apoyo axial del
+árbol y transmisión/retención en las uniones matriz--árbol--manivela.
+Se requieren además el grado/paso del árbol y el material del brazo.
+Estas conclusiones son de cálculo, sin validación de extrusión ni de
+funcionamiento experimental. El anexo documenta ecuaciones, FEM y datos
+pendientes, sin alterar CAD ni modelos históricos.

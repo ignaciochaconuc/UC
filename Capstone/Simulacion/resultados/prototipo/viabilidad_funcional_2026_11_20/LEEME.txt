@@ -1,0 +1,100 @@
+INGENIERÍA DE DETALLES — VIABILIDAD MECÁNICA MANUAL — 20-11-2026
+
+Escenario único: M8, biomasa4mm, presiónHolm2,25867MPa, mu efectivo0,1,
+manivela165mm. Se consumen los1440 estados guardados; no se reitera3C.
+ABS sigue como material de diseño de carcasa. No se repite M6/M8 ni Kt.
+
+DOCUMENTOS PARA INCORPORAR AL INFORME
+  seccion_ingenieria_detalles.tex — cuerpo principal breve.
+  anexo_memoria_mecanica.tex — ecuaciones, hipótesis, FEM y convergencia.
+  memoria_independiente.tex — documento completo que incluye ambos.
+  referencias_revision.bib — claves existentes reutilizadas y fuente NHBB;
+                            no modificar/duplicar claves al integrar.
+
+RESULTADOS PRINCIPALES
+Árbol12,7mm liso de referencia: axial7,25MPa, torsión6,91MPa,
+VM14,00MPa; envolvente con flexión manual y desequilibrio20,31MPa.
+Acortamiento6,90micras, giro0,1545grados, flecha transversal ideal18,34micras.
+El producto es hilo corrido1/2pulgada: faltan paso/raíz, grado y apoyo axial
+para aprobar su resistencia y montaje. No atribuirle640MPa del M8 candidato.
+El apoyo debe transmitir aproximadamente924N, con pesos de referencia.
+
+608: Fr_max272,47N, S0mín5,03 para la referencia EZO C3300N/C01370N.
+Para la dinámica se incluye V1,2 por anillo exterior giratorio (método NHBB).
+Vida básica mínima1,253e9 vueltas de rodillo como referencia; no horas ni
+vida del producto adquirido. AlojamientoCAD24 frente a rodamiento22 no
+transmite radialmente la carga sin asiento/adaptador definido.
+
+Matriz: FEM real sobre el sólido STEP, cuatro mallas3/2,3/1,7/1,25mm.
+Malla fina330247nodos,1599263tetraedros. Se estudian tres estados correlacionados
+476/541/625, no1440 FEM. Envolvente VM36,3748MPa, desplazamiento0,013576mm,
+n de referencia304=5,77 bajo fijación central rígida/adherente y materialH/P.
+Cambios de envolvente1,27% y4,05%. Criterios declarados5% en ambos.
+El pico secundario541 cambia8,02%: la convergencia de envolvente no implica
+igual convergencia de todos los picos individuales. No se presenta el margen
+como una cota matemática del historial completo ni como prueba de fricción.
+La fijación es bilateral; la malla fina tiene0,195N sumados de reacción en
+sentido de tracción en el caso476. Es diagnóstico del modelo, no fuerza
+definitiva de tuerca. Materializar retención/precompresión y transmisión
+de torque. No se modeló contacto/fricción ni el ABS en este FEM.
+
+Manivela: fuerzaideal16,85N; eficiencias hipotéticas0,8/0,6 dan21,06/28,08N.
+Tramo recto15mm: flexión nominal8,39MPa; no es el esfuerzo máximo de la unión.
+Faltan material y mecanismo de unión; fuerza tangencial equivalente438N en
+interfaz12,7mm. Atasco no acotado por el torque nominal; no se inventa carga.
+
+INCONSISTENCIA DOCUMENTADA
+La integración heredada del primer momento tangencial de algunas coberturas
+parciales produce centroides fuera del círculo de3mm. Se identifican en las
+tablas por canal y se explica su origen en el anexo. No se modifica el legado.
+Para el FEM se conservan fuerzas por canal, torque y momento global del estado,
+mediante tracciones positivas equivalentes sobre paredes y corrección común
+de centroides. Los centroides individuales imposibles no se utilizan como
+puntos físicos. No es una nueva solución de contacto3C ni un arreglo oculto
+de sus datos históricos. El perfil axial uniforme de tracciones de pared es
+hipótesis de aplicación de carga, no presión radial medida de biomasa.
+
+REPRODUCCIÓN (desde esta carpeta)
+  python -m pip install -r requirements.txt
+  python calculos.py
+  python fem_matriz.py --h 3
+  python fem_matriz.py --h 2.3
+  python fem_matriz.py --h 1.7
+  python fem_matriz.py --h 1.25
+  python generar_memoria.py
+  python -W error::ResourceWarning -m unittest -v test_verificaciones
+Las ejecuciones FEM escriben solo resultados de esta revisión. La malla fina
+requiere aproximadamente9–10GB en el equipo usado y tardó unos560s para los
+tres casos. No ejecutar ningún runner histórico para reproducir esta memoria.
+Los NPZ contienen nodos, tetraedros, desplazamientos, fuerzas, reacciones y VM.
+No se genera ni modifica un STEP.
+
+Para compilar, con distribución TeX instalada:
+  pdflatex memoria_independiente.tex
+  bibtex memoria_independiente
+  pdflatex memoria_independiente.tex
+  pdflatex memoria_independiente.tex
+En el entorno actual no hay compiladorTeX en PATH: se revisan estructura,
+citas, fórmulas y correspondencia con resultados, sin afirmar compilación.
+
+TRAZABILIDAD
+historicos_sha256.json: línea base de832 archivos previos, no regenerarla.
+conservacion_final.json: identidad de archivos históricos comprobada.
+resumen_integrado.json, estado_componentes.csv: resultados y estados.
+serie_correlacionada.csv: cargas/solicitaciones por estado, sin mezclar máximos.
+serie_rodamientos.csv.gz: reacciones y pesos, P estática/dinámica.
+convergencia_FEM_completa.csv y convergencia_por_caso.csv: estudio completo.
+geometria_utilizada.csv: cotas y localizadores en la auditoría CAD.
+pruebas.txt/json: evidencia de verificaciones automatizadas.
+parametros_utilizados.json, versiones.json, fuentes_documentales.csv: entradas.
+
+PENDIENTES FUNCIONALES CONCRETOS
+1. Resolver asiento/retención24/22 de608 y apoyo interior adecuado paraM8.
+2. Definir apoyo axial del árbol para924N y sus guías radiales.
+3. Confirmar paso/raíz y grado del hilo1/2pulgada; usar tuercas de igual familia,
+   no las M12 nombradas en CAD como si fueran dimensionalmente equivalentes.
+4. Definir material del brazo y unión que transmita2,7804Nm sin patinar.
+5. Materializar apriete/retención matriz–árbol: condición global necesaria
+   mu*suma(N_i)>=301,19N para radio de referencia9,2315mm.
+No se declara funcionamiento experimental, selección comercial adicional,
+resistencia industrial ni seguridad aprobada del M8 o la carcasaABS.

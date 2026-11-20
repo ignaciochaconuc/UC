@@ -1,0 +1,21 @@
+test_axial_torsion_mismo_paso (test_verificaciones.Verificaciones.test_axial_torsion_mismo_paso) ... ok
+test_cargas_recuperadas_sin_iterar (test_verificaciones.Verificaciones.test_cargas_recuperadas_sin_iterar) ... ok
+test_centroides_no_fisicos_no_se_silencian (test_verificaciones.Verificaciones.test_centroides_no_fisicos_no_se_silencian) ... ok
+test_conservacion_FEM_y_reacciones (test_verificaciones.Verificaciones.test_conservacion_FEM_y_reacciones) ... ok
+test_contacto_axial_global (test_verificaciones.Verificaciones.test_contacto_axial_global) ... ok
+test_equilibrio_608_y_peso (test_verificaciones.Verificaciones.test_equilibrio_608_y_peso) ... ok
+test_escalamiento_seccion (test_verificaciones.Verificaciones.test_escalamiento_seccion) ... ok
+test_fem_patch_afin_y_giro_rigido (test_verificaciones.Verificaciones.test_fem_patch_afin_y_giro_rigido) ... ok
+test_geometria_FEM_contra_volumen_CAD (test_verificaciones.Verificaciones.test_geometria_FEM_contra_volumen_CAD) ... ok
+test_historicos_intactos (test_verificaciones.Verificaciones.test_historicos_intactos) ... ok
+test_latex_integrable (test_verificaciones.Verificaciones.test_latex_integrable) ... ok
+test_mano_y_par_no_confundir_torsion_eje_transversal (test_verificaciones.Verificaciones.test_mano_y_par_no_confundir_torsion_eje_transversal) ... ok
+test_ninguna_aprobacion_sin_convergencia (test_verificaciones.Verificaciones.test_ninguna_aprobacion_sin_convergencia) ... ok
+test_no_runner_acoplado (test_verificaciones.Verificaciones.test_no_runner_acoplado) ... ok
+test_rechazo_entradas (test_verificaciones.Verificaciones.test_rechazo_entradas) ... ok
+test_unico_escenario (test_verificaciones.Verificaciones.test_unico_escenario) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.694s
+
+OK

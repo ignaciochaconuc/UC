@@ -1,0 +1,21 @@
+{
+  "comando": "python -W error::ResourceWarning -m unittest -v test_verificaciones",
+  "pruebas": 16,
+  "fallidas": 0,
+  "FEM_ejecutados": 12,
+  "mallas": 4,
+  "casos_correlacionados": [
+    476,
+    541,
+    625
+  ],
+  "conservacion": {
+    "archivos_verificados": 832,
+    "alterados": 0
+  },
+  "compilacion_latex": false,
+  "motivo": "No existe compiladorTeX en PATH; comprobaci?n estructural de fuentes y citas satisfactoria",
+  "CAD_modificado": false,
+  "modelo3C_ejecutado": false,
+  "commit_o_push": false
+}

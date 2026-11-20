@@ -1,0 +1,70 @@
+{
+  "escenario": "M8 h4 mm manual, resultados3C congelados",
+  "Fmax_n": 917.9962632879824,
+  "Tmax_nm": 2.780389530933798,
+  "Fmanual_ideal_max_n": 16.850845642023017,
+  "arbol": {
+    "d_nominal_m": 0.0127,
+    "L_CAD_m": 0.2,
+    "material": "Hilo corrido zincado, grado y paso no identificados",
+    "E_referencia_pa": 210000000000.0,
+    "nu_referencia": 0.3,
+    "sigma_axial_max_pa": 7246755.188402079,
+    "tau_torsion_max_pa": 6912968.718355037,
+    "VM_axial_torsion_max_pa": 13995816.169966592,
+    "paso_VM": 476,
+    "acortamiento_200mm_max_m": 6.90167160800198e-06,
+    "giro_200mm_max_rad": 0.0026957208350540827,
+    "VM_con_flexion_manual_max_pa": 19953804.85739938,
+    "paso_VM_flexion": 476,
+    "separacion_guias_CAD_m": 0.0759909211982702,
+    "voladizo_mano_m": 0.10400907880172978,
+    "Rguia_inferior_manual_max_n": 39.914665696054065,
+    "Rguia_superior_manual_max_abs_n": 23.063820054031044,
+    "VM_envolvente_con_desequilibrio_max_pa": 20308778.65081767,
+    "flecha_transversal_envolvente_max_m": 1.8342979298723885e-05,
+    "P_Euler_K2_200mm_n": 16541.840920957868,
+    "peso_matriz_referencia_n": 3.968135306507026,
+    "peso_arbol_referencia_n": 1.9503728882074047,
+    "factor_seguridad": null,
+    "estado": "Dato indispensable: paso/raíz, grado y apoyo axial real. Ø12,7 liso es referencia nominal"
+  },
+  "matriz": {
+    "material_diseno": "AISI304, EP2 y Detalles",
+    "Sy_referencia_pa": 210000000.0,
+    "E_referencia_pa": 200000000000.0,
+    "espesor_perforado_mm": 10,
+    "canales": 102,
+    "diametro_mm": 99,
+    "ligamento_min_mm": 1.36,
+    "radio_contacto_plano_ri_m": 0.0065,
+    "radio_contacto_plano_ro_m": 0.0115,
+    "p_apoyo_max_pa": 3319777.723860718,
+    "p_apoyo_min_pa": 3053788.529837482,
+    "excentricidad_max_m": 9.194961316334334e-05,
+    "nucleo_central_m": 0.003793478260869565,
+    "momento_normales_max_nm": 0.08210194533061123,
+    "paso_momento_normales_max": 625,
+    "decision": "Analítica comprueba contacto global, no flexión local perforada; se ejecuta FEM de geometría STEP"
+  },
+  "manivela": {
+    "radio_m": 0.165,
+    "tramo_recto_diametro_m": 0.015,
+    "sigma_flexion_nominal_tramo_recto_max_pa": 8391352.653161628,
+    "fuerza_tangencial_union_al_arbol_n": 437.8566190446926,
+    "material": null,
+    "factor_seguridad": null,
+    "estado": "Tramo recto calculable; faltan material y detalle resistente de fijación al árbol"
+  },
+  "union_matriz_arbol": {
+    "mu_N_suma_min_n": 301.1856262195087,
+    "radio_medio_contacto_m": 0.009231481481481481,
+    "formula": "T <= mu * r_medio * suma(N_i); confirmar caras efectivas y precarga",
+    "mu_real": null,
+    "precarga_real_n": null
+  },
+  "conservacion": {
+    "archivos_verificados": 832,
+    "alterados": 0
+  }
+}

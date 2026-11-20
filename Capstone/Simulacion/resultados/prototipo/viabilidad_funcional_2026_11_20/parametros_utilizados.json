@@ -1,0 +1,63 @@
+{
+  "escenario": {
+    "historial": "../acoplado_m8_2026_11_20/serie_M8x1.25_h4mm.csv",
+    "estados": 1440,
+    "capa_m": 0.004,
+    "presion_pa": 2258670.6718785944,
+    "mu_efectivo": 0.1,
+    "radio_manivela_m": 0.165
+  },
+  "arbol": {
+    "d_nominal_m": 0.0127,
+    "L_CAD_m": 0.2,
+    "d_raiz_m": null,
+    "paso_m": null,
+    "E_referencia_pa": 210000000000.0,
+    "nu_hipotesis": 0.3,
+    "Sy_pa": null,
+    "material": "Hilo corrido zincado1/2, EP2pp10-11"
+  },
+  "matriz": {
+    "material_diseno": "AISI304",
+    "E_referencia_MPa": 200000,
+    "Sy_referencia_MPa": 210,
+    "nu_hipotesis": 0.3,
+    "referencia_resistencia": "Outokumpu Core304/4301, EN10088-2 H/P,20C; no certificado de pieza",
+    "condicion_borde": "Cara plana real de arandela yCAD26mm, anillo6.5/11.5mm, todos los desplazamientos0: bilateral adherente; transmitir torque mediante uni?n real",
+    "cargas": "Tracciones equivalentes sobre paredes de canales, perfil axial uniforme; fuerzas por canal, torque y primer momento normal global conservados",
+    "correccion_centroides": "No se usan puntos individuales fuera de agujeros: desplazamiento com?n de centroides equivalentes, sin modificar fuerzas ni iterar3C",
+    "h_mallas_mm": [
+      3,
+      2.3,
+      1.7,
+      1.25
+    ],
+    "casos_paso": [
+      476,
+      541,
+      625
+    ],
+    "criterio_convergencia_envolvente_rel": 0.05,
+    "rtol_CG": 1e-09
+  },
+  "rodamientos": {
+    "referencia": "EZO608ZZ",
+    "C_n": 3300,
+    "C0_n": 1370,
+    "Fa_n_hipotesis": 0,
+    "V_exterior_NHBB": 1.2,
+    "rpm_manual": null,
+    "C_producto_comprado_n": null
+  },
+  "manivela": {
+    "tramo_recto_m": 0.015,
+    "material": null,
+    "eficiencias_hipoteticas": [
+      1,
+      0.8,
+      0.6
+    ],
+    "carga_atasco": null
+  },
+  "politica": "No ejecutar3C ni modificar STEP, resultados o modelos hist?ricos"
+}
