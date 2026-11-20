@@ -1,0 +1,15 @@
+{
+  "fecha_consulta": "2026-11-20",
+  "documentos_detalles_originales": "No localizados; transcripción de solicitud disponible, no se afirma lectura de páginas o anexos",
+  "Holm_2006": "DOI10.1021/ef0503360, acceso editorial403; derivación original no leída",
+  "Holm_2007": "DOI10.1021/ef070156l, ficha editorial/resumen consultados; no se atribuyen coeficientes al texto completo",
+  "Stelte_2011": "Postprint DTU6337845, ecuaciones1–2 en páginasPDF3–4; significado de símbolos y limitación de proceso revisados",
+  "EZO": "https://www.ezo-brg.co.jp/english/product/spec.php?eid=00913; fila608ZZ, C3300N,C01370N",
+  "TR": "https://www.trfastenings.com/knowledge-base/thread-geometries/metric-coarse-standard; filaM6, P1mm, dmenor4,773mm",
+  "claves_existentes_reutilizadas": [
+    "stelte_presion_2011",
+    "tr_rosca_m6_2026",
+    "ezo_608zz_2026",
+    "equipo_step_prototipo_2026"
+  ]
+}

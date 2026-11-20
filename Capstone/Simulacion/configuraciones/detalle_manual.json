@@ -1,0 +1,16 @@
+{
+  "revision": "detalle_manual_2026_11_20",
+  "modelo": "prototipo",
+  "accionamiento_principal": "manual_manivela",
+  "fuente_decision": "Documentacion/Ingenieria_de_Detalles.pdf: página PDF3 (impresa1), sección1.1; leída visualmente por ser imagen. EP2 como respaldo.",
+  "radio_manivela_nominal_m": 0.165,
+  "motor_anterior": {"potencia_w": 180, "rpm": 1350, "estado": "antecedente_no_nominal"},
+  "Holm": {"PN0_pa": 281000, "nu_LR": 0.203, "mu_pared": 0.715, "L_D_documento_redondeado": 1.667, "P_comercial_documento_pa": 43700000, "fuente_coeficientes": "Entrega_2.pdf PDFp14 A.2.2 ec4: rastrojo de maíz20% humedad, atribuido a Tumuluru2020 referencia9; tabla externa no inspeccionada. Detalles PDFp3 ec1 reutiliza coeficientes."},
+  "cargas_antiguas_transcritas": {"fuerza_max_n": 1029, "fuerza_individual_reportada_n": 586, "torque_max_nm": 3.255, "lambda_F": 0.0731, "lambda_T": 0.0366},
+  "escenarios_conservados": {"capas_m": [0.001, 0.002, 0.004], "mu_efectivo_torque": 0.1, "estado": "alternativas, no escenario nominal físico seleccionado"},
+  "sensibilidad_eje": {"diametros_resistentes_m": [0.004773, 0.006], "E_referencia_pa": 205000000000, "E_sensibilidad_pa": [180000000000, 205000000000, 220000000000], "nota": "4,773: perfil M6x1 de referencia TR; 6: cilindro liso CAD, límite geométrico, no raíz roscada confirmada. E es sensibilidad, no propiedad comprada."},
+  "rodamientos_referencia": {"fabricante": "EZO", "modelo": "608ZZ", "C_n": 3300, "C0_n": 1370, "fuente": "ezo_608zz_2026", "rpm_matriz_sensibilidad": [10, 30], "Fa_n_hipotetica": 0, "nota": "Solo comparación, instalación y fabricante comprado desconocidos; velocidad supone rodadura sin deslizamiento al radio central."},
+  "material_prueba": {"descripcion": "aserrín fino tamizado", "masa_inicial_kg": 0.5, "humedad_inicial_base_humeda": 0.1, "humedades_objetivo": [0.12, 0.15], "estado": "Detalles PDFp2 sección1.2 y PDFp1 ec2, leídas visualmente; no ensayo ni calibración"},
+  "material_impreso": {"material_diseno": "ABS", "documento_prioritario": "Detalles PDFp3 sección1.1 y PDFp2 sección1.2; confirmado por equipo20-11-2026", "antecedente": "PLA en EP2, reemplazado para el diseño vigente sin modificar históricos", "fabricacion": "No hay piezas impresas actualmente; análisis de diseño", "fuente_referencia": "fisica/ABS_referencia.json", "filamento_definitivo": null, "estado": "ABS confirmado como familia de diseño; referenciaABS-M30 no selecciona proveedor ni proceso"},
+  "sensibilidad_soporte_ABS": {"fraccion_holgura_para_desplazamiento": 0.1, "nota": "Presupuesto ilustrativo de 0,05 mm, no tolerancia de diseño aprobada"}
+}

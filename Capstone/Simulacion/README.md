@@ -1,5 +1,66 @@
 # Simulación unificada de la peletizadora
 
+## Revisión vigente de detalle: prototipo manual y diseño ABS (20-11-2026)
+
+Ingeniería de Detalles, leída en `../Documentacion/Ingenieria_de_Detalles.pdf`,
+establece **manivela de 165 mm y carcasa/soportes impresos en ABS**. El equipo
+confirmó estas decisiones y que no hay impresiones ni ensayos actuales.
+El motor de 180 W y el PLA de EP2 se conservan como antecedentes en las revisiones
+anteriores, sin sustituir el diseño vigente. Los apartados fechados 19-11-2026
+describen esas líneas base y no una operación motorizada nominal actual.
+
+```powershell
+# Desde Capstone/Simulacion:
+python -m pip install -r requirements_detalle.txt
+python detalle_prototipo.py
+python herramientas/pruebas_detalle.py
+python herramientas/control_detalle.py
+```
+
+La subetapa usa el paquete común `peletizadora`, la matriz y montaje CAD
+auditados y los 1440 estados previamente guardados por escenario. Reutiliza
+EP2 para presión, reparto, viga y rodamientos; no ejecuta sus runners ni
+recalcula o sobrescribe los 27 escenarios históricos. El escalado de fuerzas
+con presión es lineal y se valida, sin alterar cobertura ni centroides.
+Los comandos `simular.py --modelo real|prototipo` siguen disponibles para sus
+configuraciones anteriores. Para el **detalle manual vigente**, usar el comando
+anterior y `configuraciones/detalle_manual.json`.
+
+Resultados nuevos: [detalle_manual_2026_11_20](resultados/prototipo/detalle_manual_2026_11_20/).
+Se generan trazabilidad, reconciliación documental, fuerzas de manivela,
+reacciones608, cribados de eje/árbol, requisitos de carcasaABS, interfaz de apoyos,
+sensibilidades, convergencia y estados de verificación. No se adopta una capa
+nominal única ni se aprueba resistencia con un montaje incompleto.
+
+El informe principal y los anexos LaTeX están separados:
+
+- `seccion_informe.tex`: sección concisa para incluir posteriormente.
+- `anexo_calculos.tex`: ecuaciones y sensibilidad independiente.
+- `revision_independiente.tex`: envoltorio compilable con BibLaTeX.
+- `referencias_reutilizables.bib`: exportación de claves usadas, sin duplicados.
+
+Desde la carpeta de resultados se pueden ejecutar `pdflatex revision_independiente`,
+`biber revision_independiente` y dos pasadas adicionales de `pdflatex`.
+En este entorno no hay motor LaTeX/Biber: se comprueban estructura, tablas y
+claves bibliográficas; **no se afirma haber compilado el PDF**. No se modifica Overleaf.
+
+Los documentos originales y sus hashes se conservan. El PDF de Detalles es
+imagen y sus páginas están en orden inverso: PDF3 contiene1.1/ec1, PDF2 los
+resultados y1.2, PDF1 el balance de humedad/ec2. En EP2, A.2.1/A.2.2 están en
+PDF13–14 y describen el predimensionamiento comercial; no contienen el historial
+angular del prototipo al que parecen remitir las páginas de Detalles.
+El control nuevo protege 617 archivos anteriores y verifica por separado ambos
+PDF incorporados después de la línea base. README e informe anteriores tienen
+respaldo. Los dos borradores preliminares quedaron archivados y no son resultados vigentes.
+
+Validación de esta revisión: **240 pruebas aprobadas** (47 unificadas, incluidas
+23 de detalle, más66 EP2,125 transmisión y2 integración), además de los
+validadores4A/4B/4D. Registro exclusivo en
+`resultados/prototipo/detalle_manual_2026_11_20/pruebas_ejecutadas.json`.
+
+Véase [INFORME_TECNICO.md](INFORME_TECNICO.md) para los resultados, las
+incompatibilidades de montaje y las condiciones que impiden aprobar el prototipo.
+
 Arquitectura vigente desde el **19-11-2026**. Las matrices STEP son la fuente
 geométrica principal. No se modifican EP2, sus memorias, configuraciones ni
 resultados históricos. La implementación escalada de ayer se retiró del

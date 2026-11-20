@@ -1,0 +1,9 @@
+{
+  "fuerza_total_por_lambda_F_n": 1028.5891845644067,
+  "fuerza_rodillo_por_lambda_F_n": 585.8981088404579,
+  "torque_por_lambda_T_nm": 3.254617147967231,
+  "fuerza_total_reportada_n": 1029,
+  "fuerza_rodillo_reportada_n": 586,
+  "torque_reportado_nm": 3.255,
+  "conclusion": "Coincidencia por redondeo con razones documentadas aplicadas a máximos3C; no demuestra derivación geométrica ni estados del prototipo. Remisiones internas no coinciden con anexosEP2 disponibles."
+}

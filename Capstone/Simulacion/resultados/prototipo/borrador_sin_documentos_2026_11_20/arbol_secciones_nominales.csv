@@ -1,0 +1,4 @@
+escenario,diametro_liso_CAD_m,paso_VM_max,F_correlacionada_n,T_correlacionado_nm,sigma_axial_pa,tau_torsion_pa,VM_axial_torsion_pa,Sy_min_nominal_n1_pa,factor_seguridad,estado
+manual_h0.001_Holm_CAD,0.0127,497,389.3049531269209,1.1391711656935344,3073212.606376494,2832356.598122637,5788900.363694119,5788900.363694119,,"Solo si sección lisa transmite toda F yT; sin flexión, raíz real, apoyos o unión verificados"
+manual_h0.002_Holm_CAD,0.0127,154,641.3087608789033,1.9335235639565715,5062556.108476199,4807379.600996053,9744853.52561487,9744853.52561487,,"Solo si sección lisa transmite toda F yT; sin flexión, raíz real, apoyos o unión verificados"
+manual_h0.004_Holm_CAD,0.0127,476,927.9906557619587,2.806794217324358,7325651.931681081,6978619.509010479,14133950.86233031,14133950.86233031,,"Solo si sección lisa transmite toda F yT; sin flexión, raíz real, apoyos o unión verificados"

@@ -1,0 +1,10 @@
+solido_a,solido_b,distancia_minima_mm,sha256_STEP,interpretacion
+8,14,0.0,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+8,15,9.947598300641403e-14,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+14,13,9.947598300641403e-14,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+15,16,0.0,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+8,12,0.14999999999999297,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+8,2,0.41421356237314644,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+8,7,1.4999999999999785,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+8,37,6.0000000000000995,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."
+12,20,5.859285502108464e-14,673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83,"Distancia geométrica mínima; cero puede ser punto/arista/cara o intersección. No prueba área resistente, apriete ni fuerza."

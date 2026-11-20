@@ -1,5 +1,240 @@
 # Síntesis técnica: sustitución del patrón escalado por CAD real
 
+## Revisión vigente de Ingeniería de Detalles — 20-11-2026
+
+Esta sección incorpora los documentos ahora disponibles en `Capstone/Documentacion`
+y sustituye las decisiones preliminares de accionamiento y polímero de los
+apartados históricos posteriores. **El diseño vigente es manual, con manivela
+de 165 mm y componentes impresos previstos en ABS.** Así lo establece Ingeniería
+de Detalles y lo ratificó el equipo. No se están realizando impresiones ni ensayos;
+todos los resultados nuevos son análisis de diseño. El motor180W y PLA quedan
+como antecedentes, sin modificar sus archivos históricos.
+
+### Documentos, ecuaciones y decisiones recuperadas
+
+Se revisó `Entrega_2.pdf` (75 páginas), especialmente A.2.1/A.2.2 en páginasPDF13–14,
+modelo global A.3, viga/acoplamiento/fatiga A.4, rodamientos A.5, matriz A.6 y
+árbol/uniones A.7/A.8. Se leyeron visualmente las tres páginas de Detalles,
+porque el PDF carece de texto extraíble. Su orden es inverso: PDF3 es la página
+impresa1 (sección1.1 y ecuación1), PDF2 contiene las cargas y sección1.2, y PDF1
+continúa el material y presenta el balance de humedad, ecuación2.
+
+La matriz completa `trazabilidad_parametros.csv` identifica valor, unidad,
+ecuación, fuente exacta, aplicación y estado. Los archivos originales tienen
+SHA256 registrados en `control/detalle_manual_2026_11_20/documentos_recibidos.json`.
+Las remisiones A.1.1/A.1.2/A.1.3 y A.2.2 de Detalles **no coinciden** con el
+contenido de los anexos de esta versión de EP2. A.2.1/A.2.2 disponibles son
+predimensionamiento comercial y no proporcionan un historial propio del prototipo.
+Se ha recuperado el contenido verificable sin inventar el anexo citado.
+
+La presión se calcula con la función existente `presion_canal`, sin cambiar ecuaciones:
+
+`P=PN0/nu_LR * [exp(4*mu_pared*nu_LR*L/D)-1]`.
+
+EP2PDF14, A.2.2/ec4 adopta PN0=0,281MPa (precompresión), nu_LR=0,203
+(relación de Poisson anisótropa de biomasa) y mu_pared=0,715 (fricción biomasa–acero).
+EP2 atribuye estos parámetros a rastrojo de maíz al20% de humedad, citando a
+Tumuluru, referencia9. Se verificó la ficha editorial de ese libro, pero no su
+tabla interna; se distingue la atribución documental de la verificación externa.
+La forma y el significado de la ecuación se contrastaron con el postprint de
+Stelte2011, ecuaciones1–2. El texto completo de Holm2006 no fue accesible y no
+se afirma haber leído su derivación original.
+
+| Evaluación | Presión [MPa] | Interpretación |
+|---|---:|---|
+| Prototipo, L/D CAD exacto10/6 | 2,258671 | Estimación de diseño |
+| Prototipo, L/D redondeado1,667 | 2,259376 | Reproduce2,259MPa de Detalles |
+| Comercial, L/D nominal6 | 43,704330 | Redondea43,70MPa o44MPa |
+
+Así se explica la diferencia43,70/44: son precisiones de redondeo diferentes de
+la evaluación nominal. La discrepancia frente a44MPa es aproximadamente0,677%.
+El cilindro restrictivo del CAD comercial mide31,5mm, mientras el predimensionamiento
+usó36mm para L/D6; se registra esta diferencia y **no se recalibran** sus históricos.
+Para el prototipo se utilizan10mm efectivos del canal, no26mm de envolvente.
+El cociente lambda_p resulta aproximadamente0,0517.
+
+Estos coeficientes de maíz no quedan calibrados para aserrín fino al12–15%.
+No se demuestra que sean un límite superior conservador para ese material.
+La humedad, especie, temperatura y granulometría pueden cambiar la presión;
+tamizar para evitar puentes no prueba una reducción de presión de extrusión.
+
+### Reconciliación de las cargas antiguas y las obtenidas con CAD
+
+DetallesPDF2 documenta Ftotal máxima1,029kN, fuerza por rodillo586N y torque3,255N·m.
+Sus factores lambda_F=0,0731 y lambda_T=0,0366, aplicados a máximos comerciales3C,
+reproducen esas cifras por redondeo; el cálculo está en `consistencia_razones_antiguas.json`.
+Esto respalda su consistencia numérica como referencia documental, pero no
+recupera los centros, capa, holgura, huella ni estados angulares que dieron esas
+razones para el prototipo. El documento tampoco define si586N es un máximo
+individual o una carga simultánea. Dos máximos individuales no deben sumarse
+como si ocurrieran en el mismo instante.
+
+Se conservaron los escenarios CAD anteriores y se ajustó **solo** la presión
+desde2,26MPa a2,258671MPa por proporcionalidad del mismo modelo uniforme.
+No se alteró ningún parámetro para obtener1,029kN o3,255N·m. Para mu_efectivo=0,1:
+
+| Capa supuesta [mm] | Ftotal máxima/media [N] | Tmax/Tmedio [N·m] | Fmanivela máxima/media ideal [N] |
+|---:|---:|---:|---:|
+| 1 | 389,305 /350,689 | 1,15663 /1,03772 | 7,010 /6,289 |
+| 2 | 641,436 /603,690 | 1,93352 /1,78620 | 11,718 /10,825 |
+| 4 | 927,994 /910,022 | 2,80679 /2,69189 | 17,011 /16,314 |
+
+La revisión de presión cambia las fuerzas solo0,0588%; no explica la diferencia
+principal. En la alternativa4mm la fuerza es9,82% menor y el torque13,77% menor
+que las referencias documentales. La auditoría distingue:
+
+- **Hipótesis:** capa y huella anteriores del prototipo no están especificadas;
+ 4mm es un antecedente comercial, no una condición nominal demostrada del prototipo.
+- **Geometría:** la matriz real esØ99, noØ100; se usan centros medidos27,838/27,662mm
+ y separación0,5mm. No se reutilizan centros comerciales escalados.
+- **Definiciones:** área abierta absoluta sigue siendo102·pi·3²=2883,982mm²;
+ aumenta la fracción de cara perforada, no esa área absoluta. Área cubierta es otra magnitud.
+- **Máximos:** F yT se extraen en sus propios estados. En4mm, la suma de máximos
+ individuales928,581N supera el máximo simultáneo927,994N; ambos se guardan separados.
+- **Implementación/documentación:** las regresiones y equilibrio no revelan un
+ error del núcleo; hay remisiones incompatibles y datos insuficientes para
+ reproducir el historial anterior. No se atribuye un error geométrico específico sin evidencia.
+
+La longitudLc conserva la aproximación y convención de EP2 (ecuaciones9/19);
+no se redefine ni se multiplica para hacer coincidir las cargas. Los radios
+de torque son los centros reales de cada perforación, según EP2ecuación17,
+y mu_efectivo=0,1 no es mu_pared=0,715.
+
+**No se adopta un escenario nominal físico único.** Se conserva1,029kN/3,255N·m
+como referencia documental y1/2/4mm como alternativas reproducibles del CAD actual,
+condicionadas al contacto y presión. Falta capa de alimentación y respuesta mecánica
+para seleccionar una condición operativa.
+
+### Manivela, eje transversal y rodamientos
+
+La distancia perpendicular entre ejes principal y empuñadura del STEP es165mm;
+no se midió desde una caja envolvente. El cálculo antiguo3,255/0,165=19,727N
+reproduce19,7N. Los esfuerzos manuales de la tabla son ideales y tangenciales;
+no incluyen pérdidas conocidas, arranque, fricción de apoyos, atasco o ergonomía.
+No se declara facilidad de uso ni suficiencia manual experimental.
+
+Se reutilizó la viga Euler–Bernoulli de EP2 con centrosCAD de los cuatro608 y
+taladros laterales separados108,411756mm. Se estudian apoyos articulados rígidos
+**hipotéticos**, no empotramientos de ABS ni rigidez infinita del apoyo ausente.
+Las normales y tangenciales se reparten conservando fuerzas y momentos.
+La malla se subdivide entre puntos físicos para evitar elementos casi nulos
+por superposición de una retícula y posicionesCAD.
+
+Resultados elásticos condicionados a E=205GPa (no propiedad del grado comprado):
+
+| Capa [mm] | Diámetro resistente supuesto [mm] | Flexión nominal máxima [MPa] | Flecha global [mm] | Cambio de holgura en contacto [mm] |
+|---:|---:|---:|---:|---:|
+| 1 | 4,773 | 456,00 | 1,206 | 1,166 |
+| 2 | 4,773 | 751,15 | 1,980 | 1,915 |
+| 4 | 4,773 | 1121,97 | 2,952 | 2,854 |
+| 1 | 6,000 | 229,55 | 0,483 | 0,467 |
+| 2 | 6,000 | 378,13 | 0,793 | 0,767 |
+| 4 | 6,000 | 564,81 | 1,182 | 1,143 |
+
+Ø4,773 corresponde al perfilM6×1 de referencia de TR, no a raíz medida;
+Ø6 es un límite comparativo de cilindro liso, no una raíz de rosca aprobada.
+Los umbralesSy requeridos para n=1 son nominales y necesarios, no factores de
+seguridad ni selección de grado. No se hereda4140. Se estudian E180/205/220GPa,
+corte por separado y rangos de esfuerzo firmados en fibras fijas. El cribado
+de extremos no es un conteo rainflow ni una vida a fatiga como la memoriaEP2.
+
+La proyección de desplazamientos de rodamientos sobre cada rodillo rígido muestra
+cambios de holgura comparables o mayores que0,5mm. Por ello el contacto
+desacoplado sirve de cribado, pero no está justificado como nominal estructural
+final. Las tensiones altas tampoco acreditan régimen elástico: sin grado no se
+puede afirmar que la flecha real sea la de la solución lineal. Se necesita definir
+asientos y rigidez antes de justificar un acoplamiento; no se importó automáticamente3C.
+
+Se calcularon cargas individuales608 y vidas **de referencia EZO**, C3300N/C01370N,
+siguiendo media cúbica y L10 de EP2. L10h usa velocidades de matriz10/30rpm
+solo como sensibilidad, rodadura ideal al radio central, Fa0 y pesos angulares
+uniformes. No son la vida ni la marca certificada del rodamiento comprado,
+ni contemplan arranques, contaminación o un montaje con holguras sin resolver.
+Permanecen las diferenciasØ6/Ø8 yØ22/Ø24 y desajustes axiales0,2–0,3mm.
+
+### Árbol, uniones, matriz y carcasa ABS
+
+Las secciones lisasØ12,7, suponiendo que transmiten todaF yT correlacionadas,
+dan VM axial–torsional máxima5,789/9,745/14,134MPa para1/2/4mm. **No son la
+comprobación real del árbol:** faltan raíz/paso, flexión, concentraciones,
+geometría de apoyo y unión. La manivela añade fuerza lateral; no se sustituye
+por torque puro al definir el futuro apoyo. Se entregan cargas correlacionadas
+en `interfaz_arbol_soportes_manual.csv.gz`, sin inventar reacciones inferiores.
+
+Las distancias CAD confirman proximidad de matriz–arandelas–tuercas y una
+holgura radial matriz–árbol0,15mm. La matriz no toca la cámara superior (1,5mm)
+ni la carcasa inferior (distancia mínima0,414mm); no corresponde empotrar su
+borde en ellas. Distancia cero no demuestra área resistente ni pretensión.
+Se calcula condicionalmente presión media en una arandela idealØ24/13 y el
+producto mu·N mínimo para transmitir torque por fricción uniforme, sin asignar
+precarga o coeficiente. EP2PDF11 documenta eje y tuercas de1/2pulgada; el CAD
+declara tuercasM12. La discrepancia es de identificación/modelado, no prueba
+que las tuercas compradas seanM12: hay que confirmar familia y paso reales.
+Tampoco se ha definido el bloqueo de la manivela ni la retención frente al aflojamiento.
+EP2PDF11 documenta ocho tuercasM6 compradas, que no se identifican como piezas
+separadas del ensamble39sólidos. Deben definirse sus posiciones, arandelas,
+longitudes engranadas y la transmisión a las paredes, sin asumir un empotramiento.
+
+UCF201-8/UCFL201-8 permanecen candidatos. El soporte debe transmitir la fuerza
+axial completa que corresponda (hasta927,994N en la alternativa4mm, más acciones
+omitidas), fuerzas de mano y momentos según su geometría. Sin posición axial,
+capacidad de empuje y retención no hay reacciones ni rigidez mínima únicas;
+se entrega el requisito paramétrico k_axial>=F/delta_admisible.
+
+El FEM de matriz previsto en EP2A.6 se recuperó metodológicamente: elasticidad3D,
+TET4, cargas correlacionadas, restricciones de anillo y convergencia. Para el
+prototipo falta justificar contacto matriz–arandela, pretensión, transferencia
+de torque, unión al árbol y propiedades/materialidad definitivas. No se ejecutó
+un FEM con apoyos ficticios ni se trasladaron las tensiones del disco comercial.
+El ligamentoCAD1,36mm identifica una zona a refinar, no un factor de seguridad.
+
+La cámaraABS participa en el camino de carga si sus taladros apoyan el eje.
+Por apoyo se obtienen reacciones resultantes máximas aproximadas195/322/465N
+para1/2/4mm, bajo la hipótesis de viga. La presión proyectada p=R/(d·t) en los
+taladrosCAD es4,93/8,14/11,77MPa; no es la tensión local máxima del ABS.
+Para un presupuesto **ilustrativo**, no aprobado, de0,05mm se requieren rigideces
+secantes aproximadas3,90/6,44/9,31MN/m por apoyo.
+
+Se incorporaron propiedades típicas de referencia StratasysABS-M30, tabla5,
+probetas negrasF900-T16 con capa0,254mm: E de compresiónXZ/ZX=2,20/2,16GPa,
+E de tracción2,40/2,30GPa y fluencia a tracción30,8/27,5MPa. La ficha indica
+que son valores de comparación, no especificaciones ni mínimos garantizados.
+Se usa p/E como indicador uniaxial y A/L>=k/E como requisito de un apoyo ideal,
+sin confundirlos con deformaciones de la carcasa. No se divide resistencia de
+tracción por presión de apoyo para fabricar un factor de seguridad.
+Faltan filamento/proceso, relleno, paredes, orientación, contacto, rigidez de
+fijaciones, anisotropía y fluencia lenta; ABS es la familia de diseño confirmada,
+no una pieza ya fabricada con esas propiedades.
+
+### Material de prueba, cierre y reproducción
+
+Se reproduce el balance en base húmeda de DetallesPDF1/ec2:
+`m_agua=m0*(wf-w0)/(1-wf)`. Para500g iniciales al10%, se añaden11,364g para12%
+y29,412g para15%. El lote final a15% pesa529,412g; no se confunde masa inicial
+con masa seca ni con masa final. Tamiz, especie y humedad deben verificarse en
+la preparación; escoger aserrín no valida automáticamente los coeficientes de maíz.
+
+Los riesgos prioritarios son asientos608 no resueltos, deformación del M6,
+unión/retención de matriz y manivela, apoyo axial/radial del árbol y rigidez de
+la cámaraABS. No se asignan probabilidades ni se aprueba el diseño para ensayo
+o fabricación con estos puntos abiertos. Las referencias documentales no son
+resultados experimentales.
+
+Ejecutar `python detalle_prototipo.py` y `python herramientas/pruebas_detalle.py`.
+Todas las salidas nuevas están en `resultados/prototipo/detalle_manual_2026_11_20/`.
+Se incluyen secciónLaTeX, anexo, envoltorio independiente, bibliografía sin
+duplicados, gráficos, trazabilidad, reconciliación, datos correlacionados y
+estados de verificación. No hay motorLaTeX/Biber instalado: se validan estructura
+y referencias, sin afirmar compilaciónPDF. No se modifica Overleaf, CAD, EP2,
+documentos originales ni los27 escenarios previos; no hay commit o push.
+
+Se aprobaron240 pruebas (47 del sistema unificado/detalle,66 EP2,125 transmisión
+y2 integración), además de los validadores4A/4B/4D. La conservaciónSHA256 de617
+archivos anteriores y de ambos PDF queda registrada. Una futura demostración
+funcional del prototipo manual no validará por sí sola la resistencia, potencia
+ni capacidad productiva de la máquina comercial, cuya similitud geométrica y
+de proceso no se conserva íntegramente.
+
 ## Alcance y fuentes
 
 Los dos archivos STEP del equipo se copiaron sin alterar sus nombres ni

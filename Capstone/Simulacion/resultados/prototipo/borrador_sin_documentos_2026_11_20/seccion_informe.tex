@@ -1,0 +1,46 @@
+% Sección independiente; NO modifica Overleaf. Requiere amsmath, booktabs, graphicx, biblatex.
+\section{Ingeniería de detalles del prototipo manual}
+\subsection{Modelo de compactación y presión}
+Se adopta accionamiento manual por manivela de radio nominal y CAD $165\,\mathrm{mm}$.
+El motor de $0,18\,\mathrm{kW}$ se conserva como antecedente y no como accionamiento nominal.
+La ecuación de Holm reproducida por Stelte et al.\ \parencite{stelte_presion_2011} permite estimar
+\begin{equation}P=\frac{P_{N0}}{\nu_{LR}}\left[\exp\left(4\mu_w\nu_{LR}\frac{L}{D}\right)-1\right].\end{equation}
+Los coeficientes $P_{N0}=0,281\,\mathrm{MPa}$, $\nu_{LR}=0,203$ y $\mu_w=0,715$
+proceden de la transcripción del equipo; las páginas y anexos originales no estuvieron disponibles.
+Con $L=10\,\mathrm{mm}$ y $D=6\,\mathrm{mm}$ se obtiene $P=2,25867\,\mathrm{MPa}$.
+La estimación no constituye medición ni calibración del aserrín.
+\subsection{Solicitaciones y accionamiento manual}
+La matriz CAD tiene $102$ canales y dos rodillos $52\times30\,\mathrm{mm}$,
+a radios $27,838$ y $27,662\,\mathrm{mm}$, con separación geométrica $0,5\,\mathrm{mm}$.
+Se conservan tres capas supuestas como alternativas, sin seleccionar una condición nominal física.
+El reparto parcial de área y los torques se obtienen del núcleo EP2 con $1440$ estados correlacionados.
+La fuerza manual ideal supone aplicación tangencial y $F_h=T/0,165$; no incluye pérdidas ni atasco.
+\begin{table}[ht]\centering
+\begin{tabular}{rrrrr}\toprule
+Capa [mm]&$F_{\max}$ [N]&$\bar F$ [N]&$T_{\max}$ [N m]&$F_{h,\max}$ [N]\\\midrule
+1 & 389.30 & 350.69 & 1.1566 & 7.01\\
+2 & 641.44 & 603.69 & 1.9335 & 11.72\\
+4 & 927.99 & 910.02 & 2.8068 & 17.01\\
+\bottomrule\end{tabular}
+\caption{Alternativas condicionadas con presión teórica y $\mu_{\mathrm{ef}}=0,1$.}
+\end{table}
+El cálculo anterior $3,255/0,165=19,727\,\mathrm{N}$ es aritméticamente consistente;
+sus cargas no quedan validadas sin los anexos A.2.1 y A.2.2.
+\subsection{Verificación de componentes}
+El cribado Euler--Bernoulli del eje transversal considera apoyos articulados rígidos hipotéticos
+en taladros de carcasa, conservando los centros CAD de los cuatro rodamientos.
+La sensibilidad compara el cilindro liso de $6\,\mathrm{mm}$ y el núcleo de referencia
+M6 por 1 de $4,773\,\mathrm{mm}$\parencite{tr_rosca_m6_2026}.
+No se conocen grado, raíz real ni rigidez del montaje. La deformación calculada es relevante
+respecto de la holgura, por lo que el contacto desacoplado exige revisión física.
+Los asientos presentan diferencias diametrales de $2\,\mathrm{mm}$ en ambas interfaces
+eje--608 y 608--rodillo. La comparación EZO\parencite{ezo_608zz_2026} no certifica los rodamientos adquiridos.
+El árbol se comprueba solo como sección lisa axial--torsional condicionada;
+su flexión y apoyos no están resueltos. UCF201-8 y UCFL201-8 permanecen sin selección.
+\subsection{Limitaciones y validación pendiente}
+No se aprueba resistencia, fatiga, unión roscada, carcasa ni soporte inferior.
+No se ejecuta FEM de la matriz sin justificar contacto y retención; las figuras CAD no son FEM.
+El protocolo de aserrín prescribe humedad de $12$--$15\,\%$ en base húmeda.
+Para $500\,\mathrm{g}$ iniciales al $10\,\%$, alcanzar $15\,\%$ exige añadir $29,412\,\mathrm{g}$
+de agua, conservando la masa seca. Faltan ensayos para validar presión, torque y calidad del pellet.
+La trazabilidad, sensibilidades y verificaciones nominales se documentan en el anexo independiente.

@@ -1,0 +1,525 @@
+
+Continuaremos y buscaremos completar la Ingeniería de Detalles del prototipo físico de nuestra peletizadora de matriz plana.
+
+REPOSITORIO
+
+Trabaja sobre:
+
+Capstone/Simulacion/
+
+Existe una arquitectura unificada que reutiliza los modelos matemáticos de EP2 y contiene:
+
+- Matriz_real.stp
+- Matriz_prototipo.stp
+- Prototipo.stp
+- Configuraciones de máquina real y prototipo.
+- Modelos de cargas, torque y verificaciones.
+- Resultados de 27 escenarios del prototipo.
+- INFORME_TECNICO.md
+- Memorias y modelos históricos de EP2.
+
+OBJETIVO PRINCIPAL
+
+Quiero completar, hasta donde lo permitan los datos disponibles, las verificaciones mecánicas del prototipo físico.
+
+No quiero volver a desarrollar desde cero los modelos ya realizados en EP2.
+
+Debes recuperar las ecuaciones, hipótesis y criterios originales, reconciliarlos con la documentación de Ingeniería de Detalles y aplicarlos a la geometría real obtenida del CAD.
+
+PRIORIDAD DOCUMENTAL
+
+Se proporcionan tres páginas de la sección "Ingeniería de Detalles", específicamente:
+
+1.1 Validación de escalamiento del prototipo.
+1.2 Validación del material de prueba.
+
+Esta documentación tiene prioridad para establecer las decisiones de diseño del prototipo, sin que ello implique aceptar automáticamente como correctos todos sus resultados numéricos.
+
+Si no tienes acceso directo a estas páginas, detente únicamente en las verificaciones que dependan de ellas e identifica la fuente faltante. No reconstruyas una fórmula o resultado atribuyéndolo a un documento que no hayas leído.
+
+Utiliza los modelos y memorias de EP2 para recuperar las derivaciones y comprobar la coherencia.
+
+No sustituyas decisiones ya tomadas por nuevos supuestos arbitrarios.
+
+==================================================
+1. REVISIÓN DOCUMENTAL
+==================================================
+
+Inspecciona:
+
+- Documentación original de EP2.
+- Anexos de predimensionamiento.
+- Modelo global de cargas.
+- Modelo de compactación y extrusión.
+- Modelo de contacto y superposición de áreas.
+- Memorias del eje transversal.
+- Rodamientos.
+- Árbol principal.
+- Matriz.
+- Uniones mecánicas.
+- Documentación de Ingeniería de Detalles.
+- Código actual de Capstone/Simulacion.
+
+Identifica las ecuaciones empleadas, las referencias bibliográficas y los parámetros utilizados.
+
+Prepara una matriz de trazabilidad:
+
+Parámetro | Valor | Ecuación | Fuente exacta | Aplicación al prototipo | Estado de verificación.
+
+No atribuyas una fuente que no hayas podido revisar.
+
+==================================================
+2. CONDICIONES DE DISEÑO DEL PROTOTIPO
+==================================================
+
+Según Ingeniería de Detalles, el prototipo tiene como objetivo validar el funcionamiento mecánico de la compactación y extrusión mediante una matriz plana giratoria.
+
+Se decidió utilizar accionamiento MANUAL mediante manivela, evitando la reducción mediante poleas o engranajes del diseño comercial.
+
+Por tanto, el accionamiento manual debe considerarse la configuración principal del prototipo.
+
+El motor eléctrico de 0,18 kW permanece como antecedente de una propuesta anterior. No debe utilizarse como accionamiento nominal de esta revisión salvo evidencia de que el diseño fue modificado posteriormente.
+
+Geometría confirmada mediante STEP:
+
+- Matriz exterior: Ø99 mm.
+- Zona perforada: 10 mm.
+- Altura total con resalte: 26 mm.
+- Número de perforaciones: 102.
+- Diámetro efectivo de perforaciones: 6 mm.
+- Relación geométrica L/D: 1,667.
+- Dos rodillos Ø52 × 30 mm.
+- Radios de centros: 27,838 y 27,662 mm.
+- Separación CAD rodillos-matriz: 0,5 mm.
+- Eje transversal CAD: Ø6 × 160 mm.
+- Árbol principal CAD: Ø12,7 × 200 mm.
+
+No confundir geometría nominal CAD con medidas físicas verificadas.
+
+Preservar la información de los archivos STEP originales y sus hashes.
+
+==================================================
+3. RECUPERACIÓN DEL CÁLCULO DE PRESIÓN
+==================================================
+
+La sección de Ingeniería de Detalles presenta el siguiente cálculo basado en Holm:
+
+Pp = (0,281 / 0,203) *
+     [exp(4 * 0,715 * 0,203 * 1,667) - 1]
+
+Resultado aproximado:
+
+Pp = 2,259 MPa.
+
+También se presenta:
+
+lambda_p = Pp / PM
+lambda_p = 2,259 / 43,70
+lambda_p = 0,0517.
+
+Este es el cálculo de referencia para el prototipo.
+
+TAREAS:
+
+1. Recuperar la ecuación original del modelo de Holm desde EP2 y sus fuentes.
+2. Identificar el significado físico y unidades de los coeficientes 0,281, 0,203 y 0,715.
+3. Comprobar que la expresión fue trasladada correctamente.
+4. Reproducir numéricamente el resultado.
+5. Explicar la diferencia entre la referencia de 43,70 MPa y los 44 MPa utilizados en simulaciones comerciales.
+6. Verificar que la longitud efectiva corresponde a los 10 mm de la zona perforada del STEP.
+7. Determinar si las condiciones de aplicación del modelo siguen siendo pertinentes para el material de prueba.
+
+No transformar esta presión teórica en una medición experimental.
+
+Mantenerla como estimación de diseño fundamentada en el modelo recuperado.
+
+==================================================
+4. RECONCILIACIÓN DE RESULTADOS DE CARGAS
+==================================================
+
+La sección de Ingeniería de Detalles establece resultados anteriores para el prototipo:
+
+- Fuerza total máxima: 1,029 kN.
+- Fuerza individual reportada por rodillo: 586 N.
+- Torque resistente máximo: 3,255 N·m.
+- Relación de fuerza frente al modelo comercial:
+  lambda_F = 0,0731.
+- Relación de torque:
+  lambda_T = 0,0366.
+
+También se reporta:
+- Radio de manivela: 165 mm.
+- Fuerza manual requerida: aproximadamente 19,7 N.
+
+Estos resultados proceden del desarrollo anterior de Ingeniería de Detalles y deben recuperarse desde sus anexos, especialmente A.2.1, A.2.2 y las referencias internas que correspondan.
+
+La simulación más reciente basada en el ensamble STEP obtuvo, para p=2,26 MPa y mu=0,1:
+
+Capa 1 mm:
+- Fmax = 389,534 N.
+- Tmax = 1,1573 N·m.
+
+Capa 2 mm:
+- Fmax = 641,813 N.
+- Tmax = 1,9347 N·m.
+
+Capa 4 mm:
+- Fmax = 928,540 N.
+- Tmax = 2,8084 N·m.
+
+Necesito una auditoría rigurosa para explicar la diferencia entre ambos grupos de resultados.
+
+Compara:
+
+- Geometría empleada.
+- Posiciones de rodillos.
+- Espesor de biomasa.
+- Separación rodillos-matriz.
+- Longitud tangencial de contacto.
+- Presión utilizada.
+- Área cubierta por cada rodillo.
+- Coeficiente efectivo de torque.
+- Brazos de momento.
+- Modelo angular.
+- Estados de máximo.
+- Definición de fuerza máxima total.
+- Definición de fuerza máxima por rodillo.
+
+No asumir que la suma de los máximos individuales de cada rodillo es igual al máximo simultáneo de fuerza total.
+
+No modificar parámetros exclusivamente para reproducir los valores antiguos.
+
+Determina si las diferencias proceden de:
+A. Hipótesis distintas.
+B. Geometrías distintas.
+C. Definiciones diferentes de resultados.
+D. Errores de implementación.
+E. Errores o aproximaciones del documento anterior.
+
+Al finalizar, establece qué resultados pueden utilizarse justificadamente como referencia del prototipo actual.
+
+Si no se puede establecer un escenario nominal único, conserva las alternativas documentadas y explica cuál es la información faltante.
+
+==================================================
+5. CÁLCULO DE FUERZA EN LA MANIVELA
+==================================================
+
+El prototipo será accionado manualmente mediante una manivela de radio nominal 165 mm.
+
+Recupera el cálculo original:
+
+F_manivela = T_resistente / r_manivela.
+
+Comprueba:
+
+- Torque resistente calculado.
+- Brazo efectivo real de la manivela.
+- Geometría de la manivela en Prototipo.stp.
+- Condiciones de operación manual.
+- Posibles pérdidas y resistencias adicionales no incluidas en el torque de compactación.
+
+Calcula la fuerza manual correspondiente a los escenarios justificados.
+
+Distingue claramente:
+- Fuerza teórica ideal en la manivela.
+- Fuerza requerida considerando pérdidas conocidas.
+- Fuerzas adicionales de arranque o atascamiento, si no están modeladas.
+
+No afirmar que el esfuerzo manual está validado experimentalmente.
+
+El cálculo anterior de 19,7 N debe reproducirse y contrastarse con el torque de 3,255 N·m.
+
+==================================================
+6. VERIFICACIÓN DEL EJE TRANSVERSAL
+==================================================
+
+Recupera el procedimiento estructural de EP2.
+
+Adáptalo al eje del prototipo:
+
+- Diámetro nominal CAD: 6 mm.
+- Longitud CAD: 160 mm.
+- Posiciones reales de rodillos y rodamientos.
+- Apoyos identificados en el ensamble.
+- Material previsto: varilla de acero zincado, grado pendiente de confirmar.
+
+Considera, cuando corresponda:
+- Flexión.
+- Corte.
+- Tensiones nominales.
+- Desplazamientos.
+- Efecto de diámetro resistente de rosca.
+- Concentraciones de tensión.
+- Posible modificación del contacto por deformación.
+
+Prioriza cargas y momentos correlacionados de los escenarios de compactación.
+
+No heredar las propiedades de SAE 4140.
+
+Si se desconoce el grado de acero:
+- Obtener propiedades únicamente de fuentes verificables.
+- Utilizar sensibilidad en propiedades resistentes.
+- Calcular la resistencia mínima necesaria cuando sea posible.
+- No presentar factores de seguridad hipotéticos como aprobaciones definitivas.
+
+Investiga por qué el cribado anterior mostró flechas potencialmente relevantes respecto de la holgura CAD de 0,5 mm.
+
+Determina si el modelo de contacto desacoplado continúa siendo una aproximación razonable o requiere iteración con la deformación del eje.
+
+No incorporar automáticamente un acoplamiento sin justificar sus condiciones físicas.
+
+==================================================
+7. RODAMIENTOS DE LOS RODILLOS
+==================================================
+
+Se identifican cuatro rodamientos nominales 608ZZ.
+
+Dimensiones nominales:
+- Interior: 8 mm.
+- Exterior: 22 mm.
+- Ancho: 7 mm.
+
+El ensamble presenta:
+- Eje nominal Ø6 mm.
+- Alojamientos Ø24 mm.
+- Desajustes axiales menores documentados.
+
+Debes:
+
+1. Revisar cómo está modelada la transmisión de cargas hacia los rodamientos.
+2. Determinar las reacciones según los escenarios de carga.
+3. Verificar qué soluciones de asiento están realmente modeladas.
+4. Identificar incompatibilidades dimensionales.
+5. Recuperar el método de capacidad y vida L10 de EP2.
+6. Calcular la vida nominal solo cuando existan capacidades del rodamiento y condiciones apropiadas.
+
+Si el fabricante real es desconocido, puedes presentar resultados comparativos para rodamientos de referencia identificados, pero nunca atribuirles la capacidad certificada del componente adquirido.
+
+No asumir que la diferencia Ø6/Ø8 o Ø24/Ø22 queda resuelta automáticamente.
+
+==================================================
+8. ÁRBOL PRINCIPAL Y APOYOS
+==================================================
+
+Recupera la metodología de EP2 para:
+- Cargas axiales.
+- Torque.
+- Esfuerzos combinados.
+- Flexión cuando corresponda.
+- Reacciones.
+- Verificación de uniones.
+
+Usa el árbol principal del CAD del prototipo.
+
+Considera:
+- Diámetro nominal Ø12,7 mm.
+- Longitud CAD de 200 mm.
+- Rosca y sección resistente pendientes de identificación.
+- Fijaciones mediante tuercas.
+- Manivela.
+- Soporte inferior todavía no incorporado al ensamble.
+
+Los candidatos para el soporte inferior son:
+- UCF201-8.
+- UCFL201-8.
+
+No declarar seleccionado ninguno.
+
+Evaluar alternativas de apoyo solamente cuando estén claramente definidas y documentadas.
+
+Identificar la resistencia y rigidez requeridas del soporte.
+
+Comprobar la compatibilidad dimensional de la placa y de las fijaciones cuando existan planos de fabricante.
+
+No asumir empotramiento perfecto ni ausencia de flexión.
+
+==================================================
+9. MATRIZ PERFORADA
+==================================================
+
+Recupera la metodología utilizada en EP2 para analizar la matriz mediante elementos finitos.
+
+El prototipo utiliza:
+- Matriz Ø99 mm.
+- Zona perforada de 10 mm.
+- 102 conductos Ø6 mm.
+- Ligamento mínimo nominal de 1,360 mm.
+- Material previsto AISI 304.
+
+Analiza la factibilidad de ejecutar un FEM con:
+- Geometría CAD real.
+- Cargas obtenidas del modelo de compactación.
+- Condiciones de apoyo justificadas.
+- Contacto y retención acordes con el ensamble.
+
+Si están disponibles las condiciones necesarias:
+- Ejecuta análisis de tensiones.
+- Calcula desplazamientos.
+- Realiza estudio de convergencia.
+- Identifica concentraciones locales de tensión.
+- Evalúa la sensibilidad al soporte y distribución de carga.
+
+Si no están justificadas las condiciones de borde, no inventes una fijación definitiva.
+
+Puedes estudiar casos límite explícitos, documentando su significado físico y limitaciones.
+
+No confundir una triangulación CAD con un análisis FEM.
+
+==================================================
+10. CARCASA Y ELEMENTOS IMPRESOS EN 3D
+==================================================
+
+El prototipo utiliza componentes impresos en PLA.
+
+Identifica si la carcasa:
+- Soporta las reacciones de los ejes.
+- Recibe las fuerzas de compactación.
+- Restringe desplazamientos.
+- Participa en el camino de carga principal.
+
+Cuando corresponda, determinar:
+- Cargas transmitidas.
+- Zonas de apoyo.
+- Deformaciones críticas.
+- Esfuerzos requeridos.
+- Sensibilidad a rigidez del material.
+
+No utilizar propiedades mecánicas de PLA impreso sin considerar:
+- Orientación de impresión.
+- Porcentaje y patrón de relleno.
+- Espesores de pared.
+- Filamento.
+- Anisotropía.
+- Condiciones de montaje.
+
+Si faltan estos datos, informar las propiedades mínimas requeridas en lugar de asegurar resistencia.
+
+==================================================
+11. MATERIAL DE PRUEBA
+==================================================
+
+La documentación de Ingeniería de Detalles establece:
+- Aserrín fino como material de prueba.
+- Granulometría reducida mediante tamizado.
+- Humedad objetivo de 12 a 15 %.
+- Lote de referencia de 500 g.
+- Cálculo de adición de agua mediante balance de masa.
+
+Reproduce y verifica:
+
+m_agua = m_0 * (w_f - w_0) / (1 - w_f).
+
+Comprueba el ejemplo:
+- Masa inicial: 500 g.
+- Humedad inicial: 10 %.
+- Humedad objetivo: 15 %.
+- Agua agregada: aproximadamente 29,4 g.
+
+Distingue la humedad en base húmeda de otras convenciones.
+
+Identifica si estas condiciones de material permiten justificar directamente los parámetros de presión de Holm o si permanece una limitación experimental.
+
+No asumir que la elección de aserrín valida automáticamente la presión estimada.
+
+==================================================
+12. ANÁLISIS INTEGRADO
+==================================================
+
+Con las cargas y verificaciones realizadas, elabora una evaluación del funcionamiento mecánico del prototipo.
+
+Separar:
+
+A. Cálculos reproducidos de documentos previos.
+B. Resultados nuevos obtenidos desde el ensamble STEP.
+C. Sensibilidades y casos hipotéticos.
+D. Verificaciones de resistencia suficientemente justificadas.
+E. Verificaciones pendientes de fabricación o ensayo.
+
+Identifica los modos de falla relevantes:
+
+- Flexión del eje transversal.
+- Fatiga o falla de varillas.
+- Desalineación de rodillos.
+- Fallas en asientos de rodamientos.
+- Sobrecarga de matriz.
+- Aflojamiento de uniones.
+- Deformación de carcasa.
+- Fallas de soporte del árbol principal.
+- Atascamiento durante extrusión.
+
+Prioriza los riesgos respaldados por los cálculos, sin inventar probabilidades de falla.
+
+==================================================
+13. RESULTADOS PARA INFORME LATEX
+==================================================
+
+Una vez realizados los cálculos, prepara una sección técnica en LaTeX.
+
+La redacción debe:
+- Ser formal y concisa.
+- Priorizar decisiones y resultados.
+- Evitar explicar operaciones elementales paso a paso.
+- Utilizar tablas para resumir resultados.
+- Incorporar figuras solamente cuando sean útiles.
+- Referenciar las memorias de cálculo en anexos.
+- Diferenciar claramente resultados de diseño y validación experimental.
+
+Organiza los resultados en:
+
+1. Modelo de compactación y presión.
+2. Solicitaciones del prototipo.
+3. Verificación de componentes.
+4. Accionamiento manual.
+5. Limitaciones y validación pendiente.
+
+Genera el desarrollo detallado de cálculos en un archivo LaTeX independiente para los anexos.
+
+No modificar directamente el documento principal de Overleaf.
+
+Conservar las referencias bibliográficas verificadas y preparar entradas BibLaTeX reutilizables, sin duplicar fuentes.
+
+No redactar como resultado definitivo aquello que no pudo calcularse.
+
+==================================================
+14. CALIDAD Y CONSERVACIÓN
+==================================================
+
+- Mantener intacto EP2.
+- No modificar STEP.
+- No alterar resultados históricos.
+- Conservar la arquitectura unificada.
+- No duplicar código.
+- Preservar los escenarios previos.
+- Registrar las nuevas ejecuciones por separado.
+- Documentar todas las hipótesis y propiedades.
+- Ejecutar regresiones.
+- Verificar unidades y equilibrio.
+- Comprobar convergencia cuando corresponda.
+- Mantener trazabilidad mediante hashes.
+
+No hacer commits ni push.
+
+No modificar el diseño físico sin autorización.
+
+==================================================
+15. ENTREGA FINAL
+==================================================
+
+Al terminar, entregar:
+
+1. Tabla de hipótesis y fuentes recuperadas.
+2. Reconciliación entre resultados anteriores y actuales.
+3. Escenario nominal adoptado y su justificación.
+4. Fuerza y torque del prototipo.
+5. Fuerza requerida en la manivela.
+6. Resultados estructurales de eje, rodamientos, árbol, matriz y carcasa.
+7. Factores de seguridad calculables y sus límites de validez.
+8. Modos de falla identificados.
+9. Gráficos y tablas.
+10. Archivos LaTeX para cuerpo y anexos.
+11. Datos físicos que todavía falta verificar.
+12. Pruebas ejecutadas y archivos modificados.
+
+Si algún cálculo no puede completarse con respaldo suficiente, desarrolla lo que sí esté justificado, identifica exactamente el bloqueo y no sustituyas los datos faltantes por afirmaciones de seguridad.
+
+El objetivo es completar la mayor cantidad posible de Ingeniería de Detalles del prototipo con los antecedentes existentes, sin rehacer trabajo resuelto ni presentar aproximaciones como validaciones experimentales.

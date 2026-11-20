@@ -1,0 +1,19 @@
+{
+  "fecha_consulta": "2026-11-20",
+  "documentos_detalles_originales": "Ambos PDF revisados. Detalles es imagen: PDFp3=impresa1(sección1.1), PDFp2=impresa2(resultados y1.2), PDFp1=continuación yec2; orden invertido.",
+  "EP2": "Entrega_2.pdf: A.2.1 PDFpp13–14; A.2.2 PDFp14 ec4; A.3 PDFpp14–17; A.4 PDFpp17–21; A.5 PDFpp21–23; A.6 PDFpp24–26; A.7/A.8 PDFpp26–29; compras y prototipo PDFpp10–13.",
+  "remisiones_inconsistentes": "Detalles cita A.1.1/A.1.2/A.1.3 y A.2.2 para resultados prototipo; en Entrega_2 esas secciones no contienen una memoria angular de prototipo. Se mapea por contenido, no se inventa anexo faltante.",
+  "Holm_2006": "DOI10.1021/ef0503360, acceso editorial403; derivación original no leída",
+  "Holm_2007": "DOI10.1021/ef070156l, ficha editorial/resumen consultados; no se atribuyen coeficientes al texto completo",
+  "Stelte_2011": "Postprint DTU6337845, ecuaciones1–2 en páginasPDF3–4; significado de símbolos y limitación de proceso revisados",
+  "EZO": "https://www.ezo-brg.co.jp/english/product/spec.php?eid=00913; fila608ZZ, C3300N,C01370N",
+  "TR": "https://www.trfastenings.com/knowledge-base/thread-geometries/metric-coarse-standard; filaM6, P1mm, dmenor4,773mm",
+  "Tumuluru": "Springer DOI10.1007/978-3-030-62888-8 ficha editorial consultada; tabla de parámetros no accesible. Origen maíz20% establecido por EP2p14, no validado independientemente.",
+  "ABS": "StratasysABS-M30 PDFpp1/6/7: valores típicos, muestras negrasF900-T16 capa0,254mm; tabla5 XZ/ZX. No diseño aprobado ni material comercial seleccionado.",
+  "claves_existentes_reutilizadas": [
+    "stelte_presion_2011",
+    "tr_rosca_m6_2026",
+    "ezo_608zz_2026",
+    "equipo_step_prototipo_2026"
+  ]
+}

@@ -1,0 +1,14 @@
+componente,estado,disponible,datos_pendientes,aprobado
+presion,estimacion_de_diseno,Coeficientes y ecuación recuperados en EP2A.2.2 y Detalles1.1; maíz20%,"Tabla original de Tumuluru, especie, temperatura, granulometría y humedad reales del aserrín",False
+cargas,alternativas_condicionadas,Tres capas y presión calculada; sin nominal único,"Espesor alimentado, contacto/deformación, presión y mu efectivos",False
+manivela,equilibrio_ideal_verificado,"RadioCAD165mm; F=T/r,19,727N para3,255Nm","Pérdidas, arranque, atascamiento, fuerza máxima prevista, retención y unión",False
+eje_M6,cribado_condicionado_critico,Flexión/corte/ciclos nominales y malla; deformación relevante respecto al gap,"Grado,paso,raíz,Kt/Kf,asientos,rigidez de apoyos y validación de deformación",False
+608_asientos,incompatible_sin_resolver,Diferencias diametrales2mm en ambas interfaces; no adaptación identificada,"Solución de montaje, tolerancias, ajustes y alineación axial",False
+608_vida,comparacion_referencia,EZO608ZZ C3300/C01370; Fa0 y velocidades10/30rpm de matriz hipotéticas,"Marca adquirida, velocidad/ciclo, carga axial, montaje y lubricación",False
+arbol,seccion_lisa_condicionada,Axial+torsión correlacionadas; no asumir ausencia de flexión,"Raíz/paso, material, apoyo localizador, axial y radial, geometría de uniones",False
+soporte_inferior,pendiente,UCF201-8/UCFL201-8 candidatos; no condición de empotramiento,"Variante exacta, huella/altura, accesibilidad, capacidad radial/axial y rigidez",False
+matriz_FEM,no_ejecutado,"CAD99/10/26,ligamento1,36; EP2 usa TET4 elástico y apoyo anular condicionado","Contacto real arandela/matriz, pretensión/retención, unión al árbol, nu/material y cargas3D locales",False
+uniones_tuercas,pendiente_critico,"ArandelasCADØ24/13×2,5 entre matriz y tuercas; proximidad no acredita precarga","M12 frenteØ12,7, paso, longitud engranada, clase de tuerca, apriete y bloqueo",False
+carcasa_impresa,requisitos_condicionados,"ABS en Detalles/PLA enEP2; reacciones, presión proyectada y rigidez requerida","Confirmar polímero/filamento, orientación, relleno, paredes, ensayos, contacto y fijación al bastidor",False
+fatiga,no_aprobada,"Ciclos firmados de fibras fijas, no envolvente escalar como alternancia","Sut,Se,Kf,Kt,acabado, vida y régimen de atascamientos",False
+ensayo_aserrin,protocolo_propuesto,12–15% base húmeda;500g iniciales,"Especie,tamiz,humedad medida,temperatura,datos de fuerza/torque y calidad del pellet",False

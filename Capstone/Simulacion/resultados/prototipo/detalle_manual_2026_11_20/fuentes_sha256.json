@@ -1,0 +1,19 @@
+{
+  "configuraciones\\detalle_manual.json": "5becab6a956254a8ac33f73b1959aa1908153943179fdd9e2bb559b621f5e623",
+  "geometrias\\Prototipo.stp": "673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83",
+  "geometrias\\Matriz_prototipo.stp": "e97f56123386cfbfe82bd089b031d870f098b0000843c82a5c1366c55300edf2",
+  "resultados\\prototipo\\revision_ensamble_2026_11_19\\historial_escenarios.csv.gz": "9e7cced8f4455bacb27eeae36a680efc3ab22d5cb3fd89a345f1942a673e1003",
+  "resultados\\prototipo\\revision_ensamble_2026_11_19\\ensamble_auditado.json": "7f74b0dd20de43310cb3133629c84f6d3b10e74c301e7344c9e1ddd58bea3182",
+  "resultados\\prototipo\\revision_ensamble_2026_11_19\\geometria_STEP.json": "393efd6da5628f69b98773911a7e3609e126a9f0241408f165a01fb15fb842ae",
+  "peletizadora\\detalle_manual.py": "2ca45c9350916b2791dba5b408538e15849e2299b17d904e1e1fe0dffb685e64",
+  "detalle_prototipo.py": "efd63afd058a0e8bd356695c0f383739f20aa69dfa449a67c1d1543dcc6d099a",
+  "referencias.bib": "e1904082198a5716c238cf6f343f4878ff3f147a8e545ba3f20a133a43ae04c1",
+  "peletizadora\\verificaciones.py": "240c583c6a2a6ff0c8febe491b267132b08266abd36c17bbcaac9ca7be2caeb9",
+  "..\\Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\resumen_comparativo.csv": "99327ed9f15264e8ba4c955b48ac7e5d93182e042393e49ecd7ae7d09182a7c0",
+  "..\\Documentacion\\Entrega_2.pdf": "467dbf77bab491778cd9befc5af59fcb292198d036406b1bf9c80568f21f74a5",
+  "..\\Documentacion\\Ingenieria_de_Detalles.pdf": "4787aaf472672fd8eb18f9952e17d74a7e8e627041c8cc1fe71883dde13de206",
+  "peletizadora\\documentacion_detalle.py": "32e71d32cd294d3889ee1620ac0dd185181885733e48a596db29bfed9749ff2d",
+  "control\\detalle_manual_2026_11_20\\solicitud_equipo.txt": "82580a67f52ec21500aea6ee41827be8b376fe74757e580b4535d48dfb30f4d5",
+  "fisica\\ABS_referencia.json": "8db3ea5c1ec61353be57021b412818c8522e21fbe4689a3753d02635634afe56",
+  "fisica\\referencias_detalle.bib": "272bda7bf593497ae7037ceeebaec4570cdb92f1bc4c3cec2ebddf97bdbdac5f"
+}

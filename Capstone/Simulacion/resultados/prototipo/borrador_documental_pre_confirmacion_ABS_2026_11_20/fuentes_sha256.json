@@ -1,0 +1,17 @@
+{
+  "configuraciones\\detalle_manual.json": "63fd3152a814731d12b5a5b075f74fb2dff3b0ed7be042a8a5e84da4a6896dd7",
+  "geometrias\\Prototipo.stp": "673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83",
+  "geometrias\\Matriz_prototipo.stp": "e97f56123386cfbfe82bd089b031d870f098b0000843c82a5c1366c55300edf2",
+  "resultados\\prototipo\\revision_ensamble_2026_11_19\\historial_escenarios.csv.gz": "9e7cced8f4455bacb27eeae36a680efc3ab22d5cb3fd89a345f1942a673e1003",
+  "resultados\\prototipo\\revision_ensamble_2026_11_19\\ensamble_auditado.json": "7f74b0dd20de43310cb3133629c84f6d3b10e74c301e7344c9e1ddd58bea3182",
+  "resultados\\prototipo\\revision_ensamble_2026_11_19\\geometria_STEP.json": "393efd6da5628f69b98773911a7e3609e126a9f0241408f165a01fb15fb842ae",
+  "peletizadora\\detalle_manual.py": "fc2b67503077ce50d301313681111e1e4a656543450123bc4c5544e9f572ea9e",
+  "detalle_prototipo.py": "1150cb7a726ec6a4557b2217bed73e34c03634233f742d1ba5397486ddf6109f",
+  "referencias.bib": "e1904082198a5716c238cf6f343f4878ff3f147a8e545ba3f20a133a43ae04c1",
+  "peletizadora\\verificaciones.py": "240c583c6a2a6ff0c8febe491b267132b08266abd36c17bbcaac9ca7be2caeb9",
+  "..\\Simulación_peletizadora\\resultados\\etapa_3c_acoplamiento\\resumen_comparativo.csv": "99327ed9f15264e8ba4c955b48ac7e5d93182e042393e49ecd7ae7d09182a7c0",
+  "..\\Documentacion\\Entrega_2.pdf": "467dbf77bab491778cd9befc5af59fcb292198d036406b1bf9c80568f21f74a5",
+  "..\\Documentacion\\Ingenieria_de_Detalles.pdf": "4787aaf472672fd8eb18f9952e17d74a7e8e627041c8cc1fe71883dde13de206",
+  "peletizadora\\documentacion_detalle.py": "449af6a01e936ae012708c99b0bc244c398f3bc70c87104868ac466c6663ac43",
+  "control\\detalle_manual_2026_11_20\\solicitud_equipo.txt": "82580a67f52ec21500aea6ee41827be8b376fe74757e580b4535d48dfb30f4d5"
+}

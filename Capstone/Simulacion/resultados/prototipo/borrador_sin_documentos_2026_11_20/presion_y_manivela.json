@@ -1,0 +1,29 @@
+{
+  "presion": {
+    "P_CAD_pa": 2258670.6718785944,
+    "P_literal_transcripcion_pa": 2259375.7397740074,
+    "L_activa_m": 0.01,
+    "D_canal_m": 0.006,
+    "L_D": 1.6666666666666667,
+    "lambda_p_CAD": 0.051685827731775616,
+    "lambda_p_literal": 0.05170196200855852,
+    "diferencia_44_vs_43_70_pa": 300000.0,
+    "origen_43_70": "Transcripción del equipo; memoria original ausente, no atribuir a calibración ni redondeo demostrado",
+    "estado": "Estimación de diseño con coeficientes transcritos; no medición ni calibración de aserrín"
+  },
+  "manivela_CAD": {
+    "radio_ejes_mm": 164.99999999999164,
+    "centro_eje_empunadura_CAD_mm": [
+      255.86543109222092,
+      -148.799602054092,
+      -11.546850532778413
+    ],
+    "solido_id": 20,
+    "metodo": "Distancia perpendicular entre eje principal y eje cilíndrico paralelo de empuñadura; no longitud de bbox",
+    "limitacion": "Radio entre ejes, no posición real de la mano ni dirección aplicada"
+  },
+  "fuerza_antigua_ideal_n": 19.727272727272727,
+  "fuerza_con_perdidas_conocidas_n": null,
+  "arranque_atascamiento_n": null,
+  "estado": "Accionamiento manual por instrucción del equipo; no usar motor180W como nominal"
+}

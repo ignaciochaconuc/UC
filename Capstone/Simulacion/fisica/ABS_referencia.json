@@ -1,0 +1,16 @@
+{
+  "material_diseno": "ABS",
+  "producto_de_referencia": "Stratasys ABS-M30 negro",
+  "seleccion_comercial_definitiva": false,
+  "fuente": "stratasys_abs_m30_0222a",
+  "url": "https://www.stratasys.com/contentassets/4de0cbf2401141af951112221a775f89/mds_fdm_abs-m30_0222a.pdf?v=49f8d3",
+  "consulta": "2026-11-20",
+  "lectura": "PDFpp1,6,7: aviso de valores típicos, condiciones y tabla5 F900-T16",
+  "condiciones": "Probetas negras impresasF900, cabezalT16, altura de capa0,254mm; orientacionesXZ yZX. No extrapolar a impresora, relleno o paredes desconocidos.",
+  "orientaciones": [
+    {"orientacion": "XZ", "E_traccion_pa": 2400000000, "fluencia_traccion_tipica_pa": 30800000, "E_compresion_pa": 2200000000},
+    {"orientacion": "ZX", "E_traccion_pa": 2300000000, "fluencia_traccion_tipica_pa": 27500000, "E_compresion_pa": 2160000000}
+  ],
+  "metodos": {"traccion": "ASTM D638", "compresion": "ASTM D695"},
+  "limitaciones": "Valores típicos para referencia/comparación según fabricante, no mínimos garantizados ni especificaciones de diseño. No se asignan propiedades isotrópicas completas, resistencia a apoyo, fatiga, fluencia lenta ni Poisson. No hay piezas fabricadas o ensayadas."
+}

@@ -1,0 +1,109 @@
+{
+  "grupos": [
+    {
+      "grupo": "unificado_y_detalle",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "cwd": "C:\\UC_1\\UC\\Capstone\\Simulacion",
+      "salida": "...............................................                          [100%]\n47 passed in 20.53s\n"
+    },
+    {
+      "grupo": "EP2",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\UC_1\\UC\\Capstone\\Simulación_peletizadora",
+      "salida": "..................................................................       [100%]\n66 passed in 6.00s\n"
+    },
+    {
+      "grupo": "transmision",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\UC_1\\UC\\Capstone\\Transmision",
+      "salida": "........................................................................ [ 57%]\n.....................................................                    [100%]\n125 passed in 5.19s\n"
+    },
+    {
+      "grupo": "6a",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "pytest",
+        "Capstone/integracion/test_auditoria_6a.py",
+        "-q"
+      ],
+      "cwd": "C:\\UC_1\\UC",
+      "salida": "..                                                                       [100%]\n2 passed in 0.85s\n"
+    },
+    {
+      "grupo": "4a",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "test_etapa4a.py"
+      ],
+      "cwd": "C:\\UC_1\\UC\\Capstone\\Analisis_matriz_eje_vertical\\Etapa_4A_matriz_y_arbol_principal",
+      "salida": "VALIDACIÓN 4A: historial, correlación y reconstrucción por perforación OK\n"
+    },
+    {
+      "grupo": "4b",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "test_etapa_4B.py"
+      ],
+      "cwd": "C:\\UC_1\\UC\\Capstone\\Analisis_matriz_eje_vertical\\Etapa_4B_matriz_arbol_condicional",
+      "salida": "OK — 5 validaciones, sin alterar fuentes.\n"
+    },
+    {
+      "grupo": "4d",
+      "codigo": 0,
+      "comando": [
+        "C:\\Users\\chaco\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "validar_4D.py"
+      ],
+      "cwd": "C:\\UC_1\\UC\\Capstone\\Analisis_matriz_eje_vertical\\Etapa_4D_FEM_preliminar",
+      "salida": "Correcto: 102 perforaciones, malla conectada, volumen, campo afín 3D, F/T correlacionados, 12 soluciones y equilibrio.\n"
+    }
+  ],
+  "conservacion_detalle": {
+    "archivos_previos": 617,
+    "historicos_intactos": true,
+    "documentacion_actualizada_con_respaldo": [
+      "Simulacion/INFORME_TECNICO.md",
+      "Simulacion/README.md"
+    ]
+  },
+  "conservacion_ensamble": {
+    "archivos_previos": 552,
+    "protegidos_intactos": true,
+    "fuentes_editadas_con_respaldo": [
+      "Simulacion/INFORME_TECNICO.md",
+      "Simulacion/README.md",
+      "Simulacion/simular.py",
+      "Simulacion/configuraciones/prototipo.json",
+      "Simulacion/peletizadora/nucleo.py"
+    ]
+  },
+  "conservacion_EP2": {
+    "archivos_anteriores_verificados": 486,
+    "alterados": 0,
+    "retiro_reversible": true
+  },
+  "latex": "Validación estructural de archivos y claves; pdflatex/lualatex/biber no disponibles, no compilaciónPDF"
+}

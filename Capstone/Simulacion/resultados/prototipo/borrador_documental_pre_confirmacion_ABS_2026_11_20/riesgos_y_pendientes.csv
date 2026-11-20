@@ -1,0 +1,9 @@
+prioridad,modo,accion,probabilidad
+P1,Montaje de rodillos y608,Resolver interfaces6/8 y22/24 antes de ensayo; no hay transferencia de carga verificable actualmente,
+P1,Flexión y contacto M6,"La deformación elástica hipotética puede superar0,5mm; verificar montaje, raíz y desplazamiento, sin acoplar automáticamente",
+P1,Árbol y soporte inferior,"Falta soporte y fijación; M12/Ø12,7 requiere reconciliar familia de rosca y retención",
+P1,Unión matriz/manivela/árbol,Definir transferencia de torque y bloqueo axial; no asignar torque a tuerca sin precarga/rozamiento,
+P2,Carcasa impresa y bastidor,Resolver ABS/PLA; confirmar camino de reacciones y medir rigidez y geometría de impresión,
+P2,Presión y material de prueba,Validar presión/torque y efecto de humedad; aserrín no calibra coeficientes automáticamente,
+P2,Matriz perforada,Definir apoyo real y material antes de FEM; refinar ligamentos y contacto con arandelas,
+P2,"Fatiga, aflojamiento y atasco","Sin ciclo de uso, Kf y límite de fuerza manual no se certifica duración ni resistencia al bloqueo",
