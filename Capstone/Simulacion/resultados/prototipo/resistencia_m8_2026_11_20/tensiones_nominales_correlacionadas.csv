@@ -1,0 +1,4 @@
+capa_m,sigma_nominal_max_pa,tau_corte_nominal_max_pa,x_m,paso_sigma_max,fuerza_correlacionada_n,torque_correlacionado_nm,limite_modelo
+0.001,124692454.25931612,7511580.362240255,0.128117780089,977,377.6365297019735,1.107734276140444,"Sección uniforme de raíz6,466mm, elasticidad y doble empotramiento hipotéticos. Sin axial de precarga."
+0.002,208499078.99141854,12683200.269734869,0.128117780089,526,616.870708154956,1.7877834133581936,"Sección uniforme de raíz6,466mm, elasticidad y doble empotramiento hipotéticos. Sin axial de precarga."
+0.004,315361913.3361819,18546460.3608504,0.128117780089,541,917.9576373476054,2.6345946073650466,"Sección uniforme de raíz6,466mm, elasticidad y doble empotramiento hipotéticos. Sin axial de precarga."

@@ -1,0 +1,43 @@
+{
+  "grupos": [
+    {
+      "grupo": "unificado",
+      "codigo": 0,
+      "salida": "........................................................................ [ 96%]\n...                                                                      [100%]\n75 passed in 12.64s\n"
+    },
+    {
+      "grupo": "EP2",
+      "codigo": 0,
+      "salida": "..................................................................       [100%]\n66 passed in 3.11s\n"
+    },
+    {
+      "grupo": "transmision",
+      "codigo": 0,
+      "salida": "........................................................................ [ 57%]\n.....................................................                    [100%]\n125 passed in 3.29s\n"
+    },
+    {
+      "grupo": "integracion",
+      "codigo": 0,
+      "salida": "..                                                                       [100%]\n2 passed in 0.50s\n"
+    },
+    {
+      "grupo": "4A",
+      "codigo": 0,
+      "salida": "VALIDACIÓN 4A: historial, correlación y reconstrucción por perforación OK\n"
+    },
+    {
+      "grupo": "4B",
+      "codigo": 0,
+      "salida": "OK — 5 validaciones, sin alterar fuentes.\n"
+    },
+    {
+      "grupo": "4D",
+      "codigo": 0,
+      "salida": "Correcto: 102 perforaciones, malla conectada, volumen, campo afín 3D, F/T correlacionados, 12 soluciones y equilibrio.\n"
+    }
+  ],
+  "conservacion": {
+    "archivos_verificados": 778,
+    "alterados": 0
+  }
+}

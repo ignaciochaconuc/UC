@@ -1,0 +1,2 @@
+diametro_raiz_m,diametro_liso_m,I_liso_sobre_I_raiz,W_liso_sobre_W_raiz,sigma_lisa_sobre_sigma_raiz_mismo_momento,estado
+0.006466,0.008,2.3432420209237788,1.8939253634116444,0.5280039115156251,Sólo propiedades de una sección. No representa EI del eje mixto ni resistencia global; extremosM8siguen teniendo raíz y transiciones pendientes.

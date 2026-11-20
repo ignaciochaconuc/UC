@@ -1,0 +1,13 @@
+{
+  "configuraciones/resistencia_m8.json": "8a19a0918ac799700f4f9fa1209c6550a0e814ed161b2f14e2863fad4059c758",
+  "verificar_m8.py": "60807c7b914bcb1eb81d64b31d33403d51b046e11fae6d65146cf338180d956a",
+  "peletizadora/resistencia_m8.py": "a21f1813b8ebb6e0448c1b73fce5325cd5b6696700e6ab0f1df010b3cbbc2885",
+  "peletizadora/memoria_resistencia_m8.py": "e6d0fff893a16bfec04e2a9801a62e06088e8903c2a026d9229e9fa8e6ff1212",
+  "peletizadora/acoplado_prototipo.py": "debd2e00f6d0acf9b5c0777c33a09f8a3a5788c7fd886b411cb94d6a3368af55",
+  "../Simulación_peletizadora/estructural/resistencia_fatiga.py": "4922539deaf2b6a47930cdf74b30f53b7db7413b491650711a9d2012293e7c10",
+  "fisica/ABS_referencia.json": "8db3ea5c1ec61353be57021b412818c8522e21fbe4689a3753d02635634afe56",
+  "fisica/referencias_resistencia_m8.bib": "d3f54ad4f4dd671649d76598f7c30f4f627a12a67411e3d8fe4ae8446ed71418",
+  "resultados/prototipo/acoplado_m8_2026_11_20/serie_M8x1.25_h1mm.csv": "96074da0eeeafdf68f65847310c322c1c2923e3ebc0049690154803c0477be81",
+  "resultados/prototipo/acoplado_m8_2026_11_20/serie_M8x1.25_h2mm.csv": "4c21106738e80dc6ffd245bcc3bbcc1315f252b8630e7f21f5524c9344bd46ef",
+  "resultados/prototipo/acoplado_m8_2026_11_20/serie_M8x1.25_h4mm.csv": "e5356786c7b6d46b205b260ba2b02397253cd8ebcfb03ec078d0200ee380710e"
+}

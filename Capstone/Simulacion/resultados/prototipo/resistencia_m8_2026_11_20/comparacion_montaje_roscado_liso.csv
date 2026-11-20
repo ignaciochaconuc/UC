@@ -1,0 +1,9 @@
+aspecto,varilla_roscada,eje_liso_extremos_M8,conclusion
+Superficie bajo608,"Crestas de roscaM8, sin asiento cilíndrico continuo",Tramo cilíndricoØ8 con ajuste por definir,El bore8 no verifica por sí solo ajuste. Rosca y asiento liso no son equivalentes
+Sección resistente,"Núcleo de referencia6,466mm a todo lo largo",Ø8solo donde exista tramo liso; extremosM8 conservan raíz,No usar8mm en la sección roscada ni trasladar315MPa a166MPa como aprobación del eje completo
+Rigidez,EI del modelo3C existente,"EI escalonado distinto, pendienteslongitudes",Un eje liso requiere geometría y futuro recálculo acoplado; aquí no se cambia3C
+Concentraciones,"Raíz, primera espira, apoyo en crestas y contacto con tuerca","Salida de rosca, hombros y filetes, más raíz de extremos",Kt yKf propios de sección nominal elegida; no duplicar corrección nominal/root
+Alojamiento exterior608,RodilloCADØ24 frente608Ø22,Misma incompatibilidad aunque se cambie el eje,Redefinir asiento o adaptadorØ24/22 de1mm nominalradial; interferencias/tolerancias y resistencia pendientes
+Retención axial608,Tuercas/arandelas sin pila axial verificada,"Hombros, separadores y extremos roscados por definir",Separadores apoyan sólo anillo interior; no introducir precarga axial por error
+Capacidad de material,Clase de varilla comprada sólo si certificada,Material de barra/proceso propios,La clase8.8de un producto roscado no se hereda por una barraC45 mecanizada
+Doble empotramiento,No acreditado por tuercas sobreABS,Tampoco acreditado sólo por tramo liso,"Ambos necesitan soportes con capacidad de fuerza, par y rigidez cuantificadas"

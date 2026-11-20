@@ -1,0 +1,18 @@
+{
+  "revision": "resistencia_m8_2026_11_20",
+  "alternativa_preferente": "M8x1.25, pendiente de aprobación y sin modificaciónCAD",
+  "clases": [
+    {"clase": "4.6", "Sy_min_pa": 240000000, "Sut_min_pa": 400000000, "producto": "norelem07640-081 M8x1000 zincado", "nota": "Clase de producto; composición exacta y certificado pendientes"},
+    {"clase": "8.8", "Sy_min_pa": 640000000, "Sut_min_pa": 800000000, "producto": "Böllhoff DIN976A M8x1,25 zincado o norelem07640-083", "nota": "Rp0,2 mínimo d<=16mm; confirmar certificado, no asignar automáticamenteC45/4140"},
+    {"clase": "10.9", "Sy_min_pa": 940000000, "Sut_min_pa": 1040000000, "producto": "Böllhoff DIN976A M8x1,25 acabado bright", "nota": "Producto consultado sin zincado; no equivale al acabado8.8"}
+  ],
+  "fuente_propiedades": "Böllhoff Manual of Fastening Technology, edición8, tabla3.2 que reproduce DIN EN ISO898-1; mínimos de clase, no certificado del producto comprado",
+  "entallas": [
+    {"nombre": "nominal_sin_entalla", "Kt": 1, "q": 0, "estado": "Límite nominal, no geometría de rosca real"},
+    {"nombre": "sensibilidad_EP2_moderada", "Kt": 1.5, "q": 0.7, "estado": "SensibilidadEP2; requiereKt referido a tensión nominal de raíz6,466mm"},
+    {"nombre": "sensibilidad_EP2_alta", "Kt": 2.5, "q": 0.9, "estado": "SensibilidadEP2, noKt validado de roscaM8 o primera espira"}
+  ],
+  "fatiga": {"fibras": 144, "fibras_contraste": 72, "Se_producto_pa": null, "acabado": null, "vida_objetivo": null, "nota": "Rainflow yGoodmanEP2. No asignarSe=0,5Sut corregido niMarin sin superficie,confiabilidad,recubrimiento/proceso. EntregarSe requerido,noFS real."},
+  "fijaciones_ABS": {"presupuesto_incremento_holgura_m": 0.00005, "estado_presupuesto": "Presupuesto ilustrativo del detalle, no tolerancia aprobada", "k_rot_sensibilidad_nm_rad": [0, 100, 1000, 10000, 100000], "k_traslacion_sensibilidad_n_m": [1000000, 10000000, 100000000], "nota": "Postproceso estructural con cargas3C congeladas, no nuevo equilibrio de compactación ni propiedades de soporte real"},
+  "montaje": {"producto_seleccionado": false, "precarga_real_n": null, "longitud_engranada_m": null, "radio_raiz_m": null, "ajustes_608": null, "longitudes_tramos_lisos_m": null, "transiciones_filetes_m": null}
+}

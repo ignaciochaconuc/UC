@@ -1,0 +1,13 @@
+Resistencia y montajeM8 — revisión20-11-2026
+Desde Capstone/Simulacion: python verificar_m8.py
+Pruebas: python herramientas/pruebas_resistencia_m8.py
+Sólo se postprocesan3series3Cexistentes de1440estados. No se llama a simular().
+Factores estáticos: cocientes de flexión condicionados a mínimos de clase yKt supuestos;
+no FS del producto adquirido ni de la fijación. Fatiga: rainflow real del historial y
+Se requerido; FS real queda nulo por falta deSe ynotchas reales.
+La rigidez de fijaciones se explora con cargas congeladas, no se cambia3C.
+MomentoM_Y_A es conjugado al giro del planoY y corresponde a eje globalZ;
+M_Z_A es conjugado al giro del planoZ y corresponde a eje global-Y.
+La memoriaLaTeX es un archivo de inclusión posterior, no compilado aquí.
+Referencias verificadas en fuentes_documentales.json y referencias_reutilizables.bib.
+No se modificaCAD, EP2, fuentes originales ni resultados históricos.

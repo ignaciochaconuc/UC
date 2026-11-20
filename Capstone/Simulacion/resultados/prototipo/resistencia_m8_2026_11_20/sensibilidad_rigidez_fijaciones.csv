@@ -1,0 +1,25 @@
+kv_hipotetico_n_m,kr_hipotetico_nm_rad,incremento_holgura_abs_max_con_cargas_congeladas_m,satisface_solo_presupuesto_hipotetico,estado,capa_m
+1000000000000.0,0.0,0.0002627399984355722,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+1000000000000.0,100.0,0.0002019784969399198,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+1000000000000.0,1000.0,6.554809235294136e-05,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+1000000000000.0,10000.0,8.452736890234993e-06,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+1000000000000.0,100000.0,8.706400799303313e-07,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+1000000.0,1000000000.0,0.00018438559255218838,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+10000000.0,1000000000.0,1.8439119922375884e-05,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+100000000.0,1000000000.0,1.843952075611574e-06,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.001
+1000000000000.0,0.0,0.000439262200757283,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+1000000000000.0,100.0,0.00033767812230505096,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+1000000000000.0,1000.0,0.000109586865493121,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+1000000000000.0,10000.0,1.4131763303069647e-05,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+1000000000000.0,100000.0,1.4555819183096659e-06,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+1000000.0,1000000000.0,0.0003111223924047436,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+10000000.0,1000000000.0,3.1131337390333076e-05,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+100000000.0,1000000000.0,3.113442049398503e-06,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.002
+1000000000000.0,0.0,0.0006643442956013997,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+1000000000000.0,100.0,0.0005107075376851588,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+1000000000000.0,1000.0,0.00016574013677677393,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+1000000000000.0,10000.0,2.1372991051938755e-05,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+1000000000000.0,100000.0,2.201428817691336e-06,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+1000000.0,1000000000.0,0.00045516796049293234,False,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+10000000.0,1000000000.0,4.553526114689997e-05,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004
+100000000.0,1000000000.0,4.55385070752136e-06,True,"Postproceso de rigidez, no nuevo3C ni soporte comercial; contacto no recalculado, no operación convergida",0.004

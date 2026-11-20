@@ -1,0 +1,46 @@
+{
+  "fecha_consulta": "2026-11-20",
+  "propiedades_producto": {
+    "url": "https://eshop-tr.boellhoff.com/out/media/pdf/the_manual_of_fastening__8100-en.pdf",
+    "localizador": "Tabla3.2, edición8; tabla publicada/indexada revisada, no texto completoISO898-1",
+    "acceso": "Lector web inicial disponible; relecturas y descarga local devolvieron timeout/403"
+  },
+  "producto8_8": {
+    "url": "https://eshop.boellhoff.de/out/media/pdf/DIN_976_A_Stahl_8.8_gv___en.pdf",
+    "localizador": "PDFp1 filaM8, paso1,25, zincado"
+  },
+  "producto10_9": {
+    "url": "https://eshop.boellhoff.de/out/media/pdf/DIN_976_A_Stahl_10.9___en.pdf",
+    "localizador": "PDFp1 filaM8, paso1,25, bright"
+  },
+  "producto4_6": {
+    "fuente": "norelem07640, ficha oficial DIN976-1, PDFpp1–2 indexadas",
+    "referencia": "07640-081M8x1000 acero4.6zincado;07640-0838.8zincado",
+    "nota": "No sustituir acero4.6por4.8"
+  },
+  "grado42CrMo4": {
+    "url": "https://www.nossolgmbh.de/htmlgb/produkt_01.html",
+    "localizador": "DIN976-1,M2–M72, materiales42CrMo4+QT y42CrMoS4+QT"
+  },
+  "clase_vs_grado": {
+    "url": "https://www.bonfattifilettature.it/en/threaded-rods-2/",
+    "localizador": "Apartados8.8y10.9;42CrMo4en ambos; requisitos mecánicos por clase"
+  },
+  "barraC45": {
+    "url": "https://steelnavigator.ovako.com/steel-grades/c45/",
+    "localizador": "TablaMechanicalProperties,047A,+N,Roundbar,<10mm,Sy320mínimo,Rm660típico",
+    "limite": "Referencia de barra normalizada, no claseISO898 ni varilla adquirida"
+  },
+  "EZO608": {
+    "url": "https://www.ezo-brg.co.jp/english/product/spec.php?eid=00913",
+    "dimensiones_mm": [
+      8,
+      22,
+      7
+    ],
+    "nota": "Referencia, no fabricante adquirido. Ajustes y hombros se deben verificar para variante real."
+  },
+  "procedimiento_EP2": "estructural/resistencia_fatiga.py: tension_flexion_punto,contar_rainflow,factor_goodman,Marin; no se ejecuta su runner ni sus propiedades4140",
+  "concentradores": "Sólo sensibilidadesEP2; faltan perfil/raíz/proceso y primera espira. No atribuir estosKt a un catálogo deM8.",
+  "propiedades_ABS": "fisica/ABS_referencia.json: probetas específicas, no valores garantizados de un soporte fabricado"
+}

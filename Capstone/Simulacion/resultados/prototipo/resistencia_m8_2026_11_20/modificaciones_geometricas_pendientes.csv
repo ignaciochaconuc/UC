@@ -1,0 +1,9 @@
+prioridad,elemento,modificacion_requerida,CAD_editado
+P1,Taladros de cámaraØ6,Definir pasos/asientos paraM8sin cambiar centros como primera propuesta; verificar pared y soporte. No basta aumentar nominal a8.,False
+P1,Fijación a carcasaABS,"Definir apoyo metálico, collar o placas solidarias al bastidor con reacción y par. No presuponer empotramiento de plástico.",False
+P1,Asientos interiores608,"Definir cuatro tramos lisos, longitudes efectivas, ajustes y alineación, o adaptación independiente documentada.",False
+P1,Alojamientos rodillosØ24,Cambiar nominal/asiento de acuerdo con608Ø22 o definir adaptador con ajustes y resistencia.,False
+P1,Posiciones axiales,"Resolver desfases0,2–0,3mm de asientos y rodamientos; revisar anchos7mm y pila de ambos rodillos.",False
+P1,"Raíz, transiciones y tuercas","Especificar paso1,25, tolerancia, proceso laminado/cortado, radio raíz, salida de rosca, filetes, longitud engranada y clase de tuercas.",False
+P2,Arandelas/placas/separadores,"Definir superficies planas, áreas efectivas y distribución de apriete; impedir contacto de separador con anillo exterior o blindaje.",False
+P2,Acabado y mantenimiento,Definir rugosidad/asiento y recubrimiento sin asumir equivalencia del10.9bright con8.8zincado; documentar bloqueo y desmontaje.,False

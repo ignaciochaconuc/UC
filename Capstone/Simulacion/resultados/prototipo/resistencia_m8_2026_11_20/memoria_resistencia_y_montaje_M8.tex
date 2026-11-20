@@ -1,0 +1,120 @@
+% Memoria independiente para incorporación posterior. Requiere amsmath,booktabs,biblatex.
+\section{Verificación resistente y montaje del eje transversal M8}
+\subsection{Alcance y propiedades}
+Se conserva M8 como alternativa preferente, sin aprobar seguridad ni editar geometría.
+Se utilizan exclusivamente los1440estados correlacionados por capa del modelo3Cya ejecutado.
+No se repite la iteración de contacto ni se modifica la presión, las fuerzas o la holgura convergida.
+Se reconstruyen los esfuerzos firmados mediante las funciones y matricesEB de EP2.
+El eje permanece fijo: no se supone flexión rotativa completamente alternante.
+
+Se identificaron varillas DIN976M8en clases4.6(norelem),8.8zincada(Böllhoff/norelem)
+y10.9bright(Böllhoff)\parencite{boellhoff_varilla_m8_88_2026,boellhoff_varilla_m8_109_2026}.
+No se selecciona proveedor ni se acredita el producto adquirido.
+Los mínimos publicados por Böllhoff, tabla3.2 basada en ISO898-1\parencite{boellhoff_manual_8100_2023}, son:
+\begin{center}\begin{tabular}{lrr}\toprule
+Clase&$S_y$ o $R_{p0,2,\min}$ [MPa]&$S_{ut,\min}$ [MPa]\\\midrule
+4.6&240&400\\8.8,$d\leq16$mm&640&800\\10.9&940&1040\\\bottomrule
+\end{tabular}\end{center}
+Una clase de resistencia especifica propiedades de producto; no identifica por sí solaC45,
+4140o una condición de barra. El zincado no es grado de acero.
+Estas propiedades son condicionales a suministro conforme a la clase y no garantizan fatiga,
+geometría de raíz ni resistencia del montaje. La referencia10.9consultada no es zincada.
+Nossol documenta varillas en42CrMo4+QT, y Bonfatti admite42CrMo4en productos8.8y10.9\parencite{nossol_materiales_varilla_2026,bonfatti_clases_materiales_2026}:
+el nombre del acero no fija una resistencia única. Como referencia alternativa de barra
+para mecanizado, OvakoC45variante047A+N, redondo menor que10mm, publica$S_y\geq320$MPa
+y$R_m=660$MPa típico\parencite{ovako_C45_normalizado_2026}. No se utiliza ese valor típico para garantizar una varilla o su fatiga,
+ni se transfiere la propiedad de barras4140de otro diámetro aM8.
+
+\subsection{Resistencia estática}
+Se mantiene el núcleo de referencia$d=6,466$mm. La recuperación de momentos reproduce
+los esfuerzos originales3Csin cambios. Para cada sección y estado se conserva la correlación
+de ambos planos. El factor de flexión condicional es
+\[
+n_{y,b}=\frac{S_y}{K_t\sigma_{b,\max}},\qquad
+\sigma_b=\frac{32\sqrt{M_Y^2+M_Z^2}}{\pi d^3}.
+\]
+La flexión superficial y el corte máximo central no se suman como esfuerzos co-localizados.
+La precarga axial de montaje no se conoce y no está incluida. Los valores$K_t=1;1,5;2,5$
+son referencias nominal y sensibilidades heredadas deEP2, no concentradores identificadosM8.
+Se requeriría comprobar raíz, primera espira cargada, apoyo, contacto y salida de rosca,
+con$K_t$referido a tensión nominal de raíz para evitar doble contabilización.
+
+\begin{center}\begin{tabular}{lrrrr}\toprule
+Clase&Capa[mm]&$K_t=1$&$K_t=1,5$&$K_t=2,5$\\\midrule
+4.6 & 1 & 1.925 & 1.283 & 0.770\\
+4.6 & 2 & 1.151 & 0.767 & 0.460\\
+4.6 & 4 & 0.761 & 0.507 & 0.304\\
+8.8 & 1 & 5.133 & 3.422 & 2.053\\
+8.8 & 2 & 3.070 & 2.046 & 1.228\\
+8.8 & 4 & 2.029 & 1.353 & 0.812\\
+10.9 & 1 & 7.539 & 5.026 & 3.015\\
+10.9 & 2 & 4.508 & 3.006 & 1.803\\
+10.9 & 4 & 2.981 & 1.987 & 1.192\\
+\bottomrule\end{tabular}\end{center}
+Los factores son de flexión condicionada, no factores aprobados del componente.
+Si el cociente nominal ya es inferior a uno, el caso no queda justificado ni siquiera sin entalla.
+
+\subsection{Fatiga recuperada de EP2}
+Se analizan144fibras fijas y ambos lados de fijaciones y puntos de carga, con contraste72fibras.
+Se reutilizan tensión firmada y conteo rainflow periódico de EP2, conservando amplitud,
+media y conteo del mismo ciclo. No se convierte una envolvente positiva en alternancia.
+El criterio original es
+\[
+\frac1{n_f}=\frac{K_f\sigma_a}{S_e}
+ +\frac{K_t\max(\sigma_m,0)}{S_{ut}},\qquad K_f=1+q(K_t-1).
+\]
+Se recuperó también Marin, pero no se asignan acabado, confiabilidad, límites de fatiga
+ni efecto del recubrimiento que no estén documentados. Una clase8.8o10.9no garantiza$S_e$.
+Por tanto, el factor real de fatiga queda pendiente. Se cuantifica el requisito
+\[
+S_{e,\rm req}=\max_{\rm ciclos}\frac{K_f\sigma_a}
+ {1-K_t\max(\sigma_m,0)/S_{ut}}
+\]
+para$n_f=1$, siempre que el denominador sea positivo; si no, ninguna resistencia a fatiga
+finita satisface ese escenario de Goodman. No constituye vida a fatiga ni daño acumulado:
+faltan$S_e$,entallas reales y régimen de uso. Los factores de Marin de4140no se transfieren.
+
+\subsection{Empotramientos sobre ABS}
+El soporte debe transmitir conjuntamente reacción radial y par flector, no sólo fuerza.
+Para un alojamiento corto de diámetro propuesto$d_h$y longitud de paredCAD$t$,
+se evalúa como diagnóstico una tracción proyectada firmada lineal
+\[
+\mathbf p_\pm=\frac{\mathbf R}{d_ht}\pm\frac{6\mathbf M_{\rm conjugada}}{d_ht^2}.
+\]
+Las fuerzas y pares se combinan en el mismo estado. No es distribución real de presión,
+FEM ni admisible deABS; los cambios de signo requieren contacto en lados distintos del bore.
+La pared medida corresponde al CADactualØ6, no a una geometríaM8ya aprobada.
+No se compara esta tracción con resistencia a tracción de probetas para fabricar unFS.
+En el caso4mm las demandas alcanzan aproximadamente457N y8,37Nm por fijación;
+el diagnóstico proyectado incorpora el par y es del orden153MPa, frente a8,7MPa
+si se ignorase el par. Esto no es prueba de falla deABS ni presión local validada,
+pero impide justificar el empotramiento sólo con el promedio$R/(dt)$.
+El ABS de diseño presenta proceso, orientación, relleno, paredes y fluencia lenta pendientes.
+Se requiere área de reparto, capacidad de par, precarga/retención y rigidez verificadas.
+
+Se realiza una sensibilidad elástica de resortes de traslación y giro con las mismas cargas
+congeladas; no se presenta como otro equilibrio3C. El presupuesto de incremento de holgura
+$0,05$mm es ilustrativo y no una especificación aprobada. Es necesario ensayar o modelar
+las fijaciones reales antes de sustituir el resorte por una propiedad del soporte.
+Para4mm, en este cribado, $k_\theta=10^4$Nm/rad con traslación prácticamente fija
+limita el incremento a unos0,021mm; $k_v=10^7$N/m con giro prácticamente fijo
+lo limita a unos0,046mm. Son ensayos numéricos separados: no se deben combinar
+esos dos valores como mínimos simultáneos sin comprobar el presupuesto conjunto.
+Una solución a estudiar es descargar fuerza y par en soportes/collares metálicos y bastidor,
+evitando atribuir empotramiento sólo a tuercas apretadas contra pared curva deABS.
+
+\subsection{Montaje y conclusión}
+La varilla totalmente roscada no ofrece un asiento lisoØ8continuo. El bore608Ø8no acredita
+ajuste sobre crestas de rosca ni resistencia a fretting. Un eje lisoØ8con extremosM8mejora
+la definición de asiento, pero requiere tramos, radios, salida de rosca y material propios.
+Las raíces de extremos mantienen su diámetro resistente: no cabe usarØ8en todo el eje ni
+aplicar directamente propiedades de producto8.8a una barra mecanizada.
+La rigidez escalonada cambiaría el contacto: las cargas3Cactuales sólo sirven para comparación
+condicionada de secciones; una vez definido el eje debe recalcularse su modelo.
+Persisten alojamientoØ24frente608Ø22, desfasesaxiales y taladros de cámaraØ6.
+Se requiere resolverlos en una propuesta posterior de CAD.
+
+M8se conserva como alternativa preferente, sin aprobación. La clase4.6no cubre el escenario4mm
+ni siquiera en flexión nominal;8.8y10.9aportan margen condicionado, pero una clase superior
+no resuelve fijaciónABS, asiento608o fatiga desconocida. El montaje sobre tramo liso y
+soporte metálico merece estudiarse antes de aprobar la varilla totalmente roscada sobre plástico.
