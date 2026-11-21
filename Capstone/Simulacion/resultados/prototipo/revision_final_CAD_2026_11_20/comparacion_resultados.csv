@@ -1,0 +1,18 @@
+resultado,anterior,actualizado,unidad,variacion_pct,estado,explicacion
+Fuerza máxima,917.9962632879824,918.0617630550478,N,0.0071350799218716,Recalculado,Rodillos centrados y nueva luz de fijaciones; centroides corregidos
+Torque máximo,2.780389530933798,2.779984283217045,Nm,-0.0145752137333254,Recalculado,Geometría prácticamente conservada; máximo en otro estado
+Flecha M8,0.1568713512132,0.1564471209682,mm,-0.2704319442136116,Recalculado,"Luz y repartos corregidos, mismo núcleo6,466"
+Tensión nominal M8,315.3619133361819,314.74577178575566,MPa,-0.195376018590232,Recalculado,"Mismo modelo doblemente empotrado, nueva luz"
+Holgura mínima R1,0.5217839148919,0.5219038784383,mm,0.0229910395809884,Recalculado,Deformación y simetría del nuevo montaje
+Longitud árbol,0.2,0.235,m,17.499999999999982,Recalculado,Cilindro medido200->235mm
+Fuerza manual,16.850845642023017,16.84838959525546,N,-0.0145752137295396,Recalculado,Mismo radio165mm; nuevo torque
+VM árbol con flexión,20.30877865081767,23.460236328067825,MPa,15.517711485438191,Recalculado,Nuevo apoyo inferior y mayor voladizo de la mano
+Radio apoyo matriz,11.5,9.525,mm,-17.17391304347826,Recalculado,Arandela inferior eliminada; apoya directamente cara de tuerca
+Área apoyo matriz,282.7433388230814,152.29066737817374,mm2,-46.13819444444444,Recalculado,Reducción de contacto inferior exige nuevoFEM
+FEM matriz tensión,36.3747692815183,38.71037472443182,MPa,6.4209491607695846,Recalculado por cambio de apoyo,Matriz idéntica; apoyo de tuerca menor y nuevos casos correlacionados
+FEM matriz desplazamiento,0.0135756164645316,0.0138330851379294,mm,1.896552352303682,Recalculado por cambio de apoyo,Matriz idéntica; apoyo de tuerca menor y nuevos casos correlacionados
+608 carga radial máxima,272.4651335399209,271.68517565957166,N,-0.2862597023758129,Recalculado condicionado,Nuevos centros y masaCAD del rodillo
+608 factor estático mínimo,5.028166291226658,5.042601226489606,1,0.28708150102623176,Recalculado condicionado,"Mismas capacidades EZO, nuevas cargas"
+608 vida mínima de referencia,1253.422681356972,1269.7685085053286,10^6rev,1.3040953695413027,Recalculado condicionado,"Mismo método V1,2 por anillo exterior"
+Flecha transversal árbol,0.018342979298723885,0.06105787553305152,mm,232.86782119030843,Recalculado condicionado,Mayor voladizo de mano y menor separación de guías
+Presión máxima apoyo matriz,3.319777723860718,6.0283538083511194,MPa,81.58907944416465,Recalculado condicionado,Reducción del área efectiva de apoyo

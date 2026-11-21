@@ -1,0 +1,31 @@
+INGENIERÍA DE DETALLES DEL PROTOTIPO DEFINITIVO
+
+Opción1: proyecto independiente
+Importar paquete_Overleaf.zip como proyecto nuevo y compilar main.tex.
+Contiene la subsección principal, anexos A.3–A.8, bibliografía y figuras.
+El PDF de referencia se entrega por separado en build/informe_definitivo.pdf.
+
+Opción2: incorporar al informe existente
+1. Sustituir la subsección anterior por subseccion_verificacion_mecanica.tex.
+2. Copiar anexo_A3.tex,...,anexo_A8.tex y todas las imágenesPNG al proyecto.
+3. En la secciónA de anexos, sustituir los apartados anteriores por
+   input{anexos_A3_A8}, con el comandoLaTeX correspondiente. Ese archivo fija
+   el contador de subsecciones en2, para comenzar enA.3 y terminar enA.8.
+   No insertar otro appendix o sectionA si ya existen en el informe receptor.
+4. Fusionar referencias_revision.bib conservando las claves ya presentes:
+   no duplicar entradas. La envoltura usa BibTeX/unsrt; puede conservarse
+   el estilo bibliográfico que ya utiliza el informe original.
+5. Los fragmentos requieren amsmath,amssymb,booktabs,graphicx. La envoltura
+   añade idioma español, codificaciónUTF8/T1 y hyperref.
+6. Colocar los archivos en la misma carpeta del .tex principal o ajustar
+   las rutas de input y graphicspath si se guardan en una subcarpeta.
+
+comparacion_revision.tex contiene resultados históricos y se entrega
+separado: NO forma parte de A.3–A.8 del prototipo definitivo.
+No se incluyen STEP ni mallasNPZ en este paquete de edición del informe;
+se conservan completos en la carpeta de cálculo y resultados del repositorio.
+
+Alcance: resultados de cálculo, no validación experimental. Mantener las
+condiciones y limitaciones de M8/ABS, grado y raíz del árbol, capacidad del
+rodamiento principal, retención árbol–buje y transmisión de torque de uniones.
+No borrar esas condiciones al copiar el texto al informe.

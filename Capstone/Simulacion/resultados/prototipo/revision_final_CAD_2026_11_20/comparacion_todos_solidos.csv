@@ -1,0 +1,69 @@
+id_anterior,id_nuevo,nombre_anterior,nombre_nuevo,volumen_anterior_mm3,volumen_nuevo_mm3,variacion_volumen_pct,estado,costo_asociacion
+1.0,16,Soporte:1,Soporte:1,44264.989011079786,59639.989011079786,34.73399710130176,Modificado/asociación para revisión,0.29813225683237
+2.0,3,=>[0:1:1:4],=>[0:1:1:5],128642.00369666034,128642.0036966603,-3.3306690738754696e-14,Geometría invariante equivalente,4.440892098500625e-16
+3.0,19,Patita Chasis:1,Patita Chasis:3,7694.999999999996,7694.999999999996,0.0,Geometría invariante equivalente,0.0
+4.0,17,Patita Chasis:2,Patita Chasis:1,7694.999999999998,7694.999999999998,0.0,Geometría invariante equivalente,0.0
+5.0,26,Patita Chasis:3,Patita Chasis_MIR1:3,7694.999999999994,7694.999999999994,0.0,Geometría invariante equivalente,0.0
+6.0,27,Patita Chasis:4,Patita Chasis_MIR2:1,7694.999999999993,7694.99999999999,-3.3306690738754696e-14,Geometría invariante equivalente,4.440892098500625e-16
+7.0,2,Cámara Extrusión:1,Cámara Extrusión:1,202506.98866058775,201991.4928590732,-0.2545570426602084,Modificado/asociación para revisión,0.6025488158998911
+8.0,33,=>[0:1:1:9],=>[0:1:1:15],51219.89756120703,51219.89756120707,8.881784197001252e-14,Geometría invariante equivalente,8.881784197001256e-16
+9.0,54,Soporte 2:1,=>[0:1:1:30],39764.989011079786,83982.01246170454,111.19586488079874,Modificado/asociación para revisión,0.947615786489456
+10.0,41,EJE RODILLOS:1,EJE RODILLOS:1,4523.893421169304,8042.477193189869,77.77777777777769,Modificado/asociación para revisión,0.7753641449035613
+11.0,1,Tolva:1,Tolva:1,522096.6803410071,460408.15822916536,-11.815536170724153,Modificado/asociación para revisión,0.3257393855514257
+12.0,34,EJE MATRIZ:1,EJE MATRIZ:1,25335.373954874893,29769.064396978,17.500000000000004,Modificado/asociación para revisión,0.3612681475961222
+13.0,50,ISO 4035 M12:1,ISO 4032 M8:1,1135.437745441424,726.4538437292815,-36.01993181520857,Modificado/asociación para revisión,0.6465985857468837
+15.0,35,ISO 7089 12:2,ISO 7089 12:1,799.1426312569042,799.1426312569039,-4.440892098500626e-14,Geometría invariante equivalente,4.440892098500625e-16
+16.0,51,ISO 4035 M12:2,ISO 4032 M8:2,1135.437745441424,726.4538437292813,-36.019931815208594,Modificado/asociación para revisión,0.6465985857468839
+17.0,36,Barrido:1,Barrido:1,4104.896845132987,4104.896845132989,4.440892098500626e-14,Geometría invariante equivalente,4.440892098500627e-16
+18.0,47,Rodillo escalado:1,Rodillo escalado:2,53477.4190896414,55192.728678501415,3.2075399637082835,Modificado/asociación para revisión,0.2315717260543376
+19.0,46,Rodillo escalado:2,Rodillo escalado:1,53477.419089641386,55192.72867850143,3.20753996370835,Modificado/asociación para revisión,0.2315717260543382
+20.0,58,MANIVELA:1,MANIVELA:1,58959.036915505865,58959.03691550587,2.220446049250313e-14,Geometría invariante equivalente,1.1102230246251563e-16
+21.0,64,Patita Chasis:5,Patita Chasis_MIR2:7,7694.999999999994,7694.999999999994,0.0,Geometría invariante equivalente,0.0
+22.0,30,Patita Chasis:6,Patita Chasis_MIR1_MIR:1,7694.999999999995,7694.999999999995,0.0,Geometría invariante equivalente,0.0
+23.0,23,Patita Chasis:7,Patita Chasis:7,7694.999999999996,7694.999999999996,0.0,Geometría invariante equivalente,0.0
+24.0,25,Patita Chasis_MIR:1,Patita Chasis_MIR1:2,7694.999999999993,7694.999999999991,-2.220446049250313e-14,Geometría invariante equivalente,2.2204460492503126e-16
+25.0,31,Patita Chasis_MIR:2,Patita Chasis_MIR1_MIR:2,7694.999999999996,7694.999999999996,0.0,Geometría invariante equivalente,0.0
+26.0,32,Patita Chasis_MIR:3,Patita Chasis_MIR1_MIR:3,7694.999999999996,7694.999999999996,0.0,Geometría invariante equivalente,0.0
+27.0,22,Patita Chasis_MIR1:1,Patita Chasis:6,7694.999999999996,7694.999999999998,2.220446049250313e-14,Geometría invariante equivalente,2.2204460492503136e-16
+28.0,18,Patita Chasis_MIR1:2,Patita Chasis:2,7694.999999999997,7694.999999999998,2.220446049250313e-14,Geometría invariante equivalente,1.1102230246251563e-16
+29.0,20,Patita Chasis_MIR1:3,Patita Chasis:4,7694.999999999998,7694.999999999998,0.0,Geometría invariante equivalente,0.0
+30.0,21,Patita Chasis_MIR_MIR:1,Patita Chasis:5,7694.999999999997,7694.999999999998,2.220446049250313e-14,Geometría invariante equivalente,1.1102230246251563e-16
+31.0,62,Patita Chasis_MIR_MIR:2,Patita Chasis_MIR2:5,7694.999999999994,7694.999999999995,2.220446049250313e-14,Geometría invariante equivalente,1.1102230246251563e-16
+32.0,61,Patita Chasis_MIR_MIR:3,Patita Chasis_MIR2:4,7694.999999999996,7694.999999999997,2.220446049250313e-14,Geometría invariante equivalente,1.1102230246251563e-16
+33.0,44,BS 290 SKF- con dos escudos Z SKF 608-2Z:1,BS 290 SKF- con dos escudos Z SKF 608-2Z:3,1521.1374999218615,1521.137499921862,2.220446049250313e-14,Geometría invariante equivalente,3.33066907387547e-16
+34.0,43,BS 290 SKF- con dos escudos Z SKF 608-2Z:2,BS 290 SKF- con dos escudos Z SKF 608-2Z:2,1521.13749992186,1521.13749992186,0.0,Geometría invariante equivalente,0.0
+35.0,45,BS 290 SKF- con dos escudos Z SKF 608-2Z:3,BS 290 SKF- con dos escudos Z SKF 608-2Z:4,1521.1374999218606,1521.137499921861,2.220446049250313e-14,Geometría invariante equivalente,3.33066907387547e-16
+36.0,42,BS 290 SKF- con dos escudos Z SKF 608-2Z:4,BS 290 SKF- con dos escudos Z SKF 608-2Z:1,1521.1374999218604,1521.1374999218604,0.0,Geometría invariante equivalente,0.0
+37.0,65,Anillo:1,Anillo:1,4151.5311668374325,4339.818915556003,4.5353808306347165,Modificado/asociación para revisión,0.0443554006559839
+38.0,66,Cuchilla de CortaCartom:1,Cuchilla de CortaCartom:1,40.0,40.0,0.0,Geometría invariante equivalente,0.0
+39.0,67,Cuchilla de CortaCartom:2,Cuchilla de CortaCartom:2,40.0,40.0,0.0,Geometría invariante equivalente,0.0
+,4,,ISO 4762 M5 x 16:1,,552.8719855315322,,Nuevo/no asociado unívocamente,
+,5,,ISO 4762 M5 x 16:2,,552.8719855315323,,Nuevo/no asociado unívocamente,
+,6,,ISO 4762 M5 x 16:3,,552.8719855315323,,Nuevo/no asociado unívocamente,
+,7,,ISO 4762 M5 x 16:4,,552.8719855315323,,Nuevo/no asociado unívocamente,
+,8,,ISO 4762 M5 x 16:5,,552.8719855315323,,Nuevo/no asociado unívocamente,
+,9,,ISO 4762 M5 x 16:6,,552.8719855315323,,Nuevo/no asociado unívocamente,
+,10,,ISO 4032 M5:2,,187.3340504454308,,Nuevo/no asociado unívocamente,
+,11,,ISO 4032 M5:3,,187.3340504454308,,Nuevo/no asociado unívocamente,
+,12,,ISO 4032 M5:4,,187.33405044543088,,Nuevo/no asociado unívocamente,
+,13,,ISO 4032 M5:5,,187.3340504454309,,Nuevo/no asociado unívocamente,
+,14,,ISO 4032 M5:6,,187.3340504454308,,Nuevo/no asociado unívocamente,
+,15,,ISO 4032 M5:7,,187.3340504454308,,Nuevo/no asociado unívocamente,
+,24,,Patita Chasis_MIR1:1,,7694.999999999986,,Nuevo/no asociado unívocamente,
+,28,,Patita Chasis_MIR2:2,,7694.99999999999,,Nuevo/no asociado unívocamente,
+,29,,Patita Chasis_MIR2:3,,7694.999999999998,,Nuevo/no asociado unívocamente,
+,37,,DIN 7991 M5x16:1,,378.1778117204162,,Nuevo/no asociado unívocamente,
+,38,,DIN 7991 M5x16:2,,378.1778117204161,,Nuevo/no asociado unívocamente,
+,39,,Hex Nut - Inch 1/2 - 13:1,,2478.2822560205213,,Nuevo/no asociado unívocamente,
+,40,,Hex Nut - Inch 1/2 - 13:2,,2478.2822560205213,,Nuevo/no asociado unívocamente,
+,48,,ISO 4032 M5:8,,187.33405044543088,,Nuevo/no asociado unívocamente,
+,49,,ISO 4032 M5:9,,187.334050445431,,Nuevo/no asociado unívocamente,
+,52,,02373198_01:1,,67626.93974057643,,Nuevo/no asociado unívocamente,
+,53,,02373198_02:1,,28005.63163449776,,Nuevo/no asociado unívocamente,
+,55,,buje_1-2_a_1_pulgada:1,,13681.10193563244,,Nuevo/no asociado unívocamente,
+,56,,ISO 4014 M14 x 60:1,,12508.579995483127,,Nuevo/no asociado unívocamente,
+,57,,ISO 4014 M14 x 60:2,,12508.579995483127,,Nuevo/no asociado unívocamente,
+,59,,ISO 4032 M14:1,,3386.6456927598383,,Nuevo/no asociado unívocamente,
+,60,,ISO 4032 M14:2,,3386.645692759839,,Nuevo/no asociado unívocamente,
+,63,,Patita Chasis_MIR2:6,,7694.999999999998,,Nuevo/no asociado unívocamente,
+14.0,,ISO 7089 12:1,,799.1426312569035,,,"Anterior sin equivalente unívoco, retirado o sustituido",

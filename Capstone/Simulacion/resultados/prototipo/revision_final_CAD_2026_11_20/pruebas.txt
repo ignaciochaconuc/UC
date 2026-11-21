@@ -1,0 +1,20 @@
+test_608_montaje_cargas_y_vida (test_revision.Revision.test_608_montaje_cargas_y_vida) ... ok
+test_FEM_nuevo_y_conservacion (test_revision.Revision.test_FEM_nuevo_y_conservacion) ... ok
+test_FEM_patch_y_frontera_real (test_revision.Revision.test_FEM_patch_y_frontera_real) ... ok
+test_arbol_manivela_y_no_propiedades_inventadas (test_revision.Revision.test_arbol_manivela_y_no_propiedades_inventadas) ... ok
+test_centroides_todos_estados_dentro_region_y_fuerzas (test_revision.Revision.test_centroides_todos_estados_dentro_region_y_fuerzas) ... ok
+test_contacto_nulo_y_simetria (test_revision.Revision.test_contacto_nulo_y_simetria) ... ok
+test_convergencia_1440_y_equilibrio (test_revision.Revision.test_convergencia_1440_y_equilibrio) ... ok
+test_geometria_cobertura_completa (test_revision.Revision.test_geometria_cobertura_completa) ... ok
+test_integridad (test_revision.Revision.test_integridad) ... ok
+test_latex_y_citas (test_revision.Revision.test_latex_y_citas) ... ok
+test_marco_ortonormal (test_revision.Revision.test_marco_ortonormal) ... ok
+test_medio_disco_analitico (test_revision.Revision.test_medio_disco_analitico) ... ok
+test_no_coincidencia_forzada_maximos (test_revision.Revision.test_no_coincidencia_forzada_maximos) ... ok
+test_nucleo_M8_y_escenario (test_revision.Revision.test_nucleo_M8_y_escenario) ... ok
+test_validacion_numerica_y_aprobacion_condicionada (test_revision.Revision.test_validacion_numerica_y_aprobacion_condicionada) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.651s
+
+OK

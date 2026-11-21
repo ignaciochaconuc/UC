@@ -1,0 +1,116 @@
+{
+  "arbol": {
+    "d_nominal_m": 0.0127,
+    "L_m": 0.235,
+    "guia_superior_y_m": -0.09463015819145329,
+    "apoyo_inferior_bore_y_m": -0.153423058191453,
+    "separacion_guias_m": 0.058792899999999704,
+    "union_brazo_y_m": -0.24575495819145335,
+    "centro_mano_y_m": -0.30775495819145293,
+    "voladizo_mano_m": 0.15433189999999994,
+    "VM_nominal_max_pa": 13993681.660143867,
+    "sigma_axial_max_pa": 7247272.2501765145,
+    "tau_max_pa": 6911961.138389018,
+    "VM_envolvente_max_pa": 23460236.32806782,
+    "delta_axial_max_m": 8.110042756149909e-06,
+    "giro_max_rad": 0.003167010315377346,
+    "flecha_transversal_envolvente_m": 6.105787553305152e-05,
+    "Rprincipal_radial_manual_max_n": 61.075566315165815,
+    "Rguia_superior_manual_max_n": 44.22717671991036,
+    "demanda_axial_soporte_n": 924.3215865051985,
+    "grado": null,
+    "raiz_resistente_m": null,
+    "factor_seguridad": null,
+    "rosca_CAD": "Tuercas1/2-13, verificar varilla real",
+    "soporte": "Cuerpo52/rodamiento53/buje55 presentes; C,C0 y retención axial de árbol al buje no acreditadas"
+  },
+  "matriz": {
+    "geometria_reutilizada": true,
+    "material": "AISI304",
+    "ri_apoyo_m": 0.0065,
+    "ro_apoyo_m": 0.009525,
+    "area_apoyo_m2": 0.00015229066737817374,
+    "pmax_apoyo_pa": 6028353.808351119,
+    "pmin_apoyo_pa": 5808112.037276027,
+    "paso_momento_normales_max": 931,
+    "FEM_reutilizable": false,
+    "motivo_FEM": "Apoyo inferior cambia: arandelaR11,5 efectiva -> cara tuercaR9,525, reducción de área46%; repetir solución, matriz material iguales"
+  },
+  "manivela": {
+    "radio_m": 0.16499999999999374,
+    "Fmax_ideal_n": 16.84838959525546,
+    "sigma_tramo_recto_pa": 8390129.595577313,
+    "material": null,
+    "factor_seguridad": null,
+    "union": "Agujero cilíndrico12,7 y árbol12,7: transmisión por apriete/unión positiva sin acreditar"
+  },
+  "apoyo_principal": {
+    "id_cuerpo": 52,
+    "id_rodamiento": 53,
+    "id_buje": 55,
+    "bore_rodamiento_mm": 25.4,
+    "bore_buje_mm": 12.7,
+    "exterior_buje_mm": 25.4,
+    "longitud_buje_mm": 36,
+    "solape_bore_mm": 31.0134,
+    "C_n": null,
+    "C0_n": null,
+    "retencion_axial_arbol_buje": "No hay bloqueo positivo modelado entre árbol12,7 y buje; tornillos del rodamiento actúan sobre exterior25,4"
+  },
+  "conservacion": {
+    "archivos_historicos": 891,
+    "alterados": 0,
+    "STEP_adjunto_intacto": true
+  },
+  "FEM": {
+    "VM_max_MPa": 38.71037472443182,
+    "desplazamiento_max_mm": 0.0138330851379294,
+    "n_304_referencia": 5.424902277359246,
+    "convergencia_envolvente": true,
+    "cambio_VM_rel": 0.002275637911750783,
+    "cambio_u_rel": 0.02308663175809489,
+    "criterio_VM": 0.05,
+    "criterio_u": 0.05,
+    "estados": [
+      636,
+      1291
+    ],
+    "estados_ultima_malla": [
+      636
+    ],
+    "mallas_h_mm": [
+      3.0,
+      1.7,
+      1.25,
+      1.0
+    ],
+    "reaccion_sentido_traccion_max_n": 0.1219962195314825,
+    "estado": "Cumple el cribado bajo hipótesis adoptadas",
+    "aprobacion_incondicional": false
+  },
+  "3C": {
+    "estados": 1440,
+    "convergidos": 1440,
+    "todos_convergieron": true,
+    "iteraciones_max": 18,
+    "no_convergidos": [],
+    "Fmax_n": 918.0617630550478,
+    "Fmedia_n": 900.6404818059023,
+    "Tmax_nm": 2.779984283217045,
+    "Tmedio_nm": 2.6667305264193217,
+    "flecha_max_m": 0.0001564471209682213,
+    "sigma_max_pa": 314745771.78575575,
+    "residuo_final_max_m": 1.8434383251657305e-11,
+    "seguridad_aprobada": false,
+    "g1_min_m": 0.0005219038784383757,
+    "g1_max_m": 0.0006457310064711441,
+    "g1_media_centro_m": 0.0005791527162817195,
+    "F1_max_n": 459.03089656913,
+    "u1_centro_max_m": 8.451620911059386e-05,
+    "g2_min_m": 0.0005219043733683923,
+    "g2_max_m": 0.0006457313950717354,
+    "g2_media_centro_m": 0.0005791531540942245,
+    "F2_max_n": 459.0308664859177,
+    "u2_centro_max_m": 8.451666696380865e-05
+  }
+}

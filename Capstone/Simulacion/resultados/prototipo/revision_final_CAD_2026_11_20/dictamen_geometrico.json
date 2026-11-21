@@ -1,0 +1,12 @@
+{
+  "antiguos_cubiertos": 39,
+  "nuevos_cubiertos": 67,
+  "matriz_identica": true,
+  "matriz_L_D_conservado": true,
+  "alojamientos_608_corregidos": true,
+  "rodamiento_principal_presente": true,
+  "buje_dimensionalmente_compatible": true,
+  "retencion_axial_arbol_buje_verificada": false,
+  "uniones_torque_verificadas": false,
+  "nota": "No se considera que nombres, contactosgeométricos o roscas cosméticas acrediten apriete, capacidad o resistencia"
+}

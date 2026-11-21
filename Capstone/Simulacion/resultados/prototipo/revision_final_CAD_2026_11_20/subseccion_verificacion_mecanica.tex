@@ -1,0 +1,48 @@
+\subsection{Verificación mecánica del prototipo definitivo}
+La revisión utiliza el ensamble STEP definitivo y el escenario manual de
+biomasa de 4\,mm. La matriz conserva 102 canales de 6\,mm y longitud 10\,mm;
+se mantiene la presión teórica de Holm 2,25867\,MPa y el coeficiente efectivo
+de torque 0,1. Se corrigió el primer momento tangencial de las intersecciones
+parciales, conservando la versión histórica y sin modificar las ecuaciones
+de presión ni de torque. El modelo acoplado convergió en los 1440 estados.
+\begin{center}\begin{tabular}{ll}\toprule
+Magnitud & Resultado definitivo\\\midrule
+Fuerza total máxima & 918,06 N\\
+Torque máximo & 2,77998 N\,m\\
+Fuerza manual ideal, radio 165\,mm & 16,85 N\\
+Flecha máxima del M8 & 0,1564 mm\\
+Tensión nominal máxima del M8 & 314,75 MPa\\
+Holguras de ambos rodillos & 0,5219--0,6457 mm\\
+Matriz, von Mises FEM & 38,71 MPa\\
+Matriz, desplazamiento FEM & 0,01383 mm\\
+\bottomrule\end{tabular}\end{center}
+
+El eje transversal se calcula con núcleo de referencia 6,466\,mm para
+M8 $\times$ 1,25 y doble empotramiento como condición de diseño; el cilindro
+CAD de 8\,mm no se interpreta como sección maciza resistente. Se conservan
+las conclusiones resistentes condicionadas del M8 y del ABS, sin volver
+a seleccionar concentradores.
+
+Los alojamientos de los 608 son ahora 22\,mm, compatibles nominalmente con
+su diámetro exterior. Con capacidades EZO de referencia y carga axial
+nula en estos rodamientos, el factor estático mínimo es 5,04
+\cite{ezo_608zz_2026}. La matriz AISI 304 se comprobó mediante un nuevo FEM
+porque el apoyo inferior cambió a la cara de tuerca de radio 9,525\,mm.
+El cociente entre el límite de fluencia de referencia 210\,MPa y el pico
+calculado es 5,42, condicionado a la fijación idealizada
+y a la condición de material considerada~\cite{outokumpu_core_2026}.
+
+El árbol mide 235\,mm. Sus nuevas estaciones de apoyo aumentan la envolvente
+nominal de flexión, compresión y torsión a 23,46\,MPa;
+su resistencia real continúa condicionada al grado y raíz del hilo corrido.
+El soporte y el buje incorporados son dimensionalmente compatibles,
+pero debe materializarse la retención axial del árbol dentro del buje
+y la transmisión de torque en las uniones árbol--matriz--manivela.
+La capacidad del rodamiento principal no se deduce de sus dimensiones.
+
+Las cargas de compactación y el esfuerzo manual cambian muy poco; el CAD
+mejora el montaje de los 608, aunque modifica la flexión del árbol y el
+apoyo de matriz. La conclusión de viabilidad mecánica sigue siendo
+favorable bajo las hipótesis adoptadas, sin aprobar las uniones todavía
+no verificadas ni declarar funcionamiento experimental. Las memorias
+A.3--A.8 contienen el detalle reproducible y las limitaciones.

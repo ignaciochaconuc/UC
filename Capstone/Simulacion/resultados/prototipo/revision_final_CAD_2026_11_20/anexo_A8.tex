@@ -1,0 +1,57 @@
+\subsection{Accionamiento manual y uniones}
+\label{app:prototipo_A8}
+El radio efectivo entre ejes es 165\,mm, medido perpendicularmente al árbol.
+La manivela conserva el tramo cilíndrico recto 15\,mm y su forma anterior;
+su posición axial cambia y se incluye en A.7. Para cada estado:
+\begin{equation}
+ F_h=T/r_h,\qquad r_h=0,165\ {\rm m}.
+\end{equation}
+La fuerza ideal máxima es 16,848\,N.
+\begin{center}\begin{tabular}{ll}\toprule
+Eficiencia mecánica hipotética & $F_{h,\max}$ [N]\\\midrule
+1,0 & 16,848\\
+0,8 & 21,060\\
+0,6 & 28,081\\
+\bottomrule\end{tabular}\end{center}
+
+Estas eficiencias no son mediciones. De forma general
+$F_h=(T+T_{\text{pérdidas}})/r_h$. Un atasco no queda acotado por el torque
+de operación:$T_{\rm mano}=r_hF_{\rm mano}$; no se inventa una carga máxima
+de mano ni se declara resistencia al atasco.
+El esfuerzo nominal del tramo recto es
+\begin{equation}
+ \sigma_b=32T/(\pi d_b^3)=8,390\ {\rm MPa},\quad d_b=15\ {\rm mm}.
+\end{equation}
+No es el máximo del agujero o codo. Se conservan los pendientes de
+material y unión del brazo, sin investigar nuevas alternativas.
+
+\subsubsection*{Matriz--árbol y árbol--buje}
+La tuerca inferior apoya directamente en matriz; la arandela superior
+permanece. Para presión uniforme, el radio medio de cada cara anular es
+$r_m=\tfrac23(r_o^3-r_i^3)/(r_o^2-r_i^2)$: se obtienen
+$r_{m,\inf}=8,1077$ mm y
+$r_{m,\sup}=9,5225$ mm.
+La condición global de transmisión por fricción, si ese es el mecanismo
+efectivo, es
+\begin{equation}
+ T\leq\mu(N_{\inf}r_{m,\inf}+N_{\sup}r_{m,\sup}).
+\end{equation}
+Una condición conservadora con el menor radio sería
+$\mu\sum N_i\geq342,88$ N.
+No se asigna una precarga o fricción no documentada. Las tuercas de familia
+adecuada permiten definir ese apriete, pero el modelo CAD no lo acredita.
+El FEM adherente supone que la unión resiste el torque; no verifica por
+sí solo esa condición. La unión manivela--árbol también requiere un
+mecanismo real de apriete o transmisión positiva; el agujero 12,7\,mm no
+basta para demostrarlo. El buje de adaptación resuelve el diámetro del
+rodamiento principal, pero no se identifica un bloqueo axial positivo
+del árbol al buje en el CAD.
+
+\subsubsection*{Conclusión funcional de esta revisión}
+El CAD resuelve la holgura exterior de los 608 y añade un apoyo principal
+con adaptación de diámetro. La fuerza de compactación y el esfuerzo
+manual permanecen prácticamente iguales; la flexión del árbol y la huella
+de apoyo de matriz sí cambian y fueron recalculadas. La viabilidad bajo
+las hipótesis de diseño se mantiene, condicionada a materializar la
+retención axial y transmisión de torque indicadas y a las condiciones
+resistentes ya pendientes, sin afirmar funcionamiento experimental.

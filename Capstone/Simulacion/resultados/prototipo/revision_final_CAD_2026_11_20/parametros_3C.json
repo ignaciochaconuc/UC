@@ -1,0 +1,51 @@
+{
+  "revision": "acoplado_m8_2026_11_20",
+  "presion_pa": 2258670.6718785944,
+  "mu_efectivo": 0.1,
+  "capas_m": [
+    0.004
+  ],
+  "varillas": [
+    {
+      "nombre": "M8x1.25",
+      "nominal_m": 0.008,
+      "paso_m": 0.00125,
+      "nucleo_referencia_m": 0.006466
+    }
+  ],
+  "material": {
+    "tipo_propuesto": "Varilla de acero al carbono zincado; grado/clase comercial pendientes",
+    "E_referencia_pa": 210000000000,
+    "E_sensibilidad_pa": [
+      200000000000,
+      220000000000
+    ],
+    "densidad_varilla_referencia_kg_m3": 7850,
+    "densidad_rodillos_304_referencia_kg_m3": 7900,
+    "fuente_E": "SCI/BCSA steel material properties, EN1993-1-1 E210GPa para acero al carbono de referencia; no certificado de varilla",
+    "fuente_seccion": "TRFastenings tabla métrica gruesa: M6x1 d1=4,773mm; M8x1,25 d1=6,466mm",
+    "Sy_pa": null,
+    "Sut_pa": null
+  },
+  "empotramientos": "Desplazamiento y giro nulos en centros de los dos taladros de cámara identificadosCAD. Longitud total160mm, luz entre fijaciones108,411756mm; extremos físicos en voladizo. Hipótesis, no montajeABS comprobado.",
+  "numerico": {
+    "estados": 1440,
+    "cuadratura": 64,
+    "cuadratura_contraste": 128,
+    "relajacion": 0.5,
+    "tolerancia_holgura_m": 1e-09,
+    "tolerancia_fuerza_relativa": 1e-05,
+    "max_iteraciones": 100,
+    "divisiones_viga": 80
+  },
+  "pesos": {
+    "incluir": true,
+    "g_m_s2": 9.80665,
+    "nota": "Rodillos: volumenCAD y densidad de referencia304 del archivo materiales.json. Varilla: área nominal como límite superior de masa roscada; EI usa núcleo. Materiales de diseño, no mediciones."
+  },
+  "limites": {
+    "holgura_operativa_admisible_min_m": null,
+    "holgura_operativa_admisible_max_m": null,
+    "nota": "Se verifica ausencia de holgura negativa y huella positiva; no inventar tolerancia funcional ni validar presión o régimen elástico."
+  }
+}

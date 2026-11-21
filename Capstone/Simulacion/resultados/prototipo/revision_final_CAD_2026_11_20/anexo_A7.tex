@@ -1,0 +1,48 @@
+\subsection{Árbol principal definitivo}
+\label{app:prototipo_A7}
+Se mide un diámetro exterior 12,7\,mm y longitud 235\,mm. Las tuercas CAD son
+de familia 1/2--13, coherentes nominalmente con la varilla de media pulgada;
+no se considera el cilindro como evidencia de una varilla lisa ni se
+deduce de esa designación el grado o diámetro mínimo resistente real.
+Las estaciones medidas en el marco del solver son:
+\begin{center}\begin{tabular}{ll}\toprule
+Estación & Coordenada axial [mm]\\\midrule
+Guía de placa 16 & -94,6302\\
+Centro de agujero del rodamiento 53 & -153,4231\\
+Unión manivela--árbol & -245,7550\\
+Centro de empuñadura & -307,7550\\
+\bottomrule\end{tabular}\end{center}
+
+La separación entre guías es 58,793\,mm.
+La fuerza de mano se traslada a su unión real como fuerza y par flector,
+manteniendo la excentricidad axial 62\,mm. No se prolonga ficticiamente el
+árbol hasta el centro de la mano. Las ecuaciones nominales son:
+\begin{align}
+ \sigma_N&=4F/(\pi d^2),&\tau_T&=16T/(\pi d^3),\\
+ \sigma_{VM}&=\sqrt{\sigma_N^2+3\tau_T^2},&
+ \delta_N&=FL/(EA),\quad\theta=TL/(GJ).
+\end{align}
+La flexión se calcula por la vigaEB de EP2 con las dos guías radiales
+ideales, giros libres, y cargas/par de manivela en su estación efectiva.
+Se mantiene $E=210$ GPa y $\nu=0,30$ de referencia, sin atribuirles una clase
+resistente. La envolvente flectora combina orientaciones posibles dentro
+de un mismo estado correlacionado, sin mezclar máximos de otros ángulos.
+\begin{center}\begin{tabular}{ll}\toprule
+Magnitud nominal & Resultado\\\midrule
+Compresión máxima & 7,247 MPa\\
+Cortante de torsión máximo & 6,912 MPa\\
+Von Mises axial--torsión, correlacionado & 13,994 MPa\\
+Envolvente con flexión & 23,460 MPa\\
+Acortamiento sobre 235\,mm & 0,00811 mm\\
+Giro sobre 235\,mm & 0,1815 grados\\
+Flecha transversal de referencia & 0,06106 mm\\
+Reacción radial manual, apoyo inferior & 61,076 N\\
+\bottomrule\end{tabular}\end{center}
+
+La sección de 12,7\,mm es la referencia nominal exterior: faltan la raíz
+efectiva y el grado de la varilla para dar un factor de seguridad real,
+igual que en la revisión precedente. No se traslada la clase 8.8 del M8
+a este árbol. Si todo el empuje se transmite por él, el apoyo debe recibir
+924,32\,N, con pesos de referencia.
+El buje transmite carga axial solamente si el árbol queda retenido en él;
+una coincidencia cilíndrica 12,7/12,7 no demuestra esa retención.

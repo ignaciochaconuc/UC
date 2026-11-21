@@ -1,0 +1,5 @@
+rodillo_id,bearing_id,asiento_diam_mm,rodamiento_diam_mm,asiento_largo_mm,tramo_cilindrico_anillo_mm,desfase_centros_mm,margen_cilindro_activo_mm,estado
+46,43,22,22,7,6.4,0.2999999999992369,7.629452625224076e-13,Tramo activo dentro del asiento a tolerancia; no bloqueo por el saliente nominal de chaflán
+46,42,22,22,7,6.4,0.30000000000008953,-8.970602038971265e-14,Tramo activo dentro del asiento a tolerancia; no bloqueo por el saliente nominal de chaflán
+47,45,22,22,7,6.4,0.30000000000008953,-8.970602038971265e-14,Tramo activo dentro del asiento a tolerancia; no bloqueo por el saliente nominal de chaflán
+47,44,22,22,7,6.4,0.29999999999922977,7.700506898800086e-13,Tramo activo dentro del asiento a tolerancia; no bloqueo por el saliente nominal de chaflán

@@ -1,0 +1,43 @@
+\subsection{Rodamientos y apoyos}
+\label{app:prototipo_A5}
+Los cuatro 608 conservan dimensiones 8 $\times$ 22 $\times$ 7\,mm. Los alojamientos
+de rodillo son ahora 22\,mm y 7\,mm axiales. El desfase axial de 0,3\,mm coincide
+con el chaflán del anillo: su tramo cilíndrico activo 6,4\,mm queda dentro
+del asiento 7\,mm, sin una incompatibilidad de montaje por ese saliente nominal.
+Se mantienen las condiciones de ajuste y retención como especificación
+de fabricación, sin deducirlas del nombreSKF de la instancia CAD.
+
+Con la reacción normal de compactación $R_N$ guardada por 3C, el peso de
+rodillo $R_W$ repartido en sus centros, y la tangente efectiva del modelo:
+\begin{align}
+ F_r&=\sqrt{(R_N-R_W)^2+(0,1R_N)^2},\quad F_a=0,\\
+ P&=1,2F_r,\quad P_0=F_r,\quad
+ P_{eq}=\left[\frac 1{1440}\sum P_i^3\right]^{1/3},\\
+ S_0&=C_0/\max(P_0),\qquad L_{10}=(C/P_{eq})^3.
+\end{align}
+Las capacidades EZO de referencia son $C=3300$ N,$C_0=1370$ N
+\cite{ezo_608zz_2026}. El factor 1,2 por giro del anillo exterior se conserva
+del procedimiento NHBB~\cite{nhbb_vida_exterior_2026}; no se asignan esas
+capacidades a unidades de compra cuya marca no se haya identificado.
+La ponderación es por ángulo/revoluciones. Sin velocidad manual definida
+no se convierte la vida a horas ni se predice vida experimental.
+\begin{center}\begin{tabular}{lllll}\toprule
+ID & Máx. $F_r$ [N] & $P_{eq}$ [N] & $S_0$ & $L_{10}$ [$10^6$ rev]\\\midrule
+42 & 215,89 & 233,97 & 6,346 & 2805,7\\
+43 & 271,69 & 304,75 & 5,043 & 1269,8\\
+44 & 271,69 & 304,75 & 5,043 & 1269,8\\
+45 & 215,89 & 233,97 & 6,346 & 2805,7\\
+\bottomrule\end{tabular}\end{center}
+
+\subsubsection*{Apoyo del árbol principal}
+Se identifican por geometría el cuerpo 52, el rodamiento 53 con agujero 25,4\,mm
+y el buje 55 de exterior 25,4\,mm, interior 12,7\,mm y longitud 36\,mm. El buje cubre
+el tramo cilíndrico 31,0134\,mm del rodamiento. La compatibilidad dimensional
+no acredita su capacidad: no se dispone de $C,C_0$ ni factores axial/radial
+de la referencia comercial concreta, por lo que no se inventan $S_0$ o vida.
+La demanda radial del modelo manual en ese apoyo es 61,08\,N;
+si recibe todo el empuje axial, debe admitir aproximadamente 924,32\,N,
+incluyendo pesos de referencia de matriz y árbol. Estos valores no se
+reparten axialmente entre los 608 de los rodillos. Los tornillos radiales
+del rodamiento actúan sobre el exterior del buje; no prueban una unión
+axial entre el interior 12,7\,mm del buje y el árbol.

@@ -1,0 +1,117 @@
+REVISIÓN FINAL DE INGENIERÍA DE DETALLES — PROTOTIPO — 20-11-2026
+
+ENTRADA Y CONSERVACIÓN
+El archivo adjunto físicamente disponible fue Downloads/Prototipo.stp,
+SHA256 de147b680f7579f115d42aa9f10aec059b10466824721ac36ccded623c4fb9f8.
+No existía un Prototipo(1).stp en Downloads. Se identifica el nuevo CAD por
+ese SHA y por sus67sólidos, frente a39 del anterior; el archivo adjunto
+incorpora M8 y árbol235mm, coherentes con la revisión solicitada.
+Se conserva una copia idéntica en fuentes/Prototipo_definitivo.stp.
+No se renombró ni modificó el original. La versión anterior del repositorio
+mantiene SHA673f539ad5a94baa0a41d790fd4d92e4dec35df40ca4392c66db746a2a673b83.
+historicos_sha256.json protege891archivos anteriores. No regenerar ese archivo.
+
+RESULTADOS Y ESTADOS
+- Nuevo3C:1440 estados convergidos,918,06176N y2,77998428Nm máximos,
+  en estados distintos. M8: núcleo6,466mm, no cilindro macizo8mm.
+- Centroides: versión corregida en contacto_corregido.py, sin alterar EP2.
+  Se anula el primer momento de intervalos vacíos y se normaliza el centroide
+  por área integrada no recortada. Se verifica pertenencia a disco y huella.
+- Matriz: sólido y102 centros iguales a la matriz anterior, L/D10/6.
+  Se reutilizan geometría, propiedades de diseño y método; se repite solución
+  FEM por apoyo inferior cambiado a cara de tuerca de radio9,525mm.
+- Rodillos52x30mm, centros±27,75mm, holgura inicial0,5mm; alojamientos608
+  corregidos22/22. Desfase0,3mm no deja fuera el cilindro activo6,4mm.
+- Árbol12,7x235mm: posiciones nuevas de guías/rodamiento. Envolvente nominal
+ 23,46MPa y flecha61,06micras; no son seguridad garantizada del hilo corrido.
+- Manivela: mismo radio165mm, fuerza ideal16,848N.
+- Rodamiento principal y buje presentes. Bore25,4 y buje12,7/25,4x36mm
+  compatibles. C/C0 de ese rodamiento y la retención axial árbol–buje no
+  se deducen de los diámetros. No se abrió nueva selección comercial.
+- Se conservan las condiciones y reservas de M8, ABS, material de brazo,
+  raíz/grado del árbol y transmisión de torque. No se repite investigaciónKt
+  ni comparaciónM6/M8. No se afirma funcionamiento experimental.
+
+Los valores FEM finales, convergencia y estados se leen en resumen_final.json,
+convergencia_FEM.csv y estado_verificaciones.csv. El cociente210/sigmaVM es
+referencia condicionada de AISI304H/P, no certificado de producto o unión.
+Si no se alcanza el criterio, la memoria lo declara en vez de forzar cierre.
+
+COMPARACIÓN EXHAUSTIVA
+inventario_nuevo.json y ensamble_solver.json: sólidos, cilindros, planos,
+volúmenes y marcos. comparacion_todos_solidos.csv cubre39anteriores y67nuevos.
+Las asociaciones repetidas se realizan por métricas geométricas; las no
+unívocas quedan identificadas. comparacion_geometrica_funcional.csv presenta
+las cotas críticas; comparacion_geometria_matriz.json verifica igualdad por
+volumen,102centros y frontera muestreada bidireccional. interfaces_distancias.csv
+documenta contactos y separaciones; distancia0no prueba fricción/precarga.
+comparacion_resultados.csv y comparacion_revision.tex son la comparación
+histórica separada; no se insertan resultados anteriores en A.3–A.8 finales.
+
+DOCUMENTOS PARA OVERLEAF
+subseccion_verificacion_mecanica.tex: sustituye la subsección principal previa.
+anexos_A3_A8.tex: incluye anexo_A3.tex hasta anexo_A8.tex en el orden solicitado.
+El documento receptor debe estar en su secciónA de anexos. El archivo incluye
+setcounter{subsection}{2}, por lo que la primera subsección se numeraA.3.
+No duplicar appendices ni reiniciar la secciónA dentro del informe receptor.
+referencias_revision.bib: claves existentes reutilizadas, sin referencias nuevas
+de materiales o montajes. Reutilizar claves al fusionar la bibliografía.
+Las figurasPNG provienen exclusivamente de datos y FEM ejecutados.
+informe_definitivo.tex es la envoltura independiente compilable.
+paquete_Overleaf.zip contiene fuentes, figuras y bibliografía; main.tex es
+la envoltura independiente. El PDF compilado queda en build/informe_definitivo.pdf.
+El anexo A.8 señala las uniones/retenciones todavía condicionadas; no son
+incompatibilidades nuevas atribuidas automáticamente a los nombres del CAD.
+
+REPRODUCCIÓN (desde esta carpeta; Python3.14 en la ejecución realizada)
+ python -m pip install -r requirements_revision.txt
+ python auditar.py
+ python completar_auditoria.py
+ python simular_final.py
+ python validar_3C.py
+ python componentes_final.py
+ python fem_final.py --h 3
+ python fem_final.py --h 1.7
+ python fem_final.py --h 1.25
+ python fem_final.py --h 1 --paso 636 --interior-max 1.25
+ python documentar_final.py
+ python -m unittest -v test_revision
+
+El último refinamiento se limita al caso gobernante636; ambos estados636/1291
+ya se resolvieron hasta1,25mm. El parámetroh controla objetivo de frontera y
+curvatura, no la capa de biomasa, que siempre es4mm. Se permite hasta1,25mm
+en interior en el último nivel. La curva
+9,525mm queda embebida en la cara de malla para representar la frontera real
+de apoyo. No se exporta ni modifica ningún STEP para ello. Las mallas finas
+requieren memoria considerable; la última ejecución alcanzó un pico de memoria
+residente de22,2GB y tardó826segundos en el equipo de32GB utilizado.
+Los NPZ guardan geometría de malla, desplazamientos, VM, fuerzas y
+reacciones para auditar el FEM real.
+
+La validación adicional de cuadratura128 y viga160divisiones se ejecutó en
+32estados con inicio independiente. validacion_numerica_3C.csv contiene los
+errores frente al mismo estado del historial definitivo. No son residuos
+de la iteración; el error de cuadratura máximo de fuerza es aproximadamente
+0,0139N. Los runners históricos no se ejecutan para reproducir esta revisión.
+
+COMPILACIÓN
+ tectonic --outdir build --keep-logs informe_definitivo.tex
+O, con distribuciónLaTeX convencional:
+ pdflatex informe_definitivo.tex
+ bibtex informe_definitivo
+ pdflatex informe_definitivo.tex
+ pdflatex informe_definitivo.tex
+Se utilizó Tectonic0.17.0 portátil oficial, fuera del repositorio, con ZIP
+verificado mediante SHA256 declarado por GitHub. No se cambiaron los modelos
+ni instalacionesTeX originales. pruebas.json y el log registran compilación.
+
+PENDIENTES FUNCIONALES CONCRETOS
+1. Materializar retención axial del árbol dentro del buje. La fijación del
+   anillo interior del rodamiento al exterior del buje no fija por sí sola
+   el árbol12,7 a su interior12,7. Demanda axial aproximada924,32N.
+2. Materializar transmisión de torque árbol–matriz y árbol–manivela,
+   incluyendo apriete/retención ya previstos, sin atribuirla al agujero liso.
+3. Para cerrar factores de seguridad condicionados: datos ya pendientes de
+   raíz/grado del árbol, material del brazo y ficha del rodamiento principal.
+No se investigaron nuevas alternativas ni se cambiaron los criterios de diseño.
+No se hicieron commits, push o publicaciones externas.

@@ -1,0 +1,16 @@
+{
+  "error_centros_mm": 6.488567369739287e-14,
+  "fronteras": [
+    {
+      "muestras": 1853,
+      "no_sobre_frontera": 0,
+      "tolerancia_mm": 1e-05
+    },
+    {
+      "muestras": 1853,
+      "no_sobre_frontera": 0,
+      "tolerancia_mm": 1e-05
+    }
+  ],
+  "L_D": 1.6666666666666667
+}

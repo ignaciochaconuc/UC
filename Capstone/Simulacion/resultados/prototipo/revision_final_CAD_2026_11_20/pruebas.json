@@ -1,0 +1,34 @@
+{
+  "pruebas": 15,
+  "fallidas": 0,
+  "3C_estados": 1440,
+  "3C_convergidos": 1440,
+  "FEM_casos_ejecutados": 7,
+  "mallas_FEM": 4,
+  "compilacion": {
+    "compilado": true,
+    "compilador": "Tectonic0.17.0",
+    "paginas": 9,
+    "PDF_SHA256": "6c637d791fd4d3520cb7d0b200888c28e5b43772238aa034c2e4502af94ad732",
+    "errores_latex": 0,
+    "caracteres_faltantes": 0,
+    "referencias_indefinidas": 0,
+    "cajas_desbordadas": 0,
+    "anexos": [
+      "A.3",
+      "A.4",
+      "A.5",
+      "A.6",
+      "A.7",
+      "A.8"
+    ]
+  },
+  "conservacion": {
+    "archivos_historicos": 891,
+    "alterados": 0,
+    "STEP_adjunto_intacto": true
+  },
+  "STEP_originales_modificados": false,
+  "historicos_modificados": false,
+  "commit_push": false
+}

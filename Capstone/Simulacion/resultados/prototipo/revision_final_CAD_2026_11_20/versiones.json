@@ -1,0 +1,12 @@
+{
+  "numpy": "2.3.4",
+  "scipy": "1.17.1",
+  "pandas": "2.3.3",
+  "matplotlib": "3.10.7",
+  "cadquery-ocp": "7.9.3.1.1",
+  "gmsh": "4.15.2",
+  "scikit-fem": "12.0.2",
+  "pyamg": "5.4.1",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "tectonic": "0.17.0, portable officialMSVC release, SHA256zip f61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f"
+}

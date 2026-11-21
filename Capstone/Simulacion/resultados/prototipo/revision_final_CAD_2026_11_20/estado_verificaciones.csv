@@ -1,0 +1,6 @@
+componente,estado,conclusion
+Compactación/M8,Recalculado,"1440 estados convergidos; holguras positivas, resistencia local M8 condicionada como antes"
+608,Recalculado,Capacidad EZO de referencia suficiente; alojamiento22/22 compatible
+Matriz,"Geometría/material reutilizados, FEM recalculado",Cumple el cribado bajo hipótesis adoptadas
+Árbol,Recalculado condicionado,Nuevas longitudes/apoyos; grado/raíz y capacidad del rodamiento principal pendientes
+Manivela,Geometría reutilizada verificada; fuerza recalculada,Radio165mm; uniones resistentes y retención del árbol al buje condicionadas

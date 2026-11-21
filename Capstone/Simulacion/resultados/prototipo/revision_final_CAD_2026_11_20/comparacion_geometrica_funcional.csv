@@ -1,0 +1,37 @@
+parametro,anterior,definitivo,unidad,estado,implicacion
+Número sólidos,39,67,unidad,Modificado,"Se incorporan fijaciones, soporte y buje; se comparan todos los sólidos por medidas"
+Diámetro matriz,99,99,mm,Reutilizado verificado,Frontera y 102 centros coinciden a tolerancia1e-5mm
+Espesor perforado,10,10,mm,Reutilizado verificado,Frontera y 102 centros coinciden a tolerancia1e-5mm
+Diámetro canales,6,6,mm,Reutilizado verificado,Frontera y 102 centros coinciden a tolerancia1e-5mm
+Número canales,102,102,unidad,Reutilizado verificado,Frontera y 102 centros coinciden a tolerancia1e-5mm
+Bore matriz,13,13,mm,Reutilizado verificado,Frontera y 102 centros coinciden a tolerancia1e-5mm
+Cuerpo central envolvente,26,26,mm,Reutilizado verificado,Frontera y 102 centros coinciden a tolerancia1e-5mm
+Rodillo1 Radio centro,27.838064033597803,27.750000000000647,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo1 Diámetro,52.0,52.0,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo1 Ancho radial,30.0,30.0,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo1 Holgura inicial,0.4999999999998934,0.500000000000135,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo2 Radio centro,27.66193596640259,27.749999999999897,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo2 Diámetro,52.0,52.0,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo2 Ancho radial,30.0,30.0,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Rodillo2 Holgura inicial,0.4999999999999929,0.5000000000000888,mm,Verificado / recalculado,Cotas cilíndricas y posición respecto de la matriz
+Separación centros rodillos,55.5000000000004,55.5,mm,Conservado,"Nuevos centros simétricos ±27,75mm"
+Diámetro cilindro transversalCAD,6,8,mm,Modificado,"El cálculo anterior ya usaba M8: ahora el CAD refleja8 nominal, EI sigue núcleo6,466"
+Núcleo usado en cálculo M8,6.466,6.466,mm,Reutilizado,"No usar cilindro macizo8 para la varilla M8×1,25"
+Longitud transversal,160,160,mm,Conservado,Nuevo eje centrado respecto del árbol
+Luz fijaciones M8,108.41175573598002,108.34301528530169,mm,Recalculado,"Centros de los dos taladros de carcasa, hipótesis doble empotramiento"
+Taladros fijación M8CAD,6,8,mm,Modificado,Compatibles nominalmente conM8; no prueba rigidez del ABS
+Alojamiento exterior608,24,22,mm,Corregido,Elimina1mm radial sin apoyo; contacto nominal22/22
+608 bore/exterior/ancho,8/22/7,8/22/7,mm,Conservado,"Cilindros8/22 y tramo activo6,4 más chaflanes"
+Separación608 parR1,23.5,23.6,mm,Modificado,Nuevas reacciones calculadas por sus centros cilíndricos
+Separación608 parR2,23.6,23.6,mm,Conservado,No repartir a cuartos la fuerza total
+Árbol diámetro exterior,12.7,12.7,mm,Conservado,"Producto roscado, falta raíz/propiedad como antes"
+Árbol longitud,200,235,mm,Modificado,"Recalcular axial, torsión y flexión con nuevas estaciones"
+Radio manivela,165,165,mm,Reutilizado verificado,Misma geometría local del brazo: cambian su estación y fase
+Tuercas del árbolCAD,M12,1/2-13,designación y bore,Corregido nominal,Nuevas caras y agujeros compatibles con familia de diseño1/2
+Cara apoyo inferior matriz radio exterior,11.5,9.525,mm,Modificado relevante,"Se elimina arandela inferior; diámetro de cara nut19,05 medido por bordes circulares"
+Apoyo central inferior área,282.7433388230814,152.29066737817374,mm2,FEM repetido,"Reducción46,14%; no reutilizar restricción del anillo anterior"
+Rodamiento árbol principal,No presente,Sólido53 dentro de52,estado,Incorporado,"Bore25,4mm, C/C0 no identificadas; demandas calculadas, no capacidad inventada"
+Buje de adaptación,No presente,"12,7/25,4×36",mm,Incorporado,"Solape completo del tramo31,013mm del bore; retención árbol-buje no está demostrada"
+Placa superior,95×95×5,110×110×5,mm,Modificada,Taladro13 y patrón de fijación40mm conservados
+Placa inferior,95×95×5,135×135×5,mm,Modificada,"Nuevo patrón de pernosM14 del soporte, bore13"
+Fijaciones adicionales,No presentes,M5/M8/M14 y tuercas,familia,Incorporadas,Diámetros nominales/bores medidos; no convertir volumen de rosca cosmética en interferencia física
