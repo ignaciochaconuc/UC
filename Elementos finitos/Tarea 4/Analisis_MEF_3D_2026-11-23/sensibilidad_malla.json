@@ -1,0 +1,7 @@
+{
+  "von_mises_max_integration_MPa": 47.56894817457108,
+  "von_mises_max_nodal_MPa": 14.704605331151944,
+  "displacement_max_mm": 0.199782965320651,
+  "displacement_within_2_percent": true,
+  "both_stress_measures_within_5_percent": false
+}

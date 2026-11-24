@@ -1,0 +1,17 @@
+﻿solido,identificacion_geometrica,clasificacion,volumen_referencia_mm3,masa_referencia_kg,caras
+1,Tubo de asiento inferior,tubo estructural,121655.36991499158,0.32846949877047726,5
+2,Prolongación superior del asiento,tubo estructural,32573.76959581225,0.08794917790869307,4
+3,Tubo superior,tubo estructural,124859.42389671973,0.33712044452114326,4
+4,Tubo de dirección inferior,tubo estructural,34471.12539151404,0.09307203855708791,4
+5,Tubo de dirección superior,tubo estructural,9401.216015867469,0.025383283242842166,4
+6,Tubo diagonal,tubo estructural,197471.13609201275,0.5331720674484344,5
+7,Vaina derecha (Z negativo),tubo estructural,72421.12201256279,0.1955370294339195,7
+8,Vaina izquierda (Z positivo),tubo estructural,75781.9461593627,0.2046112546302793,6
+9,Tirante izquierdo (Z positivo),tubo estructural,77839.91982330407,0.21016778352292098,5
+10,Tirante derecho (Z negativo),tubo estructural,75137.6122729661,0.20287155313700847,6
+11,Puente entre tirantes,tubo estructural,5110.094700440246,0.013797255691188665,4
+12,Caja tubular del pedalier,tubo estructural,15668.693359779118,0.042305472071403616,4
+13,Remate del asiento,auxiliar sin modificar,4459.8442009442415,0.012041579342549453,3
+14,Remate delantero,auxiliar sin modificar,7059.787011146983,0.019061424930096854,3
+15,Puntera izquierda (Z positivo),auxiliar sin modificar,48350.21068960138,0.13054556886192373,13
+16,Puntera derecha (Z negativo),auxiliar sin modificar,48350.21068960139,0.13054556886192376,13

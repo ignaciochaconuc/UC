@@ -1,0 +1,14 @@
+﻿path,bytes,MiB,pendiente_antes,rastreado,ignorado_despues
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t2.0_h6/modelo.dat,195785834,186.71592140197754,True,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t2.0_h6/modelo.frd,212216612,202.3855323791504,False,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t2.0_h7/modelo.dat,110902452,105.76482009887695,True,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t2.0_h7/modelo.frd,120408342,114.83034324645996,False,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t2.5_h6/modelo.dat,202622244,193.2356300354004,True,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t2.5_h6/modelo.frd,219022258,208.87590217590332,False,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t3.0_h6/modelo.dat,160440286,153.00778007507324,True,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/componentes_t3.0_h6/modelo.frd,173443506,165.40861701965332,False,False,True
+Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/herramientas/mkl-2026.2.1-py2.py3-none-win_amd64.whl,185223117,176.64252948760986,True,False,True
+Elementos finitos/Tarea 4/Ensamblaje 2/AIP/FEA/fmcd92dds.fmsh,418391110,399.00885581970215,True,False,True
+Elementos finitos/Tarea 4/Ensamblaje 2/AIP/FEA/fmcd92ddt.fres,592960022,565.490743637085,True,False,True
+Elementos finitos/Tarea 4/Escenario_1/Workspaces/Espacio de trabajo/Ensamblaje 2/AIP/FEA/fmcd92dds.fmsh,423076122,403.4768314361572,True,False,True
+Elementos finitos/Tarea 4/Escenario_1/Workspaces/Espacio de trabajo/Ensamblaje 2/AIP/FEA/fmcd92ddt.fres,592960022,565.490743637085,True,False,True

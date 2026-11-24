@@ -1,0 +1,95 @@
+{
+  "source_sha256": "ba2c52efd6c433d9304675e9439e2ed1f717e5a9d8a5371ea77ef2b5c8e2c4b7",
+  "copy_sha256": "ba2c52efd6c433d9304675e9439e2ed1f717e5a9d8a5371ea77ef2b5c8e2c4b7",
+  "cases": [
+    {
+      "t_mm": 2.0,
+      "h_max_mm": 8,
+      "nodes": 200638,
+      "elements": 100877,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    },
+    {
+      "t_mm": 2.0,
+      "h_max_mm": 7,
+      "nodes": 431354,
+      "elements": 217740,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    },
+    {
+      "t_mm": 2.0,
+      "h_max_mm": 6,
+      "nodes": 759707,
+      "elements": 384638,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    },
+    {
+      "t_mm": 2.5,
+      "h_max_mm": 8,
+      "nodes": 203793,
+      "elements": 102171,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    },
+    {
+      "t_mm": 2.5,
+      "h_max_mm": 6,
+      "nodes": 783070,
+      "elements": 398568,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    },
+    {
+      "t_mm": 3.0,
+      "h_max_mm": 8,
+      "nodes": 209431,
+      "elements": 105029,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    },
+    {
+      "t_mm": 3.0,
+      "h_max_mm": 6,
+      "nodes": 620109,
+      "elements": 315628,
+      "all_16_meshes_valid": true,
+      "equilibrium_passed": true,
+      "boundary_conditions_passed": true,
+      "exit_code": 0,
+      "engine": "pardiso",
+      "exe": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe"
+    }
+  ],
+  "coarse_cross_solver_absolute_differences": {
+    "von_mises_max_integration_MPa": 0.0,
+    "von_mises_max_nodal_MPa": 0.0,
+    "displacement_max_mm": 0.0
+  }
+}

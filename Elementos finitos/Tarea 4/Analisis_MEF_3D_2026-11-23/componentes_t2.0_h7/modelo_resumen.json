@@ -1,0 +1,248 @@
+{
+  "thickness_mm": 2.0,
+  "h_mm": 7.0,
+  "nodes": 431354,
+  "elements": 217740,
+  "contacts": [
+    {
+      "master": 1,
+      "slave": 2,
+      "gap_pair": false,
+      "tested": 292,
+      "selected": 144
+    },
+    {
+      "master": 1,
+      "slave": 3,
+      "gap_pair": false,
+      "tested": 3307,
+      "selected": 143
+    },
+    {
+      "master": 1,
+      "slave": 6,
+      "gap_pair": false,
+      "tested": 564,
+      "selected": 25
+    },
+    {
+      "master": 1,
+      "slave": 7,
+      "gap_pair": false,
+      "tested": 2746,
+      "selected": 38
+    },
+    {
+      "master": 1,
+      "slave": 8,
+      "gap_pair": false,
+      "tested": 2543,
+      "selected": 43
+    },
+    {
+      "master": 1,
+      "slave": 9,
+      "gap_pair": false,
+      "tested": 1416,
+      "selected": 262
+    },
+    {
+      "master": 1,
+      "slave": 10,
+      "gap_pair": false,
+      "tested": 880,
+      "selected": 167
+    },
+    {
+      "master": 1,
+      "slave": 12,
+      "gap_pair": false,
+      "tested": 428,
+      "selected": 20
+    },
+    {
+      "master": 2,
+      "slave": 3,
+      "gap_pair": false,
+      "tested": 489,
+      "selected": 133
+    },
+    {
+      "master": 2,
+      "slave": 13,
+      "gap_pair": false,
+      "tested": 412,
+      "selected": 81
+    },
+    {
+      "master": 4,
+      "slave": 3,
+      "gap_pair": false,
+      "tested": 385,
+      "selected": 68
+    },
+    {
+      "master": 5,
+      "slave": 3,
+      "gap_pair": false,
+      "tested": 547,
+      "selected": 114
+    },
+    {
+      "master": 4,
+      "slave": 5,
+      "gap_pair": false,
+      "tested": 330,
+      "selected": 144
+    },
+    {
+      "master": 4,
+      "slave": 6,
+      "gap_pair": false,
+      "tested": 1785,
+      "selected": 325
+    },
+    {
+      "master": 5,
+      "slave": 14,
+      "gap_pair": false,
+      "tested": 519,
+      "selected": 64
+    },
+    {
+      "master": 6,
+      "slave": 12,
+      "gap_pair": false,
+      "tested": 1000,
+      "selected": 69
+    },
+    {
+      "master": 7,
+      "slave": 8,
+      "gap_pair": false,
+      "tested": 4327,
+      "selected": 169
+    },
+    {
+      "master": 7,
+      "slave": 12,
+      "gap_pair": false,
+      "tested": 397,
+      "selected": 11
+    },
+    {
+      "master": 16,
+      "slave": 7,
+      "gap_pair": true,
+      "tested": 2717,
+      "selected": 965
+    },
+    {
+      "master": 8,
+      "slave": 12,
+      "gap_pair": false,
+      "tested": 382,
+      "selected": 19
+    },
+    {
+      "master": 15,
+      "slave": 8,
+      "gap_pair": true,
+      "tested": 2733,
+      "selected": 959
+    },
+    {
+      "master": 9,
+      "slave": 10,
+      "gap_pair": false,
+      "tested": 5241,
+      "selected": 534
+    },
+    {
+      "master": 9,
+      "slave": 11,
+      "gap_pair": false,
+      "tested": 3530,
+      "selected": 304
+    },
+    {
+      "master": 15,
+      "slave": 9,
+      "gap_pair": true,
+      "tested": 2992,
+      "selected": 880
+    },
+    {
+      "master": 10,
+      "slave": 11,
+      "gap_pair": false,
+      "tested": 3550,
+      "selected": 304
+    },
+    {
+      "master": 16,
+      "slave": 10,
+      "gap_pair": true,
+      "tested": 3011,
+      "selected": 894
+    }
+  ],
+  "tied_nodes": 6864,
+  "max_affine_patch_error_mm": 8.341148335509796e-10,
+  "max_extrapolation": 0.21509686611178638,
+  "support_equations": 9500,
+  "rigid_constraint_singular_values": [
+    65.02934521960847,
+    58.35423168934202,
+    53.36009536711759,
+    29.081611950640443,
+    5.53173388192281,
+    3.5738069875710767
+  ],
+  "rigid_constraint_rank": 6,
+  "load_faces": [
+    {
+      "solid": 13,
+      "face": 3,
+      "area_mesh_mm2": 891.9601286066404,
+      "area_CAD_mm2": 891.9688401888502,
+      "resultant_N": [
+        124.7470144906554,
+        -586.8885604402836,
+        -0.0
+      ],
+      "center_mm": [
+        -267.5857487040897,
+        331.55666985445885,
+        -34.36735189776
+      ]
+    },
+    {
+      "solid": 14,
+      "face": 3,
+      "area_mesh_mm2": 1411.9436120806508,
+      "area_CAD_mm2": 1411.9574022293993,
+      "resultant_N": [
+        29.2371704722736,
+        -95.6304755963036,
+        -0.0
+      ],
+      "center_mm": [
+        288.8036724803151,
+        277.1753771496748,
+        -34.36735189776
+      ]
+    }
+  ],
+  "load_resultant_N": [
+    153.98418496292868,
+    -682.5190360365874,
+    0.0
+  ],
+  "load_moment_Nmm": [
+    -23456.371888389298,
+    -5292.028671310743,
+    79960.05384677762
+  ],
+  "status": "preprocessor_checks_passed_not_solved"
+}

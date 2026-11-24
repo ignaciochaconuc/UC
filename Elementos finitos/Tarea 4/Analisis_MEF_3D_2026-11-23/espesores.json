@@ -1,0 +1,134 @@
+[
+  {
+    "solid": 1,
+    "coaxial_pairs": [
+      {
+        "inner_face": 4,
+        "outer_face": 2,
+        "outer_diameter_mm": 33.7,
+        "thickness_mm": 2.5000000000000018
+      }
+    ]
+  },
+  {
+    "solid": 2,
+    "coaxial_pairs": [
+      {
+        "inner_face": 1,
+        "outer_face": 2,
+        "outer_diameter_mm": 33.7,
+        "thickness_mm": 2.5000000000000018
+      }
+    ]
+  },
+  {
+    "solid": 3,
+    "coaxial_pairs": [
+      {
+        "inner_face": 1,
+        "outer_face": 4,
+        "outer_diameter_mm": 33.7,
+        "thickness_mm": 2.5000000000000018
+      }
+    ]
+  },
+  {
+    "solid": 4,
+    "coaxial_pairs": [
+      {
+        "inner_face": 1,
+        "outer_face": 2,
+        "outer_diameter_mm": 42.4,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 5,
+    "coaxial_pairs": [
+      {
+        "inner_face": 1,
+        "outer_face": 2,
+        "outer_diameter_mm": 42.4,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 6,
+    "coaxial_pairs": [
+      {
+        "inner_face": 4,
+        "outer_face": 5,
+        "outer_diameter_mm": 42.4,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 7,
+    "coaxial_pairs": [
+      {
+        "inner_face": 3,
+        "outer_face": 6,
+        "outer_diameter_mm": 26.9,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 8,
+    "coaxial_pairs": [
+      {
+        "inner_face": 2,
+        "outer_face": 4,
+        "outer_diameter_mm": 26.9,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 9,
+    "coaxial_pairs": [
+      {
+        "inner_face": 4,
+        "outer_face": 5,
+        "outer_diameter_mm": 21.3,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 10,
+    "coaxial_pairs": [
+      {
+        "inner_face": 2,
+        "outer_face": 6,
+        "outer_diameter_mm": 21.3,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 11,
+    "coaxial_pairs": [
+      {
+        "inner_face": 3,
+        "outer_face": 4,
+        "outer_diameter_mm": 21.3,
+        "thickness_mm": 2.5
+      }
+    ]
+  },
+  {
+    "solid": 12,
+    "coaxial_pairs": [
+      {
+        "inner_face": 1,
+        "outer_face": 2,
+        "outer_diameter_mm": 42.4,
+        "thickness_mm": 2.5
+      }
+    ]
+  }
+]

@@ -1,0 +1,2367 @@
+{
+  "source": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\referencia_confirmada.stp",
+  "sha256": "ba2c52efd6c433d9304675e9439e2ed1f717e5a9d8a5371ea77ef2b5c8e2c4b7",
+  "authorization": "Usuario confirmó que el archivo subido es el correcto.",
+  "units": "mm, mm2, mm3; OCC target unit MM",
+  "tools": {
+    "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+    "OCP": "7.9.3.1",
+    "gmsh": "4.15.2"
+  },
+  "solids": [
+    {
+      "id": 1,
+      "role": "Tubo de asiento inferior",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 121655.36991499158,
+      "center_mm": [
+        -187.43636525573896,
+        -46.248644394019095,
+        -34.3673518977652
+      ],
+      "bbox_mm": [
+        -255.39024199628827,
+        -302.915233389193,
+        -51.22274289842266,
+        -116.7665064564595,
+        200.14392169751432,
+        -17.511960897107755
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 145.44573523719998,
+          "center_mm": [
+            -126.25631513554352,
+            -280.2416724167598,
+            -34.36735189776518
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            95.0305071132324,
+            -69.82860460908572,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            0.6819983600624979,
+            0.7313537016191711,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 52591.37641914325,
+          "center_mm": [
+            -187.4278964245148,
+            -46.400399778552526,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 167.5927225285091,
+          "center_mm": [
+            -143.45797225931332,
+            -296.3211789613791,
+            -34.36735189776523
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.367351897765204
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 44737.99118626058,
+          "center_mm": [
+            -187.44435318490625,
+            -46.10134781191999,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 14.35,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 245.0442269800037,
+          "center_mm": [
+            -238.90845482392365,
+            196.64060960723504,
+            -34.367351897765204
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -238.90845482392365,
+            196.64060960723504,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 4,
+        "GeomAbs_Plane": 1
+      }
+    },
+    {
+      "id": 2,
+      "role": "Prolongación superior del asiento",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 32573.76959581225,
+      "center_mm": [
+        -252.72732253698803,
+        261.65327072901584,
+        -34.3673518977652
+      ],
+      "bbox_mm": [
+        -283.0279774224167,
+        193.13729751695578,
+        -51.2173519977652,
+        -222.42666765155937,
+        330.169243941076,
+        -17.517351797765194
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 11985.476761536025,
+          "center_mm": [
+            -252.72732253698803,
+            261.65327072901584,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 14.35,
+          "axis_origin_mm": [
+            -238.908454823924,
+            196.640609607235,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 14073.538915113728,
+          "center_mm": [
+            -252.72732253698803,
+            261.65327072901584,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -238.908454823924,
+            196.640609607235,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 245.0442269800037,
+          "center_mm": [
+            -238.90845482392396,
+            196.640609607235,
+            -34.367351897765204
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -238.908454823924,
+            196.640609607235,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 245.0442269800037,
+          "center_mm": [
+            -266.546190250052,
+            326.6659318507967,
+            -34.367351897765204
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -266.54619025005206,
+            326.6659318507967,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 2,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 3,
+      "role": "Tubo superior",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 124859.42389671973,
+      "center_mm": [
+        27.01473552717232,
+        219.88413523662268,
+        -34.367253003591586
+      ],
+      "bbox_mm": [
+        -242.01847539267783,
+        177.9479165484342,
+        -51.23519703330658,
+        290.47617776554813,
+        260.7543691961393,
+        -17.517351797629136
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 45787.16508507101,
+          "center_mm": [
+            27.24183484490095,
+            219.90746278348163,
+            -34.36735370790494
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 14.35,
+          "axis_origin_mm": [
+            299.036682145618,
+            243.70471069097,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.9961946980917455,
+            -0.08715574274765805,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 405.6619977307064,
+          "center_mm": [
+            -228.61327006631666,
+            197.54074511472044,
+            -34.366726393071474
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -252.7273225369887,
+            261.6532707290155,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.20791169081775973,
+            0.9781476007338056,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 302.6296993201661,
+          "center_mm": [
+            281.15824651446206,
+            242.14044233434498,
+            -34.36819013761621
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            315.1171259053684,
+            191.10794911300323,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.2923717047227353,
+            0.956304755963036,
+            0.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 54155.25846500477,
+          "center_mm": [
+            26.632220880401405,
+            219.84740863427163,
+            -34.36735207648555
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            299.036682145618,
+            243.70471069097,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.9961946980917455,
+            -0.08715574274765805,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 4
+      }
+    },
+    {
+      "id": 4,
+      "role": "Tubo de dirección inferior",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 34471.12539151404,
+      "center_mm": [
+        315.11712590536854,
+        191.10794911300403,
+        -34.3673518977652
+      ],
+      "bbox_mm": [
+        278.76302121920173,
+        132.31290729491502,
+        -55.56735199776519,
+        351.47123059153535,
+        249.90299093109294,
+        -13.167351797765198
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 12924.51217686841,
+          "center_mm": [
+            315.11712590536854,
+            191.107949113004,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 18.7,
+          "axis_origin_mm": [
+            331.197569665119,
+            138.511187535037,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.292371704722735,
+            0.956304755963036,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 14652.388136342797,
+          "center_mm": [
+            315.11712590536854,
+            191.107949113004,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            331.197569665119,
+            138.511187535037,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.292371704722735,
+            0.956304755963036,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 313.3738671955816,
+          "center_mm": [
+            331.19756966511903,
+            138.511187535037,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            331.197569665119,
+            138.511187535037,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.292371704722735,
+            0.956304755963036,
+            0.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 313.3738671955816,
+          "center_mm": [
+            299.03668214561816,
+            243.704710690971,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            299.0366821456181,
+            243.70471069097096,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.292371704722735,
+            0.956304755963036,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 2,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 5,
+      "role": "Tubo de dirección superior",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 9401.216015867469,
+      "center_mm": [
+        294.6511065747769,
+        258.04928203041555,
+        -34.3673518977652
+      ],
+      "bbox_mm": [
+        269.99187007751954,
+        237.506430450848,
+        -55.56735199776519,
+        319.31034307203436,
+        278.5921336099831,
+        -13.167351797765198
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 3524.866957327749,
+          "center_mm": [
+            294.6511065747769,
+            258.0492820304155,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 18.7,
+          "axis_origin_mm": [
+            299.036682145618,
+            243.70471069097,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 3996.1058553662174,
+          "center_mm": [
+            294.6511065747769,
+            258.0492820304155,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            299.036682145618,
+            243.70471069097,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 313.3738671955816,
+          "center_mm": [
+            299.03668214561804,
+            243.70471069097,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            299.036682145618,
+            243.70471069097,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 313.3738671955816,
+          "center_mm": [
+            290.2655310039359,
+            272.3938533698611,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            290.2655310039359,
+            272.39385336986106,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 2,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 6,
+      "role": "Tubo diagonal",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 197471.13609201275,
+      "center_mm": [
+        94.22120780990576,
+        -70.42566012003752,
+        -34.36762900625587
+      ],
+      "bbox_mm": [
+        -146.2990741730154,
+        -326.45450810766897,
+        -55.6395253484635,
+        336.36008839700503,
+        186.79729888684412,
+        -13.095178447066894
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 534.55119404485,
+          "center_mm": [
+            -122.32503959621859,
+            -302.90835758991926,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.367351897765204
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 17.746251943068906,
+          "center_mm": [
+            311.9648644733843,
+            132.63115947047407,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            331.1975696651197,
+            138.51118753503687,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.2923717047227355,
+            0.956304755963036,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 608.6592763842269,
+          "center_mm": [
+            311.05672714117145,
+            162.37113265889838,
+            -34.375796258952036
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            315.11712590536916,
+            191.10794911300377,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.2923717047227355,
+            0.956304755963036,
+            0.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 73734.36377106282,
+          "center_mm": [
+            94.09932332865804,
+            -70.59126991812502,
+            -34.36732085354994
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 18.7,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            0.681998360062498,
+            0.731353701619171,
+            0.0
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 84360.33446175823,
+          "center_mm": [
+            94.26997833027531,
+            -70.35133972992216,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            0.681998360062498,
+            0.731353701619171,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 4,
+        "GeomAbs_Plane": 1
+      }
+    },
+    {
+      "id": 7,
+      "role": "Vaina derecha (Z negativo)",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 72421.12201256279,
+      "center_mm": [
+        -352.82972049147514,
+        -292.5778905858895,
+        -71.49553086686318
+      ],
+      "bbox_mm": [
+        -541.7067886216503,
+        -323.98744856455374,
+        -115.13908856847425,
+        -144.4296607366153,
+        -262.8617262690307,
+        -23.75765082294706
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 19.0180508125607,
+          "center_mm": [
+            -149.74935889922259,
+            -298.3201032823641,
+            -40.04854068840128
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -186.1888446354552,
+            -51.3856558454014,
+            -34.36735189776513
+          ],
+          "axis_direction": [
+            -0.20791169081775915,
+            0.9781476007338057,
+            2.3592239273284576e-16
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 90.30595680557418,
+          "center_mm": [
+            -150.40633553980126,
+            -312.9112427204344,
+            -45.9688113554849
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            -130.79437559868896,
+            -311.9961427743439,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -8.326672684688673e-17,
+            -7.459310946700269e-17,
+            1.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 25976.802865873826,
+          "center_mm": [
+            -353.089093156099,
+            -292.5491013488589,
+            -71.47986548146915
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.95,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.9829624567617071,
+            0.08599807163824061,
+            -0.16244734615097003
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 0.788398224954077,
+          "center_mm": [
+            -148.85894398168563,
+            -323.2367289062408,
+            -35.25691510221997
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -147.15639179092187,
+            -310.56465184509597,
+            -31.66331565525808
+          ],
+          "geometric_normal": [
+            0.982962456761707,
+            -0.0859980716382406,
+            -0.16244734615097067
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 420.28874626610553,
+          "center_mm": [
+            -180.53167081041462,
+            -308.22877007917714,
+            -35.54661702963309
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 13.45,
+          "axis_origin_mm": [
+            -343.1952968036136,
+            -293.41347004644996,
+            0.7346662234884107
+          ],
+          "axis_direction": [
+            0.982962456761707,
+            -0.0859980716382406,
+            -0.16244734615097067
+          ]
+        },
+        {
+          "id": 6,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 31967.050995061316,
+          "center_mm": [
+            -352.56554681106314,
+            -292.609483714191,
+            -71.50528864509332
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 13.45,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.9829624567617071,
+            0.08599807163824061,
+            -0.16244734615097003
+          ]
+        },
+        {
+          "id": 7,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 191.63715186897736,
+          "center_mm": [
+            -539.234201811521,
+            -276.26228824822266,
+            -101.86735189697447
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -539.2342018115211,
+            -276.26228824822266,
+            -101.86735189697447
+          ],
+          "geometric_normal": [
+            -0.9829624567617071,
+            0.08599807163824061,
+            -0.16244734615097003
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 5,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 8,
+      "role": "Vaina izquierda (Z positivo)",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 75781.9461593627,
+      "center_mm": [
+        -344.88210091576434,
+        -293.2814207577972,
+        0.9834938106435871
+      ],
+      "bbox_mm": [
+        -541.7063985786311,
+        -323.96482377648476,
+        -44.93466227895463,
+        -144.68419502859624,
+        -262.86211631641515,
+        46.4039947259315
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 41.87263165524509,
+          "center_mm": [
+            -150.10362436014822,
+            -298.9443933255389,
+            -32.71321638160524
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -186.188844635456,
+            -51.38565584540123,
+            -34.36735189776501
+          ],
+          "axis_direction": [
+            -0.20791169081775904,
+            0.9781476007338058,
+            -1.8735013540549517e-16
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 27192.06508099595,
+          "center_mm": [
+            -344.9884468082232,
+            -293.26508413436557,
+            1.0068071871312512
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.95,
+          "axis_origin_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            33.1326481022348
+          ],
+          "axis_direction": [
+            0.9829624567617071,
+            -0.08599807163824072,
+            -0.16244734615097003
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 166.3743459517941,
+          "center_mm": [
+            -150.57732069363277,
+            -313.33231613522514,
+            -30.68467157375276
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            -130.79437559868984,
+            -311.9961427743439,
+            -34.36735189776497
+          ],
+          "axis_direction": [
+            8.326672684688673e-17,
+            7.979727989493311e-17,
+            1.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 33437.021772405285,
+          "center_mm": [
+            -344.7752616916891,
+            -293.2981449282802,
+            0.9603242052456054
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 13.45,
+          "axis_origin_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            33.1326481022348
+          ],
+          "axis_direction": [
+            0.9829624567617071,
+            -0.08599807163824072,
+            -0.16244734615097003
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 191.63715186897736,
+          "center_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            33.13264810223482
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            33.1326481022348
+          ],
+          "geometric_normal": [
+            0.9829624567617071,
+            -0.08599807163824072,
+            -0.16244734615097003
+          ]
+        },
+        {
+          "id": 6,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1.30084701442546,
+          "center_mm": [
+            -148.73408753700613,
+            -323.4361057629727,
+            -34.39586549982409
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -147.15639179092244,
+            -310.5646518450959,
+            -31.66331565525794
+          ],
+          "geometric_normal": [
+            0.9829624567617071,
+            -0.08599807163824072,
+            -0.16244734615097003
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 4,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 9,
+      "role": "Tirante izquierdo (Z positivo)",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 77839.91982330407,
+      "center_mm": [
+        -390.92006110704006,
+        -42.478763186052134,
+        -0.2105281965774779
+      ],
+      "bbox_mm": [
+        -543.1617081294515,
+        -274.0593498073958,
+        -43.35969276741824,
+        -236.92739031215265,
+        192.49739200860006,
+        42.562463357312836
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 229.96100307696062,
+          "center_mm": [
+            -250.48857929333028,
+            178.39171481474747,
+            -31.76412470459419
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -186.18884463545547,
+            -51.38565584540149,
+            -34.367351897765175
+          ],
+          "axis_direction": [
+            -0.2079116908177595,
+            0.9781476007338056,
+            1.3877787807814454e-17
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 0.09835760567879032,
+          "center_mm": [
+            -254.72994084972123,
+            191.3246014002784,
+            -31.512822292402227
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -245.9435616488966,
+            185.5628966986121,
+            -32.786169746580214
+          ],
+          "geometric_normal": [
+            -0.5322474251329299,
+            -0.8380944765539248,
+            0.11962577819671297
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 167.33704929843017,
+          "center_mm": [
+            -531.121225101452,
+            -263.48732560438657,
+            31.30920827485796
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -531.121225101452,
+            -263.48732560438657,
+            31.309208274857944
+          ],
+          "geometric_normal": [
+            -0.07902107627694133,
+            -0.9956706507849806,
+            0.04894511895426406
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 26965.312742018003,
+          "center_mm": [
+            -391.05247924070994,
+            -42.75070911150979,
+            -0.17850854319365084
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 8.15,
+          "axis_origin_mm": [
+            -238.908454823924,
+            196.640609607235,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.5322474251329299,
+            -0.8380944765539248,
+            0.11962577819671297
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 35312.864258657384,
+          "center_mm": [
+            -390.7971816359893,
+            -42.22221000662395,
+            -0.24041656270627954
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 10.65,
+          "axis_origin_mm": [
+            -238.908454823924,
+            196.640609607235,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.5322474251329299,
+            -0.8380944765539248,
+            0.11962577819671297
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 3,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 10,
+      "role": "Tirante derecho (Z negativo)",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 75137.6122729661,
+      "center_mm": [
+        -395.4698303657474,
+        -49.71147184708684,
+        -69.82916164462718
+      ],
+      "bbox_mm": [
+        -543.1617081294522,
+        -274.05934980739573,
+        -111.29716715284329,
+        -236.92676629183254,
+        192.4990542263004,
+        -25.3523484590377
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 431.8359172370525,
+          "center_mm": [
+            -269.09899572566883,
+            153.03551069809083,
+            -35.581427165857434
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.65,
+          "axis_origin_mm": [
+            -388.5323933751749,
+            -38.96221445288714,
+            -0.7384807358609464
+          ],
+          "axis_direction": [
+            -0.5322474251329301,
+            -0.8380944765539246,
+            0.11962577819671338
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 26031.00420635712,
+          "center_mm": [
+            -395.64178336014976,
+            -50.04788524078592,
+            -69.81671038767317
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 8.15,
+          "axis_origin_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            -101.867351897765
+          ],
+          "axis_direction": [
+            0.5322474251329299,
+            0.8380944765539248,
+            0.11962577819671297
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 116.77745603164561,
+          "center_mm": [
+            -249.3411441025063,
+            177.79181538493162,
+            -42.908642548291006
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -186.18884463545578,
+            -51.38565584540089,
+            -34.36735189776512
+          ],
+          "axis_direction": [
+            -0.20791169081775945,
+            0.9781476007338058,
+            -3.191891195797325e-16
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 0.0928894487906401,
+          "center_mm": [
+            -254.73132132003127,
+            191.32689845647218,
+            -37.22203174741769
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -245.94293762857643,
+            185.5638793017389,
+            -35.94839379666726
+          ],
+          "geometric_normal": [
+            0.5322474251329299,
+            0.8380944765539248,
+            0.11962577819671297
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 167.3370492984312,
+          "center_mm": [
+            -531.1212251014528,
+            -263.4873256043867,
+            -100.04391207038843
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -531.1212251014529,
+            -263.4873256043866,
+            -100.04391207038847
+          ],
+          "geometric_normal": [
+            -0.07902107627694172,
+            -0.9956706507849807,
+            -0.04894511895426209
+          ]
+        },
+        {
+          "id": 6,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 34087.65020904456,
+          "center_mm": [
+            -395.299591469181,
+            -49.374299164466066,
+            -69.83795698016172
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 10.65,
+          "axis_origin_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            -101.867351897765
+          ],
+          "axis_direction": [
+            0.5322474251329299,
+            0.8380944765539248,
+            0.11962577819671297
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 4,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 11,
+      "role": "Puente entre tirantes",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 5110.094700440246,
+      "center_mm": [
+        -351.76810141534446,
+        18.9282156054996,
+        -34.36692120681214
+      ],
+      "bbox_mm": [
+        -365.6599354748777,
+        5.440837916716408,
+        -60.82906384996539,
+        -336.2092345580954,
+        34.98063414427442,
+        -7.905639945565126
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 226.4490105357603,
+          "center_mm": [
+            -351.6005148828349,
+            19.192848422662465,
+            -16.087631266186804
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.65,
+          "axis_origin_mm": [
+            -388.53239337517465,
+            -38.96221445288716,
+            -0.7384807358611027
+          ],
+          "axis_direction": [
+            -0.5322474251329299,
+            -0.8380944765539249,
+            0.11962577819671298
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 226.40098683603688,
+          "center_mm": [
+            -351.600043198838,
+            19.192412903693068,
+            -52.64738506946509
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.65,
+          "axis_origin_mm": [
+            -388.5320813650145,
+            -38.961723151323966,
+            -67.99615293352798
+          ],
+          "axis_direction": [
+            0.5322474251329299,
+            0.8380944765539249,
+            0.1196257781967129
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 1680.5088678635007,
+          "center_mm": [
+            -351.7310185342838,
+            18.98661859004606,
+            -34.36736771243875
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 8.15,
+          "axis_origin_mm": [
+            -351.600213406153,
+            19.1924229911587,
+            -59.6954956898905
+          ],
+          "axis_direction": [
+            -1.69533886294685e-16,
+            1.57104272684736e-16,
+            1.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 2475.772310194165,
+          "center_mm": [
+            -351.79824449344767,
+            18.880614811700006,
+            -34.36735189776525
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 10.65,
+          "axis_origin_mm": [
+            -351.600213406153,
+            19.1924229911587,
+            -59.6954956898905
+          ],
+          "axis_direction": [
+            -1.69533886294685e-16,
+            1.57104272684736e-16,
+            1.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 4
+      }
+    },
+    {
+      "id": 12,
+      "role": "Caja tubular del pedalier",
+      "classification": "tubo estructural",
+      "valid": true,
+      "volume_mm3": 15668.693359779118,
+      "center_mm": [
+        -130.794375598689,
+        -311.99614277434404,
+        -34.36735189776519
+      ],
+      "bbox_mm": [
+        -151.99437569868897,
+        -333.196142874344,
+        -59.3673519977652,
+        -109.59437549868899,
+        -290.79614267434397,
+        -9.367351797765197
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 5874.778262212913,
+          "center_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 18.7,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -59.3673518977652
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 6660.1764256103625,
+          "center_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -59.3673518977652
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 313.3738671955816,
+          "center_mm": [
+            -130.79437559868902,
+            -311.996142774344,
+            -59.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -59.3673518977652
+          ],
+          "geometric_normal": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 313.3738671955816,
+          "center_mm": [
+            -130.79437559868902,
+            -311.996142774344,
+            -9.367351897765197
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -130.794375598689,
+            -311.996142774344,
+            -9.367351897765197
+          ],
+          "geometric_normal": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 2,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 13,
+      "role": "Remate del asiento",
+      "classification": "auxiliar sin modificar",
+      "valid": true,
+      "volume_mm3": 4459.8442009442415,
+      "center_mm": [
+        -267.0659694770964,
+        329.11130085263153,
+        -34.3673518977652
+      ],
+      "bbox_mm": [
+        -284.0675358765055,
+        323.1626197605177,
+        -51.2173519977652,
+        -250.0644030776874,
+        335.0599819447453,
+        -17.517351797765194
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 529.3583621298801,
+          "center_mm": [
+            -267.0659694770964,
+            329.11130085263153,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 16.85,
+          "axis_origin_mm": [
+            -266.546190250052,
+            326.665931850797,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 891.9688401888483,
+          "center_mm": [
+            -266.546190250052,
+            326.665931850797,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -266.546190250052,
+            326.665931850797,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 891.9688401888483,
+          "center_mm": [
+            -267.58574870414077,
+            331.556669854466,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -267.5857487041408,
+            331.556669854466,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.20791169081775895,
+            0.9781476007338058,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 1,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 14,
+      "role": "Remate delantero",
+      "classification": "auxiliar sin modificar",
+      "valid": true,
+      "volume_mm3": 7059.787011146983,
+      "center_mm": [
+        289.53460174212915,
+        274.7846152597686,
+        -34.3673518977652
+      ],
+      "bbox_mm": [
+        268.530011553906,
+        266.195573129739,
+        -55.56735199776519,
+        310.5391919303524,
+        283.3736573897982,
+        -13.167351797765198
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 666.0176425610362,
+          "center_mm": [
+            289.5346017421292,
+            274.7846152597686,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "radius_mm": 21.2,
+          "axis_origin_mm": [
+            290.265531003936,
+            272.393853369861,
+            -34.3673518977652
+          ],
+          "axis_direction": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1411.9574022293964,
+          "center_mm": [
+            290.265531003936,
+            272.393853369861,
+            -34.3673518977652
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            290.265531003936,
+            272.393853369861,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1411.9574022293966,
+          "center_mm": [
+            288.80367248032235,
+            277.1753771496762,
+            -34.367351897765204
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            288.80367248032235,
+            277.1753771496762,
+            -34.3673518977652
+          ],
+          "geometric_normal": [
+            -0.29237170472273594,
+            0.9563047559630358,
+            0.0
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Cylinder": 1,
+        "GeomAbs_Plane": 2
+      }
+    },
+    {
+      "id": 15,
+      "role": "Puntera izquierda (Z positivo)",
+      "classification": "auxiliar sin modificar",
+      "valid": true,
+      "volume_mm3": 48350.21068960138,
+      "center_mm": [
+        -539.6067623478788,
+        -268.6795709838895,
+        32.92397578492956
+      ],
+      "bbox_mm": [
+        -565.4690708226077,
+        -298.48899205421935,
+        13.046013624036066,
+        -502.9736951332413,
+        -238.54920482464243,
+        51.56241029051904
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 337.39842093395237,
+          "center_mm": [
+            -540.5646785668667,
+            -280.5557584530486,
+            33.51037085639722
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -540.2171653761205,
+            -276.1763040759299,
+            33.29509613165321
+          ],
+          "geometric_normal": [
+            0.9829635598155027,
+            -0.08598417187411335,
+            -0.1624480294185122
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 2483.8247872160214,
+          "center_mm": [
+            -522.357396179332,
+            -279.6931564782706,
+            30.413488568750104
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 13.5,
+          "axis_origin_mm": [
+            -506.79640434239343,
+            -279.09976591964977,
+            27.771863131423796
+          ],
+          "axis_direction": [
+            -0.9829635598155027,
+            0.08598417187411335,
+            0.1624480294185122
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 157.20425839850796,
+          "center_mm": [
+            -543.5350381147982,
+            -273.44199695878245,
+            33.755937722037224
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -539.234201816305,
+            -276.262288247804,
+            33.1326481022347
+          ],
+          "geometric_normal": [
+            0.532247425132931,
+            0.8380944765539239,
+            -0.11962577819671365
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 1693.778617966081,
+          "center_mm": [
+            -530.5018978179027,
+            -258.09009608544056,
+            31.011731946598324
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.75,
+          "axis_origin_mm": [
+            -521.1377893617854,
+            -247.76707604497062,
+            29.06537164354643
+          ],
+          "axis_direction": [
+            -0.532247425132931,
+            -0.8380944765539239,
+            0.11962577819671365
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 2718.64072882702,
+          "center_mm": [
+            -536.6684387609523,
+            -270.2566283993945,
+            18.279674507834958
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -535.8955052693605,
+            -269.01294074282714,
+            18.105000967139908
+          ],
+          "geometric_normal": [
+            0.16595324070660092,
+            0.035274450242592584,
+            0.9855025291997276
+          ]
+        },
+        {
+          "id": 6,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 1055.5751316061705,
+          "center_mm": [
+            -551.8167260153006,
+            -275.16163918250226,
+            35.212080488946185
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 6.0,
+          "axis_origin_mm": [
+            -551.8167260153006,
+            -275.16163918250226,
+            35.212080488946185
+          ],
+          "axis_direction": [
+            0.16595324070660092,
+            0.035274450242592584,
+            0.9855025291997276
+          ]
+        },
+        {
+          "id": 7,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 490.1859297990169,
+          "center_mm": [
+            -506.79640434239343,
+            -279.09976591964977,
+            27.7718631314238
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -508.29576808165314,
+            -297.995149650823,
+            28.70067713001534
+          ],
+          "geometric_normal": [
+            0.9829635598155027,
+            -0.08598417187411335,
+            -0.1624480294185122
+          ]
+        },
+        {
+          "id": 8,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1562.4168243612235,
+          "center_mm": [
+            -535.7207467171843,
+            -295.5961654228787,
+            33.233025955869095
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -563.1457253527153,
+            -293.19718119493433,
+            37.765374781722855
+          ],
+          "geometric_normal": [
+            -0.07900735392235256,
+            -0.9956718512377488,
+            0.04894285115297615
+          ]
+        },
+        {
+          "id": 9,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1522.9071196379596,
+          "center_mm": [
+            -560.9971385349991,
+            -266.12011421148657,
+            36.434385201789844
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -558.8485517172829,
+            -239.0430472280388,
+            35.10339562185684
+          ],
+          "geometric_normal": [
+            -0.9829635598155027,
+            0.08598417187411353,
+            0.16244802941851216
+          ]
+        },
+        {
+          "id": 10,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 802.2561395968514,
+          "center_mm": [
+            -544.7666133090336,
+            -240.27485668864867,
+            32.77616474745663
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -530.6846749007842,
+            -241.50666614925865,
+            30.448933873056433
+          ],
+          "geometric_normal": [
+            0.0790073539223523,
+            0.9956718512377488,
+            -0.048942851152976106
+          ]
+        },
+        {
+          "id": 11,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 280.94969896952887,
+          "center_mm": [
+            -521.1377893617854,
+            -247.76707604497054,
+            29.06537164354644
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -511.5909038227865,
+            -254.02748594068248,
+            27.681809414036433
+          ],
+          "geometric_normal": [
+            0.532247425132931,
+            0.8380944765539239,
+            -0.11962577819671365
+          ]
+        },
+        {
+          "id": 12,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 248.0336665651264,
+          "center_mm": [
+            -508.4439722129601,
+            -257.1159340645795,
+            27.26242927343434
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -505.2970406031337,
+            -260.20438218847653,
+            26.843049132832252
+          ],
+          "geometric_normal": [
+            0.683847818826155,
+            0.7159139704298353,
+            -0.1407812048183259
+          ]
+        },
+        {
+          "id": 13,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 2718.64072882702,
+          "center_mm": [
+            -532.0217480211675,
+            -269.2689437926019,
+            45.87374532542733
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -531.2488145295756,
+            -268.02525613603456,
+            45.699071784732276
+          ],
+          "geometric_normal": [
+            0.16595324070660092,
+            0.035274450242592584,
+            0.9855025291997276
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Plane": 10,
+        "GeomAbs_Cylinder": 3
+      }
+    },
+    {
+      "id": 16,
+      "role": "Puntera derecha (Z negativo)",
+      "classification": "auxiliar sin modificar",
+      "valid": true,
+      "volume_mm3": 48350.21068960139,
+      "center_mm": [
+        -539.6066584097595,
+        -268.6795664372557,
+        -101.65865895463526
+      ],
+      "bbox_mm": [
+        -565.4689664003107,
+        -298.4889874046703,
+        -120.29709633548234,
+        -502.9735907109443,
+        -238.5492001750934,
+        -81.78069966899936
+      ],
+      "faces": [
+        {
+          "id": 1,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 337.39842093395225,
+          "center_mm": [
+            -540.5645741445697,
+            -280.5557538034996,
+            -102.24505690136053
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -540.2170609538235,
+            -276.1762994263809,
+            -102.02978217661651
+          ],
+          "geometric_normal": [
+            0.9829635598155028,
+            -0.08598417187411277,
+            0.1624480294185122
+          ]
+        },
+        {
+          "id": 2,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 2483.8247872160223,
+          "center_mm": [
+            -522.357291757035,
+            -279.6931518287216,
+            -99.1481746137134
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 13.5,
+          "axis_origin_mm": [
+            -506.79629992009643,
+            -279.09976127010077,
+            -96.5065491763871
+          ],
+          "axis_direction": [
+            -0.9829635598155028,
+            0.08598417187411277,
+            -0.1624480294185122
+          ]
+        },
+        {
+          "id": 3,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 157.20425839850796,
+          "center_mm": [
+            -543.5349336925012,
+            -273.44199230923346,
+            -102.49062376700053
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -539.234097394008,
+            -276.262283598255,
+            -101.867334147198
+          ],
+          "geometric_normal": [
+            0.5322474251329307,
+            0.8380944765539242,
+            0.11962577819671386
+          ]
+        },
+        {
+          "id": 4,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 1693.778617966081,
+          "center_mm": [
+            -530.5017933956057,
+            -258.09009143589157,
+            -99.74641799156163
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 10.75,
+          "axis_origin_mm": [
+            -521.1376849394884,
+            -247.76707139542162,
+            -97.80005768850972
+          ],
+          "axis_direction": [
+            -0.5322474251329307,
+            -0.8380944765539242,
+            -0.11962577819671386
+          ]
+        },
+        {
+          "id": 5,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 2718.640728827021,
+          "center_mm": [
+            -532.0216435988705,
+            -269.2689391430529,
+            -114.60843137039062
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "plane_origin_mm": [
+            -531.2487101072786,
+            -268.02525148648556,
+            -114.43375782969557
+          ],
+          "geometric_normal": [
+            -0.16595324070660092,
+            -0.03527445024259289,
+            0.9855025291997276
+          ]
+        },
+        {
+          "id": 6,
+          "type": "GeomAbs_Cylinder",
+          "area_mm2": 1055.5751316061705,
+          "center_mm": [
+            -551.8166215930036,
+            -275.16163453295326,
+            -103.94676653390948
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_REVERSED",
+          "radius_mm": 6.0,
+          "axis_origin_mm": [
+            -551.8166215930036,
+            -275.16163453295326,
+            -103.94676653390948
+          ],
+          "axis_direction": [
+            -0.16595324070660092,
+            -0.03527445024259289,
+            0.9855025291997276
+          ]
+        },
+        {
+          "id": 7,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 490.1859297990168,
+          "center_mm": [
+            -506.79629992009643,
+            -279.09976127010077,
+            -96.5065491763871
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -508.29566365935614,
+            -297.99514500127395,
+            -97.43536317497865
+          ],
+          "geometric_normal": [
+            0.9829635598155028,
+            -0.08598417187411277,
+            0.1624480294185122
+          ]
+        },
+        {
+          "id": 8,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1562.4168243612237,
+          "center_mm": [
+            -535.7206422948872,
+            -295.59616077332964,
+            -101.96771200083239
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -563.1456209304183,
+            -293.19717654538533,
+            -106.50006082668615
+          ],
+          "geometric_normal": [
+            -0.07900735392235192,
+            -0.9956718512377488,
+            -0.04894285115297635
+          ]
+        },
+        {
+          "id": 9,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 1522.9071196379596,
+          "center_mm": [
+            -560.9970341127022,
+            -266.12010956193757,
+            -105.16907124675315
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -558.8484472949859,
+            -239.0430425784898,
+            -103.83808166682013
+          ],
+          "geometric_normal": [
+            -0.9829635598155028,
+            0.08598417187411295,
+            -0.16244802941851216
+          ]
+        },
+        {
+          "id": 10,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 802.2561395968517,
+          "center_mm": [
+            -544.7665088867366,
+            -240.2748520390997,
+            -101.51085079241993
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -530.6845704784872,
+            -241.50666149970965,
+            -99.18361991801973
+          ],
+          "geometric_normal": [
+            0.07900735392235166,
+            0.9956718512377488,
+            0.04894285115297631
+          ]
+        },
+        {
+          "id": 11,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 280.94969896952887,
+          "center_mm": [
+            -521.1376849394885,
+            -247.76707139542154,
+            -97.80005768850974
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -511.5907994004895,
+            -254.02748129113348,
+            -96.41649545899972
+          ],
+          "geometric_normal": [
+            0.5322474251329307,
+            0.8380944765539242,
+            0.11962577819671386
+          ]
+        },
+        {
+          "id": 12,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 248.0336665651264,
+          "center_mm": [
+            -508.44386779066315,
+            -257.11592941503045,
+            -95.99711531839763
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -505.2969361808367,
+            -260.2043775389275,
+            -95.57773517779555
+          ],
+          "geometric_normal": [
+            0.6838478188261546,
+            0.7159139704298356,
+            0.14078120481832607
+          ]
+        },
+        {
+          "id": 13,
+          "type": "GeomAbs_Plane",
+          "area_mm2": 2718.6407288270207,
+          "center_mm": [
+            -536.6683343386553,
+            -270.2566237498455,
+            -87.01436055279825
+          ],
+          "orientation": "TopAbs_Orientation.TopAbs_FORWARD",
+          "plane_origin_mm": [
+            -535.8954008470635,
+            -269.01293609327814,
+            -86.8396870121032
+          ],
+          "geometric_normal": [
+            -0.16595324070660092,
+            -0.03527445024259289,
+            0.9855025291997276
+          ]
+        }
+      ],
+      "surface_types": {
+        "GeomAbs_Plane": 10,
+        "GeomAbs_Cylinder": 3
+      }
+    }
+  ],
+  "assembly_valid": true,
+  "sum_solid_volumes_mm3": 950611.4818266268
+}

@@ -1,0 +1,16 @@
+{
+  "max_absolute_displacement_error_mm": 4.942127912490571e-12,
+  "stress_max_MPa": 1.000000000000013,
+  "expected_stress_MPa": 1.0,
+  "reaction_N": [
+    1.0000000029999994,
+    9.022469231600007e-16,
+    -1.4294417348099998e-15
+  ],
+  "equilibrium_residual_N": [
+    2.9999994710649958e-09,
+    9.022469231600007e-16,
+    -1.4294417348099998e-15
+  ],
+  "passed": true
+}

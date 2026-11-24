@@ -1,0 +1,11 @@
+ANÁLISIS MEF 3D — RESULTADOS CALCULADOS
+Máximos puntuales de tensión y factores nominales NO certificados como convergidos.
+
+t=2.0 mm: masa=2.144597 kg; VM_GP=113.175592 MPa; VM_nodal=63.842697 MPa; u_max=0.4574627 mm; FS_nominal=2.43869.
+t=2.5 mm: masa=2.566651 kg; VM_GP=129.864560 MPa; VM_nodal=61.954857 MPa; u_max=0.3628709 mm; FS_nominal=2.12529.
+t=3.0 mm: masa=2.971966 kg; VM_GP=149.230063 MPa; VM_nodal=132.002206 MPa; u_max=0.3021565 mm; FS_nominal=1.84949.
+
+Sensibilidad últimas dos mallas: {"von_mises_max_integration_MPa": 47.56894817457108, "von_mises_max_nodal_MPa": 14.704605331151944, "displacement_max_mm": 0.199782965320651, "displacement_within_2_percent": true, "both_stress_measures_within_5_percent": false}
+Equilibrio y residuos de apoyos: aprobados en los tres espesores.
+La convergencia de máximos debe interpretarse con sensibilidad_malla.csv y las limitaciones del informe. No se certifica un espesor óptimo sin criterios admisibles de diseño.
+De 2,0 a 3,0 mm: masa +38.58%; desplazamiento máximo -33.95%. Esto no certifica resistencia ni seguridad de diseño.

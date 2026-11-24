@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "elapsed_seconds": 108.66168403625488,
+  "solver": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4.exe",
+  "linear_solver": "pardiso"
+}

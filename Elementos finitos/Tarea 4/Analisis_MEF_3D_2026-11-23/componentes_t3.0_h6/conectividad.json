@@ -1,0 +1,101 @@
+{
+  "solids": [
+    {
+      "solid": 1,
+      "nodes": 60188,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 2,
+      "nodes": 16235,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 3,
+      "nodes": 63514,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 4,
+      "nodes": 10534,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 5,
+      "nodes": 3391,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 6,
+      "nodes": 60898,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 7,
+      "nodes": 65468,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 8,
+      "nodes": 61919,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 9,
+      "nodes": 110063,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 10,
+      "nodes": 110234,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 11,
+      "nodes": 11476,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 12,
+      "nodes": 5061,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 13,
+      "nodes": 1216,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 14,
+      "nodes": 1260,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 15,
+      "nodes": 19256,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    },
+    {
+      "solid": 16,
+      "nodes": 19396,
+      "orphan_nodes": 0,
+      "connected_components": 1
+    }
+  ],
+  "passed": true
+}

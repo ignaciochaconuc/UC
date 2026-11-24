@@ -1,0 +1,43 @@
+CONTROL DE VERSIONES UC - TAREA 4
+
+Antes: 1934 archivos pendientes, 5233165385 bytes (4.8738 GiB).
+Despues: 134 archivos pendientes, 10648801 bytes (10.1555 MiB), incluidos estos seis informes.
+Pendientes mayores de 100 MiB: 9 antes; 0 despues.
+Archivos locales mayores de 100 MiB: 13; todos permanecen en disco y quedan ignorados.
+Mayor archivo pendiente: Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/cuadro_t3.0mm.stp (1.3791 MiB).
+
+Carpetas iniciales principales:
+- Elementos finitos/Tarea 4/Escenario_1: 1245 archivos, 1020.757 MiB.
+- Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23: 678 archivos, 3003.046 MiB.
+- Elementos finitos/Tarea 4/Ensamblaje 2: 6 archivos, 965.306 MiB.
+- Elementos finitos/Tarea 4: 2 archivos, 0.264 MiB.
+- Elementos finitos/Tarea 4/Resultados: 2 archivos, 1.357 MiB.
+
+Reglas agregadas en .gitignore, exclusivamente para Elementos finitos/Tarea 4:
+- Escenario_1 y AIP: paquetes de Inventor, bibliotecas copiadas y caches FEA.
+- Proyectos/dibujos nativos y temporales: ipj, idw, ipn, dwg, bak, old, tmp, lck.
+- Resultados regenerables: brep, npz, npy, inp, dat, out, eig, nam, dof, sti, mas, mtx, fmsh, fres.
+- JSON ligados a nodos/mallas: solido_*_superficies.json, superficies.json, apoyos.json y apoyos_heredados.json.
+- Intentos descartados, mallas experimentales h4/h5 y PNG de revision.
+- Herramientas descargables y runtimes; se conservan los JSON de procedencia.
+Se preservaron todas las reglas anteriores, incluidas las de CAD, simulaciones y extensiones frd/msh/vtk/vtu.
+
+Conservados para GitHub: STEP definitivo Ensamblaje 2.stp, copia exacta de referencia y variantes pequenas, scripts Python, CSV, figuras de resultados, informe PDF y documentacion/validaciones JSON.
+
+No habia archivos de Tarea 4 rastreados ni archivos pesados rastreados. No fue necesario ejecutar git rm --cached ni modificar el indice. Si en el futuro aparece un archivo regenerable ya rastreado, la exclusion por si sola no lo desrastrea: usar git rm --cached -- "ruta exacta" despues de revisar su estado; ese comando conserva el archivo local. No se ejecuto sobre archivos actuales.
+
+Comprobaciones: ningun archivo eliminado; ningun modelo, simulacion ni tarea anterior modificado; todas las entradas del indice y HEAD conservadas; cero entradas preparadas para commit. No se hizo commit, push, reset ni limpieza de archivos.
+
+Los archivos ignorados siguen ocupando espacio local. Esta operacion reduce lo que Git ofrece para versionar, no el uso del disco. Un clon nuevo no incluira caches ni herramientas descargadas: se regeneran siguiendo el README del analisis y sus registros de procedencia.
+
+Git portable AMD64 se uso desde una carpeta temporal externa al repositorio. El Git configurado en PATH era ARM64 y no se reemplazo ni se modifico su instalacion.
+
+Inventarios:
+- pendientes_antes.csv: estado y tamano de los 1934 pendientes iniciales.
+- carpetas_antes.csv: concentracion de archivos y bytes por carpeta.
+- mayores_100MiB.csv: los 13 archivos grandes locales, incluidos los 9 pendientes iniciales.
+- pendientes_final.csv: archivos que Git todavia ofrece para versionar y sus tamanos.
+- auditoria.json: conteos exactos y controles de preservacion.
+
+Limite de GitHub (repositorio normal): 100 MiB por archivo.
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github

@@ -1,0 +1,8 @@
+{
+  "gmsh": "4.15.2",
+  "cadquery-ocp": "7.9.3.1.1",
+  "numpy": "2.3.4",
+  "scipy": "1.17.1",
+  "matplotlib": "3.10.7",
+  "PyMuPDF": "1.28.2"
+}

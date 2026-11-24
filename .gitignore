@@ -216,3 +216,76 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Tarea 4: archivos CAD y simulaciones pesadas
+/Elementos finitos/Tarea 4/CAD/
+/Elementos finitos/Tarea 4/simulaciones/
+
+# Archivos temporales de simulación
+*.frd
+*.sta
+*.cvg
+*.12d
+*.vtk
+*.vtu
+*.msh
+
+
+# Archivos pesados de Inventor - Tarea 4
+/CFD/Tarea 4/
+
+# Archivos pesados del análisis MEF
+/Elementos finitos/Tarea 4/**/*.iam
+/Elementos finitos/Tarea 4/**/*.ipt
+/Elementos finitos/Tarea 4/**/*.msh
+/Elementos finitos/Tarea 4/**/*.frd
+/Elementos finitos/Tarea 4/**/*.vtk
+/Elementos finitos/Tarea 4/**/*.vtu
+/Elementos finitos/Tarea 4/**/OldVersions/
+/Elementos finitos/Tarea 4/**/simulaciones/
+
+# Tarea 4: paquete de Inventor, bibliotecas copiadas y caches locales
+/Elementos finitos/Tarea 4/Escenario_1/
+/Elementos finitos/Tarea 4/**/AIP/
+/Elementos finitos/Tarea 4/**/*.ipj
+/Elementos finitos/Tarea 4/**/*.idw
+/Elementos finitos/Tarea 4/**/*.ipn
+/Elementos finitos/Tarea 4/**/*.dwg
+/Elementos finitos/Tarea 4/**/*.bak
+/Elementos finitos/Tarea 4/**/*.old
+/Elementos finitos/Tarea 4/**/*.tmp
+/Elementos finitos/Tarea 4/**/*.lck
+
+# Tarea 4: mallas, campos binarios y archivos regenerables del solucionador
+/Elementos finitos/Tarea 4/**/*.brep
+/Elementos finitos/Tarea 4/**/*.npz
+/Elementos finitos/Tarea 4/**/*.npy
+/Elementos finitos/Tarea 4/**/*.inp
+/Elementos finitos/Tarea 4/**/*.dat
+/Elementos finitos/Tarea 4/**/*.out
+/Elementos finitos/Tarea 4/**/*.eig
+/Elementos finitos/Tarea 4/**/*.nam
+/Elementos finitos/Tarea 4/**/*.dof
+/Elementos finitos/Tarea 4/**/*.sti
+/Elementos finitos/Tarea 4/**/*.mas
+/Elementos finitos/Tarea 4/**/*.mtx
+/Elementos finitos/Tarea 4/**/*.fmsh
+/Elementos finitos/Tarea 4/**/*.fres
+/Elementos finitos/Tarea 4/**/solido_*_superficies.json
+/Elementos finitos/Tarea 4/**/superficies.json
+/Elementos finitos/Tarea 4/**/apoyos.json
+/Elementos finitos/Tarea 4/**/apoyos_heredados.json
+
+# Tarea 4: intentos descartados y vistas de revision regenerables
+/Elementos finitos/Tarea 4/**/rechazado_*/
+/Elementos finitos/Tarea 4/**/intento_*/
+/Elementos finitos/Tarea 4/**/componentes_t*_h4/
+/Elementos finitos/Tarea 4/**/componentes_t*_h5/
+/Elementos finitos/Tarea 4/**/revision_*.png
+
+# Tarea 4: herramientas descargables; conservar sus registros de procedencia
+/Elementos finitos/Tarea 4/**/herramientas/**
+!/Elementos finitos/Tarea 4/**/herramientas/**/
+!/Elementos finitos/Tarea 4/**/herramientas/**/procedencia*.json
+
+# STEP, Python, CSV, figuras de resultados, PDF y documentacion permanecen visibles.

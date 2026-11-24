@@ -1,0 +1,162 @@
+[
+  {
+    "solid": 1,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 60188,
+    "elements": 30053,
+    "minDetJac": 0.14681566726629836,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 2,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 16235,
+    "elements": 8051,
+    "minDetJac": 7.105820249862578,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 3,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 63514,
+    "elements": 32251,
+    "minDetJac": 0.2998369590906664,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 4,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 10534,
+    "elements": 5200,
+    "minDetJac": 11.566267851676473,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 5,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 3391,
+    "elements": 1621,
+    "minDetJac": 10.806353213449821,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 6,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 60898,
+    "elements": 30616,
+    "minDetJac": 0.5641956165273497,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 7,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 65468,
+    "elements": 33143,
+    "minDetJac": 2.2418063098965155e-05,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 8,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 61919,
+    "elements": 30917,
+    "minDetJac": 0.2591336632120379,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 9,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 110063,
+    "elements": 55711,
+    "minDetJac": 0.0889434670966711,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 10,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 110234,
+    "elements": 56398,
+    "minDetJac": 0.056056400584789445,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 11,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 11476,
+    "elements": 6096,
+    "minDetJac": 0.08616292686371918,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 12,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 5061,
+    "elements": 2457,
+    "minDetJac": 10.221725079445896,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 13,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 1216,
+    "elements": 568,
+    "minDetJac": 18.171624017967808,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 14,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 1260,
+    "elements": 594,
+    "minDetJac": 21.860636309094716,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 15,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 19256,
+    "elements": 10924,
+    "minDetJac": 0.043287700684527586,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 16,
+    "algorithm": 1,
+    "curvature_points_per_circle": 28,
+    "nodes": 19396,
+    "elements": 11028,
+    "minDetJac": 0.028209878806185855,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  }
+]

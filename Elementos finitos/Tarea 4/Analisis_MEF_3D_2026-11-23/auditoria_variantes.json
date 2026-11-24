@@ -1,0 +1,146 @@
+[
+  {
+    "t_mm": 2.0,
+    "sha256": "b659871a463ca44268c2392256cb6c33a37b5cd81ee442e1a6466ef6a33a824a",
+    "n_solids": 16,
+    "all_valid": true,
+    "aux_surface_checks": [
+      {
+        "solid": 13,
+        "forward_points": 395,
+        "forward_matched": 395,
+        "reverse_points": 395,
+        "reverse_matched": 395,
+        "volume_difference_mm3": 0.0,
+        "max_sample_surface_distance_mm": 4.935429842589656e-11
+      },
+      {
+        "solid": 14,
+        "forward_points": 395,
+        "forward_matched": 395,
+        "reverse_points": 395,
+        "reverse_matched": 395,
+        "volume_difference_mm3": 0.0,
+        "max_sample_surface_distance_mm": 8.906653192752856e-12
+      },
+      {
+        "solid": 15,
+        "forward_points": 1784,
+        "forward_matched": 1784,
+        "reverse_points": 1784,
+        "reverse_matched": 1784,
+        "volume_difference_mm3": -1.2201780918985605e-08,
+        "max_sample_surface_distance_mm": 1.4246381851990009e-11
+      },
+      {
+        "solid": 16,
+        "forward_points": 1784,
+        "forward_matched": 1784,
+        "reverse_points": 1784,
+        "reverse_matched": 1784,
+        "volume_difference_mm3": -1.2209056876599789e-08,
+        "max_sample_surface_distance_mm": 1.2100720425678446e-10
+      }
+    ],
+    "bbox_max_difference_mm": 5.768754363089101e-10,
+    "fragment_volume_count": 16,
+    "overlapping_volume_tags": 0,
+    "boolean_volume_change_mm3": -1.5063057746738195
+  },
+  {
+    "t_mm": 2.5,
+    "sha256": "3daccf4113f986d99caf93bfcfdb3263a04bb14964ddae1e18a092796f8ada96",
+    "n_solids": 16,
+    "all_valid": true,
+    "aux_surface_checks": [
+      {
+        "solid": 13,
+        "forward_points": 395,
+        "forward_matched": 395,
+        "reverse_points": 395,
+        "reverse_matched": 395,
+        "volume_difference_mm3": 0.0,
+        "max_sample_surface_distance_mm": 4.935429842589656e-11
+      },
+      {
+        "solid": 14,
+        "forward_points": 395,
+        "forward_matched": 395,
+        "reverse_points": 395,
+        "reverse_matched": 395,
+        "volume_difference_mm3": 0.0,
+        "max_sample_surface_distance_mm": 8.906653192752856e-12
+      },
+      {
+        "solid": 15,
+        "forward_points": 1784,
+        "forward_matched": 1784,
+        "reverse_points": 1784,
+        "reverse_matched": 1784,
+        "volume_difference_mm3": -1.2201780918985605e-08,
+        "max_sample_surface_distance_mm": 1.4246381851990009e-11
+      },
+      {
+        "solid": 16,
+        "forward_points": 1784,
+        "forward_matched": 1784,
+        "reverse_points": 1784,
+        "reverse_matched": 1784,
+        "volume_difference_mm3": -1.2209056876599789e-08,
+        "max_sample_surface_distance_mm": 1.2100720425678446e-10
+      }
+    ],
+    "bbox_max_difference_mm": 2.1181278953008587e-10,
+    "fragment_volume_count": 16,
+    "overlapping_volume_tags": 0,
+    "boolean_volume_change_mm3": -61.82630149729084
+  },
+  {
+    "t_mm": 3.0,
+    "sha256": "69c19ba7015da56e77177eb976c47b863e9852189df5c6ae76cf45fb86129168",
+    "n_solids": 16,
+    "all_valid": true,
+    "aux_surface_checks": [
+      {
+        "solid": 13,
+        "forward_points": 395,
+        "forward_matched": 395,
+        "reverse_points": 395,
+        "reverse_matched": 395,
+        "volume_difference_mm3": 0.0,
+        "max_sample_surface_distance_mm": 4.935429842589656e-11
+      },
+      {
+        "solid": 14,
+        "forward_points": 395,
+        "forward_matched": 395,
+        "reverse_points": 395,
+        "reverse_matched": 395,
+        "volume_difference_mm3": 0.0,
+        "max_sample_surface_distance_mm": 8.906653192752856e-12
+      },
+      {
+        "solid": 15,
+        "forward_points": 1784,
+        "forward_matched": 1784,
+        "reverse_points": 1784,
+        "reverse_matched": 1784,
+        "volume_difference_mm3": -1.2201780918985605e-08,
+        "max_sample_surface_distance_mm": 1.4246381851990009e-11
+      },
+      {
+        "solid": 16,
+        "forward_points": 1784,
+        "forward_matched": 1784,
+        "reverse_points": 1784,
+        "reverse_matched": 1784,
+        "volume_difference_mm3": -1.2209056876599789e-08,
+        "max_sample_surface_distance_mm": 1.2100720425678446e-10
+      }
+    ],
+    "bbox_max_difference_mm": 5.768754363089101e-10,
+    "fragment_volume_count": 16,
+    "overlapping_volume_tags": 0,
+    "boolean_volume_change_mm3": -4.414911488769576
+  }
+]

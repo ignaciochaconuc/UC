@@ -1,0 +1,28 @@
+{
+  "antes_archivos": 1934,
+  "antes_bytes": 5233165385,
+  "despues_archivos": 134,
+  "despues_bytes": 10648801,
+  "archivos_locales_mayores_100MiB": 13,
+  "pendientes_antes_mayores_100MiB": 9,
+  "pendientes_finales_mayores_100MiB": 0,
+  "mayor_pendiente": {
+    "status": "??",
+    "path": "Elementos finitos/Tarea 4/Analisis_MEF_3D_2026-11-23/cuadro_t3.0mm.stp",
+    "bytes": 1446074,
+    "MiB": 1.3790836334228516
+  },
+  "rastreados_pesados": 0,
+  "archivos_desrastreados": 0,
+  "index_sin_cambios": true,
+  "HEAD_sin_cambios": true,
+  "HEAD": "066d7ce4fd646ba500f5efaa80447afd93b33f99",
+  "archivos_eliminados": [],
+  "archivos_existentes_modificados_fuera_gitignore": [],
+  "archivos_relevantes_comprobados": 49,
+  "staged_entries": 0,
+  "commits_pendientes_segun_ref_local": 0,
+  "reglas_nuevas_limitadas_a": "Elementos finitos/Tarea 4",
+  "limite_bytes": 104857600,
+  "fuente_limite": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github"
+}

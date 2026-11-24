@@ -1,0 +1,12 @@
+{
+  "local_constraint_ranks": {
+    "15": 1,
+    "16": 2,
+    "4": 1,
+    "5": 1
+  },
+  "max_tangential_constraint_residual": 1.8214596497756474e-16,
+  "max_free_axial_constraint_residual": 1.3322676295501878e-15,
+  "max_direction_orthogonality_error": 6.241084802069536e-16,
+  "passed": true
+}

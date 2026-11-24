@@ -1,0 +1,48 @@
+{
+  "cases": [
+    {
+      "h_mm": 8,
+      "critical_solid": 10,
+      "element_id": 87638,
+      "von_mises_GP_MPa": 40.75330767710417,
+      "von_mises_nodal_MPa": 48.85628278306928,
+      "critical_element_vertex_centroid_mm": [
+        -249.0886947714151,
+        181.2800233158692,
+        -46.7042280733244
+      ],
+      "critical_element_min_Jacobian_4GP": 22.86725790277702,
+      "critical_element_max_Jacobian_condition_4GP": 3.1793030618910953
+    },
+    {
+      "h_mm": 7,
+      "critical_solid": 10,
+      "element_id": 195075,
+      "von_mises_GP_MPa": 59.339153212167815,
+      "von_mises_nodal_MPa": 54.45488010030139,
+      "critical_element_vertex_centroid_mm": [
+        -248.03013481825502,
+        181.09478405503341,
+        -46.96489977560977
+      ],
+      "critical_element_min_Jacobian_4GP": 4.203484147875314,
+      "critical_element_max_Jacobian_condition_4GP": 3.6561908418551763
+    },
+    {
+      "h_mm": 6,
+      "critical_solid": 7,
+      "element_id": 173687,
+      "von_mises_GP_MPa": 113.1755918415287,
+      "von_mises_nodal_MPa": 63.84269667983567,
+      "critical_element_vertex_centroid_mm": [
+        -148.7653124984364,
+        -323.3173561813977,
+        -35.96442063043075
+      ],
+      "critical_element_min_Jacobian_4GP": 0.05776426217003399,
+      "critical_element_max_Jacobian_condition_4GP": 10.119690556180098
+    }
+  ],
+  "interpretation": "El máximo no se estabiliza y cambia de localización. Los elementos críticos tienen determinantes positivos; ello no demuestra exactitud del máximo. Posibles contribuciones de aristas/muescas sin radio y de la discretización de contactos adheridos no conformes. No se ha aislado una causa única ni demostrado una singularidad analítica.",
+  "decision": "No usar el máximo puntual ni su factor nominal para certificar un espesor óptimo. Desplazamientos globales y masas se comparan separadamente."
+}

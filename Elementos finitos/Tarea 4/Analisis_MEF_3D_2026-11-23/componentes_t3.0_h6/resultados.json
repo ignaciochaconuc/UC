@@ -1,0 +1,110 @@
+{
+  "thickness_mm": 3.0,
+  "h_mm": 6.0,
+  "nodes": 620109,
+  "elements": 315628,
+  "von_mises_max_integration_MPa": 149.23006262681278,
+  "max_stress_element": 137560,
+  "max_stress_integration_point": 3,
+  "max_stress_element_centroid_mm": [
+    -148.61546595875592,
+    -323.5217697801906,
+    -33.98414530321567
+  ],
+  "von_mises_max_nodal_MPa": 132.00220616660278,
+  "max_nodal_stress_position_mm": [
+    -148.59067614575133,
+    -323.51706664504326,
+    -33.99733346377603
+  ],
+  "displacement_max_mm": 0.302156528384867,
+  "max_displacement_node": 101663,
+  "max_displacement_position_mm": [
+    272.42797549033315,
+    255.26852372889587,
+    -34.921470146482854
+  ],
+  "nominal_yield_safety_factor": 1.849493293386918,
+  "reference_2mm_54_71MPa_percent_difference": null,
+  "nominal_yield_safety_factor_nodal": 2.0908741453279545,
+  "nominal_yield_safety_factor_conservative": 1.849493293386918,
+  "reference_2mm_0_4716mm_percent_difference": null,
+  "reactions": {
+    "15": {
+      "force_N": [
+        623.0562172807406,
+        554.7706279982102,
+        -124.77636908082297
+      ],
+      "moment_origin_Nmm": [
+        14358.822977000775,
+        -47131.450028052626,
+        -134608.6486196279
+      ]
+    },
+    "16": {
+      "force_N": [
+        626.6309988192388,
+        556.8938194982501,
+        124.98918723023054
+      ],
+      "moment_origin_Nmm": [
+        23899.51932063337,
+        4119.832450048753,
+        -134800.15061128198
+      ]
+    },
+    "4": {
+      "force_N": [
+        -749.903374914437,
+        -229.2684698407383,
+        -0.11389603604936926
+      ],
+      "moment_origin_Nmm": [
+        -7890.248130299413,
+        25811.406597282363,
+        79280.87022198789
+      ]
+    },
+    "5": {
+      "force_N": [
+        -653.7680263613967,
+        -199.87694421535247,
+        -0.09892204639019075
+      ],
+      "moment_origin_Nmm": [
+        -6911.722287362213,
+        22492.239878654058,
+        110167.87775218801
+      ]
+    }
+  },
+  "total_reaction_N": [
+    -153.98418517584994,
+    682.5190334403728,
+    6.696805465722377e-08
+  ],
+  "total_reaction_moment_Nmm": [
+    23456.371879972496,
+    5292.02889793253,
+    -79960.05125673572
+  ],
+  "equilibrium_force_residual_N": [
+    -2.1292072460710187e-07,
+    -2.5962140171031933e-06,
+    6.696805465722377e-08
+  ],
+  "equilibrium_moment_residual_Nmm": [
+    -8.416820492129773e-06,
+    0.00022662177889287705,
+    0.0025900418841047212
+  ],
+  "relative_force_residual": 3.7242944520104707e-09,
+  "relative_moment_residual": 3.113810434555971e-08,
+  "max_support_constraint_displacement_mm": 1.871242036286201e-08,
+  "inherited_head_ring_nodes": 56,
+  "max_inherited_radial_displacement_mm": 1.6250114304993952e-08,
+  "status": "solver_output_requires_mesh_convergence",
+  "equilibrium_passed": true,
+  "boundary_conditions_passed": true
+}

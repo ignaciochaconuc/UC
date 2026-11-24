@@ -1,0 +1,35 @@
+{
+  "reference_file": "referencia_confirmada.stp",
+  "uploaded_name": "Ensamblaje 2.stp",
+  "sha256": "ba2c52efd6c433d9304675e9439e2ed1f717e5a9d8a5371ea77ef2b5c8e2c4b7",
+  "authorization": "El usuario confirmó que el archivo subido es el correcto; no se usó ningún otro STEP anterior.",
+  "thicknesses_mm": [2.0, 2.5, 3.0],
+  "production_solver": {"CalculiX":"2.24", "linear_solver":"PARDISO", "MKL":"2026.2.1", "threads":4},
+  "tube_solid_ids": [1,2,3,4,5,6,7,8,9,10,11,12],
+  "unchanged_auxiliary_solid_ids": [13,14,15,16],
+  "material": {
+    "name": "Aluminio 6061-T6, material base idealizado en todos los sólidos",
+    "young_MPa": 68900.0,
+    "poisson": 0.33,
+    "density_kg_m3": 2700.0,
+    "nominal_yield_MPa": 276.0
+  },
+  "loads": [
+    {"solid": 13, "description": "Remate asiento, cara plana exterior superior", "force_N": 600, "sense": "compresión normal hacia el cuadro"},
+    {"solid": 14, "description": "Remate delantero, cara plana exterior superior", "force_N": 100, "sense": "compresión normal hacia el cuadro"}
+  ],
+  "supports": [
+    {"solid":16,"description":"Puntera derecha, Z negativo; agujero interior R6 mm", "radial":true,"axial":true,"tangential":false},
+    {"solid":15,"description":"Puntera izquierda, Z positivo; agujero interior R6 mm", "radial":true,"axial":false,"tangential":false},
+    {"solids":[4,5],"description":"Superficies interiores de los dos tramos coaxiales del tubo de dirección", "radial":true,"axial":false,"tangential":false}
+  ],
+  "latest_user_clarification": "Derecha radial y axial; izquierda sólo radial; caras interiores. Contactos de punteras adheridos (bonded).",
+  "bond_model": "Uniones adheridas ideales; interpolación cuadrática con reproducción afín sobre el sólido maestro, conservando las holguras y posiciones. Soldadura y ZAT no modeladas.",
+  "mesh_series_2mm": [
+    {"h_max_mm":8,"curvature_points_per_circle":16},
+    {"h_max_mm":7,"curvature_points_per_circle":24},
+    {"h_max_mm":6,"curvature_points_per_circle":32}
+  ],
+  "mesh_3mm_final": {"h_max_mm":6, "curvature_points_per_circle":28, "reason":"Límite de memoria observado antes de producir resultados con 32 puntos; geometría y condiciones intactas."},
+  "note": "Registro de parámetros de implementación. Los scripts fijan explícitamente estos valores; cambiar este JSON por sí solo no modifica el modelo."
+}

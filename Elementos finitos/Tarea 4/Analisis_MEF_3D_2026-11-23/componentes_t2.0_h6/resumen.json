@@ -1,0 +1,146 @@
+[
+  {
+    "solid": 1,
+    "algorithm": 1,
+    "nodes": 76011,
+    "elements": 38088,
+    "minDetJac": 0.14081488159265998,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 2,
+    "algorithm": 1,
+    "nodes": 20415,
+    "elements": 10131,
+    "minDetJac": 3.5392700621295266,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 3,
+    "algorithm": 1,
+    "nodes": 80166,
+    "elements": 40698,
+    "minDetJac": 0.24827497452559175,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 4,
+    "algorithm": 1,
+    "nodes": 13242,
+    "elements": 6549,
+    "minDetJac": 2.794768215827154,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 5,
+    "algorithm": 1,
+    "nodes": 3751,
+    "elements": 1819,
+    "minDetJac": 2.2070797795550177,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 6,
+    "algorithm": 1,
+    "nodes": 77676,
+    "elements": 38808,
+    "minDetJac": 0.3010866063341948,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 7,
+    "algorithm": 1,
+    "nodes": 79829,
+    "elements": 39893,
+    "minDetJac": 2.241806694226804e-05,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 8,
+    "algorithm": 1,
+    "nodes": 76923,
+    "elements": 38649,
+    "minDetJac": 0.6486385748576454,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 9,
+    "algorithm": 1,
+    "nodes": 130645,
+    "elements": 65311,
+    "minDetJac": 0.016951991642715814,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 10,
+    "algorithm": 1,
+    "nodes": 130804,
+    "elements": 66272,
+    "minDetJac": 0.008358544724029637,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 11,
+    "algorithm": 1,
+    "nodes": 12378,
+    "elements": 6087,
+    "minDetJac": 0.056879901757079354,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 12,
+    "algorithm": 1,
+    "nodes": 6161,
+    "elements": 3002,
+    "minDetJac": 2.339564913616483,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 13,
+    "algorithm": 1,
+    "nodes": 1578,
+    "elements": 744,
+    "minDetJac": 14.520222314162766,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 14,
+    "algorithm": 1,
+    "nodes": 1575,
+    "elements": 741,
+    "minDetJac": 17.45993718591494,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 15,
+    "algorithm": 1,
+    "nodes": 24222,
+    "elements": 13882,
+    "minDetJac": 0.007366690299315443,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  },
+  {
+    "solid": 16,
+    "algorithm": 1,
+    "nodes": 24331,
+    "elements": 13964,
+    "minDetJac": 0.007293967924429823,
+    "nonpositive_Jacobians": 0,
+    "status": "valid"
+  }
+]

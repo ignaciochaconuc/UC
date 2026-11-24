@@ -1,0 +1,17 @@
+{
+  "executable": "C:\\UC_1\\UC\\Elementos finitos\\Tarea 4\\Analisis_MEF_3D_2026-11-23\\herramientas\\oficial_2.24\\calculix_2.24_4win\\ccx_i4_static.exe",
+  "max_absolute_displacement_error_mm": 4.942127912490571e-12,
+  "stress_max_MPa": 1.0000000000000129,
+  "expected_stress_MPa": 1.0,
+  "reaction_N": [
+    1.0000000029999996,
+    1.1303557480995e-15,
+    -1.0058983265999998e-15
+  ],
+  "equilibrium_residual_N": [
+    2.9999996931096007e-09,
+    1.1303557480995e-15,
+    -1.0058983265999998e-15
+  ],
+  "passed": true
+}

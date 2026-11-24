@@ -1,0 +1,57 @@
+[
+  {
+    "wheel": "intel_openmp-2026.2.0-py2.py3-none-win_amd64.whl",
+    "sha256": "0fcd60701d6dcf8f17cd40c9733d7046ff3b82921a0a039bea2e6a68fb12c152",
+    "dlls": [
+      "libiomp5md.dll",
+      "libiomp5md_db.dll",
+      "libiompstubs5md.dll",
+      "omptarget.dll",
+      "omptarget.sycl.wrap.dll"
+    ]
+  },
+  {
+    "wheel": "mkl-2026.2.1-py2.py3-none-win_amd64.whl",
+    "sha256": "96f9ee6a5f101801c56225bd6b7a4a82c95d3da1268d7bf952fa07d09992a619",
+    "dlls": [
+      "libimalloc.dll",
+      "mkl_avx10.3.dll",
+      "mkl_avx2.3.dll",
+      "mkl_avx512.3.dll",
+      "mkl_blacs_ilp64.2.dll",
+      "mkl_blacs_intelmpi_ilp64.2.dll",
+      "mkl_blacs_intelmpi_lp64.2.dll",
+      "mkl_blacs_lp64.2.dll",
+      "mkl_blacs_msmpi_ilp64.2.dll",
+      "mkl_blacs_msmpi_lp64.2.dll",
+      "mkl_cdft_core.2.dll",
+      "mkl_core.3.dll",
+      "mkl_def.3.dll",
+      "mkl_intel_thread.3.dll",
+      "mkl_mc3.3.dll",
+      "mkl_rt.3.dll",
+      "mkl_scalapack_ilp64.2.dll",
+      "mkl_scalapack_lp64.2.dll",
+      "mkl_sequential.3.dll",
+      "mkl_tbb_thread.3.dll",
+      "mkl_vml_avx10.3.dll",
+      "mkl_vml_avx2.3.dll",
+      "mkl_vml_avx512.3.dll",
+      "mkl_vml_cmpt.3.dll",
+      "mkl_vml_def.3.dll",
+      "mkl_vml_mc3.3.dll"
+    ]
+  },
+  {
+    "wheel": "tbb-2023.2.0-py3-none-win_amd64.whl",
+    "sha256": "b39121cbdaff350fc61a448766cbb26807c523491d66e364838c9feeb3c6a0eb",
+    "dlls": [
+      "tbb12.dll",
+      "tbbbind.dll",
+      "tbbbind_2_0.dll",
+      "tbbbind_2_5.dll",
+      "tbbmalloc.dll",
+      "tbbmalloc_proxy.dll"
+    ]
+  }
+]
